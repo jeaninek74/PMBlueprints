@@ -223,6 +223,110 @@ function initializeTemplateFiltering() {
         loadPopularTemplates();
         loadPlatformStats();
     }
+    
+    // Initialize search suggestions
+    initializeSearchSuggestions();
+}
+
+/**
+ * Initialize search suggestions functionality
+ */
+function initializeSearchSuggestions() {
+    const searchInput = document.getElementById('search');
+    if (!searchInput) return;
+    
+    let searchTimeout;
+    
+    // Add search container wrapper
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'search-container position-relative';
+    searchInput.parentNode.insertBefore(searchContainer, searchInput);
+    searchContainer.appendChild(searchInput);
+    
+    // Real-time search with debouncing
+    searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const query = this.value.trim();
+            if (query.length >= 2) {
+                showSearchSuggestions(query);
+            } else {
+                hideSearchSuggestions();
+            }
+        }, 300);
+    });
+    
+    // Hide suggestions when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.search-container')) {
+            hideSearchSuggestions();
+        }
+    });
+}
+
+/**
+ * Show search suggestions
+ */
+async function showSearchSuggestions(query) {
+    try {
+        const response = await fetch(`/api/search/suggestions?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+        
+        if (data.success && data.suggestions.length > 0) {
+            displaySearchSuggestions(data.suggestions);
+        } else {
+            hideSearchSuggestions();
+        }
+    } catch (error) {
+        console.error('Search suggestions error:', error);
+        hideSearchSuggestions();
+    }
+}
+
+/**
+ * Display search suggestions
+ */
+function displaySearchSuggestions(suggestions) {
+    let suggestionsContainer = document.getElementById('searchSuggestions');
+    
+    if (!suggestionsContainer) {
+        suggestionsContainer = document.createElement('div');
+        suggestionsContainer.id = 'searchSuggestions';
+        suggestionsContainer.className = 'search-suggestions';
+        document.querySelector('.search-container').appendChild(suggestionsContainer);
+    }
+    
+    const suggestionsHTML = suggestions.map(suggestion => `
+        <div class="suggestion-item" onclick="selectSuggestion('${suggestion.name}')">
+            <div class="suggestion-name">${suggestion.name}</div>
+            <div class="suggestion-meta">
+                <span class="badge bg-light text-dark">${suggestion.industry}</span>
+                <span class="badge bg-light text-dark">${suggestion.category}</span>
+            </div>
+        </div>
+    `).join('');
+    
+    suggestionsContainer.innerHTML = suggestionsHTML;
+    suggestionsContainer.style.display = 'block';
+}
+
+/**
+ * Hide search suggestions
+ */
+function hideSearchSuggestions() {
+    const suggestionsContainer = document.getElementById('searchSuggestions');
+    if (suggestionsContainer) {
+        suggestionsContainer.style.display = 'none';
+    }
+}
+
+/**
+ * Select a search suggestion
+ */
+function selectSuggestion(name) {
+    document.getElementById('search').value = name;
+    hideSearchSuggestions();
+    document.getElementById('filterForm').submit();
 }
 
 /**

@@ -23,6 +23,8 @@ def get_templates():
         search = request.args.get('search', '').strip()
         page = request.args.get('page', 1, type=int)
         per_page = request.args.get('per_page', 20, type=int)
+        sort_by = request.args.get('sort_by', 'downloads')  # name, downloads, rating
+        sort_order = request.args.get('sort_order', 'desc')  # asc, desc
         
         # Limit per_page to prevent abuse
         per_page = min(per_page, 100)
@@ -37,15 +39,32 @@ def get_templates():
             query = query.filter(Template.category == category)
         
         if search:
+            search_term = f"%{search}%"
             query = query.filter(
-                Template.name.contains(search) | 
-                Template.description.contains(search)
+                Template.name.ilike(search_term) | 
+                Template.description.ilike(search_term) |
+                Template.tags.ilike(search_term)
             )
         
+        # Apply sorting
+        if sort_by == 'name':
+            if sort_order == 'desc':
+                query = query.order_by(Template.name.desc())
+            else:
+                query = query.order_by(Template.name.asc())
+        elif sort_by == 'rating':
+            if sort_order == 'desc':
+                query = query.order_by(Template.rating.desc())
+            else:
+                query = query.order_by(Template.rating.asc())
+        else:  # downloads
+            if sort_order == 'desc':
+                query = query.order_by(Template.downloads.desc())
+            else:
+                query = query.order_by(Template.downloads.asc())
+        
         # Get paginated results
-        templates = query.order_by(Template.downloads.desc()).paginate(
-            page=page, per_page=per_page, error_out=False
-        )
+        templates = query.paginate(page=page, per_page=per_page, error_out=False)
         
         return jsonify({
             'success': True,
@@ -287,61 +306,14 @@ def ai_suggestions():
 def get_popular_templates():
     """Get most popular templates"""
     try:
-        # Use g to access the database models
-        from flask import g
+        from app import Template
         
-        # Simple hardcoded popular templates for now to ensure functionality
-        popular_templates = [
-            {
-                'id': 1,
-                'name': 'Project Charter Template',
-                'description': 'Comprehensive project charter following PMI standards',
-                'industry': 'General',
-                'category': 'Project Planning',
-                'downloads': 1250,
-                'file_type': 'DOCX'
-            },
-            {
-                'id': 2,
-                'name': 'Risk Register Template',
-                'description': 'Complete risk management tracking with formulas',
-                'industry': 'General',
-                'category': 'Risk Management',
-                'downloads': 980,
-                'file_type': 'XLSX'
-            },
-            {
-                'id': 3,
-                'name': 'WBS Template',
-                'description': 'Work Breakdown Structure with automated calculations',
-                'industry': 'Technology',
-                'category': 'Project Planning',
-                'downloads': 875,
-                'file_type': 'XLSX'
-            },
-            {
-                'id': 4,
-                'name': 'Stakeholder Analysis',
-                'description': 'Stakeholder mapping and communication plan',
-                'industry': 'General',
-                'category': 'Communication',
-                'downloads': 720,
-                'file_type': 'DOCX'
-            },
-            {
-                'id': 5,
-                'name': 'Budget Tracking Template',
-                'description': 'Project budget with variance analysis formulas',
-                'industry': 'Finance',
-                'category': 'Resource Management',
-                'downloads': 650,
-                'file_type': 'XLSX'
-            }
-        ]
+        # Get top 10 most downloaded templates
+        popular_templates = Template.query.order_by(Template.downloads.desc()).limit(10).all()
         
         return jsonify({
             'success': True,
-            'popular_templates': popular_templates
+            'popular_templates': [t.to_dict() for t in popular_templates]
         })
         
     except Exception as e:
@@ -352,13 +324,23 @@ def get_popular_templates():
 def get_platform_stats():
     """Get platform statistics"""
     try:
-        # Return working stats data
+        from app import Template, User, Download, db
+        
+        # Get real stats from database
+        total_templates = Template.query.count()
+        total_users = User.query.count()
+        total_downloads = Download.query.count()
+        
+        # Get unique counts
+        industries_count = db.session.query(Template.industry).distinct().count()
+        categories_count = db.session.query(Template.category).distinct().count()
+        
         stats = {
-            'total_templates': 964,
-            'total_users': 1250,
-            'total_downloads': 15420,
-            'industries_count': 15,
-            'categories_count': 8
+            'total_templates': total_templates,
+            'total_users': total_users,
+            'total_downloads': total_downloads,
+            'industries_count': industries_count,
+            'categories_count': categories_count
         }
         
         return jsonify({

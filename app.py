@@ -155,12 +155,14 @@ try:
     from routes.templates import templates_bp
     from routes.payment import payment_bp
     from routes.api import api_bp
+    from routes.search_api import search_api_bp
     
     # Register blueprints
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
     app.register_blueprint(payment_bp, url_prefix='/payment')
     app.register_blueprint(api_bp, url_prefix='/api')
+    app.register_blueprint(search_api_bp, url_prefix='/api/search')
     logger.info("All blueprints registered successfully")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
@@ -230,8 +232,39 @@ def init_db():
     with app.app_context():
         db.create_all()
         
-        # Templates are loaded via populate_database.py script
-        logger.info(f"Database initialized with {Template.query.count()} templates")
+        # Auto-populate templates if database is empty
+        if Template.query.count() == 0:
+            import json
+            logger.info("Populating database with templates...")
+            try:
+                with open("/home/ubuntu/pmblueprints-production-v2/templates_catalog.json", "r") as f:
+                    templates = json.load(f)
+                
+                for template_data in templates:
+                    template = Template(
+                        id=template_data.get("id"),
+                        name=template_data.get("name"),
+                        description=template_data.get("description"),
+                        industry=template_data.get("industry"),
+                        category=template_data.get("category"),
+                        file_type=template_data.get("file_type"),
+                        filename=template_data.get("filename"),
+                        downloads=template_data.get("downloads", 0),
+                        rating=template_data.get("rating", 4.5),
+                        tags=",".join(template_data.get("tags", [])),
+                        file_size=template_data.get("file_size"),
+                        has_formulas=template_data.get("has_formulas", False),
+                        has_fields=template_data.get("has_fields", False),
+                        is_premium=template_data.get("is_premium", False),
+                    )
+                    db.session.add(template)
+                
+                db.session.commit()
+                logger.info(f"Database populated with {Template.query.count()} templates")
+            except Exception as e:
+                logger.error(f"Error populating database: {e}")
+        else:
+            logger.info(f"Database already contains {Template.query.count()} templates")
 
 if __name__ == '__main__':
     init_db()
