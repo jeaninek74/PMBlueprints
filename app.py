@@ -45,8 +45,7 @@ login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
 CORS(app)
 
-# Create upload directory
-os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+# Note: Upload directory creation removed for serverless compatibility
 
 # Database Models
 class User(UserMixin, db.Model):
