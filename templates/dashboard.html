@@ -1,0 +1,389 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Welcome Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 fw-bold">Welcome back, {{ user.first_name }}!</h1>
+                    <p class="text-muted mb-0">Manage your templates and track your project management progress</p>
+                </div>
+                <div class="text-end">
+                    <span class="badge bg-primary fs-6">{{ stats.subscription_plan }} Plan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-download fa-2x text-primary mb-2"></i>
+                    <h4 class="fw-bold">{{ stats.total_downloads }}</h4>
+                    <p class="text-muted mb-0">Total Downloads</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                    <h4 class="fw-bold">{{ stats.downloads_remaining }}</h4>
+                    <p class="text-muted mb-0">Downloads Remaining</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-crown fa-2x text-warning mb-2"></i>
+                    <h4 class="fw-bold">{{ stats.subscription_plan }}</h4>
+                    <p class="text-muted mb-0">Current Plan</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-calendar fa-2x text-info mb-2"></i>
+                    <h4 class="fw-bold">{{ stats.member_since }}</h4>
+                    <p class="text-muted mb-0">Member Since</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-lg-8">
+            <!-- Quick Actions -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-bolt me-2"></i>Quick Actions
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary w-100 p-3">
+                                <i class="fas fa-search fa-2x mb-2 d-block"></i>
+                                Browse Templates
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-success w-100 p-3" id="aiGeneratorBtn">
+                                <i class="fas fa-magic fa-2x mb-2 d-block"></i>
+                                AI Generator
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Generator Section -->
+            <div class="card border-0 shadow-sm mb-4" id="ai-generator" style="display: none;">
+                <div class="card-header bg-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-magic me-2"></i>AI Template Generator
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form id="aiGeneratorForm">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="aiIndustry" class="form-label">Industry</label>
+                                <select class="form-select" id="aiIndustry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Education">Education</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="aiProjectType" class="form-label">Project Type</label>
+                                <select class="form-select" id="aiProjectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="Infrastructure">Infrastructure</option>
+                                    <option value="Process Improvement">Process Improvement</option>
+                                    <option value="Product Launch">Product Launch</option>
+                                    <option value="Compliance">Compliance</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="aiDescription" class="form-label">Project Description</label>
+                            <textarea class="form-control" id="aiDescription" rows="3" 
+                                placeholder="Describe your project needs and requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-magic me-2"></i>Generate Suggestions
+                        </button>
+                    </form>
+                    
+                    <div id="aiResults" class="mt-4" style="display: none;">
+                        <h6>AI Suggestions:</h6>
+                        <div id="aiSuggestionsList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Downloads -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-history me-2"></i>Recent Downloads
+                    </h5>
+                    <a href="#" class="text-decoration-none" id="viewAllDownloads">View All</a>
+                </div>
+                <div class="card-body">
+                    {% if recent_downloads %}
+                        <div class="list-group list-group-flush">
+                            {% for download in recent_downloads %}
+                            <div class="list-group-item border-0 px-0">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h6 class="mb-1">{{ download.template.name }}</h6>
+                                        <p class="mb-1 text-muted">{{ download.template.description[:100] }}...</p>
+                                        <small class="text-muted">
+                                            <i class="fas fa-calendar me-1"></i>
+                                            {{ download.downloaded_at.strftime('%B %d, %Y') }}
+                                        </small>
+                                    </div>
+                                    <span class="badge bg-light text-dark">{{ download.template.industry }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="fas fa-download fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">No downloads yet. Start by browsing our template library!</p>
+                            <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
+                                Browse Templates
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Account Info -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-user me-2"></i>Account Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Name</label>
+                        <p class="mb-0">{{ user.first_name }} {{ user.last_name }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Email</label>
+                        <p class="mb-0">{{ user.email }}</p>
+                    </div>
+                    {% if user.company %}
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Company</label>
+                        <p class="mb-0">{{ user.company }}</p>
+                    </div>
+                    {% endif %}
+                    <a href="{{ url_for('auth.profile') }}" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-edit me-1"></i>Edit Profile
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscription Info -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-crown me-2"></i>Subscription
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Current Plan:</span>
+                        <span class="badge bg-primary">{{ user.subscription_plan.title() }}</span>
+                    </div>
+                    
+                    {% if user.subscription_plan == 'free' %}
+                    <div class="mb-3">
+                        <div class="progress mb-2">
+                            <div class="progress-bar" role="progressbar" 
+                                 style="width: {{ (user.downloads_used / 10 * 100) }}%"></div>
+                        </div>
+                        <small class="text-muted">
+                            {{ user.downloads_used }}/10 downloads used
+                        </small>
+                    </div>
+                    <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-sm w-100">
+                        <i class="fas fa-arrow-up me-1"></i>Upgrade Plan
+                    </a>
+                    {% else %}
+                    <p class="text-success mb-3">
+                        <i class="fas fa-check me-1"></i>Unlimited downloads
+                    </p>
+                    <a href="{{ url_for('payment.billing_history') }}" class="btn btn-outline-primary btn-sm w-100">
+                        <i class="fas fa-credit-card me-1"></i>Billing History
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Popular Templates -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-fire me-2"></i>Popular Templates
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="popularTemplatesList">
+                        <!-- Will be loaded via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Load popular templates
+    loadPopularTemplates();
+    
+    // AI Generator toggle
+    document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
+        const aiSection = document.getElementById('ai-generator');
+        aiSection.style.display = aiSection.style.display === 'none' ? 'block' : 'none';
+    });
+    
+    // AI Generator form
+    document.getElementById('aiGeneratorForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        generateAISuggestions();
+    });
+    
+    // Check URL hash for AI generator
+    if (window.location.hash === '#ai-generator') {
+        document.getElementById('ai-generator').style.display = 'block';
+    }
+});
+
+function loadPopularTemplates() {
+    fetch('/api/analytics/popular')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                displayPopularTemplates(data.popular_templates.slice(0, 5));
+            }
+        })
+        .catch(error => {
+            console.error('Error loading popular templates:', error);
+        });
+}
+
+function displayPopularTemplates(templates) {
+    const container = document.getElementById('popularTemplatesList');
+    container.innerHTML = '';
+    
+    templates.forEach(template => {
+        const templateItem = document.createElement('div');
+        templateItem.className = 'mb-3 pb-3 border-bottom';
+        templateItem.innerHTML = `
+            <h6 class="mb-1">${template.name}</h6>
+            <p class="text-muted small mb-1">${template.description.substring(0, 80)}...</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">
+                    <i class="fas fa-download me-1"></i>${template.downloads}
+                </small>
+                <a href="/templates/${template.id}" class="btn btn-outline-primary btn-sm">View</a>
+            </div>
+        `;
+        container.appendChild(templateItem);
+    });
+}
+
+function generateAISuggestions() {
+    const industry = document.getElementById('aiIndustry').value;
+    const projectType = document.getElementById('aiProjectType').value;
+    const description = document.getElementById('aiDescription').value;
+    
+    const data = {
+        industry: industry,
+        project_type: projectType,
+        description: description
+    };
+    
+    fetch('/api/ai/suggestions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            displayAISuggestions(data.suggestions);
+        } else {
+            alert(data.error || 'Failed to generate suggestions');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to generate suggestions');
+    });
+}
+
+function displayAISuggestions(suggestions) {
+    const resultsDiv = document.getElementById('aiResults');
+    const listDiv = document.getElementById('aiSuggestionsList');
+    
+    listDiv.innerHTML = '';
+    
+    suggestions.forEach(suggestion => {
+        const suggestionCard = document.createElement('div');
+        suggestionCard.className = 'card mb-3';
+        suggestionCard.innerHTML = `
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="card-title">${suggestion.name}</h6>
+                        <p class="card-text text-muted">${suggestion.description}</p>
+                        <small class="text-success">
+                            <i class="fas fa-clock me-1"></i>Estimated time savings: ${suggestion.estimated_time_savings}
+                        </small>
+                    </div>
+                    <div class="text-end">
+                        <div class="badge bg-primary mb-2">${Math.round(suggestion.confidence * 100)}% match</div>
+                        <br>
+                        <button class="btn btn-outline-primary btn-sm">Generate Template</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        listDiv.appendChild(suggestionCard);
+    });
+    
+    resultsDiv.style.display = 'block';
+}
+</script>
+{% endblock %}
