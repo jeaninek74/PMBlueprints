@@ -128,8 +128,8 @@
 
 <script>
 function startCheckout(plan) {
-    // Redirect to payment processing
-    window.location.href = '/payment/checkout?plan=' + plan;
+    // Redirect to payment processing with correct URL format
+    window.location.href = '/payment/checkout/' + plan;
 }
 </script>
 {% endblock %}

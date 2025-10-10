@@ -2,17 +2,51 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/templates/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/auth/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/payment/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/pricing",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/about",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/contact",
+      "dest": "api/index.py"
+    },
+    {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "api/index.py"
     }
   ],
   "env": {
-    "FLASK_ENV": "production"
+    "FLASK_ENV": "production",
+    "PYTHONPATH": "."
+  },
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 30
+    }
   }
 }

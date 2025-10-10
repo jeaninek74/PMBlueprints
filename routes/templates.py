@@ -8,7 +8,6 @@ from flask import Blueprint, render_template, request, jsonify, send_file, abort
 from flask_login import login_required, current_user
 import os
 import logging
-from app import db, Template, Download
 from sqlalchemy import func
 
 logger = logging.getLogger(__name__)
@@ -19,6 +18,18 @@ templates_bp = Blueprint('templates', __name__)
 def browse():
     """Browse all templates"""
     try:
+        # Import here to avoid circular imports
+        from app import db, Template, init_db
+        
+        # Ensure database is initialized
+        try:
+            # Test if templates table exists by trying to count
+            Template.query.count()
+        except Exception:
+            # If table doesn't exist, initialize database
+            logger.info("Database not initialized, initializing now...")
+            init_db()
+
         # Get filter parameters
         industry = request.args.get('industry')
         category = request.args.get('category')
@@ -56,19 +67,39 @@ def browse():
 
     except Exception as e:
         logger.error(f"Template browse error: {e}")
-        # Return empty results instead of error page
+        # Create a mock pagination object to prevent template errors
+        class MockPagination:
+            def __init__(self):
+                self.items = []
+                self.pages = 0
+                self.page = 1
+                self.per_page = 12
+                self.total = 0
+                self.has_next = False
+                self.has_prev = False
+        
+        mock_pagination = MockPagination()
+        
         return render_template('templates/browse.html',
-                             templates=None,
+                             templates=mock_pagination,
                              industries=[],
                              categories=[],
                              current_industry=None,
                              current_category=None,
-                             current_search='')
+                             current_search='',
+                             error_message="Unable to load templates. Please try again later.")
 
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):
     """Template detail page"""
     try:
+        # Import here to avoid circular imports
+        from app import Template, db
+        from database import ensure_database_initialized
+        
+        # Ensure database is initialized
+        ensure_database_initialized()
+        
         template = Template.query.get_or_404(template_id)
 
         # Get related templates
@@ -83,13 +114,20 @@ def detail(template_id):
 
     except Exception as e:
         logger.error(f"Template detail error: {e}")
-        return render_template('errors/500.html'), 500
+        # Return a user-friendly error page
+        return render_template('templates/detail.html',
+                             template=None,
+                             related=[],
+                             error_message="Template not found or unavailable"), 404
 
 @templates_bp.route('/<int:template_id>/download')
 @login_required
 def download(template_id):
     """Download template file"""
     try:
+        # Import here to avoid circular imports
+        from app import db, Template, Download
+        
         template = Template.query.get_or_404(template_id)
 
         # Check if user can download

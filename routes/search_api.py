@@ -4,7 +4,6 @@ Handles search suggestions and advanced search functionality
 """
 
 from flask import Blueprint, jsonify, request
-from app import db, Template
 import logging
 
 logger = logging.getLogger(__name__)
@@ -15,6 +14,9 @@ search_api_bp = Blueprint('search_api', __name__)
 def search_suggestions():
     """Get search suggestions"""
     try:
+        # Import here to avoid circular imports
+        from app import db, Template
+        
         query = request.args.get('q', '').strip()
         if not query or len(query) < 2:
             return jsonify({'success': True, 'suggestions': []})

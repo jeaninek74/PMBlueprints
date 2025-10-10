@@ -16,22 +16,34 @@
                     <div class="col-md-6">
                         <select class="form-select" id="industrySelect">
                             <option value="">Select Industry</option>
-                            <option value="Technology">Technology</option>
-                            <option value="Healthcare">Healthcare</option>
-                            <option value="Construction">Construction</option>
-                            <option value="Finance">Finance</option>
-                            <option value="Manufacturing">Manufacturing</option>
-                            <option value="Education">Education</option>
+                            {% if industries %}
+                                {% for industry in industries %}
+                                <option value="{{ industry }}">{{ industry }}</option>
+                                {% endfor %}
+                            {% else %}
+                                <option value="Technology">Technology</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Education">Education</option>
+                            {% endif %}
                         </select>
                     </div>
                     <div class="col-md-6">
                         <select class="form-select" id="templateTypeSelect">
                             <option value="">Select Template Type</option>
-                            <option value="Project Planning">Project Planning</option>
-                            <option value="Risk Management">Risk Management</option>
-                            <option value="Quality Assurance">Quality Assurance</option>
-                            <option value="Resource Management">Resource Management</option>
-                            <option value="Communication">Communication</option>
+                            {% if categories %}
+                                {% for category in categories %}
+                                <option value="{{ category }}">{{ category }}</option>
+                                {% endfor %}
+                            {% else %}
+                                <option value="Project Planning">Project Planning</option>
+                                <option value="Risk Management">Risk Management</option>
+                                <option value="Quality Assurance">Quality Assurance</option>
+                                <option value="Resource Management">Resource Management</option>
+                                <option value="Communication">Communication</option>
+                            {% endif %}
                         </select>
                     </div>
                 </div>
@@ -50,13 +62,13 @@
                     <div class="row g-4">
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
-                                <h3 class="display-6 fw-bold">960+</h3>
+                                <h3 class="display-6 fw-bold">{{ stats.total_templates if stats else '960+' }}</h3>
                                 <p class="mb-0">Professional Templates</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
-                                <h3 class="display-6 fw-bold">32</h3>
+                                <h3 class="display-6 fw-bold">{{ stats.industries_count if stats else '32' }}</h3>
                                 <p class="mb-0">Industries Covered</p>
                             </div>
                         </div>

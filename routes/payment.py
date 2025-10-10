@@ -42,8 +42,17 @@ PRICING_PLANS = {
     }
 }
 
+@payment_bp.route('/checkout')
+def checkout_redirect():
+    """Handle query parameter format and redirect to correct path"""
+    plan = request.args.get('plan')
+    if plan and plan in PRICING_PLANS:
+        return redirect(url_for('payment.checkout', plan=plan))
+    else:
+        flash('Invalid subscription plan', 'error')
+        return redirect(url_for('pricing'))
+
 @payment_bp.route('/checkout/<plan>')
-@login_required
 def checkout(plan):
     """Checkout page for subscription plan"""
     try:
@@ -53,10 +62,14 @@ def checkout(plan):
         
         plan_info = PRICING_PLANS[plan]
         
+        # If user is not logged in, show login prompt on checkout page
+        user = current_user if current_user.is_authenticated else None
+        
         return render_template('payment/checkout.html',
                              plan=plan,
                              plan_info=plan_info,
-                             user=current_user)
+                             user=user,
+                             requires_login=not current_user.is_authenticated)
         
     except Exception as e:
         logger.error(f"Checkout page error: {e}")

@@ -29,7 +29,7 @@ app = Flask(__name__)
 
 # Production Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', secrets.token_hex(32))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///pmblueprints.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
@@ -171,7 +171,36 @@ except ImportError as e:
 @app.route('/')
 def index():
     """Homepage"""
-    return render_template('index.html')
+    try:
+        # Ensure database is initialized
+        try:
+            Template.query.count()
+        except Exception:
+            init_db()
+        
+        # Get real statistics from database
+        total_templates = Template.query.count()
+        industries_count = db.session.query(Template.industry).distinct().count()
+        categories_count = db.session.query(Template.category).distinct().count()
+        
+        # Get unique industries and categories for dropdowns
+        industries = [row[0] for row in db.session.query(Template.industry).distinct().order_by(Template.industry).all()]
+        categories = [row[0] for row in db.session.query(Template.category).distinct().order_by(Template.category).all()]
+        
+        stats = {
+            'total_templates': total_templates,
+            'industries_count': industries_count,
+            'categories_count': categories_count
+        }
+        
+        return render_template('index.html', 
+                             stats=stats,
+                             industries=industries,
+                             categories=categories)
+    except Exception as e:
+        logger.error(f"Homepage error: {e}")
+        # Fallback to hardcoded values if database fails
+        return render_template('index.html')
 
 @app.route('/dashboard')
 @login_required
@@ -237,7 +266,8 @@ def init_db():
             import json
             logger.info("Populating database with templates...")
             try:
-                with open("/home/ubuntu/pmblueprints-production-v2/templates_catalog.json", "r") as f:
+                catalog_path = os.path.join(os.path.dirname(__file__), "templates_catalog.json")
+                with open(catalog_path, "r") as f:
                     templates = json.load(f)
                 
                 for template_data in templates:

@@ -441,3 +441,75 @@ def generate_ai_suggestions(industry, project_type, description):
     except Exception as e:
         logger.error(f"AI suggestion generation error: {e}")
         return []
+
+
+# Analytics endpoints
+@api_bp.route('/analytics/popular')
+def get_analytics_popular_templates():
+    """Get popular templates for analytics"""
+    try:
+        from app import Template
+        
+        # Get most downloaded templates
+        popular_templates = Template.query.order_by(Template.downloads.desc()).limit(10).all()
+        
+        return jsonify({
+            'success': True,
+            'popular_templates': [{
+                'id': template.id,
+                'name': template.name,
+                'industry': template.industry,
+                'category': template.category,
+                'downloads': template.downloads,
+                'rating': template.rating
+            } for template in popular_templates]
+        })
+        
+    except Exception as e:
+        logger.error(f"Popular templates error: {e}")
+        return jsonify({'success': False, 'error': 'Failed to fetch popular templates'}), 500
+
+@api_bp.route('/analytics/trending')
+def get_trending_templates():
+    """Get trending templates"""
+    try:
+        from app import Template
+        
+        # Get templates with highest ratings
+        trending_templates = Template.query.order_by(Template.rating.desc()).limit(10).all()
+        
+        return jsonify({
+            'success': True,
+            'trending_templates': [{
+                'id': template.id,
+                'name': template.name,
+                'industry': template.industry,
+                'category': template.category,
+                'downloads': template.downloads,
+                'rating': template.rating
+            } for template in trending_templates]
+        })
+        
+    except Exception as e:
+        logger.error(f"Trending templates error: {e}")
+        return jsonify({'success': False, 'error': 'Failed to fetch trending templates'}), 500
+
+@api_bp.route('/analytics/view', methods=['POST'])
+def track_template_view():
+    """Track template view for analytics"""
+    try:
+        data = request.get_json()
+        template_id = data.get('template_id')
+        
+        if not template_id:
+            return jsonify({'success': False, 'error': 'Template ID required'}), 400
+        
+        # In a real implementation, you would store this in an analytics database
+        # For now, just return success
+        logger.info(f"Template view tracked: {template_id}")
+        
+        return jsonify({'success': True, 'message': 'View tracked'})
+        
+    except Exception as e:
+        logger.error(f"Analytics tracking error: {e}")
+        return jsonify({'success': False, 'error': 'Failed to track view'}), 500
