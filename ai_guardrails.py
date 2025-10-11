@@ -30,7 +30,7 @@ class AIGuardrails:
     """
     
     # Configuration constants
-    MAX_INPUT_LENGTH = 2000
+    MAX_INPUT_LENGTH = None  # Unlimited character input
     MIN_QUALITY_SCORE = 0.85
     MAX_BIAS_THRESHOLD = 0.05
     
@@ -139,8 +139,8 @@ class AIGuardrails:
         Comprehensive input validation
         Returns: (is_valid, error_message)
         """
-        # Check length
-        if len(text) > self.MAX_INPUT_LENGTH:
+        # Check length (unlimited maximum, minimum 10 characters)
+        if self.MAX_INPUT_LENGTH and len(text) > self.MAX_INPUT_LENGTH:
             return False, f"Input exceeds maximum length of {self.MAX_INPUT_LENGTH} characters"
         
         if len(text) < 10:
