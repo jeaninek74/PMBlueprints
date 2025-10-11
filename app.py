@@ -225,7 +225,7 @@ def index():
             'total_templates': "960+",
             'total_files': "1,594",
             'industries_count': 30,
-            'categories_count': 19,
+            'categories_count': 45,
             'time_savings': "70%",
             'compliance': "100% PMI 2025"
         }
