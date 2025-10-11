@@ -63,25 +63,30 @@
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
                                 <h3 class="display-6 fw-bold">{{ stats.total_templates if stats else '960+' }}</h3>
-                                <p class="mb-0">Professional Templates</p>
+                                <p class="mb-0 small">Templates ({{ stats.total_files if stats else '1,594' }} files)</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
-                                <h3 class="display-6 fw-bold">{{ stats.industries_count if stats else '32' }}</h3>
-                                <p class="mb-0">Industries Covered</p>
+                                <h3 class="display-6 fw-bold">{{ stats.industries_count if stats else '30' }}</h3>
+                                <p class="mb-0">Complete Sectors</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
-                                <h3 class="display-6 fw-bold">70%</h3>
-                                <p class="mb-0">Time Savings</p>
+                                <h3 class="display-6 fw-bold">{{ stats.categories_count if stats else '19' }}</h3>
+                                <p class="mb-0">PM Lifecycle Stages</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
-                                <h3 class="display-6 fw-bold">PMI</h3>
-                                <p class="mb-0">2025 Compliant</p>
+                                <h3 class="display-6 fw-bold">{{ stats.time_savings if stats else '70%' }}</h3>
+                                <p class="mb-0">Average Time Savings</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="stat-card bg-white bg-opacity-10 p-3 rounded text-center">
+                                <p class="mb-0"><i class="fas fa-check-circle me-2"></i><strong>{{ stats.compliance if stats else '100% PMI 2025' }} Standards</strong></p>
                             </div>
                         </div>
                     </div>
