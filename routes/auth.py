@@ -167,10 +167,6 @@ def demo_login():
     try:
         from flask import current_app
         from app import db, User
-        from database import ensure_database_initialized
-        
-        # Ensure database is initialized
-        ensure_database_initialized()
         
         # Find or create demo user
         demo_user = User.query.filter_by(email='demo@pmblueprints.com').first()
