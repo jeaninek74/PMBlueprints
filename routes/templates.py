@@ -95,14 +95,10 @@ def detail(template_id):
     try:
         # Import here to avoid circular imports
         from app import Template, db
-        from database import ensure_database_initialized
-        
-        # Ensure database is initialized
-        ensure_database_initialized()
         
         template = Template.query.get_or_404(template_id)
 
-        # Get related templates
+        # Get related templates (same industry, different template)
         related = Template.query.filter(
             Template.industry == template.industry,
             Template.id != template.id
@@ -113,12 +109,9 @@ def detail(template_id):
                              related=related)
 
     except Exception as e:
-        logger.error(f"Template detail error: {e}")
+        logger.error(f"Template detail error for template_id {template_id}: {e}")
         # Return a user-friendly error page
-        return render_template('templates/detail.html',
-                             template=None,
-                             related=[],
-                             error_message="Template not found or unavailable"), 404
+        abort(404)
 
 @templates_bp.route('/<int:template_id>/download')
 @login_required
