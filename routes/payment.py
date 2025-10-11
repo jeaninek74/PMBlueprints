@@ -14,6 +14,17 @@ payment_bp = Blueprint('payment', __name__)
 
 # Pricing plans configuration
 PRICING_PLANS = {
+    'free': {
+        'name': 'Free',
+        'price': 0,
+        'currency': 'usd',
+        'interval': 'month',
+        'features': [
+            '10 template downloads',
+            'Basic templates',
+            'Email support'
+        ]
+    },
     'professional': {
         'name': 'Professional',
         'price': 2900,  # $29.00 in cents
@@ -41,6 +52,53 @@ PRICING_PLANS = {
         ]
     }
 }
+
+@payment_bp.route('/api/plans')
+def get_pricing_plans():
+    """Get all pricing plans - API endpoint"""
+    return jsonify({
+        'success': True,
+        'plans': PRICING_PLANS
+    })
+
+@payment_bp.route('/api/subscribe', methods=['POST'])
+@login_required
+def subscribe_to_plan():
+    """Subscribe user to a plan - API endpoint"""
+    try:
+        data = request.get_json()
+        plan = data.get('plan')
+        
+        if not plan or plan not in PRICING_PLANS:
+            return jsonify({
+                'success': False,
+                'error': 'Invalid plan selected'
+            }), 400
+        
+        # For free plan, just update user subscription
+        if plan == 'free':
+            current_user.subscription_plan = 'free'
+            from app import db
+            db.session.commit()
+            return jsonify({
+                'success': True,
+                'message': 'Subscribed to Free plan',
+                'plan': plan
+            })
+        
+        # For paid plans, redirect to checkout
+        return jsonify({
+            'success': True,
+            'redirect': url_for('payment.checkout', plan=plan),
+            'plan': plan
+        })
+        
+    except Exception as e:
+        logger.error(f"Subscription error: {e}")
+        return jsonify({
+            'success': False,
+            'error': 'Subscription failed'
+        }), 500
 
 @payment_bp.route('/checkout')
 def checkout_redirect():
