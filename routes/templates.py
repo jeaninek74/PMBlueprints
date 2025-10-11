@@ -168,8 +168,9 @@ def download(template_id):
 
         db.session.commit()
 
-        # Serve actual template file
-        template_path = os.path.join('/home/ubuntu/pmblueprints-production-v2/static/templates', template.filename)
+        # Serve actual template file - use relative path
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        template_path = os.path.join(base_dir, 'static', 'templates', template.filename)
 
         if not os.path.exists(template_path):
             logger.error(f"Template file not found: {template_path}")

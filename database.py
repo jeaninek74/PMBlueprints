@@ -36,15 +36,29 @@ def populate_templates():
             current_dir = os.path.dirname(os.path.abspath(__file__))
         except NameError:
             current_dir = os.getcwd()
-        catalog_path = os.path.join(current_dir, "templates_catalog.json")
         
-        # Fallback to embedded data if file not found
-        if not os.path.exists(catalog_path):
-            logger.warning("Templates catalog file not found, using embedded data")
-            templates_data = get_embedded_templates()
-        else:
-            with open(catalog_path, "r") as f:
-                templates_data = json.load(f)
+        # Try multiple possible paths for templates_catalog.json
+        possible_paths = [
+            os.path.join(current_dir, "templates_catalog.json"),
+            os.path.join(os.getcwd(), "templates_catalog.json"),
+            "/var/task/templates_catalog.json",  # Vercel serverless path
+            "./templates_catalog.json"
+        ]
+        
+        catalog_path = None
+        for path in possible_paths:
+            if os.path.exists(path):
+                catalog_path = path
+                logger.info(f"Found templates catalog at: {path}")
+                break
+        
+        if not catalog_path:
+            error_msg = f"Templates catalog not found. Tried paths: {possible_paths}"
+            logger.error(error_msg)
+            raise FileNotFoundError(error_msg)
+        
+        with open(catalog_path, "r") as f:
+            templates_data = json.load(f)
         
         for template_data in templates_data:
             template = Template(
@@ -74,55 +88,4 @@ def populate_templates():
         from app import db
         db.session.rollback()
 
-def get_embedded_templates():
-    """Embedded template data as fallback"""
-    return [
-        {
-            "id": 1,
-            "name": "Project Charter Template",
-            "description": "Comprehensive project charter following PMI standards",
-            "industry": "Technology",
-            "category": "Project Planning",
-            "file_type": "xlsx",
-            "filename": "project_charter.xlsx",
-            "downloads": 1250,
-            "rating": 4.8,
-            "tags": ["charter", "initiation", "pmi"],
-            "file_size": "45KB",
-            "has_formulas": True,
-            "has_fields": True,
-            "is_premium": False
-        },
-        {
-            "id": 2,
-            "name": "Risk Register Template",
-            "description": "Complete risk management tracking with formulas",
-            "industry": "General",
-            "category": "Risk Management",
-            "file_type": "xlsx",
-            "filename": "risk_register.xlsx",
-            "downloads": 980,
-            "rating": 4.7,
-            "tags": ["risk", "management", "tracking"],
-            "file_size": "38KB",
-            "has_formulas": True,
-            "has_fields": True,
-            "is_premium": False
-        },
-        {
-            "id": 3,
-            "name": "WBS Template",
-            "description": "Work Breakdown Structure with automated calculations",
-            "industry": "Technology",
-            "category": "Project Planning",
-            "file_type": "xlsx",
-            "filename": "wbs_template.xlsx",
-            "downloads": 875,
-            "rating": 4.6,
-            "tags": ["wbs", "planning", "structure"],
-            "file_size": "52KB",
-            "has_formulas": True,
-            "has_fields": True,
-            "is_premium": False
-        }
-    ]
+# Mock embedded templates removed - all templates must come from templates_catalog.json

@@ -12,7 +12,9 @@ def populate_db():
             return
 
         print("Populating database with templates...")
-        with open("/home/ubuntu/pmblueprints-production-v2/templates_catalog.json", "r") as f:
+        # Use relative path that works in all environments
+        catalog_path = os.path.join(os.path.dirname(__file__), "templates_catalog.json")
+        with open(catalog_path, "r") as f:
             templates = json.load(f)
 
         for template_data in templates:
