@@ -12,3 +12,6 @@ supabase
 # AI Guardrails Dependencies
 openai>=1.0.0
 python-dotenv>=1.0.0
+
+# Platform Integrations
+openpyxl>=3.1.0
