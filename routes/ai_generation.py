@@ -140,6 +140,10 @@ def generate_template():
                     'metadata': validation_result['metadata']
                 })
             
+            # Track AI generation in monitoring system
+            from monitoring import track_ai_generation
+            track_ai_generation(user_id)
+            
             # Return successful AI-generated content
             return jsonify({
                 'success': True,

@@ -167,6 +167,10 @@ def download(template_id):
         template.downloads += 1
 
         db.session.commit()
+        
+        # Track download in monitoring system
+        from monitoring import track_template_download
+        track_template_download(template_id)
 
         # Serve actual template file - use relative path
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -45,6 +45,10 @@ login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
 CORS(app)
 
+# Initialize performance monitoring
+from monitoring import monitor
+monitor.init_app(app)
+
 # Note: Upload directory creation removed for serverless compatibility
 
 # Database Models
@@ -158,6 +162,7 @@ try:
     from routes.search_api import search_api_bp
     from routes.ai_generation import ai_bp
     from routes.integrations import integrations_bp
+    from routes.monitoring_routes import monitoring_routes_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
     app.register_blueprint(payment_bp, url_prefix='/payment')
@@ -165,7 +170,8 @@ try:
     app.register_blueprint(search_api_bp, url_prefix='/api/search')
     app.register_blueprint(ai_bp, url_prefix='/api/ai')
     app.register_blueprint(integrations_bp, url_prefix='/api/integrations')
-    logger.info("All blueprints registered successfully (including AI routes)")
+    app.register_blueprint(monitoring_routes_bp, url_prefix='/monitoring')
+    logger.info("All blueprints registered successfully (including AI and monitoring routes)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 
