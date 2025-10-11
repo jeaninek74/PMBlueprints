@@ -96,22 +96,35 @@ def detail(template_id):
         # Import here to avoid circular imports
         from app import Template, db
         
-        template = Template.query.get_or_404(template_id)
+        logger.info(f"Attempting to load template {template_id}")
+        
+        template = Template.query.get(template_id)
+        
+        if not template:
+            logger.warning(f"Template {template_id} not found in database")
+            abort(404)
+        
+        logger.info(f"Template {template_id} found: {template.name}")
 
         # Get related templates (same industry, different template)
-        related = Template.query.filter(
-            Template.industry == template.industry,
-            Template.id != template.id
-        ).limit(4).all()
+        try:
+            related = Template.query.filter(
+                Template.industry == template.industry,
+                Template.id != template.id
+            ).limit(4).all()
+            logger.info(f"Found {len(related)} related templates")
+        except Exception as e:
+            logger.error(f"Error fetching related templates: {e}")
+            related = []
 
         return render_template('templates/detail.html',
                              template=template,
                              related=related)
 
     except Exception as e:
-        logger.error(f"Template detail error for template_id {template_id}: {e}")
+        logger.error(f"Template detail error for template_id {template_id}: {str(e)}", exc_info=True)
         # Return a user-friendly error page
-        abort(404)
+        abort(500)
 
 @templates_bp.route('/<int:template_id>/download')
 @login_required
