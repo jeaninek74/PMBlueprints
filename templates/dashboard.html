@@ -1153,28 +1153,56 @@ let currentSuggestionIndex = 0;
 let suggestionRotationInterval = null;
 
 function initializeAISuggestions() {
-    // Display first suggestion
-    displaySuggestion(0);
-    
-    // Set up auto-rotation (15 seconds)
-    startSuggestionRotation();
-    
-    // Set up button handlers
-    document.getElementById('prevSuggestion').addEventListener('click', function() {
-        currentSuggestionIndex = (currentSuggestionIndex - 1 + aiSuggestions.length) % aiSuggestions.length;
-        displaySuggestion(currentSuggestionIndex);
-        resetRotationTimer();
-    });
-    
-    document.getElementById('nextSuggestion').addEventListener('click', function() {
-        currentSuggestionIndex = (currentSuggestionIndex + 1) % aiSuggestions.length;
-        displaySuggestion(currentSuggestionIndex);
-        resetRotationTimer();
-    });
-    
-    document.getElementById('viewAllSuggestions').addEventListener('click', function() {
-        showAllSuggestions();
-    });
+    try {
+        // Verify aiSuggestions is defined and has data
+        if (typeof aiSuggestions === 'undefined' || !aiSuggestions || aiSuggestions.length === 0) {
+            console.error('AI Suggestions data not loaded');
+            document.getElementById('suggestionTitle').textContent = 'AI Suggestions Unavailable';
+            document.getElementById('suggestionDescription').textContent = 'Unable to load suggestions. Please refresh the page.';
+            return;
+        }
+        
+        console.log('Initializing AI Suggestions with', aiSuggestions.length, 'suggestions');
+        
+        // Display first suggestion
+        displaySuggestion(0);
+        
+        // Set up auto-rotation (15 seconds)
+        startSuggestionRotation();
+        
+        // Set up button handlers
+        const prevBtn = document.getElementById('prevSuggestion');
+        const nextBtn = document.getElementById('nextSuggestion');
+        const viewAllBtn = document.getElementById('viewAllSuggestions');
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                currentSuggestionIndex = (currentSuggestionIndex - 1 + aiSuggestions.length) % aiSuggestions.length;
+                displaySuggestion(currentSuggestionIndex);
+                resetRotationTimer();
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                currentSuggestionIndex = (currentSuggestionIndex + 1) % aiSuggestions.length;
+                displaySuggestion(currentSuggestionIndex);
+                resetRotationTimer();
+            });
+        }
+        
+        if (viewAllBtn) {
+            viewAllBtn.addEventListener('click', function() {
+                showAllSuggestions();
+            });
+        }
+        
+        console.log('AI Suggestions initialized successfully');
+    } catch (error) {
+        console.error('Error initializing AI Suggestions:', error);
+        document.getElementById('suggestionTitle').textContent = 'Error Loading Suggestions';
+        document.getElementById('suggestionDescription').textContent = 'An error occurred. Please refresh the page.';
+    }
 }
 
 function displaySuggestion(index) {

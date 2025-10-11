@@ -125,8 +125,13 @@ def login():
             user.last_login = datetime.utcnow()
             db.session.commit()
             
-            # Log in user
+            # Log in user with permanent session if remember is checked
             login_user(user, remember=remember)
+            
+            # Make session permanent if remember me is checked
+            if remember:
+                from flask import session
+                session.permanent = True
             
             logger.info(f"User logged in: {email}")
             
@@ -183,7 +188,12 @@ def demo_login():
             db.session.add(demo_user)
             db.session.commit()
         
-        login_user(demo_user)
+        # Login with permanent session (remember me)
+        login_user(demo_user, remember=True)
+        
+        # Make session permanent for 7 days
+        from flask import session
+        session.permanent = True
         
         if request.is_json:
             return jsonify({
