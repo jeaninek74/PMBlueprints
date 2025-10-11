@@ -261,10 +261,17 @@ def dashboard():
         'member_since': current_user.created_at.strftime('%B %Y') if current_user.created_at else 'Unknown'
     }
     
-    return render_template('dashboard.html', 
+    response = app.make_response(render_template('dashboard.html', 
                          user=current_user, 
                          recent_downloads=recent_downloads,
-                         stats=stats)
+                         stats=stats))
+    
+    # Add cache-control headers to prevent caching of dashboard
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    
+    return response
 
 @app.route('/pricing')
 def pricing():
