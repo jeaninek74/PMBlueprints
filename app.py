@@ -30,14 +30,20 @@ app = Flask(__name__)
 # Production Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', secrets.token_hex(32))
 
-# Use Supabase PostgreSQL for production, SQLite for local development
-SUPABASE_DB_URL = 'postgresql://postgres.mmrazymwgqfxkhczqpus:PMBlueprints2024Secure!@aws-0-us-east-1.pooler.supabase.com:6543/postgres'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', SUPABASE_DB_URL)
+# Use Vercel Neon PostgreSQL for production, SQLite for local development
+# Vercel sets POSTGRES_URL when Neon database is connected
+DATABASE_URL = os.getenv('POSTGRES_URL') or os.getenv('DATABASE_URL', 'sqlite:///pmblueprints.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
-    'pool_pre_ping': True,
-    'pool_recycle': 300,
-}
+
+# PostgreSQL-specific connection pooling
+if DATABASE_URL.startswith('postgres'):
+    app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+        'pool_pre_ping': True,
+        'pool_recycle': 300,
+        'pool_size': 10,
+        'max_overflow': 20,
+    }
 app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
