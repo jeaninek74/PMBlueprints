@@ -2080,6 +2080,26 @@
     "file_size": 39722
   },
   {
+    "id": 948,
+    "name": "Communications Management Plan",
+    "filename": "Construction_Communications_Management_Plan_2025_PMI.xlsx",
+    "industry": "Construction",
+    "category": "Communication",
+    "file_type": "xlsx",
+    "description": "Professional communications management plan for construction projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Construction",
+      "Communication",
+      "PMI 2025"
+    ],
+    "file_size": 15266,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
+  },
+  {
     "id": 105,
     "name": "Dashboard",
     "filename": "Construction_KPI_Dashboard.xlsx",
@@ -2138,6 +2158,26 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 10806
+  },
+  {
+    "id": 950,
+    "name": "High Level Requirements List",
+    "filename": "Construction_High_Level_Requirements_List_2025_PMI.xlsx",
+    "industry": "Construction",
+    "category": "Business Analysis",
+    "file_type": "xlsx",
+    "description": "Professional high level requirements list for construction projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Construction",
+      "Business Analysis",
+      "PMI 2025"
+    ],
+    "file_size": 20029,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
   },
   {
     "id": 99,
@@ -2360,6 +2400,46 @@
     "file_size": 6372
   },
   {
+    "id": 952,
+    "name": "Requirements Traceability Matrix",
+    "filename": "Construction_Requirements_Traceability_Matrix_2025_PMI.xlsx",
+    "industry": "Construction",
+    "category": "Business Analysis",
+    "file_type": "xlsx",
+    "description": "Professional requirements traceability matrix for construction projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Construction",
+      "Business Analysis",
+      "PMI 2025"
+    ],
+    "file_size": 15298,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
+  },
+  {
+    "id": 954,
+    "name": "Resource Plan Staffing Plan",
+    "filename": "Construction_Resource_Plan_Staffing_Plan_2025_PMI.xlsx",
+    "industry": "Construction",
+    "category": "Resource Management",
+    "file_type": "xlsx",
+    "description": "Professional resource plan staffing plan for construction projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Construction",
+      "Resource Management",
+      "PMI 2025"
+    ],
+    "file_size": 16878,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
+  },
+  {
     "id": 122,
     "name": "Schedule",
     "filename": "Construction_Training_Schedule.xlsx",
@@ -2378,6 +2458,26 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 13576
+  },
+  {
+    "id": 956,
+    "name": "Stakeholder Register Analysis",
+    "filename": "Construction_Stakeholder_Register_Analysis_2025_PMI.xlsx",
+    "industry": "Construction",
+    "category": "Stakeholder Management",
+    "file_type": "xlsx",
+    "description": "Professional stakeholder register analysis for construction projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Construction",
+      "Stakeholder Management",
+      "PMI 2025"
+    ],
+    "file_size": 18208,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
   },
   {
     "id": 123,
@@ -3840,6 +3940,26 @@
     "file_size": 9714
   },
   {
+    "id": 958,
+    "name": "Data Readiness Assessment",
+    "filename": "Cybersecurity_Data_Readiness_Assessment_2025_PMI.docx",
+    "industry": "Cybersecurity",
+    "category": "Assessment & Evaluation",
+    "file_type": "docx",
+    "description": "Professional data readiness assessment for cybersecurity projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Cybersecurity",
+      "Assessment & Evaluation",
+      "PMI 2025"
+    ],
+    "file_size": 51752,
+    "has_formulas": false,
+    "has_fields": true,
+    "is_premium": false
+  },
+  {
     "id": 213,
     "name": "Estimates",
     "filename": "Cybersecurity_Training_Budget_Estimates.xlsx",
@@ -3938,6 +4058,26 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 6396
+  },
+  {
+    "id": 960,
+    "name": "Model Feasibility Evaluation",
+    "filename": "Cybersecurity_Model_Feasibility_Evaluation_2025_PMI.docx",
+    "industry": "Cybersecurity",
+    "category": "Assessment & Evaluation",
+    "file_type": "docx",
+    "description": "Professional model feasibility evaluation for cybersecurity projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Cybersecurity",
+      "Assessment & Evaluation",
+      "PMI 2025"
+    ],
+    "file_size": 48100,
+    "has_formulas": false,
+    "has_fields": true,
+    "is_premium": false
   },
   {
     "id": 188,
@@ -4138,6 +4278,26 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 6390
+  },
+  {
+    "id": 962,
+    "name": "Procurement Management Plan",
+    "filename": "Cybersecurity_Procurement_Management_Plan_2025_PMI.xlsx",
+    "industry": "Cybersecurity",
+    "category": "Procurement",
+    "file_type": "xlsx",
+    "description": "Professional procurement management plan for cybersecurity projects",
+    "downloads": 0,
+    "rating": 4.5,
+    "tags": [
+      "Cybersecurity",
+      "Procurement",
+      "PMI 2025"
+    ],
+    "file_size": 11143,
+    "has_formulas": true,
+    "has_fields": false,
+    "is_premium": false
   },
   {
     "id": 210,
