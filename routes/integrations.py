@@ -95,6 +95,52 @@ def workday_hcm():
             'error': str(e)
         }), 500
 
+
+# ==================== Google Sheets Routes ====================
+
+@integrations_bp.route('/google-sheets/export', methods=['POST'])
+def google_sheets_export():
+    """Export template to Google Sheets"""
+    try:
+        data = request.get_json()
+        
+        template_data = data.get('template_data', {})
+        spreadsheet_id = data.get('spreadsheet_id')
+        
+        result = integrations.google_sheets_export_template(template_data, spreadsheet_id)
+        
+        return jsonify(result), 200 if result['success'] else 400
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@integrations_bp.route('/google-sheets/preserve-formulas', methods=['POST'])
+def google_sheets_preserve_formulas():
+    """Preserve Excel formulas for Google Sheets export"""
+    try:
+        data = request.get_json()
+        
+        template_path = data.get('template_path')
+        
+        if not template_path:
+            return jsonify({
+                'success': False,
+                'error': 'template_path required'
+            }), 400
+        
+        result = integrations.google_sheets_preserve_formulas(template_path)
+        
+        return jsonify(result), 200 if result['success'] else 400
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
 # ==================== General Integration Routes ====================
 
 @integrations_bp.route('/status', methods=['GET'])
@@ -135,6 +181,6 @@ def integrations_health():
         'success': True,
         'service': 'integrations',
         'status': 'healthy',
-        'integrations_available': ['monday', 'smartsheet', 'workday']
+        'integrations_available': ['monday', 'smartsheet', 'workday', 'google_sheets']
     }), 200
 
