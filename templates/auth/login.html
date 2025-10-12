@@ -14,6 +14,20 @@
                         <p class="text-muted">Sign in to your PMBlueprints account</p>
                     </div>
                     
+                    <!-- Social Login Buttons -->
+                    <div class="mb-3">
+                        <a href="{{ url_for('oauth.google_login') }}" class="btn btn-outline-dark w-100 mb-2">
+                            <i class="fab fa-google me-2"></i>Continue with Google
+                        </a>
+                        <a href="{{ url_for('oauth.apple_login') }}" class="btn btn-outline-dark w-100">
+                            <i class="fab fa-apple me-2"></i>Continue with Apple
+                        </a>
+                    </div>
+                    
+                    <div class="text-center my-3">
+                        <span class="text-muted">or sign in with email</span>
+                    </div>
+                    
                     <form id="loginForm" method="POST">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>

@@ -114,6 +114,10 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     last_login = db.Column(db.DateTime)
     downloads_used = db.Column(db.Integer, default=0)
+    # OAuth fields
+    oauth_provider = db.Column(db.String(50))  # 'google' or 'apple'
+    oauth_id = db.Column(db.String(255))  # OAuth provider's user ID
+    email_verified = db.Column(db.Boolean, default=False)
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -274,6 +278,13 @@ try:
     from routes.favorites import favorites_bp
     from routes.health import health_bp
     from routes.setup import setup_bp
+    
+    # Initialize OAuth
+    from oauth_config import init_oauth
+    from routes.oauth import init_oauth_routes
+    oauth = init_oauth(app)
+    oauth_bp = init_oauth_routes(app, oauth)
+    
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
     app.register_blueprint(payment_bp, url_prefix='/payment')
@@ -285,7 +296,7 @@ try:
     app.register_blueprint(favorites_bp)  # No prefix, routes have /api/ in them
     app.register_blueprint(health_bp)  # Health check routes
     app.register_blueprint(setup_bp)  # Setup and database initialization routes
-    logger.info("All blueprints registered successfully (including favorites, ratings, health, and setup)")
+    logger.info("All blueprints registered successfully (including OAuth, favorites, ratings, health, and setup)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 
