@@ -261,3 +261,63 @@ footer a:hover {
         padding: 15px;
     }
 }
+
+
+/* DISABLE ALL ANIMATIONS AND TRANSITIONS */
+* {
+    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+}
+
+/* Disable Bootstrap modal fade */
+.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
+
+.modal.fade {
+    transition: none !important;
+}
+
+/* Disable Bootstrap collapse animations */
+.collapse {
+    transition: none !important;
+}
+
+.collapsing {
+    transition: none !important;
+}
+
+/* Disable alert fade */
+.alert {
+    transition: none !important;
+}
+
+.fade {
+    transition: none !important;
+    opacity: 1 !important;
+}
+
+/* Disable any hover effects that might animate */
+a, button, .btn, .card {
+    transition: none !important;
+}
+
+/* Ensure instant visibility changes */
+.show {
+    transition: none !important;
+}
+
+.hide {
+    transition: none !important;
+}
+
+/* Disable transform animations */
+* {
+    transform: none !important;
+}
+
