@@ -243,6 +243,7 @@ try:
     from routes.monitoring_routes import monitoring_routes_bp
     from routes.favorites import favorites_bp
     from routes.health import health_bp
+    from routes.setup import setup_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
     app.register_blueprint(payment_bp, url_prefix='/payment')
@@ -253,7 +254,8 @@ try:
     app.register_blueprint(monitoring_routes_bp, url_prefix='/monitoring')
     app.register_blueprint(favorites_bp)  # No prefix, routes have /api/ in them
     app.register_blueprint(health_bp)  # Health check routes
-    logger.info("All blueprints registered successfully (including favorites, ratings, and health)")
+    app.register_blueprint(setup_bp)  # Setup and database initialization routes
+    logger.info("All blueprints registered successfully (including favorites, ratings, health, and setup)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 
