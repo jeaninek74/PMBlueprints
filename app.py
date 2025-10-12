@@ -320,14 +320,19 @@ def dashboard():
         'member_since': current_user.created_at.strftime('%B %Y') if current_user.created_at else 'Unknown'
     }
     
+    # Add version parameter to force cache bypass (increment when dashboard.html changes)
+    dashboard_version = '3.0.0'  # Increment this to force browsers to reload dashboard
+    
     response = app.make_response(render_template('dashboard.html', 
                          user=current_user, 
                          recent_downloads=recent_downloads,
-                         stats=stats))
+                         stats=stats,
+                         version=dashboard_version))
     
     # Add cache-control headers to prevent caching of dashboard
     response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0'
     response.headers['Pragma'] = 'no-cache'
+    response.headers['X-Dashboard-Version'] = dashboard_version
     response.headers['Expires'] = '0'
     
     return response
