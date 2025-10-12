@@ -147,6 +147,35 @@ class Download(db.Model):
     user = db.relationship('User', backref=db.backref('downloads', lazy=True))
     template = db.relationship('Template', backref=db.backref('download_records', lazy=True))
 
+class Favorite(db.Model):
+    """User favorites for templates"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('favorites', lazy=True))
+    template = db.relationship('Template', backref=db.backref('favorited_by', lazy=True))
+    
+    # Ensure unique favorite per user per template
+    __table_args__ = (db.UniqueConstraint('user_id', 'template_id', name='unique_user_template_favorite'),)
+
+class TemplateRating(db.Model):
+    """User ratings for templates"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
+    rating = db.Column(db.Integer, nullable=False)  # 1-5 stars
+    review = db.Column(db.Text)  # Optional review text
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('ratings', lazy=True))
+    template = db.relationship('Template', backref=db.backref('user_ratings', lazy=True))
+    
+    # Ensure unique rating per user per template
+    __table_args__ = (db.UniqueConstraint('user_id', 'template_id', name='unique_user_template_rating'),)
+
 class Payment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
@@ -173,6 +202,7 @@ try:
     from routes.ai_generation import ai_bp
     from routes.integrations import integrations_bp
     from routes.monitoring_routes import monitoring_routes_bp
+    from routes.favorites import favorites_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
     app.register_blueprint(payment_bp, url_prefix='/payment')
@@ -181,7 +211,8 @@ try:
     app.register_blueprint(ai_bp, url_prefix='/api/ai')
     app.register_blueprint(integrations_bp, url_prefix='/api/integrations')
     app.register_blueprint(monitoring_routes_bp, url_prefix='/monitoring')
-    logger.info("All blueprints registered successfully (including AI and monitoring routes)")
+    app.register_blueprint(favorites_bp)  # No prefix, routes have /api/ in them
+    logger.info("All blueprints registered successfully (including favorites and ratings)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 

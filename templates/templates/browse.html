@@ -91,9 +91,18 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start mb-3">
                         <span class="badge bg-primary">{{ template.industry }}</span>
-                        {% if template.is_premium %}
-                        <span class="badge bg-warning text-dark">Premium</span>
-                        {% endif %}
+                        <div class="d-flex gap-2 align-items-center">
+                            {% if template.is_premium %}
+                            <span class="badge bg-warning text-dark">Premium</span>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                            <button class="btn btn-sm btn-link p-0 favorite-btn" 
+                                    data-template-id="{{ template.id }}"
+                                    title="Add to favorites">
+                                <i class="far fa-heart text-danger"></i>
+                            </button>
+                            {% endif %}
+                        </div>
                     </div>
                     
                     <h5 class="card-title">{{ template.name }}</h5>
@@ -107,6 +116,22 @@
                         <small class="text-muted">
                             <i class="fas fa-download me-1"></i>{{ template.downloads }} downloads
                         </small>
+                        <br>
+                        <div class="rating-display mt-2" data-template-id="{{ template.id }}">
+                            <div class="stars-static">
+                                {% set rating = template.rating|default(0)|round(1) %}
+                                {% for i in range(1, 6) %}
+                                    {% if i <= rating %}
+                                    <i class="fas fa-star text-warning"></i>
+                                    {% elif i - 0.5 <= rating %}
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                    {% else %}
+                                    <i class="far fa-star text-warning"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <small class="text-muted ms-1">{{ rating }} ({{ template.user_ratings|length if template.user_ratings else 0 }})</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -198,6 +223,105 @@
 {% endblock %}
 
 {% block extra_scripts %}
+<script>
+// Favorites functionality
+let userFavorites = [];
+
+// Load user favorites on page load
+document.addEventListener('DOMContentLoaded', function() {
+    {% if current_user.is_authenticated %}
+    loadUserFavorites();
+    {% endif %}
+    
+    // Favorite button click handlers
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleFavorite(this);
+        });
+    });
+});
+
+function loadUserFavorites() {
+    fetch('/api/favorites')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                userFavorites = data.favorites;
+                updateFavoriteButtons();
+            }
+        })
+        .catch(error => console.error('Error loading favorites:', error));
+}
+
+function updateFavoriteButtons() {
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+        const templateId = parseInt(btn.dataset.templateId);
+        const icon = btn.querySelector('i');
+        
+        if (userFavorites.includes(templateId)) {
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            btn.title = 'Remove from favorites';
+        } else {
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            btn.title = 'Add to favorites';
+        }
+    });
+}
+
+function toggleFavorite(btn) {
+    const templateId = parseInt(btn.dataset.templateId);
+    const icon = btn.querySelector('i');
+    const isFavorited = userFavorites.includes(templateId);
+    
+    // Optimistic UI update
+    if (isFavorited) {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        userFavorites = userFavorites.filter(id => id !== templateId);
+    } else {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        userFavorites.push(templateId);
+    }
+    
+    // API call
+    const method = isFavorited ? 'DELETE' : 'POST';
+    fetch(`/api/favorites/${templateId}`, { method: method })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                // Revert on error
+                toggleFavorite(btn);
+                alert('Failed to update favorite');
+            }
+        })
+        .catch(error => {
+            console.error('Error toggling favorite:', error);
+            // Revert on error
+            if (isFavorited) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                userFavorites.push(templateId);
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                userFavorites = userFavorites.filter(id => id !== templateId);
+            }
+        });
+}
+
+// View toggle functionality
+document.getElementById('grid-view')?.addEventListener('change', function() {
+    document.getElementById('templatesGrid').className = 'row g-4';
+});
+
+document.getElementById('list-view')?.addEventListener('change', function() {
+    document.getElementById('templatesGrid').className = 'row g-2';
+});
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Auto-submit form on filter change
