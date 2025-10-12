@@ -262,31 +262,21 @@ except ImportError as e:
 def index():
     """Homepage"""
     try:
-        # Use Supabase for statistics (production database with 964 templates)
-        from database_supabase import get_supabase_client
+        # Get statistics from database using SQLAlchemy
+        total_templates = Template.query.count()
         
-        supabase = get_supabase_client()
+        # Get distinct industries
+        industries = db.session.query(Template.industry).distinct().all()
+        industries = sorted([i[0] for i in industries if i[0]])
+        industries_count = len(industries)
         
-        if supabase:
-            # Get statistics from Supabase
-            total_response = supabase.table("templates").select("id", count="exact").execute()
-            total_templates = total_response.count if total_response.count else 964
-            
-            # Get distinct industries
-            industries_response = supabase.table("templates").select("industry").execute()
-            industries = list(set(t["industry"] for t in industries_response.data if t.get("industry")))
-            industries_count = len(industries)
-            
-            # Get distinct categories
-            categories_response = supabase.table("templates").select("category").execute()
-            categories = list(set(t["category"] for t in categories_response.data if t.get("category")))
-            categories_count = len(categories)
-            
-            # Sort for display
-            industries = sorted(industries)
-            categories = sorted(categories)
-        else:
-            # Fallback to hardcoded values if Supabase not available
+        # Get distinct categories
+        categories = db.session.query(Template.category).distinct().all()
+        categories = sorted([c[0] for c in categories if c[0]])
+        categories_count = len(categories)
+        
+        # If database is empty, use fallback values
+        if total_templates == 0:
             total_templates = "960+"
             industries_count = 30
             categories_count = 19
