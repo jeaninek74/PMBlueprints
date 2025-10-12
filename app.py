@@ -229,7 +229,37 @@ class Payment(db.Model):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    logger.info(f"Loading user with ID: {user_id}")
+    user = User.query.get(int(user_id))
+    if user:
+        logger.info(f"User loaded: {user.email}")
+    else:
+        logger.warning(f"User not found for ID: {user_id}")
+    return user
+
+# Session debugging and management
+@app.before_request
+def manage_session():
+    """Ensure session is properly initialized and logged"""
+    logger.info(f"Request: {request.method} {request.path}")
+    logger.info(f"Session exists: {bool(session)}")
+    logger.info(f"Session ID: {session.get('_id', 'NO_SESSION_ID')}")
+    logger.info(f"User authenticated: {current_user.is_authenticated}")
+    if current_user.is_authenticated:
+        logger.info(f"Current user: {current_user.email} (ID: {current_user.id})")
+        # Ensure session is marked as modified to force save
+        session.modified = True
+
+@app.after_request
+def save_session(response):
+    """Ensure session is saved and cookie is set"""
+    logger.info(f"Response: {response.status_code}")
+    cookie_header = response.headers.get('Set-Cookie')
+    if cookie_header:
+        logger.info(f"Set-Cookie: {cookie_header[:100]}...")  # Log first 100 chars
+    else:
+        logger.warning("No Set-Cookie header in response")
+    return response
 
 # Import blueprints (with error handling)
 try:
