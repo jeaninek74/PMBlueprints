@@ -554,7 +554,7 @@ function showNotification(message, type) {
     // Simple notification (in production, use a toast library)
     const alertClass = type === 'success' ? 'alert-success' : type === 'error' ? 'alert-danger' : 'alert-info';
     const notification = document.createElement('div');
-    notification.className = `alert ${alertClass} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
+    notification.className = `alert ${alertClass} alert-dismissible show position-fixed top-0 end-0 m-3`;
     notification.style.zIndex = '9999';
     notification.innerHTML = `
         ${message}
@@ -1302,7 +1302,7 @@ function showAllSuggestions() {
     
     // Show modal with all suggestions
     const modal = `
-        <div class="modal fade" id="allSuggestionsModal" tabindex="-1">
+        <div class="modal" id="allSuggestionsModal" tabindex="-1">
             <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
