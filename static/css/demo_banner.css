@@ -1,0 +1,325 @@
+/* Interactive Demo Banner Styles */
+
+.demo-banner-section {
+    background-color: #f8fafc;
+}
+
+/* Step Navigation */
+.demo-steps-nav {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.demo-step-btn {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.demo-step-btn:hover {
+    border-color: #1e3a8a;
+    background-color: #f8fafc;
+}
+
+.demo-step-btn.active {
+    border-color: #1e3a8a;
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.demo-step-btn .step-number {
+    width: 36px;
+    height: 36px;
+    background: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.demo-step-btn.active .step-number {
+    background: white;
+    color: #1e3a8a;
+}
+
+.demo-step-btn .step-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Demo Content Area */
+.demo-content-area {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.demo-step-content {
+    display: none;
+}
+
+.demo-step-content.active {
+    display: block;
+}
+
+/* Demo Visual Styles */
+.demo-visual {
+    border: 1px solid #e9ecef;
+}
+
+/* Browser Chrome */
+.demo-browser-chrome {
+    background: #f1f3f5;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.browser-dots {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.browser-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #dee2e6;
+}
+
+.browser-url {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Template Grid */
+.demo-template-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.demo-template-card {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.demo-template-card:hover {
+    border-color: #1e3a8a;
+}
+
+.demo-template-card.selected {
+    border-color: #1e3a8a;
+    background-color: #f0f4ff;
+}
+
+.demo-template-card .template-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.demo-template-card .template-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.demo-template-card .template-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.demo-template-card .template-meta .badge {
+    font-size: 11px;
+}
+
+/* Excel Preview */
+.demo-excel-preview {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.excel-toolbar {
+    background: #2b579a;
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.excel-logo {
+    font-weight: 600;
+}
+
+.file-name {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.excel-sheet {
+    padding: 20px;
+    background: white;
+}
+
+.excel-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.excel-table th,
+.excel-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.excel-table th {
+    background: #f1f3f5;
+    font-weight: 600;
+}
+
+.excel-table .formula-cell {
+    background: #e7f5ff;
+    font-family: 'Courier New', monospace;
+    color: #1e3a8a;
+}
+
+.excel-table .total-row {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Platform Export Demo */
+.platform-export-demo {
+    padding: 20px;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.platform-option {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.platform-option:hover {
+    border-color: #1e3a8a;
+}
+
+.platform-option.selected {
+    border-color: #1e3a8a;
+    background-color: #f0f4ff;
+}
+
+.platform-option .platform-name {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.export-status {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Demo Description */
+.demo-description h3 {
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+/* Demo CTA */
+.demo-cta {
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .demo-content-area {
+        padding: 20px;
+    }
+    
+    .demo-template-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .demo-step-btn .step-title {
+        font-size: 14px;
+    }
+    
+    .excel-table {
+        font-size: 12px;
+    }
+    
+    .demo-cta .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .demo-cta .btn.me-3 {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .demo-step-content .row {
+        flex-direction: column-reverse;
+    }
+    
+    .demo-step-content .col-lg-6 {
+        margin-bottom: 20px;
+    }
+}
+

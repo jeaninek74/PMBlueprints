@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+<link href="{{ url_for('static', filename='css/demo_banner.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <!-- Hero Section -->
 <section class="hero-section bg-primary text-white py-5">
@@ -138,6 +142,9 @@
         </div>
     </div>
 </section>
+
+<!-- Interactive Demo Banner -->
+{% include 'components/demo_banner.html' %}
 
 <!-- Integrations Section -->
 <section class="py-5 bg-light">
@@ -514,4 +521,7 @@ function displayPopularTemplates(templates) {
     });
 }
 </script>
+
+<!-- Demo Banner JavaScript -->
+<script src="{{ url_for('static', filename='js/demo_banner.js') }}"></script>
 {% endblock %}
