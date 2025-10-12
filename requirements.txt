@@ -15,3 +15,9 @@ python-dotenv>=1.0.0
 
 # Platform Integrations
 openpyxl>=3.1.0
+
+
+# Session Management
+Flask-Session==0.5.0
+redis==5.0.1
+

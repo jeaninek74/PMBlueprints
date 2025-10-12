@@ -35,6 +35,24 @@ app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
 # Session Configuration for Vercel Serverless
+# Use Redis for session storage (required for serverless)
+redis_url = os.getenv('REDIS_URL', None)
+if redis_url:
+    logger.info("Configuring Redis-backed sessions")
+    import redis
+    from flask_session import Session
+    
+    app.config['SESSION_TYPE'] = 'redis'
+    app.config['SESSION_REDIS'] = redis.from_url(redis_url)
+    app.config['SESSION_PERMANENT'] = True
+    app.config['SESSION_USE_SIGNER'] = True
+    app.config['SESSION_KEY_PREFIX'] = 'pmb:'
+else:
+    logger.warning("REDIS_URL not set, using filesystem sessions (not recommended for production)")
+    app.config['SESSION_TYPE'] = 'filesystem'
+    app.config['SESSION_FILE_DIR'] = '/tmp/flask_sessions'
+    app.config['SESSION_PERMANENT'] = True
+
 app.config['SESSION_COOKIE_SECURE'] = True  # HTTPS only
 app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevent XSS
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'  # Important for Vercel
@@ -54,6 +72,14 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
 CORS(app)
+
+# Initialize Flask-Session (must be after app config)
+if redis_url:
+    from flask_session import Session
+    Session(app)
+    logger.info("Flask-Session initialized with Redis backend")
+else:
+    logger.warning("Flask-Session using filesystem backend")
 
 # Initialize performance monitoring
 from monitoring import monitor
