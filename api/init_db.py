@@ -14,7 +14,7 @@ sys.path.insert(0, str(parent_dir))
 from flask import jsonify
 from app import app, db, User, Template, Download, Favorite, TemplateRating
 
-def handler(request):
+def handler(request, response):
     """Initialize database tables"""
     with app.app_context():
         try:
@@ -29,22 +29,25 @@ def handler(request):
             # Count templates
             template_count = Template.query.count()
             
-            return jsonify({
+            result = {
                 'success': True,
                 'message': 'Database initialized successfully',
                 'tables_created': tables,
                 'template_count': template_count
-            }), 200
+            }
+            
+            response.status_code = 200
+            response.headers['Content-Type'] = 'application/json'
+            return jsonify(result)
             
         except Exception as e:
             import traceback
-            return jsonify({
+            result = {
                 'success': False,
                 'error': str(e),
                 'traceback': traceback.format_exc()
-            }), 500
-
-# For Vercel
-def main(request):
-    return handler(request)
+            }
+            response.status_code = 500
+            response.headers['Content-Type'] = 'application/json'
+            return jsonify(result)
 

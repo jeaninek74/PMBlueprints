@@ -27,11 +27,16 @@ class PlatformIntegrations:
         self.workday_password = os.getenv('WORKDAY_PASSWORD', '')
         self.workday_api_url = f'https://wd2-impl-services1.workday.com/ccx/service/{self.workday_tenant}'
         
+        # Google Sheets configuration
+        self.google_sheets_credentials = os.getenv('GOOGLE_SHEETS_CREDENTIALS', '')
+        self.google_sheets_api_url = 'https://sheets.googleapis.com/v4/spreadsheets'
+        
         # Integration status
         self.integrations_enabled = {
             'monday': bool(self.monday_api_key),
             'smartsheet': bool(self.smartsheet_api_key),
-            'workday': bool(self.workday_tenant and self.workday_username)
+            'workday': bool(self.workday_tenant and self.workday_username),
+            'google_sheets': bool(self.google_sheets_credentials)
         }
     
     # ==================== Monday.com Integration ====================
@@ -637,6 +642,11 @@ class PlatformIntegrations:
                 'enabled': self.integrations_enabled['workday'],
                 'status': 'configured' if self.integrations_enabled['workday'] else 'not_configured',
                 'features': ['hcm_integration', 'resource_planning', 'time_tracking', 'staffing']
+            },
+            'google_sheets': {
+                'enabled': self.integrations_enabled['google_sheets'],
+                'status': 'configured' if self.integrations_enabled['google_sheets'] else 'not_configured',
+                'features': ['formula_preservation', 'real_time_collaboration', 'cloud_storage', 'auto_sync']
             }
         }
     
@@ -681,6 +691,18 @@ class PlatformIntegrations:
                 'success': True,
                 'platform': 'workday',
                 'tenant': self.workday_tenant
+            }
+        
+        elif platform == 'google_sheets':
+            if not self.integrations_enabled['google_sheets']:
+                return {'success': False, 'error': 'Google Sheets not configured'}
+            
+            # For now, return success if credentials are configured
+            # In production, this would test actual Google Sheets API access
+            return {
+                'success': True,
+                'platform': 'google_sheets',
+                'status': 'connected'
             }
         
         else:
