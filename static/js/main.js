@@ -504,7 +504,68 @@ async function handleRegistration(event) {
 /**
  * Download generated template
  */
-function downloadGeneratedTemplate() {
-    // This would typically generate and download the AI-created template
-    alert('AI-generated template download functionality would be implemented here');
+async function downloadGeneratedTemplate() {
+    try {
+        // Get the generated template data from the page
+        const templateName = document.querySelector('.generated-template h3')?.textContent || 'AI_Generated_Template';
+        const description = document.querySelector('.generated-template p')?.textContent || '';
+        
+        // Show loading state
+        const downloadBtn = document.querySelector('.download-template-btn');
+        if (downloadBtn) {
+            downloadBtn.disabled = true;
+            downloadBtn.textContent = 'Generating...';
+        }
+        
+        // Call the AI generation API to create the actual file
+        const response = await fetch('/api/ai/download-generated', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                template_name: templateName,
+                description: description,
+                sections: Array.from(document.querySelectorAll('.generated-template li')).map(li => li.textContent)
+            })
+        });
+        
+        if (response.ok) {
+            // Get the file blob
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${templateName.replace(/[^a-z0-9]/gi, '_')}.xlsx`;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            // Reset button
+            if (downloadBtn) {
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = 'Download Template';
+            }
+        } else {
+            const error = await response.json();
+            alert(error.error || 'Failed to generate template. Please try again.');
+            
+            // Reset button
+            if (downloadBtn) {
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = 'Download Template';
+            }
+        }
+    } catch (error) {
+        console.error('Download error:', error);
+        alert('Failed to download template. Please try again.');
+        
+        // Reset button
+        const downloadBtn = document.querySelector('.download-template-btn');
+        if (downloadBtn) {
+            downloadBtn.disabled = false;
+            downloadBtn.textContent = 'Download Template';
+        }
+    }
 }
