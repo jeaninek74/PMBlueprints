@@ -21,14 +21,23 @@ def browse():
         # Import here to avoid circular imports
         from app import db, Template, init_db
         
-        # Ensure database is initialized
+        logger.info("Templates browse route called")
+        
+        # Ensure database is initialized and test connection
         try:
-            # Test if templates table exists by trying to count
-            Template.query.count()
-        except Exception:
-            # If table doesn't exist, initialize database
-            logger.info("Database not initialized, initializing now...")
-            init_db()
+            template_count = Template.query.count()
+            logger.info(f"Database connection successful. Found {template_count} templates")
+        except Exception as db_error:
+            logger.error(f"Database connection failed: {db_error}", exc_info=True)
+            # Try to initialize database
+            try:
+                logger.info("Attempting to initialize database...")
+                init_db()
+                template_count = Template.query.count()
+                logger.info(f"Database initialized successfully. Found {template_count} templates")
+            except Exception as init_error:
+                logger.error(f"Database initialization failed: {init_error}", exc_info=True)
+                raise Exception(f"Database error: {str(db_error)}. Init error: {str(init_error)}")
 
         # Get filter parameters
         industry = request.args.get('industry')
@@ -37,25 +46,37 @@ def browse():
         page = request.args.get('page', 1, type=int)
         per_page = 12
 
+        logger.info(f"Filters - Industry: {industry}, Category: {category}, Search: {search}, Page: {page}")
+
         # Build the query
         query = Template.query
 
         if industry:
             query = query.filter(Template.industry == industry)
+            logger.info(f"Filtered by industry: {industry}")
 
         if category:
             query = query.filter(Template.category == category)
+            logger.info(f"Filtered by category: {category}")
 
         if search:
             search_term = f"%{search}%"
             query = query.filter(Template.name.ilike(search_term) | Template.description.ilike(search_term))
+            logger.info(f"Filtered by search: {search}")
+
+        # Get total count before pagination
+        total_count = query.count()
+        logger.info(f"Query returned {total_count} templates")
 
         # Paginate the results
         pagination = query.paginate(page=page, per_page=per_page, error_out=False)
+        logger.info(f"Pagination: {len(pagination.items)} items on page {page} of {pagination.pages}")
 
         # Get unique industries and categories for filters
         industries = [row[0] for row in db.session.query(Template.industry).distinct().order_by(Template.industry).all()]
         categories = [row[0] for row in db.session.query(Template.category).distinct().order_by(Template.category).all()]
+        
+        logger.info(f"Found {len(industries)} industries and {len(categories)} categories")
 
         return render_template('templates/browse.html',
                              templates=pagination,
@@ -66,7 +87,8 @@ def browse():
                              current_search=search)
 
     except Exception as e:
-        logger.error(f"Template browse error: {e}")
+        logger.error(f"CRITICAL: Template browse error: {e}", exc_info=True)
+        
         # Create a mock pagination object to prevent template errors
         class MockPagination:
             def __init__(self):
@@ -80,6 +102,9 @@ def browse():
         
         mock_pagination = MockPagination()
         
+        error_details = f"Database Error: {str(e)}"
+        logger.error(f"Returning error page with message: {error_details}")
+        
         return render_template('templates/browse.html',
                              templates=mock_pagination,
                              industries=[],
@@ -87,7 +112,7 @@ def browse():
                              current_industry=None,
                              current_category=None,
                              current_search='',
-                             error_message="Unable to load templates. Please try again later.")
+                             error_message=error_details)
 
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):
