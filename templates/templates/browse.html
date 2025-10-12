@@ -59,6 +59,20 @@
         </div>
     </div>
 
+    <!-- Error Message -->
+    {% if error_message %}
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+                <h5 class="alert-heading"><i class="fas fa-exclamation-triangle"></i> Error Loading Templates</h5>
+                <p class="mb-0">{{ error_message }}</p>
+                <hr>
+                <p class="mb-0 small">Please try refreshing the page or contact support if the problem persists.</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     <!-- Results -->
     <div class="row mb-4">
         <div class="col-12">

@@ -19,25 +19,13 @@ def browse():
     """Browse all templates"""
     try:
         # Import here to avoid circular imports
-        from app import db, Template, init_db
+        from app import db, Template
         
         logger.info("Templates browse route called")
         
-        # Ensure database is initialized and test connection
-        try:
-            template_count = Template.query.count()
-            logger.info(f"Database connection successful. Found {template_count} templates")
-        except Exception as db_error:
-            logger.error(f"Database connection failed: {db_error}", exc_info=True)
-            # Try to initialize database
-            try:
-                logger.info("Attempting to initialize database...")
-                init_db()
-                template_count = Template.query.count()
-                logger.info(f"Database initialized successfully. Found {template_count} templates")
-            except Exception as init_error:
-                logger.error(f"Database initialization failed: {init_error}", exc_info=True)
-                raise Exception(f"Database error: {str(db_error)}. Init error: {str(init_error)}")
+        # Test database connection
+        template_count = Template.query.count()
+        logger.info(f"Database connection successful. Found {template_count} templates")
 
         # Get filter parameters
         industry = request.args.get('industry')
