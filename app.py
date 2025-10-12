@@ -279,11 +279,18 @@ try:
     from routes.health import health_bp
     from routes.setup import setup_bp
     
-    # Initialize OAuth
-    from oauth_config import init_oauth
-    from routes.oauth import init_oauth_routes
-    oauth = init_oauth(app)
-    oauth_bp = init_oauth_routes(app, oauth)
+    # Initialize OAuth (optional - only if credentials are set)
+    try:
+        from oauth_config import init_oauth
+        from routes.oauth import init_oauth_routes
+        if os.getenv('GOOGLE_CLIENT_ID') or os.getenv('APPLE_CLIENT_ID'):
+            oauth = init_oauth(app)
+            oauth_bp = init_oauth_routes(app, oauth)
+            logger.info("OAuth initialized successfully")
+        else:
+            logger.info("OAuth credentials not set, skipping OAuth initialization")
+    except Exception as e:
+        logger.warning(f"OAuth initialization skipped: {e}")
     
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(templates_bp, url_prefix='/templates')
