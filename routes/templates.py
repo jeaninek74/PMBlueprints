@@ -140,17 +140,17 @@ def detail(template_id):
         abort(500)
 
 @templates_bp.route('/<int:template_id>/download')
-@login_required
 def download(template_id):
     """Download template file"""
     try:
         # Import here to avoid circular imports
         from app import db, Template, Download
+        from flask import session
         
         template = Template.query.get_or_404(template_id)
 
-        # Check if user can download
-        if not current_user.can_download():
+        # Check if user can download (only if logged in)
+        if current_user.is_authenticated and not current_user.can_download():
             if request.is_json:
                 return jsonify({
                     'success': False,
@@ -171,20 +171,20 @@ def download(template_id):
             return render_template('templates/upgrade_required.html',
                                  template=template)
 
-        # Create download record
-        download_record = Download(
-            user_id=current_user.id,
-            template_id=template.id
-        )
-        db.session.add(download_record)
+        # Create download record (only if logged in)
+        if current_user.is_authenticated:
+            download_record = Download(
+                user_id=current_user.id,
+                template_id=template.id
+            )
+            db.session.add(download_record)
 
-        # Update user download count
-        if current_user.subscription_plan == 'free':
-            current_user.downloads_used += 1
-
+            # Update user download count
+            if current_user.subscription_plan == 'free':
+                current_user.downloads_used += 1
+        
         # Update template download count
         template.downloads += 1
-
         db.session.commit()
         
         # Track download in monitoring system
@@ -201,7 +201,8 @@ def download(template_id):
                 return jsonify({'success': False, 'error': 'Template file not found'}), 404
             abort(404)
 
-        logger.info(f"Template downloaded: {template.name} by {current_user.email}")
+        user_email = current_user.email if current_user.is_authenticated else 'anonymous'
+        logger.info(f"Template downloaded: {template.name} by {user_email}")
 
         return send_file(
             template_path,
