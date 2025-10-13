@@ -167,9 +167,9 @@
                             <span class="badge bg-success ms-2">FREE</span>
                         </h5>
                         <p class="card-text text-muted small mb-3">Get AI-powered suggestions to help fill out this template</p>
-                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-success w-100">
+                        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#aiSuggestionsModal">
                             <i class="fas fa-magic me-2"></i>Get AI Help
-                        </a>
+                        </button>
                     </div>
                 </div>
                 {% endif %}
@@ -276,4 +276,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }).catch(err => console.log('Analytics tracking failed:', err));
 });
 </script>
+
+<!-- Include AI Suggestions Modal -->
+{% if current_user.is_authenticated %}
+{% include 'components/ai_suggestions_modal.html' %}
+{% endif %}
+
 {% endblock %}

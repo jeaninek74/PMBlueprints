@@ -1,0 +1,213 @@
+<!-- AI Suggestions Modal -->
+<div class="modal fade" id="aiSuggestionsModal" tabindex="-1" aria-labelledby="aiSuggestionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="aiSuggestionsModalLabel">
+                    <i class="fas fa-magic me-2"></i>AI Suggestions
+                    <span class="badge bg-light text-success ms-2">FREE</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Quick Suggestions Section -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-bolt me-2 text-primary"></i>Quick Suggestions
+                    </h6>
+                    <p class="text-muted small mb-3">Get instant suggestions for common template sections</p>
+                    
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small">Template Type</label>
+                            <select class="form-select form-select-sm" id="modalQuickTemplateType">
+                                <option value="">Select type...</option>
+                                <option value="Risk Register">Risk Register</option>
+                                <option value="Stakeholder Analysis">Stakeholder Analysis</option>
+                                <option value="Communication Plan">Communication Plan</option>
+                                <option value="Project Charter">Project Charter</option>
+                                <option value="WBS">Work Breakdown Structure</option>
+                                <option value="Budget">Budget Plan</option>
+                                <option value="Resource Plan">Resource Plan</option>
+                                <option value="Quality Plan">Quality Management Plan</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small">Section</label>
+                            <select class="form-select form-select-sm" id="modalQuickSection">
+                                <option value="">Select section...</option>
+                                <option value="risks">Common Risks</option>
+                                <option value="stakeholders">Key Stakeholders</option>
+                                <option value="milestones">Project Milestones</option>
+                                <option value="resources">Required Resources</option>
+                                <option value="deliverables">Project Deliverables</option>
+                                <option value="tasks">Planning Tasks</option>
+                                <option value="success_criteria">Success Criteria</option>
+                                <option value="assumptions">Assumptions</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary btn-sm w-100" id="modalGenerateQuickBtn">
+                        <i class="fas fa-magic me-2"></i>Generate Suggestions
+                    </button>
+                </div>
+
+                <hr>
+
+                <!-- Custom Question Section -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-question-circle me-2 text-info"></i>Custom Question
+                    </h6>
+                    <p class="text-muted small mb-3">Ask any question about your template or project</p>
+                    
+                    <div class="mb-3">
+                        <label class="form-label small">Your Question</label>
+                        <textarea class="form-control" id="modalCustomQuestion" rows="3" 
+                                  placeholder="Example: What are the key risks for a cloud migration project?"></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn btn-info btn-sm w-100 text-white" id="modalAskCustomBtn">
+                        <i class="fas fa-paper-plane me-2"></i>Ask AI
+                    </button>
+                </div>
+
+                <hr>
+
+                <!-- AI Response Section -->
+                <div id="modalAiResponseSection" style="display: none;">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fas fa-lightbulb me-2 text-warning"></i>AI Response
+                    </h6>
+                    
+                    <!-- Loading Spinner -->
+                    <div id="modalLoadingSpinner" class="text-center py-4" style="display: none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="text-muted mt-2 small">AI is thinking...</p>
+                    </div>
+                    
+                    <!-- Response Content -->
+                    <div id="modalResponseContent" class="bg-light p-3 rounded" style="display: none;">
+                        <div id="modalResponseText" class="mb-3"></div>
+                        <button type="button" class="btn btn-sm btn-outline-primary" id="modalCopyBtn">
+                            <i class="fas fa-copy me-2"></i>Copy to Clipboard
+                        </button>
+                    </div>
+                    
+                    <!-- Error Message -->
+                    <div id="modalErrorMessage" class="alert alert-danger" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AI Suggestions Modal JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('aiSuggestionsModal');
+    const generateQuickBtn = document.getElementById('modalGenerateQuickBtn');
+    const askCustomBtn = document.getElementById('modalAskCustomBtn');
+    const copyBtn = document.getElementById('modalCopyBtn');
+    const responseSection = document.getElementById('modalAiResponseSection');
+    const loadingSpinner = document.getElementById('modalLoadingSpinner');
+    const responseContent = document.getElementById('modalResponseContent');
+    const responseText = document.getElementById('modalResponseText');
+    const errorMessage = document.getElementById('modalErrorMessage');
+
+    // Generate Quick Suggestions
+    if (generateQuickBtn) {
+        generateQuickBtn.addEventListener('click', async function() {
+            const templateType = document.getElementById('modalQuickTemplateType').value;
+            const section = document.getElementById('modalQuickSection').value;
+
+            if (!templateType || !section) {
+                alert('Please select both template type and section');
+                return;
+            }
+
+            await getAISuggestion({
+                template_type: templateType,
+                section: section,
+                question: `What are the ${section} for a ${templateType}?`
+            });
+        });
+    }
+
+    // Ask Custom Question
+    if (askCustomBtn) {
+        askCustomBtn.addEventListener('click', async function() {
+            const question = document.getElementById('modalCustomQuestion').value.trim();
+
+            if (!question) {
+                alert('Please enter a question');
+                return;
+            }
+
+            await getAISuggestion({
+                question: question
+            });
+        });
+    }
+
+    // Copy to Clipboard
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+            const text = responseText.innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check me-2"></i>Copied!';
+                setTimeout(function() {
+                    copyBtn.innerHTML = originalText;
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy to clipboard');
+            });
+        });
+    }
+
+    // Get AI Suggestion Function
+    async function getAISuggestion(data) {
+        // Show response section and loading spinner
+        responseSection.style.display = 'block';
+        loadingSpinner.style.display = 'block';
+        responseContent.style.display = 'none';
+        errorMessage.style.display = 'none';
+
+        try {
+            const response = await fetch('/ai_suggestions/api/suggest', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            loadingSpinner.style.display = 'none';
+
+            if (response.ok && result.success) {
+                responseText.innerHTML = result.suggestion.replace(/\n/g, '<br>');
+                responseContent.style.display = 'block';
+            } else {
+                errorMessage.textContent = result.error || 'Failed to get AI suggestion';
+                errorMessage.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            loadingSpinner.style.display = 'none';
+            errorMessage.textContent = 'Network error. Please try again.';
+            errorMessage.style.display = 'block';
+        }
+    }
+});
+</script>
+
