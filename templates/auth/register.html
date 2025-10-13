@@ -15,7 +15,6 @@
                     </div>
                     
                     <!-- Social Login Buttons -->
-                    {% if config.get('GOOGLE_CLIENT_ID') %}
                     <div class="mb-3">
                         <a href="{{ url_for('oauth.google_login') }}" class="btn btn-outline-dark w-100 mb-2">
                             <i class="fab fa-google me-2"></i>Sign up with Google
@@ -25,7 +24,6 @@
                     <div class="text-center my-3">
                         <span class="text-muted">or create account with email</span>
                     </div>
-                    {% endif %}
                     
                     <form id="registerForm" method="POST">
                         <div class="row">
@@ -127,3 +125,4 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
 });
 </script>
 {% endblock %}
+
