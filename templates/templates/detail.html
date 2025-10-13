@@ -158,6 +158,22 @@
                     </div>
                 </div>
 
+                <!-- AI Suggestions -->
+                {% if current_user.is_authenticated %}
+                <div class="card mb-4 border-success">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            <i class="fas fa-magic me-2 text-success"></i>AI Suggestions
+                            <span class="badge bg-success ms-2">FREE</span>
+                        </h5>
+                        <p class="card-text text-muted small mb-3">Get AI-powered suggestions to help fill out this template</p>
+                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-success w-100">
+                            <i class="fas fa-magic me-2"></i>Get AI Help
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+
                 <!-- Platform Integration -->
                 <div class="card mb-4">
                     <div class="card-body">

@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}AI Suggestions - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold">
+                    <i class="fas fa-magic me-2 text-primary"></i>AI Suggestions
+                </h1>
+                <p class="lead text-muted">Get FREE AI-powered suggestions for your project management templates</p>
+                <div class="badge bg-success fs-6 px-3 py-2">
+                    <i class="fas fa-gift me-2"></i>100% FREE - Unlimited Use
+                </div>
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Quick Suggestions</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-3">Get instant suggestions for common template sections</p>
+                    
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Template Type</label>
+                            <select class="form-select" id="quickTemplateType">
+                                <option value="Software Development">Software Development</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Marketing Campaign">Marketing Campaign</option>
+                                <option value="Product Launch">Product Launch</option>
+                                <option value="IT Infrastructure">IT Infrastructure</option>
+                                <option value="Business Process">Business Process</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Section</label>
+                            <select class="form-select" id="quickSection">
+                                <option value="risks">Common Risks</option>
+                                <option value="stakeholders">Key Stakeholders</option>
+                                <option value="milestones">Project Milestones</option>
+                                <option value="resources">Required Resources</option>
+                                <option value="deliverables">Project Deliverables</option>
+                                <option value="tasks">Planning Tasks</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary w-100" id="getQuickSuggestion">
+                        <i class="fas fa-magic me-2"></i>Get Quick Suggestion
+                    </button>
+                </div>
+            </div>
+
+            <!-- Custom Question -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="fas fa-question-circle me-2"></i>Ask a Question</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted mb-3">Ask any project management question and get expert AI guidance</p>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Template Type</label>
+                        <input type="text" class="form-control" id="customTemplateType" 
+                               placeholder="e.g., Risk Register, Project Charter, etc.">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Your Question</label>
+                        <textarea class="form-control" id="customQuestion" rows="3" 
+                                  placeholder="e.g., What risks should I include for a software migration project?"></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Additional Context (Optional)</label>
+                        <input type="text" class="form-control" id="customContext" 
+                               placeholder="e.g., 6-month timeline, remote team, budget constraints">
+                    </div>
+                    
+                    <button class="btn btn-info w-100 text-white" id="getCustomSuggestion">
+                        <i class="fas fa-comments me-2"></i>Get AI Answer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Area -->
+            <div class="card shadow-sm" id="resultsCard" style="display: none;">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="fas fa-check-circle me-2"></i>AI Suggestion</h5>
+                </div>
+                <div class="card-body">
+                    <div id="suggestionResult" class="suggestion-content"></div>
+                    <div class="mt-3 text-end">
+                        <button class="btn btn-sm btn-outline-primary" id="copySuggestion">
+                            <i class="fas fa-copy me-1"></i>Copy to Clipboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="text-center my-4" id="loadingSpinner" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="text-muted mt-2">AI is thinking...</p>
+            </div>
+
+            <!-- Info Section -->
+            <div class="alert alert-info mt-4">
+                <h6><i class="fas fa-info-circle me-2"></i>How to Use AI Suggestions</h6>
+                <ul class="mb-0 small">
+                    <li><strong>Quick Suggestions:</strong> Get instant lists for common template sections</li>
+                    <li><strong>Custom Questions:</strong> Ask specific questions about your project</li>
+                    <li><strong>Copy & Paste:</strong> Copy suggestions directly into your templates</li>
+                    <li><strong>Unlimited & Free:</strong> Use as many times as you need, no charge</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.suggestion-content {
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.suggestion-content ul {
+    padding-left: 1.5rem;
+}
+
+.suggestion-content li {
+    margin-bottom: 0.5rem;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quickBtn = document.getElementById('getQuickSuggestion');
+    const customBtn = document.getElementById('getCustomSuggestion');
+    const copyBtn = document.getElementById('copySuggestion');
+    const resultsCard = document.getElementById('resultsCard');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const suggestionResult = document.getElementById('suggestionResult');
+
+    // Quick Suggestion
+    quickBtn.addEventListener('click', async function() {
+        const templateType = document.getElementById('quickTemplateType').value;
+        const section = document.getElementById('quickSection').value;
+
+        showLoading();
+
+        try {
+            const response = await fetch('/ai_suggestions/api/suggest/quick', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    template_type: templateType,
+                    section: section
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                showResult(data.suggestion);
+            } else {
+                alert('Error: ' + data.error);
+            }
+        } catch (error) {
+            alert('Failed to get suggestion. Please try again.');
+        } finally {
+            hideLoading();
+        }
+    });
+
+    // Custom Question
+    customBtn.addEventListener('click', async function() {
+        const templateType = document.getElementById('customTemplateType').value;
+        const question = document.getElementById('customQuestion').value;
+        const context = document.getElementById('customContext').value;
+
+        if (!question.trim()) {
+            alert('Please enter a question');
+            return;
+        }
+
+        showLoading();
+
+        try {
+            const response = await fetch('/ai_suggestions/api/suggest', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    template_type: templateType || 'Project Management',
+                    question: question,
+                    context: context
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                showResult(data.suggestion);
+            } else {
+                alert('Error: ' + data.error);
+            }
+        } catch (error) {
+            alert('Failed to get suggestion. Please try again.');
+        } finally {
+            hideLoading();
+        }
+    });
+
+    // Copy to Clipboard
+    copyBtn.addEventListener('click', function() {
+        const text = suggestionResult.textContent;
+        navigator.clipboard.writeText(text).then(function() {
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check me-1"></i>Copied!';
+            setTimeout(function() {
+                copyBtn.innerHTML = originalText;
+            }, 2000);
+        });
+    });
+
+    function showLoading() {
+        loadingSpinner.style.display = 'block';
+        resultsCard.style.display = 'none';
+    }
+
+    function hideLoading() {
+        loadingSpinner.style.display = 'none';
+    }
+
+    function showResult(suggestion) {
+        suggestionResult.textContent = suggestion;
+        resultsCard.style.display = 'block';
+        resultsCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+});
+</script>
+{% endblock %}
+
