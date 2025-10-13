@@ -28,19 +28,15 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('templates.browse') }}">Templates</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('pricing') }}">Pricing</a>
-                    </li>
                     {% if current_user.is_authenticated %}
-                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ai_suggestions.suggestions_page') }}">
+                            <i class="fas fa-magic me-1"></i>AI Suggestions
+                            <span class="badge bg-success ms-1">FREE</span>
+                        </a>
                         <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
-                    </li>
                     {% endif %}
                 </ul>
                 
@@ -64,12 +60,7 @@
                         </ul>
                     </li>
                     {% else %}
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('auth.register') }}">Sign Up</a>
-                    </li>
                     {% endif %}
                 </ul>
             </div>
