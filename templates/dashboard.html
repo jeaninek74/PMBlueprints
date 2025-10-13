@@ -253,55 +253,146 @@
                 </div>
             </div>
 
-            <!-- AI Generator Section -->
-            <div class="card border-0 shadow-sm mb-4" id="ai-generator" style="display: none;">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-magic me-2"></i>AI Template Generator
-                    </h5>
+            <!-- AI Generator Section - Simplified -->
+<div class="card border-0 shadow-sm mb-4" id="ai-generator" style="display: none;">
+    <div class="card-header bg-white">
+        <h5 class="card-title mb-0">
+            <i class="fas fa-magic me-2"></i>AI Template Generator
+        </h5>
+        <p class="text-muted small mb-0 mt-2">Create custom project management templates for any industry or methodology not available in our catalog</p>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-info mb-4">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>How it works:</strong> Describe the template you need, and our AI will generate a professional, editable document based on PMI 2025 PMBOK standards and industry best practices.
+        </div>
+        
+        <form id="aiGeneratorForm">
+            <div class="mb-3">
+                <label for="aiDocumentName" class="form-label">
+                    <strong>What template do you need?</strong>
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control" id="aiDocumentName" required
+                       placeholder="e.g., Project Charter, Risk Register, Stakeholder Analysis, etc.">
+                <small class="text-muted">Enter the type of project management document you want to create</small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="aiProjectContext" class="form-label">
+                    <strong>Project Context & Requirements</strong>
+                    <span class="text-muted">(Optional)</span>
+                </label>
+                <textarea class="form-control" id="aiProjectContext" rows="4" 
+                    placeholder="Describe your project context, industry, methodology, or specific requirements...
+
+Examples:
+- Software development project using Agile methodology
+- Construction project for a hospital building
+- Marketing campaign for product launch
+- IT infrastructure upgrade for financial services"></textarea>
+                <small class="text-muted">Provide additional context to help generate more relevant content</small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="aiDocumentFormat" class="form-label">
+                    <strong>Preferred Format</strong>
+                </label>
+                <select class="form-select" id="aiDocumentFormat">
+                    <option value="auto">Auto-detect (Recommended)</option>
+                    <option value="word">Word Document (.docx)</option>
+                    <option value="excel">Excel Spreadsheet (.xlsx)</option>
+                </select>
+                <small class="text-muted">The AI will automatically select the best format based on your template type</small>
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-magic me-2"></i>Generate Template
+                </button>
+            </div>
+        </form>
+        
+        <!-- Generation Progress -->
+        <div id="aiGenerationProgress" class="mt-4" style="display: none;">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h6 class="mb-3">
+                        <i class="fas fa-spinner fa-spin me-2"></i>
+                        <span id="progressStatus">Analyzing your request...</span>
+                    </h6>
+                    <div class="progress mb-2" style="height: 25px;">
+                        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                             role="progressbar" style="width: 0%">0%</div>
+                    </div>
+                    <small class="text-muted" id="progressMessage">This may take 30-60 seconds...</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Preview Section -->
+        <div id="aiPreview" class="mt-4" style="display: none;">
+            <div class="card border-success">
+                <div class="card-header bg-success text-white">
+                    <h6 class="mb-0">
+                        <i class="fas fa-eye me-2"></i>Template Preview
+                    </h6>
                 </div>
                 <div class="card-body">
-                    <form id="aiGeneratorForm">
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <label for="aiIndustry" class="form-label">Industry</label>
-                                <select class="form-select" id="aiIndustry" required>
-                                    <option value="">Select Industry</option>
-                                    <option value="Technology">Technology</option>
-                                    <option value="Healthcare">Healthcare</option>
-                                    <option value="Construction">Construction</option>
-                                    <option value="Finance">Finance</option>
-                                    <option value="Manufacturing">Manufacturing</option>
-                                    <option value="Education">Education</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="aiProjectType" class="form-label">Project Type</label>
-                                <select class="form-select" id="aiProjectType" required>
-                                    <option value="">Select Project Type</option>
-                                    <option value="Software Development">Software Development</option>
-                                    <option value="Infrastructure">Infrastructure</option>
-                                    <option value="Process Improvement">Process Improvement</option>
-                                    <option value="Product Launch">Product Launch</option>
-                                    <option value="Compliance">Compliance</option>
-                                </select>
-                            </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <strong>Document Name:</strong>
+                            <p id="previewDocName" class="mb-0"></p>
                         </div>
-                        <div class="mb-3">
-                            <label for="aiDescription" class="form-label">Project Description</label>
-                            <textarea class="form-control" id="aiDescription" rows="3" 
-                                placeholder="Describe your project needs and requirements..."></textarea>
+                        <div class="col-md-6">
+                            <strong>Format:</strong>
+                            <p id="previewFormat" class="mb-0"></p>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-magic me-2"></i>Generate Suggestions
-                        </button>
-                    </form>
+                    </div>
                     
-                    <div id="aiResults" class="mt-4" style="display: none;">
-                        <h6>AI Suggestions:</h6>
-                        <div id="aiSuggestionsList"></div>
+                    <div class="mb-3">
+                        <strong>Document Structure:</strong>
+                        <div id="previewStructure" class="border rounded p-3 bg-light"></div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <strong>Content Preview:</strong>
+                        <div id="previewContent" class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;"></div>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Note:</strong> The generated template is editable. You can customize it after download to fit your specific needs.
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-success btn-lg" id="downloadGeneratedBtn">
+                            <i class="fas fa-download me-2"></i>Download Template
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" id="generateNewBtn">
+                            <i class="fas fa-redo me-2"></i>Generate New Template
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Error Display -->
+        <div id="aiError" class="mt-4" style="display: none;">
+            <div class="alert alert-danger">
+                <h6 class="alert-heading">
+                    <i class="fas fa-exclamation-circle me-2"></i>Generation Failed
+                </h6>
+                <p id="errorMessage" class="mb-0"></p>
+            </div>
+            <button type="button" class="btn btn-outline-primary" id="retryBtn">
+                <i class="fas fa-redo me-2"></i>Try Again
+            </button>
+        </div>
+    </div>
+</div>
+
+
             </div>
 
             <!-- Recent Downloads -->
@@ -1340,4 +1431,5 @@ function showAllSuggestions() {
 }
 
 </script>
+<script src="{{ url_for('static', filename='js/ai_generator.js') }}"></script>
 {% endblock %}
