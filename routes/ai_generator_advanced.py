@@ -489,3 +489,44 @@ def register_ai_generator_routes(app):
     app.register_blueprint(ai_gen_bp)
     logger.info("Advanced AI Generator routes registered")
 
+
+
+@ai_gen_bp.route('/download', methods=['POST'])
+@login_required
+def download_document():
+    """
+    Generate and download final document file
+    """
+    try:
+        from document_generator import document_generator
+        
+        data = request.get_json()
+        
+        content = data.get('content', '')
+        document_name = data.get('document_name', 'PM_Document')
+        format_type = data.get('format', 'word')
+        structure = data.get('structure', {})
+        metadata = data.get('metadata', {})
+        
+        if not content:
+            return jsonify({'success': False, 'error': 'Content is required'}), 400
+        
+        # Add user info
+        metadata['generated_by'] = current_user.email
+        metadata['user_id'] = current_user.id
+        
+        # Generate document
+        if format_type == 'word':
+            filepath = document_generator.generate_word_document(content, document_name, structure, metadata)
+        elif format_type == 'excel':
+            filepath = document_generator.generate_excel_document(content, document_name, structure, metadata)
+        elif format_type == 'powerpoint':
+            filepath = document_generator.generate_powerpoint_document(content, document_name, structure, metadata)
+        else:
+            return jsonify({'success': False, 'error': f'Unsupported format: {format_type}'}), 400
+        
+        return send_file(filepath, as_attachment=True, download_name=os.path.basename(filepath))
+        
+    except Exception as e:
+        logger.error(f"Error downloading document: {e}")
+        return jsonify({'success': False, 'error': str(e)}), 500

@@ -313,6 +313,7 @@ try:
     from routes.setup import setup_bp
     from routes.ai_download import ai_download_bp
     from routes.update_industries import update_industries_bp
+    from routes.ai_generator_advanced import ai_gen_bp as ai_generator_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -341,6 +342,7 @@ try:
     app.register_blueprint(health_bp)  # Health check routes
     app.register_blueprint(setup_bp)  # Setup and database initialization routes
     app.register_blueprint(ai_download_bp)  # AI template download routes
+    app.register_blueprint(ai_generator_bp)
     app.register_blueprint(update_industries_bp)  # Update industries route
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, and setup)")
 except ImportError as e:
