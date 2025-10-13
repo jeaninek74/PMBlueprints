@@ -118,6 +118,11 @@ class User(UserMixin, db.Model):
     oauth_provider = db.Column(db.String(50))  # 'google' or 'apple'
     oauth_id = db.Column(db.String(255))  # OAuth provider's user ID
     email_verified = db.Column(db.Boolean, default=False)
+    # Platform integration tokens (stored as JSON)
+    platform_tokens = db.Column(db.Text)  # JSON string of platform OAuth tokens
+    # OpenAI API key (optional - users can provide their own)
+    openai_api_key = db.Column(db.String(255))  # User's own OpenAI API key
+    openai_usage_count = db.Column(db.Integer, default=0)  # Track AI generation usage
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -129,6 +134,32 @@ class User(UserMixin, db.Model):
         if self.subscription_plan == 'free':
             return self.downloads_used < 10
         return True
+    
+    def is_platform_connected(self, platform):
+        """Check if user has connected a specific platform"""
+        if not self.platform_tokens:
+            return False
+        try:
+            import json
+            tokens = json.loads(self.platform_tokens)
+            return platform in tokens and tokens[platform].get('access_token')
+        except:
+            return False
+    
+    def get_platform_token(self, platform):
+        """Get OAuth token for a specific platform"""
+        if not self.platform_tokens:
+            return None
+        try:
+            import json
+            tokens = json.loads(self.platform_tokens)
+            return tokens.get(platform, {}).get('access_token')
+        except:
+            return None
+    
+    def has_openai_key(self):
+        """Check if user has configured OpenAI API key"""
+        return bool(self.openai_api_key)
     
     def to_dict(self):
         return {
@@ -274,6 +305,7 @@ try:
     from routes.search_api import search_api_bp
     from routes.ai_generation import ai_bp
     from routes.integrations import integrations_bp
+    from routes.integrations_page import integrations_page_bp
     from routes.monitoring_routes import monitoring_routes_bp
     from routes.favorites import favorites_bp
     from routes.health import health_bp
@@ -301,6 +333,7 @@ try:
     app.register_blueprint(search_api_bp, url_prefix='/api/search')
     app.register_blueprint(ai_bp, url_prefix='/api/ai')
     app.register_blueprint(integrations_bp, url_prefix='/api/integrations')
+    app.register_blueprint(integrations_page_bp)  # Integrations settings page
     app.register_blueprint(monitoring_routes_bp, url_prefix='/monitoring')
     app.register_blueprint(favorites_bp)  # No prefix, routes have /api/ in them
     app.register_blueprint(health_bp)  # Health check routes

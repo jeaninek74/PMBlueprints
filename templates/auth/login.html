@@ -14,19 +14,12 @@
                         <p class="text-muted">Sign in to your PMBlueprints account</p>
                     </div>
                     
-                    <!-- Social Login Buttons (only show if OAuth is configured) -->
-                    {% if config.get('GOOGLE_CLIENT_ID') or config.get('APPLE_CLIENT_ID') %}
+                    <!-- Social Login Buttons -->
+                    {% if config.get('GOOGLE_CLIENT_ID') %}
                     <div class="mb-3">
-                        {% if config.get('GOOGLE_CLIENT_ID') %}
                         <a href="{{ url_for('oauth.google_login') }}" class="btn btn-outline-dark w-100 mb-2">
                             <i class="fab fa-google me-2"></i>Continue with Google
                         </a>
-                        {% endif %}
-                        {% if config.get('APPLE_CLIENT_ID') %}
-                        <a href="{{ url_for('oauth.apple_login') }}" class="btn btn-outline-dark w-100">
-                            <i class="fab fa-apple me-2"></i>Continue with Apple
-                        </a>
-                        {% endif %}
                     </div>
                     
                     <div class="text-center my-3">

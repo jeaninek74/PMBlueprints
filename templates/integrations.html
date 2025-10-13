@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Platform Integrations - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">
+                <i class="fas fa-plug me-2"></i>Platform Integrations
+            </h1>
+            <p class="lead text-muted mb-5">
+                Connect your favorite project management tools to export templates directly to your workspace.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Google Workspace Integration -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fab fa-google fa-3x text-primary me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-0">Google Workspace</h5>
+                            <small class="text-muted">Sheets, Drive, Docs, Calendar</small>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Export templates to Google Sheets with formulas preserved. Save to Google Drive and collaborate in real-time.
+                    </p>
+                    <div class="mt-3">
+                        {% if current_user.is_platform_connected('google_workspace') %}
+                        <span class="badge bg-success mb-2">
+                            <i class="fas fa-check-circle me-1"></i>Connected
+                        </span>
+                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='google_workspace') }}" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-unlink me-1"></i>Disconnect
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('oauth.connect_platform', platform='google_workspace') }}" class="btn btn-primary">
+                            <i class="fas fa-link me-1"></i>Connect Google Workspace
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft 365 Integration -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fab fa-microsoft fa-3x text-primary me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-0">Microsoft 365</h5>
+                            <small class="text-muted">Project, Planner, Teams, SharePoint</small>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Export to Microsoft Project, Planner, and SharePoint. Integrate with Teams for seamless collaboration.
+                    </p>
+                    <div class="mt-3">
+                        {% if current_user.is_platform_connected('microsoft_365') %}
+                        <span class="badge bg-success mb-2">
+                            <i class="fas fa-check-circle me-1"></i>Connected
+                        </span>
+                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='microsoft_365') }}" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-unlink me-1"></i>Disconnect
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('oauth.connect_platform', platform='microsoft_365') }}" class="btn btn-primary">
+                            <i class="fas fa-link me-1"></i>Connect Microsoft 365
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monday.com Integration -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-calendar-week fa-3x text-danger me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-0">Monday.com</h5>
+                            <small class="text-muted">Work OS Platform</small>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Export templates directly to Monday.com boards with real-time sync and automation capabilities.
+                    </p>
+                    <div class="mt-3">
+                        {% if current_user.is_platform_connected('monday') %}
+                        <span class="badge bg-success mb-2">
+                            <i class="fas fa-check-circle me-1"></i>Connected
+                        </span>
+                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='monday') }}" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-unlink me-1"></i>Disconnect
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('oauth.connect_platform', platform='monday') }}" class="btn btn-primary">
+                            <i class="fas fa-link me-1"></i>Connect Monday.com
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smartsheet Integration -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-table fa-3x text-success me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-0">Smartsheet</h5>
+                            <small class="text-muted">Work Management Platform</small>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Sync templates to Smartsheet with Gantt charts, resource management, and collaboration features.
+                    </p>
+                    <div class="mt-3">
+                        {% if current_user.is_platform_connected('smartsheet') %}
+                        <span class="badge bg-success mb-2">
+                            <i class="fas fa-check-circle me-1"></i>Connected
+                        </span>
+                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='smartsheet') }}" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-unlink me-1"></i>Disconnect
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('oauth.connect_platform', platform='smartsheet') }}" class="btn btn-primary">
+                            <i class="fas fa-link me-1"></i>Connect Smartsheet
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workday Integration -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-briefcase fa-3x text-warning me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-0">Workday</h5>
+                            <small class="text-muted">Enterprise HCM</small>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Enterprise integration with Workday HCM for resource planning, time tracking, and project staffing.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-info mb-2">
+                            <i class="fas fa-building me-1"></i>Enterprise Only
+                        </span>
+                        {% if current_user.is_platform_connected('workday') %}
+                        <span class="badge bg-success mb-2">
+                            <i class="fas fa-check-circle me-1"></i>Connected
+                        </span>
+                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='workday') }}" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-unlink me-1"></i>Disconnect
+                            </button>
+                        </form>
+                        {% else %}
+                        <a href="{{ url_for('oauth.connect_platform', platform='workday') }}" class="btn btn-primary">
+                            <i class="fas fa-link me-1"></i>Connect Workday
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integration Benefits -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card bg-light border-0">
+                <div class="card-body p-4">
+                    <h4 class="mb-3">
+                        <i class="fas fa-info-circle me-2"></i>How Platform Integrations Work
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <h6><i class="fas fa-shield-alt text-success me-2"></i>Secure OAuth Connection</h6>
+                            <p class="small text-muted">
+                                We use industry-standard OAuth 2.0 to securely connect to your accounts. We never store your passwords.
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6><i class="fas fa-user-lock text-primary me-2"></i>Your Data, Your Control</h6>
+                            <p class="small text-muted">
+                                Templates are exported directly to your own workspace. You maintain full control and can disconnect anytime.
+                            </p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6><i class="fas fa-bolt text-warning me-2"></i>One-Click Export</h6>
+                            <p class="small text-muted">
+                                Once connected, export any template to your platform with a single click. Formulas and formatting preserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Requirements Notice -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="alert alert-info">
+                <h6 class="alert-heading">
+                    <i class="fas fa-exclamation-circle me-2"></i>Account Requirements
+                </h6>
+                <p class="mb-0 small">
+                    <strong>Note:</strong> You must have an active account with each platform to use integrations. 
+                    Some platforms require paid subscriptions for API access (Monday.com: Standard plan, Smartsheet: Business plan, Workday: Enterprise contract).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
