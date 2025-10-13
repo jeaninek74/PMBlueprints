@@ -1,0 +1,239 @@
+"""
+PM Document Intelligence Module
+Built-in intelligence for generating ANY project management document
+"""
+
+import re
+from typing import Dict, List, Tuple, Optional
+
+class PMDocumentIntelligence:
+    """
+    Intelligent system that understands PM document patterns, structures, and formats
+    Can generate ANY PM document, not just pre-defined templates
+    """
+    
+    def __init__(self):
+        # PM document type patterns
+        self.document_patterns = {
+            'register': ['risk', 'issue', 'stakeholder', 'assumption', 'dependency', 'change'],
+            'log': ['decision', 'change', 'action', 'defect', 'incident', 'meeting'],
+            'plan': ['project', 'communication', 'resource', 'quality', 'procurement', 'risk', 'scope', 'schedule', 'cost'],
+            'charter': ['project', 'team'],
+            'matrix': ['raci', 'responsibility', 'traceability', 'escalation', 'evaluation'],
+            'analysis': ['stakeholder', 'swot', 'cost-benefit', 'gap', 'root cause'],
+            'report': ['status', 'progress', 'performance', 'lessons learned', 'closure'],
+            'schedule': ['project', 'milestone', 'gantt'],
+            'budget': ['project', 'cost', 'financial'],
+            'statement': ['work', 'scope', 'vision', 'problem'],
+            'breakdown': ['work', 'wbs', 'resource', 'cost'],
+            'baseline': ['scope', 'schedule', 'cost', 'performance'],
+            'dashboard': ['project', 'kpi', 'metrics', 'executive']
+        }
+        
+        # Format determination rules
+        self.format_rules = {
+            'excel': ['register', 'log', 'matrix', 'budget', 'schedule', 'tracker', 'list', 'breakdown', 'dashboard'],
+            'word': ['plan', 'charter', 'statement', 'analysis', 'report', 'procedure', 'policy', 'specification'],
+            'powerpoint': ['presentation', 'dashboard', 'executive', 'summary', 'review', 'kickoff']
+        }
+        
+        # PM knowledge areas (PMI PMBOK)
+        self.knowledge_areas = [
+            'Integration Management',
+            'Scope Management',
+            'Schedule Management',
+            'Cost Management',
+            'Quality Management',
+            'Resource Management',
+            'Communications Management',
+            'Risk Management',
+            'Procurement Management',
+            'Stakeholder Management'
+        ]
+        
+        # Common PM deliverable structures
+        self.excel_structures = {
+            'register': ['ID', 'Title', 'Description', 'Owner', 'Status', 'Priority', 'Date Created', 'Last Updated'],
+            'log': ['ID', 'Date', 'Description', 'Action', 'Owner', 'Due Date', 'Status', 'Notes'],
+            'matrix': ['ID', 'Item', 'Category', 'Responsible', 'Accountable', 'Consulted', 'Informed'],
+            'budget': ['Category', 'Description', 'Planned Cost', 'Actual Cost', 'Variance', 'Status', 'Notes'],
+            'schedule': ['Task ID', 'Task Name', 'Start Date', 'End Date', 'Duration', 'Dependencies', 'Owner', 'Status'],
+            'tracker': ['ID', 'Item', 'Status', 'Owner', 'Due Date', 'Priority', 'Progress %', 'Notes']
+        }
+        
+        self.word_structures = {
+            'plan': ['Executive Summary', 'Purpose', 'Scope', 'Objectives', 'Approach', 'Roles & Responsibilities', 'Timeline', 'Resources', 'Risks', 'Success Criteria'],
+            'charter': ['Project Title', 'Purpose', 'Objectives', 'Scope', 'Deliverables', 'Stakeholders', 'Assumptions', 'Constraints', 'Budget', 'Timeline', 'Authorization'],
+            'analysis': ['Executive Summary', 'Background', 'Methodology', 'Findings', 'Analysis', 'Recommendations', 'Conclusion'],
+            'report': ['Executive Summary', 'Project Overview', 'Accomplishments', 'Issues & Risks', 'Upcoming Activities', 'Budget Status', 'Schedule Status', 'Next Steps'],
+            'statement': ['Introduction', 'Background', 'Objectives', 'Scope', 'Deliverables', 'Assumptions', 'Constraints', 'Acceptance Criteria']
+        }
+    
+    def analyze_document_request(self, document_name: str, description: str = "") -> Dict:
+        """
+        Analyze what type of PM document is being requested
+        Returns document intelligence including format, structure, and content guidance
+        """
+        doc_lower = document_name.lower()
+        desc_lower = description.lower()
+        combined = f"{doc_lower} {desc_lower}"
+        
+        # Determine document category
+        category = self._determine_category(doc_lower)
+        
+        # Determine optimal format
+        format_type = self._determine_format(doc_lower, category)
+        
+        # Get structure template
+        structure = self._get_structure(category, format_type)
+        
+        # Determine knowledge area
+        knowledge_area = self._determine_knowledge_area(combined)
+        
+        # Generate content guidance
+        content_guidance = self._generate_content_guidance(category, document_name, description)
+        
+        return {
+            'document_name': document_name,
+            'category': category,
+            'format': format_type,
+            'structure': structure,
+            'knowledge_area': knowledge_area,
+            'content_guidance': content_guidance,
+            'pm_principles': self._get_pm_principles(category)
+        }
+    
+    def _determine_category(self, doc_name: str) -> str:
+        """Determine document category from name"""
+        for category, keywords in self.document_patterns.items():
+            if any(keyword in doc_name for keyword in keywords):
+                return category
+        
+        # Default categorization based on common PM terms
+        if 'track' in doc_name or 'monitor' in doc_name:
+            return 'tracker'
+        elif 'assess' in doc_name or 'evaluat' in doc_name:
+            return 'analysis'
+        elif 'summar' in doc_name or 'overview' in doc_name:
+            return 'report'
+        else:
+            return 'document'
+    
+    def _determine_format(self, doc_name: str, category: str) -> str:
+        """Determine optimal document format"""
+        # Check explicit format rules
+        for format_type, keywords in self.format_rules.items():
+            if any(keyword in doc_name for keyword in keywords):
+                return format_type
+            if category in keywords:
+                return format_type
+        
+        # Default logic
+        if category in ['register', 'log', 'matrix', 'tracker']:
+            return 'excel'
+        elif 'present' in doc_name or 'slide' in doc_name or 'deck' in doc_name:
+            return 'powerpoint'
+        else:
+            return 'word'
+    
+    def _get_structure(self, category: str, format_type: str) -> List[str]:
+        """Get appropriate structure based on category and format"""
+        if format_type == 'excel':
+            return self.excel_structures.get(category, self.excel_structures['tracker'])
+        elif format_type == 'word':
+            return self.word_structures.get(category, self.word_structures['statement'])
+        else:  # PowerPoint
+            return ['Title Slide', 'Agenda', 'Overview', 'Key Points', 'Analysis', 'Recommendations', 'Next Steps', 'Q&A']
+    
+    def _determine_knowledge_area(self, text: str) -> str:
+        """Determine which PMI knowledge area this document relates to"""
+        for area in self.knowledge_areas:
+            area_keywords = area.lower().split()[0]  # e.g., 'risk' from 'Risk Management'
+            if area_keywords in text:
+                return area
+        return 'Integration Management'  # Default
+    
+    def _generate_content_guidance(self, category: str, doc_name: str, description: str) -> Dict:
+        """Generate intelligent content guidance for AI generation"""
+        guidance = {
+            'purpose': self._get_document_purpose(category, doc_name),
+            'key_elements': self._get_key_elements(category),
+            'best_practices': self._get_best_practices(category),
+            'sample_content_hints': self._get_content_hints(category, description)
+        }
+        return guidance
+    
+    def _get_document_purpose(self, category: str, doc_name: str) -> str:
+        """Get the purpose of this document type"""
+        purposes = {
+            'register': f'Track and manage {doc_name} throughout the project lifecycle',
+            'log': f'Record and document {doc_name} with dates, actions, and ownership',
+            'plan': f'Define approach, processes, and procedures for {doc_name}',
+            'charter': f'Formally authorize and define {doc_name} with objectives and scope',
+            'matrix': f'Map relationships and responsibilities for {doc_name}',
+            'analysis': f'Analyze and evaluate {doc_name} to support decision-making',
+            'report': f'Communicate status, progress, and performance of {doc_name}',
+            'statement': f'Define and document {doc_name} clearly and comprehensively'
+        }
+        return purposes.get(category, f'Document and manage {doc_name} effectively')
+    
+    def _get_key_elements(self, category: str) -> List[str]:
+        """Get key elements that should be in this document"""
+        elements = {
+            'register': ['Unique ID', 'Clear description', 'Owner assignment', 'Status tracking', 'Priority/severity', 'Dates'],
+            'log': ['Chronological entries', 'Action items', 'Ownership', 'Due dates', 'Status updates'],
+            'plan': ['Objectives', 'Scope', 'Approach', 'Roles', 'Timeline', 'Resources', 'Risks'],
+            'charter': ['Authorization', 'Objectives', 'Scope', 'Stakeholders', 'Budget', 'Success criteria'],
+            'matrix': ['Clear mapping', 'Defined relationships', 'Accountability', 'Traceability'],
+            'analysis': ['Data/findings', 'Methodology', 'Insights', 'Recommendations', 'Supporting evidence']
+        }
+        return elements.get(category, ['Clear structure', 'Relevant content', 'Professional format'])
+    
+    def _get_best_practices(self, category: str) -> List[str]:
+        """Get PM best practices for this document type"""
+        practices = {
+            'register': ['Use unique IDs', 'Assign clear ownership', 'Update regularly', 'Track status changes', 'Include dates'],
+            'log': ['Maintain chronological order', 'Be specific and concise', 'Assign action owners', 'Set due dates', 'Follow up on actions'],
+            'plan': ['Align with project objectives', 'Define clear roles', 'Include success metrics', 'Address risks', 'Get stakeholder approval'],
+            'charter': ['Get executive sponsor signature', 'Define clear scope boundaries', 'Identify key stakeholders', 'Set realistic objectives'],
+            'matrix': ['Ensure complete coverage', 'Avoid overlaps', 'Define clear roles', 'Get stakeholder agreement'],
+            'analysis': ['Use data-driven approach', 'Document assumptions', 'Provide actionable recommendations', 'Include executive summary']
+        }
+        return practices.get(category, ['Follow PMI standards', 'Use clear language', 'Maintain professional format', 'Update regularly'])
+    
+    def _get_content_hints(self, category: str, description: str) -> List[str]:
+        """Generate content hints based on category and user description"""
+        hints = []
+        
+        # Extract project context from description
+        if description:
+            if 'software' in description.lower() or 'it' in description.lower():
+                hints.append('Include IT/software-specific considerations')
+            if 'agile' in description.lower() or 'scrum' in description.lower():
+                hints.append('Adapt for Agile methodology')
+            if 'construction' in description.lower():
+                hints.append('Include construction industry standards')
+        
+        # Category-specific hints
+        if category == 'register':
+            hints.append('Include columns for tracking and monitoring')
+        elif category == 'plan':
+            hints.append('Structure with clear sections and subsections')
+        elif category == 'charter':
+            hints.append('Include authorization and sign-off section')
+        
+        return hints
+    
+    def _get_pm_principles(self, category: str) -> List[str]:
+        """Get relevant PM principles to apply"""
+        return [
+            'Use PMI-compliant terminology',
+            'Follow industry best practices',
+            'Ensure traceability and accountability',
+            'Include version control',
+            'Make it actionable and practical'
+        ]
+
+# Global instance
+pm_intelligence = PMDocumentIntelligence()
+

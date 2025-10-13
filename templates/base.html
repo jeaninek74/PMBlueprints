@@ -39,12 +39,6 @@
                     </li>
                     {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('ai_suggestions.suggestions_page') }}">
-                            <i class="fas fa-magic me-1"></i>AI Suggestions
-                            <span class="badge bg-success ms-1">FREE</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
                     </li>
                     {% endif %}
@@ -71,15 +65,10 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('auth.demo_login') }}">
-                            <i class="fas fa-play me-1"></i>Demo Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-light ms-2" href="{{ url_for('auth.register') }}">Get Started</a>
+                        <a class="nav-link" href="{{ url_for('auth.register') }}">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -172,3 +161,4 @@
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>
+

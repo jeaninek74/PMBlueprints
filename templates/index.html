@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
+{% block title %}PMBlueprints - AI-Powered PM Templates{% endblock %}
+
 {% block extra_head %}
 <link href="{{ url_for('static', filename='css/demo_banner.css') }}" rel="stylesheet">
+<style>
+/* Remove any hover animations */
+.card {
+    transition: none !important;
+}
+.hover-lift {
+    transition: none !important;
+}
+</style>
 {% endblock %}
 
 {% block content %}
@@ -100,154 +111,91 @@
     </div>
 </section>
 
-<!-- Features Section -->
-<section class="py-5">
+<!-- Why Choose PMBlueprints Section -->
+<section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">Why Choose PMBlueprints?</h2>
-            <p class="lead text-muted">
-                Professional project management templates designed by experts, powered by AI, 
-                and trusted by thousands of project managers worldwide.
-            </p>
+            <p class="lead text-muted">Professional templates designed for project management excellence</p>
         </div>
         
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <h4>AI-Powered Features</h4>
-                    <p class="text-muted">
-                        <strong>FREE AI Suggestions:</strong> Get instant help filling out templates with expert guidance.<br>
-                        <strong>Full Generation ($5):</strong> Create complete custom templates using GPT-4 technology.
-                    </p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle bg-primary bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-award text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">PMI 2025 Certified</h5>
+                        <p class="text-muted">All templates comply with the latest PMI PMBOK standards and best practices</p>
+                    </div>
                 </div>
             </div>
+            
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <h4>Excel Formula Preservation</h4>
-                    <p class="text-muted">
-                        All templates include built-in Excel formulas that are preserved during export to 
-                        Monday.com, Smartsheet, Google Sheets, and other platforms.
-                    </p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle bg-success bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-magic text-success fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">AI-Powered Generation</h5>
+                        <p class="text-muted">Create custom PM documents for any methodology using our intelligent AI generator</p>
+                    </div>
                 </div>
             </div>
+            
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <h4>PMI 2025 Compliant</h4>
-                    <p class="text-muted">
-                        Every template follows the latest PMI standards and PMBOK Guide 7th Edition 
-                        best practices for professional project management.
-                    </p>
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-circle bg-info bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-plug text-info fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Platform Compatible</h5>
+                        <p class="text-muted">Works seamlessly with Google Sheets, Microsoft 365, Monday.com, Smartsheet, and Workday</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Interactive Demo Banner -->
-{% include 'components/demo_banner.html' %}
-
-<!-- Integrations Section -->
-<section class="py-5 bg-light">
+<!-- Platform Compatible Section -->
+<section class="py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">Platform Compatible</h2>
-            <p class="lead text-muted">
-                Download templates and easily upload to your favorite project management platforms. 
-                All formulas and formatting preserved.
-            </p>
+            <p class="lead text-muted">Download once, use everywhere. Our templates work with your favorite tools.</p>
         </div>
         
-        <!-- Integration Cards with Details -->
-        <div class="row g-4 mb-5">
-            <div class="col-lg-2 col-md-6">
-                <div class="card h-100 border-0 shadow-sm integration-card">
-                    <div class="card-body text-center p-4">
-                        <i class="fab fa-microsoft fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title">Microsoft Suite</h5>
-                        <p class="card-text text-muted small">
-                            Direct .mpp export with preserved Gantt charts, resource assignments, and critical path calculations.
-                        </p>
-                        <div class="integration-features">
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Gantt Chart Export</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Resource Leveling</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Critical Path</small>
-                        </div>
-                    </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="platform-logo p-4">
+                    <i class="fab fa-google fa-3x text-primary mb-3"></i>
+                    <h6>Google Sheets</h6>
                 </div>
             </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <div class="card h-100 border-0 shadow-sm integration-card">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-calendar-alt fa-3x text-success mb-3"></i>
-                        <h5 class="card-title">Monday.com</h5>
-                        <p class="card-text text-muted small">
-                            One-click board creation with automated workflows, status tracking, and team collaboration features.
-                        </p>
-                        <div class="integration-features">
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Auto Board Setup</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Workflow Automation</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Team Notifications</small>
-                        </div>
-                    </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="platform-logo p-4">
+                    <i class="fab fa-microsoft fa-3x text-info mb-3"></i>
+                    <h6>Microsoft 365</h6>
                 </div>
             </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <div class="card h-100 border-0 shadow-sm integration-card">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-table fa-3x text-info mb-3"></i>
-                        <h5 class="card-title">Smartsheet</h5>
-                        <p class="card-text text-muted small">
-                            Smart sheet creation with conditional formatting, automated alerts, and dashboard integration.
-                        </p>
-                        <div class="integration-features">
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Conditional Formatting</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Automated Alerts</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Dashboard Sync</small>
-                        </div>
-                    </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="platform-logo p-4">
+                    <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                    <h6>Monday.com</h6>
                 </div>
             </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <div class="card h-100 border-0 shadow-sm integration-card">
-                    <div class="card-body text-center p-4">
-                        <i class="fas fa-briefcase fa-3x text-warning mb-3"></i>
-                        <h5 class="card-title">Workday</h5>
-                        <p class="card-text text-muted small">
-                            Enterprise project integration with HR systems, financial tracking, and compliance reporting.
-                        </p>
-                        <div class="integration-features">
-                            <small class="text-success d-block"><i class="fas fa-check"></i> HR Integration</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Financial Tracking</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Compliance Reports</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-6">
-                <div class="card h-100 border-0 shadow-sm integration-card">
-                    <div class="card-body text-center p-4">
-                        <i class="fab fa-google fa-3x text-danger mb-3"></i>
-                        <h5 class="card-title">Google Sheets</h5>
-                        <p class="card-text text-muted small">
-                            Cloud-based spreadsheet integration with real-time collaboration, formula preservation, and auto-sync.
-                        </p>
-                        <div class="integration-features">
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Real-time Collaboration</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Formula Preservation</small>
-                            <small class="text-success d-block"><i class="fas fa-check"></i> Cloud Storage</small>
-                        </div>
-                    </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="platform-logo p-4">
+                    <i class="fas fa-table fa-3x text-warning mb-3"></i>
+                    <h6>Smartsheet</h6>
                 </div>
             </div>
         </div>
         
-        <!-- Integration Instructions -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
+        <div class="row mt-5">
+            <div class="col-12">
                 <div class="card border-0 shadow-sm">
                     <div class="card-header bg-primary text-white">
                         <h5 class="mb-0"><i class="fas fa-cogs me-2"></i>How It Works</h5>
@@ -288,7 +236,7 @@
 </section>
 
 <!-- Business Value Section -->
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">Business Value</h2>
@@ -297,7 +245,7 @@
         
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <div class="icon-circle bg-primary bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-chart-line text-primary fa-2x"></i>
@@ -310,7 +258,7 @@
             </div>
             
             <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <div class="icon-circle bg-success bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-award text-success fa-2x"></i>
@@ -323,27 +271,27 @@
             </div>
             
             <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <div class="icon-circle bg-info bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-plug text-info fa-2x"></i>
                         </div>
-                        <h4 class="fw-bold mb-2">4 Platforms</h4>
+                        <h4 class="fw-bold mb-2">5 Platforms</h4>
                         <h6 class="text-muted mb-3">Integration Connections</h6>
-                        <p class="small text-muted mb-0">Seamless export to Microsoft Suite, Monday.com, Smartsheet, and Workday</p>
+                        <p class="small text-muted mb-0">Seamless export to Google Sheets, Microsoft 365, Monday.com, Smartsheet, and Workday</p>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
                         <div class="icon-circle bg-warning bg-opacity-10 mx-auto mb-3" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                             <i class="fas fa-book text-warning fa-2x"></i>
                         </div>
                         <h4 class="fw-bold mb-2">Comprehensive</h4>
                         <h6 class="text-muted mb-3">Support & Documentation</h6>
-                        <p class="small text-muted mb-0">Complete guides, video tutorials, and dedicated support team available 24/7</p>
+                        <p class="small text-muted mb-0">Complete guides, video tutorials, and dedicated support available</p>
                     </div>
                 </div>
             </div>
@@ -356,11 +304,77 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">Popular Templates</h2>
-            <p class="lead text-muted">Explore our most downloaded templates across various industries</p>
+            <p class="lead text-muted">Our most downloaded project management templates</p>
         </div>
         
-        <div class="row g-4" id="popularTemplates">
-            <!-- Templates will be loaded dynamically -->
+        <div class="row g-4">
+            <!-- Risk Register -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Risk Management</span>
+                        <h5 class="card-title">Risk Register</h5>
+                        <p class="card-text text-muted">Comprehensive risk tracking and mitigation planning template with built-in formulas and priority matrices</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-download me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Risk+Management" class="btn btn-outline-primary btn-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Plan -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Project Planning</span>
+                        <h5 class="card-title">Project Plan</h5>
+                        <p class="card-text text-muted">Complete project planning template with Gantt charts, milestones, dependencies, and resource allocation</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-download me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Project+Planning" class="btn btn-outline-primary btn-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KPI Dashboard -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">Performance Tracking</span>
+                        <h5 class="card-title">KPI Dashboard</h5>
+                        <p class="card-text text-muted">Visual KPI tracking dashboard with automated charts, metrics, and performance indicators for project monitoring</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-download me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Performance" class="btn btn-outline-primary btn-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Budget Tracker -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Cost Management</span>
+                        <h5 class="card-title">Budget Tracker</h5>
+                        <p class="card-text text-muted">Detailed budget management template with variance analysis, forecasting, and automated financial calculations</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-download me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Cost+Management" class="btn btn-outline-primary btn-sm">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="text-center mt-4">
@@ -371,73 +385,64 @@
     </div>
 </section>
 
-<!-- Pricing Section -->
-<section class="py-5 bg-light">
+<!-- AI Generator Info Section -->
+<section class="py-5 bg-primary text-white">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Simple, Transparent Pricing</h2>
-            <p class="lead text-muted">Choose the plan that fits your project management needs</p>
-        </div>
-        
-        <div class="row justify-content-center g-4">
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4 text-center">
-                        <h4 class="card-title">Free</h4>
-                        <div class="price mb-3">
-                            <span class="display-4 fw-bold">$0</span>
-                            <span class="text-muted">/month</span>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-3">
+                    <i class="fas fa-magic me-3"></i>AI Generator - Create ANY PM Document
+                </h2>
+                <p class="lead mb-4">
+                    Our intelligent AI Generator can create any project management document you need, even if it's not in our template library. 
+                    Simply describe what you need, and the AI will generate a professional, PMI 2025 PMBOK-compliant document in the right format.
+                </p>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle fa-lg me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">Supports All Methodologies</h6>
+                                <p class="small mb-0">Waterfall, Agile, Scrum, PRINCE2, Hybrid, and 20+ more methodologies</p>
+                            </div>
                         </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 template downloads</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic templates</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Email support</li>
-                        </ul>
-                        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary w-100">Get Started</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle fa-lg me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">Multiple Formats</h6>
+                                <p class="small mb-0">Word, Excel, PowerPoint, and Visio - automatically determined</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle fa-lg me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">PMI 2025 PMBOK Compliant</h6>
+                                <p class="small mb-0">All generated documents follow latest PMI standards and best practices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-circle fa-lg me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1">Preview & Edit Before Download</h6>
+                                <p class="small mb-0">Review and customize your document before downloading</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-4">
-                <div class="card h-100 border-primary shadow">
-                    <div class="card-header bg-primary text-white text-center">
-                        <span class="badge bg-warning text-dark">Most Popular</span>
-                    </div>
-                    <div class="card-body p-4 text-center">
-                        <h4 class="card-title">Professional</h4>
-                        <div class="price mb-3">
-                            <span class="display-4 fw-bold">$29</span>
-                            <span class="text-muted">/month</span>
-                        </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited downloads</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>AI template generation</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
-                        </ul>
-                        <a href="{{ url_for('payment.checkout', plan='professional') }}" class="btn btn-primary w-100">Start Free Trial</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4 text-center">
-                        <h4 class="card-title">Enterprise</h4>
-                        <div class="price mb-3">
-                            <span class="display-4 fw-bold">$99</span>
-                            <span class="text-muted">/month</span>
-                        </div>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Professional</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom templates</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dedicated support</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>White-label options</li>
-                        </ul>
-                        <a href="{{ url_for('payment.checkout', plan='enterprise') }}" class="btn btn-outline-primary w-100">Contact Sales</a>
-                    </div>
+            <div class="col-lg-4 text-center">
+                <div class="bg-white bg-opacity-10 p-4 rounded">
+                    <h4 class="mb-3">Try AI Generator</h4>
+                    <p class="mb-4">Create custom PM documents for your specific needs</p>
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-light btn-lg w-100">
+                        Get Started <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -445,83 +450,62 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py-5 bg-primary text-white">
-    <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Project Management?</h2>
-        <p class="lead mb-4">Join thousands of project managers who save hours every week with PMBlueprints.</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="{{ url_for('auth.register') }}" class="btn btn-light btn-lg">
-                Start Free Trial <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-            <a href="{{ url_for('auth.demo_login') }}" class="btn btn-outline-light btn-lg">
-                Try Demo <i class="fas fa-play ms-2"></i>
-            </a>
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Project Management?</h2>
+                <p class="lead text-muted mb-4">
+                    Join thousands of project managers who save time and deliver better results with PMBlueprints
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">
+                        Start Free Trial <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary btn-lg">
+                        Browse Templates
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-{% endblock %}
 
-{% block extra_scripts %}
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Load popular templates
-    loadPopularTemplates();
-    
-    // AI Generator button
-    document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
-        const industry = document.getElementById('industrySelect').value;
-        const templateType = document.getElementById('templateTypeSelect').value;
-        
-        if (!industry || !templateType) {
-            alert('Please select both industry and template type for AI suggestions.');
-            return;
-        }
-        
-        // Redirect to dashboard with AI generator
-        window.location.href = '/dashboard#ai-generator';
-    });
+// AI Generator button handler
+document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
+    {% if current_user.is_authenticated %}
+        window.location.href = '{{ url_for("dashboard") }}#ai-generator';
+    {% else %}
+        window.location.href = '{{ url_for("auth.login") }}';
+    {% endif %}
 });
 
-function loadPopularTemplates() {
-    fetch('/api/analytics/popular')
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                displayPopularTemplates(data.popular_templates.slice(0, 3));
-            }
-        })
-        .catch(error => {
-            console.error('Error loading popular templates:', error);
-        });
-}
+// Industry and template type selection
+document.getElementById('industrySelect').addEventListener('change', function() {
+    const industry = this.value;
+    const templateType = document.getElementById('templateTypeSelect').value;
+    if (industry || templateType) {
+        let url = '{{ url_for("templates.browse") }}?';
+        if (industry) url += 'industry=' + encodeURIComponent(industry);
+        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
+        window.location.href = url;
+    }
+});
 
-function displayPopularTemplates(templates) {
-    const container = document.getElementById('popularTemplates');
-    container.innerHTML = '';
-    
-    templates.forEach(template => {
-        const templateCard = `
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body">
-                        <span class="badge bg-primary mb-2">${template.industry}</span>
-                        <h5 class="card-title">${template.name}</h5>
-                        <p class="card-text text-muted">${template.description || 'Professional ' + template.name.toLowerCase() + ' template for ' + template.industry.toLowerCase() + ' projects...'}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">
-                                <i class="fas fa-download me-1"></i>${template.downloads} downloads
-                            </small>
-                            <a href="/templates/${template.id}" class="btn btn-outline-primary btn-sm">Preview</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        container.innerHTML += templateCard;
-    });
-}
+document.getElementById('templateTypeSelect').addEventListener('change', function() {
+    const templateType = this.value;
+    const industry = document.getElementById('industrySelect').value;
+    if (industry || templateType) {
+        let url = '{{ url_for("templates.browse") }}?';
+        if (industry) url += 'industry=' + encodeURIComponent(industry);
+        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
+        window.location.href = url;
+    }
+});
 </script>
 
 <!-- Demo Banner JavaScript -->
 <script src="{{ url_for('static', filename='js/demo_banner.js') }}"></script>
 {% endblock %}
+
