@@ -2,11 +2,15 @@
 Setup and database initialization routes
 """
 from flask import Blueprint, jsonify, request
-from app import db, Template, User, Download, Favorite, TemplateRating
 from sqlalchemy import inspect
 import os
 
 setup_bp = Blueprint('setup', __name__, url_prefix='/setup')
+
+def get_models():
+    """Lazy import models to avoid circular dependency"""
+    from app import db, Template, User, Download, Favorite, TemplateRating
+    return db, Template, User, Download, Favorite, TemplateRating
 
 @setup_bp.route('/init-database', methods=['GET', 'POST'])
 def init_database():
@@ -22,6 +26,11 @@ def init_database():
         }), 403
     
     try:
+        db, Template, User, Download, Favorite, TemplateRating = get_models()
+        
+        # Create all tables
+        db.create_all()
+
         # Create all tables
         db.create_all()
         
