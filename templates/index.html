@@ -3,7 +3,6 @@
 {% block title %}PMBlueprints - AI-Powered PM Templates{% endblock %}
 
 {% block extra_head %}
-<link href="{{ url_for('static', filename='css/demo_banner.css') }}" rel="stylesheet">
 <style>
 /* Remove any hover animations */
 .card {
@@ -308,13 +307,13 @@
         </div>
         
         <div class="row g-4">
-            <!-- Risk Register -->
+            <!-- Risk Management Plan -->
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body">
                         <span class="badge bg-primary mb-2">Risk Management</span>
-                        <h5 class="card-title">Risk Register</h5>
-                        <p class="card-text text-muted">Comprehensive risk tracking and mitigation planning template with built-in formulas and priority matrices</p>
+                        <h5 class="card-title">Risk Management Plan</h5>
+                        <p class="card-text text-muted">Complete risk assessment and mitigation planning with priority matrices and tracking for business process improvement</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <small class="text-muted">
                                 <i class="fas fa-file-excel me-1"></i>Excel Format
@@ -325,18 +324,18 @@
                 </div>
             </div>
             
-            <!-- Project Plan -->
+            <!-- Project Charter -->
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <span class="badge bg-success mb-2">Project Plan</span>
-                        <h5 class="card-title">Project Plan</h5>
-                        <p class="card-text text-muted">Complete project planning template with Gantt charts, milestones, dependencies, and resource allocation</p>
+                        <span class="badge bg-success mb-2">Project Planning</span>
+                        <h5 class="card-title">Project Charter</h5>
+                        <p class="card-text text-muted">Comprehensive project planning with objectives, scope, milestones, and stakeholder alignment for business initiatives</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <small class="text-muted">
-                                <i class="fas fa-file-excel me-1"></i>Excel Format
+                                <i class="fas fa-file-word me-1"></i>Word Format
                             </small>
-                            <a href="{{ url_for('templates.browse') }}?category=Project+Plan" class="btn btn-outline-primary btn-sm">Preview</a>
+                            <a href="{{ url_for('templates.browse') }}?category=Project+Planning" class="btn btn-outline-primary btn-sm">Preview</a>
                         </div>
                     </div>
                 </div>
@@ -346,14 +345,14 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <span class="badge bg-info mb-2">Performance Tracking</span>
+                        <span class="badge bg-info mb-2">Performance Management</span>
                         <h5 class="card-title">KPI Dashboard</h5>
-                        <p class="card-text text-muted">Visual KPI tracking dashboard with automated charts, metrics, and performance indicators for project monitoring</p>
+                        <p class="card-text text-muted">Visual performance dashboard with automated charts, KPIs, and metrics tracking for business process monitoring</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <small class="text-muted">
                                 <i class="fas fa-file-excel me-1"></i>Excel Format
                             </small>
-                            <a href="{{ url_for('templates.browse') }}?category=Performance" class="btn btn-outline-primary btn-sm">Preview</a>
+                            <a href="{{ url_for('templates.browse') }}?category=Performance+Management" class="btn btn-outline-primary btn-sm">Preview</a>
                         </div>
                     </div>
                 </div>
@@ -363,14 +362,14 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body">
-                        <span class="badge bg-warning text-dark mb-2">Cost Management</span>
+                        <span class="badge bg-warning text-dark mb-2">Financial Management</span>
                         <h5 class="card-title">Budget Tracker</h5>
-                        <p class="card-text text-muted">Detailed budget management template with variance analysis, forecasting, and automated financial calculations</p>
+                        <p class="card-text text-muted">Detailed financial tracking with automated calculations, variance analysis, and forecasting for business projects</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <small class="text-muted">
                                 <i class="fas fa-file-excel me-1"></i>Excel Format
                             </small>
-                            <a href="{{ url_for('templates.browse') }}?category=Cost+Management" class="btn btn-outline-primary btn-sm">Preview</a>
+                            <a href="{{ url_for('templates.browse') }}?category=Financial+Management" class="btn btn-outline-primary btn-sm">Preview</a>
                         </div>
                     </div>
                 </div>
@@ -498,6 +497,5 @@ document.getElementById('templateTypeSelect').addEventListener('change', functio
 </script>
 
 <!-- Demo Banner JavaScript -->
-<script src="{{ url_for('static', filename='js/demo_banner.js') }}"></script>
 {% endblock %}
 
