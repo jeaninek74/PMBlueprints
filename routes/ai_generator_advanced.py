@@ -15,7 +15,7 @@ import json
 # Import knowledge bases
 from pmbok_2025_knowledge import pmbok_knowledge
 from methodology_knowledge import methodology_knowledge
-from pm_document_intelligence import pm_doc_intelligence
+from pm_document_intelligence import pm_intelligence as pm_doc_intelligence
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -31,11 +31,18 @@ AI_ENABLED = OPENAI_API_KEY is not None
 if AI_ENABLED:
     try:
         from openai import OpenAI
-        client = OpenAI()
+        # Initialize with minimal config to avoid proxy issues
+        client = OpenAI(api_key=OPENAI_API_KEY, max_retries=3, timeout=30.0)
         logger.info("OpenAI client initialized for AI Generator")
     except Exception as e:
-        logger.error(f"Failed to initialize OpenAI client: {e}")
-        AI_ENABLED = False
+        logger.warning(f"OpenAI client initialization warning: {e}")
+        # Try basic initialization
+        try:
+            client = OpenAI()
+            logger.info("OpenAI client initialized with default config")
+        except Exception as e2:
+            logger.debug(f"OpenAI init attempt: {e2}")
+            AI_ENABLED = False
 
 
 @ai_gen_bp.route('/analyze-request', methods=['POST'])
