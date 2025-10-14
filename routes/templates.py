@@ -206,6 +206,14 @@ def download(template_id):
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         templates_dir = os.path.join(base_dir, 'static', 'templates')
         
+        # Debug logging
+        logger.info(f"Base dir: {base_dir}")
+        logger.info(f"Templates dir: {templates_dir}")
+        logger.info(f"Looking for file: {template.filename}")
+        logger.info(f"Templates dir exists: {os.path.exists(templates_dir)}")
+        if os.path.exists(templates_dir):
+            logger.info(f"Files in templates dir: {os.listdir(templates_dir)[:10]}")
+        
         # Check if file exists
         file_path = os.path.join(templates_dir, template.filename)
         if not os.path.exists(file_path):
