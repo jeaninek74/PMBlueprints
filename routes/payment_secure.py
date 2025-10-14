@@ -27,7 +27,7 @@ PRICING_PLANS = {
             '3 template downloads/month',
             'Basic templates',
             '3 AI generations/month',
-            'Email support'
+
         ]
     },
     'professional': {
@@ -40,7 +40,7 @@ PRICING_PLANS = {
             'All 960+ templates',
             '25 AI generations/month',
             'Platform integrations',
-            'Priority support'
+
         ]
     },
     'enterprise': {
@@ -54,7 +54,7 @@ PRICING_PLANS = {
             '100 AI generations/month',
             'Custom templates',
             'Advanced analytics',
-            'Dedicated support'
+
         ]
     }
 }
