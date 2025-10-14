@@ -128,7 +128,6 @@ def analyze_document_request():
 
 
 @ai_gen_bp.route('/generate-structure', methods=['POST'])
-@login_required
 def generate_document_structure():
     """
     Generate document structure based on PM intelligence
@@ -198,7 +197,6 @@ def generate_document_structure():
 
 
 @ai_gen_bp.route('/generate-content', methods=['POST'])
-@login_required
 def generate_document_content():
     """
     Generate full document content using AI with PM intelligence
