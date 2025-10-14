@@ -198,13 +198,22 @@ def download(template_id):
         user_email = current_user.email if current_user.is_authenticated else 'anonymous'
         logger.info(f"Template downloaded: {template.name} by {user_email}")
         
-        # Serve file from public directory using send_from_directory
+        # Serve file from static/templates directory using send_from_directory
         from flask import send_from_directory
         import os
         
-        # Get absolute path to public/templates directory
+        # Get absolute path to static/templates directory
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        templates_dir = os.path.join(base_dir, 'public', 'templates')
+        templates_dir = os.path.join(base_dir, 'static', 'templates')
+        
+        # Check if file exists
+        file_path = os.path.join(templates_dir, template.filename)
+        if not os.path.exists(file_path):
+            logger.error(f"Template file not found: {file_path}")
+            if request.is_json:
+                return jsonify({"error": "Template file not found"}), 404
+            flash("Template file not found", "error")
+            return redirect(url_for('templates_bp.browse'))
         
         return send_from_directory(
             templates_dir,
