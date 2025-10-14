@@ -226,12 +226,27 @@ def download(template_id):
             flash("Template file not found", "error")
             return redirect(url_for('templates_bp.browse'))
         
-        return send_from_directory(
+        # Force download with proper headers for mobile browsers
+        response = send_from_directory(
             templates_dir,
             template.filename,
             as_attachment=True,
             download_name=template.filename
         )
+        
+        # Add explicit headers to force download on mobile
+        response.headers['Content-Disposition'] = f'attachment; filename="{template.filename}"'
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        
+        # Set correct MIME type based on file extension
+        if template.filename.endswith('.docx'):
+            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        elif template.filename.endswith('.xlsx'):
+            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        elif template.filename.endswith('.pptx'):
+            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+        
+        return response
 
     except Exception as e:
         logger.error(f"Template download error: {e}")
