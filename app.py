@@ -337,6 +337,8 @@ try:
     from routes.admin_update import admin_bp as admin_update_bp
     from routes.admin_fix_templates import admin_fix_bp
     from routes.ai_generator_advanced import ai_gen_bp as ai_generator_bp
+    from routes.payment_secure import payment_secure_bp
+    from routes.ai_generation_secure import ai_secure_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -369,7 +371,9 @@ try:
     app.register_blueprint(update_industries_bp)  # Update industries route
     app.register_blueprint(admin_update_bp)  # Admin update routes
     app.register_blueprint(admin_fix_bp)  # Admin fix templates
-    logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, and setup)")
+    app.register_blueprint(payment_secure_bp)  # Secure payment routes
+    app.register_blueprint(ai_secure_bp, url_prefix='/api/ai')  # Secure AI routes
+    logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, and secure payment/AI routes)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 
