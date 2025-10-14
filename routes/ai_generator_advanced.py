@@ -100,7 +100,7 @@ def analyze_document_request():
                 'name': document_name,
                 'category': doc_info['category'],
                 'recommended_format': doc_info['format'],
-                'purpose': doc_info['purpose'],
+                'purpose': doc_info.get('content_guidance', 'Professional project management document'),
                 'key_sections': doc_info['structure'],
                 'pmbok_knowledge_area': pmbok_mapping['knowledge_area'],
                 'pmbok_process_group': pmbok_mapping['process_group']
