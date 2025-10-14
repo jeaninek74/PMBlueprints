@@ -1,7 +1,7 @@
 [
   {
     "id": 5,
-    "name": "AI/ML Change Management Plan",
+    "name": "AI ML Change Management Plan",
     "filename": "AI_ML_Change_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Change Management",
@@ -21,7 +21,7 @@
   },
   {
     "id": 8,
-    "name": "AI/ML Communications Management Plan",
+    "name": "AI ML Communications Management Plan",
     "filename": "AI_ML_Communications_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Communication",
@@ -41,7 +41,7 @@
   },
   {
     "id": 9,
-    "name": "AI/ML Comprehensive Budget",
+    "name": "AI ML Comprehensive Budget",
     "filename": "AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Financial Management",
@@ -61,7 +61,7 @@
   },
   {
     "id": 12,
-    "name": "AI/ML KPI Dashboard",
+    "name": "AI ML KPI Dashboard",
     "filename": "AI_ML_KPI_Dashboard_with_Instructions_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Performance Management",
@@ -81,7 +81,7 @@
   },
   {
     "id": 13,
-    "name": "AI/ML KPI Report Dashboard",
+    "name": "AI ML KPI Report Dashboard",
     "filename": "AI_ML_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Performance Management",
@@ -101,7 +101,7 @@
   },
   {
     "id": 14,
-    "name": "AI/ML Lessons Learned",
+    "name": "AI ML Lessons Learned",
     "filename": "AI_ML_Lessons_Learned_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Lessons Learned",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "AI/ML Open Action ITem Log",
+    "name": "AI ML Open Action Item Log",
     "filename": "AI_ML_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Action Items",
@@ -141,7 +141,7 @@
   },
   {
     "id": 16,
-    "name": "AI/ML Procurement Management Plan",
+    "name": "AI ML Procurement Management Plan",
     "filename": "AI_ML_Procurement_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Procurement",
@@ -161,7 +161,7 @@
   },
   {
     "id": 21,
-    "name": "AI/ML Project Proposal",
+    "name": "AI ML Project Proposal",
     "filename": "AI_ML_Project_Proposal_2025_PMI.docx",
     "industry": "AI/ML",
     "category": "Business Development",
@@ -181,7 +181,7 @@
   },
   {
     "id": 22,
-    "name": "AI/ML Quality Management Plan",
+    "name": "AI ML Quality Management Plan",
     "filename": "AI_ML_Quality_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Quality Management",
@@ -201,7 +201,7 @@
   },
   {
     "id": 26,
-    "name": "AI/ML Resource Plan Staffing Plan",
+    "name": "AI ML Resource Plan Staffing Plan",
     "filename": "AI_ML_Resource_Plan_Staffing_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Resource Management",
@@ -221,7 +221,7 @@
   },
   {
     "id": 28,
-    "name": "AI/ML Stakeholder Engagement Plan",
+    "name": "AI ML Stakeholder Engagement Plan",
     "filename": "AI_ML_Stakeholder_Engagement_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -241,7 +241,7 @@
   },
   {
     "id": 32,
-    "name": "AI/ML Training Budget Estimates",
+    "name": "AI ML Training Budget Estimates",
     "filename": "AI_ML_Training_Budget_Estimates_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Financial Management",
@@ -261,7 +261,7 @@
   },
   {
     "id": 33,
-    "name": "AI/ML Training Needs Assessment",
+    "name": "AI ML Training Needs Assessment",
     "filename": "AI_ML_Training_Needs_Assessment_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Training & Development",
@@ -281,7 +281,7 @@
   },
   {
     "id": 34,
-    "name": "AI/ML Training Schedule",
+    "name": "AI ML Training Schedule",
     "filename": "AI_ML_Training_Schedule_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Schedule Management",
@@ -301,7 +301,7 @@
   },
   {
     "id": 35,
-    "name": "AI/ML WBS Projectplan Exact",
+    "name": "AI ML WBS ProjectPlan Exact Template",
     "filename": "AI_ML_WBS_ProjectPlan_Exact_Template_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Planning",
@@ -321,7 +321,7 @@
   },
   {
     "id": 30,
-    "name": "AI/ML Stakeholder Register Analysis",
+    "name": "AI ML Stakeholder Register Analysis",
     "filename": "AI_ML_Stakeholder_Register_Analysis.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -341,7 +341,7 @@
   },
   {
     "id": 10,
-    "name": "AI/ML Data Readiness Assessment",
+    "name": "AI ML Data Readiness Assessment",
     "filename": "AI_ML_Data_Readiness_Assessment.xlsx",
     "industry": "AI/ML",
     "category": "Assessment & Evaluation",
@@ -361,7 +361,7 @@
   },
   {
     "id": 4,
-    "name": "AI/ML Business Case",
+    "name": "AI ML Business Case",
     "filename": "AI_ML_Business_Case.docx",
     "industry": "AI/ML",
     "category": "Business Analysis",
@@ -381,7 +381,7 @@
   },
   {
     "id": 18,
-    "name": "AI/ML Project Charter",
+    "name": "AI ML Project Charter",
     "filename": "AI_ML_Project_Charter.docx",
     "industry": "AI/ML",
     "category": "Project Planning",
@@ -401,7 +401,7 @@
   },
   {
     "id": 6,
-    "name": "AI/ML Change Request Form",
+    "name": "AI ML Change Request Form",
     "filename": "AI_ML_Change_Request_Form.xlsx",
     "industry": "AI/ML",
     "category": "Change Management",
@@ -421,7 +421,7 @@
   },
   {
     "id": 11,
-    "name": "AI/ML High Level Requirements List",
+    "name": "AI ML High Level Requirements List",
     "filename": "AI_ML_High_Level_Requirements_List.xlsx",
     "industry": "AI/ML",
     "category": "Requirements Management",
@@ -441,7 +441,7 @@
   },
   {
     "id": 23,
-    "name": "AI/ML Raid Log",
+    "name": "AI ML RAID Log",
     "filename": "AI_ML_RAID_Log.xlsx",
     "industry": "AI/ML",
     "category": "Tracking & Monitoring",
@@ -461,7 +461,7 @@
   },
   {
     "id": 24,
-    "name": "AI/ML Requirements Traceability Matrix",
+    "name": "AI ML Requirements Traceability Matrix",
     "filename": "AI_ML_Requirements_Traceability_Matrix.xlsx",
     "industry": "AI/ML",
     "category": "Requirements Management",
@@ -481,7 +481,7 @@
   },
   {
     "id": 7,
-    "name": "AI/ML Communication Plan",
+    "name": "AI ML Communication Plan",
     "filename": "AI_ML_Communication_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Communication",
@@ -501,7 +501,7 @@
   },
   {
     "id": 17,
-    "name": "AI/ML Procurement Plan",
+    "name": "AI ML Procurement Plan",
     "filename": "AI_ML_Procurement_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Procurement",
@@ -521,7 +521,7 @@
   },
   {
     "id": 25,
-    "name": "AI/ML Resource Management Plan",
+    "name": "AI ML Resource Management Plan",
     "filename": "AI_ML_Resource_Management_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Resource Management",
@@ -541,7 +541,7 @@
   },
   {
     "id": 27,
-    "name": "AI/ML Risk Management Plan",
+    "name": "AI ML Risk Management Plan",
     "filename": "AI_ML_Risk_Management_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Risk Management",
@@ -561,7 +561,7 @@
   },
   {
     "id": 20,
-    "name": "AI/ML Project Kickoff Presentation",
+    "name": "AI ML Project Kickoff Presentation",
     "filename": "AI_ML_Project_Kickoff_Presentation.xlsx",
     "industry": "AI/ML",
     "category": "Project Initiation",
@@ -581,7 +581,7 @@
   },
   {
     "id": 29,
-    "name": "AI/ML Stakeholder Register",
+    "name": "AI ML Stakeholder Register",
     "filename": "AI_ML_Stakeholder_Register.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -601,7 +601,7 @@
   },
   {
     "id": 19,
-    "name": "AI/ML Project Closure Report",
+    "name": "AI ML Project Closure Report",
     "filename": "AI_ML_Project_Closure_Report.xlsx",
     "industry": "AI/ML",
     "category": "Project Closure",
@@ -621,7 +621,7 @@
   },
   {
     "id": 31,
-    "name": "AI/ML Status Report",
+    "name": "AI ML Status Report",
     "filename": "AI_ML_Status_Report.xlsx",
     "industry": "AI/ML",
     "category": "Reporting",
@@ -861,7 +861,7 @@
   },
   {
     "id": 36,
-    "name": "Business Process Improvement Action ITem Log",
+    "name": "Business Process Improvement Action Item Log",
     "filename": "Business_Process_Improvement_Action_Item_Log.xlsx",
     "industry": "Business",
     "category": "Action Items",
@@ -881,7 +881,7 @@
   },
   {
     "id": 54,
-    "name": "Business Process Improvement Raid Log",
+    "name": "Business Process Improvement RAID Log",
     "filename": "Business_Process_Improvement_RAID_Log.xlsx",
     "industry": "Business",
     "category": "Tracking & Monitoring",
@@ -1481,7 +1481,7 @@
   },
   {
     "id": 67,
-    "name": "Cloud Migration Action ITem Log",
+    "name": "Cloud Migration Action Item Log",
     "filename": "Cloud_Migration_Action_Item_Log.xlsx",
     "industry": "Cloud",
     "category": "Action Items",
@@ -1501,7 +1501,7 @@
   },
   {
     "id": 85,
-    "name": "Cloud Migration Raid Log",
+    "name": "Cloud Migration RAID Log",
     "filename": "Cloud_Migration_RAID_Log.xlsx",
     "industry": "Cloud",
     "category": "Tracking & Monitoring",
@@ -1881,7 +1881,7 @@
   },
   {
     "id": 104,
-    "name": "Construction Executive Raid Log Complete",
+    "name": "Construction Executive RAID Log Complete",
     "filename": "Construction_Executive_RAID_Log_Complete_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Tracking & Monitoring",
@@ -1941,7 +1941,7 @@
   },
   {
     "id": 108,
-    "name": "Construction Open Action ITem Log",
+    "name": "Construction Open Action Item Log",
     "filename": "Construction_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Action Items",
@@ -2721,7 +2721,7 @@
   },
   {
     "id": 124,
-    "name": "Consulting Action ITem Log",
+    "name": "Consulting Action Item Log",
     "filename": "Consulting_Action_Item_Log.xlsx",
     "industry": "Consulting",
     "category": "Action Items",
@@ -2741,7 +2741,7 @@
   },
   {
     "id": 142,
-    "name": "Consulting Raid Log",
+    "name": "Consulting RAID Log",
     "filename": "Consulting_RAID_Log.xlsx",
     "industry": "Consulting",
     "category": "Tracking & Monitoring",
@@ -3341,7 +3341,7 @@
   },
   {
     "id": 155,
-    "name": "Customer Experience Action ITem Log",
+    "name": "Customer Experience Action Item Log",
     "filename": "Customer_Experience_Action_Item_Log.xlsx",
     "industry": "Customer",
     "category": "Action Items",
@@ -3361,7 +3361,7 @@
   },
   {
     "id": 174,
-    "name": "Customer Experience Raid Log",
+    "name": "Customer Experience RAID Log",
     "filename": "Customer_Experience_RAID_Log.xlsx",
     "industry": "Customer",
     "category": "Tracking & Monitoring",
@@ -3781,7 +3781,7 @@
   },
   {
     "id": 197,
-    "name": "Cybersecurity Open Action ITem Log",
+    "name": "Cybersecurity Open Action Item Log",
     "filename": "Cybersecurity_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Cybersecurity",
     "category": "Action Items",
@@ -4021,7 +4021,7 @@
   },
   {
     "id": 204,
-    "name": "Cybersecurity Raid Log",
+    "name": "Cybersecurity RAID Log",
     "filename": "Cybersecurity_RAID_Log.xlsx",
     "industry": "Cybersecurity",
     "category": "Tracking & Monitoring",
@@ -4058,26 +4058,6 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 6396
-  },
-  {
-    "id": 960,
-    "name": "Cybersecurity Model Feasibility Evaluation",
-    "filename": "Cybersecurity_Model_Feasibility_Evaluation_2025_PMI.docx",
-    "industry": "Cybersecurity",
-    "category": "Assessment & Evaluation",
-    "file_type": "docx",
-    "description": "Professional assessment & evaluation template. Word format with professional formatting and structure.",
-    "downloads": 0,
-    "rating": 4.5,
-    "tags": [
-      "Cybersecurity",
-      "Assessment & Evaluation",
-      "PMI 2025"
-    ],
-    "file_size": 48100,
-    "has_formulas": false,
-    "has_fields": true,
-    "is_premium": false
   },
   {
     "id": 188,
@@ -4278,26 +4258,6 @@
     "rating": 4.5,
     "created_date": "2024-01-01",
     "file_size": 6390
-  },
-  {
-    "id": 962,
-    "name": "Cybersecurity Procurement Management Plan",
-    "filename": "Cybersecurity_Procurement_Management_Plan_2025_PMI.xlsx",
-    "industry": "Cybersecurity",
-    "category": "Procurement",
-    "file_type": "xlsx",
-    "description": "Complete vendor management, contract tracking, and procurement process documentation. Excel format with built-in formulas and calculations.",
-    "downloads": 0,
-    "rating": 4.5,
-    "tags": [
-      "Cybersecurity",
-      "Procurement",
-      "PMI 2025"
-    ],
-    "file_size": 11143,
-    "has_formulas": true,
-    "has_fields": false,
-    "is_premium": false
   },
   {
     "id": 210,
@@ -4621,7 +4581,7 @@
   },
   {
     "id": 217,
-    "name": "Data Analytics Action ITem Log",
+    "name": "Data Analytics Action Item Log",
     "filename": "Data_Analytics_Action_Item_Log.xlsx",
     "industry": "Data",
     "category": "Action Items",
@@ -4641,7 +4601,7 @@
   },
   {
     "id": 235,
-    "name": "Data Analytics Raid Log",
+    "name": "Data Analytics RAID Log",
     "filename": "Data_Analytics_RAID_Log.xlsx",
     "industry": "Data",
     "category": "Tracking & Monitoring",
@@ -5241,7 +5201,7 @@
   },
   {
     "id": 248,
-    "name": "Digital Transformation Action ITem Log",
+    "name": "Digital Transformation Action Item Log",
     "filename": "Digital_Transformation_Action_Item_Log.xlsx",
     "industry": "Digital",
     "category": "Action Items",
@@ -5261,7 +5221,7 @@
   },
   {
     "id": 266,
-    "name": "Digital Transformation Raid Log",
+    "name": "Digital Transformation RAID Log",
     "filename": "Digital_Transformation_RAID_Log.xlsx",
     "industry": "Digital",
     "category": "Tracking & Monitoring",
@@ -5641,7 +5601,7 @@
   },
   {
     "id": 279,
-    "name": "ERP Erp Implementation KPI Report Dashboard",
+    "name": "ERP Implementation KPI Report Dashboard",
     "filename": "ERP_Implementation_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Performance Management",
@@ -5661,7 +5621,7 @@
   },
   {
     "id": 280,
-    "name": "ERP Erp Implementation Lessons Learned",
+    "name": "ERP Implementation Lessons Learned",
     "filename": "ERP_Implementation_Lessons_Learned_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Lessons Learned",
@@ -5681,7 +5641,7 @@
   },
   {
     "id": 281,
-    "name": "ERP Erp Implementation Open Action ITem Log",
+    "name": "ERP Implementation Open Action Item Log",
     "filename": "ERP_Implementation_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Action Items",
@@ -5701,7 +5661,7 @@
   },
   {
     "id": 282,
-    "name": "ERP Erp Implementation Project Proposal",
+    "name": "ERP Implementation Project Proposal",
     "filename": "ERP_Implementation_Project_Proposal_2025_PMI.docx",
     "industry": "ERP",
     "category": "Business Development",
@@ -5721,7 +5681,7 @@
   },
   {
     "id": 306,
-    "name": "ERP Erp Implementations Stakeholder Analysis",
+    "name": "ERP Implementations Stakeholder Analysis",
     "filename": "ERP_Implementations_Stakeholder_Analysis.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -5741,7 +5701,7 @@
   },
   {
     "id": 290,
-    "name": "ERP Erp Implementations Data Readiness Assessment",
+    "name": "ERP Implementations Data Readiness Assessment",
     "filename": "ERP_Implementations_Data_Readiness_Assessment.xlsx",
     "industry": "ERP",
     "category": "Assessment & Evaluation",
@@ -5761,7 +5721,7 @@
   },
   {
     "id": 311,
-    "name": "ERP Erp Implementations Training Needs Assessment",
+    "name": "ERP Implementations Training Needs Assessment",
     "filename": "ERP_Implementations_Training_Needs_Assessment.xlsx",
     "industry": "ERP",
     "category": "Training & Development",
@@ -5781,7 +5741,7 @@
   },
   {
     "id": 284,
-    "name": "ERP Erp Implementations Budget",
+    "name": "ERP Implementations Budget",
     "filename": "ERP_Implementations_Budget.xlsx",
     "industry": "ERP",
     "category": "Financial Management",
@@ -5801,7 +5761,7 @@
   },
   {
     "id": 310,
-    "name": "ERP Erp Implementations Training Budget",
+    "name": "ERP Implementations Training Budget",
     "filename": "ERP_Implementations_Training_Budget.xlsx",
     "industry": "ERP",
     "category": "Financial Management",
@@ -5821,7 +5781,7 @@
   },
   {
     "id": 285,
-    "name": "ERP Erp Implementations Business Case",
+    "name": "ERP Implementations Business Case",
     "filename": "ERP_Implementations_Business_Case.docx",
     "industry": "ERP",
     "category": "Business Analysis",
@@ -5841,7 +5801,7 @@
   },
   {
     "id": 295,
-    "name": "ERP Erp Implementations Project Charter",
+    "name": "ERP Implementations Project Charter",
     "filename": "ERP_Implementations_Project_Charter.docx",
     "industry": "ERP",
     "category": "Project Planning",
@@ -5861,7 +5821,7 @@
   },
   {
     "id": 296,
-    "name": "ERP Erp Implementations Project Closure",
+    "name": "ERP Implementations Project Closure",
     "filename": "ERP_Implementations_Project_Closure.xlsx",
     "industry": "ERP",
     "category": "Project Closure",
@@ -5881,7 +5841,7 @@
   },
   {
     "id": 291,
-    "name": "ERP Erp Implementations KPI Dashboard",
+    "name": "ERP Implementations KPI Dashboard",
     "filename": "ERP_Implementations_KPI_Dashboard.xlsx",
     "industry": "ERP",
     "category": "Performance Management",
@@ -5901,7 +5861,7 @@
   },
   {
     "id": 307,
-    "name": "ERP Erp Implementations Stakeholder Engagement",
+    "name": "ERP Implementations Stakeholder Engagement",
     "filename": "ERP_Implementations_Stakeholder_Engagement.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -5921,7 +5881,7 @@
   },
   {
     "id": 283,
-    "name": "ERP Erp Implementations Action ITems",
+    "name": "ERP Implementations Action Items",
     "filename": "ERP_Implementations_Action_Items.xlsx",
     "industry": "ERP",
     "category": "Action Items",
@@ -5941,7 +5901,7 @@
   },
   {
     "id": 292,
-    "name": "ERP Erp Implementations Lessons Learned",
+    "name": "ERP Implementations Lessons Learned",
     "filename": "ERP_Implementations_Lessons_Learned.xlsx",
     "industry": "ERP",
     "category": "Lessons Learned",
@@ -5961,7 +5921,7 @@
   },
   {
     "id": 301,
-    "name": "ERP Erp Implementations Requirements List",
+    "name": "ERP Implementations Requirements List",
     "filename": "ERP_Implementations_Requirements_List.xlsx",
     "industry": "ERP",
     "category": "Requirements Management",
@@ -5981,7 +5941,7 @@
   },
   {
     "id": 300,
-    "name": "ERP Erp Implementations Raid Log",
+    "name": "ERP Implementations RAID Log",
     "filename": "ERP_Implementations_RAID_Log.xlsx",
     "industry": "ERP",
     "category": "Tracking & Monitoring",
@@ -6001,7 +5961,7 @@
   },
   {
     "id": 286,
-    "name": "ERP Erp Implementations Change Management",
+    "name": "ERP Implementations Change Management",
     "filename": "ERP_Implementations_Change_Management.xlsx",
     "industry": "ERP",
     "category": "Change Management",
@@ -6021,7 +5981,7 @@
   },
   {
     "id": 293,
-    "name": "ERP Erp Implementations Procurement Management",
+    "name": "ERP Implementations Procurement Management",
     "filename": "ERP_Implementations_Procurement_Management.xlsx",
     "industry": "ERP",
     "category": "Procurement",
@@ -6041,7 +6001,7 @@
   },
   {
     "id": 302,
-    "name": "ERP Erp Implementations Requirements Matrix",
+    "name": "ERP Implementations Requirements Matrix",
     "filename": "ERP_Implementations_Requirements_Matrix.xlsx",
     "industry": "ERP",
     "category": "Requirements Management",
@@ -6061,7 +6021,7 @@
   },
   {
     "id": 288,
-    "name": "ERP Erp Implementations Communication Plan",
+    "name": "ERP Implementations Communication Plan",
     "filename": "ERP_Implementations_Communication_Plan.xlsx",
     "industry": "ERP",
     "category": "Communication",
@@ -6081,7 +6041,7 @@
   },
   {
     "id": 289,
-    "name": "ERP Erp Implementations Communications Plan",
+    "name": "ERP Implementations Communications Plan",
     "filename": "ERP_Implementations_Communications_Plan.xlsx",
     "industry": "ERP",
     "category": "Communication",
@@ -6101,7 +6061,7 @@
   },
   {
     "id": 294,
-    "name": "ERP Erp Implementations Procurement Plan",
+    "name": "ERP Implementations Procurement Plan",
     "filename": "ERP_Implementations_Procurement_Plan.xlsx",
     "industry": "ERP",
     "category": "Procurement",
@@ -6121,7 +6081,7 @@
   },
   {
     "id": 299,
-    "name": "ERP Erp Implementations Quality Management Plan",
+    "name": "ERP Implementations Quality Management Plan",
     "filename": "ERP_Implementations_Quality_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Quality Management",
@@ -6141,7 +6101,7 @@
   },
   {
     "id": 303,
-    "name": "ERP Erp Implementations Resource Management Plan",
+    "name": "ERP Implementations Resource Management Plan",
     "filename": "ERP_Implementations_Resource_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Resource Management",
@@ -6161,7 +6121,7 @@
   },
   {
     "id": 304,
-    "name": "ERP Erp Implementations Resource Plan",
+    "name": "ERP Implementations Resource Plan",
     "filename": "ERP_Implementations_Resource_Plan.xlsx",
     "industry": "ERP",
     "category": "Resource Management",
@@ -6181,7 +6141,7 @@
   },
   {
     "id": 305,
-    "name": "ERP Erp Implementations Risk Management Plan",
+    "name": "ERP Implementations Risk Management Plan",
     "filename": "ERP_Implementations_Risk_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Risk Management",
@@ -6201,7 +6161,7 @@
   },
   {
     "id": 297,
-    "name": "ERP Erp Implementations Project Kickoff Presentation",
+    "name": "ERP Implementations Project Kickoff Presentation",
     "filename": "ERP_Implementations_Project_Kickoff_Presentation.xlsx",
     "industry": "ERP",
     "category": "Project Initiation",
@@ -6221,7 +6181,7 @@
   },
   {
     "id": 298,
-    "name": "ERP Erp Implementations Project Proposal",
+    "name": "ERP Implementations Project Proposal",
     "filename": "ERP_Implementations_Project_Proposal.docx",
     "industry": "ERP",
     "category": "Business Development",
@@ -6241,7 +6201,7 @@
   },
   {
     "id": 308,
-    "name": "ERP Erp Implementations Stakeholder Register",
+    "name": "ERP Implementations Stakeholder Register",
     "filename": "ERP_Implementations_Stakeholder_Register.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -6261,7 +6221,7 @@
   },
   {
     "id": 309,
-    "name": "ERP Erp Implementations Status Report",
+    "name": "ERP Implementations Status Report",
     "filename": "ERP_Implementations_Status_Report.xlsx",
     "industry": "ERP",
     "category": "Reporting",
@@ -6281,7 +6241,7 @@
   },
   {
     "id": 287,
-    "name": "ERP Erp Implementations Change Request",
+    "name": "ERP Implementations Change Request",
     "filename": "ERP_Implementations_Change_Request.xlsx",
     "industry": "ERP",
     "category": "Change Management",
@@ -6301,7 +6261,7 @@
   },
   {
     "id": 312,
-    "name": "ERP Erp Implementations Training Schedule",
+    "name": "ERP Implementations Training Schedule",
     "filename": "ERP_Implementations_Training_Schedule.xlsx",
     "industry": "ERP",
     "category": "Schedule Management",
@@ -6321,7 +6281,7 @@
   },
   {
     "id": 313,
-    "name": "ERP Erp Implementations WBS",
+    "name": "ERP Implementations WBS",
     "filename": "ERP_Implementations_WBS.xlsx",
     "industry": "ERP",
     "category": "Work Breakdown",
@@ -6561,7 +6521,7 @@
   },
   {
     "id": 314,
-    "name": "Education Action ITem Log",
+    "name": "Education Action Item Log",
     "filename": "Education_Action_Item_Log.xlsx",
     "industry": "Education",
     "category": "Action Items",
@@ -6581,7 +6541,7 @@
   },
   {
     "id": 333,
-    "name": "Education Raid Log",
+    "name": "Education RAID Log",
     "filename": "Education_RAID_Log.xlsx",
     "industry": "Education",
     "category": "Tracking & Monitoring",
@@ -7181,7 +7141,7 @@
   },
   {
     "id": 346,
-    "name": "Energy Action ITem Log",
+    "name": "Energy Action Item Log",
     "filename": "Energy_Action_Item_Log.xlsx",
     "industry": "Energy",
     "category": "Action Items",
@@ -7201,7 +7161,7 @@
   },
   {
     "id": 364,
-    "name": "Energy Raid Log",
+    "name": "Energy RAID Log",
     "filename": "Energy_RAID_Log.xlsx",
     "industry": "Energy",
     "category": "Tracking & Monitoring",
@@ -7801,7 +7761,7 @@
   },
   {
     "id": 376,
-    "name": "Finance Action ITem Log",
+    "name": "Finance Action Item Log",
     "filename": "Finance_Action_Item_Log.xlsx",
     "industry": "Finance",
     "category": "Action Items",
@@ -7821,7 +7781,7 @@
   },
   {
     "id": 394,
-    "name": "Finance Raid Log",
+    "name": "Finance RAID Log",
     "filename": "Finance_RAID_Log.xlsx",
     "industry": "Finance",
     "category": "Tracking & Monitoring",
@@ -8421,7 +8381,7 @@
   },
   {
     "id": 406,
-    "name": "Government Action ITem Log",
+    "name": "Government Action Item Log",
     "filename": "Government_Action_Item_Log.xlsx",
     "industry": "Government",
     "category": "Action Items",
@@ -8441,7 +8401,7 @@
   },
   {
     "id": 409,
-    "name": "Government Raid Log",
+    "name": "Government RAID Log",
     "filename": "Government_RAID_Log.xlsx",
     "industry": "Government",
     "category": "Tracking & Monitoring",
@@ -8861,7 +8821,7 @@
   },
   {
     "id": 448,
-    "name": "Hardware Open Action ITem Log",
+    "name": "Hardware Open Action Item Log",
     "filename": "Hardware_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Hardware",
     "category": "Action Items",
@@ -9101,7 +9061,7 @@
   },
   {
     "id": 437,
-    "name": "Hardware Action ITems",
+    "name": "Hardware Action Items",
     "filename": "Hardware_Action_Items.xlsx",
     "industry": "Hardware",
     "category": "Action Items",
@@ -9141,7 +9101,7 @@
   },
   {
     "id": 456,
-    "name": "Hardware Raid Log",
+    "name": "Hardware RAID Log",
     "filename": "Hardware_RAID_Log.xlsx",
     "industry": "Hardware",
     "category": "Tracking & Monitoring",
@@ -9701,7 +9661,7 @@
   },
   {
     "id": 470,
-    "name": "Healthcare Action ITem Log",
+    "name": "Healthcare Action Item Log",
     "filename": "Healthcare_Action_Item_Log.xlsx",
     "industry": "Healthcare",
     "category": "Action Items",
@@ -9721,7 +9681,7 @@
   },
   {
     "id": 488,
-    "name": "Healthcare Raid Log",
+    "name": "Healthcare RAID Log",
     "filename": "Healthcare_RAID_Log.xlsx",
     "industry": "Healthcare",
     "category": "Tracking & Monitoring",
@@ -10141,7 +10101,7 @@
   },
   {
     "id": 511,
-    "name": "IT Implementation Open Action ITem Log",
+    "name": "IT Implementation Open Action Item Log",
     "filename": "IT_Implementation_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "IT",
     "category": "Action Items",
@@ -10381,7 +10341,7 @@
   },
   {
     "id": 520,
-    "name": "IT Raid Log",
+    "name": "IT RAID Log",
     "filename": "IT_RAID_Log.xlsx",
     "industry": "IT",
     "category": "Tracking & Monitoring",
@@ -10961,7 +10921,7 @@
   },
   {
     "id": 533,
-    "name": "Media Action ITem Log",
+    "name": "Media Action Item Log",
     "filename": "Media_Action_Item_Log.xlsx",
     "industry": "Media",
     "category": "Action Items",
@@ -10981,7 +10941,7 @@
   },
   {
     "id": 551,
-    "name": "Media Raid Log",
+    "name": "Media RAID Log",
     "filename": "Media_RAID_Log.xlsx",
     "industry": "Media",
     "category": "Tracking & Monitoring",
@@ -11361,7 +11321,7 @@
   },
   {
     "id": 589,
-    "name": "Merger And Acquisition Stakeholder Register Analysis",
+    "name": "Merger and Acquisition Stakeholder Register Analysis",
     "filename": "Merger_and_Acquisition_Stakeholder_Register_Analysis.xlsx",
     "industry": "Merger",
     "category": "Stakeholder Management",
@@ -11381,7 +11341,7 @@
   },
   {
     "id": 571,
-    "name": "Merger And Acquisition Data Readiness Assessment",
+    "name": "Merger and Acquisition Data Readiness Assessment",
     "filename": "Merger_and_Acquisition_Data_Readiness_Assessment.xlsx",
     "industry": "Merger",
     "category": "Assessment & Evaluation",
@@ -11401,7 +11361,7 @@
   },
   {
     "id": 593,
-    "name": "Merger And Acquisition Training Needs Assessment",
+    "name": "Merger and Acquisition Training Needs Assessment",
     "filename": "Merger_and_Acquisition_Training_Needs_Assessment.xlsx",
     "industry": "Merger",
     "category": "Training & Development",
@@ -11421,7 +11381,7 @@
   },
   {
     "id": 570,
-    "name": "Merger And Acquisition Comprehensive Budget",
+    "name": "Merger and Acquisition Comprehensive Budget",
     "filename": "Merger_and_Acquisition_Comprehensive_Budget.xlsx",
     "industry": "Merger",
     "category": "Financial Management",
@@ -11441,7 +11401,7 @@
   },
   {
     "id": 565,
-    "name": "Merger And Acquisition Business Case",
+    "name": "Merger and Acquisition Business Case",
     "filename": "Merger_and_Acquisition_Business_Case.docx",
     "industry": "Merger",
     "category": "Business Analysis",
@@ -11461,7 +11421,7 @@
   },
   {
     "id": 577,
-    "name": "Merger And Acquisition Project Charter",
+    "name": "Merger and Acquisition Project Charter",
     "filename": "Merger_and_Acquisition_Project_Charter.docx",
     "industry": "Merger",
     "category": "Project Planning",
@@ -11481,7 +11441,7 @@
   },
   {
     "id": 573,
-    "name": "Merger And Acquisition KPI Dashboard",
+    "name": "Merger and Acquisition KPI Dashboard",
     "filename": "Merger_and_Acquisition_KPI_Dashboard.xlsx",
     "industry": "Merger",
     "category": "Performance Management",
@@ -11501,7 +11461,7 @@
   },
   {
     "id": 592,
-    "name": "Merger And Acquisition Training Budget Estimates",
+    "name": "Merger and Acquisition Training Budget Estimates",
     "filename": "Merger_and_Acquisition_Training_Budget_Estimates.xlsx",
     "industry": "Merger",
     "category": "Financial Management",
@@ -11521,7 +11481,7 @@
   },
   {
     "id": 567,
-    "name": "Merger And Acquisition Change Request Form",
+    "name": "Merger and Acquisition Change Request Form",
     "filename": "Merger_and_Acquisition_Change_Request_Form.xlsx",
     "industry": "Merger",
     "category": "Change Management",
@@ -11541,7 +11501,7 @@
   },
   {
     "id": 574,
-    "name": "Merger And Acquisition Lessons Learned",
+    "name": "Merger and Acquisition Lessons Learned",
     "filename": "Merger_and_Acquisition_Lessons_Learned.xlsx",
     "industry": "Merger",
     "category": "Lessons Learned",
@@ -11561,7 +11521,7 @@
   },
   {
     "id": 572,
-    "name": "Merger And Acquisition High Level Requirements List",
+    "name": "Merger and Acquisition High Level Requirements List",
     "filename": "Merger_and_Acquisition_High_Level_Requirements_List.xlsx",
     "industry": "Merger",
     "category": "Requirements Management",
@@ -11581,7 +11541,7 @@
   },
   {
     "id": 564,
-    "name": "Merger And Acquisition Action ITem Log",
+    "name": "Merger and Acquisition Action Item Log",
     "filename": "Merger_and_Acquisition_Action_Item_Log.xlsx",
     "industry": "Merger",
     "category": "Action Items",
@@ -11601,7 +11561,7 @@
   },
   {
     "id": 582,
-    "name": "Merger And Acquisition Raid Log",
+    "name": "Merger and Acquisition RAID Log",
     "filename": "Merger_and_Acquisition_RAID_Log.xlsx",
     "industry": "Merger",
     "category": "Tracking & Monitoring",
@@ -11621,7 +11581,7 @@
   },
   {
     "id": 583,
-    "name": "Merger And Acquisition Requirements Traceability Matrix",
+    "name": "Merger and Acquisition Requirements Traceability Matrix",
     "filename": "Merger_and_Acquisition_Requirements_Traceability_Matrix.xlsx",
     "industry": "Merger",
     "category": "Requirements Management",
@@ -11641,7 +11601,7 @@
   },
   {
     "id": 566,
-    "name": "Merger And Acquisition Change Management Plan",
+    "name": "Merger and Acquisition Change Management Plan",
     "filename": "Merger_and_Acquisition_Change_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Change Management",
@@ -11661,7 +11621,7 @@
   },
   {
     "id": 568,
-    "name": "Merger And Acquisition Communication Plan",
+    "name": "Merger and Acquisition Communication Plan",
     "filename": "Merger_and_Acquisition_Communication_Plan.xlsx",
     "industry": "Merger",
     "category": "Communication",
@@ -11681,7 +11641,7 @@
   },
   {
     "id": 569,
-    "name": "Merger And Acquisition Communications Management Plan",
+    "name": "Merger and Acquisition Communications Management Plan",
     "filename": "Merger_and_Acquisition_Communications_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Communication",
@@ -11701,7 +11661,7 @@
   },
   {
     "id": 575,
-    "name": "Merger And Acquisition Procurement Management Plan",
+    "name": "Merger and Acquisition Procurement Management Plan",
     "filename": "Merger_and_Acquisition_Procurement_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Procurement",
@@ -11721,7 +11681,7 @@
   },
   {
     "id": 576,
-    "name": "Merger And Acquisition Procurement Plan",
+    "name": "Merger and Acquisition Procurement Plan",
     "filename": "Merger_and_Acquisition_Procurement_Plan.xlsx",
     "industry": "Merger",
     "category": "Procurement",
@@ -11741,7 +11701,7 @@
   },
   {
     "id": 581,
-    "name": "Merger And Acquisition Quality Management Plan",
+    "name": "Merger and Acquisition Quality Management Plan",
     "filename": "Merger_and_Acquisition_Quality_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Quality Management",
@@ -11761,7 +11721,7 @@
   },
   {
     "id": 584,
-    "name": "Merger And Acquisition Resource Management Plan",
+    "name": "Merger and Acquisition Resource Management Plan",
     "filename": "Merger_and_Acquisition_Resource_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Resource Management",
@@ -11781,7 +11741,7 @@
   },
   {
     "id": 585,
-    "name": "Merger And Acquisition Resource Plan Staffing Plan",
+    "name": "Merger and Acquisition Resource Plan Staffing Plan",
     "filename": "Merger_and_Acquisition_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Merger",
     "category": "Resource Management",
@@ -11801,7 +11761,7 @@
   },
   {
     "id": 586,
-    "name": "Merger And Acquisition Risk Management Plan",
+    "name": "Merger and Acquisition Risk Management Plan",
     "filename": "Merger_and_Acquisition_Risk_Management_Plan.xlsx",
     "industry": "Merger",
     "category": "Risk Management",
@@ -11821,7 +11781,7 @@
   },
   {
     "id": 587,
-    "name": "Merger And Acquisition Stakeholder Engagement Plan",
+    "name": "Merger and Acquisition Stakeholder Engagement Plan",
     "filename": "Merger_and_Acquisition_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Merger",
     "category": "Stakeholder Management",
@@ -11841,7 +11801,7 @@
   },
   {
     "id": 579,
-    "name": "Merger And Acquisition Project Kickoff Presentation",
+    "name": "Merger and Acquisition Project Kickoff Presentation",
     "filename": "Merger_and_Acquisition_Project_Kickoff_Presentation.xlsx",
     "industry": "Merger",
     "category": "Project Initiation",
@@ -11861,7 +11821,7 @@
   },
   {
     "id": 580,
-    "name": "Merger And Acquisition Project Proposal",
+    "name": "Merger and Acquisition Project Proposal",
     "filename": "Merger_and_Acquisition_Project_Proposal.docx",
     "industry": "Merger",
     "category": "Business Development",
@@ -11881,7 +11841,7 @@
   },
   {
     "id": 588,
-    "name": "Merger And Acquisition Stakeholder Register",
+    "name": "Merger and Acquisition Stakeholder Register",
     "filename": "Merger_and_Acquisition_Stakeholder_Register.xlsx",
     "industry": "Merger",
     "category": "Stakeholder Management",
@@ -11901,7 +11861,7 @@
   },
   {
     "id": 578,
-    "name": "Merger And Acquisition Project Closure Report",
+    "name": "Merger and Acquisition Project Closure Report",
     "filename": "Merger_and_Acquisition_Project_Closure_Report.xlsx",
     "industry": "Merger",
     "category": "Project Closure",
@@ -11921,7 +11881,7 @@
   },
   {
     "id": 591,
-    "name": "Merger And Acquisition Status Report",
+    "name": "Merger and Acquisition Status Report",
     "filename": "Merger_and_Acquisition_Status_Report.xlsx",
     "industry": "Merger",
     "category": "Reporting",
@@ -11941,7 +11901,7 @@
   },
   {
     "id": 594,
-    "name": "Merger And Acquisition Training Schedule",
+    "name": "Merger and Acquisition Training Schedule",
     "filename": "Merger_and_Acquisition_Training_Schedule.xlsx",
     "industry": "Merger",
     "category": "Schedule Management",
@@ -11961,7 +11921,7 @@
   },
   {
     "id": 590,
-    "name": "Merger And Acquisition WBS",
+    "name": "Merger and Acquisition WBS",
     "filename": "Merger_and_Acquisition_WBS.xlsx",
     "industry": "Merger",
     "category": "Work Breakdown",
@@ -12041,7 +12001,7 @@
   },
   {
     "id": 607,
-    "name": "Network Open Action ITem Log",
+    "name": "Network Open Action Item Log",
     "filename": "Network_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Network",
     "category": "Action Items",
@@ -12281,7 +12241,7 @@
   },
   {
     "id": 615,
-    "name": "Network Raid Log",
+    "name": "Network RAID Log",
     "filename": "Network_RAID_Log.xlsx",
     "industry": "Network",
     "category": "Tracking & Monitoring",
@@ -12641,7 +12601,7 @@
   },
   {
     "id": 628,
-    "name": "Non-Profit Action ITem Log",
+    "name": "Non-Profit Action Item Log",
     "filename": "Non-Profit_Action_Item_Log.xlsx",
     "industry": "Non-Profit",
     "category": "Action Items",
@@ -13001,7 +12961,7 @@
   },
   {
     "id": 646,
-    "name": "Non-Profit Raid Log",
+    "name": "Non-Profit RAID Log",
     "filename": "Non-Profit_RAID_Log.xlsx",
     "industry": "Non-Profit",
     "category": "Tracking & Monitoring",
@@ -13461,7 +13421,7 @@
   },
   {
     "id": 659,
-    "name": "Operational Action ITems",
+    "name": "Operational Action Items",
     "filename": "Operational_Action_Items.xlsx",
     "industry": "Operational",
     "category": "Action Items",
@@ -13521,7 +13481,7 @@
   },
   {
     "id": 676,
-    "name": "Operational Raid Log",
+    "name": "Operational RAID Log",
     "filename": "Operational_RAID_Log.xlsx",
     "industry": "Operational",
     "category": "Tracking & Monitoring",
@@ -13921,7 +13881,7 @@
   },
   {
     "id": 692,
-    "name": "Operations Open Action ITem Log",
+    "name": "Operations Open Action Item Log",
     "filename": "Operations_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Operations",
     "category": "Action Items",
@@ -14001,7 +13961,7 @@
   },
   {
     "id": 703,
-    "name": "Product Development Open Action ITem Log",
+    "name": "Product Development Open Action Item Log",
     "filename": "Product_Development_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Product",
     "category": "Action Items",
@@ -14241,7 +14201,7 @@
   },
   {
     "id": 713,
-    "name": "Product Raid Log",
+    "name": "Product RAID Log",
     "filename": "Product_RAID_Log.xlsx",
     "industry": "Product",
     "category": "Tracking & Monitoring",
@@ -14601,7 +14561,7 @@
   },
   {
     "id": 726,
-    "name": "R&D Action ITems",
+    "name": "R&D Action Items",
     "filename": "R&D_Action_Items.xlsx",
     "industry": "R&D",
     "category": "Action Items",
@@ -14941,7 +14901,7 @@
   },
   {
     "id": 743,
-    "name": "R&D Raid Log",
+    "name": "R&D RAID Log",
     "filename": "R&D_RAID_Log.xlsx",
     "industry": "R&D",
     "category": "Tracking & Monitoring",
@@ -15261,7 +15221,7 @@
   },
   {
     "id": 776,
-    "name": "Regulatory Open Action ITem Log",
+    "name": "Regulatory Open Action Item Log",
     "filename": "Regulatory_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Regulatory",
     "category": "Action Items",
@@ -15501,7 +15461,7 @@
   },
   {
     "id": 784,
-    "name": "Regulatory Raid Log",
+    "name": "Regulatory RAID Log",
     "filename": "Regulatory_RAID_Log.xlsx",
     "industry": "Regulatory",
     "category": "Tracking & Monitoring",
@@ -15901,7 +15861,7 @@
   },
   {
     "id": 799,
-    "name": "Research Development Open Action ITem Log",
+    "name": "Research Development Open Action Item Log",
     "filename": "Research_Development_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Research",
     "category": "Action Items",
@@ -16161,7 +16121,7 @@
   },
   {
     "id": 801,
-    "name": "Retail Action ITem Log",
+    "name": "Retail Action Item Log",
     "filename": "Retail_Action_Item_Log.xlsx",
     "industry": "Retail",
     "category": "Action Items",
@@ -16181,7 +16141,7 @@
   },
   {
     "id": 819,
-    "name": "Retail Raid Log",
+    "name": "Retail RAID Log",
     "filename": "Retail_RAID_Log.xlsx",
     "industry": "Retail",
     "category": "Tracking & Monitoring",
@@ -16601,7 +16561,7 @@
   },
   {
     "id": 841,
-    "name": "Software Development Open Action ITem Log",
+    "name": "Software Development Open Action Item Log",
     "filename": "Software_Development_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Software",
     "category": "Action Items",
@@ -16841,7 +16801,7 @@
   },
   {
     "id": 851,
-    "name": "Software Raid Log",
+    "name": "Software RAID Log",
     "filename": "Software_RAID_Log.xlsx",
     "industry": "Software",
     "category": "Tracking & Monitoring",
@@ -17421,7 +17381,7 @@
   },
   {
     "id": 864,
-    "name": "Supply Chain Optimization Action ITem Log",
+    "name": "Supply Chain Optimization Action Item Log",
     "filename": "Supply_Chain_Optimization_Action_Item_Log.xlsx",
     "industry": "Supply Chain",
     "category": "Action Items",
@@ -17441,7 +17401,7 @@
   },
   {
     "id": 882,
-    "name": "Supply Chain Optimization Raid Log",
+    "name": "Supply Chain Optimization RAID Log",
     "filename": "Supply_Chain_Optimization_RAID_Log.xlsx",
     "industry": "Supply Chain",
     "category": "Tracking & Monitoring",
@@ -17861,7 +17821,7 @@
   },
   {
     "id": 906,
-    "name": "Telecommunications Open Action ITem Log",
+    "name": "Telecommunications Open Action Item Log",
     "filename": "Telecommunications_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18101,7 +18061,7 @@
   },
   {
     "id": 895,
-    "name": "Telecommunications Action ITems",
+    "name": "Telecommunications Action Items",
     "filename": "Telecommunications_Action_Items.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18141,7 +18101,7 @@
   },
   {
     "id": 914,
-    "name": "Telecommunications Raid Log",
+    "name": "Telecommunications RAID Log",
     "filename": "Telecommunications_RAID_Log.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18701,7 +18661,7 @@
   },
   {
     "id": 928,
-    "name": "Transportation Action ITem Log",
+    "name": "Transportation Action Item Log",
     "filename": "Transportation_Action_Item_Log.xlsx",
     "industry": "Transportation",
     "category": "Action Items",
@@ -18721,7 +18681,7 @@
   },
   {
     "id": 946,
-    "name": "Transportation Raid Log",
+    "name": "Transportation RAID Log",
     "filename": "Transportation_RAID_Log.xlsx",
     "industry": "Transportation",
     "category": "Tracking & Monitoring",
