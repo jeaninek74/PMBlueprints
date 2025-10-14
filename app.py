@@ -334,6 +334,7 @@ try:
     from routes.setup import setup_bp
     from routes.ai_download import ai_download_bp
     from routes.update_industries import update_industries_bp
+    from routes.admin_update import admin_bp as admin_update_bp
     from routes.ai_generator_advanced import ai_gen_bp as ai_generator_bp
     
     # Initialize OAuth (optional - only if credentials are set)
@@ -365,6 +366,7 @@ try:
     app.register_blueprint(ai_download_bp)  # AI template download routes
     app.register_blueprint(ai_generator_bp)
     app.register_blueprint(update_industries_bp)  # Update industries route
+    app.register_blueprint(admin_update_bp)  # Admin update routes
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, and setup)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
