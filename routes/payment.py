@@ -20,35 +20,36 @@ PRICING_PLANS = {
         'currency': 'usd',
         'interval': 'month',
         'features': [
-            '10 template downloads',
+            '3 template downloads/month',
             'Basic templates',
+            '3 AI generations/month',
             'Email support'
         ]
     },
     'professional': {
         'name': 'Professional',
-        'price': 2900,  # $29.00 in cents
+        'price': 5000,  # $50.00 in cents
         'currency': 'usd',
         'interval': 'month',
         'features': [
-            'Unlimited template downloads',
+            '10 template downloads/month',
             'All 960+ templates',
-            'AI template generation',
+            '25 AI generations/month',
             'Platform integrations',
             'Priority support'
         ]
     },
     'enterprise': {
         'name': 'Enterprise',
-        'price': 9900,  # $99.00 in cents
+        'price': 15000,  # $150.00 in cents
         'currency': 'usd',
         'interval': 'month',
         'features': [
             'Everything in Professional',
+            'Unlimited downloads',
+            '100 AI generations/month',
             'Custom templates',
-            'Advanced analytics',
-            'Dedicated support',
-            'White-label options'
+            'Advanced analytics'
         ]
     }
 }
