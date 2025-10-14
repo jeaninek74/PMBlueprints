@@ -92,7 +92,7 @@ def analyze_document_request():
         )
         
         # Get PMBOK mapping
-        pmbok_mapping = pmbok_knowledge.get_knowledge_area_for_document(document_name)
+        pmbok_area = pmbok_knowledge.get_knowledge_area_for_document(document_name)
         
         return jsonify({
             'success': True,
@@ -102,8 +102,8 @@ def analyze_document_request():
                 'recommended_format': doc_info['format'],
                 'purpose': doc_info.get('content_guidance', 'Professional project management document'),
                 'key_sections': doc_info['structure'],
-                'pmbok_knowledge_area': pmbok_mapping['knowledge_area'],
-                'pmbok_process_group': pmbok_mapping['process_group']
+                'pmbok_knowledge_area': pmbok_area if pmbok_area else 'Project Integration Management',
+                'pmbok_process_group': 'Planning'
             },
             'methodology': {
                 'name': method_info['name'] if method_info else methodology,
