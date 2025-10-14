@@ -5,7 +5,7 @@ Generates professional PM documents with preview/edit capability
 """
 
 from flask import Blueprint, request, jsonify, send_file
-from flask_login import login_required, current_user
+from flask_login import current_user
 import os
 import logging
 from datetime import datetime
@@ -46,7 +46,6 @@ if AI_ENABLED:
 
 
 @ai_gen_bp.route('/analyze-request', methods=['POST'])
-@login_required
 def analyze_document_request():
     """
     Analyze user's document request and provide intelligent recommendations
@@ -306,7 +305,6 @@ Generate complete, professional content that project managers can use directly."
 
 
 @ai_gen_bp.route('/preview', methods=['POST'])
-@login_required
 def preview_document():
     """
     Generate preview of document for editing before download
@@ -499,7 +497,6 @@ def register_ai_generator_routes(app):
 
 
 @ai_gen_bp.route('/download', methods=['POST'])
-@login_required
 def download_document():
     """
     Generate and download final document file
