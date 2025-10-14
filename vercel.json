@@ -8,8 +8,13 @@
   ],
   "routes": [
     {
+      "src": "/static/templates/(.*)",
+      "dest": "/static/templates/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "api/index.py"
     }
   ]
 }
+
