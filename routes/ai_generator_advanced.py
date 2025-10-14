@@ -213,6 +213,18 @@ def generate_document_content():
     Returns generated content ready for preview/edit
     """
     try:
+        # Check AI generation limit
+        limit_check = check_ai_generation_limit()
+        if not limit_check['allowed']:
+            return jsonify({
+                'success': False,
+                'error': limit_check['error'],
+                'upgrade_required': limit_check.get('upgrade_required', False),
+                'current_plan': limit_check.get('current_plan'),
+                'usage': limit_check.get('usage'),
+                'limit': limit_check.get('limit')
+            }), 403
+        
         if not AI_ENABLED:
             return jsonify({
                 'success': False,

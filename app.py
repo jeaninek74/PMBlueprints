@@ -132,8 +132,29 @@ class User(UserMixin, db.Model):
     
     def can_download(self):
         if self.subscription_plan == 'free':
+            return self.downloads_used < 3
+        elif self.subscription_plan == 'professional':
             return self.downloads_used < 10
-        return True
+        return True  # Enterprise: unlimited
+    
+    def get_ai_generation_limit(self):
+        """Get AI generation limit based on subscription plan"""
+        limits = {
+            'free': 3,
+            'professional': 25,
+            'enterprise': 100
+        }
+        return limits.get(self.subscription_plan, 3)
+    
+    def can_generate_ai(self):
+        """Check if user can generate AI documents"""
+        limit = self.get_ai_generation_limit()
+        return self.openai_usage_count < limit
+    
+    def get_ai_generations_remaining(self):
+        """Get remaining AI generations for current month"""
+        limit = self.get_ai_generation_limit()
+        return max(0, limit - self.openai_usage_count)
     
     def is_platform_connected(self, platform):
         """Check if user has connected a specific platform"""
