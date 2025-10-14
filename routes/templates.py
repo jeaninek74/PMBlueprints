@@ -202,9 +202,12 @@ def download(template_id):
         from flask import send_from_directory
         import os
         
-        # Get absolute path to static/templates directory
+        # Get absolute path to templates directory
+        # Try public/templates first (Railway), then fall back to static/templates (Vercel)
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        templates_dir = os.path.join(base_dir, 'static', 'templates')
+        templates_dir = os.path.join(base_dir, 'public', 'templates')
+        if not os.path.exists(templates_dir):
+            templates_dir = os.path.join(base_dir, 'static', 'templates')
         
         # Debug logging
         logger.info(f"Base dir: {base_dir}")
