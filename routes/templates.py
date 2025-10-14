@@ -194,24 +194,19 @@ def download(template_id):
         except Exception as monitor_error:
             logger.warning(f"Monitoring tracking failed (non-critical): {monitor_error}")
 
-        # Serve actual template file - use relative path
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        template_path = os.path.join(base_dir, 'static', 'templates', template.filename)
-
-        if not os.path.exists(template_path):
-            logger.error(f"Template file not found: {template_path}")
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'Template file not found'}), 404
-            abort(404)
-
+        # For Vercel serverless, redirect to static file URL
+        # This works better than send_file() in serverless environments
         user_email = current_user.email if current_user.is_authenticated else 'anonymous'
         logger.info(f"Template downloaded: {template.name} by {user_email}")
-
-        return send_file(
-            template_path,
-            as_attachment=True,
-            download_name=template.filename
-        )
+        
+        # Construct static file URL
+        from flask import redirect, url_for
+        static_url = f"/static/templates/{template.filename}"
+        
+        # Return redirect to static file with download headers
+        response = redirect(static_url)
+        response.headers['Content-Disposition'] = f'attachment; filename="{template.filename}"'
+        return response
 
     except Exception as e:
         logger.error(f"Template download error: {e}")
