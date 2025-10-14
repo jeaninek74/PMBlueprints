@@ -1,7 +1,7 @@
 [
   {
     "id": 5,
-    "name": "Change Management Plan",
+    "name": "AI/ML Change Management Plan",
     "filename": "AI_ML_Change_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Change Management",
@@ -21,7 +21,7 @@
   },
   {
     "id": 8,
-    "name": "Communications Management Plan",
+    "name": "AI/ML Communications Management Plan",
     "filename": "AI_ML_Communications_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Communication",
@@ -41,7 +41,7 @@
   },
   {
     "id": 9,
-    "name": "Comprehensive Budget",
+    "name": "AI/ML Comprehensive Budget",
     "filename": "AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Financial Management",
@@ -61,7 +61,7 @@
   },
   {
     "id": 12,
-    "name": "KPI Dashboard",
+    "name": "AI/ML KPI Dashboard",
     "filename": "AI_ML_KPI_Dashboard_with_Instructions_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Performance Management",
@@ -81,7 +81,7 @@
   },
   {
     "id": 13,
-    "name": "KPI Report Dashboard",
+    "name": "AI/ML KPI Report Dashboard",
     "filename": "AI_ML_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Performance Management",
@@ -101,7 +101,7 @@
   },
   {
     "id": 14,
-    "name": "Lessons Learned",
+    "name": "AI/ML Lessons Learned",
     "filename": "AI_ML_Lessons_Learned_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Lessons Learned",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "Open Action ITem Log",
+    "name": "AI/ML Open Action ITem Log",
     "filename": "AI_ML_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Action Items",
@@ -141,7 +141,7 @@
   },
   {
     "id": 16,
-    "name": "Procurement Management Plan",
+    "name": "AI/ML Procurement Management Plan",
     "filename": "AI_ML_Procurement_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Procurement",
@@ -161,7 +161,7 @@
   },
   {
     "id": 21,
-    "name": "Project Proposal",
+    "name": "AI/ML Project Proposal",
     "filename": "AI_ML_Project_Proposal_2025_PMI.docx",
     "industry": "AI/ML",
     "category": "Business Development",
@@ -181,7 +181,7 @@
   },
   {
     "id": 22,
-    "name": "Quality Management Plan",
+    "name": "AI/ML Quality Management Plan",
     "filename": "AI_ML_Quality_Management_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Quality Management",
@@ -201,7 +201,7 @@
   },
   {
     "id": 26,
-    "name": "Resource Plan Staffing Plan",
+    "name": "AI/ML Resource Plan Staffing Plan",
     "filename": "AI_ML_Resource_Plan_Staffing_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Resource Management",
@@ -221,7 +221,7 @@
   },
   {
     "id": 28,
-    "name": "Stakeholder Engagement Plan",
+    "name": "AI/ML Stakeholder Engagement Plan",
     "filename": "AI_ML_Stakeholder_Engagement_Plan_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -241,7 +241,7 @@
   },
   {
     "id": 32,
-    "name": "Training Budget Estimates",
+    "name": "AI/ML Training Budget Estimates",
     "filename": "AI_ML_Training_Budget_Estimates_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Financial Management",
@@ -261,7 +261,7 @@
   },
   {
     "id": 33,
-    "name": "Training Needs Assessment",
+    "name": "AI/ML Training Needs Assessment",
     "filename": "AI_ML_Training_Needs_Assessment_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Training & Development",
@@ -281,7 +281,7 @@
   },
   {
     "id": 34,
-    "name": "Training Schedule",
+    "name": "AI/ML Training Schedule",
     "filename": "AI_ML_Training_Schedule_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Schedule Management",
@@ -301,7 +301,7 @@
   },
   {
     "id": 35,
-    "name": "WBS Projectplan Exact",
+    "name": "AI/ML WBS Projectplan Exact",
     "filename": "AI_ML_WBS_ProjectPlan_Exact_Template_2025_PMI.xlsx",
     "industry": "AI/ML",
     "category": "Planning",
@@ -321,7 +321,7 @@
   },
   {
     "id": 30,
-    "name": "Stakeholder Register Analysis",
+    "name": "AI/ML Stakeholder Register Analysis",
     "filename": "AI_ML_Stakeholder_Register_Analysis.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -341,7 +341,7 @@
   },
   {
     "id": 10,
-    "name": "Data Readiness Assessment",
+    "name": "AI/ML Data Readiness Assessment",
     "filename": "AI_ML_Data_Readiness_Assessment.xlsx",
     "industry": "AI/ML",
     "category": "Assessment & Evaluation",
@@ -361,7 +361,7 @@
   },
   {
     "id": 4,
-    "name": "Business Case",
+    "name": "AI/ML Business Case",
     "filename": "AI_ML_Business_Case.docx",
     "industry": "AI/ML",
     "category": "Business Analysis",
@@ -381,7 +381,7 @@
   },
   {
     "id": 18,
-    "name": "Project Charter",
+    "name": "AI/ML Project Charter",
     "filename": "AI_ML_Project_Charter.docx",
     "industry": "AI/ML",
     "category": "Project Planning",
@@ -401,7 +401,7 @@
   },
   {
     "id": 6,
-    "name": "Change Request Form",
+    "name": "AI/ML Change Request Form",
     "filename": "AI_ML_Change_Request_Form.xlsx",
     "industry": "AI/ML",
     "category": "Change Management",
@@ -421,7 +421,7 @@
   },
   {
     "id": 11,
-    "name": "High Level Requirements List",
+    "name": "AI/ML High Level Requirements List",
     "filename": "AI_ML_High_Level_Requirements_List.xlsx",
     "industry": "AI/ML",
     "category": "Requirements Management",
@@ -441,7 +441,7 @@
   },
   {
     "id": 23,
-    "name": "Raid Log",
+    "name": "AI/ML Raid Log",
     "filename": "AI_ML_RAID_Log.xlsx",
     "industry": "AI/ML",
     "category": "Tracking & Monitoring",
@@ -461,7 +461,7 @@
   },
   {
     "id": 24,
-    "name": "Requirements Traceability Matrix",
+    "name": "AI/ML Requirements Traceability Matrix",
     "filename": "AI_ML_Requirements_Traceability_Matrix.xlsx",
     "industry": "AI/ML",
     "category": "Requirements Management",
@@ -481,7 +481,7 @@
   },
   {
     "id": 7,
-    "name": "Communication Plan",
+    "name": "AI/ML Communication Plan",
     "filename": "AI_ML_Communication_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Communication",
@@ -501,7 +501,7 @@
   },
   {
     "id": 17,
-    "name": "Procurement Plan",
+    "name": "AI/ML Procurement Plan",
     "filename": "AI_ML_Procurement_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Procurement",
@@ -521,7 +521,7 @@
   },
   {
     "id": 25,
-    "name": "Resource Management Plan",
+    "name": "AI/ML Resource Management Plan",
     "filename": "AI_ML_Resource_Management_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Resource Management",
@@ -541,7 +541,7 @@
   },
   {
     "id": 27,
-    "name": "Risk Management Plan",
+    "name": "AI/ML Risk Management Plan",
     "filename": "AI_ML_Risk_Management_Plan.xlsx",
     "industry": "AI/ML",
     "category": "Risk Management",
@@ -561,7 +561,7 @@
   },
   {
     "id": 20,
-    "name": "Project Kickoff Presentation",
+    "name": "AI/ML Project Kickoff Presentation",
     "filename": "AI_ML_Project_Kickoff_Presentation.xlsx",
     "industry": "AI/ML",
     "category": "Project Initiation",
@@ -581,7 +581,7 @@
   },
   {
     "id": 29,
-    "name": "Stakeholder Register",
+    "name": "AI/ML Stakeholder Register",
     "filename": "AI_ML_Stakeholder_Register.xlsx",
     "industry": "AI/ML",
     "category": "Stakeholder Management",
@@ -601,7 +601,7 @@
   },
   {
     "id": 19,
-    "name": "Project Closure Report",
+    "name": "AI/ML Project Closure Report",
     "filename": "AI_ML_Project_Closure_Report.xlsx",
     "industry": "AI/ML",
     "category": "Project Closure",
@@ -621,7 +621,7 @@
   },
   {
     "id": 31,
-    "name": "Status Report",
+    "name": "AI/ML Status Report",
     "filename": "AI_ML_Status_Report.xlsx",
     "industry": "AI/ML",
     "category": "Reporting",
@@ -1881,7 +1881,7 @@
   },
   {
     "id": 104,
-    "name": "Executive Raid Log Complete",
+    "name": "Construction Executive Raid Log Complete",
     "filename": "Construction_Executive_RAID_Log_Complete_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Tracking & Monitoring",
@@ -1901,7 +1901,7 @@
   },
   {
     "id": 106,
-    "name": "KPI Report Dashboard",
+    "name": "Construction KPI Report Dashboard",
     "filename": "Construction_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Performance Management",
@@ -1921,7 +1921,7 @@
   },
   {
     "id": 107,
-    "name": "Lessons Learned",
+    "name": "Construction Lessons Learned",
     "filename": "Construction_Lessons_Learned_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Lessons Learned",
@@ -1941,7 +1941,7 @@
   },
   {
     "id": 108,
-    "name": "Open Action ITem Log",
+    "name": "Construction Open Action ITem Log",
     "filename": "Construction_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Action Items",
@@ -1961,7 +1961,7 @@
   },
   {
     "id": 114,
-    "name": "Project Proposal",
+    "name": "Construction Project Proposal",
     "filename": "Construction_Project_Proposal_2025_PMI.docx",
     "industry": "Construction",
     "category": "Business Development",
@@ -1981,7 +1981,7 @@
   },
   {
     "id": 103,
-    "name": "Data Readiness Assessment",
+    "name": "Construction Data Readiness Assessment",
     "filename": "Construction_Data_Readiness_Assessment.xlsx",
     "industry": "Construction",
     "category": "Assessment & Evaluation",
@@ -2001,7 +2001,7 @@
   },
   {
     "id": 121,
-    "name": "Training Needs Assessment",
+    "name": "Construction Training Needs Assessment",
     "filename": "Construction_Training_Needs_Assessment.xlsx",
     "industry": "Construction",
     "category": "Training & Development",
@@ -2021,7 +2021,7 @@
   },
   {
     "id": 102,
-    "name": "Comprehensive Budget",
+    "name": "Construction Comprehensive Budget",
     "filename": "Construction_Comprehensive_Budget.xlsx",
     "industry": "Construction",
     "category": "Financial Management",
@@ -2041,7 +2041,7 @@
   },
   {
     "id": 98,
-    "name": "Business Case",
+    "name": "Construction Business Case",
     "filename": "Construction_Business_Case.docx",
     "industry": "Construction",
     "category": "Business Analysis",
@@ -2061,7 +2061,7 @@
   },
   {
     "id": 111,
-    "name": "Project Charter",
+    "name": "Construction Project Charter",
     "filename": "Construction_Project_Charter.docx",
     "industry": "Construction",
     "category": "Project Planning",
@@ -2081,7 +2081,7 @@
   },
   {
     "id": 948,
-    "name": "Communications Management Plan",
+    "name": "Construction Communications Management Plan",
     "filename": "Construction_Communications_Management_Plan_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Communication",
@@ -2101,7 +2101,7 @@
   },
   {
     "id": 105,
-    "name": "KPI Dashboard",
+    "name": "Construction KPI Dashboard",
     "filename": "Construction_KPI_Dashboard.xlsx",
     "industry": "Construction",
     "category": "Performance Management",
@@ -2121,7 +2121,7 @@
   },
   {
     "id": 120,
-    "name": "Training Budget Estimates",
+    "name": "Construction Training Budget Estimates",
     "filename": "Construction_Training_Budget_Estimates.xlsx",
     "industry": "Construction",
     "category": "Financial Management",
@@ -2141,7 +2141,7 @@
   },
   {
     "id": 100,
-    "name": "Change Request Form",
+    "name": "Construction Change Request Form",
     "filename": "Construction_Change_Request_Form.xlsx",
     "industry": "Construction",
     "category": "Change Management",
@@ -2161,7 +2161,7 @@
   },
   {
     "id": 950,
-    "name": "High Level Requirements List",
+    "name": "Construction High Level Requirements List",
     "filename": "Construction_High_Level_Requirements_List_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Business Analysis",
@@ -2181,7 +2181,7 @@
   },
   {
     "id": 99,
-    "name": "Change Management Plan",
+    "name": "Construction Change Management Plan",
     "filename": "Construction_Change_Management_Plan.xlsx",
     "industry": "Construction",
     "category": "Change Management",
@@ -2201,7 +2201,7 @@
   },
   {
     "id": 101,
-    "name": "Communication Plan",
+    "name": "Construction Communication Plan",
     "filename": "Construction_Communication_Plan.xlsx",
     "industry": "Construction",
     "category": "Communication",
@@ -2221,7 +2221,7 @@
   },
   {
     "id": 109,
-    "name": "Procurement Management Plan",
+    "name": "Construction Procurement Management Plan",
     "filename": "Construction_Procurement_Management_Plan.xlsx",
     "industry": "Construction",
     "category": "Procurement",
@@ -2241,7 +2241,7 @@
   },
   {
     "id": 110,
-    "name": "Procurement Plan",
+    "name": "Construction Procurement Plan",
     "filename": "Construction_Procurement_Plan.xlsx",
     "industry": "Construction",
     "category": "Procurement",
@@ -2261,7 +2261,7 @@
   },
   {
     "id": 115,
-    "name": "Quality Management Plan",
+    "name": "Construction Quality Management Plan",
     "filename": "Construction_Quality_Management_Plan.xlsx",
     "industry": "Construction",
     "category": "Quality Management",
@@ -2281,7 +2281,7 @@
   },
   {
     "id": 116,
-    "name": "Resource Management Plan",
+    "name": "Construction Resource Management Plan",
     "filename": "Construction_Resource_Management_Plan.xlsx",
     "industry": "Construction",
     "category": "Resource Management",
@@ -2301,7 +2301,7 @@
   },
   {
     "id": 117,
-    "name": "Risk Management Plan",
+    "name": "Construction Risk Management Plan",
     "filename": "Construction_Risk_Management_Plan.xlsx",
     "industry": "Construction",
     "category": "Risk Management",
@@ -2321,7 +2321,7 @@
   },
   {
     "id": 118,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Construction Stakeholder Engagement Plan",
     "filename": "Construction_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Construction",
     "category": "Stakeholder Management",
@@ -2341,7 +2341,7 @@
   },
   {
     "id": 113,
-    "name": "Project Kickoff Presentation",
+    "name": "Construction Project Kickoff Presentation",
     "filename": "Construction_Project_Kickoff_Presentation.xlsx",
     "industry": "Construction",
     "category": "Project Initiation",
@@ -2361,7 +2361,7 @@
   },
   {
     "id": 112,
-    "name": "Project Closure Report",
+    "name": "Construction Project Closure Report",
     "filename": "Construction_Project_Closure_Report.xlsx",
     "industry": "Construction",
     "category": "Project Closure",
@@ -2381,7 +2381,7 @@
   },
   {
     "id": 119,
-    "name": "Status Report",
+    "name": "Construction Status Report",
     "filename": "Construction_Status_Report.xlsx",
     "industry": "Construction",
     "category": "Reporting",
@@ -2401,7 +2401,7 @@
   },
   {
     "id": 952,
-    "name": "Requirements Traceability Matrix",
+    "name": "Construction Requirements Traceability Matrix",
     "filename": "Construction_Requirements_Traceability_Matrix_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Business Analysis",
@@ -2421,7 +2421,7 @@
   },
   {
     "id": 954,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Construction Resource Plan Staffing Plan",
     "filename": "Construction_Resource_Plan_Staffing_Plan_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Resource Management",
@@ -2441,7 +2441,7 @@
   },
   {
     "id": 122,
-    "name": "Training Schedule",
+    "name": "Construction Training Schedule",
     "filename": "Construction_Training_Schedule.xlsx",
     "industry": "Construction",
     "category": "Schedule Management",
@@ -2461,7 +2461,7 @@
   },
   {
     "id": 956,
-    "name": "Stakeholder Register Analysis",
+    "name": "Construction Stakeholder Register Analysis",
     "filename": "Construction_Stakeholder_Register_Analysis_2025_PMI.xlsx",
     "industry": "Construction",
     "category": "Stakeholder Management",
@@ -2481,7 +2481,7 @@
   },
   {
     "id": 123,
-    "name": "WBS",
+    "name": "Construction WBS",
     "filename": "Construction_WBS.xlsx",
     "industry": "Construction",
     "category": "Work Breakdown",
@@ -2501,7 +2501,7 @@
   },
   {
     "id": 149,
-    "name": "Stakeholder Register Analysis",
+    "name": "Consulting Stakeholder Register Analysis",
     "filename": "Consulting_Stakeholder_Register_Analysis.xlsx",
     "industry": "Consulting",
     "category": "Stakeholder Management",
@@ -2521,7 +2521,7 @@
   },
   {
     "id": 131,
-    "name": "Data Readiness Assessment",
+    "name": "Consulting Data Readiness Assessment",
     "filename": "Consulting_Data_Readiness_Assessment.xlsx",
     "industry": "Consulting",
     "category": "Assessment & Evaluation",
@@ -2541,7 +2541,7 @@
   },
   {
     "id": 152,
-    "name": "Training Needs Assessment",
+    "name": "Consulting Training Needs Assessment",
     "filename": "Consulting_Training_Needs_Assessment.xlsx",
     "industry": "Consulting",
     "category": "Training & Development",
@@ -2561,7 +2561,7 @@
   },
   {
     "id": 130,
-    "name": "Comprehensive Budget",
+    "name": "Consulting Comprehensive Budget",
     "filename": "Consulting_Comprehensive_Budget.xlsx",
     "industry": "Consulting",
     "category": "Financial Management",
@@ -2581,7 +2581,7 @@
   },
   {
     "id": 125,
-    "name": "Business Case",
+    "name": "Consulting Business Case",
     "filename": "Consulting_Business_Case.docx",
     "industry": "Consulting",
     "category": "Business Analysis",
@@ -2601,7 +2601,7 @@
   },
   {
     "id": 137,
-    "name": "Project Charter",
+    "name": "Consulting Project Charter",
     "filename": "Consulting_Project_Charter.docx",
     "industry": "Consulting",
     "category": "Project Planning",
@@ -2621,7 +2621,7 @@
   },
   {
     "id": 133,
-    "name": "KPI Dashboard",
+    "name": "Consulting KPI Dashboard",
     "filename": "Consulting_KPI_Dashboard.xlsx",
     "industry": "Consulting",
     "category": "Performance Management",
@@ -2641,7 +2641,7 @@
   },
   {
     "id": 151,
-    "name": "Training Budget Estimates",
+    "name": "Consulting Training Budget Estimates",
     "filename": "Consulting_Training_Budget_Estimates.xlsx",
     "industry": "Consulting",
     "category": "Financial Management",
@@ -2661,7 +2661,7 @@
   },
   {
     "id": 127,
-    "name": "Change Request Form",
+    "name": "Consulting Change Request Form",
     "filename": "Consulting_Change_Request_Form.xlsx",
     "industry": "Consulting",
     "category": "Change Management",
@@ -2681,7 +2681,7 @@
   },
   {
     "id": 134,
-    "name": "Lessons Learned",
+    "name": "Consulting Lessons Learned",
     "filename": "Consulting_Lessons_Learned.xlsx",
     "industry": "Consulting",
     "category": "Lessons Learned",
@@ -2701,7 +2701,7 @@
   },
   {
     "id": 132,
-    "name": "High Level Requirements List",
+    "name": "Consulting High Level Requirements List",
     "filename": "Consulting_High_Level_Requirements_List.xlsx",
     "industry": "Consulting",
     "category": "Requirements Management",
@@ -2721,7 +2721,7 @@
   },
   {
     "id": 124,
-    "name": "Action ITem Log",
+    "name": "Consulting Action ITem Log",
     "filename": "Consulting_Action_Item_Log.xlsx",
     "industry": "Consulting",
     "category": "Action Items",
@@ -2741,7 +2741,7 @@
   },
   {
     "id": 142,
-    "name": "Raid Log",
+    "name": "Consulting Raid Log",
     "filename": "Consulting_RAID_Log.xlsx",
     "industry": "Consulting",
     "category": "Tracking & Monitoring",
@@ -2761,7 +2761,7 @@
   },
   {
     "id": 143,
-    "name": "Requirements Traceability Matrix",
+    "name": "Consulting Requirements Traceability Matrix",
     "filename": "Consulting_Requirements_Traceability_Matrix.xlsx",
     "industry": "Consulting",
     "category": "Requirements Management",
@@ -2781,7 +2781,7 @@
   },
   {
     "id": 126,
-    "name": "Change Management Plan",
+    "name": "Consulting Change Management Plan",
     "filename": "Consulting_Change_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Change Management",
@@ -2801,7 +2801,7 @@
   },
   {
     "id": 128,
-    "name": "Communication Plan",
+    "name": "Consulting Communication Plan",
     "filename": "Consulting_Communication_Plan.xlsx",
     "industry": "Consulting",
     "category": "Communication",
@@ -2821,7 +2821,7 @@
   },
   {
     "id": 129,
-    "name": "Communications Management Plan",
+    "name": "Consulting Communications Management Plan",
     "filename": "Consulting_Communications_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Communication",
@@ -2841,7 +2841,7 @@
   },
   {
     "id": 135,
-    "name": "Procurement Management Plan",
+    "name": "Consulting Procurement Management Plan",
     "filename": "Consulting_Procurement_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Procurement",
@@ -2861,7 +2861,7 @@
   },
   {
     "id": 136,
-    "name": "Procurement Plan",
+    "name": "Consulting Procurement Plan",
     "filename": "Consulting_Procurement_Plan.xlsx",
     "industry": "Consulting",
     "category": "Procurement",
@@ -2881,7 +2881,7 @@
   },
   {
     "id": 141,
-    "name": "Quality Management Plan",
+    "name": "Consulting Quality Management Plan",
     "filename": "Consulting_Quality_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Quality Management",
@@ -2901,7 +2901,7 @@
   },
   {
     "id": 144,
-    "name": "Resource Management Plan",
+    "name": "Consulting Resource Management Plan",
     "filename": "Consulting_Resource_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Resource Management",
@@ -2921,7 +2921,7 @@
   },
   {
     "id": 145,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Consulting Resource Plan Staffing Plan",
     "filename": "Consulting_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Consulting",
     "category": "Resource Management",
@@ -2941,7 +2941,7 @@
   },
   {
     "id": 146,
-    "name": "Risk Management Plan",
+    "name": "Consulting Risk Management Plan",
     "filename": "Consulting_Risk_Management_Plan.xlsx",
     "industry": "Consulting",
     "category": "Risk Management",
@@ -2961,7 +2961,7 @@
   },
   {
     "id": 147,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Consulting Stakeholder Engagement Plan",
     "filename": "Consulting_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Consulting",
     "category": "Stakeholder Management",
@@ -2981,7 +2981,7 @@
   },
   {
     "id": 139,
-    "name": "Project Kickoff Presentation",
+    "name": "Consulting Project Kickoff Presentation",
     "filename": "Consulting_Project_Kickoff_Presentation.xlsx",
     "industry": "Consulting",
     "category": "Project Initiation",
@@ -3001,7 +3001,7 @@
   },
   {
     "id": 140,
-    "name": "Project Proposal",
+    "name": "Consulting Project Proposal",
     "filename": "Consulting_Project_Proposal.docx",
     "industry": "Consulting",
     "category": "Business Development",
@@ -3021,7 +3021,7 @@
   },
   {
     "id": 148,
-    "name": "Stakeholder Register",
+    "name": "Consulting Stakeholder Register",
     "filename": "Consulting_Stakeholder_Register.xlsx",
     "industry": "Consulting",
     "category": "Stakeholder Management",
@@ -3041,7 +3041,7 @@
   },
   {
     "id": 138,
-    "name": "Project Closure Report",
+    "name": "Consulting Project Closure Report",
     "filename": "Consulting_Project_Closure_Report.xlsx",
     "industry": "Consulting",
     "category": "Project Closure",
@@ -3061,7 +3061,7 @@
   },
   {
     "id": 150,
-    "name": "Status Report",
+    "name": "Consulting Status Report",
     "filename": "Consulting_Status_Report.xlsx",
     "industry": "Consulting",
     "category": "Reporting",
@@ -3081,7 +3081,7 @@
   },
   {
     "id": 153,
-    "name": "Training Schedule",
+    "name": "Consulting Training Schedule",
     "filename": "Consulting_Training_Schedule.xlsx",
     "industry": "Consulting",
     "category": "Schedule Management",
@@ -3101,7 +3101,7 @@
   },
   {
     "id": 154,
-    "name": "WBS",
+    "name": "Consulting WBS",
     "filename": "Consulting_WBS.xlsx",
     "industry": "Consulting",
     "category": "Work Breakdown",
@@ -5641,7 +5641,7 @@
   },
   {
     "id": 279,
-    "name": "Erp Implementation KPI Report Dashboard",
+    "name": "ERP Erp Implementation KPI Report Dashboard",
     "filename": "ERP_Implementation_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Performance Management",
@@ -5661,7 +5661,7 @@
   },
   {
     "id": 280,
-    "name": "Erp Implementation Lessons Learned",
+    "name": "ERP Erp Implementation Lessons Learned",
     "filename": "ERP_Implementation_Lessons_Learned_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Lessons Learned",
@@ -5681,7 +5681,7 @@
   },
   {
     "id": 281,
-    "name": "Erp Implementation Open Action ITem Log",
+    "name": "ERP Erp Implementation Open Action ITem Log",
     "filename": "ERP_Implementation_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "ERP",
     "category": "Action Items",
@@ -5701,7 +5701,7 @@
   },
   {
     "id": 282,
-    "name": "Erp Implementation Project Proposal",
+    "name": "ERP Erp Implementation Project Proposal",
     "filename": "ERP_Implementation_Project_Proposal_2025_PMI.docx",
     "industry": "ERP",
     "category": "Business Development",
@@ -5721,7 +5721,7 @@
   },
   {
     "id": 306,
-    "name": "Erp Implementations Stakeholder Analysis",
+    "name": "ERP Erp Implementations Stakeholder Analysis",
     "filename": "ERP_Implementations_Stakeholder_Analysis.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -5741,7 +5741,7 @@
   },
   {
     "id": 290,
-    "name": "Erp Implementations Data Readiness Assessment",
+    "name": "ERP Erp Implementations Data Readiness Assessment",
     "filename": "ERP_Implementations_Data_Readiness_Assessment.xlsx",
     "industry": "ERP",
     "category": "Assessment & Evaluation",
@@ -5761,7 +5761,7 @@
   },
   {
     "id": 311,
-    "name": "Erp Implementations Training Needs Assessment",
+    "name": "ERP Erp Implementations Training Needs Assessment",
     "filename": "ERP_Implementations_Training_Needs_Assessment.xlsx",
     "industry": "ERP",
     "category": "Training & Development",
@@ -5781,7 +5781,7 @@
   },
   {
     "id": 284,
-    "name": "Erp Implementations Budget",
+    "name": "ERP Erp Implementations Budget",
     "filename": "ERP_Implementations_Budget.xlsx",
     "industry": "ERP",
     "category": "Financial Management",
@@ -5801,7 +5801,7 @@
   },
   {
     "id": 310,
-    "name": "Erp Implementations Training Budget",
+    "name": "ERP Erp Implementations Training Budget",
     "filename": "ERP_Implementations_Training_Budget.xlsx",
     "industry": "ERP",
     "category": "Financial Management",
@@ -5821,7 +5821,7 @@
   },
   {
     "id": 285,
-    "name": "Erp Implementations Business Case",
+    "name": "ERP Erp Implementations Business Case",
     "filename": "ERP_Implementations_Business_Case.docx",
     "industry": "ERP",
     "category": "Business Analysis",
@@ -5841,7 +5841,7 @@
   },
   {
     "id": 295,
-    "name": "Erp Implementations Project Charter",
+    "name": "ERP Erp Implementations Project Charter",
     "filename": "ERP_Implementations_Project_Charter.docx",
     "industry": "ERP",
     "category": "Project Planning",
@@ -5861,7 +5861,7 @@
   },
   {
     "id": 296,
-    "name": "Erp Implementations Project Closure",
+    "name": "ERP Erp Implementations Project Closure",
     "filename": "ERP_Implementations_Project_Closure.xlsx",
     "industry": "ERP",
     "category": "Project Closure",
@@ -5881,7 +5881,7 @@
   },
   {
     "id": 291,
-    "name": "Erp Implementations KPI Dashboard",
+    "name": "ERP Erp Implementations KPI Dashboard",
     "filename": "ERP_Implementations_KPI_Dashboard.xlsx",
     "industry": "ERP",
     "category": "Performance Management",
@@ -5901,7 +5901,7 @@
   },
   {
     "id": 307,
-    "name": "Erp Implementations Stakeholder Engagement",
+    "name": "ERP Erp Implementations Stakeholder Engagement",
     "filename": "ERP_Implementations_Stakeholder_Engagement.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -5921,7 +5921,7 @@
   },
   {
     "id": 283,
-    "name": "Erp Implementations Action ITems",
+    "name": "ERP Erp Implementations Action ITems",
     "filename": "ERP_Implementations_Action_Items.xlsx",
     "industry": "ERP",
     "category": "Action Items",
@@ -5941,7 +5941,7 @@
   },
   {
     "id": 292,
-    "name": "Erp Implementations Lessons Learned",
+    "name": "ERP Erp Implementations Lessons Learned",
     "filename": "ERP_Implementations_Lessons_Learned.xlsx",
     "industry": "ERP",
     "category": "Lessons Learned",
@@ -5961,7 +5961,7 @@
   },
   {
     "id": 301,
-    "name": "Erp Implementations Requirements List",
+    "name": "ERP Erp Implementations Requirements List",
     "filename": "ERP_Implementations_Requirements_List.xlsx",
     "industry": "ERP",
     "category": "Requirements Management",
@@ -5981,7 +5981,7 @@
   },
   {
     "id": 300,
-    "name": "Erp Implementations Raid Log",
+    "name": "ERP Erp Implementations Raid Log",
     "filename": "ERP_Implementations_RAID_Log.xlsx",
     "industry": "ERP",
     "category": "Tracking & Monitoring",
@@ -6001,7 +6001,7 @@
   },
   {
     "id": 286,
-    "name": "Erp Implementations Change Management",
+    "name": "ERP Erp Implementations Change Management",
     "filename": "ERP_Implementations_Change_Management.xlsx",
     "industry": "ERP",
     "category": "Change Management",
@@ -6021,7 +6021,7 @@
   },
   {
     "id": 293,
-    "name": "Erp Implementations Procurement Management",
+    "name": "ERP Erp Implementations Procurement Management",
     "filename": "ERP_Implementations_Procurement_Management.xlsx",
     "industry": "ERP",
     "category": "Procurement",
@@ -6041,7 +6041,7 @@
   },
   {
     "id": 302,
-    "name": "Erp Implementations Requirements Matrix",
+    "name": "ERP Erp Implementations Requirements Matrix",
     "filename": "ERP_Implementations_Requirements_Matrix.xlsx",
     "industry": "ERP",
     "category": "Requirements Management",
@@ -6061,7 +6061,7 @@
   },
   {
     "id": 288,
-    "name": "Erp Implementations Communication Plan",
+    "name": "ERP Erp Implementations Communication Plan",
     "filename": "ERP_Implementations_Communication_Plan.xlsx",
     "industry": "ERP",
     "category": "Communication",
@@ -6081,7 +6081,7 @@
   },
   {
     "id": 289,
-    "name": "Erp Implementations Communications Plan",
+    "name": "ERP Erp Implementations Communications Plan",
     "filename": "ERP_Implementations_Communications_Plan.xlsx",
     "industry": "ERP",
     "category": "Communication",
@@ -6101,7 +6101,7 @@
   },
   {
     "id": 294,
-    "name": "Erp Implementations Procurement Plan",
+    "name": "ERP Erp Implementations Procurement Plan",
     "filename": "ERP_Implementations_Procurement_Plan.xlsx",
     "industry": "ERP",
     "category": "Procurement",
@@ -6121,7 +6121,7 @@
   },
   {
     "id": 299,
-    "name": "Erp Implementations Quality Management Plan",
+    "name": "ERP Erp Implementations Quality Management Plan",
     "filename": "ERP_Implementations_Quality_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Quality Management",
@@ -6141,7 +6141,7 @@
   },
   {
     "id": 303,
-    "name": "Erp Implementations Resource Management Plan",
+    "name": "ERP Erp Implementations Resource Management Plan",
     "filename": "ERP_Implementations_Resource_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Resource Management",
@@ -6161,7 +6161,7 @@
   },
   {
     "id": 304,
-    "name": "Erp Implementations Resource Plan",
+    "name": "ERP Erp Implementations Resource Plan",
     "filename": "ERP_Implementations_Resource_Plan.xlsx",
     "industry": "ERP",
     "category": "Resource Management",
@@ -6181,7 +6181,7 @@
   },
   {
     "id": 305,
-    "name": "Erp Implementations Risk Management Plan",
+    "name": "ERP Erp Implementations Risk Management Plan",
     "filename": "ERP_Implementations_Risk_Management_Plan.xlsx",
     "industry": "ERP",
     "category": "Risk Management",
@@ -6201,7 +6201,7 @@
   },
   {
     "id": 297,
-    "name": "Erp Implementations Project Kickoff Presentation",
+    "name": "ERP Erp Implementations Project Kickoff Presentation",
     "filename": "ERP_Implementations_Project_Kickoff_Presentation.xlsx",
     "industry": "ERP",
     "category": "Project Initiation",
@@ -6221,7 +6221,7 @@
   },
   {
     "id": 298,
-    "name": "Erp Implementations Project Proposal",
+    "name": "ERP Erp Implementations Project Proposal",
     "filename": "ERP_Implementations_Project_Proposal.docx",
     "industry": "ERP",
     "category": "Business Development",
@@ -6241,7 +6241,7 @@
   },
   {
     "id": 308,
-    "name": "Erp Implementations Stakeholder Register",
+    "name": "ERP Erp Implementations Stakeholder Register",
     "filename": "ERP_Implementations_Stakeholder_Register.xlsx",
     "industry": "ERP",
     "category": "Stakeholder Management",
@@ -6261,7 +6261,7 @@
   },
   {
     "id": 309,
-    "name": "Erp Implementations Status Report",
+    "name": "ERP Erp Implementations Status Report",
     "filename": "ERP_Implementations_Status_Report.xlsx",
     "industry": "ERP",
     "category": "Reporting",
@@ -6281,7 +6281,7 @@
   },
   {
     "id": 287,
-    "name": "Erp Implementations Change Request",
+    "name": "ERP Erp Implementations Change Request",
     "filename": "ERP_Implementations_Change_Request.xlsx",
     "industry": "ERP",
     "category": "Change Management",
@@ -6301,7 +6301,7 @@
   },
   {
     "id": 312,
-    "name": "Erp Implementations Training Schedule",
+    "name": "ERP Erp Implementations Training Schedule",
     "filename": "ERP_Implementations_Training_Schedule.xlsx",
     "industry": "ERP",
     "category": "Schedule Management",
@@ -6321,7 +6321,7 @@
   },
   {
     "id": 313,
-    "name": "Erp Implementations WBS",
+    "name": "ERP Erp Implementations WBS",
     "filename": "ERP_Implementations_WBS.xlsx",
     "industry": "ERP",
     "category": "Work Breakdown",
@@ -6341,7 +6341,7 @@
   },
   {
     "id": 340,
-    "name": "Stakeholder Register Analysis",
+    "name": "Education Stakeholder Register Analysis",
     "filename": "Education_Stakeholder_Register_Analysis.xlsx",
     "industry": "Education",
     "category": "Stakeholder Management",
@@ -6361,7 +6361,7 @@
   },
   {
     "id": 322,
-    "name": "Data Readiness Assessment",
+    "name": "Education Data Readiness Assessment",
     "filename": "Education_Data_Readiness_Assessment.xlsx",
     "industry": "Education",
     "category": "Assessment & Evaluation",
@@ -6381,7 +6381,7 @@
   },
   {
     "id": 343,
-    "name": "Training Needs Assessment",
+    "name": "Education Training Needs Assessment",
     "filename": "Education_Training_Needs_Assessment.xlsx",
     "industry": "Education",
     "category": "Training & Development",
@@ -6401,7 +6401,7 @@
   },
   {
     "id": 321,
-    "name": "Comprehensive Budget",
+    "name": "Education Comprehensive Budget",
     "filename": "Education_Comprehensive_Budget.xlsx",
     "industry": "Education",
     "category": "Financial Management",
@@ -6421,7 +6421,7 @@
   },
   {
     "id": 316,
-    "name": "Business Case",
+    "name": "Education Business Case",
     "filename": "Education_Business_Case.docx",
     "industry": "Education",
     "category": "Business Analysis",
@@ -6441,7 +6441,7 @@
   },
   {
     "id": 328,
-    "name": "Project Charter",
+    "name": "Education Project Charter",
     "filename": "Education_Project_Charter.docx",
     "industry": "Education",
     "category": "Project Planning",
@@ -6461,7 +6461,7 @@
   },
   {
     "id": 324,
-    "name": "KPI Dashboard",
+    "name": "Education KPI Dashboard",
     "filename": "Education_KPI_Dashboard.xlsx",
     "industry": "Education",
     "category": "Performance Management",
@@ -6481,7 +6481,7 @@
   },
   {
     "id": 342,
-    "name": "Training Budget Estimates",
+    "name": "Education Training Budget Estimates",
     "filename": "Education_Training_Budget_Estimates.xlsx",
     "industry": "Education",
     "category": "Financial Management",
@@ -6501,7 +6501,7 @@
   },
   {
     "id": 318,
-    "name": "Change Request Form",
+    "name": "Education Change Request Form",
     "filename": "Education_Change_Request_Form.xlsx",
     "industry": "Education",
     "category": "Change Management",
@@ -6521,7 +6521,7 @@
   },
   {
     "id": 325,
-    "name": "Lessons Learned",
+    "name": "Education Lessons Learned",
     "filename": "Education_Lessons_Learned.xlsx",
     "industry": "Education",
     "category": "Lessons Learned",
@@ -6541,7 +6541,7 @@
   },
   {
     "id": 323,
-    "name": "High Level Requirements List",
+    "name": "Education High Level Requirements List",
     "filename": "Education_High_Level_Requirements_List.xlsx",
     "industry": "Education",
     "category": "Requirements Management",
@@ -6561,7 +6561,7 @@
   },
   {
     "id": 314,
-    "name": "Action ITem Log",
+    "name": "Education Action ITem Log",
     "filename": "Education_Action_Item_Log.xlsx",
     "industry": "Education",
     "category": "Action Items",
@@ -6581,7 +6581,7 @@
   },
   {
     "id": 333,
-    "name": "Raid Log",
+    "name": "Education Raid Log",
     "filename": "Education_RAID_Log.xlsx",
     "industry": "Education",
     "category": "Tracking & Monitoring",
@@ -6601,7 +6601,7 @@
   },
   {
     "id": 334,
-    "name": "Requirements Traceability Matrix",
+    "name": "Education Requirements Traceability Matrix",
     "filename": "Education_Requirements_Traceability_Matrix.xlsx",
     "industry": "Education",
     "category": "Requirements Management",
@@ -6621,7 +6621,7 @@
   },
   {
     "id": 317,
-    "name": "Change Management Plan",
+    "name": "Education Change Management Plan",
     "filename": "Education_Change_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Change Management",
@@ -6641,7 +6641,7 @@
   },
   {
     "id": 319,
-    "name": "Communication Plan",
+    "name": "Education Communication Plan",
     "filename": "Education_Communication_Plan.xlsx",
     "industry": "Education",
     "category": "Communication",
@@ -6661,7 +6661,7 @@
   },
   {
     "id": 320,
-    "name": "Communications Management Plan",
+    "name": "Education Communications Management Plan",
     "filename": "Education_Communications_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Communication",
@@ -6681,7 +6681,7 @@
   },
   {
     "id": 326,
-    "name": "Procurement Management Plan",
+    "name": "Education Procurement Management Plan",
     "filename": "Education_Procurement_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Procurement",
@@ -6701,7 +6701,7 @@
   },
   {
     "id": 327,
-    "name": "Procurement Plan",
+    "name": "Education Procurement Plan",
     "filename": "Education_Procurement_Plan.xlsx",
     "industry": "Education",
     "category": "Procurement",
@@ -6721,7 +6721,7 @@
   },
   {
     "id": 332,
-    "name": "Quality Management Plan",
+    "name": "Education Quality Management Plan",
     "filename": "Education_Quality_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Quality Management",
@@ -6741,7 +6741,7 @@
   },
   {
     "id": 335,
-    "name": "Resource Management Plan",
+    "name": "Education Resource Management Plan",
     "filename": "Education_Resource_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Resource Management",
@@ -6761,7 +6761,7 @@
   },
   {
     "id": 336,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Education Resource Plan Staffing Plan",
     "filename": "Education_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Education",
     "category": "Resource Management",
@@ -6781,7 +6781,7 @@
   },
   {
     "id": 337,
-    "name": "Risk Management Plan",
+    "name": "Education Risk Management Plan",
     "filename": "Education_Risk_Management_Plan.xlsx",
     "industry": "Education",
     "category": "Risk Management",
@@ -6801,7 +6801,7 @@
   },
   {
     "id": 338,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Education Stakeholder Engagement Plan",
     "filename": "Education_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Education",
     "category": "Stakeholder Management",
@@ -6821,7 +6821,7 @@
   },
   {
     "id": 330,
-    "name": "Project Kickoff Presentation",
+    "name": "Education Project Kickoff Presentation",
     "filename": "Education_Project_Kickoff_Presentation.xlsx",
     "industry": "Education",
     "category": "Project Initiation",
@@ -6841,7 +6841,7 @@
   },
   {
     "id": 331,
-    "name": "Project Proposal",
+    "name": "Education Project Proposal",
     "filename": "Education_Project_Proposal.docx",
     "industry": "Education",
     "category": "Business Development",
@@ -6861,7 +6861,7 @@
   },
   {
     "id": 339,
-    "name": "Stakeholder Register",
+    "name": "Education Stakeholder Register",
     "filename": "Education_Stakeholder_Register.xlsx",
     "industry": "Education",
     "category": "Stakeholder Management",
@@ -6881,7 +6881,7 @@
   },
   {
     "id": 329,
-    "name": "Project Closure Report",
+    "name": "Education Project Closure Report",
     "filename": "Education_Project_Closure_Report.xlsx",
     "industry": "Education",
     "category": "Project Closure",
@@ -6901,7 +6901,7 @@
   },
   {
     "id": 341,
-    "name": "Status Report",
+    "name": "Education Status Report",
     "filename": "Education_Status_Report.xlsx",
     "industry": "Education",
     "category": "Reporting",
@@ -6921,7 +6921,7 @@
   },
   {
     "id": 344,
-    "name": "Training Schedule",
+    "name": "Education Training Schedule",
     "filename": "Education_Training_Schedule.xlsx",
     "industry": "Education",
     "category": "Schedule Management",
@@ -6941,7 +6941,7 @@
   },
   {
     "id": 345,
-    "name": "WBS",
+    "name": "Education WBS",
     "filename": "Education_WBS.xlsx",
     "industry": "Education",
     "category": "Work Breakdown",
@@ -6961,7 +6961,7 @@
   },
   {
     "id": 371,
-    "name": "Stakeholder Register Analysis",
+    "name": "Energy Stakeholder Register Analysis",
     "filename": "Energy_Stakeholder_Register_Analysis.xlsx",
     "industry": "Energy",
     "category": "Stakeholder Management",
@@ -6981,7 +6981,7 @@
   },
   {
     "id": 353,
-    "name": "Data Readiness Assessment",
+    "name": "Energy Data Readiness Assessment",
     "filename": "Energy_Data_Readiness_Assessment.xlsx",
     "industry": "Energy",
     "category": "Assessment & Evaluation",
@@ -7001,7 +7001,7 @@
   },
   {
     "id": 374,
-    "name": "Training Needs Assessment",
+    "name": "Energy Training Needs Assessment",
     "filename": "Energy_Training_Needs_Assessment.xlsx",
     "industry": "Energy",
     "category": "Training & Development",
@@ -7021,7 +7021,7 @@
   },
   {
     "id": 352,
-    "name": "Comprehensive Budget",
+    "name": "Energy Comprehensive Budget",
     "filename": "Energy_Comprehensive_Budget.xlsx",
     "industry": "Energy",
     "category": "Financial Management",
@@ -7041,7 +7041,7 @@
   },
   {
     "id": 347,
-    "name": "Business Case",
+    "name": "Energy Business Case",
     "filename": "Energy_Business_Case.docx",
     "industry": "Energy",
     "category": "Business Analysis",
@@ -7061,7 +7061,7 @@
   },
   {
     "id": 359,
-    "name": "Project Charter",
+    "name": "Energy Project Charter",
     "filename": "Energy_Project_Charter.docx",
     "industry": "Energy",
     "category": "Project Planning",
@@ -7081,7 +7081,7 @@
   },
   {
     "id": 355,
-    "name": "KPI Dashboard",
+    "name": "Energy KPI Dashboard",
     "filename": "Energy_KPI_Dashboard.xlsx",
     "industry": "Energy",
     "category": "Performance Management",
@@ -7101,7 +7101,7 @@
   },
   {
     "id": 373,
-    "name": "Training Budget Estimates",
+    "name": "Energy Training Budget Estimates",
     "filename": "Energy_Training_Budget_Estimates.xlsx",
     "industry": "Energy",
     "category": "Financial Management",
@@ -7121,7 +7121,7 @@
   },
   {
     "id": 349,
-    "name": "Change Request Form",
+    "name": "Energy Change Request Form",
     "filename": "Energy_Change_Request_Form.xlsx",
     "industry": "Energy",
     "category": "Change Management",
@@ -7141,7 +7141,7 @@
   },
   {
     "id": 356,
-    "name": "Lessons Learned",
+    "name": "Energy Lessons Learned",
     "filename": "Energy_Lessons_Learned.xlsx",
     "industry": "Energy",
     "category": "Lessons Learned",
@@ -7161,7 +7161,7 @@
   },
   {
     "id": 354,
-    "name": "High Level Requirements List",
+    "name": "Energy High Level Requirements List",
     "filename": "Energy_High_Level_Requirements_List.xlsx",
     "industry": "Energy",
     "category": "Requirements Management",
@@ -7181,7 +7181,7 @@
   },
   {
     "id": 346,
-    "name": "Action ITem Log",
+    "name": "Energy Action ITem Log",
     "filename": "Energy_Action_Item_Log.xlsx",
     "industry": "Energy",
     "category": "Action Items",
@@ -7201,7 +7201,7 @@
   },
   {
     "id": 364,
-    "name": "Raid Log",
+    "name": "Energy Raid Log",
     "filename": "Energy_RAID_Log.xlsx",
     "industry": "Energy",
     "category": "Tracking & Monitoring",
@@ -7221,7 +7221,7 @@
   },
   {
     "id": 365,
-    "name": "Requirements Traceability Matrix",
+    "name": "Energy Requirements Traceability Matrix",
     "filename": "Energy_Requirements_Traceability_Matrix.xlsx",
     "industry": "Energy",
     "category": "Requirements Management",
@@ -7241,7 +7241,7 @@
   },
   {
     "id": 348,
-    "name": "Change Management Plan",
+    "name": "Energy Change Management Plan",
     "filename": "Energy_Change_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Change Management",
@@ -7261,7 +7261,7 @@
   },
   {
     "id": 350,
-    "name": "Communication Plan",
+    "name": "Energy Communication Plan",
     "filename": "Energy_Communication_Plan.xlsx",
     "industry": "Energy",
     "category": "Communication",
@@ -7281,7 +7281,7 @@
   },
   {
     "id": 351,
-    "name": "Communications Management Plan",
+    "name": "Energy Communications Management Plan",
     "filename": "Energy_Communications_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Communication",
@@ -7301,7 +7301,7 @@
   },
   {
     "id": 357,
-    "name": "Procurement Management Plan",
+    "name": "Energy Procurement Management Plan",
     "filename": "Energy_Procurement_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Procurement",
@@ -7321,7 +7321,7 @@
   },
   {
     "id": 358,
-    "name": "Procurement Plan",
+    "name": "Energy Procurement Plan",
     "filename": "Energy_Procurement_Plan.xlsx",
     "industry": "Energy",
     "category": "Procurement",
@@ -7341,7 +7341,7 @@
   },
   {
     "id": 363,
-    "name": "Quality Management Plan",
+    "name": "Energy Quality Management Plan",
     "filename": "Energy_Quality_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Quality Management",
@@ -7361,7 +7361,7 @@
   },
   {
     "id": 366,
-    "name": "Resource Management Plan",
+    "name": "Energy Resource Management Plan",
     "filename": "Energy_Resource_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Resource Management",
@@ -7381,7 +7381,7 @@
   },
   {
     "id": 367,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Energy Resource Plan Staffing Plan",
     "filename": "Energy_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Energy",
     "category": "Resource Management",
@@ -7401,7 +7401,7 @@
   },
   {
     "id": 368,
-    "name": "Risk Management Plan",
+    "name": "Energy Risk Management Plan",
     "filename": "Energy_Risk_Management_Plan.xlsx",
     "industry": "Energy",
     "category": "Risk Management",
@@ -7421,7 +7421,7 @@
   },
   {
     "id": 369,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Energy Stakeholder Engagement Plan",
     "filename": "Energy_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Energy",
     "category": "Stakeholder Management",
@@ -7441,7 +7441,7 @@
   },
   {
     "id": 361,
-    "name": "Project Kickoff Presentation",
+    "name": "Energy Project Kickoff Presentation",
     "filename": "Energy_Project_Kickoff_Presentation.xlsx",
     "industry": "Energy",
     "category": "Project Initiation",
@@ -7461,7 +7461,7 @@
   },
   {
     "id": 362,
-    "name": "Project Proposal",
+    "name": "Energy Project Proposal",
     "filename": "Energy_Project_Proposal.docx",
     "industry": "Energy",
     "category": "Business Development",
@@ -7481,7 +7481,7 @@
   },
   {
     "id": 370,
-    "name": "Stakeholder Register",
+    "name": "Energy Stakeholder Register",
     "filename": "Energy_Stakeholder_Register.xlsx",
     "industry": "Energy",
     "category": "Stakeholder Management",
@@ -7501,7 +7501,7 @@
   },
   {
     "id": 360,
-    "name": "Project Closure Report",
+    "name": "Energy Project Closure Report",
     "filename": "Energy_Project_Closure_Report.xlsx",
     "industry": "Energy",
     "category": "Project Closure",
@@ -7521,7 +7521,7 @@
   },
   {
     "id": 372,
-    "name": "Status Report",
+    "name": "Energy Status Report",
     "filename": "Energy_Status_Report.xlsx",
     "industry": "Energy",
     "category": "Reporting",
@@ -7541,7 +7541,7 @@
   },
   {
     "id": 375,
-    "name": "Training Schedule",
+    "name": "Energy Training Schedule",
     "filename": "Energy_Training_Schedule.xlsx",
     "industry": "Energy",
     "category": "Schedule Management",
@@ -7561,7 +7561,7 @@
   },
   {
     "id": 160,
-    "name": "WBS",
+    "name": "Energy WBS",
     "filename": "Energy_WBS.xlsx",
     "industry": "Energy",
     "category": "Work Breakdown",
@@ -7581,7 +7581,7 @@
   },
   {
     "id": 401,
-    "name": "Stakeholder Register Analysis",
+    "name": "Finance Stakeholder Register Analysis",
     "filename": "Finance_Stakeholder_Register_Analysis.xlsx",
     "industry": "Finance",
     "category": "Stakeholder Management",
@@ -7601,7 +7601,7 @@
   },
   {
     "id": 383,
-    "name": "Data Readiness Assessment",
+    "name": "Finance Data Readiness Assessment",
     "filename": "Finance_Data_Readiness_Assessment.xlsx",
     "industry": "Finance",
     "category": "Assessment & Evaluation",
@@ -7621,7 +7621,7 @@
   },
   {
     "id": 404,
-    "name": "Training Needs Assessment",
+    "name": "Finance Training Needs Assessment",
     "filename": "Finance_Training_Needs_Assessment.xlsx",
     "industry": "Finance",
     "category": "Training & Development",
@@ -7641,7 +7641,7 @@
   },
   {
     "id": 382,
-    "name": "Comprehensive Budget",
+    "name": "Finance Comprehensive Budget",
     "filename": "Finance_Comprehensive_Budget.xlsx",
     "industry": "Finance",
     "category": "Financial Management",
@@ -7661,7 +7661,7 @@
   },
   {
     "id": 377,
-    "name": "Business Case",
+    "name": "Finance Business Case",
     "filename": "Finance_Business_Case.docx",
     "industry": "Finance",
     "category": "Business Analysis",
@@ -7681,7 +7681,7 @@
   },
   {
     "id": 389,
-    "name": "Project Charter",
+    "name": "Finance Project Charter",
     "filename": "Finance_Project_Charter.docx",
     "industry": "Finance",
     "category": "Project Planning",
@@ -7701,7 +7701,7 @@
   },
   {
     "id": 385,
-    "name": "KPI Dashboard",
+    "name": "Finance KPI Dashboard",
     "filename": "Finance_KPI_Dashboard.xlsx",
     "industry": "Finance",
     "category": "Performance Management",
@@ -7721,7 +7721,7 @@
   },
   {
     "id": 403,
-    "name": "Training Budget Estimates",
+    "name": "Finance Training Budget Estimates",
     "filename": "Finance_Training_Budget_Estimates.xlsx",
     "industry": "Finance",
     "category": "Financial Management",
@@ -7741,7 +7741,7 @@
   },
   {
     "id": 379,
-    "name": "Change Request Form",
+    "name": "Finance Change Request Form",
     "filename": "Finance_Change_Request_Form.xlsx",
     "industry": "Finance",
     "category": "Change Management",
@@ -7761,7 +7761,7 @@
   },
   {
     "id": 386,
-    "name": "Lessons Learned",
+    "name": "Finance Lessons Learned",
     "filename": "Finance_Lessons_Learned.xlsx",
     "industry": "Finance",
     "category": "Lessons Learned",
@@ -7781,7 +7781,7 @@
   },
   {
     "id": 384,
-    "name": "High Level Requirements List",
+    "name": "Finance High Level Requirements List",
     "filename": "Finance_High_Level_Requirements_List.xlsx",
     "industry": "Finance",
     "category": "Requirements Management",
@@ -7801,7 +7801,7 @@
   },
   {
     "id": 376,
-    "name": "Action ITem Log",
+    "name": "Finance Action ITem Log",
     "filename": "Finance_Action_Item_Log.xlsx",
     "industry": "Finance",
     "category": "Action Items",
@@ -7821,7 +7821,7 @@
   },
   {
     "id": 394,
-    "name": "Raid Log",
+    "name": "Finance Raid Log",
     "filename": "Finance_RAID_Log.xlsx",
     "industry": "Finance",
     "category": "Tracking & Monitoring",
@@ -7841,7 +7841,7 @@
   },
   {
     "id": 395,
-    "name": "Requirements Traceability Matrix",
+    "name": "Finance Requirements Traceability Matrix",
     "filename": "Finance_Requirements_Traceability_Matrix.xlsx",
     "industry": "Finance",
     "category": "Requirements Management",
@@ -7861,7 +7861,7 @@
   },
   {
     "id": 378,
-    "name": "Change Management Plan",
+    "name": "Finance Change Management Plan",
     "filename": "Finance_Change_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Change Management",
@@ -7881,7 +7881,7 @@
   },
   {
     "id": 380,
-    "name": "Communication Plan",
+    "name": "Finance Communication Plan",
     "filename": "Finance_Communication_Plan.xlsx",
     "industry": "Finance",
     "category": "Communication",
@@ -7901,7 +7901,7 @@
   },
   {
     "id": 381,
-    "name": "Communications Management Plan",
+    "name": "Finance Communications Management Plan",
     "filename": "Finance_Communications_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Communication",
@@ -7921,7 +7921,7 @@
   },
   {
     "id": 387,
-    "name": "Procurement Management Plan",
+    "name": "Finance Procurement Management Plan",
     "filename": "Finance_Procurement_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Procurement",
@@ -7941,7 +7941,7 @@
   },
   {
     "id": 388,
-    "name": "Procurement Plan",
+    "name": "Finance Procurement Plan",
     "filename": "Finance_Procurement_Plan.xlsx",
     "industry": "Finance",
     "category": "Procurement",
@@ -7961,7 +7961,7 @@
   },
   {
     "id": 393,
-    "name": "Quality Management Plan",
+    "name": "Finance Quality Management Plan",
     "filename": "Finance_Quality_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Quality Management",
@@ -7981,7 +7981,7 @@
   },
   {
     "id": 396,
-    "name": "Resource Management Plan",
+    "name": "Finance Resource Management Plan",
     "filename": "Finance_Resource_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Resource Management",
@@ -8001,7 +8001,7 @@
   },
   {
     "id": 397,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Finance Resource Plan Staffing Plan",
     "filename": "Finance_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Finance",
     "category": "Resource Management",
@@ -8021,7 +8021,7 @@
   },
   {
     "id": 398,
-    "name": "Risk Management Plan",
+    "name": "Finance Risk Management Plan",
     "filename": "Finance_Risk_Management_Plan.xlsx",
     "industry": "Finance",
     "category": "Risk Management",
@@ -8041,7 +8041,7 @@
   },
   {
     "id": 399,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Finance Stakeholder Engagement Plan",
     "filename": "Finance_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Finance",
     "category": "Stakeholder Management",
@@ -8061,7 +8061,7 @@
   },
   {
     "id": 391,
-    "name": "Project Kickoff Presentation",
+    "name": "Finance Project Kickoff Presentation",
     "filename": "Finance_Project_Kickoff_Presentation.xlsx",
     "industry": "Finance",
     "category": "Project Initiation",
@@ -8081,7 +8081,7 @@
   },
   {
     "id": 392,
-    "name": "Project Proposal",
+    "name": "Finance Project Proposal",
     "filename": "Finance_Project_Proposal.docx",
     "industry": "Finance",
     "category": "Business Development",
@@ -8101,7 +8101,7 @@
   },
   {
     "id": 400,
-    "name": "Stakeholder Register",
+    "name": "Finance Stakeholder Register",
     "filename": "Finance_Stakeholder_Register.xlsx",
     "industry": "Finance",
     "category": "Stakeholder Management",
@@ -8121,7 +8121,7 @@
   },
   {
     "id": 390,
-    "name": "Project Closure Report",
+    "name": "Finance Project Closure Report",
     "filename": "Finance_Project_Closure_Report.xlsx",
     "industry": "Finance",
     "category": "Project Closure",
@@ -8141,7 +8141,7 @@
   },
   {
     "id": 402,
-    "name": "Status Report",
+    "name": "Finance Status Report",
     "filename": "Finance_Status_Report.xlsx",
     "industry": "Finance",
     "category": "Reporting",
@@ -8161,7 +8161,7 @@
   },
   {
     "id": 405,
-    "name": "Training Schedule",
+    "name": "Finance Training Schedule",
     "filename": "Finance_Training_Schedule.xlsx",
     "industry": "Finance",
     "category": "Schedule Management",
@@ -8181,7 +8181,7 @@
   },
   {
     "id": 315,
-    "name": "WBS",
+    "name": "Finance WBS",
     "filename": "Finance_WBS.xlsx",
     "industry": "Finance",
     "category": "Work Breakdown",
@@ -8201,7 +8201,7 @@
   },
   {
     "id": 431,
-    "name": "Stakeholder Register Analysis",
+    "name": "Government Stakeholder Register Analysis",
     "filename": "Government_Stakeholder_Register_Analysis.xlsx",
     "industry": "Government",
     "category": "Stakeholder Management",
@@ -8221,7 +8221,7 @@
   },
   {
     "id": 414,
-    "name": "Data Readiness Assessment",
+    "name": "Government Data Readiness Assessment",
     "filename": "Government_Data_Readiness_Assessment.xlsx",
     "industry": "Government",
     "category": "Assessment & Evaluation",
@@ -8241,7 +8241,7 @@
   },
   {
     "id": 434,
-    "name": "Training Needs Assessment",
+    "name": "Government Training Needs Assessment",
     "filename": "Government_Training_Needs_Assessment.xlsx",
     "industry": "Government",
     "category": "Training & Development",
@@ -8261,7 +8261,7 @@
   },
   {
     "id": 413,
-    "name": "Comprehensive Budget",
+    "name": "Government Comprehensive Budget",
     "filename": "Government_Comprehensive_Budget.xlsx",
     "industry": "Government",
     "category": "Financial Management",
@@ -8281,7 +8281,7 @@
   },
   {
     "id": 407,
-    "name": "Business Case",
+    "name": "Government Business Case",
     "filename": "Government_Business_Case.docx",
     "industry": "Government",
     "category": "Business Analysis",
@@ -8301,7 +8301,7 @@
   },
   {
     "id": 420,
-    "name": "Project Charter",
+    "name": "Government Project Charter",
     "filename": "Government_Project_Charter.docx",
     "industry": "Government",
     "category": "Project Planning",
@@ -8321,7 +8321,7 @@
   },
   {
     "id": 416,
-    "name": "KPI Dashboard",
+    "name": "Government KPI Dashboard",
     "filename": "Government_KPI_Dashboard.xlsx",
     "industry": "Government",
     "category": "Performance Management",
@@ -8341,7 +8341,7 @@
   },
   {
     "id": 433,
-    "name": "Training Budget Estimates",
+    "name": "Government Training Budget Estimates",
     "filename": "Government_Training_Budget_Estimates.xlsx",
     "industry": "Government",
     "category": "Financial Management",
@@ -8361,7 +8361,7 @@
   },
   {
     "id": 410,
-    "name": "Change Request Form",
+    "name": "Government Change Request Form",
     "filename": "Government_Change_Request_Form.xlsx",
     "industry": "Government",
     "category": "Change Management",
@@ -8381,7 +8381,7 @@
   },
   {
     "id": 417,
-    "name": "Lessons Learned",
+    "name": "Government Lessons Learned",
     "filename": "Government_Lessons_Learned.xlsx",
     "industry": "Government",
     "category": "Lessons Learned",
@@ -8401,7 +8401,7 @@
   },
   {
     "id": 415,
-    "name": "High Level Requirements List",
+    "name": "Government High Level Requirements List",
     "filename": "Government_High_Level_Requirements_List.xlsx",
     "industry": "Government",
     "category": "Requirements Management",
@@ -8421,7 +8421,7 @@
   },
   {
     "id": 406,
-    "name": "Action ITem Log",
+    "name": "Government Action ITem Log",
     "filename": "Government_Action_Item_Log.xlsx",
     "industry": "Government",
     "category": "Action Items",
@@ -8441,7 +8441,7 @@
   },
   {
     "id": 409,
-    "name": "Raid Log",
+    "name": "Government Raid Log",
     "filename": "Government_RAID_Log.xlsx",
     "industry": "Government",
     "category": "Tracking & Monitoring",
@@ -8461,7 +8461,7 @@
   },
   {
     "id": 425,
-    "name": "Requirements Traceability Matrix",
+    "name": "Government Requirements Traceability Matrix",
     "filename": "Government_Requirements_Traceability_Matrix.xlsx",
     "industry": "Government",
     "category": "Requirements Management",
@@ -8481,7 +8481,7 @@
   },
   {
     "id": 408,
-    "name": "Change Management Plan",
+    "name": "Government Change Management Plan",
     "filename": "Government_Change_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Change Management",
@@ -8501,7 +8501,7 @@
   },
   {
     "id": 411,
-    "name": "Communication Plan",
+    "name": "Government Communication Plan",
     "filename": "Government_Communication_Plan.xlsx",
     "industry": "Government",
     "category": "Communication",
@@ -8521,7 +8521,7 @@
   },
   {
     "id": 412,
-    "name": "Communications Management Plan",
+    "name": "Government Communications Management Plan",
     "filename": "Government_Communications_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Communication",
@@ -8541,7 +8541,7 @@
   },
   {
     "id": 418,
-    "name": "Procurement Management Plan",
+    "name": "Government Procurement Management Plan",
     "filename": "Government_Procurement_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Procurement",
@@ -8561,7 +8561,7 @@
   },
   {
     "id": 419,
-    "name": "Procurement Plan",
+    "name": "Government Procurement Plan",
     "filename": "Government_Procurement_Plan.xlsx",
     "industry": "Government",
     "category": "Procurement",
@@ -8581,7 +8581,7 @@
   },
   {
     "id": 424,
-    "name": "Quality Management Plan",
+    "name": "Government Quality Management Plan",
     "filename": "Government_Quality_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Quality Management",
@@ -8601,7 +8601,7 @@
   },
   {
     "id": 426,
-    "name": "Resource Management Plan",
+    "name": "Government Resource Management Plan",
     "filename": "Government_Resource_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Resource Management",
@@ -8621,7 +8621,7 @@
   },
   {
     "id": 427,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Government Resource Plan Staffing Plan",
     "filename": "Government_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Government",
     "category": "Resource Management",
@@ -8641,7 +8641,7 @@
   },
   {
     "id": 428,
-    "name": "Risk Management Plan",
+    "name": "Government Risk Management Plan",
     "filename": "Government_Risk_Management_Plan.xlsx",
     "industry": "Government",
     "category": "Risk Management",
@@ -8661,7 +8661,7 @@
   },
   {
     "id": 429,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Government Stakeholder Engagement Plan",
     "filename": "Government_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Government",
     "category": "Stakeholder Management",
@@ -8681,7 +8681,7 @@
   },
   {
     "id": 422,
-    "name": "Project Kickoff Presentation",
+    "name": "Government Project Kickoff Presentation",
     "filename": "Government_Project_Kickoff_Presentation.xlsx",
     "industry": "Government",
     "category": "Project Initiation",
@@ -8701,7 +8701,7 @@
   },
   {
     "id": 423,
-    "name": "Project Proposal",
+    "name": "Government Project Proposal",
     "filename": "Government_Project_Proposal.docx",
     "industry": "Government",
     "category": "Business Development",
@@ -8721,7 +8721,7 @@
   },
   {
     "id": 430,
-    "name": "Stakeholder Register",
+    "name": "Government Stakeholder Register",
     "filename": "Government_Stakeholder_Register.xlsx",
     "industry": "Government",
     "category": "Stakeholder Management",
@@ -8741,7 +8741,7 @@
   },
   {
     "id": 421,
-    "name": "Project Closure Report",
+    "name": "Government Project Closure Report",
     "filename": "Government_Project_Closure_Report.xlsx",
     "industry": "Government",
     "category": "Project Closure",
@@ -8761,7 +8761,7 @@
   },
   {
     "id": 432,
-    "name": "Status Report",
+    "name": "Government Status Report",
     "filename": "Government_Status_Report.xlsx",
     "industry": "Government",
     "category": "Reporting",
@@ -8781,7 +8781,7 @@
   },
   {
     "id": 435,
-    "name": "Training Schedule",
+    "name": "Government Training Schedule",
     "filename": "Government_Training_Schedule.xlsx",
     "industry": "Government",
     "category": "Schedule Management",
@@ -8801,7 +8801,7 @@
   },
   {
     "id": 436,
-    "name": "WBS",
+    "name": "Government WBS",
     "filename": "Government_WBS.xlsx",
     "industry": "Government",
     "category": "Work Breakdown",
@@ -9481,7 +9481,7 @@
   },
   {
     "id": 495,
-    "name": "Stakeholder Register Analysis",
+    "name": "Healthcare Stakeholder Register Analysis",
     "filename": "Healthcare_Stakeholder_Register_Analysis.xlsx",
     "industry": "Healthcare",
     "category": "Stakeholder Management",
@@ -9501,7 +9501,7 @@
   },
   {
     "id": 477,
-    "name": "Data Readiness Assessment",
+    "name": "Healthcare Data Readiness Assessment",
     "filename": "Healthcare_Data_Readiness_Assessment.xlsx",
     "industry": "Healthcare",
     "category": "Assessment & Evaluation",
@@ -9521,7 +9521,7 @@
   },
   {
     "id": 498,
-    "name": "Training Needs Assessment",
+    "name": "Healthcare Training Needs Assessment",
     "filename": "Healthcare_Training_Needs_Assessment.xlsx",
     "industry": "Healthcare",
     "category": "Training & Development",
@@ -9541,7 +9541,7 @@
   },
   {
     "id": 476,
-    "name": "Comprehensive Budget",
+    "name": "Healthcare Comprehensive Budget",
     "filename": "Healthcare_Comprehensive_Budget.xlsx",
     "industry": "Healthcare",
     "category": "Financial Management",
@@ -9561,7 +9561,7 @@
   },
   {
     "id": 471,
-    "name": "Business Case",
+    "name": "Healthcare Business Case",
     "filename": "Healthcare_Business_Case.docx",
     "industry": "Healthcare",
     "category": "Business Analysis",
@@ -9581,7 +9581,7 @@
   },
   {
     "id": 483,
-    "name": "Project Charter",
+    "name": "Healthcare Project Charter",
     "filename": "Healthcare_Project_Charter.docx",
     "industry": "Healthcare",
     "category": "Project Planning",
@@ -9601,7 +9601,7 @@
   },
   {
     "id": 479,
-    "name": "KPI Dashboard",
+    "name": "Healthcare KPI Dashboard",
     "filename": "Healthcare_KPI_Dashboard.xlsx",
     "industry": "Healthcare",
     "category": "Performance Management",
@@ -9621,7 +9621,7 @@
   },
   {
     "id": 497,
-    "name": "Training Budget Estimates",
+    "name": "Healthcare Training Budget Estimates",
     "filename": "Healthcare_Training_Budget_Estimates.xlsx",
     "industry": "Healthcare",
     "category": "Financial Management",
@@ -9641,7 +9641,7 @@
   },
   {
     "id": 473,
-    "name": "Change Request Form",
+    "name": "Healthcare Change Request Form",
     "filename": "Healthcare_Change_Request_Form.xlsx",
     "industry": "Healthcare",
     "category": "Change Management",
@@ -9661,7 +9661,7 @@
   },
   {
     "id": 480,
-    "name": "Lessons Learned",
+    "name": "Healthcare Lessons Learned",
     "filename": "Healthcare_Lessons_Learned.xlsx",
     "industry": "Healthcare",
     "category": "Lessons Learned",
@@ -9681,7 +9681,7 @@
   },
   {
     "id": 478,
-    "name": "High Level Requirements List",
+    "name": "Healthcare High Level Requirements List",
     "filename": "Healthcare_High_Level_Requirements_List.xlsx",
     "industry": "Healthcare",
     "category": "Requirements Management",
@@ -9701,7 +9701,7 @@
   },
   {
     "id": 470,
-    "name": "Action ITem Log",
+    "name": "Healthcare Action ITem Log",
     "filename": "Healthcare_Action_Item_Log.xlsx",
     "industry": "Healthcare",
     "category": "Action Items",
@@ -9721,7 +9721,7 @@
   },
   {
     "id": 488,
-    "name": "Raid Log",
+    "name": "Healthcare Raid Log",
     "filename": "Healthcare_RAID_Log.xlsx",
     "industry": "Healthcare",
     "category": "Tracking & Monitoring",
@@ -9741,7 +9741,7 @@
   },
   {
     "id": 489,
-    "name": "Requirements Traceability Matrix",
+    "name": "Healthcare Requirements Traceability Matrix",
     "filename": "Healthcare_Requirements_Traceability_Matrix.xlsx",
     "industry": "Healthcare",
     "category": "Requirements Management",
@@ -9761,7 +9761,7 @@
   },
   {
     "id": 472,
-    "name": "Change Management Plan",
+    "name": "Healthcare Change Management Plan",
     "filename": "Healthcare_Change_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Change Management",
@@ -9781,7 +9781,7 @@
   },
   {
     "id": 474,
-    "name": "Communication Plan",
+    "name": "Healthcare Communication Plan",
     "filename": "Healthcare_Communication_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Communication",
@@ -9801,7 +9801,7 @@
   },
   {
     "id": 475,
-    "name": "Communications Management Plan",
+    "name": "Healthcare Communications Management Plan",
     "filename": "Healthcare_Communications_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Communication",
@@ -9821,7 +9821,7 @@
   },
   {
     "id": 481,
-    "name": "Procurement Management Plan",
+    "name": "Healthcare Procurement Management Plan",
     "filename": "Healthcare_Procurement_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Procurement",
@@ -9841,7 +9841,7 @@
   },
   {
     "id": 482,
-    "name": "Procurement Plan",
+    "name": "Healthcare Procurement Plan",
     "filename": "Healthcare_Procurement_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Procurement",
@@ -9861,7 +9861,7 @@
   },
   {
     "id": 487,
-    "name": "Quality Management Plan",
+    "name": "Healthcare Quality Management Plan",
     "filename": "Healthcare_Quality_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Quality Management",
@@ -9881,7 +9881,7 @@
   },
   {
     "id": 490,
-    "name": "Resource Management Plan",
+    "name": "Healthcare Resource Management Plan",
     "filename": "Healthcare_Resource_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Resource Management",
@@ -9901,7 +9901,7 @@
   },
   {
     "id": 491,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Healthcare Resource Plan Staffing Plan",
     "filename": "Healthcare_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Resource Management",
@@ -9921,7 +9921,7 @@
   },
   {
     "id": 492,
-    "name": "Risk Management Plan",
+    "name": "Healthcare Risk Management Plan",
     "filename": "Healthcare_Risk_Management_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Risk Management",
@@ -9941,7 +9941,7 @@
   },
   {
     "id": 493,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Healthcare Stakeholder Engagement Plan",
     "filename": "Healthcare_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Healthcare",
     "category": "Stakeholder Management",
@@ -9961,7 +9961,7 @@
   },
   {
     "id": 485,
-    "name": "Project Kickoff Presentation",
+    "name": "Healthcare Project Kickoff Presentation",
     "filename": "Healthcare_Project_Kickoff_Presentation.xlsx",
     "industry": "Healthcare",
     "category": "Project Initiation",
@@ -9981,7 +9981,7 @@
   },
   {
     "id": 486,
-    "name": "Project Proposal",
+    "name": "Healthcare Project Proposal",
     "filename": "Healthcare_Project_Proposal.docx",
     "industry": "Healthcare",
     "category": "Business Development",
@@ -10001,7 +10001,7 @@
   },
   {
     "id": 494,
-    "name": "Stakeholder Register",
+    "name": "Healthcare Stakeholder Register",
     "filename": "Healthcare_Stakeholder_Register.xlsx",
     "industry": "Healthcare",
     "category": "Stakeholder Management",
@@ -10021,7 +10021,7 @@
   },
   {
     "id": 484,
-    "name": "Project Closure Report",
+    "name": "Healthcare Project Closure Report",
     "filename": "Healthcare_Project_Closure_Report.xlsx",
     "industry": "Healthcare",
     "category": "Project Closure",
@@ -10041,7 +10041,7 @@
   },
   {
     "id": 496,
-    "name": "Status Report",
+    "name": "Healthcare Status Report",
     "filename": "Healthcare_Status_Report.xlsx",
     "industry": "Healthcare",
     "category": "Reporting",
@@ -10061,7 +10061,7 @@
   },
   {
     "id": 499,
-    "name": "Training Schedule",
+    "name": "Healthcare Training Schedule",
     "filename": "Healthcare_Training_Schedule.xlsx",
     "industry": "Healthcare",
     "category": "Schedule Management",
@@ -10081,7 +10081,7 @@
   },
   {
     "id": 500,
-    "name": "WBS",
+    "name": "Healthcare WBS",
     "filename": "Healthcare_WBS.xlsx",
     "industry": "Healthcare",
     "category": "Work Breakdown",
@@ -10741,7 +10741,7 @@
   },
   {
     "id": 558,
-    "name": "Stakeholder Register Analysis",
+    "name": "Media Stakeholder Register Analysis",
     "filename": "Media_Stakeholder_Register_Analysis.xlsx",
     "industry": "Media",
     "category": "Stakeholder Management",
@@ -10761,7 +10761,7 @@
   },
   {
     "id": 540,
-    "name": "Data Readiness Assessment",
+    "name": "Media Data Readiness Assessment",
     "filename": "Media_Data_Readiness_Assessment.xlsx",
     "industry": "Media",
     "category": "Assessment & Evaluation",
@@ -10781,7 +10781,7 @@
   },
   {
     "id": 561,
-    "name": "Training Needs Assessment",
+    "name": "Media Training Needs Assessment",
     "filename": "Media_Training_Needs_Assessment.xlsx",
     "industry": "Media",
     "category": "Training & Development",
@@ -10801,7 +10801,7 @@
   },
   {
     "id": 539,
-    "name": "Comprehensive Budget",
+    "name": "Media Comprehensive Budget",
     "filename": "Media_Comprehensive_Budget.xlsx",
     "industry": "Media",
     "category": "Financial Management",
@@ -10821,7 +10821,7 @@
   },
   {
     "id": 534,
-    "name": "Business Case",
+    "name": "Media Business Case",
     "filename": "Media_Business_Case.docx",
     "industry": "Media",
     "category": "Business Analysis",
@@ -10841,7 +10841,7 @@
   },
   {
     "id": 546,
-    "name": "Project Charter",
+    "name": "Media Project Charter",
     "filename": "Media_Project_Charter.docx",
     "industry": "Media",
     "category": "Project Planning",
@@ -10861,7 +10861,7 @@
   },
   {
     "id": 542,
-    "name": "KPI Dashboard",
+    "name": "Media KPI Dashboard",
     "filename": "Media_KPI_Dashboard.xlsx",
     "industry": "Media",
     "category": "Performance Management",
@@ -10881,7 +10881,7 @@
   },
   {
     "id": 560,
-    "name": "Training Budget Estimates",
+    "name": "Media Training Budget Estimates",
     "filename": "Media_Training_Budget_Estimates.xlsx",
     "industry": "Media",
     "category": "Financial Management",
@@ -10901,7 +10901,7 @@
   },
   {
     "id": 536,
-    "name": "Change Request Form",
+    "name": "Media Change Request Form",
     "filename": "Media_Change_Request_Form.xlsx",
     "industry": "Media",
     "category": "Change Management",
@@ -10921,7 +10921,7 @@
   },
   {
     "id": 543,
-    "name": "Lessons Learned",
+    "name": "Media Lessons Learned",
     "filename": "Media_Lessons_Learned.xlsx",
     "industry": "Media",
     "category": "Lessons Learned",
@@ -10941,7 +10941,7 @@
   },
   {
     "id": 541,
-    "name": "High Level Requirements List",
+    "name": "Media High Level Requirements List",
     "filename": "Media_High_Level_Requirements_List.xlsx",
     "industry": "Media",
     "category": "Requirements Management",
@@ -10961,7 +10961,7 @@
   },
   {
     "id": 533,
-    "name": "Action ITem Log",
+    "name": "Media Action ITem Log",
     "filename": "Media_Action_Item_Log.xlsx",
     "industry": "Media",
     "category": "Action Items",
@@ -10981,7 +10981,7 @@
   },
   {
     "id": 551,
-    "name": "Raid Log",
+    "name": "Media Raid Log",
     "filename": "Media_RAID_Log.xlsx",
     "industry": "Media",
     "category": "Tracking & Monitoring",
@@ -11001,7 +11001,7 @@
   },
   {
     "id": 552,
-    "name": "Requirements Traceability Matrix",
+    "name": "Media Requirements Traceability Matrix",
     "filename": "Media_Requirements_Traceability_Matrix.xlsx",
     "industry": "Media",
     "category": "Requirements Management",
@@ -11021,7 +11021,7 @@
   },
   {
     "id": 535,
-    "name": "Change Management Plan",
+    "name": "Media Change Management Plan",
     "filename": "Media_Change_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Change Management",
@@ -11041,7 +11041,7 @@
   },
   {
     "id": 537,
-    "name": "Communication Plan",
+    "name": "Media Communication Plan",
     "filename": "Media_Communication_Plan.xlsx",
     "industry": "Media",
     "category": "Communication",
@@ -11061,7 +11061,7 @@
   },
   {
     "id": 538,
-    "name": "Communications Management Plan",
+    "name": "Media Communications Management Plan",
     "filename": "Media_Communications_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Communication",
@@ -11081,7 +11081,7 @@
   },
   {
     "id": 544,
-    "name": "Procurement Management Plan",
+    "name": "Media Procurement Management Plan",
     "filename": "Media_Procurement_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Procurement",
@@ -11101,7 +11101,7 @@
   },
   {
     "id": 545,
-    "name": "Procurement Plan",
+    "name": "Media Procurement Plan",
     "filename": "Media_Procurement_Plan.xlsx",
     "industry": "Media",
     "category": "Procurement",
@@ -11121,7 +11121,7 @@
   },
   {
     "id": 550,
-    "name": "Quality Management Plan",
+    "name": "Media Quality Management Plan",
     "filename": "Media_Quality_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Quality Management",
@@ -11141,7 +11141,7 @@
   },
   {
     "id": 553,
-    "name": "Resource Management Plan",
+    "name": "Media Resource Management Plan",
     "filename": "Media_Resource_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Resource Management",
@@ -11161,7 +11161,7 @@
   },
   {
     "id": 554,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Media Resource Plan Staffing Plan",
     "filename": "Media_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Media",
     "category": "Resource Management",
@@ -11181,7 +11181,7 @@
   },
   {
     "id": 555,
-    "name": "Risk Management Plan",
+    "name": "Media Risk Management Plan",
     "filename": "Media_Risk_Management_Plan.xlsx",
     "industry": "Media",
     "category": "Risk Management",
@@ -11201,7 +11201,7 @@
   },
   {
     "id": 556,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Media Stakeholder Engagement Plan",
     "filename": "Media_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Media",
     "category": "Stakeholder Management",
@@ -11221,7 +11221,7 @@
   },
   {
     "id": 548,
-    "name": "Project Kickoff Presentation",
+    "name": "Media Project Kickoff Presentation",
     "filename": "Media_Project_Kickoff_Presentation.xlsx",
     "industry": "Media",
     "category": "Project Initiation",
@@ -11241,7 +11241,7 @@
   },
   {
     "id": 549,
-    "name": "Project Proposal",
+    "name": "Media Project Proposal",
     "filename": "Media_Project_Proposal.docx",
     "industry": "Media",
     "category": "Business Development",
@@ -11261,7 +11261,7 @@
   },
   {
     "id": 557,
-    "name": "Stakeholder Register",
+    "name": "Media Stakeholder Register",
     "filename": "Media_Stakeholder_Register.xlsx",
     "industry": "Media",
     "category": "Stakeholder Management",
@@ -11281,7 +11281,7 @@
   },
   {
     "id": 547,
-    "name": "Project Closure Report",
+    "name": "Media Project Closure Report",
     "filename": "Media_Project_Closure_Report.xlsx",
     "industry": "Media",
     "category": "Project Closure",
@@ -11301,7 +11301,7 @@
   },
   {
     "id": 559,
-    "name": "Status Report",
+    "name": "Media Status Report",
     "filename": "Media_Status_Report.xlsx",
     "industry": "Media",
     "category": "Reporting",
@@ -11321,7 +11321,7 @@
   },
   {
     "id": 562,
-    "name": "Training Schedule",
+    "name": "Media Training Schedule",
     "filename": "Media_Training_Schedule.xlsx",
     "industry": "Media",
     "category": "Schedule Management",
@@ -11341,7 +11341,7 @@
   },
   {
     "id": 563,
-    "name": "WBS",
+    "name": "Media WBS",
     "filename": "Media_WBS.xlsx",
     "industry": "Media",
     "category": "Work Breakdown",
@@ -15941,7 +15941,7 @@
   },
   {
     "id": 826,
-    "name": "Stakeholder Register Analysis",
+    "name": "Retail Stakeholder Register Analysis",
     "filename": "Retail_Stakeholder_Register_Analysis.xlsx",
     "industry": "Retail",
     "category": "Stakeholder Management",
@@ -15961,7 +15961,7 @@
   },
   {
     "id": 808,
-    "name": "Data Readiness Assessment",
+    "name": "Retail Data Readiness Assessment",
     "filename": "Retail_Data_Readiness_Assessment.xlsx",
     "industry": "Retail",
     "category": "Assessment & Evaluation",
@@ -15981,7 +15981,7 @@
   },
   {
     "id": 829,
-    "name": "Training Needs Assessment",
+    "name": "Retail Training Needs Assessment",
     "filename": "Retail_Training_Needs_Assessment.xlsx",
     "industry": "Retail",
     "category": "Training & Development",
@@ -16001,7 +16001,7 @@
   },
   {
     "id": 807,
-    "name": "Comprehensive Budget",
+    "name": "Retail Comprehensive Budget",
     "filename": "Retail_Comprehensive_Budget.xlsx",
     "industry": "Retail",
     "category": "Financial Management",
@@ -16021,7 +16021,7 @@
   },
   {
     "id": 802,
-    "name": "Business Case",
+    "name": "Retail Business Case",
     "filename": "Retail_Business_Case.docx",
     "industry": "Retail",
     "category": "Business Analysis",
@@ -16041,7 +16041,7 @@
   },
   {
     "id": 814,
-    "name": "Project Charter",
+    "name": "Retail Project Charter",
     "filename": "Retail_Project_Charter.docx",
     "industry": "Retail",
     "category": "Project Planning",
@@ -16061,7 +16061,7 @@
   },
   {
     "id": 810,
-    "name": "KPI Dashboard",
+    "name": "Retail KPI Dashboard",
     "filename": "Retail_KPI_Dashboard.xlsx",
     "industry": "Retail",
     "category": "Performance Management",
@@ -16081,7 +16081,7 @@
   },
   {
     "id": 828,
-    "name": "Training Budget Estimates",
+    "name": "Retail Training Budget Estimates",
     "filename": "Retail_Training_Budget_Estimates.xlsx",
     "industry": "Retail",
     "category": "Financial Management",
@@ -16101,7 +16101,7 @@
   },
   {
     "id": 804,
-    "name": "Change Request Form",
+    "name": "Retail Change Request Form",
     "filename": "Retail_Change_Request_Form.xlsx",
     "industry": "Retail",
     "category": "Change Management",
@@ -16121,7 +16121,7 @@
   },
   {
     "id": 811,
-    "name": "Lessons Learned",
+    "name": "Retail Lessons Learned",
     "filename": "Retail_Lessons_Learned.xlsx",
     "industry": "Retail",
     "category": "Lessons Learned",
@@ -16141,7 +16141,7 @@
   },
   {
     "id": 809,
-    "name": "High Level Requirements List",
+    "name": "Retail High Level Requirements List",
     "filename": "Retail_High_Level_Requirements_List.xlsx",
     "industry": "Retail",
     "category": "Requirements Management",
@@ -16161,7 +16161,7 @@
   },
   {
     "id": 801,
-    "name": "Action ITem Log",
+    "name": "Retail Action ITem Log",
     "filename": "Retail_Action_Item_Log.xlsx",
     "industry": "Retail",
     "category": "Action Items",
@@ -16181,7 +16181,7 @@
   },
   {
     "id": 819,
-    "name": "Raid Log",
+    "name": "Retail Raid Log",
     "filename": "Retail_RAID_Log.xlsx",
     "industry": "Retail",
     "category": "Tracking & Monitoring",
@@ -16201,7 +16201,7 @@
   },
   {
     "id": 820,
-    "name": "Requirements Traceability Matrix",
+    "name": "Retail Requirements Traceability Matrix",
     "filename": "Retail_Requirements_Traceability_Matrix.xlsx",
     "industry": "Retail",
     "category": "Requirements Management",
@@ -16221,7 +16221,7 @@
   },
   {
     "id": 803,
-    "name": "Change Management Plan",
+    "name": "Retail Change Management Plan",
     "filename": "Retail_Change_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Change Management",
@@ -16241,7 +16241,7 @@
   },
   {
     "id": 805,
-    "name": "Communication Plan",
+    "name": "Retail Communication Plan",
     "filename": "Retail_Communication_Plan.xlsx",
     "industry": "Retail",
     "category": "Communication",
@@ -16261,7 +16261,7 @@
   },
   {
     "id": 806,
-    "name": "Communications Management Plan",
+    "name": "Retail Communications Management Plan",
     "filename": "Retail_Communications_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Communication",
@@ -16281,7 +16281,7 @@
   },
   {
     "id": 812,
-    "name": "Procurement Management Plan",
+    "name": "Retail Procurement Management Plan",
     "filename": "Retail_Procurement_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Procurement",
@@ -16301,7 +16301,7 @@
   },
   {
     "id": 813,
-    "name": "Procurement Plan",
+    "name": "Retail Procurement Plan",
     "filename": "Retail_Procurement_Plan.xlsx",
     "industry": "Retail",
     "category": "Procurement",
@@ -16321,7 +16321,7 @@
   },
   {
     "id": 818,
-    "name": "Quality Management Plan",
+    "name": "Retail Quality Management Plan",
     "filename": "Retail_Quality_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Quality Management",
@@ -16341,7 +16341,7 @@
   },
   {
     "id": 821,
-    "name": "Resource Management Plan",
+    "name": "Retail Resource Management Plan",
     "filename": "Retail_Resource_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Resource Management",
@@ -16361,7 +16361,7 @@
   },
   {
     "id": 822,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Retail Resource Plan Staffing Plan",
     "filename": "Retail_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Retail",
     "category": "Resource Management",
@@ -16381,7 +16381,7 @@
   },
   {
     "id": 823,
-    "name": "Risk Management Plan",
+    "name": "Retail Risk Management Plan",
     "filename": "Retail_Risk_Management_Plan.xlsx",
     "industry": "Retail",
     "category": "Risk Management",
@@ -16401,7 +16401,7 @@
   },
   {
     "id": 824,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Retail Stakeholder Engagement Plan",
     "filename": "Retail_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Retail",
     "category": "Stakeholder Management",
@@ -16421,7 +16421,7 @@
   },
   {
     "id": 816,
-    "name": "Project Kickoff Presentation",
+    "name": "Retail Project Kickoff Presentation",
     "filename": "Retail_Project_Kickoff_Presentation.xlsx",
     "industry": "Retail",
     "category": "Project Initiation",
@@ -16441,7 +16441,7 @@
   },
   {
     "id": 817,
-    "name": "Project Proposal",
+    "name": "Retail Project Proposal",
     "filename": "Retail_Project_Proposal.docx",
     "industry": "Retail",
     "category": "Business Development",
@@ -16461,7 +16461,7 @@
   },
   {
     "id": 825,
-    "name": "Stakeholder Register",
+    "name": "Retail Stakeholder Register",
     "filename": "Retail_Stakeholder_Register.xlsx",
     "industry": "Retail",
     "category": "Stakeholder Management",
@@ -16481,7 +16481,7 @@
   },
   {
     "id": 815,
-    "name": "Project Closure Report",
+    "name": "Retail Project Closure Report",
     "filename": "Retail_Project_Closure_Report.xlsx",
     "industry": "Retail",
     "category": "Project Closure",
@@ -16501,7 +16501,7 @@
   },
   {
     "id": 827,
-    "name": "Status Report",
+    "name": "Retail Status Report",
     "filename": "Retail_Status_Report.xlsx",
     "industry": "Retail",
     "category": "Reporting",
@@ -16521,7 +16521,7 @@
   },
   {
     "id": 830,
-    "name": "Training Schedule",
+    "name": "Retail Training Schedule",
     "filename": "Retail_Training_Schedule.xlsx",
     "industry": "Retail",
     "category": "Schedule Management",
@@ -16541,7 +16541,7 @@
   },
   {
     "id": 831,
-    "name": "WBS",
+    "name": "Retail WBS",
     "filename": "Retail_WBS.xlsx",
     "industry": "Retail",
     "category": "Work Breakdown",
@@ -17821,7 +17821,7 @@
   },
   {
     "id": 904,
-    "name": "KPI Report Dashboard",
+    "name": "Telecommunications KPI Report Dashboard",
     "filename": "Telecommunications_KPI_Report_Dashboard_2025_PMI.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17841,7 +17841,7 @@
   },
   {
     "id": 905,
-    "name": "Lessons Learned",
+    "name": "Telecommunications Lessons Learned",
     "filename": "Telecommunications_Lessons_Learned_2025_PMI.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17861,7 +17861,7 @@
   },
   {
     "id": 906,
-    "name": "Open Action ITem Log",
+    "name": "Telecommunications Open Action ITem Log",
     "filename": "Telecommunications_Open_Action_Item_Log_2025_PMI.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17881,7 +17881,7 @@
   },
   {
     "id": 912,
-    "name": "Project Proposal",
+    "name": "Telecommunications Project Proposal",
     "filename": "Telecommunications_Project_Proposal_2025_PMI.docx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17901,7 +17901,7 @@
   },
   {
     "id": 920,
-    "name": "Stakeholder Analysis",
+    "name": "Telecommunications Stakeholder Analysis",
     "filename": "Telecommunications_Stakeholder_Analysis.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17921,7 +17921,7 @@
   },
   {
     "id": 902,
-    "name": "Data Readiness Assessment",
+    "name": "Telecommunications Data Readiness Assessment",
     "filename": "Telecommunications_Data_Readiness_Assessment.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17941,7 +17941,7 @@
   },
   {
     "id": 925,
-    "name": "Training Needs Assessment",
+    "name": "Telecommunications Training Needs Assessment",
     "filename": "Telecommunications_Training_Needs_Assessment.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -17961,7 +17961,7 @@
   },
   {
     "id": 896,
-    "name": "Budget",
+    "name": "Telecommunications Budget",
     "filename": "Telecommunications_Budget.xlsx",
     "industry": "Telecommunications",
     "category": "Financial Management",
@@ -17981,7 +17981,7 @@
   },
   {
     "id": 924,
-    "name": "Training Budget",
+    "name": "Telecommunications Training Budget",
     "filename": "Telecommunications_Training_Budget.xlsx",
     "industry": "Telecommunications",
     "category": "Financial Management",
@@ -18001,7 +18001,7 @@
   },
   {
     "id": 897,
-    "name": "Business Case",
+    "name": "Telecommunications Business Case",
     "filename": "Telecommunications_Business_Case.docx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18021,7 +18021,7 @@
   },
   {
     "id": 909,
-    "name": "Project Charter",
+    "name": "Telecommunications Project Charter",
     "filename": "Telecommunications_Project_Charter.docx",
     "industry": "Telecommunications",
     "category": "Project Planning",
@@ -18041,7 +18041,7 @@
   },
   {
     "id": 910,
-    "name": "Project Closure",
+    "name": "Telecommunications Project Closure",
     "filename": "Telecommunications_Project_Closure.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18061,7 +18061,7 @@
   },
   {
     "id": 903,
-    "name": "KPI Dashboard",
+    "name": "Telecommunications KPI Dashboard",
     "filename": "Telecommunications_KPI_Dashboard.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18081,7 +18081,7 @@
   },
   {
     "id": 921,
-    "name": "Stakeholder Engagement",
+    "name": "Telecommunications Stakeholder Engagement",
     "filename": "Telecommunications_Stakeholder_Engagement.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18101,7 +18101,7 @@
   },
   {
     "id": 895,
-    "name": "Action ITems",
+    "name": "Telecommunications Action ITems",
     "filename": "Telecommunications_Action_Items.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18121,7 +18121,7 @@
   },
   {
     "id": 915,
-    "name": "Requirements List",
+    "name": "Telecommunications Requirements List",
     "filename": "Telecommunications_Requirements_List.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18141,7 +18141,7 @@
   },
   {
     "id": 914,
-    "name": "Raid Log",
+    "name": "Telecommunications Raid Log",
     "filename": "Telecommunications_RAID_Log.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18161,7 +18161,7 @@
   },
   {
     "id": 898,
-    "name": "Change Management",
+    "name": "Telecommunications Change Management",
     "filename": "Telecommunications_Change_Management.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18181,7 +18181,7 @@
   },
   {
     "id": 907,
-    "name": "Procurement Management",
+    "name": "Telecommunications Procurement Management",
     "filename": "Telecommunications_Procurement_Management.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18201,7 +18201,7 @@
   },
   {
     "id": 916,
-    "name": "Requirements Matrix",
+    "name": "Telecommunications Requirements Matrix",
     "filename": "Telecommunications_Requirements_Matrix.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18221,7 +18221,7 @@
   },
   {
     "id": 900,
-    "name": "Communication Plan",
+    "name": "Telecommunications Communication Plan",
     "filename": "Telecommunications_Communication_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18241,7 +18241,7 @@
   },
   {
     "id": 901,
-    "name": "Communications Plan",
+    "name": "Telecommunications Communications Plan",
     "filename": "Telecommunications_Communications_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18261,7 +18261,7 @@
   },
   {
     "id": 908,
-    "name": "Procurement Plan",
+    "name": "Telecommunications Procurement Plan",
     "filename": "Telecommunications_Procurement_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18281,7 +18281,7 @@
   },
   {
     "id": 913,
-    "name": "Quality Management Plan",
+    "name": "Telecommunications Quality Management Plan",
     "filename": "Telecommunications_Quality_Management_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18301,7 +18301,7 @@
   },
   {
     "id": 917,
-    "name": "Resource Management Plan",
+    "name": "Telecommunications Resource Management Plan",
     "filename": "Telecommunications_Resource_Management_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18321,7 +18321,7 @@
   },
   {
     "id": 918,
-    "name": "Resource Plan",
+    "name": "Telecommunications Resource Plan",
     "filename": "Telecommunications_Resource_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18341,7 +18341,7 @@
   },
   {
     "id": 919,
-    "name": "Risk Management Plan",
+    "name": "Telecommunications Risk Management Plan",
     "filename": "Telecommunications_Risk_Management_Plan.xlsx",
     "industry": "Telecommunications",
     "category": "Risk Management",
@@ -18361,7 +18361,7 @@
   },
   {
     "id": 911,
-    "name": "Project Kickoff Presentation",
+    "name": "Telecommunications Project Kickoff Presentation",
     "filename": "Telecommunications_Project_Kickoff_Presentation.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18381,7 +18381,7 @@
   },
   {
     "id": 922,
-    "name": "Stakeholder Register",
+    "name": "Telecommunications Stakeholder Register",
     "filename": "Telecommunications_Stakeholder_Register.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18401,7 +18401,7 @@
   },
   {
     "id": 923,
-    "name": "Status Report",
+    "name": "Telecommunications Status Report",
     "filename": "Telecommunications_Status_Report.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18421,7 +18421,7 @@
   },
   {
     "id": 899,
-    "name": "Change Request",
+    "name": "Telecommunications Change Request",
     "filename": "Telecommunications_Change_Request.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18441,7 +18441,7 @@
   },
   {
     "id": 926,
-    "name": "Training Schedule",
+    "name": "Telecommunications Training Schedule",
     "filename": "Telecommunications_Training_Schedule.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18461,7 +18461,7 @@
   },
   {
     "id": 927,
-    "name": "WBS",
+    "name": "Telecommunications WBS",
     "filename": "Telecommunications_WBS.xlsx",
     "industry": "Telecommunications",
     "category": "Communication",
@@ -18481,7 +18481,7 @@
   },
   {
     "id": 953,
-    "name": "Stakeholder Register Analysis",
+    "name": "Transportation Stakeholder Register Analysis",
     "filename": "Transportation_Stakeholder_Register_Analysis.xlsx",
     "industry": "Transportation",
     "category": "Stakeholder Management",
@@ -18501,7 +18501,7 @@
   },
   {
     "id": 936,
-    "name": "Data Readiness Assessment",
+    "name": "Transportation Data Readiness Assessment",
     "filename": "Transportation_Data_Readiness_Assessment.xlsx",
     "industry": "Transportation",
     "category": "Assessment & Evaluation",
@@ -18521,7 +18521,7 @@
   },
   {
     "id": 956,
-    "name": "Training Needs Assessment",
+    "name": "Transportation Training Needs Assessment",
     "filename": "Transportation_Training_Needs_Assessment.xlsx",
     "industry": "Transportation",
     "category": "Training & Development",
@@ -18541,7 +18541,7 @@
   },
   {
     "id": 935,
-    "name": "Comprehensive Budget",
+    "name": "Transportation Comprehensive Budget",
     "filename": "Transportation_Comprehensive_Budget.xlsx",
     "industry": "Transportation",
     "category": "Financial Management",
@@ -18561,7 +18561,7 @@
   },
   {
     "id": 929,
-    "name": "Business Case",
+    "name": "Transportation Business Case",
     "filename": "Transportation_Business_Case.docx",
     "industry": "Transportation",
     "category": "Business Analysis",
@@ -18581,7 +18581,7 @@
   },
   {
     "id": 941,
-    "name": "Project Charter",
+    "name": "Transportation Project Charter",
     "filename": "Transportation_Project_Charter.docx",
     "industry": "Transportation",
     "category": "Project Planning",
@@ -18601,7 +18601,7 @@
   },
   {
     "id": 934,
-    "name": "KPI Dashboard",
+    "name": "Transportation KPI Dashboard",
     "filename": "Transportation_KPI_Dashboard.xlsx",
     "industry": "Transportation",
     "category": "Performance Management",
@@ -18621,7 +18621,7 @@
   },
   {
     "id": 955,
-    "name": "Training Budget Estimates",
+    "name": "Transportation Training Budget Estimates",
     "filename": "Transportation_Training_Budget_Estimates.xlsx",
     "industry": "Transportation",
     "category": "Financial Management",
@@ -18641,7 +18641,7 @@
   },
   {
     "id": 931,
-    "name": "Change Request Form",
+    "name": "Transportation Change Request Form",
     "filename": "Transportation_Change_Request_Form.xlsx",
     "industry": "Transportation",
     "category": "Change Management",
@@ -18661,7 +18661,7 @@
   },
   {
     "id": 938,
-    "name": "Lessons Learned",
+    "name": "Transportation Lessons Learned",
     "filename": "Transportation_Lessons_Learned.xlsx",
     "industry": "Transportation",
     "category": "Lessons Learned",
@@ -18681,7 +18681,7 @@
   },
   {
     "id": 937,
-    "name": "High Level Requirements List",
+    "name": "Transportation High Level Requirements List",
     "filename": "Transportation_High_Level_Requirements_List.xlsx",
     "industry": "Transportation",
     "category": "Requirements Management",
@@ -18701,7 +18701,7 @@
   },
   {
     "id": 928,
-    "name": "Action ITem Log",
+    "name": "Transportation Action ITem Log",
     "filename": "Transportation_Action_Item_Log.xlsx",
     "industry": "Transportation",
     "category": "Action Items",
@@ -18721,7 +18721,7 @@
   },
   {
     "id": 946,
-    "name": "Raid Log",
+    "name": "Transportation Raid Log",
     "filename": "Transportation_RAID_Log.xlsx",
     "industry": "Transportation",
     "category": "Tracking & Monitoring",
@@ -18741,7 +18741,7 @@
   },
   {
     "id": 947,
-    "name": "Requirements Traceability Matrix",
+    "name": "Transportation Requirements Traceability Matrix",
     "filename": "Transportation_Requirements_Traceability_Matrix.xlsx",
     "industry": "Transportation",
     "category": "Requirements Management",
@@ -18761,7 +18761,7 @@
   },
   {
     "id": 930,
-    "name": "Change Management Plan",
+    "name": "Transportation Change Management Plan",
     "filename": "Transportation_Change_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Change Management",
@@ -18781,7 +18781,7 @@
   },
   {
     "id": 932,
-    "name": "Communication Plan",
+    "name": "Transportation Communication Plan",
     "filename": "Transportation_Communication_Plan.xlsx",
     "industry": "Transportation",
     "category": "Communication",
@@ -18801,7 +18801,7 @@
   },
   {
     "id": 933,
-    "name": "Communications Management Plan",
+    "name": "Transportation Communications Management Plan",
     "filename": "Transportation_Communications_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Communication",
@@ -18821,7 +18821,7 @@
   },
   {
     "id": 939,
-    "name": "Procurement Management Plan",
+    "name": "Transportation Procurement Management Plan",
     "filename": "Transportation_Procurement_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Procurement",
@@ -18841,7 +18841,7 @@
   },
   {
     "id": 940,
-    "name": "Procurement Plan",
+    "name": "Transportation Procurement Plan",
     "filename": "Transportation_Procurement_Plan.xlsx",
     "industry": "Transportation",
     "category": "Procurement",
@@ -18861,7 +18861,7 @@
   },
   {
     "id": 945,
-    "name": "Quality Management Plan",
+    "name": "Transportation Quality Management Plan",
     "filename": "Transportation_Quality_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Quality Management",
@@ -18881,7 +18881,7 @@
   },
   {
     "id": 948,
-    "name": "Resource Management Plan",
+    "name": "Transportation Resource Management Plan",
     "filename": "Transportation_Resource_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Resource Management",
@@ -18901,7 +18901,7 @@
   },
   {
     "id": 949,
-    "name": "Resource Plan Staffing Plan",
+    "name": "Transportation Resource Plan Staffing Plan",
     "filename": "Transportation_Resource_Plan_Staffing_Plan.xlsx",
     "industry": "Transportation",
     "category": "Resource Management",
@@ -18921,7 +18921,7 @@
   },
   {
     "id": 950,
-    "name": "Risk Management Plan",
+    "name": "Transportation Risk Management Plan",
     "filename": "Transportation_Risk_Management_Plan.xlsx",
     "industry": "Transportation",
     "category": "Risk Management",
@@ -18941,7 +18941,7 @@
   },
   {
     "id": 951,
-    "name": "Stakeholder Engagement Plan",
+    "name": "Transportation Stakeholder Engagement Plan",
     "filename": "Transportation_Stakeholder_Engagement_Plan.xlsx",
     "industry": "Transportation",
     "category": "Stakeholder Management",
@@ -18961,7 +18961,7 @@
   },
   {
     "id": 943,
-    "name": "Project Kickoff Presentation",
+    "name": "Transportation Project Kickoff Presentation",
     "filename": "Transportation_Project_Kickoff_Presentation.xlsx",
     "industry": "Transportation",
     "category": "Project Initiation",
@@ -18981,7 +18981,7 @@
   },
   {
     "id": 944,
-    "name": "Project Proposal",
+    "name": "Transportation Project Proposal",
     "filename": "Transportation_Project_Proposal.docx",
     "industry": "Transportation",
     "category": "Business Development",
@@ -19001,7 +19001,7 @@
   },
   {
     "id": 952,
-    "name": "Stakeholder Register",
+    "name": "Transportation Stakeholder Register",
     "filename": "Transportation_Stakeholder_Register.xlsx",
     "industry": "Transportation",
     "category": "Stakeholder Management",
@@ -19021,7 +19021,7 @@
   },
   {
     "id": 942,
-    "name": "Project Closure Report",
+    "name": "Transportation Project Closure Report",
     "filename": "Transportation_Project_Closure_Report.xlsx",
     "industry": "Transportation",
     "category": "Project Closure",
@@ -19041,7 +19041,7 @@
   },
   {
     "id": 954,
-    "name": "Status Report",
+    "name": "Transportation Status Report",
     "filename": "Transportation_Status_Report.xlsx",
     "industry": "Transportation",
     "category": "Reporting",
@@ -19061,7 +19061,7 @@
   },
   {
     "id": 957,
-    "name": "Training Schedule",
+    "name": "Transportation Training Schedule",
     "filename": "Transportation_Training_Schedule.xlsx",
     "industry": "Transportation",
     "category": "Schedule Management",
@@ -19081,7 +19081,7 @@
   },
   {
     "id": 958,
-    "name": "WBS",
+    "name": "Transportation WBS",
     "filename": "Transportation_WBS.xlsx",
     "industry": "Transportation",
     "category": "Work Breakdown",
