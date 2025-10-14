@@ -113,7 +113,35 @@
                                     </div>
                                 </div>
 
-                                <!-- Security Notice -->
+                
+                                <!-- Subscription Type -->
+                                <div class="mb-4">
+                                    <h5 class="mb-3">Subscription Type</h5>
+                                    <div class="form-check mb-3 p-3 border rounded">
+                                        <input class="form-check-input" type="radio" name="subscriptionType" id="recurringSubscription" value="recurring" checked>
+                                        <label class="form-check-label w-100" for="recurringSubscription">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <strong>Recurring Monthly Subscription</strong>
+                                                    <br>
+                                                    <small class="text-muted">Auto-renews every month. Cancel anytime.</small>
+                                                </div>
+                                                <span class="badge bg-success">Recommended</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check p-3 border rounded">
+                                        <input class="form-check-input" type="radio" name="subscriptionType" id="oneTimePayment" value="one-time">
+                                        <label class="form-check-label w-100" for="oneTimePayment">
+                                            <div>
+                                                <strong>One-Time Payment</strong>
+                                                <br>
+                                                <small class="text-muted">Pay once for 30 days of access. No auto-renewal.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                <!-- Security Notice -->
                                 <div class="mb-4 p-3 bg-light rounded">
                                     <div class="d-flex align-items-center">
                                         <i class="fas fa-shield-alt text-success me-2"></i>
@@ -127,7 +155,7 @@
                                 <button type="submit" id="submit-button" class="btn btn-primary btn-lg w-100">
                                     <span id="button-text">
                                         <i class="fas fa-lock me-2"></i>
-                                        Subscribe for ${{ "%.2f"|format(plan_info.price / 100) }}/month
+                                        <span id="button-text-content">Subscribe for ${{ "%.2f"|format(plan_info.price / 100) }}/month</span>
                                     </span>
                                     <div id="spinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status">
                                         <span class="visually-hidden">Loading...</span>
@@ -175,6 +203,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     paymentElement.mount('#payment-element');
 
+
+    // Update button text based on subscription type
+    const recurringRadio = document.getElementById('recurringSubscription');
+    const oneTimeRadio = document.getElementById('oneTimePayment');
+    const buttonTextContent = document.getElementById('button-text-content');
+    const price = '{{ "%.2f"|format(plan_info.price / 100) }}';
+
+    function updateButtonText() {
+        if (oneTimeRadio.checked) {
+            buttonTextContent.textContent = `Pay $${price} for 30 days`;
+        } else {
+            buttonTextContent.textContent = `Subscribe for $${price}/month`;
+        }
+    }
+
+    recurringRadio.addEventListener('change', updateButtonText);
+    oneTimeRadio.addEventListener('change', updateButtonText);
+
     // Handle form submission
     const form = document.getElementById('payment-form');
     const submitButton = document.getElementById('submit-button');
@@ -197,7 +243,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    plan: '{{ plan }}'
+                    plan: '{{ plan }}',
+                    subscription_type: document.querySelector('input[name="subscriptionType"]:checked').value
                 })
             });
 
