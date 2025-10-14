@@ -92,7 +92,7 @@ def analyze_document_request():
         )
         
         # Get PMBOK mapping
-        pmbok_mapping = pmbok_knowledge.get_document_knowledge_area(document_name)
+        pmbok_mapping = pmbok_knowledge.get_knowledge_area_for_document(document_name)
         
         return jsonify({
             'success': True,
@@ -236,7 +236,7 @@ def generate_document_content():
         # Get PM intelligence
         doc_info = pm_doc_intelligence.analyze_document_request(document_name)
         method_info = methodology_knowledge.get_methodology(methodology)
-        pmbok_info = pmbok_knowledge.get_document_knowledge_area(document_name)
+        pmbok_info = pmbok_knowledge.get_knowledge_area_for_document(document_name)
         
         # Build comprehensive prompt with PM intelligence
         prompt = _build_generation_prompt(
