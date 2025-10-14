@@ -1,0 +1,23 @@
+# Don't ignore static files - we need them for template downloads
+!static/
+!static/templates/
+!static/css/
+!static/js/
+!static/images/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Ignore environment
+venv/
+env/
+ENV/
+
+# Ignore local development
+.env
+*.log
+

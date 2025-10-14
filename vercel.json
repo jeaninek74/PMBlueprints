@@ -16,6 +16,13 @@
       "dest": "/static/$1"
     },
     {
+      "src": "/templates/(.*\\.(xlsx?|docx?|pptx?|pdf))",
+      "dest": "/public/templates/$1",
+      "headers": {
+        "Content-Disposition": "attachment"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "api/index.py"
     }

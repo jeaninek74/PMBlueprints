@@ -194,17 +194,17 @@ def download(template_id):
         except Exception as monitor_error:
             logger.warning(f"Monitoring tracking failed (non-critical): {monitor_error}")
 
-        # For Vercel serverless, redirect to static file URL
-        # This works better than send_file() in serverless environments
+        # For Vercel serverless, redirect to public file URL
+        # Vercel serves files from /public/ directory as static assets
         user_email = current_user.email if current_user.is_authenticated else 'anonymous'
         logger.info(f"Template downloaded: {template.name} by {user_email}")
         
-        # Construct static file URL
-        from flask import redirect, url_for
-        static_url = f"/static/templates/{template.filename}"
+        # Construct public file URL (Vercel serves /public/ at root)
+        from flask import redirect
+        public_url = f"/templates/{template.filename}"
         
-        # Return redirect to static file with download headers
-        response = redirect(static_url)
+        # Return redirect to public file with download headers
+        response = redirect(public_url)
         response.headers['Content-Disposition'] = f'attachment; filename="{template.filename}"'
         return response
 
