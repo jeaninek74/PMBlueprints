@@ -1,0 +1,86 @@
+<!-- Popular Templates Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Popular Templates</h2>
+            <p class="lead text-muted">Our most downloaded project management templates</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Risk Register -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Risk Management</span>
+                        <h5 class="card-title">Risk Register</h5>
+                        <p class="card-text text-muted">Comprehensive risk tracking and mitigation planning template with built-in formulas and priority matrices</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-file-excel me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Risk+Management" class="btn btn-outline-primary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Plan -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">Project Plan</span>
+                        <h5 class="card-title">Project Plan</h5>
+                        <p class="card-text text-muted">Complete project planning template with Gantt charts, milestones, dependencies, and resource allocation</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-file-excel me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Project+Plan" class="btn btn-outline-primary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KPI Dashboard -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">Performance Tracking</span>
+                        <h5 class="card-title">KPI Dashboard</h5>
+                        <p class="card-text text-muted">Visual KPI tracking dashboard with automated charts, metrics, and performance indicators for project monitoring</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-file-excel me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Performance" class="btn btn-outline-primary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Budget Tracker -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Cost Management</span>
+                        <h5 class="card-title">Budget Tracker</h5>
+                        <p class="card-text text-muted">Detailed budget management template with variance analysis, forecasting, and automated financial calculations</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted">
+                                <i class="fas fa-file-excel me-1"></i>Excel Format
+                            </small>
+                            <a href="{{ url_for('templates.browse') }}?category=Cost+Management" class="btn btn-outline-primary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('templates.browse') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-th me-2"></i>Browse All Templates
+            </a>
+        </div>
+    </div>
+</section>
+
