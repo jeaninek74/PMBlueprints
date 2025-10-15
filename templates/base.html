@@ -33,8 +33,10 @@
                         <a class="nav-link" href="{{ url_for('pricing') }}">Pricing</a>
                     {% if current_user.is_authenticated %}
                         <a class="nav-link" href="{{ url_for('ai_suggestions.suggestions_page') }}">
-                            <i class="fas fa-magic me-1"></i>AI Suggestions
-                            <span class="badge bg-success ms-1">FREE</span>
+                            <i class="fas fa-lightbulb me-1"></i>AI Suggestions
+                        </a>
+                        <a class="nav-link" href="{{ url_for('ai_generator_page') }}">
+                            <i class="fas fa-magic me-1"></i>AI Generator
                         </a>
                         <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
                     {% endif %}

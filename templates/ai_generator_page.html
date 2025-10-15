@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block title %}AI Generator - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-magic me-3 text-primary"></i>AI Template Generator
+            </h1>
+            <p class="lead text-muted mb-4">
+                Create custom project management documents for any industry or methodology.<br>
+                Simply describe what you need, and our AI will generate a professional, PMI 2025 PMBOK-compliant document.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Generator Card -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body p-5">
+                    <div class="alert alert-info mb-4">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>How it works:</strong> Describe the template you need, and our AI will generate a professional, editable document based on PMI 2025 PMBOK standards and industry best practices.
+                    </div>
+                    
+                    <form id="aiGeneratorForm">
+                        <div class="mb-4">
+                            <label for="aiDocumentName" class="form-label fs-5">
+                                <strong>What document do you need?</strong>
+                                <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control form-control-lg" id="aiDocumentName" required
+                                   placeholder="e.g., Sprint Cadence, Project Charter, Risk Register, Stakeholder Analysis">
+                            <small class="text-muted">Enter the type of project management document you want to create</small>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="aiProjectContext" class="form-label fs-5">
+                                <strong>Project Context & Requirements</strong>
+                                <span class="text-muted">(Optional)</span>
+                            </label>
+                            <textarea class="form-control form-control-lg" id="aiProjectContext" rows="6" 
+                                placeholder="Describe your project context, industry, methodology, or specific requirements...
+
+Examples:
+• Software development project using Agile methodology
+• Construction project for a hospital building  
+• Marketing campaign for product launch
+• IT infrastructure upgrade for financial services
+• Sprint cadence for a 2-week Scrum team"></textarea>
+                            <small class="text-muted">Provide additional context to help generate more relevant content</small>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="aiDocumentFormat" class="form-label fs-5">
+                                <strong>Preferred Format</strong>
+                            </label>
+                            <select class="form-select form-select-lg" id="aiDocumentFormat">
+                                <option value="auto">Auto-detect (Recommended)</option>
+                                <option value="word">Word Document (.docx)</option>
+                                <option value="excel">Excel Spreadsheet (.xlsx)</option>
+                            </select>
+                            <small class="text-muted">The AI will automatically select the best format based on your template type</small>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg py-3">
+                                <i class="fas fa-magic me-2"></i>Generate Template
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Generation Progress -->
+                    <div id="aiGenerationProgress" class="mt-4" style="display: none;">
+                        <div class="card border-primary">
+                            <div class="card-body">
+                                <h6 class="mb-3">
+                                    <i class="fas fa-spinner fa-spin me-2"></i>
+                                    <span id="progressStatus">Analyzing your request...</span>
+                                </h6>
+                                <div class="progress mb-2" style="height: 30px;">
+                                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                                         role="progressbar" style="width: 0%">0%</div>
+                                </div>
+                                <small class="text-muted" id="progressMessage">This may take 30-60 seconds...</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preview Section -->
+                    <div id="aiPreview" class="mt-4" style="display: none;">
+                        <div class="card border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-eye me-2"></i>Template Preview
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <strong>Document Name:</strong>
+                                        <p id="previewDocName" class="mb-0"></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <strong>Format:</strong>
+                                        <p id="previewFormat" class="mb-0"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <strong>Document Structure:</strong>
+                                    <div id="previewStructure" class="border rounded p-3 bg-light"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <strong>Content Preview:</strong>
+                                    <div id="previewContent" class="border rounded p-3 bg-light" style="max-height: 400px; overflow-y: auto;"></div>
+                                </div>
+                                
+                                <div class="alert alert-warning">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    <strong>Note:</strong> The generated template is editable. You can customize it after download to fit your specific needs.
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-success btn-lg py-3" id="downloadGeneratedBtn">
+                                        <i class="fas fa-download me-2"></i>Download Template
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="generateNewBtn">
+                                        <i class="fas fa-redo me-2"></i>Generate New Template
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Error Display -->
+                    <div id="aiError" class="mt-4" style="display: none;">
+                        <div class="alert alert-danger">
+                            <h6 class="alert-heading">
+                                <i class="fas fa-exclamation-circle me-2"></i>Generation Failed
+                            </h6>
+                            <p id="errorMessage" class="mb-0"></p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary" id="retryBtn">
+                            <i class="fas fa-redo me-2"></i>Try Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-center mb-4">What Can You Generate?</h3>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                    <h5>Planning Documents</h5>
+                    <p class="text-muted small">Project Charters, Plans, Roadmaps, Sprint Cadences</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-table fa-3x text-success mb-3"></i>
+                    <h5>Tracking Tools</h5>
+                    <p class="text-muted small">Risk Registers, Issue Logs, RAID Logs, KPI Dashboards</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-users fa-3x text-info mb-3"></i>
+                    <h5>Stakeholder Docs</h5>
+                    <p class="text-muted small">Communication Plans, Stakeholder Analysis, Meeting Templates</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+                    <h5>Reports & Analysis</h5>
+                    <p class="text-muted small">Status Reports, Lessons Learned, Performance Reviews</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Methodology Support -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 bg-light">
+                <div class="card-body p-4">
+                    <h4 class="text-center mb-3">Supports All PM Methodologies</h4>
+                    <p class="text-center text-muted mb-4">
+                        Our AI understands 20+ project management methodologies and frameworks
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <span class="badge bg-primary fs-6 px-3 py-2">Agile</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Scrum</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Waterfall</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">PRINCE2</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Hybrid</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Kanban</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Lean</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">SAFe</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">Six Sigma</span>
+                        <span class="badge bg-primary fs-6 px-3 py-2">PMBOK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/ai_generator.js') }}"></script>
+{% endblock %}
+
