@@ -3,7 +3,7 @@ Admin route to update all templates with thumbnail URLs
 Run once after deploying thumbnails
 """
 from flask import Blueprint, jsonify
-from database import get_db_connection
+from app import db
 import os
 
 update_thumbnails_bp = Blueprint('update_thumbnails', __name__)
@@ -12,20 +12,19 @@ update_thumbnails_bp = Blueprint('update_thumbnails', __name__)
 def update_all_thumbnails():
     """Update all templates with thumbnail URLs"""
     try:
-        conn = get_db_connection()
-        cur = conn.cursor()
+        # Import Template model
+        from models import Template
         
         # Get all templates
-        cur.execute("SELECT id, filename FROM templates ORDER BY id")
-        templates = cur.fetchall()
+        templates = Template.query.all()
         
         updated = 0
         not_found = 0
         results = []
         
-        for template_id, filename in templates:
+        for template in templates:
             # Generate thumbnail filename
-            base_name = os.path.splitext(filename)[0]
+            base_name = os.path.splitext(template.filename)[0]
             thumb_filename = f"{base_name}.png"
             thumb_url = f"/static/thumbnails/{thumb_filename}"
             
@@ -33,30 +32,27 @@ def update_all_thumbnails():
             thumb_path = os.path.join('static', 'thumbnails', thumb_filename)
             
             if os.path.exists(thumb_path):
-                # Update database
-                cur.execute(
-                    "UPDATE templates SET thumbnail = %s WHERE id = %s",
-                    (thumb_url, template_id)
-                )
+                # Update template
+                template.thumbnail = thumb_url
                 updated += 1
             else:
                 not_found += 1
-                results.append(f"Missing: {thumb_filename}")
+                if len(results) < 10:
+                    results.append(f"Missing: {thumb_filename}")
         
         # Commit changes
-        conn.commit()
-        cur.close()
-        conn.close()
+        db.session.commit()
         
         return jsonify({
             'success': True,
             'updated': updated,
             'not_found': not_found,
             'total': len(templates),
-            'missing_files': results[:10]  # Show first 10 missing
+            'missing_files': results
         })
         
     except Exception as e:
+        db.session.rollback()
         return jsonify({
             'success': False,
             'error': str(e)
