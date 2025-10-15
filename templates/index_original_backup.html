@@ -4,10 +4,12 @@
 
 {% block extra_head %}
 <style>
-/* Remove all animations and transitions */
-.card, .hover-lift, .icon-circle, .stat-card {
+/* Remove any hover animations */
+.card {
     transition: none !important;
-    animation: none !important;
+}
+.hover-lift {
+    transition: none !important;
 }
 </style>
 {% endblock %}
@@ -32,6 +34,13 @@
                                 {% for industry in industries %}
                                 <option value="{{ industry }}">{{ industry }}</option>
                                 {% endfor %}
+                            {% else %}
+                                <option value="Technology">Technology</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Education">Education</option>
                             {% endif %}
                         </select>
                     </div>
@@ -42,6 +51,12 @@
                                 {% for category in categories %}
                                 <option value="{{ category }}">{{ category }}</option>
                                 {% endfor %}
+                            {% else %}
+                                <option value="Project Planning">Project Planning</option>
+                                <option value="Risk Management">Risk Management</option>
+                                <option value="Quality Assurance">Quality Assurance</option>
+                                <option value="Resource Management">Resource Management</option>
+                                <option value="Communication">Communication</option>
                             {% endif %}
                         </select>
                     </div>
@@ -56,30 +71,38 @@
                     </button>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <!-- Replace statistics grid with text-based benefits -->
-                <div class="benefits-section bg-white bg-opacity-10 p-4 rounded">
-                    <h4 class="fw-bold mb-4">PMBlueprints Benefits</h4>
-                    <div class="mb-3">
-                        <strong>PMI 2025 Compliance**:</strong> Latest standards alignment
-                    </div>
-                    <div class="mb-3">
-                        <strong>70% Time Savings**:</strong> Proven efficiency metrics
-                    </div>
-                    <div class="mb-3">
-                        <strong>Professional Quality**:</strong> Enterprise-grade templates
-                    </div>
-                    <div class="mb-3">
-                        <strong>30 Industries Covered**:</strong> Comprehensive sector coverage
-                    </div>
-                    <div class="mb-3">
-                        <strong>Seamless Integration**:</strong> Platform compatibility
-                    </div>
-                    <div class="mt-4 pt-3 border-top border-white border-opacity-25">
-                        <strong>AI-Powered Generation**:</strong> Intelligent template creation
-                    </div>
-                    <div class="mt-3">
-                        <strong>Success Metrics**:</strong> 70% time saved, 95% satisfaction, 50% faster delivery
+            <div class="col-lg-6 text-center">
+                <div class="hero-stats">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
+                                <h3 class="display-6 fw-bold">{{ stats.total_templates if stats else '960+' }}</h3>
+                                <p class="mb-0 small">Templates ({{ stats.total_files if stats else '1,594' }} files)</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
+                                <h3 class="display-6 fw-bold">{{ stats.industries_count if stats else '30' }}</h3>
+                                <p class="mb-0">Complete Sectors</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
+                                <h3 class="display-6 fw-bold">{{ stats.categories_count if stats else '45' }}</h3>
+                                <p class="mb-0">Template Types</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card bg-white bg-opacity-10 p-4 rounded">
+                                <h3 class="display-6 fw-bold">{{ stats.time_savings if stats else '70%' }}</h3>
+                                <p class="mb-0">Average Time Savings</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="stat-card bg-white bg-opacity-10 p-3 rounded text-center">
+                                <p class="mb-0"><i class="fas fa-check-circle me-2"></i><strong>{{ stats.compliance if stats else '100% PMI 2025' }} Standards</strong></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,7 +234,7 @@
     </div>
 </section>
 
-<!-- Business Value Section (No Animations) -->
+<!-- Business Value Section -->
 <section class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
@@ -275,6 +298,7 @@
     </div>
 </section>
 
+
 <!-- Pricing Section -->
 <section class="py-5 bg-light">
     <div class="container">
@@ -297,6 +321,7 @@
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>3 template downloads/month</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Basic templates</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>3 AI generations/month</li>
+
                             <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i>Platform integrations</li>
                             <li class="mb-3 text-muted"><i class="fas fa-times me-2"></i>Advanced analytics</li>
                         </ul>
@@ -321,9 +346,10 @@
                         </div>
                         <ul class="list-unstyled mb-4">
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>10 template downloads/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 955+ templates</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>25 AI generations/month</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
+
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Advanced features</li>
                         </ul>
                         <div class="d-grid">
@@ -344,10 +370,11 @@
                         </div>
                         <ul class="list-unstyled mb-4">
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i><strong>Unlimited downloads</strong></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 955+ templates</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>100 AI generations/month</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Custom templates</li>
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
+
                         </ul>
                         <div class="d-grid">
                             <a href="{{ url_for('payment.checkout', plan='enterprise') }}" class="btn btn-outline-primary btn-lg">Start Enterprise</a>
@@ -374,6 +401,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Popular Templates Section -->
 <section class="py-5">
@@ -465,11 +493,11 @@
 <section class="py-5 bg-primary text-white">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-12">
-                <h2 class="display-6 fw-bold mb-3 text-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-3">
                     <i class="fas fa-magic me-3"></i>AI Generator - Create ANY PM Document
                 </h2>
-                <p class="lead mb-4 text-center">
+                <p class="lead mb-4">
                     Our intelligent AI Generator can create any project management document you need, even if it's not in our template library. 
                     Simply describe what you need, and the AI will generate a professional, PMI 2025 PMBOK-compliant document in the right format.
                 </p>
@@ -505,23 +533,19 @@
                         <div class="d-flex align-items-start">
                             <i class="fas fa-check-circle fa-lg me-3 mt-1"></i>
                             <div>
-                                <h6 class="mb-1">Built with PM Knowledge</h6>
-                                <p class="small mb-0">Powered by comprehensive project management intelligence and best practices</p>
+                                <h6 class="mb-1">Preview & Edit Before Download</h6>
+                                <p class="small mb-0">Review and customize your document before downloading</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-4">
-                    <button class="btn btn-light btn-lg" id="aiGeneratorBtn2">
-                        <i class="fas fa-magic me-2"></i>Try AI Generator Now
-                    </button>
-                </div>
             </div>
+            
         </div>
     </div>
 </section>
 
-<!-- CTA Section (Remove Browse Templates button) -->
+<!-- CTA Section -->
 <section class="py-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -534,6 +558,9 @@
                     <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">
                         Start Free Trial <i class="fas fa-arrow-right ms-2"></i>
                     </a>
+                    <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary btn-lg">
+                        Browse Templates
+                    </a>
                 </div>
             </div>
         </div>
@@ -541,16 +568,8 @@
 </section>
 
 <script>
-// AI Generator button handlers
+// AI Generator button handler
 document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
-    {% if current_user.is_authenticated %}
-        window.location.href = '{{ url_for("dashboard") }}#ai-generator';
-    {% else %}
-        window.location.href = '{{ url_for("auth.login") }}';
-    {% endif %}
-});
-
-document.getElementById('aiGeneratorBtn2').addEventListener('click', function() {
     {% if current_user.is_authenticated %}
         window.location.href = '{{ url_for("dashboard") }}#ai-generator';
     {% else %}
@@ -582,5 +601,6 @@ document.getElementById('templateTypeSelect').addEventListener('change', functio
 });
 </script>
 
+<!-- Demo Banner JavaScript -->
 {% endblock %}
 
