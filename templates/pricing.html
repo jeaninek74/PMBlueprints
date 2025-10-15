@@ -9,6 +9,41 @@
         <p class="lead">Choose the plan that fits your project management needs</p>
     </div>
 
+    <!-- À La Carte Option -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-6">
+            <div class="card shadow-lg border-warning">
+                <div class="card-header bg-warning text-dark text-center py-3">
+                    <h5 class="mb-0"><i class="fas fa-star me-2"></i>À La Carte - Pay Per Template</h5>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <div class="display-3 fw-bold text-warning mb-3">$50</div>
+                    <p class="text-muted mb-4">per template</p>
+                    
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Purchase individual templates as needed</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Lifetime access to purchased templates</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>No monthly commitment</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Perfect for one-time projects</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All template formats included</li>
+                    </ul>
+                    
+                    <a href="{{ url_for('templates.browse') }}" class="btn btn-warning btn-lg w-100">
+                        <i class="fas fa-shopping-cart me-2"></i>Browse Templates
+                    </a>
+                    <p class="text-muted small mt-3 mb-0">
+                        <i class="fas fa-info-circle me-1"></i>Select "Buy This Template" on any template page
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mb-4">
+        <h3 class="fw-bold">Or Choose a Subscription Plan</h3>
+        <p class="text-muted">Get access to multiple templates with our monthly plans</p>
+    </div>
+
     <div class="row justify-content-center g-4">
         <!-- Free Plan -->
         <div class="col-lg-4">

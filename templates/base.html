@@ -11,18 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <!-- Disable all animations -->
-    <link href="{{ url_for('static', filename='css/no-animations.css') }}" rel="stylesheet">
-    
-    <!-- Ultra-aggressive animation killer (inline for maximum priority) -->
-    <style>
-        * { animation: none !important; transition: none !important; transform: none !important; }
-        *::before, *::after { animation: none !important; transition: none !important; transform: none !important; }
-        *:hover, *:focus, *:active { animation: none !important; transition: none !important; transform: none !important; }
-        .icon-circle, .icon-circle * { animation: none !important; transition: none !important; transform: none !important; }
-        .card, .card:hover { animation: none !important; transition: none !important; transform: none !important; }
-        .fa, .fas, .far, .fab { animation: none !important; transition: none !important; transform: none !important; }
-    </style>
+
     
     {% block extra_head %}{% endblock %}
 </head>
@@ -42,7 +31,6 @@
                 <ul class="navbar-nav me-auto">
                         <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                         <a class="nav-link" href="{{ url_for('templates.browse') }}">Templates</a>
-                        <a class="nav-link" href="{{ url_for('pricing') }}">Pricing</a>
                     {% if current_user.is_authenticated %}
                         <a class="nav-link" href="{{ url_for('ai_suggestions.suggestions_page') }}">
                             <i class="fas fa-lightbulb me-1"></i>AI Suggestions
@@ -55,6 +43,9 @@
                 </ul>
                 
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('pricing') }}">Pricing</a>
+                    </li>
                     {% if current_user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">

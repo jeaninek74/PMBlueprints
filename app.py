@@ -287,6 +287,67 @@ class Payment(db.Model):
     
     user = db.relationship('User', backref=db.backref('payments', lazy=True))
 
+class TemplatePurchase(db.Model):
+    """Track individual template purchases for à la carte option"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
+    payment_id = db.Column(db.Integer, db.ForeignKey('payment.id'), nullable=True)
+    purchase_type = db.Column(db.String(20), default='alacarte')  # 'alacarte' or 'subscription'
+    amount_paid = db.Column(db.Integer, nullable=False)  # Amount in cents
+    purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('template_purchases', lazy=True))
+    template = db.relationship('Template', backref=db.backref('purchases', lazy=True))
+    payment = db.relationship('Payment', backref=db.backref('template_purchases', lazy=True))
+    
+    __table_args__ = (db.UniqueConstraint('user_id', 'template_id', name='unique_user_template_purchase'),)
+
+class AISuggestionHistory(db.Model):
+    """Track AI suggestions requests and responses"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    industry = db.Column(db.String(100))
+    project_type = db.Column(db.String(100))
+    team_size = db.Column(db.String(50))
+    timeline = db.Column(db.String(50))
+    risk_level = db.Column(db.String(50))
+    suggestions = db.Column(db.Text)  # JSON string of suggestions
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('ai_suggestions', lazy=True, order_by='AISuggestionHistory.created_at.desc()'))
+
+class AIGeneratorHistory(db.Model):
+    """Track AI generator requests and responses"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    template_type = db.Column(db.String(100))
+    industry = db.Column(db.String(100))
+    project_name = db.Column(db.String(200))
+    description = db.Column(db.Text)
+    additional_context = db.Column(db.Text)
+    preferred_format = db.Column(db.String(50))
+    generated_content = db.Column(db.Text)  # JSON string of generated content
+    status = db.Column(db.String(20), default='completed')  # 'completed', 'failed', 'pending'
+    error_message = db.Column(db.Text)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('ai_generations', lazy=True, order_by='AIGeneratorHistory.created_at.desc()'))
+
+class AIQuestionHistory(db.Model):
+    """Track AI question/answer interactions"""
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    industry = db.Column(db.String(100))
+    question = db.Column(db.Text, nullable=False)
+    additional_context = db.Column(db.Text)
+    answer = db.Column(db.Text)
+    status = db.Column(db.String(20), default='completed')  # 'completed', 'failed', 'pending'
+    error_message = db.Column(db.Text)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    user = db.relationship('User', backref=db.backref('ai_questions', lazy=True, order_by='AIQuestionHistory.created_at.desc()'))
+
 @login_manager.user_loader
 def load_user(user_id):
     logger.info(f"Loading user with ID: {user_id}")
@@ -352,6 +413,7 @@ try:
     from routes.fix_database_names import fix_database_names_bp
     # from routes.update_thumbnails import update_thumbnails_bp
     from routes.admin_thumbnails import admin_thumbnails_bp
+    from routes.alacarte_payment import alacarte_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -395,6 +457,7 @@ try:
     app.register_blueprint(fix_database_names_bp)  # Fix database names directly
     # app.register_blueprint(update_thumbnails_bp)  # Update thumbnail URLs
     app.register_blueprint(admin_thumbnails_bp)  # Admin thumbnail update route
+    app.register_blueprint(alacarte_bp)  # À la carte template purchases
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, and secure payment/AI routes)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
@@ -454,24 +517,31 @@ def index():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    """User dashboard"""
-    recent_downloads = Download.query.filter_by(user_id=current_user.id)\
-        .order_by(Download.downloaded_at.desc()).limit(5).all()
+    """User dashboard - shows purchased templates and AI history"""
+    # Get purchased templates (both subscription and à la carte)
+    purchased_templates = TemplatePurchase.query.filter_by(user_id=current_user.id)\
+        .order_by(TemplatePurchase.purchased_at.desc()).all()
     
-    stats = {
-        'total_downloads': len(current_user.downloads),
-        'downloads_remaining': 10 - current_user.downloads_used if current_user.subscription_plan == 'free' else 'Unlimited',
-        'subscription_plan': current_user.subscription_plan.title(),
-        'member_since': current_user.created_at.strftime('%B %Y') if current_user.created_at else 'Unknown'
-    }
+    # Get AI suggestions history
+    ai_suggestions = AISuggestionHistory.query.filter_by(user_id=current_user.id)\
+        .order_by(AISuggestionHistory.created_at.desc()).all()
     
-    # Add version parameter to force cache bypass (increment when dashboard.html changes)
-    dashboard_version = '3.0.0'  # Increment this to force browsers to reload dashboard
+    # Get AI generator history
+    ai_generations = AIGeneratorHistory.query.filter_by(user_id=current_user.id)\
+        .order_by(AIGeneratorHistory.created_at.desc()).all()
     
-    response = app.make_response(render_template('dashboard.html', 
-                         user=current_user, 
-                         recent_downloads=recent_downloads,
-                         stats=stats,
+    # Get AI Q&A history
+    ai_questions = AIQuestionHistory.query.filter_by(user_id=current_user.id)\
+        .order_by(AIQuestionHistory.created_at.desc()).all()
+    
+    # Add version parameter to force cache bypass
+    dashboard_version = '4.0.0'  # Updated for new dashboard
+    
+    response = app.make_response(render_template('dashboard_new.html', 
+                         purchased_templates=purchased_templates,
+                         ai_suggestions=ai_suggestions,
+                         ai_generations=ai_generations,
+                         ai_questions=ai_questions,
                          version=dashboard_version))
     
     # Add cache-control headers to prevent caching of dashboard
