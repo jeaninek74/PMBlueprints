@@ -15,8 +15,7 @@ def update_thumbnails_now():
     """Update all templates with thumbnail URLs - safe version"""
     try:
         # Import models here to avoid circular imports
-        from models import Template
-        from app import db
+        from app import db, Template
         
         logger.info("Starting thumbnail update process")
         
@@ -36,8 +35,8 @@ def update_thumbnails_now():
                     thumb_filename = f"{base_name}.png"
                     thumb_url = f"/static/thumbnails/{thumb_filename}"
                     
-                    # Update the template
-                    template.thumbnail = thumb_url
+                    # Update the template (use preview_image field)
+                    template.preview_image = thumb_url
                     updated += 1
                     
                     if updated % 100 == 0:
