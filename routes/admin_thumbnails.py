@@ -2,7 +2,7 @@
 Admin route to update template thumbnails
 Safe standalone route that can be enabled/disabled easily
 """
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, current_app
 import os
 import logging
 
@@ -13,10 +13,10 @@ admin_thumbnails_bp = Blueprint('admin_thumbnails', __name__)
 @admin_thumbnails_bp.route('/admin/update-thumbnails-now', methods=['GET'])
 def update_thumbnails_now():
     """Update all templates with thumbnail URLs - safe version"""
+    # Import inside the route to avoid circular imports
+    from app import db, Template
+    
     try:
-        # Import models here to avoid circular imports
-        from app import db, Template
-        
         logger.info("Starting thumbnail update process")
         
         # Get all templates
@@ -58,12 +58,15 @@ def update_thumbnails_now():
             'total_templates': total,
             'updated': updated,
             'skipped': skipped,
-            'errors': errors[:10]  # Show first 10 errors if any
+            'errors': errors[:10] if errors else []  # Show first 10 errors if any
         })
         
     except Exception as e:
         logger.error(f"Critical error in thumbnail update: {e}", exc_info=True)
-        db.session.rollback()
+        try:
+            db.session.rollback()
+        except:
+            pass
         return jsonify({
             'success': False,
             'error': str(e)
