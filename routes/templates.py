@@ -56,6 +56,9 @@ def browse():
         total_count = query.count()
         logger.info(f"Query returned {total_count} templates")
 
+        # Sort alphabetically by name
+        query = query.order_by(Template.name)
+
         # Paginate the results
         pagination = query.paginate(page=page, per_page=per_page, error_out=False)
         logger.info(f"Pagination: {len(pagination.items)} items on page {page} of {pagination.pages}")
