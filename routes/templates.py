@@ -237,6 +237,11 @@ def download(template_id):
         # Add explicit headers to force download on mobile
         response.headers['Content-Disposition'] = f'attachment; filename="{template.filename}"'
         response.headers['X-Content-Type-Options'] = 'nosniff'
+        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '0'
+        # Prevent iOS from trying to preview
+        response.headers['X-Download-Options'] = 'noopen'
         
         # Set correct MIME type based on file extension
         if template.filename.endswith('.docx'):
