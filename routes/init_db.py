@@ -3,7 +3,7 @@ Database Initialization Route for Railway
 Accessible via /admin/init-database endpoint
 """
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 import json
 import os
 from datetime import datetime
@@ -204,4 +204,12 @@ def fix_industry_names():
             'message': str(e),
             'traceback': traceback.format_exc()
         }), 500
+
+
+
+
+@init_db_bp.route('/admin/fix-names-page', methods=['GET'])
+def fix_names_page():
+    """Admin page to fix template and industry names"""
+    return render_template('admin/fix_names.html')
 
