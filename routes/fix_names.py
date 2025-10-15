@@ -12,12 +12,12 @@ INDUSTRY_CORRECTIONS = {
     "Customer": "Customer Experience",
     "Data": "Data Analytics",
     "Digital": "Digital Transformation",
-    "Hardware": "Hardware Development",
+    "Hardware": "Hardware Implementation",
     "Media": "Media & Entertainment",
     "Merger": "Merger & Acquisition",
     "Network": "Network Infrastructure",
-    "Operational": "Operational Excellence",
-    "Operations": "Operations Management",
+    "Operational": "Operational Improvement",
+    "Operations": "Operational Improvement",
     "Product": "Product Development",
     "Research": "Research & Development"
 }

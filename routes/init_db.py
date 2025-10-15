@@ -154,8 +154,8 @@ def fix_industry_names():
         "Media": "Media & Entertainment",
         "Merger": "Merger & Acquisition",
         "Network": "Network Infrastructure",
-        "Operational": "Operational Excellence",
-        "Operations": "Operations Management",
+        "Operational": "Operational Improvement",
+        "Operations": "Operational Improvement",
         "Product": "Product Development",
         "Research": "Research & Development"
     }
