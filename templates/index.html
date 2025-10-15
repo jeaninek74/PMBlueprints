@@ -610,18 +610,17 @@ document.getElementById('aiGeneratorBtn2').addEventListener('click', function() 
     {% endif %}
 });
 
-// Industry and template type selection - work independently
+// Industry and template type selection - BOTH required
 document.getElementById('industrySelect').addEventListener('change', function() {
     const industry = this.value;
     const templateType = document.getElementById('templateTypeSelect').value;
     
-    // Navigate if ANY dropdown has a value (not empty)
-    if (industry || templateType) {
+    // Navigate ONLY if BOTH dropdowns have values
+    if (industry && templateType) {
         let url = '{{ url_for("templates.browse") }}?';
-        const params = [];
-        if (industry) params.push('industry=' + encodeURIComponent(industry));
-        if (templateType) params.push('category=' + encodeURIComponent(templateType));
-        window.location.href = url + params.join('&');
+        url += 'industry=' + encodeURIComponent(industry);
+        url += '&category=' + encodeURIComponent(templateType);
+        window.location.href = url;
     }
 });
 
@@ -629,13 +628,12 @@ document.getElementById('templateTypeSelect').addEventListener('change', functio
     const templateType = this.value;
     const industry = document.getElementById('industrySelect').value;
     
-    // Navigate if ANY dropdown has a value (not empty)
-    if (industry || templateType) {
+    // Navigate ONLY if BOTH dropdowns have values
+    if (industry && templateType) {
         let url = '{{ url_for("templates.browse") }}?';
-        const params = [];
-        if (industry) params.push('industry=' + encodeURIComponent(industry));
-        if (templateType) params.push('category=' + encodeURIComponent(templateType));
-        window.location.href = url + params.join('&');
+        url += 'industry=' + encodeURIComponent(industry);
+        url += '&category=' + encodeURIComponent(templateType);
+        window.location.href = url;
     }
 });
 </script>
