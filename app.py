@@ -346,6 +346,7 @@ try:
     from routes.fix_all_templates import fix_all_templates_bp
     from routes.fix_database_names import fix_database_names_bp
     # from routes.update_thumbnails import update_thumbnails_bp
+    from routes.admin_thumbnails import admin_thumbnails_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -387,6 +388,7 @@ try:
     app.register_blueprint(fix_all_templates_bp)  # Fix all template and industry issues
     app.register_blueprint(fix_database_names_bp)  # Fix database names directly
     # app.register_blueprint(update_thumbnails_bp)  # Update thumbnail URLs
+    app.register_blueprint(admin_thumbnails_bp)  # Admin thumbnail update route
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, and secure payment/AI routes)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
