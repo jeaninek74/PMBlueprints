@@ -78,3 +78,79 @@ def fix_all_names():
             'message': str(e)
         }), 500
 
+@fix_database_names_bp.route('/admin/reimport-database', methods=['POST'])
+def reimport_database():
+    """Clear and reimport all templates from catalog"""
+    
+    # Security check
+    secret = request.headers.get('X-Init-Secret')
+    expected_secret = os.getenv('INIT_SECRET', 'pmb-init-2025')
+    
+    if secret != expected_secret:
+        return jsonify({'error': 'Unauthorized'}), 401
+    
+    try:
+        from app import db, Template
+        from datetime import datetime
+        import json
+        
+        # Delete all existing templates
+        deleted_count = Template.query.delete()
+        db.session.commit()
+        
+        # Load templates from catalog
+        catalog_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'templates_catalog.json')
+        with open(catalog_path, 'r') as f:
+            templates = json.load(f)
+        
+        # Import templates
+        imported = 0
+        for template_data in templates:
+            template = Template(
+                name=template_data.get('name', ''),
+                description=template_data.get('description', ''),
+                industry=template_data.get('industry', ''),
+                category=template_data.get('category', ''),
+                file_type=template_data.get('file_type', ''),
+                filename=template_data.get('filename', ''),
+                file_path=f"/templates/{template_data.get('filename', '')}" if template_data.get('filename') else None,
+                downloads=0,
+                rating=4.5,
+                tags=','.join(template_data.get('tags', [])) if template_data.get('tags') else '',
+                file_size=template_data.get('file_size', 0),
+                has_formulas=template_data.get('has_formulas', False),
+                has_fields=template_data.get('has_fields', False),
+                is_premium=False,
+                created_at=datetime.utcnow()
+            )
+            db.session.add(template)
+            imported += 1
+            
+            # Commit in batches of 100
+            if imported % 100 == 0:
+                db.session.commit()
+        
+        # Final commit
+        db.session.commit()
+        
+        # Get stats
+        total_templates = Template.query.count()
+        unique_industries = db.session.query(Template.industry).distinct().count()
+        unique_templates = db.session.query(Template.name).distinct().count()
+        
+        return jsonify({
+            'status': 'success',
+            'deleted': deleted_count,
+            'imported': imported,
+            'total_templates': total_templates,
+            'unique_industries': unique_industries,
+            'unique_template_types': unique_templates
+        })
+        
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
+
