@@ -148,6 +148,11 @@ def generate_document_structure():
         document_name = data.get('document_name', '')
         format_type = data.get('format', 'word')
         methodology = data.get('methodology', 'waterfall')
+        
+        # Handle methodology as either string or dict
+        if isinstance(methodology, dict):
+            methodology = methodology.get('name', 'waterfall')
+        
         project_context = data.get('project_context', '')
         
         if not document_name:
@@ -236,6 +241,11 @@ def generate_document_content():
         document_name = data.get('document_name', '')
         format_type = data.get('format', 'word')
         methodology = data.get('methodology', 'waterfall')
+        
+        # Handle methodology as either string or dict
+        if isinstance(methodology, dict):
+            methodology = methodology.get('name', 'waterfall')
+        
         project_context = data.get('project_context', '')
         structure = data.get('structure', {})
         

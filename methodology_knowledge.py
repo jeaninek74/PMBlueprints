@@ -804,7 +804,13 @@ class MethodologyKnowledge:
     
     def adapt_document_to_methodology(self, document_type: str, methodology: str) -> Dict:
         """Adapt document structure and content based on methodology"""
-        method = self.get_methodology(methodology)
+        # Handle methodology as either string or dict
+        if isinstance(methodology, dict):
+            methodology_name = methodology.get('name', 'waterfall')
+        else:
+            methodology_name = methodology if methodology else 'waterfall'
+        
+        method = self.get_methodology(methodology_name)
         if not method:
             method = self.methodologies['waterfall']  # Default
         
@@ -814,12 +820,17 @@ class MethodologyKnowledge:
             'detail_level': method['document_characteristics']['detail_level'],
             'change_control': method['document_characteristics']['change_control'],
             'documentation_volume': method['document_characteristics']['documentation_volume'],
-            'terminology': self._get_methodology_terminology(methodology),
-            'structure_guidance': self._get_structure_guidance(document_type, methodology)
+            'terminology': self._get_methodology_terminology(methodology_name),
+            'structure_guidance': self._get_structure_guidance(document_type, methodology_name)
         }
     
     def _get_methodology_terminology(self, methodology: str) -> Dict[str, str]:
         """Get methodology-specific terminology"""
+        # Handle methodology as either string or dict
+        if isinstance(methodology, dict):
+            methodology = methodology.get('name', 'waterfall').lower().replace(' ', '_').replace('-', '_')
+        else:
+            methodology = methodology.lower().replace(' ', '_').replace('-', '_') if methodology else 'waterfall'
         terminology_map = {
             'scrum': {
                 'requirements': 'User Stories',
@@ -858,6 +869,10 @@ class MethodologyKnowledge:
     
     def _get_structure_guidance(self, document_type: str, methodology: str) -> List[str]:
         """Get structure guidance for document type and methodology"""
+        # Handle methodology as either string or dict
+        if isinstance(methodology, dict):
+            methodology = methodology.get('name', 'waterfall')
+        methodology = methodology if methodology else 'waterfall'
         return [
             f"Use {methodology}-appropriate terminology",
             f"Follow {methodology} documentation standards",
