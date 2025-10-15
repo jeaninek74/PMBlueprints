@@ -1,0 +1,196 @@
+/**
+ * Comprehensive Animation Disabler
+ * Removes ALL animations, transitions, and transforms from the platform
+ */
+
+/* Global animation and transition disable */
+*,
+*::before,
+*::after,
+*:hover,
+*:focus,
+*:active {
+    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    transition-property: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Disable Bootstrap animations */
+.modal.fade,
+.modal.show,
+.modal,
+.fade,
+.show,
+.collapsing,
+.collapse,
+.alert,
+.toast {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable modal animations */
+.modal.fade .modal-dialog {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Disable progress bar animations */
+.progress-bar,
+.progress-bar-striped,
+.progress-bar-animated {
+    animation: none !important;
+    transition: none !important;
+    background-image: none !important;
+}
+
+/* Disable spinner animations */
+.spinner-border,
+.spinner-grow,
+.fa-spin,
+.fa-pulse {
+    animation: none !important;
+}
+
+/* Disable card hover effects */
+.card,
+.card:hover,
+.template-card,
+.template-card:hover,
+.hover-lift,
+.hover-lift:hover {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Disable button hover effects - keep color change but no transition */
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Disable nav link hover effects */
+.nav-link,
+.nav-link:hover,
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:hover {
+    transition: none !important;
+}
+
+/* Disable dropdown animations */
+.dropdown-menu,
+.dropdown-menu.show {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable tooltip and popover animations */
+.tooltip,
+.popover,
+.tooltip.show,
+.popover.show {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+/* Disable carousel animations */
+.carousel-item,
+.carousel-fade,
+.carousel-inner {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Disable any keyframe animations */
+@keyframes none {
+    0%, 100% { opacity: 1; }
+}
+
+/* Override any existing keyframes */
+@keyframes fadeIn,
+@keyframes fadeOut,
+@keyframes slideIn,
+@keyframes slideOut,
+@keyframes bounce,
+@keyframes shake,
+@keyframes pulse,
+@keyframes spin,
+@keyframes rotate {
+    0%, 100% { 
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Disable loading animations */
+[class*="loading"],
+[class*="rotate"],
+[class*="spin"],
+[class*="pulse"],
+[class*="bounce"],
+[class*="shake"],
+[class*="fade"],
+[class*="slide"] {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Ensure immediate visibility changes */
+.show {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.hide,
+.hidden {
+    opacity: 0 !important;
+    display: none !important;
+}
+
+/* Disable form control transitions */
+.form-control,
+.form-select,
+.form-check-input {
+    transition: none !important;
+}
+
+/* Disable badge animations */
+.badge {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable alert animations */
+.alert {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Force all elements to render immediately */
+body * {
+    animation-play-state: paused !important;
+}
+
