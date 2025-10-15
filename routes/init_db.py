@@ -150,7 +150,7 @@ def fix_industry_names():
         "Customer": "Customer Experience",
         "Data": "Data Analytics",
         "Digital": "Digital Transformation",
-        "Hardware": "Hardware Development",
+        "Hardware": "Hardware Implementation",
         "Media": "Media & Entertainment",
         "Merger": "Merger & Acquisition",
         "Network": "Network Infrastructure",
