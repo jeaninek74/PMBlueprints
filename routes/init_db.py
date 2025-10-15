@@ -130,3 +130,78 @@ def database_status():
             'traceback': traceback.format_exc()
         }), 500
 
+
+
+@init_db_bp.route('/admin/fix-industry-names', methods=['POST'])
+def fix_industry_names():
+    """Fix incomplete industry names in database"""
+    
+    # Security check
+    secret = request.headers.get('X-Init-Secret')
+    expected_secret = os.getenv('INIT_SECRET', 'pmb-init-2025')
+    
+    if secret != expected_secret:
+        return jsonify({'error': 'Unauthorized'}), 401
+    
+    # Industry name corrections
+    INDUSTRY_CORRECTIONS = {
+        "Business": "Business Process Improvement",
+        "Cloud": "Cloud Migration",
+        "Customer": "Customer Experience",
+        "Data": "Data Analytics",
+        "Digital": "Digital Transformation",
+        "Hardware": "Hardware Development",
+        "Media": "Media & Entertainment",
+        "Merger": "Merger & Acquisition",
+        "Network": "Network Infrastructure",
+        "Operational": "Operational Excellence",
+        "Operations": "Operations Management",
+        "Product": "Product Development",
+        "Research": "Research & Development"
+    }
+    
+    try:
+        from app import db
+        
+        results = {
+            'industries_updated': 0,
+            'changes': []
+        }
+        
+        # Fix industry names using raw SQL
+        for old_name, new_name in INDUSTRY_CORRECTIONS.items():
+            result = db.session.execute(
+                db.text("UPDATE template SET industry = :new WHERE industry = :old"),
+                {"new": new_name, "old": old_name}
+            )
+            count = result.rowcount
+            if count > 0:
+                results['industries_updated'] += count
+                results['changes'].append({
+                    'from': old_name,
+                    'to': new_name,
+                    'count': count
+                })
+        
+        db.session.commit()
+        
+        # Get updated industry list
+        result = db.session.execute(db.text("SELECT DISTINCT industry FROM template ORDER BY industry"))
+        industries = [row[0] for row in result]
+        
+        return jsonify({
+            'status': 'success',
+            'message': f'Updated {results["industries_updated"]} templates',
+            'results': results,
+            'current_industries': industries
+        })
+        
+    except Exception as e:
+        import traceback
+        db.session.rollback()
+        return jsonify({
+            'status': 'error',
+            'message': str(e),
+            'traceback': traceback.format_exc()
+        }), 500
+
