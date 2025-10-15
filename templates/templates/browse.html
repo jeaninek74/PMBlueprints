@@ -99,7 +99,7 @@
                 
                 <div class="card-footer bg-transparent border-0">
                     <div class="d-grid gap-2">
-                        <button class="btn btn-outline-primary btn-sm" onclick="previewTemplate({{ template.id }}, '{{ template.name }}', '{{ template.description }}', '{{ template.category }}', '{{ template.industry }}', '{{ template.file_type }}')">
+                        <button class="btn btn-outline-primary btn-sm" onclick="previewTemplate({{ template.id }}, '{{ template.name }}', '{{ template.description }}', '{{ template.category }}', '{{ template.industry }}', '{{ template.file_type }}', '{{ template.preview_image }}')">
                             <i class="fas fa-eye me-1"></i>Preview
                         </button>
                         <a href="{{ url_for('templates.download', template_id=template.id) }}" 
@@ -232,13 +232,32 @@
 </div>
 
 <script>
-function previewTemplate(id, name, description, category, industry, fileType) {
+function previewTemplate(id, name, description, category, industry, fileType, previewImage) {
     document.getElementById('previewName').textContent = name;
     document.getElementById('previewCategory').textContent = category;
     document.getElementById('previewIndustry').textContent = industry;
     document.getElementById('previewFormat').textContent = fileType.toUpperCase();
     document.getElementById('previewDescription').textContent = description;
     document.getElementById('previewDownloadBtn').href = '/templates/download/' + id;
+    
+    // Load and show thumbnail if available
+    var thumbnail = document.getElementById('previewThumbnail');
+    var placeholder = document.getElementById('previewPlaceholder');
+    
+    if (previewImage) {
+        thumbnail.src = previewImage;
+        thumbnail.style.display = 'block';
+        placeholder.style.display = 'none';
+        
+        // Handle image load error
+        thumbnail.onerror = function() {
+            thumbnail.style.display = 'none';
+            placeholder.style.display = 'block';
+        };
+    } else {
+        thumbnail.style.display = 'none';
+        placeholder.style.display = 'block';
+    }
     
     var modal = new bootstrap.Modal(document.getElementById('previewModal'));
     modal.show();

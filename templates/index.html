@@ -383,6 +383,7 @@
         </div>
         
         <div class="row g-4">
+<!-- Popular Templates Section - Updated with working previews -->
             <!-- Risk Management Plan -->
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
@@ -396,7 +397,7 @@
                             </small>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="alert('Preview feature coming soon!')">
+                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="previewTemplate('Risk Management Plan', 'Complete risk assessment and mitigation planning with priority matrices and tracking for business process improvement', 'Risk Management', '/static/thumbnails/Risk_Management_Plan.png')">
                                 <i class="fas fa-eye me-1"></i>Preview
                             </button>
                             <a href="{{ url_for('templates.browse', category='Risk Management') }}" class="btn btn-primary btn-sm w-100">
@@ -420,7 +421,7 @@
                             </small>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="alert('Preview feature coming soon!')">
+                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="previewTemplate('Project Charter', 'Comprehensive project planning with objectives, scope, milestones, and stakeholder alignment for business initiatives', 'Project Planning', '/static/thumbnails/Project_Charter.png')">
                                 <i class="fas fa-eye me-1"></i>Preview
                             </button>
                             <a href="{{ url_for('templates.browse', category='Project Planning') }}" class="btn btn-primary btn-sm w-100">
@@ -444,7 +445,7 @@
                             </small>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="alert('Preview feature coming soon!')">
+                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="previewTemplate('KPI Dashboard', 'Visual performance dashboard with automated charts, KPIs, and metrics tracking for business process monitoring', 'Performance Management', '/static/thumbnails/KPI_Dashboard.png')">
                                 <i class="fas fa-eye me-1"></i>Preview
                             </button>
                             <a href="{{ url_for('templates.browse', category='Performance Management') }}" class="btn btn-primary btn-sm w-100">
@@ -468,7 +469,7 @@
                             </small>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="alert('Preview feature coming soon!')">
+                            <button class="btn btn-outline-primary btn-sm w-100 mb-2" onclick="previewTemplate('Budget Tracker', 'Detailed financial tracking with automated calculations, variance analysis, and forecasting for business projects', 'Financial Management', '/static/thumbnails/Budget_Tracker.png')">
                                 <i class="fas fa-eye me-1"></i>Preview
                             </button>
                             <a href="{{ url_for('templates.browse', category='Financial Management') }}" class="btn btn-primary btn-sm w-100">
@@ -478,6 +479,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         
         <div class="text-center mt-4">
@@ -630,6 +632,75 @@ document.getElementById('templateTypeSelect').addEventListener('change', functio
         window.location.href = url;
     }
 });
+</script>
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="previewModalTitle">Template Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="template-preview-image text-center p-4 bg-light border rounded">
+                            <img id="previewThumbnail" src="" alt="Template Preview" class="img-fluid" style="max-height: 400px; display: none;">
+                            <div id="previewPlaceholder" class="text-muted">
+                                <i class="fas fa-file-alt fa-5x mb-3"></i>
+                                <p>Template preview will be displayed here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-muted">Template Name</h6>
+                        <p id="previewName"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-muted">Category</h6>
+                        <p id="previewCategory"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="text-muted">Description</h6>
+                        <p id="previewDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function previewTemplate(name, description, category, thumbnailUrl) {
+    document.getElementById('previewName').textContent = name;
+    document.getElementById('previewCategory').textContent = category;
+    document.getElementById('previewDescription').textContent = description;
+    
+    var thumbnail = document.getElementById('previewThumbnail');
+    var placeholder = document.getElementById('previewPlaceholder');
+    
+    if (thumbnailUrl && thumbnailUrl !== 'None') {
+        thumbnail.src = thumbnailUrl;
+        thumbnail.style.display = 'block';
+        placeholder.style.display = 'none';
+        
+        thumbnail.onerror = function() {
+            thumbnail.style.display = 'none';
+            placeholder.style.display = 'block';
+        };
+    } else {
+        thumbnail.style.display = 'none';
+        placeholder.style.display = 'block';
+    }
+    
+    var modal = new bootstrap.Modal(document.getElementById('previewModal'));
+    modal.show();
+}
 </script>
 
 {% endblock %}
