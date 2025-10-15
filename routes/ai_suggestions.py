@@ -80,7 +80,7 @@ Keep the response under 200 words."""
 
         # Call OpenAI API
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1-mini",
             messages=[
                 {"role": "system", "content": "You are a PMI-certified project management expert providing brief, actionable suggestions."},
                 {"role": "user", "content": prompt}
@@ -153,7 +153,7 @@ def quick_suggestion():
         
         # Call OpenAI API
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1-mini",
             messages=[
                 {"role": "system", "content": "You are a PMI-certified project management expert. Provide concise, bullet-point lists."},
                 {"role": "user", "content": prompts[section]}
