@@ -181,9 +181,21 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="previewModalTitle">Template Preview</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <!-- Template Preview Thumbnail -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="template-preview-image text-center p-4 bg-light border rounded">
+                            <img id="previewThumbnail" src="" alt="Template Preview" class="img-fluid" style="max-height: 400px; display: none;">
+                            <div id="previewPlaceholder" class="text-muted">
+                                <i class="fas fa-file-alt fa-5x mb-3"></i>
+                                <p>Template preview will be displayed here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-md-6">
                         <h6 class="text-muted">Template Name</h6>
@@ -214,12 +226,6 @@
                     <i class="fas fa-info-circle me-2"></i>
                     <strong>What's included:</strong> This template includes professional formatting, built-in formulas, and industry-specific content ready for immediate use.
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="#" id="previewDownloadBtn" class="btn btn-primary">
-                    <i class="fas fa-download me-1"></i>Download Template
-                </a>
             </div>
         </div>
     </div>
