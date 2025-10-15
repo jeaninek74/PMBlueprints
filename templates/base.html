@@ -14,6 +14,16 @@
     <!-- Disable all animations -->
     <link href="{{ url_for('static', filename='css/no-animations.css') }}" rel="stylesheet">
     
+    <!-- Ultra-aggressive animation killer (inline for maximum priority) -->
+    <style>
+        * { animation: none !important; transition: none !important; transform: none !important; }
+        *::before, *::after { animation: none !important; transition: none !important; transform: none !important; }
+        *:hover, *:focus, *:active { animation: none !important; transition: none !important; transform: none !important; }
+        .icon-circle, .icon-circle * { animation: none !important; transition: none !important; transform: none !important; }
+        .card, .card:hover { animation: none !important; transition: none !important; transform: none !important; }
+        .fa, .fas, .far, .fab { animation: none !important; transition: none !important; transform: none !important; }
+    </style>
+    
     {% block extra_head %}{% endblock %}
 </head>
 <body>
