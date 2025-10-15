@@ -299,3 +299,82 @@ def reset_password():
             return jsonify({'success': False, 'error': 'Password reset failed'}), 500
         flash('Password reset failed', 'error')
         return redirect(url_for('auth.reset_password'))
+
+
+
+# Google OAuth Routes
+@auth_bp.route('/login/google')
+def google_login():
+    """Initiate Google OAuth login"""
+    try:
+        from app import oauth
+        redirect_uri = url_for('auth.google_callback', _external=True)
+        return oauth.google.authorize_redirect(redirect_uri)
+    except Exception as e:
+        logger.error(f"Google login error: {e}")
+        flash('Google login is currently unavailable. Please use email/password login.', 'error')
+        return redirect(url_for('auth.login'))
+
+@auth_bp.route('/login/google/callback')
+def google_callback():
+    """Handle Google OAuth callback"""
+    try:
+        from app import oauth, db, User
+        
+        # Get token from Google
+        token = oauth.google.authorize_access_token()
+        
+        # Get user info from Google
+        user_info = oauth.google.parse_id_token(token)
+        email = user_info.get('email')
+        
+        if not email:
+            flash('Could not retrieve email from Google', 'error')
+            return redirect(url_for('auth.login'))
+        
+        # Check if user exists
+        user = User.query.filter_by(email=email.lower()).first()
+        
+        if not user:
+            # Create new user from Google info
+            user = User(
+                email=email.lower(),
+                first_name=user_info.get('given_name', ''),
+                last_name=user_info.get('family_name', ''),
+                google_id=user_info.get('sub'),
+                email_verified=True  # Google emails are verified
+            )
+            
+            # Create Stripe customer for new user
+            try:
+                import stripe
+                customer = stripe.Customer.create(
+                    email=email,
+                    name=f"{user.first_name} {user.last_name}",
+                    metadata={'source': 'google_oauth'}
+                )
+                user.stripe_customer_id = customer.id
+            except Exception as e:
+                logger.error(f"Stripe customer creation error: {e}")
+            
+            db.session.add(user)
+            db.session.commit()
+            logger.info(f"New user created via Google OAuth: {email}")
+        else:
+            # Update Google ID if not set
+            if not user.google_id:
+                user.google_id = user_info.get('sub')
+                user.email_verified = True
+                db.session.commit()
+        
+        # Log the user in
+        login_user(user, remember=True)
+        logger.info(f"User logged in via Google: {email}")
+        
+        return redirect(url_for('dashboard'))
+        
+    except Exception as e:
+        logger.error(f"Google callback error: {e}", exc_info=True)
+        flash('Google login failed. Please try again or use email/password login.', 'error')
+        return redirect(url_for('auth.login'))
+
