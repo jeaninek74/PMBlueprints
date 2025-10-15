@@ -610,26 +610,32 @@ document.getElementById('aiGeneratorBtn2').addEventListener('click', function() 
     {% endif %}
 });
 
-// Industry and template type selection
+// Industry and template type selection - work independently
 document.getElementById('industrySelect').addEventListener('change', function() {
     const industry = this.value;
     const templateType = document.getElementById('templateTypeSelect').value;
+    
+    // Navigate if ANY dropdown has a value (not empty)
     if (industry || templateType) {
         let url = '{{ url_for("templates.browse") }}?';
-        if (industry) url += 'industry=' + encodeURIComponent(industry);
-        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
-        window.location.href = url;
+        const params = [];
+        if (industry) params.push('industry=' + encodeURIComponent(industry));
+        if (templateType) params.push('category=' + encodeURIComponent(templateType));
+        window.location.href = url + params.join('&');
     }
 });
 
 document.getElementById('templateTypeSelect').addEventListener('change', function() {
     const templateType = this.value;
     const industry = document.getElementById('industrySelect').value;
+    
+    // Navigate if ANY dropdown has a value (not empty)
     if (industry || templateType) {
         let url = '{{ url_for("templates.browse") }}?';
-        if (industry) url += 'industry=' + encodeURIComponent(industry);
-        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
-        window.location.href = url;
+        const params = [];
+        if (industry) params.push('industry=' + encodeURIComponent(industry));
+        if (templateType) params.push('category=' + encodeURIComponent(templateType));
+        window.location.href = url + params.join('&');
     }
 });
 </script>
