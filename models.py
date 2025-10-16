@@ -131,12 +131,12 @@ class TemplatePurchase(db.Model):
     __tablename__ = 'template_purchase'
     
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    template_id = db.Column(db.Integer, db.ForeignKey('templates.id'), nullable=False)
     purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
     purchase_type = db.Column(db.String(20), default='alacarte', nullable=True)
     amount_paid = db.Column(db.Integer, nullable=True)  # Amount in cents
-    payment_id = db.Column(db.Integer, db.ForeignKey('payment.id'), nullable=True)
+    payment_id = db.Column(db.Integer, db.ForeignKey('payments.id'), nullable=True)
     
     def __repr__(self):
         return f'<Purchase {self.user_id}:{self.template_id}>'
