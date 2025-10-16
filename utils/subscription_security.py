@@ -11,28 +11,43 @@ from datetime import datetime, timedelta
 # Subscription tier limits
 TIER_LIMITS = {
     'free': {
-        'downloads_per_month': 3,
-        'ai_generations_per_month': 3,
+        'downloads_per_month': 0,  # Free users cannot download
+        'ai_generations_per_month': 0,  # Free users cannot use AI
+        'ai_suggestions_access': False,
         'platform_integrations': False,
         'custom_templates': False,
         'advanced_analytics': False,
         'priority_support': False
     },
+    'individual': {
+        'downloads_per_month': 1,  # One-time: 1 template download OR 1 AI generation
+        'ai_generations_per_month': 1,  # Can use AI Generator for 1 template
+        'ai_suggestions_access': False,  # No AI Suggestions
+        'platform_integrations': False,
+        'custom_templates': False,
+        'advanced_analytics': False,
+        'priority_support': False,
+        'is_one_time_purchase': True  # Not a subscription
+    },
     'professional': {
-        'downloads_per_month': 10,
-        'ai_generations_per_month': 25,
+        'downloads_per_month': 2,
+        'ai_suggestions_per_month': 4,
+        'ai_generations_per_month': 6,
+        'ai_suggestions_access': True,
+        'platform_integrations': False,
+        'custom_templates': False,
+        'advanced_analytics': False,
+        'priority_support': False
+    },
+    'enterprise': {
+        'downloads_per_month': 2,
+        'ai_suggestions_per_month': 4,
+        'ai_generations_per_month': 6,
+        'ai_suggestions_access': True,
         'platform_integrations': True,
         'custom_templates': False,
         'advanced_analytics': False,
-        'priority_support': True
-    },
-    'enterprise': {
-        'downloads_per_month': float('inf'),  # Unlimited
-        'ai_generations_per_month': 100,
-        'platform_integrations': True,
-        'custom_templates': True,
-        'advanced_analytics': True,
-        'priority_support': True
+        'priority_support': False
     }
 }
 
@@ -103,7 +118,7 @@ def check_feature_access(user, feature):
 
 def require_tier(min_tier):
     """Decorator to require minimum subscription tier"""
-    tier_hierarchy = {'free': 0, 'professional': 1, 'enterprise': 2}
+    tier_hierarchy = {'free': 0, 'individual': 1, 'professional': 2, 'enterprise': 3}
     
     def decorator(f):
         @wraps(f)
