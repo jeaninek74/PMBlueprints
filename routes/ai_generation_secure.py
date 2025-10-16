@@ -70,7 +70,7 @@ def generate_template():
             }), 400
         
         # Import database session
-        from app import db
+        from database import db
         
         # Create guardrails instance with database session
         guardrails = create_guardrails(db.session)
@@ -266,7 +266,7 @@ def get_usage_stats():
     Get user's AI usage statistics
     """
     try:
-        from app import db
+        from database import db
         guardrails = create_guardrails(db.session)
         
         # Reset if needed
@@ -304,7 +304,7 @@ def get_usage_history():
     Get user's AI usage history
     """
     try:
-        from app import db
+        from database import db
         from sqlalchemy import text
         
         # Get limit parameter

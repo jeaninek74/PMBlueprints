@@ -24,7 +24,7 @@ def health_check():
 def database_health():
     """Database connection health check"""
     try:
-        from app import db, Template
+        from database import db, Template
         
         # Test database connection
         template_count = Template.query.count()
@@ -74,7 +74,7 @@ def database_health():
 def detailed_health():
     """Detailed system health check"""
     try:
-        from app import db, Template, User
+        from database import db, Template, User
         
         # Database checks
         template_count = Template.query.count()

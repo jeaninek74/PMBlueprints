@@ -14,7 +14,7 @@ admin_thumbnails_bp = Blueprint('admin_thumbnails', __name__)
 def update_thumbnails_now():
     """Update all templates with thumbnail URLs - safe version"""
     # Import inside the route to avoid circular imports
-    from app import db, Template
+    from database import db, Template
     
     try:
         logger.info("Starting thumbnail update process")

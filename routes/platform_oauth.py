@@ -62,7 +62,7 @@ def monday_connect():
 def monday_callback():
     """Handle Monday.com OAuth callback"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     code = request.args.get('code')
     if not code:
@@ -112,7 +112,7 @@ def monday_callback():
 def monday_disconnect():
     """Disconnect Monday.com"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     settings = IntegrationSettings.query.filter_by(user_id=current_user.id).first()
     if settings:
@@ -151,7 +151,7 @@ def smartsheet_connect():
 def smartsheet_callback():
     """Handle Smartsheet OAuth callback"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     code = request.args.get('code')
     if not code:
@@ -201,7 +201,7 @@ def smartsheet_callback():
 def smartsheet_disconnect():
     """Disconnect Smartsheet"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     settings = IntegrationSettings.query.filter_by(user_id=current_user.id).first()
     if settings:
@@ -242,7 +242,7 @@ def google_connect():
 def google_callback():
     """Handle Google Sheets OAuth callback"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     code = request.args.get('code')
     if not code:
@@ -292,7 +292,7 @@ def google_callback():
 def google_disconnect():
     """Disconnect Google Sheets"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     settings = IntegrationSettings.query.filter_by(user_id=current_user.id).first()
     if settings:
@@ -332,7 +332,7 @@ def microsoft_connect():
 def microsoft_callback():
     """Handle Microsoft 365 OAuth callback"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     code = request.args.get('code')
     if not code:
@@ -382,7 +382,7 @@ def microsoft_callback():
 def microsoft_disconnect():
     """Disconnect Microsoft 365"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     settings = IntegrationSettings.query.filter_by(user_id=current_user.id).first()
     if settings:

@@ -22,7 +22,7 @@ ALACARTE_PRICE = 5000  # $50.00 in cents
 def purchase_template(template_id):
     """Purchase page for individual template"""
     try:
-        from app import db, Template, TemplatePurchase
+        from database import db, Template, TemplatePurchase
         
         # Check if template exists
         template = Template.query.get_or_404(template_id)
@@ -58,7 +58,7 @@ def create_payment_intent():
         if not template_id:
             return jsonify({'error': 'Template ID required'}), 400
         
-        from app import db, Template, TemplatePurchase
+        from database import db, Template, TemplatePurchase
         
         # Verify template exists
         template = Template.query.get(template_id)
@@ -110,7 +110,7 @@ def confirm_payment():
         if not payment_intent_id or not template_id:
             return jsonify({'error': 'Missing required data'}), 400
         
-        from app import db, Template, TemplatePurchase, Payment
+        from database import db, Template, TemplatePurchase, Payment
         
         # Verify payment with Stripe
         stripe.api_key = os.getenv('STRIPE_SECRET_KEY')

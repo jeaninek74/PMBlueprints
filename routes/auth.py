@@ -29,7 +29,7 @@ def register():
     
     if request.method == 'POST':
         from models import User
-        from app import db
+        from database import db
         
         email = request.form.get('email', '').strip().lower()
         password = request.form.get('password', '')
@@ -111,7 +111,7 @@ def login():
         login_user(user, remember=remember)
         user.last_login = datetime.utcnow()
         
-        from app import db
+        from database import db
         db.session.commit()
         
         flash('Welcome back!', 'success')
@@ -161,7 +161,7 @@ def google_login():
 def google_callback():
     """Handle Google OAuth callback"""
     from models import User
-    from app import db
+    from database import db
     
     # Get authorization code
     code = request.args.get('code')

@@ -33,7 +33,7 @@ def get_favorites():
 def add_favorite(template_id):
     """Add template to favorites"""
     try:
-        from app import db, Favorite, Template
+        from database import db, Favorite, Template
         
         # Check if template exists
         template = Template.query.get(template_id)
@@ -70,7 +70,7 @@ def add_favorite(template_id):
 def remove_favorite(template_id):
     """Remove template from favorites"""
     try:
-        from app import db, Favorite
+        from database import db, Favorite
         
         favorite = Favorite.query.filter_by(
             user_id=current_user.id,
@@ -99,7 +99,7 @@ def remove_favorite(template_id):
 def rate_template(template_id):
     """Rate a template (1-5 stars)"""
     try:
-        from app import db, TemplateRating, Template
+        from database import db, TemplateRating, Template
         
         data = request.get_json()
         rating_value = data.get('rating')

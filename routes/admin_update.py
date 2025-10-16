@@ -16,7 +16,7 @@ admin_bp = Blueprint('admin_update', __name__, url_prefix='/api/admin')
 def update_templates():
     """Update all template names and descriptions from catalog"""
     try:
-        from app import db, Template
+        from database import db, Template
         
         data = request.get_json()
         

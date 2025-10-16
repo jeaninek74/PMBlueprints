@@ -18,7 +18,7 @@ def fix_template_names():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db
+        from database import db
         
         # Get all templates
         result = db.session.execute(db.text("SELECT id, name, filename FROM template ORDER BY id"))

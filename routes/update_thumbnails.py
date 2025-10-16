@@ -3,7 +3,7 @@ Admin route to update all templates with thumbnail URLs
 Run once after deploying thumbnails
 """
 from flask import Blueprint, jsonify
-from app import db
+from database import db
 import os
 
 update_thumbnails_bp = Blueprint('update_thumbnails', __name__)

@@ -41,7 +41,7 @@ def download(template_id):
     """Download template file from Supabase Storage"""
     try:
         # Import here to avoid circular imports
-        from app import db, Template, Download
+        from database import db, Template, Download
         
         template = Template.query.get_or_404(template_id)
 

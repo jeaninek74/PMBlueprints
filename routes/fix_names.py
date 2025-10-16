@@ -25,7 +25,7 @@ INDUSTRY_CORRECTIONS = {
 @fix_names_bp.route('/admin/fix-names', methods=['POST'])
 def fix_names():
     """Fix industry and template names"""
-    from app import db
+    from database import db
     
     secret = request.headers.get('X-Fix-Secret')
     if secret != 'pmb-fix-2025':

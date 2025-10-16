@@ -26,7 +26,7 @@ def fix_actual_industries():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db
+        from database import db
         
         results = {
             'industries_updated': 0,

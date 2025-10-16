@@ -120,7 +120,7 @@ def checkout(tier):
                 metadata={'user_id': current_user.id}
             )
             current_user.stripe_customer_id = customer.id
-            from app import db
+            from database import db
             db.session.commit()
         
         # Determine success and cancel URLs
@@ -203,7 +203,7 @@ def checkout_individual_template(template_id):
                 metadata={'user_id': current_user.id}
             )
             current_user.stripe_customer_id = customer.id
-            from app import db
+            from database import db
             db.session.commit()
         
         success_url = url_for('payment.success', _external=True) + '?session_id={CHECKOUT_SESSION_ID}'
@@ -276,7 +276,7 @@ def webhook():
 def handle_checkout_session_completed(session):
     """Handle successful checkout session"""
     try:
-        from app import db
+        from database import db
         from models import User, Payment
         
         user_id = session['metadata'].get('user_id')
@@ -339,7 +339,7 @@ def handle_checkout_session_completed(session):
 def handle_invoice_payment_succeeded(invoice):
     """Handle successful recurring payment"""
     try:
-        from app import db
+        from database import db
         from models import User, Payment
         
         customer_id = invoice['customer']
@@ -375,7 +375,7 @@ def handle_invoice_payment_succeeded(invoice):
 def handle_subscription_deleted(subscription):
     """Handle subscription cancellation"""
     try:
-        from app import db
+        from database import db
         from models import User
         
         customer_id = subscription['customer']

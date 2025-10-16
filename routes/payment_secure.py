@@ -269,7 +269,7 @@ def create_payment_intent():
                 metadata={'user_id': current_user.id}
             )
             current_user.stripe_customer_id = customer.id
-            from app import db
+            from database import db
             db.session.commit()
         
         # Create payment intent
@@ -328,7 +328,7 @@ def confirm_payment():
             return jsonify({'error': 'Payment verification failed'}), 403
         
         # Import here to avoid circular imports
-        from app import db, Payment
+        from database import db, Payment
         
         # Check if payment already processed
         existing_payment = Payment.query.filter_by(
@@ -390,7 +390,7 @@ def confirm_payment():
         return jsonify({'error': 'Payment confirmation failed', 'details': str(e)}), 500
     except Exception as e:
         logger.error(f"Payment confirmation error: {e}")
-        from app import db
+        from database import db
         db.session.rollback()
         return jsonify({'error': 'Subscription update failed', 'details': str(e)}), 500
 
@@ -404,7 +404,7 @@ def cancel_subscription():
             return jsonify({'error': 'No active subscription to cancel'}), 400
         
         # Import here to avoid circular imports
-        from app import db
+        from database import db
         
         # Update user subscription
         current_user.subscription_plan = 'free'

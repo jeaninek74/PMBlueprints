@@ -20,7 +20,7 @@ def fix_missing_templates():
     4. Returns list of fixed templates
     """
     try:
-        from app import db, Template
+        from database import db, Template
         
         # Load catalog
         catalog_path = os.path.join(
@@ -109,7 +109,7 @@ def verify_all_templates():
     - all_good: Templates that are complete
     """
     try:
-        from app import db, Template
+        from database import db, Template
         
         # Load catalog
         catalog_path = os.path.join(

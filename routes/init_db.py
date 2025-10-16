@@ -22,7 +22,7 @@ def initialize_database():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db, Template
+        from database import db, Template
         
         # Create all tables
         db.create_all()
@@ -95,7 +95,7 @@ def initialize_database():
 def database_status():
     """Check database status"""
     try:
-        from app import db, Template, User, Download
+        from database import db, Template, User, Download
         
         template_count = Template.query.count()
         user_count = User.query.count()
@@ -161,7 +161,7 @@ def fix_industry_names():
     }
     
     try:
-        from app import db
+        from database import db
         
         results = {
             'industries_updated': 0,

@@ -32,7 +32,7 @@ def index():
 def get_suggestions():
     """Get AI-powered template suggestions"""
     from utils.subscription_security import check_usage_limit
-    from app import db
+    from database import db
     from models import AISuggestionHistory, Template
     
     try:

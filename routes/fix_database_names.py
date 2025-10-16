@@ -20,7 +20,7 @@ def fix_all_names():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db, Template
+        from database import db, Template
         
         # Industry name fixes
         industry_fixes = {
@@ -90,7 +90,7 @@ def reimport_database():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db, Template
+        from database import db, Template
         from datetime import datetime
         import json
         

@@ -35,7 +35,7 @@ def index():
 def generate():
     """Generate AI document"""
     from utils.subscription_security import check_usage_limit
-    from app import db
+    from database import db
     from models import AIGeneratorHistory
     
     try:

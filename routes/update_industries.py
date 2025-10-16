@@ -2,7 +2,7 @@
 Update template industries without deleting data
 """
 from flask import Blueprint, jsonify, request
-from app import db, Template
+from database import db, Template
 import os
 import json
 from pathlib import Path

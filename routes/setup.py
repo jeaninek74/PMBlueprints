@@ -9,7 +9,7 @@ setup_bp = Blueprint('setup', __name__, url_prefix='/setup')
 
 def get_models():
     """Lazy import models to avoid circular dependency"""
-    from app import db, Template, User, Download, Favorite, TemplateRating
+    from database import db, Template, User, Download, Favorite, TemplateRating
     return db, Template, User, Download, Favorite, TemplateRating
 
 @setup_bp.route('/init-database', methods=['GET', 'POST'])

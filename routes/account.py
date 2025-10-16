@@ -15,7 +15,7 @@ account_bp = Blueprint('account', __name__)
 @login_required
 def account_page():
     """Display user account page with subscription and billing info"""
-    from app import db, TemplatePurchase, Payment, TemplateDownload
+    from database import db, TemplatePurchase, Payment, TemplateDownload
     
     # Get purchased templates
     purchased_templates = TemplatePurchase.query.filter_by(
@@ -61,7 +61,7 @@ def account_page():
 @login_required
 def update_profile():
     """Update user profile information"""
-    from app import db
+    from database import db
     
     name = request.form.get('name')
     company = request.form.get('company')
@@ -79,7 +79,7 @@ def update_profile():
 @login_required
 def cancel_subscription():
     """Cancel user's subscription"""
-    from app import db
+    from database import db
     import stripe
     
     stripe.api_key = os.getenv('STRIPE_SECRET_KEY')

@@ -81,7 +81,7 @@ def detail(template_id):
 def download(template_id):
     """Download a template (requires quota)"""
     from models import Template, TemplatePurchase
-    from app import db
+    from database import db
     from utils.subscription_security import check_usage_limit, track_usage
     
     template = Template.query.get_or_404(template_id)
@@ -165,7 +165,7 @@ def thumbnail(template_id):
     else:
         # If thumbnail doesn't exist, generate it on-the-fly from actual template file
         from utils.thumbnail_generator import ThumbnailGenerator
-        from app import db
+        from database import db
         
         if template.file_path and os.path.exists(template.file_path):
             generator = ThumbnailGenerator()
@@ -194,7 +194,7 @@ def thumbnail(template_id):
 def favorite(template_id):
     """Add/remove template from favorites"""
     from models import Template, Favorite
-    from app import db
+    from database import db
     
     template = Template.query.get_or_404(template_id)
     

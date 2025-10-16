@@ -18,7 +18,7 @@ def fix_all_templates():
         return jsonify({'error': 'Unauthorized'}), 401
     
     try:
-        from app import db
+        from database import db
         
         results = {
             'template_names_updated': 0,

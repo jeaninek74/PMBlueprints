@@ -34,7 +34,7 @@ def index():
     
     if not settings:
         # Create default settings
-        from app import db
+        from database import db
         settings = IntegrationSettings(user_id=current_user.id)
         db.session.add(settings)
         db.session.commit()
@@ -47,7 +47,7 @@ def index():
 def settings():
     """Configure integration settings"""
     from models import IntegrationSettings
-    from app import db
+    from database import db
     
     settings = IntegrationSettings.query.filter_by(user_id=current_user.id).first()
     

@@ -15,7 +15,7 @@ def search_suggestions():
     """Get search suggestions"""
     try:
         # Import here to avoid circular imports
-        from app import db, Template
+        from database import db, Template
         
         query = request.args.get('q', '').strip()
         if not query or len(query) < 2:
