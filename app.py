@@ -96,6 +96,23 @@ from models import User, Template, DownloadHistory, AIGeneratorHistory, AISugges
 # Initialize database with app
 db.init_app(app)
 
+# Auto-create tables on startup
+with app.app_context():
+    try:
+        db.create_all()
+        logger.info("Database tables created/verified")
+        if Template.query.count() == 0:
+            import json
+            with open('templates_catalog.json', 'r') as f:
+                templates = json.load(f)
+            for t in templates:
+                template = Template(id=t.get("id"), name=t.get("name"), description=t.get("description"), industry=t.get("industry"), category=t.get("category"), file_type=t.get("file_type"), filename=t.get("filename"), downloads=t.get("downloads", 0), rating=t.get("rating", 4.5), tags=",".join(t.get("tags", [])), file_size=t.get("file_size"), has_formulas=t.get("has_formulas", False), has_fields=t.get("has_fields", False), is_premium=t.get("is_premium", False))
+                db.session.add(template)
+            db.session.commit()
+            logger.info(f"Database populated with {Template.query.count()} templates")
+    except Exception as e:
+        logger.error(f"Database initialization error: {e}")
+
 # Initialize other extensions
 login_manager = LoginManager()
 login_manager.init_app(app)
