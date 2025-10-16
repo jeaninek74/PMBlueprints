@@ -3,167 +3,239 @@
 {% block title %}Browse Templates - PMBlueprints{% endblock %}
 
 {% block content %}
-<div class="bg-gray-50 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header -->
-        <div class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">Browse Templates</h1>
-            <p class="text-gray-600">Choose from 960+ professional project management templates</p>
+<div class="container py-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="h3 fw-bold">Browse Templates</h1>
+            <p class="text-muted">Discover professional project management templates for your industry</p>
         </div>
+    </div>
 
-        <!-- Filters -->
-        <div class="bg-white rounded-lg shadow p-6 mb-8">
-            <form method="GET" action="{{ url_for('templates.browse') }}" id="filterForm">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Industry Filter -->
-                    <div>
-                        <label for="industry" class="block text-sm font-medium text-gray-700 mb-2">Industry *</label>
-                        <select name="industry" id="industry" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
-                            <option value="">Select Industry</option>
-                            {% for ind in industries %}
-                            <option value="{{ ind }}" {% if ind == selected_industry %}selected{% endif %}>{{ ind }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- Category Filter -->
-                    <div>
-                        <label for="category" class="block text-sm font-medium text-gray-700 mb-2">Template Type *</label>
-                        <select name="category" id="category" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
-                            <option value="">Select Template Type</option>
-                            {% for cat in categories %}
-                            <option value="{{ cat }}" {% if cat == selected_category %}selected{% endif %}>{{ cat }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- Search -->
-                    <div>
-                        <label for="search" class="block text-sm font-medium text-gray-700 mb-2">Search</label>
-                        <input type="text" name="search" id="search" value="{{ search_query }}" placeholder="Search templates..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    </div>
-                </div>
-
-                <div class="mt-4 flex gap-3">
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
-                        Apply Filters
-                    </button>
-                    <a href="{{ url_for('templates.browse') }}" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition font-semibold">
-                        Clear Filters
-                    </a>
-                </div>
-            </form>
-        </div>
-
-        <!-- Validation Message -->
-        <div id="validationMessage" class="hidden bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 rounded">
-            <p class="font-semibold">Please select both Industry and Template Type to view templates.</p>
-        </div>
-
-        <!-- Templates Grid -->
-        {% if templates %}
-        <div class="mb-4 text-gray-600">
-            Showing {{ templates|length }} template(s)
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for template in templates %}
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <!-- Thumbnail -->
-                <div class="h-48 bg-gray-200 overflow-hidden">
-                    <img src="{{ url_for('templates.thumbnail', template_id=template.id) }}" 
-                         alt="{{ template.name }}" 
-                         class="w-full h-full object-cover"
-                         onerror="this.src='/static/images/default_template_thumbnail.png'">
-                </div>
-
-                <!-- Content -->
-                <div class="p-6">
-                    <div class="flex items-start justify-between mb-2">
-                        <h3 class="text-lg font-semibold text-gray-900 flex-1">{{ template.name }}</h3>
-                        {% if current_user.is_authenticated %}
-                        <button onclick="toggleFavorite({{ template.id }})" 
-                                class="text-gray-400 hover:text-red-500 transition"
-                                id="favorite-{{ template.id }}">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-                        </button>
-                        {% endif %}
-                    </div>
-
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ template.description }}</p>
-
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex gap-2">
-                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{{ template.category }}</span>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{{ template.file_format }}</span>
+    <!-- Filters -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <form method="GET" id="filterForm">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <label for="industry" class="form-label">Industry</label>
+                                <select class="form-select" name="industry" id="industry">
+                                    <option value="">All Industries</option>
+                                    {% for industry in industries %}
+                                    <option value="{{ industry }}" {% if current_industry == industry %}selected{% endif %}>
+                                        {{ industry }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="category" class="form-label">Category</label>
+                                <select class="form-select" name="category" id="category">
+                                    <option value="">All Categories</option>
+                                    {% for category in categories %}
+                                    <option value="{{ category }}" {% if current_category == category %}selected{% endif %}>
+                                        {{ category }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="search" class="form-label">Search</label>
+                                <input type="text" class="form-control" name="search" id="search" 
+                                       value="{{ current_search }}" placeholder="Search templates...">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">&nbsp;</label>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-search me-1"></i>Filter
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="flex gap-2">
-                        <a href="{{ url_for('templates.detail', template_id=template.id) }}" 
-                           class="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition font-semibold">
-                            View Details
-                        </a>
-                        {% if current_user.is_authenticated %}
+    <!-- Results -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <p class="text-muted mb-0">
+                Showing {{ templates.total }} template{{ 's' if templates.total != 1 else '' }}
+                {% if current_industry or current_category or current_search %}
+                (filtered)
+                {% endif %}
+            </p>
+        </div>
+    </div>
+
+    <!-- Templates Grid -->
+    <div class="row g-4" id="templatesGrid">
+        {% for template in templates.items %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm template-card">
+                {% if template.thumbnail %}
+                <img src="{{ template.thumbnail }}" class="card-img-top" alt="{{ template.name }} preview" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <span class="badge bg-primary">{{ template.category }}</span>
+                        <small class="text-muted">
+                            <i class="fas fa-file-{{ 'excel' if template.file_type == 'xlsx' else 'word' if template.file_type == 'docx' else 'alt' }} me-1"></i>{{ template.file_type.upper() }}
+                        </small>
+                    </div>
+                    
+                    <h5 class="card-title">{{ template.name }}</h5>
+                    <p class="card-text text-muted small">{{ template.description if template.description else 'Professional project management template' }}</p>
+                    
+                    <div class="template-meta mb-3">
+                        <small class="text-muted">
+                            <i class="fas fa-industry me-1"></i>{{ template.industry }}
+                        </small>
+                    </div>
+                </div>
+                
+                <div class="card-footer bg-transparent border-0">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary btn-sm" onclick="previewTemplate({{ template.id }}, '{{ template.name }}', '{{ template.description }}', '{{ template.category }}', '{{ template.industry }}', '{{ template.file_type }}')">
+                            <i class="fas fa-eye me-1"></i>Preview
+                        </button>
                         <a href="{{ url_for('templates.download', template_id=template.id) }}" 
-                           class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition font-semibold">
-                            Download
+                           class="btn btn-primary btn-sm">
+                            <i class="fas fa-download me-1"></i>Download
                         </a>
-                        {% endif %}
                     </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
         {% else %}
-        <div class="bg-white rounded-lg shadow p-12 text-center">
-            <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">No templates found</h3>
-            <p class="text-gray-600 mb-4">Try adjusting your filters or search terms</p>
-            <a href="{{ url_for('templates.browse') }}" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
-                View All Templates
-            </a>
+        <div class="col-12">
+            <div class="text-center py-5">
+                <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                <h4>No templates found</h4>
+                <p class="text-muted">Try adjusting your filters or search terms.</p>
+                <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
+                    Clear Filters
+                </a>
+            </div>
         </div>
-        {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if templates.pages > 1 %}
+    <div class="row mt-5">
+        <div class="col-12">
+            <nav aria-label="Template pagination">
+                <ul class="pagination justify-content-center">
+                    {% if templates.has_prev %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('templates.browse', page=templates.prev_num, 
+                           industry=current_industry, category=current_category, search=current_search) }}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for page_num in templates.iter_pages() %}
+                        {% if page_num %}
+                            {% if page_num != templates.page %}
+                            <li class="page-item">
+                                <a class="page-link" href="{{ url_for('templates.browse', page=page_num,
+                                   industry=current_industry, category=current_category, search=current_search) }}">
+                                    {{ page_num }}
+                                </a>
+                            </li>
+                            {% else %}
+                            <li class="page-item active">
+                                <span class="page-link">{{ page_num }}</span>
+                            </li>
+                            {% endif %}
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="page-link">...</span>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if templates.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('templates.browse', page=templates.next_num,
+                           industry=current_industry, category=current_category, search=current_search) }}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="previewModalTitle">Template Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-muted">Template Name</h6>
+                        <p id="previewName"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-muted">Category</h6>
+                        <p id="previewCategory"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="text-muted">Industry</h6>
+                        <p id="previewIndustry"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-muted">File Format</h6>
+                        <p id="previewFormat"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="text-muted">Description</h6>
+                        <p id="previewDescription"></p>
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>What's included:</strong> This template includes professional formatting, built-in formulas, and industry-specific content ready for immediate use.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" id="previewDownloadBtn" class="btn btn-primary">
+                    <i class="fas fa-download me-1"></i>Download Template
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-// Validate that both dropdowns are selected before submission
-document.getElementById('filterForm').addEventListener('submit', function(e) {
-    const industry = document.getElementById('industry').value;
-    const category = document.getElementById('category').value;
+function previewTemplate(id, name, description, category, industry, fileType) {
+    document.getElementById('previewName').textContent = name;
+    document.getElementById('previewCategory').textContent = category;
+    document.getElementById('previewIndustry').textContent = industry;
+    document.getElementById('previewFormat').textContent = fileType.toUpperCase();
+    document.getElementById('previewDescription').textContent = description;
+    document.getElementById('previewDownloadBtn').href = '/templates/download/' + id;
     
-    if (!industry || !category) {
-        e.preventDefault();
-        document.getElementById('validationMessage').classList.remove('hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
-
-// Favorite functionality
-function toggleFavorite(templateId) {
-    fetch(`/templates/favorite/${templateId}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        const btn = document.getElementById(`favorite-${templateId}`);
-        if (data.favorited) {
-            btn.classList.add('text-red-500');
-            btn.classList.remove('text-gray-400');
-        } else {
-            btn.classList.add('text-gray-400');
-            btn.classList.remove('text-red-500');
-        }
-    })
-    .catch(error => console.error('Error:', error));
+    var modal = new bootstrap.Modal(document.getElementById('previewModal'));
+    modal.show();
 }
 </script>
 {% endblock %}

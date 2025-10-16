@@ -139,28 +139,21 @@
                         <p class="card-text text-muted">Get instant access to this professional template</p>
                         
                         {% if current_user.is_authenticated %}
-                            {% if current_user.subscription_tier in ['professional', 'enterprise'] %}
-                                <a href="{{ url_for('templates.download', template_id=template.id) }}" class="btn btn-primary btn-lg w-100 mb-3">
-                                    <i class="fas fa-download me-2"></i>Download Now
-                                </a>
-                                <small class="text-muted">Included in your subscription</small>
-                            {% else %}
-                                <!-- Purchase Button for Free/Individual Users -->
-                                <a href="{{ url_for('payment.purchase_template', template_id=template.id) }}" class="btn btn-success btn-lg w-100 mb-3">
-                                    <i class="fas fa-shopping-cart me-2"></i>Purchase
-                                </a>
-                                <small class="text-muted">One-time purchase for this template</small>
-                                <hr class="my-3">
-                                <p class="text-center text-muted small mb-2">Or upgrade for unlimited access</p>
-                                <a href="{{ url_for('payment.pricing') }}" class="btn btn-outline-primary btn-sm w-100">
-                                    View Plans
-                                </a>
-                            {% endif %}
+                            <a href="{{ url_for('templates.download', template_id=template.id) }}" class="btn btn-primary btn-lg w-100 mb-3">
+                                <i class="fas fa-download me-2"></i>Download Now
+                            </a>
+                            <small class="text-muted">
+                                {% if current_user.subscription_plan == 'free' %}
+                                    {{ 10 - current_user.downloads_used }} downloads remaining
+                                {% else %}
+                                    Unlimited downloads
+                                {% endif %}
+                            </small>
                         {% else %}
                             <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg w-100 mb-3">
                                 <i class="fas fa-sign-in-alt me-2"></i>Login to Download
                             </a>
-                            <small class="text-muted">Sign in to purchase or subscribe</small>
+                            <small class="text-muted">Free account includes 10 downloads</small>
                         {% endif %}
                     </div>
                 </div>

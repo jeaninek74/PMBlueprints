@@ -11,7 +11,10 @@
                 <h1 class="display-5 fw-bold">
                     <i class="fas fa-magic me-2 text-primary"></i>AI Suggestions
                 </h1>
-                <p class="lead text-muted">Get AI-powered suggestions for your project management templates</p>
+                <p class="lead text-muted">Get FREE AI-powered suggestions for your project management templates</p>
+                <div class="badge bg-success fs-6 px-3 py-2">
+                    <i class="fas fa-gift me-2"></i>100% FREE - Unlimited Use
+                </div>
             </div>
 
             <!-- Quick Suggestions -->
@@ -24,9 +27,15 @@
                     
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <label class="form-label">Industry</label>
-                            <input type="text" class="form-control" id="quickIndustry" 
-                                   placeholder="e.g., Software Development, Construction, Healthcare">
+                            <label class="form-label">Template Type</label>
+                            <select class="form-select" id="quickTemplateType">
+                                <option value="Software Development">Software Development</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Marketing Campaign">Marketing Campaign</option>
+                                <option value="Product Launch">Product Launch</option>
+                                <option value="IT Infrastructure">IT Infrastructure</option>
+                                <option value="Business Process">Business Process</option>
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Section</label>
@@ -56,9 +65,9 @@
                     <p class="text-muted mb-3">Ask any project management question and get expert AI guidance</p>
                     
                     <div class="mb-3">
-                        <label class="form-label">Industry</label>
-                        <input type="text" class="form-control" id="customIndustry" 
-                               placeholder="e.g., Software Development, Construction, Healthcare">
+                        <label class="form-label">Template Type</label>
+                        <input type="text" class="form-control" id="customTemplateType" 
+                               placeholder="e.g., Risk Register, Project Charter, etc.">
                     </div>
                     
                     <div class="mb-3">
@@ -143,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Quick Suggestion
     quickBtn.addEventListener('click', async function() {
-        const industry = document.getElementById('quickIndustry').value;
+        const templateType = document.getElementById('quickTemplateType').value;
         const section = document.getElementById('quickSection').value;
 
         showLoading();
@@ -155,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    template_type: industry || 'General',
+                    template_type: templateType,
                     section: section
                 })
             });
@@ -176,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Custom Question
     customBtn.addEventListener('click', async function() {
-        const industry = document.getElementById('customIndustry').value;
+        const templateType = document.getElementById('customTemplateType').value;
         const question = document.getElementById('customQuestion').value;
         const context = document.getElementById('customContext').value;
 
@@ -194,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    template_type: industry || 'General',
+                    template_type: templateType || 'Project Management',
                     question: question,
                     context: context
                 })
