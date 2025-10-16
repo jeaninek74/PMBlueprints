@@ -134,8 +134,8 @@ class TemplatePurchase(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
     purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
-    purchase_type = db.Column(db.String(20), default='alacarte')
-    amount_paid = db.Column(db.Integer)  # Amount in cents
+    purchase_type = db.Column(db.String(20), default='alacarte', nullable=True)
+    amount_paid = db.Column(db.Integer, nullable=True)  # Amount in cents
     payment_id = db.Column(db.Integer, db.ForeignKey('payment.id'), nullable=True)
     
     def __repr__(self):

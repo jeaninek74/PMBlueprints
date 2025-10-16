@@ -288,20 +288,36 @@ def index():
 def dashboard():
     """User dashboard - shows purchased templates and AI history"""
     # Get purchased templates (both subscription and à la carte)
-    purchased_templates = TemplatePurchase.query.filter_by(user_id=current_user.id)\
-        .order_by(TemplatePurchase.purchased_at.desc()).all()
+    try:
+        purchased_templates = TemplatePurchase.query.filter_by(user_id=current_user.id)\
+            .order_by(TemplatePurchase.purchased_at.desc()).all()
+    except Exception as e:
+        print(f"Error loading purchases: {e}")
+        purchased_templates = []
     
     # Get AI suggestions history
-    ai_suggestions = AISuggestionHistory.query.filter_by(user_id=current_user.id)\
-        .order_by(AISuggestionHistory.created_at.desc()).all()
+    try:
+        ai_suggestions = AISuggestionHistory.query.filter_by(user_id=current_user.id)\
+            .order_by(AISuggestionHistory.created_at.desc()).all()
+    except Exception as e:
+        print(f"Error loading AI suggestions: {e}")
+        ai_suggestions = []
     
     # Get AI generator history
-    ai_generations = AIGeneratorHistory.query.filter_by(user_id=current_user.id)\
-        .order_by(AIGeneratorHistory.created_at.desc()).all()
+    try:
+        ai_generations = AIGeneratorHistory.query.filter_by(user_id=current_user.id)\
+            .order_by(AIGeneratorHistory.created_at.desc()).all()
+    except Exception as e:
+        print(f"Error loading AI generations: {e}")
+        ai_generations = []
     
     # Get AI Q&A history
-    ai_questions = AIQuestionHistory.query.filter_by(user_id=current_user.id)\
-        .order_by(AIQuestionHistory.created_at.desc()).all()
+    try:
+        ai_questions = AIQuestionHistory.query.filter_by(user_id=current_user.id)\
+            .order_by(AIQuestionHistory.created_at.desc()).all()
+    except Exception as e:
+        print(f"Error loading AI questions: {e}")
+        ai_questions = []
     
     # Add version parameter to force cache bypass
     dashboard_version = '4.0.0'  # Updated for new dashboard

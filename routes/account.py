@@ -18,9 +18,13 @@ def account_page():
     from database import db, TemplatePurchase, Payment, TemplateDownload
     
     # Get purchased templates
-    purchased_templates = TemplatePurchase.query.filter_by(
-        user_id=current_user.id
-    ).order_by(TemplatePurchase.purchase_date.desc()).all()
+    try:
+        purchased_templates = TemplatePurchase.query.filter_by(
+            user_id=current_user.id
+        ).order_by(TemplatePurchase.purchased_at.desc()).all()
+    except Exception as e:
+        print(f"Error fetching purchases: {e}")
+        purchased_templates = []
     
     # Get payment history
     payment_history = Payment.query.filter_by(
