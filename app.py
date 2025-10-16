@@ -87,8 +87,13 @@ app.config['REMEMBER_COOKIE_HTTPONLY'] = True
 stripe.api_key = os.getenv('STRIPE_SECRET_KEY', 'sk_test_dummy_key')
 app.config['STRIPE_PUBLISHABLE_KEY'] = os.getenv('STRIPE_PUBLISHABLE_KEY', 'pk_test_dummy_key')
 
-# Initialize extensions
-db = SQLAlchemy(app)
+# Import models first
+from models import db, User, DownloadHistory, AIGeneratorHistory, AISuggestionHistory, TemplatePurchase, Payment, PlatformIntegration
+
+# Initialize database with app
+db.init_app(app)
+
+# Initialize other extensions
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
@@ -107,101 +112,7 @@ from monitoring import monitor
 monitor.init_app(app)
 
 # Note: Upload directory creation removed for serverless compatibility
-
-# Database Models
-class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(255), nullable=False)
-    first_name = db.Column(db.String(50), nullable=False)
-    last_name = db.Column(db.String(50), nullable=False)
-    company = db.Column(db.String(100))
-    subscription_plan = db.Column(db.String(20), default='free')
-    subscription_status = db.Column(db.String(20), default='active')
-    stripe_customer_id = db.Column(db.String(100))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    last_login = db.Column(db.DateTime)
-    downloads_used = db.Column(db.Integer, default=0)
-    # OAuth fields
-    oauth_provider = db.Column(db.String(50))  # 'google' or 'apple'
-    oauth_id = db.Column(db.String(255))  # OAuth provider's user ID
-    email_verified = db.Column(db.Boolean, default=False)
-    # Platform integration tokens (stored as JSON)
-    platform_tokens = db.Column(db.Text)  # JSON string of platform OAuth tokens
-    # OpenAI API key (optional - users can provide their own)
-    openai_api_key = db.Column(db.String(255))  # User's own OpenAI API key
-    openai_usage_count = db.Column(db.Integer, default=0)  # Track AI generation usage
-    
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-    
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-    
-    def can_download(self):
-        if self.subscription_plan == 'free':
-            return self.downloads_used < 3
-        elif self.subscription_plan == 'professional':
-            return self.downloads_used < 10
-        return True  # Enterprise: unlimited
-    
-    def get_ai_generation_limit(self):
-        """Get AI generation limit based on subscription plan"""
-        limits = {
-            'free': 3,
-            'professional': 25,
-            'enterprise': 100
-        }
-        return limits.get(self.subscription_plan, 3)
-    
-    def can_generate_ai(self):
-        """Check if user can generate AI documents"""
-        limit = self.get_ai_generation_limit()
-        return self.openai_usage_count < limit
-    
-    def get_ai_generations_remaining(self):
-        """Get remaining AI generations for current month"""
-        limit = self.get_ai_generation_limit()
-        return max(0, limit - self.openai_usage_count)
-    
-    def is_platform_connected(self, platform):
-        """Check if user has connected a specific platform"""
-        if not self.platform_tokens:
-            return False
-        try:
-            import json
-            tokens = json.loads(self.platform_tokens)
-            return platform in tokens and tokens[platform].get('access_token')
-        except:
-            return False
-    
-    def get_platform_token(self, platform):
-        """Get OAuth token for a specific platform"""
-        if not self.platform_tokens:
-            return None
-        try:
-            import json
-            tokens = json.loads(self.platform_tokens)
-            return tokens.get(platform, {}).get('access_token')
-        except:
-            return None
-    
-    def has_openai_key(self):
-        """Check if user has configured OpenAI API key"""
-        return bool(self.openai_api_key)
-    
-    def to_dict(self):
-        return {
-            'id': self.id,
-            'email': self.email,
-            'first_name': self.first_name,
-            'last_name': self.last_name,
-            'company': self.company,
-            'subscription_plan': self.subscription_plan,
-            'subscription_status': self.subscription_status,
-            'downloads_used': self.downloads_used,
-            'created_at': self.created_at.isoformat() if self.created_at else None
-        }
+# User model is now imported from models.py
 
 class Template(db.Model):
     id = db.Column(db.Integer, primary_key=True)
