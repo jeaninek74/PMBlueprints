@@ -108,7 +108,7 @@ print("\n✓ All tables created successfully")
 
 # Load templates from catalog
 print("\n2. Loading templates from catalog...")
-catalog_path = '/home/ubuntu/pmb_repo/templates_catalog.json'
+catalog_path = '/home/ubuntu/pmblueprints_repo/templates_catalog.json'
 with open(catalog_path, 'r') as f:
     templates = json.load(f)
 

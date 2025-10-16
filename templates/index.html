@@ -1,1067 +1,318 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMBlueprints - AI-Powered Project Management Templates</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-        .modal.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 1200px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        .template-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-        }
-        .template-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-        .btn-primary {
-            background: #4f46e5;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background: #4338ca;
-        }
-        .btn-secondary {
-            background: #f3f4f6;
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #d1d5db;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background: #e5e7eb;
-        }
-        .logged-in {
-            display: none;
-        }
-        .logged-out {
-            display: block;
-        }
-        body.user-logged-in .logged-in {
-            display: block;
-        }
-        body.user-logged-in .logged-out {
-            display: none;
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <img src="pmblueprints_logo.png" alt="PMBlueprints Logo" class="h-8 mr-3">
+{% extends "base.html" %}
+
+{% block title %}PMBlueprints - Smart templates. Strong foundations.{% endblock %}
+
+{% block head %}
+<style>
+    /* Remove ALL animations */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .feature-card {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-gradient text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl font-bold mb-4">Smart templates. Strong foundations.</h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+            AI-powered Document Templates reduce the time spent creating project documentation by up to 70%, 
+            allowing project managers to focus on what matters most: successful project execution and delivery.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="{{ url_for('auth.register') }}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg">
+                Get Started Free
+            </a>
+            <a href="{{ url_for('templates.browse') }}" class="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-white">
+                Browse Templates
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Template Browser Section -->
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Find Your Perfect Template</h2>
+            <p class="text-xl text-gray-600">Choose from 960+ professional project management templates</p>
+        </div>
+
+        <!-- Template Filters -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <form action="{{ url_for('templates.browse') }}" method="GET" id="templateBrowserForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Industry Dropdown -->
                     <div>
-                        <span class="text-2xl font-bold text-blue-600">PMBlueprints</span>
-                        <div class="text-xs text-gray-500">Smart templates. Strong foundations.</div>
+                        <label for="industry" class="block text-lg font-semibold text-gray-900 mb-3">
+                            Select Industry <span class="text-red-500">*</span>
+                        </label>
+                        <select name="industry" id="industry" required 
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">-- Choose an Industry --</option>
+                            <option value="IT & Software">IT & Software</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Education">Education</option>
+                            <option value="Government">Government</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Telecommunications">Telecommunications</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Real Estate">Real Estate</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Non-Profit">Non-Profit</option>
+                            <option value="Aerospace">Aerospace</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Pharmaceutical">Pharmaceutical</option>
+                            <option value="Legal">Legal</option>
+                        </select>
                     </div>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#templates" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Templates</a>
-                        <a href="#features" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                        <a href="#integrations" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Integrations</a>
-                        <a href="#pricing" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
-                        <button onclick="signIn()" class="logged-out bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Sign In</button>
-                        <div class="logged-in flex items-center space-x-2">
-                            <span id="userEmail" class="text-gray-700"></span>
-                            <button onclick="signOut()" class="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Sign Out</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-bold text-gray-900 mb-6">
-                Streamline Your Projects with <span class="text-blue-600">AI-Powered Precision</span>
-            </h1>
-            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                PMBlueprints delivers intelligent, adaptable project templates that integrate seamlessly 
-                with Monday.com, Smartsheet, Workday, Microsoft Suite, and Google Workspace.
-            </p>
-            <div class="text-lg text-blue-600 font-semibold mb-6">
-                Choose from 960 professional templates across 30 industries
-            </div>
-            <div class="flex justify-center space-x-4">
-                <button onclick="getStarted()" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
-                    Get Started Free
-                </button>
-                <button onclick="viewTemplates()" class="bg-white text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold border border-gray-300 hover:bg-gray-50 transition duration-300">
-                    View Templates
-                </button>
-            </div>
-        </div>
-    </section>
+                    <!-- Template Type Dropdown -->
+                    <div>
+                        <label for="category" class="block text-lg font-semibold text-gray-900 mb-3">
+                            Select Template Type <span class="text-red-500">*</span>
+                        </label>
+                        <select name="category" id="category" required 
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">-- Choose a Template Type --</option>
+                            <option value="Project Charter">Project Charter</option>
+                            <option value="Project Plan">Project Plan</option>
+                            <option value="Risk Register">Risk Register</option>
+                            <option value="Budget Template">Budget Template</option>
+                            <option value="Schedule">Schedule</option>
+                            <option value="Status Report">Status Report</option>
+                            <option value="Stakeholder Register">Stakeholder Register</option>
+                            <option value="Communication Plan">Communication Plan</option>
+                            <option value="Resource Plan">Resource Plan</option>
+                            <option value="Quality Plan">Quality Plan</option>
+                            <option value="Change Request">Change Request</option>
+                            <option value="Lessons Learned">Lessons Learned</option>
+                            <option value="Business Case">Business Case</option>
+                            <option value="Requirements Document">Requirements Document</option>
+                            <option value="WBS">WBS (Work Breakdown Structure)</option>
+                        </select>
+                    </div>
+                </div>
 
-    <!-- Why Choose PMBlueprints -->
-    <section id="features" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose PMBlueprints</h2>
-            <p class="text-xl text-gray-600 mb-16">Built by project managers for project managers</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <div class="text-4xl mb-4">🤖</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI-Powered Templates</h3>
-                    <p class="text-gray-600">Advanced AI generates customized templates with integration instructions for all major platforms.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <div class="text-4xl mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Universal Integration</h3>
-                    <p class="text-gray-600">Works with Monday.com, Smartsheet, Workday, MS Suite, and Google Workspace out of the box.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <div class="text-4xl mb-4">✅</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">PMI 2025 Compliant</h3>
-                    <p class="text-gray-600">All templates follow the latest PMI standards with proper formulas and calculations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integrations -->
-    <section id="integrations" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-16">Seamless Integration Ecosystem</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-purple-600">M</span>
-                    </div>
-                    <h4 class="font-semibold">Monday.com</h4>
-                    <p class="text-sm text-gray-600">Board sync & automation</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-blue-600">S</span>
-                    </div>
-                    <h4 class="font-semibold">Smartsheet</h4>
-                    <p class="text-sm text-gray-600">Project plan import</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-orange-600">W</span>
-                    </div>
-                    <h4 class="font-semibold">Workday</h4>
-                    <p class="text-sm text-gray-600">Resource management</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-xl font-bold text-green-600">MS</span>
-                    </div>
-                    <h4 class="font-semibold">Microsoft Suite</h4>
-                    <p class="text-sm text-gray-600">Office 365 sync</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-red-600">G</span>
-                    </div>
-                    <h4 class="font-semibold">Google Workspace</h4>
-                    <p class="text-sm text-gray-600">Drive collaboration</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-xl text-gray-600 mb-16">Choose the plan that works for you</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-                    <div class="text-4xl font-bold text-gray-900 mb-6">$0<span class="text-lg text-gray-600">/month</span></div>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Up to 3 projects</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> AI template suggestions</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Basic analytics</li>
-                    </ul>
-                    <button onclick="selectPlan('starter')" class="w-full btn-secondary">Get Started</button>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg border-2 border-blue-500 relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Standard</h3>
-                    <div class="text-4xl font-bold text-gray-900 mb-6">$19<span class="text-lg text-gray-600">/month</span></div>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Download 15 templates/month</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> All template categories</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Advanced AI features</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> All integrations</li>
-                    </ul>
-                    <button onclick="selectPlan('standard')" class="w-full btn-primary">Get Standard</button>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Pro</h3>
-                    <div class="text-4xl font-bold text-gray-900 mb-6">$49<span class="text-lg text-gray-600">/month</span></div>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Unlimited downloads</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Custom AI training</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Priority support</li>
-                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Advanced analytics</li>
-                    </ul>
-                    <button onclick="selectPlan('pro')" class="w-full btn-primary">Upgrade to Pro</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Templates Modal -->
-    <div id="templatesModal" class="modal">
-        <div class="modal-content">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-900">Project Templates</h2>
-                <button onclick="closeTemplatesModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-4 mb-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Industry:</label>
-                    <select id="industryFilter" onchange="filterTemplates()" class="w-full p-2 border border-gray-300 rounded-md">
-                        <option value="">All Industries</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Filter by Category:</label>
-                    <select id="categoryFilter" onchange="filterTemplates()" class="w-full p-2 border border-gray-300 rounded-md">
-                        <option value="">All Categories</option>
-                    </select>
-                </div>
-                <div class="flex items-end">
-                    <button onclick="generateAITemplate()" class="w-full bg-purple-600 text-white p-2 rounded-md hover:bg-purple-700">
-                        🤖 AI Generate Template
+                <div class="mt-6 text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-12 py-4 rounded-lg font-bold text-lg">
+                        View Templates
                     </button>
                 </div>
+
+                <!-- Validation Message -->
+                <div id="validationError" class="hidden mt-4 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded">
+                    <p class="font-semibold">Please select both Industry and Template Type to continue.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Popular Templates Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Popular Templates</h2>
+            <p class="text-xl text-gray-600">Our most downloaded project management templates</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Template Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Risk Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Risk Management Plan</h3>
+                    <p class="text-sm text-gray-600 mb-4">Complete risk assessment and mitigation planning with priority matrices and tracking for business process improvement</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
             </div>
-            
-            <div id="templatesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Templates will be loaded here -->
+
+            <!-- Template Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Project Planning</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Project Charter</h3>
+                    <p class="text-sm text-gray-600 mb-4">Comprehensive project planning with objectives, scope, milestones, and stakeholder alignment for business initiatives</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Word Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+
+            <!-- Template Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Performance Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">KPI Dashboard</h3>
+                    <p class="text-sm text-gray-600 mb-4">Visual performance dashboard with automated charts, KPIs, and metrics tracking for business process monitoring</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+
+            <!-- Template Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Financial Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Budget Tracker</h3>
+                    <p class="text-sm text-gray-600 mb-4">Detailed financial tracking with automated calculations, variance analysis, and forecasting for business projects</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="{{ url_for('templates.browse') }}" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-bold text-lg">
+                View All Templates
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose PMBlueprints?</h2>
+            <p class="text-xl text-gray-600">Professional templates built by experts, powered by AI</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">960+ Templates</h3>
+                <p class="text-gray-600">Comprehensive library covering all project phases and industries</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">AI-Powered</h3>
+                <p class="text-gray-600">Generate custom documents and get intelligent suggestions</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">PMI 2025 Compliant</h3>
+                <p class="text-gray-600">All templates follow latest PMBOK standards</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Sign In Modal -->
-    <div id="signInModal" class="modal">
-        <div class="modal-content max-w-md">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-900">Sign In</h2>
-                <button onclick="closeSignInModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
-            </div>
-            
-            <div class="space-y-4">
-                <button onclick="signInWithGoogle()" class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                    <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
-                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                    </svg>
-                    Continue with Google
-                </button>
-                
-                <button onclick="signInWithMicrosoft()" class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                    <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
-                        <path fill="#f25022" d="M1 1h10v10H1z"/>
-                        <path fill="#00a4ef" d="M13 1h10v10H13z"/>
-                        <path fill="#7fba00" d="M1 13h10v10H1z"/>
-                        <path fill="#ffb900" d="M13 13h10v10H13z"/>
-                    </svg>
-                    Continue with Microsoft
-                </button>
-                
-                <button onclick="signInWithApple()" class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-black text-sm font-medium text-white hover:bg-gray-800">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                    </svg>
-                    Continue with Apple
-                </button>
-                
-                <div class="relative">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-gray-300"></div>
-                    </div>
-                    <div class="relative flex justify-center text-sm">
-                        <span class="px-2 bg-white text-gray-500">Or continue with email</span>
-                    </div>
+<!-- Platform Integrations Section -->
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+            <p class="text-xl text-gray-600">Export to your favorite project management platforms</p>
+            <p class="text-sm text-gray-500 mt-2">(Available with Enterprise plan)</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">M</span>
                 </div>
-                
-                <form onsubmit="signInWithEmail(event)">
-                    <div class="space-y-4">
-                        <input id="emailInput" type="email" placeholder="Email address" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="password" placeholder="Password" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="w-full btn-primary">Sign In</button>
-                    </div>
-                </form>
+                <h4 class="font-bold text-gray-900">Monday.com</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">S</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Smartsheet</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-green-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">G</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Google Sheets</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-blue-700 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">M</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Microsoft 365</h4>
             </div>
         </div>
+
+        <div class="text-center mt-8">
+            <a href="{{ url_for('payment.pricing') }}" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold text-lg">
+                View Enterprise Plan
+            </a>
+        </div>
     </div>
+</div>
 
-    <script>
-        // Complete template data with all industries and categories
-        const industries = [
-            'AI/ML', 'Construction', 'Healthcare', 'Technology', 'Finance', 'Manufacturing', 
-            'Education', 'Retail', 'Energy', 'Government', 'Non-Profit', 'Consulting', 
-            'Media', 'Transportation', 'Software', 'Network', 'Regulatory', 'Cybersecurity',
-            'Digital Transformation', 'Cloud Migration', 'Data Analytics', 'Business Process',
-            'Merger & Acquisition', 'Supply Chain', 'Customer Experience'
-        ];
+<!-- CTA Section -->
+<div class="bg-blue-600 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+        <p class="text-xl mb-8">Join thousands of project managers who trust PMBlueprints</p>
+        <div class="flex justify-center gap-4">
+            <a href="{{ url_for('auth.register') }}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg">
+                Start Free
+            </a>
+            <a href="{{ url_for('payment.pricing') }}" class="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-white">
+                View Pricing
+            </a>
+        </div>
+    </div>
+</div>
 
-        const categories = [
-            'Project Charter', 'Project Plan', 'WBS', 'RAID Log', 'Stakeholder Register', 
-            'Communications Plan', 'Budget Plan', 'Quality Management Plan', 'Resource Management Plan', 
-            'Procurement Plan', 'Risk Management Plan', 'Change Request Form', 'Lessons Learned', 
-            'Status Report', 'Business Case', 'KPI Dashboard', 'Training Plan', 'Training Schedule',
-            'Training Needs Assessment', 'Stakeholder Engagement Plan', 'Change Management Plan',
-            'Requirements List', 'Requirements Traceability Matrix', 'Action Item Log', 'RACI Matrix',
-            'Project Proposal', 'Feasibility Study', 'Data Readiness Assessment'
-        ];
+<script>
+// Form validation
+document.getElementById('templateBrowserForm').addEventListener('submit', function(e) {
+    const industry = document.getElementById('industry').value;
+    const category = document.getElementById('category').value;
+    const errorDiv = document.getElementById('validationError');
+    
+    if (!industry || !category) {
+        e.preventDefault();
+        errorDiv.classList.remove('hidden');
+        window.scrollTo({ top: errorDiv.offsetTop - 100, behavior: 'smooth' });
+    } else {
+        errorDiv.classList.add('hidden');
+    }
+});
+</script>
+{% endblock %}
 
-        // Generate all templates
-        let templates = [];
-        let templateId = 1;
-
-        industries.forEach(industry => {
-            categories.forEach(category => {
-                const fileType = ['DOCX', 'XLSX'][Math.floor(Math.random() * 2)];
-                const downloads = Math.floor(Math.random() * 1000) + 100;
-                
-                templates.push({
-                    id: templateId++,
-                    name: `${industry} ${category}`,
-                    industry: industry,
-                    category: category,
-                    type: fileType,
-                    downloads: downloads,
-                    description: `Comprehensive ${category.toLowerCase()} template for ${industry} projects with PMI 2025 compliance and integration support for Monday.com, Smartsheet, Workday, MS Suite, and Google Workspace. Includes proper formulas and calculations.`
-                });
-            });
-        });
-
-        // User state
-        let currentUser = null;
-
-        // Initialize dropdowns
-        function initializeDropdowns() {
-            const industryFilter = document.getElementById('industryFilter');
-            const categoryFilter = document.getElementById('categoryFilter');
-            
-            // Populate industry dropdown
-            industries.forEach(industry => {
-                const option = document.createElement('option');
-                option.value = industry;
-                option.textContent = industry;
-                industryFilter.appendChild(option);
-            });
-            
-            // Populate category dropdown
-            categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categoryFilter.appendChild(option);
-            });
-        }
-
-        // Modal functions
-        function viewTemplates() {
-            document.getElementById('templatesModal').classList.add('show');
-            initializeDropdowns();
-            loadTemplates();
-        }
-
-        function closeTemplatesModal() {
-            document.getElementById('templatesModal').classList.remove('show');
-        }
-
-        function signIn() {
-            document.getElementById('signInModal').classList.add('show');
-        }
-
-        function closeSignInModal() {
-            document.getElementById('signInModal').classList.remove('show');
-        }
-
-        // Template functions
-        function loadTemplates() {
-            const container = document.getElementById('templatesContainer');
-            container.innerHTML = '';
-            
-            // Show first 50 templates by default
-            const templatesToShow = templates.slice(0, 50);
-            
-            templatesToShow.forEach(template => {
-                const templateCard = createTemplateCard(template);
-                container.appendChild(templateCard);
-            });
-            
-            // Add load more button
-            const loadMoreBtn = document.createElement('div');
-            loadMoreBtn.className = 'col-span-full text-center mt-6';
-            loadMoreBtn.innerHTML = `
-                <button onclick="loadMoreTemplates()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-                    Load More Templates (${templates.length - 50} remaining)
-                </button>
-            `;
-            container.appendChild(loadMoreBtn);
-        }
-
-        function loadMoreTemplates() {
-            const container = document.getElementById('templatesContainer');
-            // Remove load more button
-            container.lastElementChild.remove();
-            
-            // Add all remaining templates
-            const remainingTemplates = templates.slice(50);
-            remainingTemplates.forEach(template => {
-                const templateCard = createTemplateCard(template);
-                container.appendChild(templateCard);
-            });
-        }
-
-        function createTemplateCard(template) {
-            const card = document.createElement('div');
-            card.className = 'template-card';
-            card.innerHTML = `
-                <div class="flex items-start justify-between mb-3">
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-900">${template.name}</h3>
-                            <p class="text-sm text-gray-500">${template.type} • ${template.downloads} downloads</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-sm text-gray-600 mb-4">${template.description}</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">${template.industry}</span>
-                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">${template.category}</span>
-                </div>
-                <div class="flex space-x-2">
-                    <button onclick="downloadTemplate(${template.id})" class="flex-1 bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700">
-                        📥 Download
-                    </button>
-                    <button onclick="integrateTemplate(${template.id})" class="flex-1 bg-gray-100 text-gray-700 px-3 py-2 rounded text-sm hover:bg-gray-200">
-                        🔗 Integrate
-                    </button>
-                </div>
-            `;
-            return card;
-        }
-
-        function filterTemplates() {
-            const industryFilter = document.getElementById('industryFilter').value;
-            const categoryFilter = document.getElementById('categoryFilter').value;
-            
-            const filteredTemplates = templates.filter(template => {
-                const industryMatch = !industryFilter || template.industry === industryFilter;
-                const categoryMatch = !categoryFilter || template.category === categoryFilter;
-                return industryMatch && categoryMatch;
-            });
-            
-            const container = document.getElementById('templatesContainer');
-            container.innerHTML = '';
-            
-            filteredTemplates.forEach(template => {
-                const templateCard = createTemplateCard(template);
-                container.appendChild(templateCard);
-            });
-        }
-
-        // Action functions
-        function downloadTemplate(templateId) {
-            if (!currentUser) {
-                alert('Please sign in to download templates.');
-                signIn();
-                return;
-            }
-            
-            const template = templates.find(t => t.id === templateId);
-            
-            // Create and download actual file
-            const content = generateTemplateContent(template);
-            const blob = new Blob([content], { type: template.type === 'DOCX' ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${template.name.replace(/[^a-z0-9]/gi, '_')}.${template.type.toLowerCase()}`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            
-            alert(`✅ Downloaded: ${template.name}\n\nThis template includes:\n• PMI 2025 compliance\n• Integration instructions for Monday.com, Smartsheet, Workday, MS Suite, Google Workspace\n• Proper formulas and calculations\n• Industry-specific content`);
-        }
-
-        function generateTemplateContent(template) {
-            // Generate actual template content based on type
-            if (template.type === 'XLSX') {
-                return generateExcelContent(template);
-            } else {
-                return generateWordContent(template);
-            }
-        }
-
-        function generateExcelContent(template) {
-            // Generate Excel-like content with formulas
-            let content = `${template.name}\n\n`;
-            content += `Industry: ${template.industry}\n`;
-            content += `Category: ${template.category}\n`;
-            content += `PMI 2025 Compliant: Yes\n\n`;
-            
-            if (template.category.includes('Budget')) {
-                content += `Budget Item\tPlanned\tActual\tVariance\n`;
-                content += `Labor\t100000\t95000\t=C2-B2\n`;
-                content += `Materials\t50000\t52000\t=C3-B3\n`;
-                content += `Equipment\t25000\t24000\t=C4-B4\n`;
-                content += `Total\t=SUM(B2:B4)\t=SUM(C2:C4)\t=SUM(D2:D4)\n`;
-            } else if (template.category.includes('RAID')) {
-                content += `Risk_ID\tRisk_Description\tProbability\tImpact\tRisk_Score\n`;
-                content += `R001\tWeather delays\t3\t4\t=C2*D2\n`;
-                content += `R002\tMaterial shortage\t2\t5\t=C3*D3\n`;
-                content += `R003\tLabor availability\t4\t3\t=C4*D4\n`;
-            } else if (template.category.includes('WBS') || template.category.includes('Project Plan')) {
-                content += `Task_ID\tTask_Name\tStart_Date\tFinish_Date\tDuration\tBaseline_Start\tBaseline_Finish\tBaseline_Duration\tDuration_Variance\n`;
-                content += `1\tProject Initiation\t2025-01-01\t2025-01-15\t=C2-B2+1\t2025-01-01\t2025-01-14\t=G2-F2+1\t=E2-H2\n`;
-                content += `2\tRequirements Gathering\t2025-01-16\t2025-02-15\t=C3-B3+1\t2025-01-15\t2025-02-14\t=G3-F3+1\t=E3-H3\n`;
-                content += `3\tDesign Phase\t2025-02-16\t2025-03-31\t=C4-B4+1\t2025-02-15\t2025-03-30\t=G4-F4+1\t=E4-H4\n`;
-            } else {
-                content += `Item\tDescription\tStatus\tOwner\tDue_Date\n`;
-                content += `1\tSample item 1\tIn Progress\tProject Manager\t2025-12-31\n`;
-                content += `2\tSample item 2\tNot Started\tTeam Lead\t2025-12-31\n`;
-                content += `3\tSample item 3\tCompleted\tAnalyst\t2025-12-31\n`;
-            }
-            
-            content += `\n\nIntegration Instructions:\n`;
-            content += `• Monday.com: Import as board with automation rules\n`;
-            content += `• Smartsheet: Use project plan import feature\n`;
-            content += `• Workday: Connect to resource management\n`;
-            content += `• MS Suite: Sync with Teams and SharePoint\n`;
-            content += `• Google Workspace: Collaborate via Drive\n`;
-            
-            return content;
-        }
-
-        function generateWordContent(template) {
-            let content = `${template.name}\n\n`;
-            content += `Industry: ${template.industry}\n`;
-            content += `Category: ${template.category}\n`;
-            content += `PMI 2025 Compliant: Yes\n\n`;
-            
-            if (template.category.includes('Charter')) {
-                content += `PROJECT CHARTER\n\n`;
-                content += `1. PROJECT OVERVIEW\n`;
-                content += `Project Name: [Enter Project Name]\n`;
-                content += `Project Manager: [Enter PM Name]\n`;
-                content += `Start Date: [Enter Date]\n`;
-                content += `End Date: [Enter Date]\n\n`;
-                content += `2. PROJECT OBJECTIVES\n`;
-                content += `• [Objective 1]\n`;
-                content += `• [Objective 2]\n`;
-                content += `• [Objective 3]\n\n`;
-                content += `3. SUCCESS CRITERIA\n`;
-                content += `• [Criteria 1]\n`;
-                content += `• [Criteria 2]\n\n`;
-                content += `4. STAKEHOLDERS\n`;
-                content += `• Project Sponsor: [Name]\n`;
-                content += `• Project Manager: [Name]\n`;
-                content += `• Key Stakeholders: [Names]\n\n`;
-            } else if (template.category.includes('Business Case')) {
-                content += `BUSINESS CASE\n\n`;
-                content += `1. EXECUTIVE SUMMARY\n`;
-                content += `[Brief overview of the business case]\n\n`;
-                content += `2. PROBLEM STATEMENT\n`;
-                content += `[Description of the problem or opportunity]\n\n`;
-                content += `3. PROPOSED SOLUTION\n`;
-                content += `[Description of the proposed solution]\n\n`;
-                content += `4. FINANCIAL ANALYSIS\n`;
-                content += `Initial Investment: $[Amount]\n`;
-                content += `Annual Benefits: $[Amount]\n`;
-                content += `ROI: [Percentage]\n`;
-                content += `Payback Period: [Months/Years]\n\n`;
-            } else {
-                content += `${template.category.toUpperCase()}\n\n`;
-                content += `1. PURPOSE\n`;
-                content += `[Enter the purpose of this document]\n\n`;
-                content += `2. SCOPE\n`;
-                content += `[Define the scope]\n\n`;
-                content += `3. METHODOLOGY\n`;
-                content += `[Describe the methodology]\n\n`;
-                content += `4. DELIVERABLES\n`;
-                content += `• [Deliverable 1]\n`;
-                content += `• [Deliverable 2]\n`;
-                content += `• [Deliverable 3]\n\n`;
-            }
-            
-            content += `INTEGRATION INSTRUCTIONS:\n\n`;
-            content += `Monday.com Integration:\n`;
-            content += `• Create board structure based on this template\n`;
-            content += `• Set up automation rules for status updates\n`;
-            content += `• Configure notifications and dependencies\n\n`;
-            
-            content += `Smartsheet Integration:\n`;
-            content += `• Import project plan structure\n`;
-            content += `• Set up resource allocation\n`;
-            content += `• Configure reporting dashboards\n\n`;
-            
-            content += `Workday Integration:\n`;
-            content += `• Link to resource management system\n`;
-            content += `• Connect budget and cost tracking\n`;
-            content += `• Set up time tracking integration\n\n`;
-            
-            content += `Microsoft Suite Integration:\n`;
-            content += `• Sync with Teams for collaboration\n`;
-            content += `• Store documents in SharePoint\n`;
-            content += `• Use Power BI for analytics\n\n`;
-            
-            content += `Google Workspace Integration:\n`;
-            content += `• Collaborate via Google Drive\n`;
-            content += `• Use Google Sheets for data tracking\n`;
-            content += `• Set up Google Calendar integration\n`;
-            
-            return content;
-        }
-
-        function integrateTemplate(templateId) {
-            if (!currentUser) {
-                alert('Please sign in to access integration features.');
-                signIn();
-                return;
-            }
-            
-            const template = templates.find(t => t.id === templateId);
-            const integrationOptions = `
-Integration Options for ${template.name}:
-
-🔵 Monday.com
-• Board sync & automation
-• Status tracking
-• Team collaboration
-
-📊 Smartsheet  
-• Project plan import
-• Resource management
-• Advanced reporting
-
-💼 Workday
-• Resource allocation
-• Budget tracking
-• Time management
-
-🏢 Microsoft Suite
-• Teams collaboration
-• SharePoint storage
-• Power BI analytics
-
-🌐 Google Workspace
-• Drive collaboration
-• Sheets integration
-• Calendar sync
-
-Select your preferred platform to continue with integration setup.
-            `;
-            alert(integrationOptions);
-        }
-
-        function generateAITemplate() {
-            if (!currentUser) {
-                alert('Please sign in to use AI features.');
-                signIn();
-                return;
-            }
-            
-            const projectType = prompt('🤖 AI Template Generator\n\nDescribe your project type (e.g., "Software development for healthcare", "Construction of office building", "AI/ML implementation"):');
-            
-            if (projectType) {
-                // Simulate AI processing
-                setTimeout(() => {
-                    alert(`✨ AI Generated Template Ready!\n\nBased on your input: "${projectType}"\n\nThe AI has created a customized template with:\n\n• Industry-specific content\n• PMI 2025 compliance\n• Integration instructions for all platforms\n• Proper formulas and calculations\n• Risk assessments\n• Resource planning\n\nTemplate will be available in your downloads.`);
-                }, 2000);
-                
-                alert('🤖 AI is analyzing your requirements...\n\nGenerating customized template with:\n• Industry best practices\n• PMI 2025 standards\n• Integration support\n• Proper formulas\n\nPlease wait...');
-            }
-        }
-
-        function getStarted() {
-            signIn();
-        }
-
-        function selectPlan(plan) {
-            if (!currentUser) {
-                signIn();
-                return;
-            }
-            
-            if (plan === 'starter') {
-                alert('✅ Free plan selected!\n\nYou now have access to:\n• Browse all templates\n• View template previews\n• Basic project management features\n\nUpgrade anytime for downloads and premium features!');
-                return;
-            }
-            
-            // Show payment method selection modal
-            showPaymentMethodSelection(plan);
-        }
-
-        function showPaymentMethodSelection(plan) {
-            const planDetails = {
-                standard: { name: 'Standard Plan', price: '$19/month', downloads: '15 template downloads' },
-                pro: { name: 'Pro Plan', price: '$49/month', downloads: 'Unlimited downloads' }
-            };
-            
-            const selectedPlan = planDetails[plan];
-            
-            const paymentModal = `
-                <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-                        <div class="flex justify-between items-center mb-6">
-                            <h2 class="text-2xl font-bold text-gray-900">Choose Payment Method</h2>
-                            <button onclick="closePaymentModal()" class="text-gray-400 hover:text-gray-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900">${selectedPlan.name}</h3>
-                            <p class="text-gray-600">${selectedPlan.price} • ${selectedPlan.downloads}</p>
-                        </div>
-                        
-                        <div class="space-y-3 mb-6">
-                            <button onclick="processPayment('${plan}', 'card')" class="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">💳</span>
-                                    <div class="text-left">
-                                        <div class="font-medium">Credit/Debit Card</div>
-                                        <div class="text-sm text-gray-500">Visa, Mastercard, Amex, Discover</div>
-                                    </div>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            
-                            <button onclick="processPayment('${plan}', 'apple_pay')" class="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🍎</span>
-                                    <div class="text-left">
-                                        <div class="font-medium">Apple Pay</div>
-                                        <div class="text-sm text-gray-500">Pay with Touch ID, Face ID, or passcode</div>
-                                    </div>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            
-                            <button onclick="processPayment('${plan}', 'google_pay')" class="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🔵</span>
-                                    <div class="text-left">
-                                        <div class="font-medium">Google Pay</div>
-                                        <div class="text-sm text-gray-500">Pay with your Google account</div>
-                                    </div>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            
-                            <button onclick="processPayment('${plan}', 'paypal')" class="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🅿️</span>
-                                    <div class="text-left">
-                                        <div class="font-medium">PayPal</div>
-                                        <div class="text-sm text-gray-500">Pay with your PayPal account</div>
-                                    </div>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            
-                            <button onclick="processPayment('${plan}', 'us_bank_account')" class="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50">
-                                <div class="flex items-center">
-                                    <span class="text-2xl mr-3">🏦</span>
-                                    <div class="text-left">
-                                        <div class="font-medium">Bank Account (ACH)</div>
-                                        <div class="text-sm text-gray-500">Direct bank transfer (3-5 business days)</div>
-                                    </div>
-                                </div>
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="text-xs text-gray-500 text-center">
-                            🔒 Secure payment processing by Stripe<br>
-                            Your payment information is encrypted and secure
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            document.body.insertAdjacentHTML('beforeend', paymentModal);
-        }
-
-        function closePaymentModal() {
-            const modal = document.getElementById('paymentModal');
-            if (modal) {
-                modal.remove();
-            }
-        }
-
-        async function processPayment(plan, paymentMethod) {
-            try {
-                closePaymentModal();
-                
-                // Show processing message
-                alert(`🔄 Processing ${paymentMethod.replace('_', ' ')} payment for ${plan} plan...\n\nPlease wait while we redirect you to secure checkout.`);
-                
-                // Create checkout session with selected payment method
-                const response = await fetch('/api/payments/create-checkout-session', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include',
-                    body: JSON.stringify({ 
-                        plan_type: plan,
-                        payment_method: paymentMethod
-                    })
-                });
-                
-                const data = await response.json();
-                
-                if (data.checkout_url) {
-                    // Redirect to Stripe checkout
-                    window.location.href = data.checkout_url;
-                } else {
-                    alert('❌ Payment processing failed. Please try again.');
-                }
-                
-            } catch (error) {
-                console.error('Payment processing error:', error);
-                alert('❌ Payment processing failed. Please try again.');
-            }
-        }
-
-        // Authentication functions
-        async function signInWithGoogle() {
-            try {
-                // Check if OAuth is configured, otherwise use demo mode
-                const response = await fetch('/api/oauth/demo/google', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include'
-                });
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.success) {
-                        currentUser = data.user;
-                        document.body.classList.add('user-logged-in');
-                        document.getElementById('userEmail').textContent = currentUser.email;
-                        closeSignInModal();
-                        
-                        // Store session info for template downloads
-                        sessionStorage.setItem('user', JSON.stringify(currentUser));
-                        sessionStorage.setItem('authenticated', 'true');
-                        
-                        // Redirect to dashboard
-                        window.location.href = data.redirect;
-                    } else {
-                        alert('Sign in failed: ' + (data.error || 'Unknown error'));
-                    }
-                } else {
-                    const errorData = await response.json();
-                    alert('Sign in failed: ' + (errorData.error || 'Server error'));
-                }
-            } catch (error) {
-                console.error('Google sign in error:', error);
-                alert('Sign in failed. Please try again.');
-            }
-        }
-
-        async function signInWithMicrosoft() {
-            try {
-                const response = await fetch('/api/oauth/demo/microsoft', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include'
-                });
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.success) {
-                        currentUser = data.user;
-                        document.body.classList.add('user-logged-in');
-                        document.getElementById('userEmail').textContent = currentUser.email;
-                        closeSignInModal();
-                        
-                        // Store session info for template downloads
-                        sessionStorage.setItem('user', JSON.stringify(currentUser));
-                        sessionStorage.setItem('authenticated', 'true');
-                        
-                        // Redirect to dashboard
-                        window.location.href = data.redirect;
-                    } else {
-                        alert('Sign in failed: ' + (data.error || 'Unknown error'));
-                    }
-                } else {
-                    const errorData = await response.json();
-                    alert('Sign in failed: ' + (errorData.error || 'Server error'));
-                }
-            } catch (error) {
-                console.error('Microsoft sign in error:', error);
-                alert('Sign in failed. Please try again.');
-            }
-        }
-
-        async function signInWithApple() {
-            try {
-                const response = await fetch('/api/oauth/demo/apple', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include'
-                });
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.success) {
-                        currentUser = data.user;
-                        document.body.classList.add('user-logged-in');
-                        document.getElementById('userEmail').textContent = currentUser.email;
-                        closeSignInModal();
-                        
-                        // Store session info for template downloads
-                        sessionStorage.setItem('user', JSON.stringify(currentUser));
-                        sessionStorage.setItem('authenticated', 'true');
-                        
-                        // Redirect to dashboard
-                        window.location.href = data.redirect;
-                    } else {
-                        alert('Sign in failed: ' + (data.error || 'Unknown error'));
-                    }
-                } else {
-                    const errorData = await response.json();
-                    alert('Sign in failed: ' + (errorData.error || 'Server error'));
-                }
-            } catch (error) {
-                console.error('Apple sign in error:', error);
-                alert('Sign in failed. Please try again.');
-            }
-        }
-
-        async function signInWithEmail(event) {
-            event.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            const password = document.getElementById('passwordInput').value;
-            
-            try {
-                const response = await fetch('/api/auth/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email, password })
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    currentUser = data.user;
-                    document.body.classList.add('user-logged-in');
-                    document.getElementById('userEmail').textContent = currentUser.email;
-                    closeSignInModal();
-                    
-                    // Redirect to dashboard
-                    window.location.href = '/dashboard.html';
-                } else {
-                    alert('Sign in failed: ' + data.message);
-                }
-            } catch (error) {
-                console.error('Email sign in error:', error);
-                alert('Sign in failed. Please try again.');
-            }
-        }
-
-        function signOut() {
-            currentUser = null;
-            document.body.classList.remove('user-logged-in');
-            alert('Successfully signed out!');
-        }
-
-        // Close modals when clicking outside
-        window.onclick = function(event) {
-            const templatesModal = document.getElementById('templatesModal');
-            const signInModal = document.getElementById('signInModal');
-            
-            if (event.target === templatesModal) {
-                closeTemplatesModal();
-            }
-            if (event.target === signInModal) {
-                closeSignInModal();
-            }
-        }
-    </script>
-</body>
-</html>

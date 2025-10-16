@@ -3,176 +3,243 @@
 {% block title %}My Account - PMBlueprints{% endblock %}
 
 {% block content %}
-<div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">My Account</h1>
-    
-    <!-- Account Information -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <!-- Profile Information -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-4">Profile Information</h2>
-            <div class="space-y-3">
-                <div>
-                    <label class="text-sm text-gray-600">Email</label>
-                    <p class="font-medium">{{ user.email }}</p>
-                </div>
-                <div>
-                    <label class="text-sm text-gray-600">Name</label>
-                    <p class="font-medium">{{ user.name or 'Not set' }}</p>
-                </div>
-                <div>
-                    <label class="text-sm text-gray-600">Company</label>
-                    <p class="font-medium">{{ user.company or 'Not set' }}</p>
-                </div>
-                <div>
-                    <label class="text-sm text-gray-600">Member Since</label>
-                    <p class="font-medium">{{ user.created_at.strftime('%B %d, %Y') if user.created_at else 'Unknown' }}</p>
+<div class="container py-5">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Account Menu</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#subscription" data-bs-toggle="tab">
+                                <i class="fas fa-credit-card me-2"></i>Subscription
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#templates" data-bs-toggle="tab">
+                                <i class="fas fa-file-alt me-2"></i>My Templates
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#billing" data-bs-toggle="tab">
+                                <i class="fas fa-receipt me-2"></i>Billing History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profile" data-bs-toggle="tab">
+                                <i class="fas fa-user me-2"></i>Profile
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-        <!-- Subscription Information -->
-        <div class="bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-4">Subscription</h2>
-            <div class="space-y-3">
-                <div>
-                    <label class="text-sm text-gray-600">Current Plan</label>
-                    <p class="font-medium text-lg">{{ subscription.tier_name }}</p>
+
+        <!-- Main Content -->
+        <div class="col-lg-9">
+            <div class="tab-content">
+                <!-- Subscription Tab -->
+                <div class="tab-pane fade show active" id="subscription">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-crown me-2"></i>Current Plan</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h3 class="mb-2">{{ current_user.subscription_tier|title }} Plan</h3>
+                                    <p class="text-muted mb-2">
+                                        {% if current_user.subscription_tier == 'free' %}
+                                            3 template downloads per month
+                                        {% elif current_user.subscription_tier == 'professional' %}
+                                            $50/month - 10 template downloads per month
+                                        {% elif current_user.subscription_tier == 'enterprise' %}
+                                            $150/month - Unlimited downloads
+                                        {% endif %}
+                                    </p>
+                                    {% if current_user.subscription_end_date %}
+                                    <p class="text-muted small">
+                                        <i class="fas fa-calendar me-1"></i>
+                                        {% if current_user.subscription_tier != 'free' %}
+                                            Next billing date: {{ current_user.subscription_end_date.strftime('%B %d, %Y') }}
+                                        {% endif %}
+                                    </p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    {% if current_user.subscription_tier == 'free' %}
+                                        <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-lg">
+                                            <i class="fas fa-arrow-up me-2"></i>Upgrade Plan
+                                        </a>
+                                    {% else %}
+                                        <a href="{{ url_for('pricing') }}" class="btn btn-outline-primary">
+                                            <i class="fas fa-exchange-alt me-2"></i>Change Plan
+                                        </a>
+                                        <button class="btn btn-outline-danger mt-2" onclick="cancelSubscription()">
+                                            <i class="fas fa-times me-2"></i>Cancel Plan
+                                        </button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usage Stats -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>This Month's Usage</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <h2 class="text-primary">{{ downloads_this_month }}</h2>
+                                        <p class="text-muted">Template Downloads</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <h2 class="text-primary">{{ ai_generations_this_month }}</h2>
+                                        <p class="text-muted">AI Generations</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <h2 class="text-primary">{{ purchased_templates|length }}</h2>
+                                        <p class="text-muted">Purchased Templates</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label class="text-sm text-gray-600">Price</label>
-                    <p class="font-medium">
-                        {% if subscription.price == 0 %}
-                            Free
-                        {% else %}
-                            ${{ "%.2f"|format(subscription.price / 100) }}
-                            {% if subscription.tier == 'individual' %}
-                                (one-time)
+
+                <!-- My Templates Tab -->
+                <div class="tab-pane fade" id="templates">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-file-alt me-2"></i>My Purchased Templates</h4>
+                        </div>
+                        <div class="card-body">
+                            {% if purchased_templates %}
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Template Name</th>
+                                                <th>Industry</th>
+                                                <th>Purchase Date</th>
+                                                <th>Price</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for purchase in purchased_templates %}
+                                            <tr>
+                                                <td>{{ purchase.template_name }}</td>
+                                                <td>{{ purchase.industry }}</td>
+                                                <td>{{ purchase.purchase_date.strftime('%B %d, %Y') }}</td>
+                                                <td>${{ purchase.price }}</td>
+                                                <td>
+                                                    <a href="{{ url_for('templates.download_template', template_id=purchase.template_id) }}" class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-download me-1"></i>Download
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             {% else %}
-                                /month
+                                <div class="text-center py-5">
+                                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                    <p class="text-muted">No purchased templates yet</p>
+                                    <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
+                                        <i class="fas fa-shopping-cart me-2"></i>Browse Templates
+                                    </a>
+                                </div>
                             {% endif %}
-                        {% endif %}
-                    </p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label class="text-sm text-gray-600">Status</label>
-                    <p class="font-medium">
-                        <span class="px-2 py-1 rounded text-sm {% if subscription.is_active %}bg-green-100 text-green-800{% else %}bg-gray-100 text-gray-800{% endif %}">
-                            {{ 'Active' if subscription.is_active else 'Inactive' }}
-                        </span>
-                    </p>
+
+                <!-- Billing History Tab -->
+                <div class="tab-pane fade" id="billing">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-receipt me-2"></i>Billing History</h4>
+                        </div>
+                        <div class="card-body">
+                            {% if payment_history %}
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th>Invoice</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for payment in payment_history %}
+                                            <tr>
+                                                <td>{{ payment.created_at.strftime('%B %d, %Y') }}</td>
+                                                <td>{{ payment.plan_type|title }} Plan</td>
+                                                <td>${{ payment.amount }}</td>
+                                                <td>
+                                                    <span class="badge bg-success">Paid</span>
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-file-pdf me-1"></i>Download
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% else %}
+                                <div class="text-center py-5">
+                                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                    <p class="text-muted">No billing history yet</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
-                {% if subscription.tier != 'enterprise' %}
-                <div class="mt-4">
-                    <a href="/pricing" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                        Upgrade Plan
-                    </a>
+
+                <!-- Profile Tab -->
+                <div class="tab-pane fade" id="profile">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0"><i class="fas fa-user me-2"></i>Profile Information</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="{{ url_for('update_profile') }}">
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" value="{{ current_user.email }}" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" value="{{ current_user.name or '' }}" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Company</label>
+                                    <input type="text" class="form-control" name="company" value="{{ current_user.company or '' }}" placeholder="Company Name">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>Save Changes
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                {% endif %}
-                {% if subscription.can_cancel %}
-                <div class="mt-2">
-                    <button onclick="cancelSubscription()" class="text-red-600 hover:text-red-800 text-sm">
-                        Cancel Subscription
-                    </button>
-                </div>
-                {% endif %}
             </div>
-        </div>
-    </div>
-    
-    <!-- Usage Statistics -->
-    <div class="bg-white rounded-lg shadow p-6 mb-8">
-        <h2 class="text-xl font-semibold mb-4">Usage This Month</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Downloads -->
-            <div>
-                <h3 class="text-sm text-gray-600 mb-2">Template Downloads</h3>
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-2xl font-bold">{{ usage.downloads.used }}</span>
-                    <span class="text-gray-600">/ {{ usage.downloads.limit }}</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-blue-600 h-2 rounded-full" style="width: {% if usage.downloads.limit > 0 %}{{ (usage.downloads.used / usage.downloads.limit * 100)|int }}{% else %}0{% endif %}%"></div>
-                </div>
-                <p class="text-sm text-gray-600 mt-1">{{ usage.downloads.remaining }} remaining</p>
-            </div>
-            
-            <!-- AI Suggestions -->
-            <div>
-                <h3 class="text-sm text-gray-600 mb-2">AI Suggestions</h3>
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-2xl font-bold">{{ usage.ai_suggestions.used }}</span>
-                    <span class="text-gray-600">/ {{ usage.ai_suggestions.limit }}</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-green-600 h-2 rounded-full" style="width: {% if usage.ai_suggestions.limit > 0 %}{{ (usage.ai_suggestions.used / usage.ai_suggestions.limit * 100)|int }}{% else %}0{% endif %}%"></div>
-                </div>
-                <p class="text-sm text-gray-600 mt-1">{{ usage.ai_suggestions.remaining }} remaining</p>
-            </div>
-            
-            <!-- AI Generations -->
-            <div>
-                <h3 class="text-sm text-gray-600 mb-2">AI Generations</h3>
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-2xl font-bold">{{ usage.ai_generations.used }}</span>
-                    <span class="text-gray-600">/ {{ usage.ai_generations.limit }}</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-purple-600 h-2 rounded-full" style="width: {% if usage.ai_generations.limit > 0 %}{{ (usage.ai_generations.used / usage.ai_generations.limit * 100)|int }}{% else %}0{% endif %}%"></div>
-                </div>
-                <p class="text-sm text-gray-600 mt-1">{{ usage.ai_generations.remaining }} remaining</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Features Available -->
-    <div class="bg-white rounded-lg shadow p-6 mb-8">
-        <h2 class="text-xl font-semibold mb-4">Available Features</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Browse all templates</span>
-            </div>
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>View template details</span>
-            </div>
-            {% if usage.downloads.limit > 0 %}
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Download templates ({{ usage.downloads.limit }}/month)</span>
-            </div>
-            {% endif %}
-            {% if usage.ai_generations.limit > 0 %}
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>AI Generator ({{ usage.ai_generations.limit }}/month)</span>
-            </div>
-            {% endif %}
-            {% if usage.ai_suggestions.limit > 0 %}
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>AI Suggestions ({{ usage.ai_suggestions.limit }}/month)</span>
-            </div>
-            {% endif %}
-            {% if usage.platform_integrations %}
-            <div class="flex items-center">
-                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Platform Integrations</span>
-            </div>
-            {% endif %}
         </div>
     </div>
 </div>
@@ -180,7 +247,7 @@
 <script>
 function cancelSubscription() {
     if (confirm('Are you sure you want to cancel your subscription? You will lose access to premium features at the end of your billing period.')) {
-        fetch('/account/cancel', {
+        fetch('/cancel-subscription', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -192,12 +259,8 @@ function cancelSubscription() {
                 alert('Subscription cancelled successfully');
                 location.reload();
             } else {
-                alert('Error: ' + data.error);
+                alert('Error cancelling subscription: ' + data.error);
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to cancel subscription');
         });
     }
 }

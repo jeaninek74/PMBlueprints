@@ -3,252 +3,229 @@
 {% block title %}Pricing - PMBlueprints{% endblock %}
 
 {% block content %}
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Simple, Transparent Pricing</h1>
-        <p class="lead">Choose the plan that fits your project management needs</p>
-    </div>
-
-    <div class="row justify-content-center g-4">
-        <!-- Free Tier -->
-        <div class="col-lg-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body p-4 text-center">
-                    <h4 class="card-title">Free</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$0</div>
-                    <p class="text-muted mb-4">Forever</p>
-                    
-                    <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Browse all templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>View template details</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Access AI feature pages</li>
-                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>Download templates</li>
-                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>Use AI features</li>
-                    </ul>
-                    
-                    <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary w-100">Get Started</a>
-                </div>
-            </div>
+<div class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h1>
+            <p class="text-xl text-gray-600">Select the perfect plan for your project management needs</p>
         </div>
 
-        <!-- Individual Tier -->
-        <div class="col-lg-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body p-4 text-center">
-                    <h4 class="card-title">Individual</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$50</div>
-                    <p class="text-muted mb-4">One-time</p>
-                    
-                    <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>One template download <strong>OR</strong></li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>One AI generation</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Choose from 960+ templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full AI Generator access</li>
-                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>Platform integrations</li>
-                    </ul>
-                    
-                    <button class="btn btn-primary w-100" onclick="startCheckout('individual')">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Professional Tier -->
-        <div class="col-lg-3">
-            <div class="card h-100 shadow border-primary">
-                <div class="card-header bg-primary text-white text-center">
-                    <span class="badge bg-light text-primary">Most Popular</span>
-                </div>
-                <div class="card-body p-4 text-center">
-                    <h4 class="card-title">Professional</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$49</div>
-                    <p class="text-muted mb-4">/month</p>
-                    
-                    <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
-                    </ul>
-                    
-                    <button class="btn btn-primary w-100" onclick="startCheckout('professional')">Subscribe Now</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Enterprise Tier -->
-        <div class="col-lg-3">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body p-4 text-center">
-                    <h4 class="card-title">Enterprise</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$100</div>
-                    <p class="text-muted mb-4">/month</p>
-                    
-                    <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Professional</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 downloads/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Platform Integrations</strong></li>
-                        <li class="mb-2 ms-4"><small>• Monday.com</small></li>
-                        <li class="mb-2 ms-4"><small>• Smartsheet</small></li>
-                        <li class="mb-2 ms-4"><small>• Google Sheets</small></li>
-                        <li class="mb-2 ms-4"><small>• Microsoft 365</small></li>
-                    </ul>
-                    
-                    <button class="btn btn-outline-primary w-100" onclick="startCheckout('enterprise')">Subscribe Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Comparison Table -->
-    <div class="row mt-5">
-        <div class="col-12">
-            <h3 class="text-center mb-4">Feature Comparison</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Feature</th>
-                            <th class="text-center">Free</th>
-                            <th class="text-center">Individual</th>
-                            <th class="text-center">Professional</th>
-                            <th class="text-center">Enterprise</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Template Downloads/Month</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">1 (one-time)</td>
-                            <td class="text-center">2</td>
-                            <td class="text-center">2</td>
-                        </tr>
-                        <tr>
-                            <td>AI Suggestions/Month</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">4</td>
-                            <td class="text-center">4</td>
-                        </tr>
-                        <tr>
-                            <td>AI Generations/Month</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center">1 (one-time)</td>
-                            <td class="text-center">6</td>
-                            <td class="text-center">6</td>
-                        </tr>
-                        <tr>
-                            <td>Platform Integrations</td>
-                            <td class="text-center"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center"><i class="fas fa-times text-muted"></i></td>
-                            <td class="text-center"><i class="fas fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Support</td>
-                            <td class="text-center">Community</td>
-                            <td class="text-center">Email</td>
-                            <td class="text-center">Priority Email</td>
-                            <td class="text-center">Dedicated</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="row mt-5">
-        <div class="col-lg-8 mx-auto">
-            <h3 class="text-center mb-4">Frequently Asked Questions</h3>
-            
-            <div class="accordion" id="pricingFAQ">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            What's the difference between Individual and Professional?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFAQ">
-                        <div class="accordion-body">
-                            Individual is a one-time $50 payment that gives you either one template download OR one AI generation. Professional is a monthly subscription that gives you 2 downloads, 4 AI suggestions, and 6 AI generations every month.
-                        </div>
-                    </div>
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Free Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+                    <div class="text-4xl font-bold text-gray-900 mb-2">$0</div>
+                    <p class="text-gray-600">Forever</p>
                 </div>
                 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Can I upgrade or downgrade my plan?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                        <div class="accordion-body">
-                            Yes, you can upgrade from Professional to Enterprise at any time. Changes take effect immediately.
-                        </div>
-                    </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Browse all templates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">View template details</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        <span class="text-gray-500">No downloads</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        <span class="text-gray-500">No AI features</span>
+                    </li>
+                </ul>
+                
+                <button class="w-full bg-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold cursor-not-allowed" disabled>
+                    Current Plan
+                </button>
+            </div>
+
+            <!-- Individual Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-500">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Individual</h3>
+                    <div class="text-4xl font-bold text-blue-600 mb-2">$50</div>
+                    <p class="text-gray-600">One-time</p>
                 </div>
                 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            What are platform integrations?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                        <div class="accordion-body">
-                            Enterprise tier includes direct integrations with Monday.com, Smartsheet, Google Sheets, and Microsoft 365. You can export templates directly to these platforms with one click.
-                        </div>
-                    </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>1 download</strong> OR</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>1 AI generation</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Choose from 960+ templates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Perfect for one-time needs</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='individual') }}" class="block w-full bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Professional Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-purple-500 relative">
+                <div class="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                    POPULAR
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+                    <div class="text-4xl font-bold text-purple-600 mb-2">$49</div>
+                    <p class="text-gray-600">Per month</p>
                 </div>
                 
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            Do unused downloads roll over?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
-                        <div class="accordion-body">
-                            No, unused downloads and AI generations do not roll over to the next month. Your quota resets at the beginning of each billing period.
-                        </div>
-                    </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>2 downloads</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>4 AI suggestions</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>6 AI generations</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">All template categories</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='professional') }}" class="block w-full bg-purple-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-purple-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-indigo-500">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">$100</div>
+                    <p class="text-gray-600">Per month</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">All Professional features</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Monday.com</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Smartsheet</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Google Sheets</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Microsoft 365</strong> integration</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='enterprise') }}" class="block w-full bg-indigo-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-indigo-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I upgrade or downgrade my plan?</h3>
+                    <p class="text-gray-600">Yes, you can change your plan at any time from your account dashboard. Changes take effect immediately.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">What happens if I exceed my monthly limits?</h3>
+                    <p class="text-gray-600">You'll be prompted to upgrade your plan. Alternatively, you can wait until the next billing cycle when your limits reset.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I purchase individual templates without a subscription?</h3>
+                    <p class="text-gray-600">Yes! The Individual tier allows you to purchase access for $50, giving you one template download OR one AI generation.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
+                    <p class="text-gray-600">We accept all major credit cards (Visa, MasterCard, American Express) through our secure Stripe payment processor.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-function startCheckout(tier) {
-    {% if current_user.is_authenticated %}
-        // User is logged in, proceed to checkout
-        fetch('/payment/create-checkout-session', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ tier: tier })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.checkout_url) {
-                window.location.href = data.checkout_url;
-            } else {
-                alert('Error: ' + (data.error || 'Failed to create checkout session'));
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to start checkout. Please try again.');
-        });
-    {% else %}
-        // User is not logged in, redirect to login
-        window.location.href = '/auth/login?next=' + encodeURIComponent('/pricing');
-    {% endif %}
-}
-</script>
+<script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
 

@@ -1,1 +1,218 @@
-Inherited file content will not be shown
+{% extends "base.html" %}
+
+{% block title %}Dashboard - PMBlueprints{% endblock %}
+
+{% block head %}
+<style>
+    /* Remove ALL animations */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .stat-card {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .progress-bar {
+        background: #e5e7eb;
+        border-radius: 4px;
+        height: 8px;
+        overflow: hidden;
+    }
+    
+    .progress-fill {
+        background: #3b82f6;
+        height: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="text-gray-600 mt-2">Welcome back, {{ current_user.first_name }}!</p>
+        </div>
+
+        <!-- Subscription Info -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Current Plan</h2>
+                    <p class="text-3xl font-bold text-blue-600">{{ usage_stats.tier|title }}</p>
+                    {% if current_user.subscription_status %}
+                    <p class="text-sm text-gray-600 mt-1">Status: {{ current_user.subscription_status|title }}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <a href="{{ url_for('payment.pricing') }}" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">
+                        {% if usage_stats.tier == 'free' %}
+                        Upgrade Plan
+                        {% else %}
+                        Change Plan
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Downloads -->
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Template Downloads</h3>
+                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                    </svg>
+                </div>
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.downloads.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.downloads.limit }}</span>
+                </div>
+                <div class="progress-bar">
+                    {% set download_percent = (usage_stats.downloads.used / usage_stats.downloads.limit * 100) if usage_stats.downloads.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ download_percent }}%"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.downloads.remaining }} remaining this month</p>
+            </div>
+
+            <!-- AI Suggestions -->
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">AI Suggestions</h3>
+                    <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.ai_suggestions.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.ai_suggestions.limit }}</span>
+                </div>
+                <div class="progress-bar">
+                    {% set suggestions_percent = (usage_stats.ai_suggestions.used / usage_stats.ai_suggestions.limit * 100) if usage_stats.ai_suggestions.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ suggestions_percent }}%; background: #9333ea;"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.ai_suggestions.remaining }} remaining this month</p>
+            </div>
+
+            <!-- AI Generations -->
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">AI Generations</h3>
+                    <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.ai_generations.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.ai_generations.limit }}</span>
+                </div>
+                <div class="progress-bar">
+                    {% set generations_percent = (usage_stats.ai_generations.used / usage_stats.ai_generations.limit * 100) if usage_stats.ai_generations.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ generations_percent }}%; background: #10b981;"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.ai_generations.remaining }} remaining this month</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <a href="{{ url_for('templates.browse') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">Browse Templates</span>
+                </a>
+
+                <a href="{{ url_for('ai_generator.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">AI Generator</span>
+                </a>
+
+                <a href="{{ url_for('ai_suggestions.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">AI Suggestions</span>
+                </a>
+
+                {% if usage_stats.platform_integrations %}
+                <a href="{{ url_for('integrations.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">Integrations</span>
+                </a>
+                {% else %}
+                <div class="block p-4 border-2 border-gray-200 rounded-lg text-center opacity-50">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-500">Integrations</span>
+                    <p class="text-xs text-gray-500 mt-1">(Enterprise only)</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+            {% if recent_downloads or recent_generations %}
+            <div class="space-y-4">
+                {% for download in recent_downloads[:5] %}
+                <div class="flex items-center justify-between py-3 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold text-gray-900">{{ download.template.name }}</p>
+                            <p class="text-sm text-gray-600">Downloaded {{ download.download_date.strftime('%b %d, %Y') }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                {% for generation in recent_generations[:5] %}
+                <div class="flex items-center justify-between py-3 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="h-6 w-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold text-gray-900">{{ generation.document_type }} - {{ generation.project_name }}</p>
+                            <p class="text-sm text-gray-600">Generated {{ generation.created_at.strftime('%b %d, %Y') }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('ai_generator.download', history_id=generation.id) }}" class="text-blue-600 font-semibold">
+                        Download
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="text-center py-8 text-gray-500">
+                <svg class="h-16 w-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <p>No recent activity</p>
+                <p class="text-sm mt-2">Start by browsing templates or using AI features</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
