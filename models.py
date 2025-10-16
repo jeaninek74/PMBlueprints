@@ -3,12 +3,13 @@ Database Models
 Defines all database tables and relationships
 """
 
-from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 
-db = SQLAlchemy()
+# Import db from app to avoid circular imports
+# db will be initialized when this module is imported by app.py
+db = None
 
 class User(UserMixin, db.Model):
     """User model"""
