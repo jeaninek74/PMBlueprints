@@ -422,3 +422,24 @@ if __name__ == '__main__':
     init_db()
     logger.info("Starting PMBlueprints Production Platform")
     app.run(host='0.0.0.0', port=5002, debug=False)
+
+@app.route('/initialize-database-now')
+def initialize_database():
+    """Initialize database tables and populate with templates"""
+    try:
+        db.create_all()
+        if Template.query.count() == 0:
+            with open('templates_catalog.json', 'r') as f:
+                templates = json.load(f)
+            for t in templates:
+                template = Template(id=t.get("id"), name=t.get("name"), description=t.get("description"), 
+                                  industry=t.get("industry"), category=t.get("category"), file_type=t.get("file_type"),
+                                  filename=t.get("filename"), downloads=t.get("downloads", 0), rating=t.get("rating", 4.5),
+                                  tags=",".join(t.get("tags", [])), file_size=t.get("file_size"), 
+                                  has_formulas=t.get("has_formulas", False), has_fields=t.get("has_fields", False),
+                                  is_premium=t.get("is_premium", False))
+                db.session.add(template)
+            db.session.commit()
+        return jsonify({"success": True, "templates": Template.query.count()})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
