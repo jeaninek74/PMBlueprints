@@ -3,348 +3,432 @@ Payment Routes
 Handles subscription management and payment processing
 """
 
-from flask import Blueprint, render_template, request, jsonify, redirect, url_for, flash
+from flask import Blueprint, render_template, request, jsonify, redirect, url_for, flash, session
 from flask_login import login_required, current_user
 import stripe
 import logging
+import os
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-payment_bp = Blueprint('payment', __name__)
+payment_bp = Blueprint('payment', __name__, url_prefix='/payment')
 
-# Pricing plans configuration
+# Initialize Stripe
+stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
+
+# Pricing plans configuration - Updated to match new requirements
 PRICING_PLANS = {
     'free': {
         'name': 'Free',
         'price': 0,
         'currency': 'usd',
-        'interval': 'month',
+        'interval': None,
+        'stripe_price_id': None,
         'features': [
-            '3 template downloads/month',
-            'Basic templates',
-            '3 AI generations/month',
-            'Email support'
-        ]
+            'Browse all templates',
+            'View template details',
+            'No downloads',
+            'No AI features'
+        ],
+        'downloads_per_month': 0,
+        'ai_suggestions_per_month': 0,
+        'ai_generations_per_month': 0,
+        'platform_integrations': False
+    },
+    'individual': {
+        'name': 'Individual',
+        'price': 5000,  # $50.00 in cents
+        'currency': 'usd',
+        'interval': 'one-time',
+        'stripe_price_id': None,  # Will be created inline
+        'features': [
+            '1 template download OR',
+            '1 AI generation',
+            'Choose from 960+ templates',
+            'One-time purchase'
+        ],
+        'downloads_per_month': 1,
+        'ai_suggestions_per_month': 0,
+        'ai_generations_per_month': 1,
+        'platform_integrations': False
     },
     'professional': {
         'name': 'Professional',
-        'price': 5000,  # $50.00 in cents
+        'price': 4900,  # $49.00 in cents
         'currency': 'usd',
         'interval': 'month',
+        'stripe_price_id': None,  # Will be created inline
         'features': [
-            '10 template downloads/month',
-            'All 960+ templates',
-            '25 AI generations/month',
-            'Platform integrations',
-            'Priority support'
-        ]
+            '2 template downloads per month',
+            '4 AI suggestions per month',
+            '6 AI generations per month',
+            'Monthly subscription'
+        ],
+        'downloads_per_month': 2,
+        'ai_suggestions_per_month': 4,
+        'ai_generations_per_month': 6,
+        'platform_integrations': False
     },
     'enterprise': {
         'name': 'Enterprise',
-        'price': 15000,  # $150.00 in cents
+        'price': 10000,  # $100.00 in cents
         'currency': 'usd',
         'interval': 'month',
+        'stripe_price_id': None,  # Will be created inline
         'features': [
-            'Everything in Professional',
-            'Unlimited downloads',
-            '100 AI generations/month',
-            'Custom templates',
-            'Advanced analytics'
-        ]
+            '2 template downloads per month',
+            '4 AI suggestions per month',
+            '6 AI generations per month',
+            'Platform integrations (Monday.com, Smartsheet, Google Sheets, Microsoft 365)',
+            'Priority support'
+        ],
+        'downloads_per_month': 2,
+        'ai_suggestions_per_month': 4,
+        'ai_generations_per_month': 6,
+        'platform_integrations': True
     }
 }
 
-@payment_bp.route('/api/plans')
-def get_pricing_plans():
-    """Get all pricing plans - API endpoint"""
-    return jsonify({
-        'success': True,
-        'plans': PRICING_PLANS
-    })
+@payment_bp.route('/pricing')
+def pricing():
+    """Display pricing page"""
+    return render_template('pricing.html', plans=PRICING_PLANS, stripe_key=STRIPE_PUBLISHABLE_KEY)
 
-@payment_bp.route('/api/subscribe', methods=['POST'])
+@payment_bp.route('/checkout/<tier>', methods=['GET'])
 @login_required
-def subscribe_to_plan():
-    """Subscribe user to a plan - API endpoint"""
+def checkout(tier):
+    """Create Stripe checkout session for a subscription tier"""
     try:
-        data = request.get_json()
-        plan = data.get('plan')
+        if tier not in PRICING_PLANS:
+            flash('Invalid subscription tier', 'error')
+            return redirect(url_for('payment.pricing'))
         
-        if not plan or plan not in PRICING_PLANS:
-            return jsonify({
-                'success': False,
-                'error': 'Invalid plan selected'
-            }), 400
+        plan = PRICING_PLANS[tier]
         
-        # For free plan, just update user subscription
-        if plan == 'free':
-            current_user.subscription_plan = 'free'
+        # Free tier doesn't need checkout
+        if tier == 'free':
+            flash('You are already on the Free tier', 'info')
+            return redirect(url_for('account.dashboard'))
+        
+        # Create Stripe customer if not exists
+        if not current_user.stripe_customer_id:
+            customer = stripe.Customer.create(
+                email=current_user.email,
+                name=f"{current_user.first_name} {current_user.last_name}",
+                metadata={'user_id': current_user.id}
+            )
+            current_user.stripe_customer_id = customer.id
             from app import db
             db.session.commit()
-            return jsonify({
-                'success': True,
-                'message': 'Subscribed to Free plan',
-                'plan': plan
-            })
         
-        # For paid plans, redirect to checkout
-        return jsonify({
-            'success': True,
-            'redirect': url_for('payment.checkout', plan=plan),
-            'plan': plan
-        })
+        # Determine success and cancel URLs
+        success_url = url_for('payment.success', _external=True) + '?session_id={CHECKOUT_SESSION_ID}'
+        cancel_url = url_for('payment.cancel', _external=True)
+        
+        # Create checkout session based on tier type
+        if plan['interval'] == 'one-time':
+            # One-time payment for Individual tier
+            checkout_session = stripe.checkout.Session.create(
+                customer=current_user.stripe_customer_id,
+                payment_method_types=['card'],
+                line_items=[{
+                    'price_data': {
+                        'currency': plan['currency'],
+                        'unit_amount': plan['price'],
+                        'product_data': {
+                            'name': f"{plan['name']} - PMBlueprints",
+                            'description': 'One template download OR one AI generation',
+                        },
+                    },
+                    'quantity': 1,
+                }],
+                mode='payment',
+                success_url=success_url,
+                cancel_url=cancel_url,
+                metadata={
+                    'user_id': current_user.id,
+                    'tier': tier
+                }
+            )
+        else:
+            # Recurring subscription for Professional/Enterprise
+            checkout_session = stripe.checkout.Session.create(
+                customer=current_user.stripe_customer_id,
+                payment_method_types=['card'],
+                line_items=[{
+                    'price_data': {
+                        'currency': plan['currency'],
+                        'unit_amount': plan['price'],
+                        'recurring': {
+                            'interval': plan['interval']
+                        },
+                        'product_data': {
+                            'name': f"{plan['name']} - PMBlueprints",
+                            'description': ', '.join(plan['features']),
+                        },
+                    },
+                    'quantity': 1,
+                }],
+                mode='subscription',
+                success_url=success_url,
+                cancel_url=cancel_url,
+                metadata={
+                    'user_id': current_user.id,
+                    'tier': tier
+                }
+            )
+        
+        return redirect(checkout_session.url, code=303)
         
     except Exception as e:
-        logger.error(f"Subscription error: {e}")
-        return jsonify({
-            'success': False,
-            'error': 'Subscription failed'
-        }), 500
+        logger.error(f"Checkout error for tier {tier}: {str(e)}")
+        flash('An error occurred. Please try again.', 'error')
+        return redirect(url_for('payment.pricing'))
 
-@payment_bp.route('/checkout')
-def checkout_redirect():
-    """Handle query parameter format and redirect to correct path"""
-    plan = request.args.get('plan')
-    if plan and plan in PRICING_PLANS:
-        return redirect(url_for('payment.checkout', plan=plan))
-    else:
-        flash('Invalid subscription plan', 'error')
-        return redirect(url_for('pricing'))
-
-@payment_bp.route('/checkout/<plan>')
-def checkout(plan):
-    """Checkout page for subscription plan"""
-    try:
-        if plan not in PRICING_PLANS:
-            flash('Invalid subscription plan', 'error')
-            return redirect(url_for('pricing'))
-        
-        plan_info = PRICING_PLANS[plan]
-        
-        # If user is not logged in, show login prompt on checkout page
-        user = current_user if current_user.is_authenticated else None
-        
-        return render_template('payment/checkout.html',
-                             plan=plan,
-                             plan_info=plan_info,
-                             user=user,
-                             requires_login=not current_user.is_authenticated)
-        
-    except Exception as e:
-        logger.error(f"Checkout page error: {e}")
-        flash('Checkout page unavailable', 'error')
-        return redirect(url_for('pricing'))
-
-@payment_bp.route('/create-payment-intent', methods=['POST'])
+@payment_bp.route('/checkout/template/<int:template_id>', methods=['GET'])
 @login_required
-def create_payment_intent():
-    """Create Stripe payment intent"""
+def checkout_individual_template(template_id):
+    """Create checkout session for individual template purchase ($50)"""
     try:
-        data = request.get_json()
-        plan = data.get('plan')
+        from models import Template
+        template = Template.query.get_or_404(template_id)
         
-        if plan not in PRICING_PLANS:
-            return jsonify({'error': 'Invalid plan'}), 400
+        # Create Stripe customer if not exists
+        if not current_user.stripe_customer_id:
+            customer = stripe.Customer.create(
+                email=current_user.email,
+                name=f"{current_user.first_name} {current_user.last_name}",
+                metadata={'user_id': current_user.id}
+            )
+            current_user.stripe_customer_id = customer.id
+            from app import db
+            db.session.commit()
         
-        plan_info = PRICING_PLANS[plan]
+        success_url = url_for('payment.success', _external=True) + '?session_id={CHECKOUT_SESSION_ID}'
+        cancel_url = url_for('templates.detail', template_id=template_id, _external=True)
         
-        # Create payment intent
-        intent = stripe.PaymentIntent.create(
-            amount=plan_info['price'],
-            currency=plan_info['currency'],
+        checkout_session = stripe.checkout.Session.create(
             customer=current_user.stripe_customer_id,
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': 5000,  # $50.00
+                    'product_data': {
+                        'name': template.name,
+                        'description': f'Individual template purchase - {template.category}',
+                    },
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
+            success_url=success_url,
+            cancel_url=cancel_url,
             metadata={
                 'user_id': current_user.id,
-                'plan': plan,
-                'user_email': current_user.email
+                'template_id': template_id,
+                'purchase_type': 'individual_template'
             }
         )
         
-        return jsonify({
-            'client_secret': intent.client_secret,
-            'amount': plan_info['price'],
-            'currency': plan_info['currency']
-        })
-        
-    except stripe.error.StripeError as e:
-        logger.error(f"Stripe error: {e}")
-        return jsonify({'error': 'Payment processing error'}), 500
-    except Exception as e:
-        logger.error(f"Payment intent error: {e}")
-        return jsonify({'error': 'Payment setup failed'}), 500
-
-@payment_bp.route('/confirm-payment', methods=['POST'])
-@login_required
-def confirm_payment():
-    """Confirm successful payment and update subscription"""
-    try:
-        data = request.get_json()
-        payment_intent_id = data.get('payment_intent_id')
-        plan = data.get('plan')
-        
-        if not payment_intent_id or plan not in PRICING_PLANS:
-            return jsonify({'error': 'Invalid payment data'}), 400
-        
-        # Retrieve payment intent from Stripe
-        intent = stripe.PaymentIntent.retrieve(payment_intent_id)
-        
-        if intent.status != 'succeeded':
-            return jsonify({'error': 'Payment not completed'}), 400
-        
-        # Import here to avoid circular imports
-        from app import db, Payment
-        
-        # Create payment record
-        payment = Payment(
-            user_id=current_user.id,
-            stripe_payment_intent_id=payment_intent_id,
-            amount=intent.amount,
-            currency=intent.currency,
-            status='completed',
-            plan=plan
-        )
-        db.session.add(payment)
-        
-        # Update user subscription
-        current_user.subscription_plan = plan
-        current_user.subscription_status = 'active'
-        
-        # Reset download count for new subscription
-        if plan != 'free':
-            current_user.downloads_used = 0
-        
-        db.session.commit()
-        
-        logger.info(f"Payment confirmed for user {current_user.email}: {plan} plan")
-        
-        return jsonify({
-            'success': True,
-            'message': 'Payment successful! Your subscription has been activated.',
-            'redirect': url_for('dashboard')
-        })
-        
-    except stripe.error.StripeError as e:
-        logger.error(f"Stripe confirmation error: {e}")
-        return jsonify({'error': 'Payment confirmation failed'}), 500
-    except Exception as e:
-        logger.error(f"Payment confirmation error: {e}")
-        return jsonify({'error': 'Subscription update failed'}), 500
-
-@payment_bp.route('/cancel-subscription', methods=['POST'])
-@login_required
-def cancel_subscription():
-    """Cancel user subscription"""
-    try:
-        if current_user.subscription_plan == 'free':
-            return jsonify({'error': 'No active subscription to cancel'}), 400
-        
-        # Import here to avoid circular imports
-        from app import db
-        
-        # Update user subscription
-        current_user.subscription_plan = 'free'
-        current_user.subscription_status = 'cancelled'
-        current_user.downloads_used = 0  # Reset for free plan
-        
-        db.session.commit()
-        
-        logger.info(f"Subscription cancelled for user: {current_user.email}")
-        
-        if request.is_json:
-            return jsonify({
-                'success': True,
-                'message': 'Subscription cancelled successfully'
-            })
-        
-        flash('Subscription cancelled successfully', 'info')
-        return redirect(url_for('dashboard'))
+        return redirect(checkout_session.url, code=303)
         
     except Exception as e:
-        logger.error(f"Subscription cancellation error: {e}")
-        if request.is_json:
-            return jsonify({'error': 'Cancellation failed'}), 500
-        flash('Cancellation failed', 'error')
-        return redirect(url_for('dashboard'))
-
-@payment_bp.route('/billing-history')
-@login_required
-def billing_history():
-    """View billing history"""
-    try:
-        from app import Payment
-        
-        payments = Payment.query.filter_by(user_id=current_user.id)\
-            .order_by(Payment.created_at.desc()).all()
-        
-        return render_template('payment/billing_history.html',
-                             payments=payments,
-                             user=current_user)
-        
-    except Exception as e:
-        logger.error(f"Billing history error: {e}")
-        return render_template('errors/500.html'), 500
-
-@payment_bp.route('/invoice/<int:payment_id>')
-@login_required
-def invoice(payment_id):
-    """Generate invoice for payment"""
-    try:
-        from app import Payment
-        
-        payment = Payment.query.filter_by(
-            id=payment_id,
-            user_id=current_user.id
-        ).first_or_404()
-        
-        return render_template('payment/invoice.html',
-                             payment=payment,
-                             user=current_user,
-                             plan_info=PRICING_PLANS.get(payment.plan, {}))
-        
-    except Exception as e:
-        logger.error(f"Invoice generation error: {e}")
-        return render_template('errors/500.html'), 500
+        logger.error(f"Individual template checkout error: {str(e)}")
+        flash('An error occurred. Please try again.', 'error')
+        return redirect(url_for('templates.browse'))
 
 @payment_bp.route('/webhook', methods=['POST'])
-def stripe_webhook():
-    """Handle Stripe webhooks"""
+def webhook():
+    """Handle Stripe webhook events"""
+    payload = request.get_data(as_text=True)
+    sig_header = request.headers.get('Stripe-Signature')
+    webhook_secret = os.getenv('STRIPE_WEBHOOK_SECRET')
+    
     try:
-        payload = request.get_data()
-        sig_header = request.headers.get('Stripe-Signature')
-        
-        # Verify webhook signature (in production, use actual webhook secret)
-        webhook_secret = os.getenv('STRIPE_WEBHOOK_SECRET')
-        if webhook_secret:
-            event = stripe.Webhook.construct_event(
-                payload, sig_header, webhook_secret
-            )
-        else:
-            # For development, parse without verification
-            event = stripe.Event.construct_from(
-                request.get_json(), stripe.api_key
-            )
-        
-        # Handle different event types
-        if event['type'] == 'payment_intent.succeeded':
-            payment_intent = event['data']['object']
-            logger.info(f"Payment succeeded: {payment_intent['id']}")
-            
-        elif event['type'] == 'payment_intent.payment_failed':
-            payment_intent = event['data']['object']
-            logger.warning(f"Payment failed: {payment_intent['id']}")
-            
-        elif event['type'] == 'customer.subscription.deleted':
-            subscription = event['data']['object']
-            logger.info(f"Subscription cancelled: {subscription['id']}")
-            
-        return jsonify({'status': 'success'})
-        
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, webhook_secret
+        )
     except ValueError as e:
         logger.error(f"Invalid payload: {e}")
         return jsonify({'error': 'Invalid payload'}), 400
     except stripe.error.SignatureVerificationError as e:
         logger.error(f"Invalid signature: {e}")
         return jsonify({'error': 'Invalid signature'}), 400
+    
+    # Handle the event
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
+        handle_checkout_session_completed(session)
+    
+    elif event['type'] == 'invoice.payment_succeeded':
+        invoice = event['data']['object']
+        handle_invoice_payment_succeeded(invoice)
+    
+    elif event['type'] == 'customer.subscription.deleted':
+        subscription = event['data']['object']
+        handle_subscription_deleted(subscription)
+    
+    return jsonify({'status': 'success'}), 200
+
+def handle_checkout_session_completed(session):
+    """Handle successful checkout session"""
+    try:
+        from app import db
+        from models import User, Payment
+        
+        user_id = session['metadata'].get('user_id')
+        tier = session['metadata'].get('tier')
+        template_id = session['metadata'].get('template_id')
+        purchase_type = session['metadata'].get('purchase_type')
+        
+        user = User.query.get(user_id)
+        if not user:
+            logger.error(f"User {user_id} not found")
+            return
+        
+        # Handle individual template purchase
+        if purchase_type == 'individual_template':
+            user.subscription_tier = 'individual'
+            user.downloads_this_month = 0  # Reset to allow one download
+            user.ai_generations_this_month = 0
+            
+            # Record the payment
+            payment = Payment(
+                user_id=user_id,
+                amount=5000,
+                currency='usd',
+                status='completed',
+                stripe_payment_id=session['payment_intent'],
+                description=f'Individual template purchase - Template ID: {template_id}'
+            )
+            db.session.add(payment)
+        
+        # Handle tier subscription
+        elif tier:
+            user.subscription_tier = tier
+            user.subscription_status = 'active'
+            user.subscription_start_date = datetime.utcnow()
+            
+            # Reset usage counters
+            user.downloads_this_month = 0
+            user.ai_suggestions_this_month = 0
+            user.ai_generations_this_month = 0
+            user.last_usage_reset = datetime.utcnow()
+            
+            # Record the payment
+            plan = PRICING_PLANS.get(tier, {})
+            payment = Payment(
+                user_id=user_id,
+                amount=plan.get('price', 0),
+                currency='usd',
+                status='completed',
+                stripe_payment_id=session.get('payment_intent') or session.get('subscription'),
+                description=f'{tier.title()} subscription'
+            )
+            db.session.add(payment)
+        
+        db.session.commit()
+        logger.info(f"Checkout completed for user {user_id}, tier: {tier}")
+        
     except Exception as e:
-        logger.error(f"Webhook error: {e}")
-        return jsonify({'error': 'Webhook processing failed'}), 500
+        logger.error(f"Error handling checkout session: {str(e)}")
+
+def handle_invoice_payment_succeeded(invoice):
+    """Handle successful recurring payment"""
+    try:
+        from app import db
+        from models import User, Payment
+        
+        customer_id = invoice['customer']
+        user = User.query.filter_by(stripe_customer_id=customer_id).first()
+        
+        if not user:
+            logger.error(f"User with stripe_customer_id {customer_id} not found")
+            return
+        
+        # Reset monthly usage counters
+        user.downloads_this_month = 0
+        user.ai_suggestions_this_month = 0
+        user.ai_generations_this_month = 0
+        user.last_usage_reset = datetime.utcnow()
+        
+        # Record the payment
+        payment = Payment(
+            user_id=user.id,
+            amount=invoice['amount_paid'],
+            currency=invoice['currency'],
+            status='completed',
+            stripe_payment_id=invoice['payment_intent'],
+            description=f'Subscription renewal - {user.subscription_tier}'
+        )
+        db.session.add(payment)
+        db.session.commit()
+        
+        logger.info(f"Invoice payment succeeded for user {user.id}")
+        
+    except Exception as e:
+        logger.error(f"Error handling invoice payment: {str(e)}")
+
+def handle_subscription_deleted(subscription):
+    """Handle subscription cancellation"""
+    try:
+        from app import db
+        from models import User
+        
+        customer_id = subscription['customer']
+        user = User.query.filter_by(stripe_customer_id=customer_id).first()
+        
+        if not user:
+            logger.error(f"User with stripe_customer_id {customer_id} not found")
+            return
+        
+        # Downgrade to free tier
+        user.subscription_tier = 'free'
+        user.subscription_status = 'cancelled'
+        user.downloads_this_month = 0
+        user.ai_suggestions_this_month = 0
+        user.ai_generations_this_month = 0
+        
+        db.session.commit()
+        logger.info(f"Subscription cancelled for user {user.id}")
+        
+    except Exception as e:
+        logger.error(f"Error handling subscription deletion: {str(e)}")
+
+@payment_bp.route('/success')
+@login_required
+def success():
+    """Payment success page"""
+    session_id = request.args.get('session_id')
+    return render_template('payment/success.html', session_id=session_id)
+
+@payment_bp.route('/cancel')
+@login_required
+def cancel():
+    """Payment cancelled page"""
+    return render_template('payment/cancel.html')
+
+@payment_bp.route('/portal')
+@login_required
+def customer_portal():
+    """Redirect to Stripe customer portal"""
+    try:
+        if not current_user.stripe_customer_id:
+            flash('No billing information found', 'error')
+            return redirect(url_for('account.dashboard'))
+        
+        portal_session = stripe.billing_portal.Session.create(
+            customer=current_user.stripe_customer_id,
+            return_url=url_for('account.dashboard', _external=True)
+        )
+        
+        return redirect(portal_session.url, code=303)
+        
+    except Exception as e:
+        logger.error(f"Error creating portal session: {str(e)}")
+        flash('An error occurred. Please try again.', 'error')
+        return redirect(url_for('account.dashboard'))
+

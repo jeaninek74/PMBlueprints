@@ -2,1355 +2,217 @@
 
 {% block title %}Dashboard - PMBlueprints{% endblock %}
 
+{% block head %}
+<style>
+    /* Remove ALL animations */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .stat-card {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .progress-bar {
+        background: #e5e7eb;
+        border-radius: 4px;
+        height: 8px;
+        overflow: hidden;
+    }
+    
+    .progress-fill {
+        background: #3b82f6;
+        height: 100%;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-<div class="container py-4">
-    <!-- Welcome Header -->
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="d-flex justify-content-between align-items-center">
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="text-gray-600 mt-2">Welcome back, {{ current_user.first_name }}!</p>
+        </div>
+
+        <!-- Subscription Info -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex items-center justify-between">
                 <div>
-                    <h1 class="h3 fw-bold">Welcome back, {{ user.first_name }}!</h1>
-                    <p class="text-muted mb-0">Manage your templates and track your project management progress</p>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Current Plan</h2>
+                    <p class="text-3xl font-bold text-blue-600">{{ usage_stats.tier|title }}</p>
+                    {% if current_user.subscription_status %}
+                    <p class="text-sm text-gray-600 mt-1">Status: {{ current_user.subscription_status|title }}</p>
+                    {% endif %}
                 </div>
-                <div class="text-end">
-                    <span class="badge bg-primary fs-6">{{ stats.subscription_plan }} Plan</span>
+                <div>
+                    <a href="{{ url_for('payment.pricing') }}" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">
+                        {% if usage_stats.tier == 'free' %}
+                        Upgrade Plan
+                        {% else %}
+                        Change Plan
+                        {% endif %}
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Stats Cards -->
-    <div class="row g-4 mb-4">
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-download fa-2x text-primary mb-2"></i>
-                    <h4 class="fw-bold">{{ stats.total_downloads }}</h4>
-                    <p class="text-muted mb-0">Total Downloads</p>
+        <!-- Usage Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Downloads -->
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Template Downloads</h3>
+                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                    </svg>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
-                    <h4 class="fw-bold">{{ stats.downloads_remaining }}</h4>
-                    <p class="text-muted mb-0">Downloads Remaining</p>
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.downloads.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.downloads.limit }}</span>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-crown fa-2x text-warning mb-2"></i>
-                    <h4 class="fw-bold">{{ stats.subscription_plan }}</h4>
-                    <p class="text-muted mb-0">Current Plan</p>
+                <div class="progress-bar">
+                    {% set download_percent = (usage_stats.downloads.used / usage_stats.downloads.limit * 100) if usage_stats.downloads.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ download_percent }}%"></div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body text-center">
-                    <i class="fas fa-calendar fa-2x text-info mb-2"></i>
-                    <h4 class="fw-bold">{{ stats.member_since }}</h4>
-                    <p class="text-muted mb-0">Member Since</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Main Content -->
-        <div class="col-lg-8">
-            <!-- Quick Actions -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-bolt me-2"></i>Quick Actions
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        <div class="col-md-3">
-                            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary w-100 p-3">
-                                <i class="fas fa-search fa-2x mb-2 d-block"></i>
-                                <small>Browse</small>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-outline-success w-100 p-3" id="aiGeneratorBtn">
-                                <i class="fas fa-magic fa-2x mb-2 d-block"></i>
-                                <small>AI Generator</small>
-                            </button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-outline-info w-100 p-3" id="exportBtn">
-                                <i class="fas fa-file-export fa-2x mb-2 d-block"></i>
-                                <small>Export</small>
-                            </button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-outline-warning w-100 p-3" id="bulkDownloadBtn">
-                                <i class="fas fa-download fa-2x mb-2 d-block"></i>
-                                <small>Download</small>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.downloads.remaining }} remaining this month</p>
             </div>
 
             <!-- AI Suggestions -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title mb-0">
-                            <i class="fas fa-lightbulb me-2 text-warning"></i>AI Suggestions
-                        </h5>
-                        <span class="badge bg-primary" id="suggestionCounter">1 of 45</span>
-                    </div>
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">AI Suggestions</h3>
+                    <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
                 </div>
-                <div class="card-body">
-                    <div id="suggestionContent" class="mb-3" style="min-height: 100px;">
-                        <!-- Dynamic suggestion content loaded by JavaScript -->
-                        <div class="text-center text-muted">
-                            No suggestions available yet.
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-sm btn-outline-secondary" id="prevSuggestion">
-                            <i class="fas fa-chevron-left"></i> Previous
-                        </button>
-                        <button class="btn btn-sm btn-outline-primary" id="viewAllSuggestions">
-                            <i class="fas fa-th me-1"></i>View All (45)
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary" id="nextSuggestion">
-                            Next <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.ai_suggestions.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.ai_suggestions.limit }}</span>
                 </div>
+                <div class="progress-bar">
+                    {% set suggestions_percent = (usage_stats.ai_suggestions.used / usage_stats.ai_suggestions.limit * 100) if usage_stats.ai_suggestions.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ suggestions_percent }}%; background: #9333ea;"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.ai_suggestions.remaining }} remaining this month</p>
             </div>
 
-            <!-- Platform Integrations -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-check-circle me-2"></i>Platform Compatible
-                    </h5>
+            <!-- AI Generations -->
+            <div class="stat-card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-semibold text-gray-900">AI Generations</h3>
+                    <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
                 </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                <div>
-                                    <i class="fas fa-project-diagram me-2 text-primary"></i>
-                                    <strong>Microsoft Suite</strong>
-                                </div>
-                                <span class="badge bg-success">Connected</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                <div>
-                                    <i class="fas fa-calendar-alt me-2 text-danger"></i>
-                                    <strong>Monday.com</strong>
-                                </div>
-                                <span class="badge bg-success">Connected</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                <div>
-                                    <i class="fas fa-table me-2 text-info"></i>
-                                    <strong>Smartsheet</strong>
-                                </div>
-                                <span class="badge bg-success">Connected</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                <div>
-                                    <i class="fas fa-briefcase me-2 text-warning"></i>
-                                    <strong>Workday</strong>
-                                </div>
-                                <span class="badge bg-success">Connected</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-2">
+                    <span class="text-3xl font-bold text-gray-900">{{ usage_stats.ai_generations.used }}</span>
+                    <span class="text-gray-600"> / {{ usage_stats.ai_generations.limit }}</span>
                 </div>
-            </div>
-
-            <!-- Export Tools -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-file-export me-2"></i>Export Tools
-                    </h5>
+                <div class="progress-bar">
+                    {% set generations_percent = (usage_stats.ai_generations.used / usage_stats.ai_generations.limit * 100) if usage_stats.ai_generations.limit > 0 else 0 %}
+                    <div class="progress-fill" style="width: {{ generations_percent }}%; background: #10b981;"></div>
                 </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <button class="btn btn-outline-success w-100 p-3" id="exportCsvBtn">
-                                <i class="fas fa-file-csv fa-2x mb-2 d-block"></i>
-                                Export to CSV
-                            </button>
-                        </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-outline-danger w-100 p-3" id="exportPdfBtn">
-                                <i class="fas fa-file-pdf fa-2x mb-2 d-block"></i>
-                                Export to PDF
-                            </button>
-                        </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-outline-primary w-100 p-3" id="bulkDownloadToolBtn">
-                                <i class="fas fa-download fa-2x mb-2 d-block"></i>
-                                Bulk Download
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <small class="text-muted">
-                            <i class="fas fa-info-circle me-1"></i>
-                            Export your download history and template metadata in various formats
-                        </small>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- AI Generator Section - Simplified -->
-<div class="card border-0 shadow-sm mb-4" id="ai-generator" style="display: none;">
-    <div class="card-header bg-white">
-        <h5 class="card-title mb-0">
-            <i class="fas fa-magic me-2"></i>AI Template Generator
-        </h5>
-        <p class="text-muted small mb-0 mt-2">Create custom project management templates for any industry or methodology not available in our catalog</p>
-    </div>
-    <div class="card-body">
-        <div class="alert alert-info mb-4">
-            <i class="fas fa-info-circle me-2"></i>
-            <strong>How it works:</strong> Describe the template you need, and our AI will generate a professional, editable document based on PMI 2025 PMBOK standards and industry best practices.
-        </div>
-        
-        <form id="aiGeneratorForm">
-            <div class="mb-3">
-                <label for="aiDocumentName" class="form-label">
-                    <strong>What template do you need?</strong>
-                    <span class="text-danger">*</span>
-                </label>
-                <input type="text" class="form-control" id="aiDocumentName" required
-                       placeholder="e.g., Project Charter, Risk Register, Stakeholder Analysis, etc.">
-                <small class="text-muted">Enter the type of project management document you want to create</small>
-            </div>
-            
-            <div class="mb-3">
-                <label for="aiProjectContext" class="form-label">
-                    <strong>Project Context & Requirements</strong>
-                    <span class="text-muted">(Optional)</span>
-                </label>
-                <textarea class="form-control" id="aiProjectContext" rows="4" 
-                    placeholder="Describe your project context, industry, methodology, or specific requirements...
-
-Examples:
-- Software development project using Agile methodology
-- Construction project for a hospital building
-- Marketing campaign for product launch
-- IT infrastructure upgrade for financial services"></textarea>
-                <small class="text-muted">Provide additional context to help generate more relevant content</small>
-            </div>
-            
-            <div class="mb-3">
-                <label for="aiDocumentFormat" class="form-label">
-                    <strong>Preferred Format</strong>
-                </label>
-                <select class="form-select" id="aiDocumentFormat">
-                    <option value="auto">Auto-detect (Recommended)</option>
-                    <option value="word">Word Document (.docx)</option>
-                    <option value="excel">Excel Spreadsheet (.xlsx)</option>
-                </select>
-                <small class="text-muted">The AI will automatically select the best format based on your template type</small>
-            </div>
-            
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary btn-lg">
-                    <i class="fas fa-magic me-2"></i>Generate Template
-                </button>
-            </div>
-        </form>
-        
-        <!-- Generation Progress -->
-        <div id="aiGenerationProgress" class="mt-4" style="display: none;">
-            <div class="card border-primary">
-                <div class="card-body">
-                    <h6 class="mb-3">
-                        <i class="fas fa-spinner fa-spin me-2"></i>
-                        <span id="progressStatus">Analyzing your request...</span>
-                    </h6>
-                    <div class="progress mb-2" style="height: 25px;">
-                        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
-                             role="progressbar" style="width: 0%">0%</div>
-                    </div>
-                    <small class="text-muted" id="progressMessage">This may take 30-60 seconds...</small>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Preview Section -->
-        <div id="aiPreview" class="mt-4" style="display: none;">
-            <div class="card border-success">
-                <div class="card-header bg-success text-white">
-                    <h6 class="mb-0">
-                        <i class="fas fa-eye me-2"></i>Template Preview
-                    </h6>
-                </div>
-                <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <strong>Document Name:</strong>
-                            <p id="previewDocName" class="mb-0"></p>
-                        </div>
-                        <div class="col-md-6">
-                            <strong>Format:</strong>
-                            <p id="previewFormat" class="mb-0"></p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <strong>Document Structure:</strong>
-                        <div id="previewStructure" class="border rounded p-3 bg-light"></div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <strong>Content Preview:</strong>
-                        <div id="previewContent" class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;"></div>
-                    </div>
-                    
-                    <div class="alert alert-warning">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        <strong>Note:</strong> The generated template is editable. You can customize it after download to fit your specific needs.
-                    </div>
-                    
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-success btn-lg" id="downloadGeneratedBtn">
-                            <i class="fas fa-download me-2"></i>Download Template
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary" id="generateNewBtn">
-                            <i class="fas fa-redo me-2"></i>Generate New Template
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Error Display -->
-        <div id="aiError" class="mt-4" style="display: none;">
-            <div class="alert alert-danger">
-                <h6 class="alert-heading">
-                    <i class="fas fa-exclamation-circle me-2"></i>Generation Failed
-                </h6>
-                <p id="errorMessage" class="mb-0"></p>
-            </div>
-            <button type="button" class="btn btn-outline-primary" id="retryBtn">
-                <i class="fas fa-redo me-2"></i>Try Again
-            </button>
-        </div>
-    </div>
-</div>
-
-
-            </div>
-
-            <!-- Recent Downloads -->
-            <div class="card border-0 shadow-sm">
-                <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-history me-2"></i>Recent Downloads
-                    </h5>
-                    <a href="#" class="text-decoration-none" id="viewAllDownloads">View All</a>
-                </div>
-                <div class="card-body">
-                    {% if recent_downloads %}
-                        <div class="list-group list-group-flush">
-                            {% for download in recent_downloads %}
-                            <div class="list-group-item border-0 px-0">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h6 class="mb-1">{{ download.template.name }}</h6>
-                                        <p class="mb-1 text-muted">{{ download.template.description[:100] }}...</p>
-                                        <small class="text-muted">
-                                            <i class="fas fa-calendar me-1"></i>
-                                            {{ download.downloaded_at.strftime('%B %d, %Y') }}
-                                        </small>
-                                    </div>
-                                    <span class="badge bg-light text-dark">{{ download.template.industry }}</span>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        <div class="text-center py-4">
-                            <i class="fas fa-download fa-3x text-muted mb-3"></i>
-                            <p class="text-muted">No downloads yet. Start by browsing our template library!</p>
-                            <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
-                                Browse Templates
-                            </a>
-                        </div>
-                    {% endif %}
-                </div>
+                <p class="text-sm text-gray-600 mt-2">{{ usage_stats.ai_generations.remaining }} remaining this month</p>
             </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="col-lg-4">
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <a href="{{ url_for('templates.browse') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">Browse Templates</span>
+                </a>
 
+                <a href="{{ url_for('ai_generator.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">AI Generator</span>
+                </a>
 
-            <!-- Subscription Info -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-crown me-2"></i>Subscription
-                    </h5>
+                <a href="{{ url_for('ai_suggestions.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">AI Suggestions</span>
+                </a>
+
+                {% if usage_stats.platform_integrations %}
+                <a href="{{ url_for('integrations.index') }}" class="block p-4 border-2 border-gray-200 rounded-lg text-center">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-900">Integrations</span>
+                </a>
+                {% else %}
+                <div class="block p-4 border-2 border-gray-200 rounded-lg text-center opacity-50">
+                    <svg class="h-12 w-12 mx-auto mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    <span class="font-semibold text-gray-500">Integrations</span>
+                    <p class="text-xs text-gray-500 mt-1">(Enterprise only)</p>
                 </div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span>Current Plan:</span>
-                        <span class="badge bg-primary">{{ user.subscription_plan.title() }}</span>
-                    </div>
-                    
-                    {% if user.subscription_plan == 'free' %}
-                    <div class="mb-3">
-                        <div class="progress mb-2">
-                            <div class="progress-bar" role="progressbar" 
-                                 style="width: {{ (user.downloads_used / 10 * 100) }}%"></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+            {% if recent_downloads or recent_generations %}
+            <div class="space-y-4">
+                {% for download in recent_downloads[:5] %}
+                <div class="flex items-center justify-between py-3 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold text-gray-900">{{ download.template.name }}</p>
+                            <p class="text-sm text-gray-600">Downloaded {{ download.download_date.strftime('%b %d, %Y') }}</p>
                         </div>
-                        <small class="text-muted">
-                            {{ user.downloads_used }}/10 downloads used
-                        </small>
                     </div>
-                    <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-sm w-100">
-                        <i class="fas fa-arrow-up me-1"></i>Upgrade Plan
+                </div>
+                {% endfor %}
+                
+                {% for generation in recent_generations[:5] %}
+                <div class="flex items-center justify-between py-3 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="h-6 w-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold text-gray-900">{{ generation.document_type }} - {{ generation.project_name }}</p>
+                            <p class="text-sm text-gray-600">Generated {{ generation.created_at.strftime('%b %d, %Y') }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('ai_generator.download', history_id=generation.id) }}" class="text-blue-600 font-semibold">
+                        Download
                     </a>
-                    {% else %}
-                    <p class="text-success mb-3">
-                        <i class="fas fa-check me-1"></i>Unlimited downloads
-                    </p>
-                    <a href="{{ url_for('payment.billing_history') }}" class="btn btn-outline-primary btn-sm w-100">
-                        <i class="fas fa-credit-card me-1"></i>Billing History
-                    </a>
-                    {% endif %}
                 </div>
+                {% endfor %}
             </div>
-
-            <!-- Popular Templates -->
-            <div class="card border-0 shadow-sm">
-                <div class="card-header bg-white">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-fire me-2"></i>Popular Templates
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <div id="popularTemplatesList">
-                        <!-- Will be loaded via JavaScript -->
-                    </div>
-                </div>
+            {% else %}
+            <div class="text-center py-8 text-gray-500">
+                <svg class="h-16 w-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <p>No recent activity</p>
+                <p class="text-sm mt-2">Start by browsing templates or using AI features</p>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
 {% endblock %}
 
-{% block extra_scripts %}
-<script>
-// Dashboard JavaScript - Version 2.0 (Cache-busting: 2025-10-11-23:54)
-document.addEventListener('DOMContentLoaded', function() {
-    // Load popular templates
-    loadPopularTemplates();
-    
-    // AI Generator toggle
-    document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
-        const aiSection = document.getElementById('ai-generator');
-        aiSection.style.display = aiSection.style.display === 'none' ? 'block' : 'none';
-    });
-    
-    // AI Generator form
-    document.getElementById('aiGeneratorForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        generateAISuggestions();
-    });
-    
-    // Check URL hash for AI generator
-    if (window.location.hash === '#ai-generator') {
-        document.getElementById('ai-generator').style.display = 'block';
-    }
-    
-    // Export button handlers
-    document.getElementById('exportBtn').addEventListener('click', function() {
-        showExportOptions();
-    });
-    
-    document.getElementById('exportCsvBtn').addEventListener('click', function() {
-        exportDownloadHistory('csv');
-    });
-    
-    document.getElementById('exportPdfBtn').addEventListener('click', function() {
-        exportDownloadHistory('pdf');
-    });
-    
-    document.getElementById('bulkDownloadBtn').addEventListener('click', function() {
-        showBulkDownloadDialog();
-    });
-    
-    document.getElementById('bulkDownloadToolBtn').addEventListener('click', function() {
-        showBulkDownloadDialog();
-    });
-    
-    
-    // AI Suggestions System
-    initializeAISuggestions();
-});
-
-function showExportOptions() {
-    alert('Export options:\n\n1. CSV - Download history as spreadsheet\n2. PDF - Formatted report of your activity\n3. Bulk Download - Download multiple templates at once\n\nUse the Export Tools section below for specific formats.');
-}
-
-function exportDownloadHistory(format) {
-    const loadingMsg = format === 'csv' ? 'Generating CSV file...' : 'Generating PDF report...';
-    const btn = format === 'csv' ? document.getElementById('exportCsvBtn') : document.getElementById('exportPdfBtn');
-    const originalText = btn.innerHTML;
-    
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>' + loadingMsg;
-    
-    // Simulate export (in production, this would call an API endpoint)
-    setTimeout(() => {
-        // Create download data
-        const downloadData = {
-            user: '{{ user.first_name }} {{ user.last_name }}',
-            email: '{{ user.email }}',
-            plan: '{{ stats.subscription_plan }}',
-            total_downloads: {{ stats.total_downloads }},
-            member_since: '{{ stats.member_since }}',
-            timestamp: new Date().toISOString()
-        };
-        
-        if (format === 'csv') {
-            downloadCSV(downloadData);
-        } else {
-            downloadPDF(downloadData);
-        }
-        
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-    }, 1500);
-}
-
-function downloadCSV(data) {
-    const csvContent = `PMBlueprints Download History\n\nUser,${data.user}\nEmail,${data.email}\nPlan,${data.plan}\nTotal Downloads,${data.total_downloads}\nMember Since,${data.member_since}\nExported,${new Date().toLocaleString()}\n`;
-    
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'pmblueprints_download_history.csv';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
-    
-    showNotification('CSV file downloaded successfully!', 'success');
-}
-
-function downloadPDF(data) {
-    // In production, this would call a backend endpoint to generate PDF
-    showNotification('PDF export feature coming soon! Use CSV export for now.', 'info');
-}
-
-function showBulkDownloadDialog() {
-    const message = 'Bulk Download Feature\n\nSelect multiple templates from the Browse page and use the "Add to Cart" feature to download them all at once.\n\nThis feature is available for Professional and Enterprise plans.';
-    alert(message);
-}
-
-// System status section removed per user request
-
-function showNotification(message, type) {
-    // Simple notification (in production, use a toast library)
-    const alertClass = type === 'success' ? 'alert-success' : type === 'error' ? 'alert-danger' : 'alert-info';
-    const notification = document.createElement('div');
-    notification.className = `alert ${alertClass} alert-dismissible show position-fixed top-0 end-0 m-3`;
-    notification.style.zIndex = '9999';
-    notification.innerHTML = `
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    `;
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.remove();
-    }, 5000);
-});
-
-function loadPopularTemplates() {
-    fetch('/api/analytics/popular')
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                displayPopularTemplates(data.popular_templates.slice(0, 5));
-            }
-        })
-        .catch(error => {
-            console.error('Error loading popular templates:', error);
-        });
-}
-
-function displayPopularTemplates(templates) {
-    const container = document.getElementById('popularTemplatesList');
-    container.innerHTML = '';
-    
-    templates.forEach(template => {
-        const templateItem = document.createElement('div');
-        templateItem.className = 'mb-3 pb-3 border-bottom';
-        templateItem.innerHTML = `
-            <h6 class="mb-1">${template.name}</h6>
-            <p class="text-muted small mb-1">${template.description.substring(0, 80)}...</p>
-            <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">
-                    <i class="fas fa-download me-1"></i>${template.downloads}
-                </small>
-                <a href="/templates/${template.id}" class="btn btn-outline-primary btn-sm">View</a>
-            </div>
-        `;
-        container.appendChild(templateItem);
-    });
-}
-
-function generateAISuggestions() {
-    const industry = document.getElementById('aiIndustry').value;
-    const projectType = document.getElementById('aiProjectType').value;
-    const description = document.getElementById('aiDescription').value;
-    
-    const data = {
-        industry: industry,
-        project_type: projectType,
-        description: description
-    };
-    
-    fetch('/api/ai/suggestions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            displayAISuggestions(data.suggestions);
-        } else {
-            alert(data.error || 'Failed to generate suggestions');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Failed to generate suggestions');
-    });
-}
-
-function displayAISuggestions(suggestions) {
-    const resultsDiv = document.getElementById('aiResults');
-    const listDiv = document.getElementById('aiSuggestionsList');
-    
-    listDiv.innerHTML = '';
-    
-    suggestions.forEach(suggestion => {
-        const suggestionCard = document.createElement('div');
-        suggestionCard.className = 'card mb-3';
-        suggestionCard.innerHTML = `
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="card-title">${suggestion.name}</h6>
-                        <p class="card-text text-muted">${suggestion.description}</p>
-                        <small class="text-success">
-                            <i class="fas fa-clock me-1"></i>Estimated time savings: ${suggestion.estimated_time_savings}
-                        </small>
-                    </div>
-                    <div class="text-end">
-                        <div class="badge bg-primary mb-2">${Math.round(suggestion.confidence * 100)}% match</div>
-                        <br>
-                        <button class="btn btn-outline-primary btn-sm">Generate Template</button>
-                    </div>
-                </div>
-            </div>
-        `;
-        listDiv.appendChild(suggestionCard);
-    });
-    
-    resultsDiv.style.display = 'block';
-}
-
-// ========== AI SUGGESTIONS SYSTEM ==========
-
-const aiSuggestions = [
-    // Category 1: Risk Management & Assessment (3 suggestions)
-    {
-        id: 1,
-        category: 'Risk Management & Assessment',
-        icon: 'fa-shield-alt',
-        title: 'Review High-Priority Risk Items',
-        description: 'Your project has 3 high-priority risks that need immediate attention. Review risk mitigation strategies.',
-        priority: 'high',
-        action: '/templates?category=Risk+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 2,
-        category: 'Risk Management & Assessment',
-        icon: 'fa-exclamation-triangle',
-        title: 'Update Risk Register',
-        description: 'Risk register hasn\'t been updated in 7 days. Regular updates ensure proactive risk management.',
-        priority: 'medium',
-        action: '/templates/risk-register',
-        timestamp: 'Just now'
-    },
-    {
-        id: 3,
-        category: 'Risk Management & Assessment',
-        icon: 'fa-chart-line',
-        title: 'Risk Monitoring Dashboard Available',
-        description: 'New risk monitoring protocols are available. Track risk trends and mitigation effectiveness.',
-        priority: 'low',
-        action: '/templates?category=Risk+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 2: Resource Management & Optimization (3 suggestions)
-    {
-        id: 4,
-        category: 'Resource Management & Optimization',
-        icon: 'fa-users',
-        title: 'Resource Conflict Detected',
-        description: '2 team members are over-allocated this week. Review resource allocation to prevent burnout.',
-        priority: 'critical',
-        action: '/templates?category=Resource+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 5,
-        category: 'Resource Management & Optimization',
-        icon: 'fa-sliders-h',
-        title: 'Optimize Resource Utilization',
-        description: 'Current resource utilization is at 67%. Optimization strategies could improve to 85%.',
-        priority: 'medium',
-        action: '/templates/resource-optimization',
-        timestamp: 'Just now'
-    },
-    {
-        id: 6,
-        category: 'Resource Management & Optimization',
-        icon: 'fa-calendar-check',
-        title: 'Capacity Planning Review',
-        description: 'Q4 capacity planning insights available. Plan ahead for upcoming project demands.',
-        priority: 'low',
-        action: '/templates?category=Resource+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 3: Schedule & Timeline Management (3 suggestions)
-    {
-        id: 7,
-        category: 'Schedule & Timeline Management',
-        icon: 'fa-clock',
-        title: 'Critical Path Alert',
-        description: 'Critical path has shifted due to recent delays. Review schedule to maintain project timeline.',
-        priority: 'critical',
-        action: '/templates?category=Schedule+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 8,
-        category: 'Schedule & Timeline Management',
-        icon: 'fa-tasks',
-        title: 'Milestone Approaching',
-        description: 'Major milestone "Phase 2 Completion" is due in 5 days. Ensure all deliverables are on track.',
-        priority: 'high',
-        action: '/templates/milestone-tracker',
-        timestamp: 'Just now'
-    },
-    {
-        id: 9,
-        category: 'Schedule & Timeline Management',
-        icon: 'fa-chart-gantt',
-        title: 'Schedule Optimization Available',
-        description: 'AI has identified 3 opportunities to optimize your project schedule and save 2 weeks.',
-        priority: 'medium',
-        action: '/templates?category=Schedule+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 4: Quality Assurance & Control (3 suggestions)
-    {
-        id: 10,
-        category: 'Quality Assurance & Control',
-        icon: 'fa-check-circle',
-        title: 'Quality Gate Review Pending',
-        description: 'Quality gate review for Sprint 3 is pending. Complete QA checklist before proceeding.',
-        priority: 'high',
-        action: '/templates?category=Quality+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 11,
-        category: 'Quality Assurance & Control',
-        icon: 'fa-clipboard-check',
-        title: 'Code Review Recommendations',
-        description: 'Best practices for code review available. Improve code quality and reduce defects.',
-        priority: 'medium',
-        action: '/templates/quality-checklist',
-        timestamp: 'Just now'
-    },
-    {
-        id: 12,
-        category: 'Quality Assurance & Control',
-        icon: 'fa-file-alt',
-        title: 'Documentation Review Alert',
-        description: 'Project documentation completeness is at 78%. Review and update missing sections.',
-        priority: 'low',
-        action: '/templates?category=Documentation',
-        timestamp: 'Just now'
-    },
-    
-    // Category 5: Stakeholder Engagement (3 suggestions)
-    {
-        id: 13,
-        category: 'Stakeholder Engagement',
-        icon: 'fa-handshake',
-        title: 'Stakeholder Meeting Overdue',
-        description: 'Last stakeholder meeting was 3 weeks ago. Schedule regular engagement to maintain alignment.',
-        priority: 'high',
-        action: '/templates?category=Stakeholder+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 14,
-        category: 'Stakeholder Engagement',
-        icon: 'fa-comments',
-        title: 'Communication Plan Update',
-        description: 'Optimize your communication plan with new stakeholder engagement strategies.',
-        priority: 'medium',
-        action: '/templates/communication-plan',
-        timestamp: 'Just now'
-    },
-    {
-        id: 15,
-        category: 'Stakeholder Engagement',
-        icon: 'fa-user-check',
-        title: 'Approval Workflow Reminder',
-        description: '2 pending approvals from stakeholders. Follow up to prevent project delays.',
-        priority: 'medium',
-        action: '/templates?category=Stakeholder+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 6: Budget & Cost Management (3 suggestions)
-    {
-        id: 16,
-        category: 'Budget & Cost Management',
-        icon: 'fa-dollar-sign',
-        title: 'Budget Variance Alert',
-        description: 'Current spending is 12% over budget. Review cost optimization opportunities.',
-        priority: 'critical',
-        action: '/templates?category=Financial+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 17,
-        category: 'Budget & Cost Management',
-        icon: 'fa-chart-pie',
-        title: 'Cost Optimization Recommendations',
-        description: 'AI identified $15K in potential cost savings. Review recommendations to improve ROI.',
-        priority: 'high',
-        action: '/templates/budget-tracker',
-        timestamp: 'Just now'
-    },
-    {
-        id: 18,
-        category: 'Budget & Cost Management',
-        icon: 'fa-calculator',
-        title: 'Financial Forecasting Insights',
-        description: 'Q4 financial forecast available. Plan budget allocation for remaining project phases.',
-        priority: 'medium',
-        action: '/templates?category=Financial+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 7: Productivity & Performance Analytics (3 suggestions)
-    {
-        id: 19,
-        category: 'Productivity & Performance Analytics',
-        icon: 'fa-tachometer-alt',
-        title: 'Team Productivity Insights',
-        description: 'Team productivity increased 15% this month. Review metrics to maintain momentum.',
-        priority: 'low',
-        action: '/templates?category=Performance+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 20,
-        category: 'Productivity & Performance Analytics',
-        icon: 'fa-chart-bar',
-        title: 'Performance Tracking Update',
-        description: 'New performance metrics available. Track KPIs and identify improvement opportunities.',
-        priority: 'medium',
-        action: '/templates/performance-dashboard',
-        timestamp: 'Just now'
-    },
-    {
-        id: 21,
-        category: 'Productivity & Performance Analytics',
-        icon: 'fa-lightbulb',
-        title: 'Efficiency Analysis Report',
-        description: 'Efficiency analysis shows 3 bottlenecks. Address these to improve project velocity.',
-        priority: 'high',
-        action: '/templates?category=Performance+Management',
-        timestamp: 'Just now'
-    },
-    
-    // Category 8: Compliance & Governance (3 suggestions)
-    {
-        id: 22,
-        category: 'Compliance & Governance',
-        icon: 'fa-balance-scale',
-        title: 'PMI 2025 Compliance Update',
-        description: 'New PMI 2025 standards available. Ensure your project follows latest best practices.',
-        priority: 'high',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    {
-        id: 23,
-        category: 'Compliance & Governance',
-        icon: 'fa-clipboard-list',
-        title: 'Audit Preparation Reminder',
-        description: 'Project audit scheduled in 2 weeks. Prepare documentation and compliance reports.',
-        priority: 'medium',
-        action: '/templates/audit-checklist',
-        timestamp: 'Just now'
-    },
-    {
-        id: 24,
-        category: 'Compliance & Governance',
-        icon: 'fa-gavel',
-        title: 'Governance Review Available',
-        description: 'Quarterly governance review recommendations ready. Maintain project compliance.',
-        priority: 'low',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    
-    // Category 9: Technology & Tool Integration (3 suggestions)
-    {
-        id: 25,
-        category: 'Technology & Tool Integration',
-        icon: 'fa-plug',
-        title: 'Connect Microsoft Suite',
-        description: 'Export templates directly to Microsoft Suite. Streamline your workflow with integration.',
-        priority: 'high',
-        action: '/integrations',
-        timestamp: 'Just now'
-    },
-    {
-        id: 26,
-        category: 'Technology & Tool Integration',
-        icon: 'fa-robot',
-        title: 'Automation Opportunities',
-        description: '5 manual tasks can be automated. Save 10 hours per week with workflow automation.',
-        priority: 'medium',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    {
-        id: 27,
-        category: 'Technology & Tool Integration',
-        icon: 'fa-lock',
-        title: 'Security Assessment Alert',
-        description: 'Security assessment recommended for integrated tools. Ensure data protection compliance.',
-        priority: 'medium',
-        action: '/templates/security-checklist',
-        timestamp: 'Just now'
-    },
-    
-    // Category 10: Team Development & Management (3 suggestions)
-    {
-        id: 28,
-        category: 'Team Development & Management',
-        icon: 'fa-user-graduate',
-        title: 'Team Development Opportunity',
-        description: 'Training recommendations available for 3 team members. Invest in skill development.',
-        priority: 'medium',
-        action: '/templates?category=Training+%26+Development',
-        timestamp: 'Just now'
-    },
-    {
-        id: 29,
-        category: 'Team Development & Management',
-        icon: 'fa-balance-scale-right',
-        title: 'Workload Balance Review',
-        description: 'Workload distribution is uneven. Balance tasks to prevent team burnout.',
-        priority: 'high',
-        action: '/templates?category=Resource+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 30,
-        category: 'Team Development & Management',
-        icon: 'fa-graduation-cap',
-        title: 'Skill Gap Analysis Available',
-        description: 'Skill gap analysis identifies 2 critical areas. Plan training to address gaps.',
-        priority: 'medium',
-        action: '/templates?category=Training+%26+Development',
-        timestamp: 'Just now'
-    },
-    
-    // Category 11: Strategic Alignment (3 suggestions)
-    {
-        id: 31,
-        category: 'Strategic Alignment',
-        icon: 'fa-bullseye',
-        title: 'Goal Alignment Verification',
-        description: 'Verify project goals align with organizational strategy. Ensure strategic value delivery.',
-        priority: 'high',
-        action: '/templates?category=Planning',
-        timestamp: 'Just now'
-    },
-    {
-        id: 32,
-        category: 'Strategic Alignment',
-        icon: 'fa-briefcase',
-        title: 'Portfolio Review Insights',
-        description: 'Portfolio review shows project is on track. Continue current strategy for success.',
-        priority: 'low',
-        action: '/templates?category=Planning',
-        timestamp: 'Just now'
-    },
-    {
-        id: 33,
-        category: 'Strategic Alignment',
-        icon: 'fa-chart-line',
-        title: 'Market Analysis Update',
-        description: 'Market trends analysis available. Adjust project strategy based on market insights.',
-        priority: 'medium',
-        action: '/templates?category=Business+Analysis',
-        timestamp: 'Just now'
-    },
-    
-    // Category 12: Innovation & Process Improvement (3 suggestions)
-    {
-        id: 34,
-        category: 'Innovation & Process Improvement',
-        icon: 'fa-lightbulb',
-        title: 'Process Improvement Opportunity',
-        description: 'AI identified 4 process bottlenecks. Implement improvements to increase efficiency.',
-        priority: 'medium',
-        action: '/templates?category=Planning',
-        timestamp: 'Just now'
-    },
-    {
-        id: 35,
-        category: 'Innovation & Process Improvement',
-        icon: 'fa-rocket',
-        title: 'Innovation Recommendations',
-        description: 'Innovative approaches available for your project type. Explore new methodologies.',
-        priority: 'low',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    {
-        id: 36,
-        category: 'Innovation & Process Improvement',
-        icon: 'fa-share-alt',
-        title: 'Best Practice Sharing',
-        description: 'Share your project successes with the community. Learn from 10,000+ PMs.',
-        priority: 'low',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    
-    // Category 13: Customer & Client Focus (3 suggestions)
-    {
-        id: 37,
-        category: 'Customer & Client Focus',
-        icon: 'fa-star',
-        title: 'Customer Feedback Integration',
-        description: 'New customer feedback available. Integrate insights to improve project outcomes.',
-        priority: 'high',
-        action: '/templates?category=Assessment+%26+Evaluation',
-        timestamp: 'Just now'
-    },
-    {
-        id: 38,
-        category: 'Customer & Client Focus',
-        icon: 'fa-smile',
-        title: 'Client Satisfaction Monitoring',
-        description: 'Client satisfaction score is 4.2/5. Maintain quality to ensure continued satisfaction.',
-        priority: 'medium',
-        action: '/templates?category=Assessment+%26+Evaluation',
-        timestamp: 'Just now'
-    },
-    {
-        id: 39,
-        category: 'Customer & Client Focus',
-        icon: 'fa-user-friends',
-        title: 'User Experience Optimization',
-        description: 'UX optimization recommendations available. Enhance user satisfaction and adoption.',
-        priority: 'medium',
-        action: '/templates?category=General',
-        timestamp: 'Just now'
-    },
-    
-    // Category 14: Data Analytics & Insights (3 suggestions)
-    {
-        id: 40,
-        category: 'Data Analytics & Insights',
-        icon: 'fa-database',
-        title: 'Data Analysis Recommendations',
-        description: 'Advanced analytics available for your project data. Discover hidden insights.',
-        priority: 'medium',
-        action: '/templates?category=Reporting',
-        timestamp: 'Just now'
-    },
-    {
-        id: 41,
-        category: 'Data Analytics & Insights',
-        icon: 'fa-crystal-ball',
-        title: 'Predictive Insights Available',
-        description: 'AI predicts project completion 3 days ahead of schedule. Maintain current pace.',
-        priority: 'low',
-        action: '/templates?category=Reporting',
-        timestamp: 'Just now'
-    },
-    {
-        id: 42,
-        category: 'Data Analytics & Insights',
-        icon: 'fa-file-chart-line',
-        title: 'Reporting Enhancement',
-        description: 'Enhanced reporting templates available. Create more impactful stakeholder reports.',
-        priority: 'low',
-        action: '/templates?category=Reporting',
-        timestamp: 'Just now'
-    },
-    
-    // Category 15: Change Management (3 suggestions)
-    {
-        id: 43,
-        category: 'Change Management',
-        icon: 'fa-exchange-alt',
-        title: 'Change Request Pending',
-        description: '2 change requests awaiting review. Process requests to maintain project momentum.',
-        priority: 'high',
-        action: '/templates?category=Change+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 44,
-        category: 'Change Management',
-        icon: 'fa-sitemap',
-        title: 'Scope Management Alert',
-        description: 'Scope creep detected in 3 areas. Review and manage scope to prevent delays.',
-        priority: 'critical',
-        action: '/templates?category=Change+Management',
-        timestamp: 'Just now'
-    },
-    {
-        id: 45,
-        category: 'Change Management',
-        icon: 'fa-code-branch',
-        title: 'Version Control Recommendations',
-        description: 'Improve version control with recommended templates. Track changes effectively.',
-        priority: 'low',
-        action: '/templates?category=Change+Management',
-        timestamp: 'Just now'
-    }
-];
-
-let currentSuggestionIndex = 0;
-let suggestionRotationInterval = null;
-
-function initializeAISuggestions() {
-    try {
-        // Verify aiSuggestions is defined and has data
-        if (typeof aiSuggestions === 'undefined' || !aiSuggestions || aiSuggestions.length === 0) {
-            console.error('AI Suggestions data not loaded');
-            document.getElementById('suggestionTitle').textContent = 'AI Suggestions Unavailable';
-            document.getElementById('suggestionDescription').textContent = 'Unable to load suggestions. Please refresh the page.';
-            return;
-        }
-        
-        console.log('Initializing AI Suggestions with', aiSuggestions.length, 'suggestions');
-        
-        // Display first suggestion
-        displaySuggestion(0);
-        
-        // Auto-rotation removed per user request
-        
-        // Set up button handlers
-        const prevBtn = document.getElementById('prevSuggestion');
-        const nextBtn = document.getElementById('nextSuggestion');
-        const viewAllBtn = document.getElementById('viewAllSuggestions');
-        
-        if (prevBtn) {
-            prevBtn.addEventListener('click', function() {
-                currentSuggestionIndex = (currentSuggestionIndex - 1 + aiSuggestions.length) % aiSuggestions.length;
-                displaySuggestion(currentSuggestionIndex);
-
-            });
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', function() {
-                currentSuggestionIndex = (currentSuggestionIndex + 1) % aiSuggestions.length;
-                displaySuggestion(currentSuggestionIndex);
-
-            });
-        }
-        
-        if (viewAllBtn) {
-            viewAllBtn.addEventListener('click', function() {
-                showAllSuggestions();
-            });
-        }
-        
-        console.log('AI Suggestions initialized successfully');
-    } catch (error) {
-        console.error('Error initializing AI Suggestions:', error);
-        document.getElementById('suggestionTitle').textContent = 'Error Loading Suggestions';
-        document.getElementById('suggestionDescription').textContent = 'An error occurred. Please refresh the page.';
-    }
-}
-
-function displaySuggestion(index) {
-    const suggestion = aiSuggestions[index];
-    const priorityColors = {
-        critical: 'danger',
-        high: 'warning',
-        medium: 'info',
-        low: 'secondary'
-    };
-    
-    const priorityIcons = {
-        critical: 'fa-exclamation-circle',
-        high: 'fa-exclamation-triangle',
-        medium: 'fa-info-circle',
-        low: 'fa-check-circle'
-    };
-    
-    const content = `
-        <div class="d-flex align-items-start">
-            <div class="me-3">
-                <i class="fas ${suggestion.icon} fa-2x text-primary"></i>
-            </div>
-            <div class="flex-grow-1">
-                <div class="d-flex justify-content-between align-items-start mb-2">
-                    <h6 class="mb-0">${suggestion.title}</h6>
-                    <span class="badge bg-${priorityColors[suggestion.priority]} ms-2">
-                        <i class="fas ${priorityIcons[suggestion.priority]} me-1"></i>
-                        ${suggestion.priority.toUpperCase()}
-                    </span>
-                </div>
-                <p class="text-muted mb-2">${suggestion.description}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted">
-                        <i class="fas fa-tag me-1"></i>${suggestion.category}
-                    </small>
-                    <a href="${suggestion.action}" class="btn btn-sm btn-outline-primary">
-                        Take Action <i class="fas fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    document.getElementById('suggestionContent').innerHTML = content;
-    document.getElementById('suggestionCounter').textContent = `${index + 1} of ${aiSuggestions.length}`;
-}
-
-// Auto-rotation functions removed per user request
-
-function showAllSuggestions() {
-    // Create modal content with all suggestions
-    const modalContent = aiSuggestions.map((suggestion, index) => {
-        const priorityColors = {
-            critical: 'danger',
-            high: 'warning',
-            medium: 'info',
-            low: 'secondary'
-        };
-        
-        return `
-            <div class="col-md-6 mb-3">
-                <div class="card h-100 border-${priorityColors[suggestion.priority]}">
-                    <div class="card-body">
-                        <div class="d-flex align-items-start mb-2">
-                            <i class="fas ${suggestion.icon} fa-lg text-primary me-2"></i>
-                            <div class="flex-grow-1">
-                                <h6 class="card-title mb-1">${suggestion.title}</h6>
-                                <span class="badge bg-${priorityColors[suggestion.priority]} mb-2">
-                                    ${suggestion.priority.toUpperCase()}
-                                </span>
-                            </div>
-                        </div>
-                        <p class="card-text small text-muted">${suggestion.description}</p>
-                        <small class="text-muted d-block mb-2">
-                            <i class="fas fa-tag me-1"></i>${suggestion.category}
-                        </small>
-                        <a href="${suggestion.action}" class="btn btn-sm btn-outline-primary w-100">
-                            Take Action
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `;
-    }).join('');
-    
-    // Show modal with all suggestions
-    const modal = `
-        <div class="modal" id="allSuggestionsModal" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">
-                            <i class="fas fa-lightbulb me-2 text-warning"></i>
-                            All AI Suggestions (45)
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            ${modalContent}
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    // Remove existing modal if any
-    const existingModal = document.getElementById('allSuggestionsModal');
-    if (existingModal) {
-        existingModal.remove();
-    }
-    
-    // Add modal to page
-    document.body.insertAdjacentHTML('beforeend', modal);
-    
-    // Show modal
-    const modalElement = new bootstrap.Modal(document.getElementById('allSuggestionsModal'));
-    modalElement.show();
-}
-
-</script>
-<script src="{{ url_for('static', filename='js/ai_generator.js') }}"></script>
-{% endblock %}

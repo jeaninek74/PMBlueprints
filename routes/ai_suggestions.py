@@ -1,184 +1,248 @@
 """
-AI Suggestions Routes - FREE feature for users
-Provides quick AI-powered suggestions without full template generation
+AI Suggestions Routes
+Handles AI-powered template suggestions with tier-based access control
 """
 
-from flask import Blueprint, request, jsonify, render_template
+from flask import Blueprint, render_template, request, jsonify
 from flask_login import login_required, current_user
-import os
 import logging
+import os
+import openai
+from datetime import datetime
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Create blueprint
-ai_suggestions_bp = Blueprint('ai_suggestions', __name__)
+ai_suggestions_bp = Blueprint('ai_suggestions', __name__, url_prefix='/ai/suggestions')
 
-# Check if OpenAI API key is available
-OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
-AI_ENABLED = OPENAI_API_KEY is not None
+# Initialize OpenAI
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
-if AI_ENABLED:
-    try:
-        from openai import OpenAI
-        client = OpenAI(api_key=OPENAI_API_KEY)
-        logger.info("OpenAI client initialized for AI suggestions")
-    except Exception as e:
-        logger.error(f"Failed to initialize OpenAI client: {e}")
-        AI_ENABLED = False
-
-
-@ai_suggestions_bp.route('/suggestions')
+@ai_suggestions_bp.route('/')
 @login_required
-def suggestions_page():
+def index():
     """AI Suggestions page"""
-    return render_template('ai_suggestions.html')
-
-
-@ai_suggestions_bp.route('/api/suggest', methods=['POST'])
-@login_required
-def get_suggestion():
-    """
-    Get AI suggestion based on user query
+    from utils.subscription_security import get_usage_stats
     
-    Request body:
-    {
-        "template_type": "Risk Register",
-        "question": "What risks should I include for a software project?",
-        "context": "Optional additional context"
-    }
-    """
-    if not AI_ENABLED:
-        return jsonify({
-            'success': False,
-            'error': 'AI suggestions are currently unavailable'
-        }), 503
+    usage_stats = get_usage_stats(current_user)
+    
+    return render_template('ai/suggestions.html', usage_stats=usage_stats)
+
+@ai_suggestions_bp.route('/get', methods=['POST'])
+@login_required
+def get_suggestions():
+    """Get AI-powered template suggestions"""
+    from utils.subscription_security import check_usage_limit
+    from app import db
+    from models import AISuggestionHistory, Template
     
     try:
-        data = request.get_json()
-        template_type = data.get('template_type', 'Project Management')
-        question = data.get('question', '')
-        context = data.get('context', '')
+        # Check usage quota
+        can_suggest, remaining, limit = check_usage_limit(current_user, 'ai_suggestions')
         
-        if not question:
+        if not can_suggest:
             return jsonify({
-                'success': False,
-                'error': 'Question is required'
-            }), 400
+                'error': f'You have reached your AI suggestions limit ({limit} per month). Please upgrade your subscription.',
+                'upgrade_required': True,
+                'remaining': 0,
+                'limit': limit
+            }), 403
         
-        # Build prompt for AI
-        prompt = f"""You are a PMI-certified project management expert helping users fill out project management templates.
+        # Get request data
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        project_description = data.get('project_description', '')
+        industry = data.get('industry', '')
+        project_phase = data.get('project_phase', '')
+        team_size = data.get('team_size', '')
+        
+        if not project_description:
+            return jsonify({'error': 'Project description is required'}), 400
+        
+        # Get available templates from database
+        templates_query = Template.query
+        if industry:
+            templates_query = templates_query.filter_by(industry=industry)
+        
+        available_templates = templates_query.limit(50).all()
+        template_list = "\n".join([f"- {t.name} ({t.category})" for t in available_templates])
+        
+        # Generate suggestions using OpenAI
+        prompt = f"""
+You are an expert project management consultant. Based on the following project details, 
+recommend the most relevant templates and provide actionable suggestions.
 
-Template Type: {template_type}
-User Question: {question}
-{f'Additional Context: {context}' if context else ''}
+Project Details:
+- Description: {project_description}
+- Industry: {industry or 'Not specified'}
+- Project Phase: {project_phase or 'Not specified'}
+- Team Size: {team_size or 'Not specified'}
 
-Provide a helpful, concise suggestion (2-4 bullet points) that the user can use in their template. 
-Focus on practical, actionable items that follow PMI best practices.
-Keep the response under 200 words."""
+Available Templates:
+{template_list}
 
+Please provide:
+1. Top 5 recommended templates from the list above
+2. Why each template is relevant
+3. Best practices for using these templates
+4. Additional suggestions for project success
+
+Format your response as JSON with this structure:
+{{
+    "recommended_templates": [
+        {{"name": "Template Name", "reason": "Why it's relevant", "priority": "High/Medium/Low"}}
+    ],
+    "best_practices": ["Practice 1", "Practice 2", ...],
+    "additional_suggestions": ["Suggestion 1", "Suggestion 2", ...]
+}}
+"""
+        
         # Call OpenAI API
-        response = client.chat.completions.create(
-            model="gpt-4.1-mini",
+        response = openai.chat.completions.create(
+            model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a PMI-certified project management expert providing brief, actionable suggestions."},
+                {"role": "system", "content": "You are an expert project management consultant. Always respond with valid JSON."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=300,
-            temperature=0.7
+            temperature=0.7,
+            max_tokens=2000
         )
         
-        suggestion = response.choices[0].message.content.strip()
+        suggestions_text = response.choices[0].message.content
         
-        # Track usage (optional)
-        if hasattr(current_user, 'openai_usage_count'):
-            from app import db
-            current_user.openai_usage_count = (current_user.openai_usage_count or 0) + 1
-            db.session.commit()
-        
-        logger.info(f"AI suggestion provided to user {current_user.id}")
-        
-        return jsonify({
-            'success': True,
-            'suggestion': suggestion
-        }), 200
-        
-    except Exception as e:
-        logger.error(f"Error generating AI suggestion: {e}")
-        return jsonify({
-            'success': False,
-            'error': 'Failed to generate suggestion. Please try again.'
-        }), 500
-
-
-@ai_suggestions_bp.route('/api/suggest/quick', methods=['POST'])
-@login_required
-def quick_suggestion():
-    """
-    Quick suggestions for common template sections
-    
-    Request body:
-    {
-        "template_type": "Risk Register",
-        "section": "risks" | "stakeholders" | "milestones" | "resources"
-    }
-    """
-    if not AI_ENABLED:
-        return jsonify({
-            'success': False,
-            'error': 'AI suggestions are currently unavailable'
-        }), 503
-    
-    try:
-        data = request.get_json()
-        template_type = data.get('template_type', 'Project Management')
-        section = data.get('section', '')
-        
-        # Predefined prompts for quick suggestions
-        prompts = {
-            'risks': f"List 5 common risks for a {template_type} project with brief mitigation strategies.",
-            'stakeholders': f"List 5 key stakeholder types for a {template_type} project and their typical roles.",
-            'milestones': f"Suggest 5 typical milestones for a {template_type} project in chronological order.",
-            'resources': f"List 5 essential resource types needed for a {template_type} project.",
-            'deliverables': f"List 5 common deliverables for a {template_type} project.",
-            'tasks': f"List 5 key tasks for the planning phase of a {template_type} project."
-        }
-        
-        if section not in prompts:
-            return jsonify({
-                'success': False,
-                'error': 'Invalid section type'
-            }), 400
-        
-        # Call OpenAI API
-        response = client.chat.completions.create(
-            model="gpt-4.1-mini",
-            messages=[
-                {"role": "system", "content": "You are a PMI-certified project management expert. Provide concise, bullet-point lists."},
-                {"role": "user", "content": prompts[section]}
-            ],
-            max_tokens=250,
-            temperature=0.7
-        )
-        
-        suggestion = response.choices[0].message.content.strip()
+        # Try to parse as JSON, fallback to text if it fails
+        import json
+        try:
+            suggestions_data = json.loads(suggestions_text)
+        except:
+            # Fallback: create structured response from text
+            suggestions_data = {
+                "recommended_templates": [],
+                "best_practices": [],
+                "additional_suggestions": [suggestions_text]
+            }
         
         # Track usage
-        if hasattr(current_user, 'openai_usage_count'):
-            from app import db
-            current_user.openai_usage_count = (current_user.openai_usage_count or 0) + 1
-            db.session.commit()
+        current_user.ai_suggestions_this_month += 1
         
+        # Save suggestion history
+        history = AISuggestionHistory(
+            user_id=current_user.id,
+            project_description=project_description,
+            industry=industry,
+            project_phase=project_phase,
+            team_size=team_size,
+            suggestions=suggestions_text,
+            created_at=datetime.utcnow()
+        )
+        db.session.add(history)
+        db.session.commit()
+        
+        # Find actual template IDs for recommendations
+        recommended_with_ids = []
+        for rec in suggestions_data.get('recommended_templates', []):
+            template_name = rec.get('name', '')
+            # Try to find matching template
+            template = Template.query.filter(
+                Template.name.ilike(f'%{template_name}%')
+            ).first()
+            
+            if template:
+                rec['template_id'] = template.id
+                rec['template_url'] = f"/templates/{template.id}"
+            
+            recommended_with_ids.append(rec)
+        
+        suggestions_data['recommended_templates'] = recommended_with_ids
+        
+        # Return success
         return jsonify({
             'success': True,
-            'suggestion': suggestion
-        }), 200
+            'suggestions': suggestions_data,
+            'history_id': history.id,
+            'remaining': remaining - 1,
+            'limit': limit
+        })
+        
+    except openai.error.RateLimitError:
+        logger.error("OpenAI rate limit exceeded")
+        return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
+    
+    except openai.error.AuthenticationError:
+        logger.error("OpenAI authentication error")
+        return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
+    
+    except Exception as e:
+        logger.error(f"AI suggestions error: {str(e)}")
+        db.session.rollback()
+        return jsonify({'error': f'An error occurred: {str(e)}'}), 500
+
+@ai_suggestions_bp.route('/history')
+@login_required
+def history():
+    """View suggestion history"""
+    from models import AISuggestionHistory
+    
+    page = request.args.get('page', 1, type=int)
+    per_page = 20
+    
+    history_query = AISuggestionHistory.query.filter_by(
+        user_id=current_user.id
+    ).order_by(AISuggestionHistory.created_at.desc())
+    
+    pagination = history_query.paginate(page=page, per_page=per_page, error_out=False)
+    
+    return render_template('ai/suggestions_history.html', 
+                         history=pagination.items,
+                         pagination=pagination)
+
+@ai_suggestions_bp.route('/export/<int:history_id>')
+@login_required
+def export(history_id):
+    """Export suggestions as PDF or document"""
+    from models import AISuggestionHistory
+    from docx import Document
+    import io
+    from flask import send_file
+    
+    history = AISuggestionHistory.query.get_or_404(history_id)
+    
+    # Verify ownership
+    if history.user_id != current_user.id:
+        return jsonify({'error': 'Unauthorized'}), 403
+    
+    try:
+        # Create Word document
+        doc = Document()
+        doc.add_heading('AI Template Suggestions', 0)
+        
+        doc.add_heading('Project Details', level=1)
+        doc.add_paragraph(f"Description: {history.project_description}")
+        doc.add_paragraph(f"Industry: {history.industry or 'Not specified'}")
+        doc.add_paragraph(f"Project Phase: {history.project_phase or 'Not specified'}")
+        doc.add_paragraph(f"Team Size: {history.team_size or 'Not specified'}")
+        
+        doc.add_heading('AI Suggestions', level=1)
+        doc.add_paragraph(history.suggestions)
+        
+        doc.add_paragraph(f"\nGenerated on: {history.created_at.strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        # Save to BytesIO
+        file_data = io.BytesIO()
+        doc.save(file_data)
+        file_data.seek(0)
+        
+        filename = f"AI_Suggestions_{history.id}.docx"
+        
+        return send_file(
+            file_data,
+            as_attachment=True,
+            download_name=filename,
+            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        )
         
     except Exception as e:
-        logger.error(f"Error generating quick suggestion: {e}")
-        return jsonify({
-            'success': False,
-            'error': 'Failed to generate suggestion. Please try again.'
-        }), 500
+        logger.error(f"Export error: {str(e)}")
+        return jsonify({'error': 'Error exporting suggestions'}), 500
 

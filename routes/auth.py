@@ -1,380 +1,278 @@
 """
 Authentication Routes
-Handles user registration, login, logout, and profile management
+Handles user registration, login, logout, and Google OAuth
 """
 
-from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from flask_login import login_user, logout_user, login_required, current_user
-from werkzeug.security import generate_password_hash
-import stripe
+from werkzeug.security import generate_password_hash, check_password_hash
 import logging
+import os
+import requests
+from datetime import datetime
+from urllib.parse import urlencode
 
 logger = logging.getLogger(__name__)
 
-auth_bp = Blueprint('auth', __name__)
+auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
+
+# Google OAuth Configuration
+GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
 
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
     """User registration"""
-    if request.method == 'GET':
-        return render_template('auth/register.html')
+    if current_user.is_authenticated:
+        return redirect(url_for('account.dashboard'))
     
-    try:
-        # Get form data
-        data = request.get_json() if request.is_json else request.form
+    if request.method == 'POST':
+        from models import User
+        from app import db
         
-        email = data.get('email', '').strip().lower()
-        password = data.get('password', '')
-        first_name = data.get('first_name', '').strip()
-        last_name = data.get('last_name', '').strip()
-        company = data.get('company', '').strip()
+        email = request.form.get('email', '').strip().lower()
+        password = request.form.get('password', '')
+        first_name = request.form.get('first_name', '').strip()
+        last_name = request.form.get('last_name', '').strip()
+        company = request.form.get('company', '').strip()
         
         # Validation
-        if not all([email, password, first_name, last_name]):
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'All fields are required'}), 400
-            flash('All fields are required', 'error')
-            return redirect(url_for('auth.register'))
+        if not email or not password:
+            flash('Email and password are required', 'error')
+            return render_template('auth/register.html')
         
-        # Import here to avoid circular imports
-        from app import db, User
+        if len(password) < 8:
+            flash('Password must be at least 8 characters', 'error')
+            return render_template('auth/register.html')
         
-        # Check if user already exists
-        if User.query.filter_by(email=email).first():
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'Email already registered'}), 400
+        # Check if user exists
+        existing_user = User.query.filter_by(email=email).first()
+        if existing_user:
             flash('Email already registered', 'error')
-            return redirect(url_for('auth.register'))
+            return render_template('auth/register.html')
         
-        # Create Stripe customer
         try:
-            stripe_customer = stripe.Customer.create(
+            # Create new user
+            user = User(
                 email=email,
-                name=f"{first_name} {last_name}",
-                metadata={'company': company}
+                first_name=first_name,
+                last_name=last_name,
+                company=company,
+                subscription_tier='free',
+                subscription_status='active',
+                created_at=datetime.utcnow(),
+                email_verified=False
             )
-            stripe_customer_id = stripe_customer.id
+            user.set_password(password)
+            
+            db.session.add(user)
+            db.session.commit()
+            
+            # Log user in
+            login_user(user)
+            
+            flash('Account created successfully!', 'success')
+            return redirect(url_for('account.dashboard'))
+            
         except Exception as e:
-            logger.error(f"Stripe customer creation failed: {e}")
-            stripe_customer_id = None
-        
-        # Create new user
-        user = User(
-            email=email,
-            first_name=first_name,
-            last_name=last_name,
-            company=company,
-            stripe_customer_id=stripe_customer_id
-        )
-        user.set_password(password)
-        
-        db.session.add(user)
-        db.session.commit()
-        
-        # Log in the user
-        login_user(user)
-        
-        logger.info(f"New user registered: {email}")
-        
-        if request.is_json:
-            return jsonify({
-                'success': True, 
-                'message': 'Registration successful',
-                'redirect': url_for('dashboard')
-            })
-        
-        flash('Registration successful! Welcome to PMBlueprints.', 'success')
-        return redirect(url_for('dashboard'))
-        
-    except Exception as e:
-        logger.error(f"Registration error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Registration failed'}), 500
-        flash('Registration failed. Please try again.', 'error')
-        return redirect(url_for('auth.register'))
+            logger.error(f"Registration error: {str(e)}")
+            db.session.rollback()
+            flash('An error occurred during registration', 'error')
+            return render_template('auth/register.html')
+    
+    return render_template('auth/register.html')
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     """User login"""
-    if request.method == 'GET':
-        return render_template('auth/login.html')
+    if current_user.is_authenticated:
+        return redirect(url_for('account.dashboard'))
     
-    try:
-        # Get form data
-        data = request.get_json() if request.is_json else request.form
+    if request.method == 'POST':
+        from models import User
         
-        email = data.get('email', '').strip().lower()
-        password = data.get('password', '')
-        remember = data.get('remember', False)
+        email = request.form.get('email', '').strip().lower()
+        password = request.form.get('password', '')
+        remember = request.form.get('remember', False)
         
         if not email or not password:
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'Email and password required'}), 400
-            flash('Email and password required', 'error')
-            return redirect(url_for('auth.login'))
-        
-        # Import here to avoid circular imports
-        from app import db, User
-        from datetime import datetime
+            flash('Email and password are required', 'error')
+            return render_template('auth/login.html')
         
         # Find user
         user = User.query.filter_by(email=email).first()
         
-        if user and user.check_password(password):
-            # Update last login
-            user.last_login = datetime.utcnow()
-            db.session.commit()
-            
-            # Log in user with permanent session if remember is checked
-            login_user(user, remember=remember)
-            
-            # Make session permanent if remember me is checked
-            if remember:
-                from flask import session
-                session.permanent = True
-            
-            logger.info(f"User logged in: {email}")
-            
-            if request.is_json:
-                return jsonify({
-                    'success': True,
-                    'message': 'Login successful',
-                    'redirect': url_for('dashboard')
-                })
-            
-            # Redirect to next page or dashboard
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('dashboard'))
-        else:
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'Invalid email or password'}), 401
+        if not user or not user.check_password(password):
             flash('Invalid email or password', 'error')
-            return redirect(url_for('auth.login'))
-            
-    except Exception as e:
-        logger.error(f"Login error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Login failed'}), 500
-        flash('Login failed. Please try again.', 'error')
-        return redirect(url_for('auth.login'))
+            return render_template('auth/login.html')
+        
+        # Log user in
+        login_user(user, remember=remember)
+        user.last_login = datetime.utcnow()
+        
+        from app import db
+        db.session.commit()
+        
+        flash('Welcome back!', 'success')
+        
+        # Redirect to next page or dashboard
+        next_page = request.args.get('next')
+        if next_page:
+            return redirect(next_page)
+        return redirect(url_for('account.dashboard'))
+    
+    return render_template('auth/login.html')
 
 @auth_bp.route('/logout')
 @login_required
 def logout():
     """User logout"""
     logout_user()
-    flash('You have been logged out.', 'info')
+    flash('You have been logged out', 'success')
     return redirect(url_for('index'))
 
-@auth_bp.route('/demo-login')
-def demo_login():
-    """Demo login for testing"""
-    try:
-        from flask import current_app
-        from app import db, User
-        
-        # Find or create demo user
-        demo_user = User.query.filter_by(email='demo@pmblueprints.com').first()
-        
-        if not demo_user:
-            demo_user = User(
-                email='demo@pmblueprints.com',
-                first_name='Demo',
-                last_name='User',
-                company='PMBlueprints Demo',
-                subscription_plan='professional'
-            )
-            demo_user.set_password('demo123')
-            db.session.add(demo_user)
-            db.session.commit()
-        
-        # Login with permanent session (remember me)
-        login_user(demo_user, remember=True)
-        
-        # Make session permanent for 7 days
-        from flask import session
-        session.permanent = True
-        
-        if request.is_json:
-            return jsonify({
-                'success': True,
-                'message': 'Demo login successful',
-                'redirect': url_for('dashboard')
-            })
-        
-        flash('Demo login successful!', 'success')
-        return redirect(url_for('dashboard'))
-        
-    except Exception as e:
-        logger.error(f"Demo login error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Demo login failed'}), 500
-        flash('Demo login failed', 'error')
-        return redirect(url_for('index'))
-
-@auth_bp.route('/profile', methods=['GET', 'POST'])
-@login_required
-def profile():
-    """User profile management"""
-    if request.method == 'GET':
-        return render_template('auth/profile.html', user=current_user)
-    
-    try:
-        # Get form data
-        data = request.get_json() if request.is_json else request.form
-        
-        # Update user information
-        current_user.first_name = data.get('first_name', current_user.first_name).strip()
-        current_user.last_name = data.get('last_name', current_user.last_name).strip()
-        current_user.company = data.get('company', current_user.company or '').strip()
-        
-        # Update password if provided
-        new_password = data.get('new_password')
-        if new_password:
-            current_password = data.get('current_password')
-            if not current_user.check_password(current_password):
-                if request.is_json:
-                    return jsonify({'success': False, 'error': 'Current password incorrect'}), 400
-                flash('Current password incorrect', 'error')
-                return redirect(url_for('auth.profile'))
-            
-            current_user.set_password(new_password)
-        
-        from app import db
-        db.session.commit()
-        
-        logger.info(f"Profile updated for user: {current_user.email}")
-        
-        if request.is_json:
-            return jsonify({
-                'success': True,
-                'message': 'Profile updated successfully',
-                'user': current_user.to_dict()
-            })
-        
-        flash('Profile updated successfully', 'success')
-        return redirect(url_for('auth.profile'))
-        
-    except Exception as e:
-        logger.error(f"Profile update error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Profile update failed'}), 500
-        flash('Profile update failed', 'error')
-        return redirect(url_for('auth.profile'))
-
-@auth_bp.route('/reset-password', methods=['GET', 'POST'])
-def reset_password():
-    """Password reset (simplified version)"""
-    if request.method == 'GET':
-        return render_template('auth/reset_password.html')
-    
-    # For production, implement proper email-based password reset
-    # This is a simplified version for demo purposes
-    
-    try:
-        data = request.get_json() if request.is_json else request.form
-        email = data.get('email', '').strip().lower()
-        
-        if not email:
-            if request.is_json:
-                return jsonify({'success': False, 'error': 'Email required'}), 400
-            flash('Email required', 'error')
-            return redirect(url_for('auth.reset_password'))
-        
-        # In production, send reset email here
-        logger.info(f"Password reset requested for: {email}")
-        
-        if request.is_json:
-            return jsonify({
-                'success': True,
-                'message': 'Password reset instructions sent to your email'
-            })
-        
-        flash('Password reset instructions sent to your email', 'info')
-        return redirect(url_for('auth.login'))
-        
-    except Exception as e:
-        logger.error(f"Password reset error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Password reset failed'}), 500
-        flash('Password reset failed', 'error')
-        return redirect(url_for('auth.reset_password'))
-
-
-
-# Google OAuth Routes
-@auth_bp.route('/login/google')
+@auth_bp.route('/google')
 def google_login():
     """Initiate Google OAuth login"""
-    try:
-        from app import oauth
-        redirect_uri = url_for('auth.google_callback', _external=True)
-        return oauth.google.authorize_redirect(redirect_uri)
-    except Exception as e:
-        logger.error(f"Google login error: {e}")
-        flash('Google login is currently unavailable. Please use email/password login.', 'error')
-        return redirect(url_for('auth.login'))
+    
+    # Get Google OAuth URLs
+    google_provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
+    authorization_endpoint = google_provider_cfg["authorization_endpoint"]
+    
+    # Construct redirect URI
+    redirect_uri = url_for('auth.google_callback', _external=True)
+    
+    # Build authorization URL
+    params = {
+        'client_id': GOOGLE_CLIENT_ID,
+        'redirect_uri': redirect_uri,
+        'scope': 'openid email profile',
+        'response_type': 'code',
+        'access_type': 'offline',
+        'prompt': 'select_account'
+    }
+    
+    authorization_url = f"{authorization_endpoint}?{urlencode(params)}"
+    
+    return redirect(authorization_url)
 
-@auth_bp.route('/login/google/callback')
+@auth_bp.route('/google/callback')
 def google_callback():
     """Handle Google OAuth callback"""
+    from models import User
+    from app import db
+    
+    # Get authorization code
+    code = request.args.get('code')
+    if not code:
+        flash('Google login failed', 'error')
+        return redirect(url_for('auth.login'))
+    
     try:
-        from app import oauth, db, User
+        # Get Google OAuth URLs
+        google_provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
+        token_endpoint = google_provider_cfg["token_endpoint"]
         
-        # Get token from Google
-        token = oauth.google.authorize_access_token()
+        # Exchange code for token
+        token_data = {
+            'code': code,
+            'client_id': GOOGLE_CLIENT_ID,
+            'client_secret': GOOGLE_CLIENT_SECRET,
+            'redirect_uri': url_for('auth.google_callback', _external=True),
+            'grant_type': 'authorization_code'
+        }
         
-        # Get user info from Google
-        user_info = oauth.google.parse_id_token(token)
-        email = user_info.get('email')
+        token_response = requests.post(token_endpoint, data=token_data)
+        token_response.raise_for_status()
+        tokens = token_response.json()
         
-        if not email:
-            flash('Could not retrieve email from Google', 'error')
-            return redirect(url_for('auth.login'))
+        # Get user info
+        userinfo_endpoint = google_provider_cfg["userinfo_endpoint"]
+        headers = {'Authorization': f'Bearer {tokens["access_token"]}'}
+        userinfo_response = requests.get(userinfo_endpoint, headers=headers)
+        userinfo_response.raise_for_status()
+        userinfo = userinfo_response.json()
+        
+        # Extract user data
+        google_id = userinfo['sub']
+        email = userinfo['email']
+        email_verified = userinfo.get('email_verified', False)
+        first_name = userinfo.get('given_name', '')
+        last_name = userinfo.get('family_name', '')
         
         # Check if user exists
-        user = User.query.filter_by(email=email.lower()).first()
+        user = User.query.filter_by(email=email).first()
         
         if not user:
-            # Create new user from Google info
+            # Create new user
             user = User(
-                email=email.lower(),
-                first_name=user_info.get('given_name', ''),
-                last_name=user_info.get('family_name', ''),
-                google_id=user_info.get('sub'),
-                email_verified=True  # Google emails are verified
+                email=email,
+                first_name=first_name,
+                last_name=last_name,
+                oauth_provider='google',
+                oauth_id=google_id,
+                email_verified=email_verified,
+                subscription_tier='free',
+                subscription_status='active',
+                created_at=datetime.utcnow()
             )
-            
-            # Create Stripe customer for new user
-            try:
-                import stripe
-                customer = stripe.Customer.create(
-                    email=email,
-                    name=f"{user.first_name} {user.last_name}",
-                    metadata={'source': 'google_oauth'}
-                )
-                user.stripe_customer_id = customer.id
-            except Exception as e:
-                logger.error(f"Stripe customer creation error: {e}")
-            
             db.session.add(user)
-            db.session.commit()
-            logger.info(f"New user created via Google OAuth: {email}")
         else:
-            # Update Google ID if not set
-            if not user.google_id:
-                user.google_id = user_info.get('sub')
-                user.email_verified = True
-                db.session.commit()
+            # Update existing user
+            if not user.oauth_provider:
+                user.oauth_provider = 'google'
+                user.oauth_id = google_id
+            user.email_verified = email_verified
         
-        # Log the user in
-        login_user(user, remember=True)
-        logger.info(f"User logged in via Google: {email}")
+        user.last_login = datetime.utcnow()
+        db.session.commit()
         
-        return redirect(url_for('dashboard'))
+        # Log user in
+        login_user(user)
         
-    except Exception as e:
-        logger.error(f"Google callback error: {e}", exc_info=True)
-        flash('Google login failed. Please try again or use email/password login.', 'error')
+        flash('Successfully logged in with Google!', 'success')
+        return redirect(url_for('account.dashboard'))
+        
+    except requests.RequestException as e:
+        logger.error(f"Google OAuth error: {str(e)}")
+        flash('Google login failed. Please try again.', 'error')
         return redirect(url_for('auth.login'))
+    
+    except Exception as e:
+        logger.error(f"Google callback error: {str(e)}")
+        db.session.rollback()
+        flash('An error occurred during Google login', 'error')
+        return redirect(url_for('auth.login'))
+
+@auth_bp.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    """Forgot password"""
+    if request.method == 'POST':
+        email = request.form.get('email', '').strip().lower()
+        
+        if not email:
+            flash('Email is required', 'error')
+            return render_template('auth/forgot_password.html')
+        
+        from models import User
+        user = User.query.filter_by(email=email).first()
+        
+        # Always show success message for security
+        flash('If an account exists with that email, a password reset link has been sent.', 'success')
+        
+        if user:
+            # TODO: Send password reset email
+            logger.info(f"Password reset requested for {email}")
+        
+        return redirect(url_for('auth.login'))
+    
+    return render_template('auth/forgot_password.html')
+
+@auth_bp.route('/reset-password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    """Reset password with token"""
+    # TODO: Implement token verification and password reset
+    flash('Password reset functionality coming soon', 'info')
+    return redirect(url_for('auth.login'))
 

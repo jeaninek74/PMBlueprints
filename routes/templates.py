@@ -1,264 +1,252 @@
-
 """
-Templates Routes
-Handles template browsing, searching, and downloading
+Template Routes
+Handles template browsing, viewing, and downloading
 """
 
-from flask import Blueprint, render_template, request, jsonify, send_file, abort
+from flask import Blueprint, render_template, request, jsonify, send_file, flash, redirect, url_for
 from flask_login import login_required, current_user
-import os
 import logging
-from sqlalchemy import func
+import os
+from datetime import datetime
+from werkzeug.utils import secure_filename
 
 logger = logging.getLogger(__name__)
 
-templates_bp = Blueprint('templates', __name__)
+templates_bp = Blueprint('templates', __name__, url_prefix='/templates')
 
 @templates_bp.route('/')
+@templates_bp.route('/browse')
 def browse():
-    """Browse all templates"""
-    try:
-        # Import here to avoid circular imports
-        from app import db, Template
-        
-        logger.info("Templates browse route called")
-        
-        # Test database connection
-        template_count = Template.query.count()
-        logger.info(f"Database connection successful. Found {template_count} templates")
-
-        # Get filter parameters
-        industry = request.args.get('industry')
-        category = request.args.get('category')
-        search = request.args.get('search', '').strip()
-        page = request.args.get('page', 1, type=int)
-        per_page = 12
-
-        logger.info(f"Filters - Industry: {industry}, Category: {category}, Search: {search}, Page: {page}")
-
-        # Build the query
-        query = Template.query
-
-        if industry:
-            query = query.filter(Template.industry == industry)
-            logger.info(f"Filtered by industry: {industry}")
-
-        if category:
-            query = query.filter(Template.category == category)
-            logger.info(f"Filtered by category: {category}")
-
-        if search:
-            search_term = f"%{search}%"
-            query = query.filter(Template.name.ilike(search_term) | Template.description.ilike(search_term))
-            logger.info(f"Filtered by search: {search}")
-
-        # Get total count before pagination
-        total_count = query.count()
-        logger.info(f"Query returned {total_count} templates")
-
-        # Sort by industry first, then template name
-        query = query.order_by(Template.industry, Template.name)
-
-        # Paginate the results
-        pagination = query.paginate(page=page, per_page=per_page, error_out=False)
-        logger.info(f"Pagination: {len(pagination.items)} items on page {page} of {pagination.pages}")
-
-        # Get unique industries and categories for filters
-        industries = [row[0] for row in db.session.query(Template.industry).distinct().order_by(Template.industry).all()]
-        categories = [row[0] for row in db.session.query(Template.category).distinct().order_by(Template.category).all()]
-        
-        logger.info(f"Found {len(industries)} industries and {len(categories)} categories")
-
-        return render_template('templates/browse.html',
-                             templates=pagination,
-                             industries=industries,
-                             categories=categories,
-                             current_industry=industry,
-                             current_category=category,
-                             current_search=search)
-
-    except Exception as e:
-        logger.error(f"CRITICAL: Template browse error: {e}", exc_info=True)
-        
-        # Create a mock pagination object to prevent template errors
-        class MockPagination:
-            def __init__(self):
-                self.items = []
-                self.pages = 0
-                self.page = 1
-                self.per_page = 12
-                self.total = 0
-                self.has_next = False
-                self.has_prev = False
-        
-        mock_pagination = MockPagination()
-        
-        error_details = f"Database Error: {str(e)}"
-        logger.error(f"Returning error page with message: {error_details}")
-        
-        return render_template('templates/browse.html',
-                             templates=mock_pagination,
-                             industries=[],
-                             categories=[],
-                             current_industry=None,
-                             current_category=None,
-                             current_search='',
-                             error_message=error_details)
+    """Browse all templates with filtering"""
+    from models import Template
+    
+    # Get filter parameters
+    industry = request.args.get('industry', '')
+    category = request.args.get('category', '')
+    search = request.args.get('search', '')
+    
+    # Build query
+    query = Template.query
+    
+    if industry:
+        query = query.filter(Template.industry == industry)
+    
+    if category:
+        query = query.filter(Template.category == category)
+    
+    if search:
+        query = query.filter(
+            (Template.name.ilike(f'%{search}%')) |
+            (Template.description.ilike(f'%{search}%'))
+        )
+    
+    templates = query.order_by(Template.name).all()
+    
+    # Get unique industries and categories for filters
+    all_templates = Template.query.all()
+    industries = sorted(list(set(t.industry for t in all_templates if t.industry)))
+    categories = sorted(list(set(t.category for t in all_templates if t.category)))
+    
+    return render_template('templates/browse.html',
+                         templates=templates,
+                         industries=industries,
+                         categories=categories,
+                         selected_industry=industry,
+                         selected_category=category,
+                         search_query=search)
 
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):
-    """Template detail page"""
-    try:
-        # Import here to avoid circular imports
-        from app import Template, db
-        
-        logger.info(f"Attempting to load template {template_id}")
-        
-        template = Template.query.get(template_id)
-        
-        if not template:
-            logger.warning(f"Template {template_id} not found in database")
-            abort(404)
-        
-        logger.info(f"Template {template_id} found: {template.name}")
+    """View template details"""
+    from models import Template
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Check if user has already purchased this template
+    has_purchased = False
+    if current_user.is_authenticated:
+        from models import TemplatePurchase
+        purchase = TemplatePurchase.query.filter_by(
+            user_id=current_user.id,
+            template_id=template_id
+        ).first()
+        has_purchased = purchase is not None
+    
+    return render_template('templates/detail.html',
+                         template=template,
+                         has_purchased=has_purchased)
 
-        # Get related templates (same industry, different template)
-        try:
-            related = Template.query.filter(
-                Template.industry == template.industry,
-                Template.id != template.id
-            ).limit(4).all()
-            logger.info(f"Found {len(related)} related templates")
-        except Exception as e:
-            logger.error(f"Error fetching related templates: {e}")
-            related = []
-
-        return render_template('templates/detail.html',
-                             template=template,
-                             related=related)
-
-    except Exception as e:
-        logger.error(f"Template detail error for template_id {template_id}: {str(e)}", exc_info=True)
-        # Return a user-friendly error page
-        abort(500)
-
-@templates_bp.route('/<int:template_id>/download')
+@templates_bp.route('/download/<int:template_id>')
+@login_required
 def download(template_id):
-    """Download template file"""
+    """Download a template (requires quota)"""
+    from models import Template, TemplatePurchase
+    from app import db
+    from utils.subscription_security import check_usage_limit, track_usage
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Check if user has already purchased this specific template
+    purchase = TemplatePurchase.query.filter_by(
+        user_id=current_user.id,
+        template_id=template_id
+    ).first()
+    
+    if purchase:
+        # User has purchased this template, allow download
+        try:
+            # Track the download
+            template.downloads_count += 1
+            db.session.commit()
+            
+            # Serve the file
+            file_path = os.path.join('templates_files', template.file_path)
+            if os.path.exists(file_path):
+                return send_file(file_path,
+                               as_attachment=True,
+                               download_name=f"{template.name}.{template.file_format}")
+            else:
+                flash('Template file not found', 'error')
+                return redirect(url_for('templates.detail', template_id=template_id))
+        except Exception as e:
+            logger.error(f"Download error: {str(e)}")
+            flash('An error occurred while downloading', 'error')
+            return redirect(url_for('templates.detail', template_id=template_id))
+    
+    # Check usage quota
+    can_download, remaining, limit = check_usage_limit(current_user, 'downloads')
+    
+    if not can_download:
+        flash(f'You have reached your download limit ({limit} per month). Please upgrade your plan or purchase this template individually.', 'warning')
+        return redirect(url_for('payment.pricing'))
+    
+    # User has quota, proceed with download
     try:
-        # Import here to avoid circular imports
-        from app import db, Template, Download
-        from flask import session
+        # Track usage
+        current_user.downloads_this_month += 1
+        template.downloads_count += 1
         
-        template = Template.query.get_or_404(template_id)
-
-        # Check if user can download (only if logged in)
-        if current_user.is_authenticated and not current_user.can_download():
-            if request.is_json:
-                return jsonify({
-                    'success': False,
-                    'error': 'Download limit reached. Please upgrade your plan.'
-                }), 403
-
-            return render_template('templates/upgrade_required.html',
-                                 template=template)
-
-        # Check if premium template requires subscription
-        if template.is_premium and current_user.subscription_plan == 'free':
-            if request.is_json:
-                return jsonify({
-                    'success': False,
-                    'error': 'Premium template requires paid subscription.'
-                }), 403
-
-            return render_template('templates/upgrade_required.html',
-                                 template=template)
-
-        # Create download record (only if logged in)
-        if current_user.is_authenticated:
-            download_record = Download(
-                user_id=current_user.id,
-                template_id=template.id
-            )
-            db.session.add(download_record)
-
-            # Update user download count
-            if current_user.subscription_plan == 'free':
-                current_user.downloads_used += 1
-        
-        # Update template download count
-        template.downloads += 1
+        # Create download record
+        from models import DownloadHistory
+        download_record = DownloadHistory(
+            user_id=current_user.id,
+            template_id=template_id,
+            download_date=datetime.utcnow()
+        )
+        db.session.add(download_record)
         db.session.commit()
         
-        # Track download in monitoring system (non-blocking)
-        try:
-            from monitoring import track_template_download
-            track_template_download(template_id)
-        except Exception as monitor_error:
-            logger.warning(f"Monitoring tracking failed (non-critical): {monitor_error}")
-
-        # Log the download
-        user_email = current_user.email if current_user.is_authenticated else 'anonymous'
-        logger.info(f"Template downloaded: {template.name} by {user_email}")
-        
-        # Serve file from static/templates directory using send_from_directory
-        from flask import send_from_directory
-        import os
-        
-        # Get absolute path to templates directory
-        # Try public/templates first (Railway), then fall back to static/templates (Vercel)
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        templates_dir = os.path.join(base_dir, 'public', 'templates')
-        if not os.path.exists(templates_dir):
-            templates_dir = os.path.join(base_dir, 'static', 'templates')
-        
-        # Debug logging
-        logger.info(f"Base dir: {base_dir}")
-        logger.info(f"Templates dir: {templates_dir}")
-        logger.info(f"Looking for file: {template.filename}")
-        logger.info(f"Templates dir exists: {os.path.exists(templates_dir)}")
-        if os.path.exists(templates_dir):
-            logger.info(f"Files in templates dir: {os.listdir(templates_dir)[:10]}")
-        
-        # Check if file exists
-        file_path = os.path.join(templates_dir, template.filename)
-        if not os.path.exists(file_path):
-            logger.error(f"Template file not found: {file_path}")
-            if request.is_json:
-                return jsonify({"error": "Template file not found"}), 404
-            flash("Template file not found", "error")
-            return redirect(url_for('templates_bp.browse'))
-        
-        # Force download with proper headers for mobile browsers
-        response = send_from_directory(
-            templates_dir,
-            template.filename,
-            as_attachment=True,
-            download_name=template.filename
-        )
-        
-        # Add explicit headers to force download on mobile
-        response.headers['Content-Disposition'] = f'attachment; filename="{template.filename}"'
-        response.headers['X-Content-Type-Options'] = 'nosniff'
-        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
-        response.headers['Pragma'] = 'no-cache'
-        response.headers['Expires'] = '0'
-        # Prevent iOS from trying to preview
-        response.headers['X-Download-Options'] = 'noopen'
-        
-        # Set correct MIME type based on file extension
-        if template.filename.endswith('.docx'):
-            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-        elif template.filename.endswith('.xlsx'):
-            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-        elif template.filename.endswith('.pptx'):
-            response.headers['Content-Type'] = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-        
-        return response
-
+        # Serve the file
+        file_path = os.path.join('templates_files', template.file_path)
+        if os.path.exists(file_path):
+            return send_file(file_path,
+                           as_attachment=True,
+                           download_name=f"{template.name}.{template.file_format}")
+        else:
+            flash('Template file not found', 'error')
+            return redirect(url_for('templates.detail', template_id=template_id))
+            
     except Exception as e:
-        logger.error(f"Template download error: {e}")
-        if request.is_json:
-            return jsonify({'success': False, 'error': 'Download failed'}), 500
-        abort(500)
+        logger.error(f"Download error: {str(e)}")
+        db.session.rollback()
+        flash('An error occurred while downloading', 'error')
+        return redirect(url_for('templates.detail', template_id=template_id))
+
+@templates_bp.route('/thumbnail/<int:template_id>')
+def thumbnail(template_id):
+    """Serve template thumbnail image - REAL thumbnails only"""
+    from models import Template
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Only serve real thumbnails that exist
+    if template.thumbnail_path and os.path.exists(template.thumbnail_path):
+        return send_file(template.thumbnail_path, mimetype='image/png')
+    else:
+        # If thumbnail doesn't exist, generate it on-the-fly from actual template file
+        from utils.thumbnail_generator import ThumbnailGenerator
+        from app import db
+        
+        if template.file_path and os.path.exists(template.file_path):
+            generator = ThumbnailGenerator()
+            thumbnail_path = generator.generate_thumbnail(
+                template.file_path,
+                template.id,
+                template.file_format
+            )
+            
+            if thumbnail_path:
+                template.thumbnail_path = thumbnail_path
+                db.session.commit()
+                return send_file(thumbnail_path, mimetype='image/png')
+        
+        # If all else fails, return a branded "no preview" image
+        default_thumb = os.path.join('static', 'images', 'no_preview.png')
+        if os.path.exists(default_thumb):
+            return send_file(default_thumb, mimetype='image/png')
+        else:
+            # Return 404 if no thumbnail can be generated
+            from flask import abort
+            abort(404)
+
+@templates_bp.route('/favorite/<int:template_id>', methods=['POST'])
+@login_required
+def favorite(template_id):
+    """Add/remove template from favorites"""
+    from models import Template, Favorite
+    from app import db
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Check if already favorited
+    existing = Favorite.query.filter_by(
+        user_id=current_user.id,
+        template_id=template_id
+    ).first()
+    
+    if existing:
+        # Remove from favorites
+        db.session.delete(existing)
+        db.session.commit()
+        return jsonify({'status': 'removed', 'favorited': False})
+    else:
+        # Add to favorites
+        favorite = Favorite(
+            user_id=current_user.id,
+            template_id=template_id
+        )
+        db.session.add(favorite)
+        db.session.commit()
+        return jsonify({'status': 'added', 'favorited': True})
+
+@templates_bp.route('/api/list')
+def api_list():
+    """API endpoint to list templates (for AJAX calls)"""
+    from models import Template
+    
+    industry = request.args.get('industry', '')
+    category = request.args.get('category', '')
+    
+    query = Template.query
+    
+    if industry:
+        query = query.filter(Template.industry == industry)
+    
+    if category:
+        query = query.filter(Template.category == category)
+    
+    templates = query.order_by(Template.name).all()
+    
+    return jsonify({
+        'templates': [{
+            'id': t.id,
+            'name': t.name,
+            'description': t.description,
+            'category': t.category,
+            'industry': t.industry,
+            'file_format': t.file_format,
+            'thumbnail_url': url_for('templates.thumbnail', template_id=t.id, _external=True),
+            'detail_url': url_for('templates.detail', template_id=t.id, _external=True)
+        } for t in templates]
+    })
 
