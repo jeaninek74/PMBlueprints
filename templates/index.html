@@ -353,7 +353,7 @@
                             <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Advanced features</li>
                         </ul>
                         <div class="d-grid">
-                            <a href="{{ url_for('payment.checkout', plan='professional') }}" class="btn btn-primary btn-lg">Start Professional</a>
+                            <a href="{{ url_for('payment.checkout', tier='professional') }}" class="btn btn-primary btn-lg">Start Professional</a>
                         </div>
                     </div>
                 </div>
@@ -377,7 +377,7 @@
 
                         </ul>
                         <div class="d-grid">
-                            <a href="{{ url_for('payment.checkout', plan='enterprise') }}" class="btn btn-outline-primary btn-lg">Start Enterprise</a>
+                            <a href="{{ url_for('payment.checkout', tier='enterprise') }}" class="btn btn-outline-primary btn-lg">Start Enterprise</a>
                         </div>
                     </div>
                 </div>
