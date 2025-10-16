@@ -34,6 +34,10 @@ app.wsgi_app = WhiteNoise(app.wsgi_app, root='static/', prefix='static/')
 # Production Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', secrets.token_hex(32))
 
+# Disable template caching in production to ensure updates are visible
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 # Use Vercel Neon PostgreSQL for production, SQLite for local development
 # Vercel sets POSTGRES_URL when Neon database is connected
 DATABASE_URL = os.getenv('POSTGRES_URL') or os.getenv('DATABASE_URL', 'sqlite:///pmblueprints.db')
