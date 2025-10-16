@@ -260,3 +260,21 @@ def get_usage_stats(user):
         }
     }
 
+
+def requires_platform_integrations(f):
+    """
+    Decorator to require platform integrations feature access
+    """
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not current_user.is_authenticated:
+            return redirect(url_for('login'))
+        
+        # Check if user has platform integrations access
+        if not check_feature_access(current_user, 'platform_integrations'):
+            flash('Platform integrations require a Professional or Enterprise subscription.', 'warning')
+            return redirect(url_for('pricing'))
+        
+        return f(*args, **kwargs)
+    return decorated_function
+
