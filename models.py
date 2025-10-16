@@ -6,10 +6,7 @@ Defines all database tables and relationships
 from flask_login import UserMixin
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
-
-# Import db from app to avoid circular imports
-# db will be initialized when this module is imported by app.py
-db = None
+from database import db
 
 class User(UserMixin, db.Model):
     """User model"""

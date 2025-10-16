@@ -88,11 +88,9 @@ stripe.api_key = os.getenv('STRIPE_SECRET_KEY', 'sk_test_dummy_key')
 app.config['STRIPE_PUBLISHABLE_KEY'] = os.getenv('STRIPE_PUBLISHABLE_KEY', 'pk_test_dummy_key')
 
 # Initialize database
-db = SQLAlchemy()
+from database import db
 
-# Import models after db is created
-import models
-models.db = db  # Set the db instance in models module
+# Import models after db is imported
 from models import User, Template, DownloadHistory, AIGeneratorHistory, AISuggestionHistory, TemplatePurchase, Payment, IntegrationSettings, Favorite
 
 # Initialize database with app
