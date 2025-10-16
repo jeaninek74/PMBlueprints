@@ -128,14 +128,15 @@ class AISuggestionHistory(db.Model):
 
 class TemplatePurchase(db.Model):
     """Individual template purchase model"""
-    __tablename__ = 'template_purchases'
+    __tablename__ = 'template_purchase'
     
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    template_id = db.Column(db.Integer, db.ForeignKey('templates.id'), nullable=False)
-    purchase_date = db.Column(db.DateTime, default=datetime.utcnow)
-    amount = db.Column(db.Integer)  # Amount in cents
-    stripe_payment_id = db.Column(db.String(255))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    template_id = db.Column(db.Integer, db.ForeignKey('template.id'), nullable=False)
+    purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
+    purchase_type = db.Column(db.String(20), default='alacarte')
+    amount_paid = db.Column(db.Integer)  # Amount in cents
+    payment_id = db.Column(db.Integer, db.ForeignKey('payment.id'), nullable=True)
     
     def __repr__(self):
         return f'<Purchase {self.user_id}:{self.template_id}>'
