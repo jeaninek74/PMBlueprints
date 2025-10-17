@@ -95,16 +95,22 @@ def login():
     if request.method == 'POST':
         from models import User
         from flask import session as flask_session
+        import redis
         
-        # For Redis-backed sessions, we need to regenerate the session ID
-        # Store the old session ID for logging
-        old_session_id = flask_session.get('_id', 'none')
-        logger.info(f"Old session ID: {old_session_id}")
+        # Delete ALL stale sessions from Redis before login
+        redis_url = os.getenv('REDIS_URL')
+        if redis_url:
+            try:
+                r = redis.from_url(redis_url)
+                session_keys = r.keys('pmb:*')
+                if session_keys:
+                    r.delete(*session_keys)
+                    logger.info(f"Deleted {len(session_keys)} stale Redis session(s)")
+            except Exception as e:
+                logger.error(f"Redis cleanup error: {e}")
         
-        # Clear all session data
+        # Clear Flask session
         flask_session.clear()
-        
-        # Force session modification to trigger Redis update
         flask_session.modified = True
         
         email = request.form.get('email', '').strip().lower()
