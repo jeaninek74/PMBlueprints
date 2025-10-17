@@ -219,7 +219,7 @@ def generate_document_content():
     """
     try:
         # Check AI generation limit
-        limit_check = check_ai_generation_limit()
+        limit_check = check_ai_generation_limit(current_user if current_user.is_authenticated else None)
         if not limit_check['allowed']:
             return jsonify({
                 'success': False,
