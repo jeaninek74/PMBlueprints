@@ -2,6 +2,7 @@
 PMBlueprints Production Platform
 Professional Project Management Templates Platform
 Production-Ready Implementation
+Version: 1.0.1 - Login and Preview fixes
 """
 
 import os
