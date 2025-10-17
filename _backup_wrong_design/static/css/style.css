@@ -1,0 +1,414 @@
+/* PMBlueprints Clean Styles - Blue, Black, White Only */
+
+:root {
+    --primary-color: #1e3a8a;
+    --primary-light: #3b82f6;
+    --secondary-color: #000000;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --gray-color: #f8fafc;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--light-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 4rem 0;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: var(--light-color);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Background Colors */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--gray-color) !important;
+}
+
+/* Integration Cards */
+.integration-card {
+    border: 1px solid #e9ecef;
+    background-color: var(--light-color);
+}
+
+.integration-features {
+    margin-top: 1rem;
+}
+
+/* Step Numbers */
+.step-number {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+footer a {
+    color: var(--light-color);
+}
+
+footer a:hover {
+    color: var(--primary-light);
+}
+
+/* Pricing */
+.price {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Stats */
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--light-color);
+}
+
+/* Clean, minimal design - no animations, no photos, no effects */
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Search Suggestions Styles */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--light-color);
+    border: 1px solid #e9ecef;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.suggestion-item:hover {
+    background-color: var(--gray-color);
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--dark-color);
+}
+
+.suggestion-meta .badge {
+    font-size: 0.75em;
+    margin-right: 4px;
+}
+
+/* Template Cards Enhancement */
+.template-card {
+    border: 1px solid #e9ecef;
+    background-color: var(--light-color);
+}
+
+.template-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+}
+
+/* Enhanced Filter Section */
+.filter-section {
+    background-color: var(--gray-color);
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Template Meta Information */
+.template-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.template-meta .badge {
+    font-size: 0.8em;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .search-suggestions {
+        max-height: 200px;
+    }
+    
+    .filter-section {
+        padding: 15px;
+    }
+}
+
+
+/* ========================================
+   DISABLE ALL ANIMATIONS AND TRANSITIONS
+   ======================================== */
+
+/* Universal animation disable */
+*,
+*::before,
+*::after {
+    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    transition-property: none !important;
+}
+
+/* Disable all CSS keyframe animations */
+@keyframes none {
+    0%, 100% { opacity: 1; }
+}
+
+/* Override any existing keyframes */
+* {
+    animation-name: none !important;
+}
+
+/* Disable Bootstrap animations */
+.modal.fade .modal-dialog,
+.modal.fade,
+.fade,
+.collapse,
+.collapsing,
+.alert,
+.show,
+.hide,
+.carousel-item,
+.carousel-fade {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Disable loading spinners and indicators */
+.spinner-border,
+.spinner-grow,
+.loading,
+[class*="spinner"],
+[class*="loading"],
+[class*="rotate"],
+[class*="spin"] {
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Disable any rotating or spinning elements */
+.fa-spin,
+.fa-pulse {
+    animation: none !important;
+}
+
+/* Disable hover and focus transitions */
+a,
+button,
+.btn,
+.card,
+input,
+select,
+textarea,
+.form-control,
+.form-select,
+.nav-link,
+.dropdown-item {
+    transition: none !important;
+}
+
+/* Disable transform-based animations */
+* {
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Disable opacity transitions */
+* {
+    opacity: 1 !important;
+}
+
+/* Disable visibility transitions */
+.show,
+.hide,
+.hidden,
+.visible {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable any webkit/moz specific animations */
+* {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+}
+
+/* Force immediate display changes */
+.collapsing {
+    height: auto !important;
+}
+
+/* Disable progress bar animations */
+.progress-bar {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable any sliding animations */
+.slide,
+.sliding,
+[class*="slide"] {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Ensure tooltips and popovers appear instantly */
+.tooltip,
+.popover {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable any bounce, shake, or other effect animations */
+[class*="bounce"],
+[class*="shake"],
+[class*="pulse"],
+[class*="flash"],
+[class*="swing"],
+[class*="wobble"],
+[class*="flip"] {
+    animation: none !important;
+    transition: none !important;
+}
+

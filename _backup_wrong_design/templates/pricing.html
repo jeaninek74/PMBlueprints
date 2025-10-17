@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h1>
+            <p class="text-xl text-gray-600">Select the perfect plan for your project management needs</p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Free Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Free</h3>
+                    <div class="text-4xl font-bold text-gray-900 mb-2">$0</div>
+                    <p class="text-gray-600">Forever</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Browse all templates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">View template details</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        <span class="text-gray-500">No downloads</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        <span class="text-gray-500">No AI features</span>
+                    </li>
+                </ul>
+                
+                <button class="w-full bg-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold cursor-not-allowed" disabled>
+                    Current Plan
+                </button>
+            </div>
+
+            <!-- Individual Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-500">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Individual</h3>
+                    <div class="text-4xl font-bold text-blue-600 mb-2">$50</div>
+                    <p class="text-gray-600">One-time</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>1 download</strong> OR</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>1 AI generation</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Choose from 960+ templates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">Perfect for one-time needs</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='individual') }}" class="block w-full bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Professional Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-purple-500 relative">
+                <div class="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                    POPULAR
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+                    <div class="text-4xl font-bold text-purple-600 mb-2">$49</div>
+                    <p class="text-gray-600">Per month</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>2 downloads</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>4 AI suggestions</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>6 AI generations</strong> per month</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">All template categories</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='professional') }}" class="block w-full bg-purple-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-purple-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-indigo-500">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">$100</div>
+                    <p class="text-gray-600">Per month</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700">All Professional features</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Monday.com</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Smartsheet</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Google Sheets</strong> integration</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700"><strong>Microsoft 365</strong> integration</span>
+                    </li>
+                </ul>
+                
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('payment.checkout', tier='enterprise') }}" class="block w-full bg-indigo-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                        Select Plan
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.login') }}" class="block w-full bg-indigo-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                        Sign In to Purchase
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I upgrade or downgrade my plan?</h3>
+                    <p class="text-gray-600">Yes, you can change your plan at any time from your account dashboard. Changes take effect immediately.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">What happens if I exceed my monthly limits?</h3>
+                    <p class="text-gray-600">You'll be prompted to upgrade your plan. Alternatively, you can wait until the next billing cycle when your limits reset.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I purchase individual templates without a subscription?</h3>
+                    <p class="text-gray-600">Yes! The Individual tier allows you to purchase access for $50, giving you one template download OR one AI generation.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
+                    <p class="text-gray-600">We accept all major credit cards (Visa, MasterCard, American Express) through our secure Stripe payment processor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
+

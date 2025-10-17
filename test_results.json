@@ -1,0 +1,51 @@
+[
+  {
+    "timestamp": "2025-10-16T15:15:56.638272",
+    "module": "Frontend",
+    "test": "Homepage",
+    "status": "FAIL",
+    "message": "Status: 500"
+  },
+  {
+    "timestamp": "2025-10-16T15:15:56.726486",
+    "module": "Frontend",
+    "test": "Templates Page",
+    "status": "FAIL",
+    "message": "Status: 500"
+  },
+  {
+    "timestamp": "2025-10-16T15:15:56.812970",
+    "module": "Authentication",
+    "test": "Login",
+    "status": "FAIL",
+    "message": "Status: 500"
+  },
+  {
+    "timestamp": "2025-10-16T15:15:56.886144",
+    "module": "Dashboard",
+    "test": "Load Dashboard",
+    "status": "FAIL",
+    "message": "Status: 500"
+  },
+  {
+    "timestamp": "2025-10-16T15:15:56.898828",
+    "module": "Database",
+    "test": "Connection",
+    "status": "FAIL",
+    "message": "could not translate host name \"db.mmrazymwgqfxkhczqpus.supabase.co\" to address: No address associated with hostname\n"
+  },
+  {
+    "timestamp": "2025-10-16T15:15:57.791772",
+    "module": "Payment",
+    "test": "Stripe Config",
+    "status": "PASS",
+    "message": ""
+  },
+  {
+    "timestamp": "2025-10-16T15:15:58.393840",
+    "module": "AI",
+    "test": "OpenAI Config",
+    "status": "FAIL",
+    "message": "Error code: 400 - {'error': 'Unsupported model. Only the following models are allowed: gemini-2.5-flash, gpt-4.1-mini, gpt-4.1-nano'}"
+  }
+]

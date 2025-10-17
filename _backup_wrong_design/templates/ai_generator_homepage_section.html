@@ -1,0 +1,113 @@
+
+<!-- AI Generator Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">
+                <i class="fas fa-magic text-primary me-2"></i>AI Template Generator
+            </h2>
+            <p class="lead text-muted">Create custom project management templates for any industry or methodology</p>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-5">
+                        <h4 class="fw-bold mb-4">Need a template not in our catalog?</h4>
+                        <p class="mb-4">Our AI Generator creates professional, PMI 2025 PMBOK-compliant templates tailored to your specific needs.</p>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-primary">
+                                <i class="fas fa-check-circle me-2"></i>What You Can Generate:
+                            </h6>
+                            <ul class="list-unstyled ms-4">
+                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Project charters and initiation documents</li>
+                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Risk registers and management plans</li>
+                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Stakeholder analysis and communication plans</li>
+                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Budget trackers and financial reports</li>
+                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Custom templates for any PM methodology</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="d-grid">
+                            {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('dashboard.index') }}#ai-generator" class="btn btn-primary btn-lg">
+                                <i class="fas fa-magic me-2"></i>Try AI Generator
+                            </a>
+                            {% else %}
+                            <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">
+                                <i class="fas fa-magic me-2"></i>Get Started Free
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card border-primary shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-cogs me-2"></i>How It Works
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>1</strong>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold">Describe Your Need</h6>
+                                <p class="text-muted mb-0">Tell us what template you need and provide project context (industry, methodology, specific requirements)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>2</strong>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold">AI Generates Template</h6>
+                                <p class="text-muted mb-0">Our AI analyzes your request and creates a professional template based on PMI standards and best practices</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>3</strong>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold">Preview & Customize</h6>
+                                <p class="text-muted mb-0">Review the generated template structure and content before downloading</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>4</strong>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold">Download & Use</h6>
+                                <p class="text-muted mb-0">Download your custom template in Word or Excel format, ready to use immediately</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    <strong>Pro Tip:</strong> The more context you provide, the better your generated template will be!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

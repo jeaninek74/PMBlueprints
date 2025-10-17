@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+
+{% block title %}{{ template.name }} - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Template Header -->
+            <div class="template-header mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <span class="badge bg-primary me-2">{{ template.industry }}</span>
+                    <span class="badge bg-secondary">{{ template.category }}</span>
+                </div>
+                <h1 class="display-6 fw-bold">{{ template.name }}</h1>
+                <p class="lead text-muted">{{ template.description | default('Professional project management template designed for your needs.') }}</p>
+            </div>
+
+            <!-- Template Stats -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-download text-primary me-2"></i>
+                            <div>
+                                <div class="fw-bold">{{ template.downloads }}</div>
+                                <small class="text-muted">Downloads</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-star text-warning me-2"></i>
+                            <div>
+                                <div class="fw-bold">{{ "%.1f"|format(template.rating | default(4.5)) }}</div>
+                                <small class="text-muted">Rating</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-file text-info me-2"></i>
+                            <div>
+                                <div class="fw-bold">{{ template.file_type.upper() }}</div>
+                                <small class="text-muted">Format</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-hdd text-success me-2"></i>
+                            <div>
+                                <div class="fw-bold">{{ template.file_size | default('~50KB') }}</div>
+                                <small class="text-muted">Size</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Features -->
+            <div class="template-features mb-4">
+                <h3 class="h5 fw-bold mb-3">Template Features</h3>
+                <div class="row g-3">
+                    {% if template.has_formulas %}
+                    <div class="col-md-6">
+                        <div class="feature-item d-flex align-items-center">
+                            <i class="fas fa-calculator text-success me-2"></i>
+                            <span>Excel Formulas Included</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if template.has_fields %}
+                    <div class="col-md-6">
+                        <div class="feature-item d-flex align-items-center">
+                            <i class="fas fa-edit text-primary me-2"></i>
+                            <span>Editable Fields</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="col-md-6">
+                        <div class="feature-item d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>PMI 2025 Compliant</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-item d-flex align-items-center">
+                            <i class="fas fa-sync text-info me-2"></i>
+                            <span>Platform Compatible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template Tags -->
+            {% if template.tags %}
+            <div class="template-tags mb-4">
+                <h3 class="h5 fw-bold mb-3">Tags</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    {% for tag in template.tags.split(',') %}
+                    <span class="badge bg-outline-secondary">{{ tag.strip() }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Template Preview -->
+            <div class="template-preview mb-4">
+                <h3 class="h5 fw-bold mb-3">Template Preview</h3>
+                <div class="preview-container bg-light rounded p-4 text-center">
+                    {% if template.preview_image %}
+                    <img src="{{ template.preview_image }}" alt="{{ template.name }} Preview" class="img-fluid rounded shadow-sm" style="max-height: 400px;">
+                    {% else %}
+                    <div class="preview-placeholder py-5">
+                        <i class="fas fa-file-alt fa-4x text-muted mb-3"></i>
+                        <h4 class="text-muted">{{ template.name }}</h4>
+                        <p class="text-muted">{{ template.file_type.upper() }} Template Preview</p>
+                        <small class="text-muted">Download to view full template content</small>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="template-sidebar">
+                <!-- Download Card -->
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Download Template</h5>
+                        <p class="card-text text-muted">Get instant access to this professional template</p>
+                        
+                        {% if current_user.is_authenticated %}
+                            {% if current_user.subscription_tier in ['professional', 'enterprise'] %}
+                                <a href="{{ url_for('templates.download', template_id=template.id) }}" class="btn btn-primary btn-lg w-100 mb-3">
+                                    <i class="fas fa-download me-2"></i>Download Now
+                                </a>
+                                <small class="text-muted">Included in your subscription</small>
+                            {% else %}
+                                <!-- Purchase Button for Free/Individual Users -->
+                                <a href="{{ url_for('payment.purchase_template', template_id=template.id) }}" class="btn btn-success btn-lg w-100 mb-3">
+                                    <i class="fas fa-shopping-cart me-2"></i>Purchase
+                                </a>
+                                <small class="text-muted">One-time purchase for this template</small>
+                                <hr class="my-3">
+                                <p class="text-center text-muted small mb-2">Or upgrade for unlimited access</p>
+                                <a href="{{ url_for('payment.pricing') }}" class="btn btn-outline-primary btn-sm w-100">
+                                    View Plans
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg w-100 mb-3">
+                                <i class="fas fa-sign-in-alt me-2"></i>Login to Download
+                            </a>
+                            <small class="text-muted">Sign in to purchase or subscribe</small>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- AI Suggestions -->
+                {% if current_user.is_authenticated %}
+                <div class="card mb-4 border-success">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            <i class="fas fa-magic me-2 text-success"></i>AI Suggestions
+                            <span class="badge bg-success ms-2">FREE</span>
+                        </h5>
+                        <p class="card-text text-muted small mb-3">Get AI-powered suggestions to help fill out this template</p>
+                        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#aiSuggestionsModal">
+                            <i class="fas fa-magic me-2"></i>Get AI Help
+                        </button>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Platform Integration -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            <i class="fas fa-upload me-2"></i>Use in Your Platform
+                        </h5>
+                        <p class="card-text text-muted small mb-3">Download template, then open your platform to upload</p>
+                        
+                        <div class="d-grid gap-2">
+                            <!-- Google Workspace -->
+                            <a href="https://sheets.google.com" 
+                               target="_blank"
+                               class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-google me-2"></i>Open in Google Sheets
+                            </a>
+                            
+                            <!-- Microsoft 365 -->
+                            <a href="https://www.office.com/launch/excel" 
+                               target="_blank"
+                               class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-microsoft me-2"></i>Open in Microsoft 365
+                            </a>
+                            
+                            <!-- Monday.com -->
+                            <a href="https://monday.com" 
+                               target="_blank"
+                               class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-calendar-week me-2"></i>Open in Monday.com
+                            </a>
+                            
+                            <!-- Smartsheet -->
+                            <a href="https://app.smartsheet.com" 
+                               target="_blank"
+                               class="btn btn-outline-success btn-sm">
+                                <i class="fas fa-table me-2"></i>Open in Smartsheet
+                            </a>
+                            
+                            <!-- Workday -->
+                            <a href="https://www.myworkday.com" 
+                               target="_blank"
+                               class="btn btn-outline-warning btn-sm">
+                                <i class="fas fa-briefcase me-2"></i>Open in Workday
+                            </a>
+                        </div>
+                        <div class="mt-3 p-2 bg-light rounded">
+                            <small class="text-muted">
+                                <i class="fas fa-info-circle me-1"></i>
+                                Download template first, then click a platform button to login and upload
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Templates -->
+                {% if related %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Templates</h5>
+                        <div class="related-templates">
+                            {% for related_template in related %}
+                            <div class="related-item mb-3 pb-3 border-bottom">
+                                <h6 class="mb-1">
+                                    <a href="{{ url_for('templates.detail', template_id=related_template.id) }}" class="text-decoration-none">
+                                        {{ related_template.name }}
+                                    </a>
+                                </h6>
+                                <small class="text-muted">{{ related_template.category }}</small>
+                                <div class="mt-1">
+                                    <small class="text-muted">
+                                        <i class="fas fa-download me-1"></i>{{ related_template.downloads }}
+                                        <i class="fas fa-star ms-2 me-1"></i>{{ "%.1f"|format(related_template.rating) }}
+                                    </small>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Add any template-specific JavaScript here
+document.addEventListener('DOMContentLoaded', function() {
+    // Track template view
+    fetch('/api/analytics/view', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            template_id: {{ template.id }},
+            action: 'view'
+        })
+    }).catch(err => console.log('Analytics tracking failed:', err));
+});
+</script>
+
+<!-- Include AI Suggestions Modal -->
+{% if current_user.is_authenticated %}
+{% include 'components/ai_suggestions_modal.html' %}
+{% endif %}
+
+{% endblock %}

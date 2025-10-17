@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="error-page">
+                <i class="fas fa-exclamation-triangle fa-5x text-warning mb-4"></i>
+                <h1 class="display-4 fw-bold">500</h1>
+                <h2 class="h4 mb-4">Internal Server Error</h2>
+                <p class="text-muted mb-4">
+                    We're experiencing some technical difficulties. Our team has been notified and is working to resolve the issue.
+                </p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">
+                        <i class="fas fa-home me-2"></i>Go Home
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Go Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

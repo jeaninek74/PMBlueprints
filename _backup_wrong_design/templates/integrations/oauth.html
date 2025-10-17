@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+
+{% block title %}Platform Integrations - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Platform Integrations</h1>
+            <p class="text-gray-600">Connect PMBlueprints with your favorite project management tools</p>
+            {% if current_user.subscription_tier != 'enterprise' %}
+            <div class="mt-4 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-yellow-700">
+                            Platform integrations are available for <strong>Enterprise tier</strong> subscribers only.
+                            <a href="{{ url_for('payment.pricing') }}" class="font-semibold underline">Upgrade now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Integration Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Monday.com -->
+            <div class="bg-white rounded-lg shadow-lg p-6 {% if current_user.subscription_tier != 'enterprise' %}opacity-60{% endif %}">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-2xl">M</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Monday.com</h3>
+                        <p class="text-sm text-gray-600">Work OS for project management</p>
+                        {% if settings and settings.monday_connected %}
+                        <span class="inline-block mt-1 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
+                            ✓ Connected
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Export templates directly to Monday.com boards with automatic column mapping and task creation.</p>
+                
+                {% if current_user.subscription_tier == 'enterprise' %}
+                    {% if settings and settings.monday_connected %}
+                        <div class="space-y-2">
+                            <button onclick="uploadToMonday()" class="w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white py-2 px-4 rounded-lg font-semibold">
+                                <i class="fas fa-upload mr-2"></i>Upload Template
+                            </button>
+                            <a href="{{ url_for('platform_oauth.monday_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
+                                Disconnect
+                            </a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('platform_oauth.monday_connect') }}" class="block w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white text-center py-2 px-4 rounded-lg font-semibold">
+                            <i class="fas fa-link mr-2"></i>Connect Monday.com
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                    </button>
+                {% endif %}
+            </div>
+
+            <!-- Smartsheet -->
+            <div class="bg-white rounded-lg shadow-lg p-6 {% if current_user.subscription_tier != 'enterprise' %}opacity-60{% endif %}">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-2xl">S</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Smartsheet</h3>
+                        <p class="text-sm text-gray-600">Collaborative work management</p>
+                        {% if settings and settings.smartsheet_connected %}
+                        <span class="inline-block mt-1 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
+                            ✓ Connected
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Create Smartsheet sheets from templates with pre-configured columns, formulas, and automation.</p>
+                
+                {% if current_user.subscription_tier == 'enterprise' %}
+                    {% if settings and settings.smartsheet_connected %}
+                        <div class="space-y-2">
+                            <button onclick="uploadToSmartsheet()" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold">
+                                <i class="fas fa-upload mr-2"></i>Upload Template
+                            </button>
+                            <a href="{{ url_for('platform_oauth.smartsheet_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
+                                Disconnect
+                            </a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('platform_oauth.smartsheet_connect') }}" class="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-semibold">
+                            <i class="fas fa-link mr-2"></i>Connect Smartsheet
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                    </button>
+                {% endif %}
+            </div>
+
+            <!-- Google Sheets -->
+            <div class="bg-white rounded-lg shadow-lg p-6 {% if current_user.subscription_tier != 'enterprise' %}opacity-60{% endif %}">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-2xl">G</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Google Sheets</h3>
+                        <p class="text-sm text-gray-600">Cloud-based spreadsheets</p>
+                        {% if settings and settings.google_connected %}
+                        <span class="inline-block mt-1 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
+                            ✓ Connected
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Export templates to Google Sheets with automatic formatting, formulas, and sharing options.</p>
+                
+                {% if current_user.subscription_tier == 'enterprise' %}
+                    {% if settings and settings.google_connected %}
+                        <div class="space-y-2">
+                            <button onclick="uploadToGoogle()" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold">
+                                <i class="fas fa-upload mr-2"></i>Upload Template
+                            </button>
+                            <a href="{{ url_for('platform_oauth.google_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
+                                Disconnect
+                            </a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('platform_oauth.google_connect') }}" class="block w-full bg-green-600 text-white text-center py-2 px-4 rounded-lg font-semibold">
+                            <i class="fab fa-google mr-2"></i>Connect Google Sheets
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                    </button>
+                {% endif %}
+            </div>
+
+            <!-- Microsoft 365 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 {% if current_user.subscription_tier != 'enterprise' %}opacity-60{% endif %}">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-blue-700 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-white font-bold text-2xl">M</span>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-900">Microsoft 365</h3>
+                        <p class="text-sm text-gray-600">OneDrive & SharePoint</p>
+                        {% if settings and settings.microsoft_connected %}
+                        <span class="inline-block mt-1 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
+                            ✓ Connected
+                        </span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Save templates directly to OneDrive or SharePoint with automatic versioning and collaboration features.</p>
+                
+                {% if current_user.subscription_tier == 'enterprise' %}
+                    {% if settings and settings.microsoft_connected %}
+                        <div class="space-y-2">
+                            <button onclick="uploadToMicrosoft()" class="w-full bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold">
+                                <i class="fas fa-upload mr-2"></i>Upload Template
+                            </button>
+                            <a href="{{ url_for('platform_oauth.microsoft_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
+                                Disconnect
+                            </a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('platform_oauth.microsoft_connect') }}" class="block w-full bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold">
+                            <i class="fab fa-microsoft mr-2"></i>Connect Microsoft 365
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                    </button>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="bg-blue-50 rounded-lg p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Connect Platform</h3>
+                    <p class="text-sm text-gray-600">Click the connect button and log in to your platform account</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">2</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Choose Template</h3>
+                    <p class="text-sm text-gray-600">Browse and select the template you want to upload</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">3</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Upload & Use</h3>
+                    <p class="text-sm text-gray-600">Template is automatically uploaded to your connected platform</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Need Help?</h2>
+            <p class="text-gray-700 mb-4">If you have questions about connecting platforms or uploading templates:</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                <li>Check our detailed integration guides in the documentation</li>
+                <li>Contact support for step-by-step assistance</li>
+                <li>Watch our video tutorials on integration setup</li>
+            </ul>
+            <a href="mailto:support@pmblueprints.net" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold">
+                Contact Support
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function uploadToMonday() {
+    // TODO: Implement template selection and upload
+    alert('Select a template to upload to Monday.com');
+    window.location.href = '/templates';
+}
+
+function uploadToSmartsheet() {
+    alert('Select a template to upload to Smartsheet');
+    window.location.href = '/templates';
+}
+
+function uploadToGoogle() {
+    alert('Select a template to upload to Google Sheets');
+    window.location.href = '/templates';
+}
+
+function uploadToMicrosoft() {
+    alert('Select a template to upload to Microsoft 365');
+    window.location.href = '/templates';
+}
+</script>
+{% endblock %}
+

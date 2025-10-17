@@ -1,0 +1,318 @@
+{% extends "base.html" %}
+
+{% block title %}PMBlueprints - Smart templates. Strong foundations.{% endblock %}
+
+{% block head %}
+<style>
+    /* Remove ALL animations */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .feature-card {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-gradient text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl font-bold mb-4">Smart templates. Strong foundations.</h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+            AI-powered Document Templates reduce the time spent creating project documentation by up to 70%, 
+            allowing project managers to focus on what matters most: successful project execution and delivery.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="{{ url_for('auth.register') }}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg">
+                Get Started Free
+            </a>
+            <a href="{{ url_for('templates.browse') }}" class="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-white">
+                Browse Templates
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Template Browser Section -->
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Find Your Perfect Template</h2>
+            <p class="text-xl text-gray-600">Choose from 960+ professional project management templates</p>
+        </div>
+
+        <!-- Template Filters -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <form action="{{ url_for('templates.browse') }}" method="GET" id="templateBrowserForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Industry Dropdown -->
+                    <div>
+                        <label for="industry" class="block text-lg font-semibold text-gray-900 mb-3">
+                            Select Industry <span class="text-red-500">*</span>
+                        </label>
+                        <select name="industry" id="industry" required 
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">-- Choose an Industry --</option>
+                            <option value="IT & Software">IT & Software</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Education">Education</option>
+                            <option value="Government">Government</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Telecommunications">Telecommunications</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Real Estate">Real Estate</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Non-Profit">Non-Profit</option>
+                            <option value="Aerospace">Aerospace</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Pharmaceutical">Pharmaceutical</option>
+                            <option value="Legal">Legal</option>
+                        </select>
+                    </div>
+
+                    <!-- Template Type Dropdown -->
+                    <div>
+                        <label for="category" class="block text-lg font-semibold text-gray-900 mb-3">
+                            Select Template Type <span class="text-red-500">*</span>
+                        </label>
+                        <select name="category" id="category" required 
+                                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">-- Choose a Template Type --</option>
+                            <option value="Project Charter">Project Charter</option>
+                            <option value="Project Plan">Project Plan</option>
+                            <option value="Risk Register">Risk Register</option>
+                            <option value="Budget Template">Budget Template</option>
+                            <option value="Schedule">Schedule</option>
+                            <option value="Status Report">Status Report</option>
+                            <option value="Stakeholder Register">Stakeholder Register</option>
+                            <option value="Communication Plan">Communication Plan</option>
+                            <option value="Resource Plan">Resource Plan</option>
+                            <option value="Quality Plan">Quality Plan</option>
+                            <option value="Change Request">Change Request</option>
+                            <option value="Lessons Learned">Lessons Learned</option>
+                            <option value="Business Case">Business Case</option>
+                            <option value="Requirements Document">Requirements Document</option>
+                            <option value="WBS">WBS (Work Breakdown Structure)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-12 py-4 rounded-lg font-bold text-lg">
+                        View Templates
+                    </button>
+                </div>
+
+                <!-- Validation Message -->
+                <div id="validationError" class="hidden mt-4 bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded">
+                    <p class="font-semibold">Please select both Industry and Template Type to continue.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Popular Templates Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Popular Templates</h2>
+            <p class="text-xl text-gray-600">Our most downloaded project management templates</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Template Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Risk Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Risk Management Plan</h3>
+                    <p class="text-sm text-gray-600 mb-4">Complete risk assessment and mitigation planning with priority matrices and tracking for business process improvement</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+
+            <!-- Template Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Project Planning</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Project Charter</h3>
+                    <p class="text-sm text-gray-600 mb-4">Comprehensive project planning with objectives, scope, milestones, and stakeholder alignment for business initiatives</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Word Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+
+            <!-- Template Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Performance Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">KPI Dashboard</h3>
+                    <p class="text-sm text-gray-600 mb-4">Visual performance dashboard with automated charts, KPIs, and metrics tracking for business process monitoring</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+
+            <!-- Template Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-6">
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">Financial Management</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Budget Tracker</h3>
+                    <p class="text-sm text-gray-600 mb-4">Detailed financial tracking with automated calculations, variance analysis, and forecasting for business projects</p>
+                    <p class="text-xs text-gray-500 mb-4"><svg class="inline h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>Excel Format</p>
+                    <a href="#" class="block w-full bg-white text-blue-600 text-center py-2 px-4 rounded-lg font-semibold border-2 border-blue-600">👁 Preview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="{{ url_for('templates.browse') }}" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-bold text-lg">
+                View All Templates
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose PMBlueprints?</h2>
+            <p class="text-xl text-gray-600">Professional templates built by experts, powered by AI</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">960+ Templates</h3>
+                <p class="text-gray-600">Comprehensive library covering all project phases and industries</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">AI-Powered</h3>
+                <p class="text-gray-600">Generate custom documents and get intelligent suggestions</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">PMI 2025 Compliant</h3>
+                <p class="text-gray-600">All templates follow latest PMBOK standards</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Platform Integrations Section -->
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+            <p class="text-xl text-gray-600">Export to your favorite project management platforms</p>
+            <p class="text-sm text-gray-500 mt-2">(Available with Enterprise plan)</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">M</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Monday.com</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">S</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Smartsheet</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-green-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">G</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Google Sheets</h4>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 text-center shadow">
+                <div class="w-20 h-20 bg-blue-700 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">M</span>
+                </div>
+                <h4 class="font-bold text-gray-900">Microsoft 365</h4>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="{{ url_for('payment.pricing') }}" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold text-lg">
+                View Enterprise Plan
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="bg-blue-600 text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+        <p class="text-xl mb-8">Join thousands of project managers who trust PMBlueprints</p>
+        <div class="flex justify-center gap-4">
+            <a href="{{ url_for('auth.register') }}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg">
+                Start Free
+            </a>
+            <a href="{{ url_for('payment.pricing') }}" class="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg border-2 border-white">
+                View Pricing
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+// Form validation
+document.getElementById('templateBrowserForm').addEventListener('submit', function(e) {
+    const industry = document.getElementById('industry').value;
+    const category = document.getElementById('category').value;
+    const errorDiv = document.getElementById('validationError');
+    
+    if (!industry || !category) {
+        e.preventDefault();
+        errorDiv.classList.remove('hidden');
+        window.scrollTo({ top: errorDiv.offsetTop - 100, behavior: 'smooth' });
+    } else {
+        errorDiv.classList.add('hidden');
+    }
+});
+</script>
+{% endblock %}
+
