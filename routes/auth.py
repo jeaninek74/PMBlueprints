@@ -95,7 +95,8 @@ def register():
             })
             
         except Exception as e:
-            logger.error(f"Registration error for {email}:            db.session.rollback()
+            logger.error(f"Registration error for {email}: {str(e)}")
+            db.session.rollback()
             return jsonify({
                 'success': False,
                 'error': 'An error occurred during registration. Please try again.'
