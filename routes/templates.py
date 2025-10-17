@@ -24,7 +24,6 @@ def browse():
     industry = request.args.get('industry', '')
     category = request.args.get('category', '')
     search = request.args.get('search', '')
-    page = request.args.get('page', 1, type=int)
     
     # Build query
     query = Template.query
@@ -41,10 +40,8 @@ def browse():
             (Template.description.ilike(f'%{search}%'))
         )
     
-    # Paginate results
-    templates = query.order_by(Template.name).paginate(
-        page=page, per_page=12, error_out=False
-    )
+    # Get all matching templates (limit to 100 for performance)
+    templates = query.order_by(Template.name).limit(100).all()
     
     # Get unique industries and categories for filters
     all_templates = Template.query.all()
