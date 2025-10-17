@@ -113,6 +113,11 @@ def login():
         flask_session.clear()
         flask_session.modified = True
         
+        # Debug: Log raw request data
+        logger.info(f"Request content type: {request.content_type}")
+        logger.info(f"Request form data: {dict(request.form)}")
+        logger.info(f"Request data: {request.data}")
+        
         email = request.form.get('email', '').strip().lower()
         password = request.form.get('password', '')
         remember = request.form.get('remember', False)
