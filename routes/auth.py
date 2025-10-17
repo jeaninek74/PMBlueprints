@@ -94,6 +94,11 @@ def login():
     
     if request.method == 'POST':
         from models import User
+        from flask import session as flask_session
+        
+        # Clear any stale session data before login
+        logger.info("Clearing session before login attempt")
+        flask_session.clear()
         
         email = request.form.get('email', '').strip().lower()
         password = request.form.get('password', '')
