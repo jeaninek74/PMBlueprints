@@ -63,11 +63,8 @@
                 </div>
                 
                 <div class="d-flex gap-3 flex-wrap">
-                    <a href="{{ url_for('templates.browse') }}" class="btn btn-light btn-lg">
-                        <i class="fas fa-download me-2"></i>Browse All Templates
-                    </a>
-                    <button class="btn btn-outline-light btn-lg" id="aiGeneratorBtn">
-                        <i class="fas fa-magic me-2"></i>AI Generator
+                    <button class="btn btn-light btn-lg" id="browseTemplatesBtn" onclick="browseWithFilters()">
+                        <i class="fas fa-download me-2"></i>Browse Templates
                     </button>
                 </div>
             </div>
@@ -568,35 +565,36 @@
 </section>
 
 <script>
-// AI Generator button handler
-document.getElementById('aiGeneratorBtn').addEventListener('click', function() {
-    {% if current_user.is_authenticated %}
-        window.location.href = '{{ url_for("dashboard") }}#ai-generator';
-    {% else %}
-        window.location.href = '{{ url_for("auth.login") }}';
-    {% endif %}
-});
+// Browse templates button - requires BOTH dropdowns to be selected
+function browseWithFilters() {
+    const industry = document.getElementById('industrySelect').value;
+    const templateType = document.getElementById('templateTypeSelect').value;
+    
+    if (!industry || !templateType) {
+        alert('Please select both Industry and Template Type to browse templates.');
+        return;
+    }
+    
+    let url = '{{ url_for("templates.browse") }}?';
+    url += 'industry=' + encodeURIComponent(industry);
+    url += '&category=' + encodeURIComponent(templateType);
+    window.location.href = url;
+}
 
-// Industry and template type selection
+// Auto-navigate when both dropdowns are selected
 document.getElementById('industrySelect').addEventListener('change', function() {
     const industry = this.value;
     const templateType = document.getElementById('templateTypeSelect').value;
-    if (industry || templateType) {
-        let url = '{{ url_for("templates.browse") }}?';
-        if (industry) url += 'industry=' + encodeURIComponent(industry);
-        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
-        window.location.href = url;
+    if (industry && templateType) {
+        browseWithFilters();
     }
 });
 
 document.getElementById('templateTypeSelect').addEventListener('change', function() {
     const templateType = this.value;
     const industry = document.getElementById('industrySelect').value;
-    if (industry || templateType) {
-        let url = '{{ url_for("templates.browse") }}?';
-        if (industry) url += 'industry=' + encodeURIComponent(industry);
-        if (templateType) url += (industry ? '&' : '') + 'category=' + encodeURIComponent(templateType);
-        window.location.href = url;
+    if (industry && templateType) {
+        browseWithFilters();
     }
 });
 </script>
