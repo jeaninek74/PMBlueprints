@@ -144,7 +144,10 @@ def load_user(user_id):
     if user:
         logger.info(f"User loaded: {user.email}")
     else:
-        logger.warning(f"User not found for ID: {user_id}")
+        logger.warning(f"User not found for ID: {user_id}, clearing stale session")
+        # Clear the stale session
+        from flask import session
+        session.clear()
     return user
 
 # Session debugging and management
