@@ -88,15 +88,18 @@ def register():
             login_user(user)
             logger.info(f"User logged in after registration: {email}")
             
-            flash('Account created successfully!', 'success')
-            return redirect(url_for('templates.browse'))
+            logger.info(f"Registration successful, returning JSON response")
+            return jsonify({
+                'success': True,
+                'redirect': url_for('templates.browse')
+            })
             
         except Exception as e:
-            logger.error(f"Registration error for {email}: {str(e)}")
-            db.session.rollback()
-            flash('An error occurred during registration', 'error')
-            return render_template('auth/register.html')
-    
+            logger.error(f"Registration error for {email}:            db.session.rollback()
+            return jsonify({
+                'success': False,
+                'error': 'An error occurred during registration. Please try again.'
+            }), 400
     return render_template('auth/register.html')
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
