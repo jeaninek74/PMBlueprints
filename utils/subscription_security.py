@@ -113,6 +113,98 @@ def check_ai_generation_limit(user):
     return total_generations < max_generations, remaining
 
 
+def check_usage_limit(user, usage_type):
+    """
+    Universal usage limit checker
+    
+    Args:
+        user: User object
+        usage_type: 'downloads', 'ai_generations', or 'ai_suggestions'
+    
+    Returns:
+        tuple: (can_use: bool, remaining: int, limit: int)
+    """
+    from app import db, TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    
+    limits = get_user_tier_limits(user)
+    first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    
+    if usage_type == 'downloads':
+        limit = limits['downloads_per_month']
+        used = TemplateDownload.query.filter(
+            TemplateDownload.user_id == user.id,
+            TemplateDownload.download_date >= first_day_of_month
+        ).count()
+        
+    elif usage_type == 'ai_generations':
+        limit = limits['ai_generations_per_month']
+        used = AIGeneratorHistory.query.filter(
+            AIGeneratorHistory.user_id == user.id,
+            AIGeneratorHistory.created_at >= first_day_of_month
+        ).count()
+        
+    elif usage_type == 'ai_suggestions':
+        limit = limits.get('ai_suggestions_per_month', 0)
+        used = AISuggestionHistory.query.filter(
+            AISuggestionHistory.user_id == user.id,
+            AISuggestionHistory.created_at >= first_day_of_month
+        ).count()
+    else:
+        return False, 0, 0
+    
+    remaining = limit - used
+    can_use = used < limit
+    
+    return can_use, remaining, limit
+
+
+def track_usage(user, usage_type, **kwargs):
+    """
+    Track usage for billing and quota enforcement
+    
+    Args:
+        user: User object
+        usage_type: 'download', 'ai_generation', 'ai_suggestion'
+        **kwargs: Additional data to store
+    """
+    from app import db, TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    
+    try:
+        if usage_type == 'download':
+            record = TemplateDownload(
+                user_id=user.id,
+                template_id=kwargs.get('template_id'),
+                download_date=datetime.utcnow()
+            )
+            db.session.add(record)
+            
+        elif usage_type == 'ai_generation':
+            record = AIGeneratorHistory(
+                user_id=user.id,
+                document_type=kwargs.get('document_type'),
+                content=kwargs.get('content'),
+                created_at=datetime.utcnow()
+            )
+            db.session.add(record)
+            
+        elif usage_type == 'ai_suggestion':
+            record = AISuggestionHistory(
+                user_id=user.id,
+                query=kwargs.get('query'),
+                suggestions=kwargs.get('suggestions'),
+                created_at=datetime.utcnow()
+            )
+            db.session.add(record)
+        
+        db.session.commit()
+        return True
+        
+    except Exception as e:
+        db.session.rollback()
+        print(f"Error tracking usage: {e}")
+        return False
+
+
 def check_feature_access(user, feature):
     """Check if user has access to a specific feature"""
     limits = get_user_tier_limits(user)
