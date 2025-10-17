@@ -57,6 +57,27 @@ def browse():
                          current_category=category,
                          current_search=search)
 
+@templates_bp.route('/preview/<int:template_id>')
+def preview(template_id):
+    """Preview template before purchasing"""
+    from models import Template
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Check if user has already purchased this template
+    has_purchased = False
+    if current_user.is_authenticated:
+        from models import TemplatePurchase
+        purchase = TemplatePurchase.query.filter_by(
+            user_id=current_user.id,
+            template_id=template_id
+        ).first()
+        has_purchased = purchase is not None
+    
+    return render_template('templates/preview.html',
+                         template=template,
+                         has_purchased=has_purchased)
+
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):
     """View template details"""

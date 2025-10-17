@@ -1,0 +1,123 @@
+<!-- Pricing Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Simple, Transparent Pricing</h2>
+            <p class="lead text-muted">Choose the plan that fits your project management needs</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Free Plan -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Free</h3>
+                            <div class="display-4 fw-bold my-3">$0<span class="fs-6 text-muted">/month</span></div>
+                            <p class="text-muted">Perfect for getting started</p>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 template download</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Browse all templates</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI suggestion (view only)</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI generation (view only)</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary btn-lg">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Individual Plan -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Individual</h3>
+                            <div class="display-4 fw-bold my-3">$50<span class="fs-6 text-muted"> one-time</span></div>
+                            <p class="text-muted">Purchase individual templates</p>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 template download per purchase</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary btn-lg">Browse Templates</a>
+                        </div>
+                        <p class="text-center text-muted small mt-2">Click "Purchase" on any template card</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-primary border-2 shadow">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <span class="badge bg-white text-primary">MOST POPULAR</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Professional</h3>
+                            <div class="display-4 fw-bold my-3">$75<span class="fs-6 text-muted">/month</span></div>
+                            <p class="text-muted">For professional project managers</p>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="{{ url_for('payment.checkout', tier='professional') }}" class="btn btn-primary btn-lg">Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Enterprise</h3>
+                            <div class="display-4 fw-bold my-3">$100<span class="fs-6 text-muted">/month</span></div>
+                            <p class="text-muted">For organizations</p>
+                        </div>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i><strong>Platform integrations</strong></li>
+                        </ul>
+                        <div class="d-grid">
+                            <a href="{{ url_for('payment.checkout', tier='enterprise') }}" class="btn btn-outline-primary btn-lg">Subscribe Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Platform Integrations Note -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="text-muted"><strong>Platform Integrations (Enterprise only):</strong> Monday.com, Smartsheet, Google Sheets, Microsoft 365</p>
+            </div>
+        </div>
+        
+        <!-- Payment Methods -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="text-muted mb-3">Secure payment processing with multiple options</p>
+                <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                    <i class="fab fa-cc-visa fa-2x text-muted"></i>
+                    <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
+                    <i class="fab fa-cc-amex fa-2x text-muted"></i>
+                    <i class="fab fa-cc-apple-pay fa-2x text-muted"></i>
+                    <i class="fab fa-google-pay fa-2x text-muted"></i>
+                    <i class="fab fa-cc-paypal fa-2x text-muted"></i>
+                </div>
+                <p class="text-muted mt-3 small">All plans include 30-day money-back guarantee • Cancel anytime • No hidden fees</p>
+            </div>
+        </div>
+    </div>
+</section>
+

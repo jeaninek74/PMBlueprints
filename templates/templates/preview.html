@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Preview: {{ template.name }} - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Back Button -->
+            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary mb-4">
+                <i class="bi bi-arrow-left"></i> Back to Templates
+            </a>
+            
+            <!-- Template Header -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <span class="badge bg-primary mb-2">{{ template.industry }}</span>
+                            <h1 class="h2 mb-2">{{ template.name }}</h1>
+                            <p class="text-muted mb-3">{{ template.description }}</p>
+                            <p class="mb-0">
+                                <i class="bi bi-file-earmark"></i> 
+                                <strong>Format:</strong> {{ template.file_format.upper() }}
+                            </p>
+                        </div>
+                        <div class="text-end">
+                            <h3 class="text-primary mb-3">$50</h3>
+                            {% if current_user.is_authenticated %}
+                                {% if has_purchased %}
+                                    <a href="{{ url_for('templates.download', template_id=template.id) }}" 
+                                       class="btn btn-success btn-lg mb-2">
+                                        <i class="bi bi-download"></i> Download
+                                    </a>
+                                {% else %}
+                                    <a href="{{ url_for('payment.purchase_template', template_id=template.id) }}" 
+                                       class="btn btn-success btn-lg mb-2">
+                                        <i class="bi bi-cart"></i> Purchase ($50)
+                                    </a>
+                                    <a href="{{ url_for('templates.download', template_id=template.id) }}" 
+                                       class="btn btn-primary btn-lg">
+                                        <i class="bi bi-download"></i> Download
+                                    </a>
+                                {% endif %}
+                            {% else %}
+                                <a href="{{ url_for('auth.login') }}" 
+                                   class="btn btn-success btn-lg mb-2">
+                                    <i class="bi bi-cart"></i> Purchase ($50)
+                                </a>
+                                <a href="{{ url_for('auth.login') }}" 
+                                   class="btn btn-primary btn-lg">
+                                    <i class="bi bi-download"></i> Download
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Template Preview Image -->
+            <div class="card shadow-sm">
+                <div class="card-body text-center p-4">
+                    <h4 class="mb-4">Template Preview</h4>
+                    <img src="{{ url_for('templates.thumbnail', template_id=template.id) }}" 
+                         alt="{{ template.name }} preview" 
+                         class="img-fluid rounded shadow"
+                         style="max-width: 100%; height: auto; max-height: 800px;">
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="card shadow-sm mt-4">
+                <div class="card-body">
+                    <h5 class="mb-3">What's Included</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Professional {{ template.file_format.upper() }} template</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> PMI 2025 PMBOK compliant</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Customizable for your project</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instant download after purchase</li>
+                        {% if current_user.is_authenticated and current_user.subscription_tier == 'enterprise' %}
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Platform integrations (Monday.com, Smartsheet, Google Sheets, Microsoft 365)</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
