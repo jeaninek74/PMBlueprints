@@ -15,15 +15,22 @@
     <link href="{{ url_for('static', filename='css/no-animations.css') }}?v=3" rel="stylesheet">
     <style>
         /* Critical animation disable - inline for highest priority */
-        *, *::before, *::after, *:hover, *:focus, *:active {
+        /* Disable animations but allow modals and dropdowns to work */
+        *:not(.modal):not(.modal *):not(.dropdown-menu):not(.dropdown-menu *),
+        *:not(.modal):not(.modal *):not(.dropdown-menu):not(.dropdown-menu *)::before,
+        *:not(.modal):not(.modal *):not(.dropdown-menu):not(.dropdown-menu *)::after {
+            animation: none !important;
+            transition: none !important;
+        }
+        /* Force disable all icon animations and transforms */
+        i, svg, .fa, .fas, .far, .fab, .fal,
+        i:hover, svg:hover, .fa:hover, .fas:hover, .far:hover, .fab:hover, .fal:hover {
             animation: none !important;
             transition: none !important;
             transform: none !important;
         }
-        /* Force disable all icon animations */
-        i, svg, .fa, .fas, .far, .fab, .fal,
-        i:hover, svg:hover, .fa:hover, .fas:hover, .far:hover, .fab:hover, .fal:hover {
-            animation: none !important;
+        /* Disable card and button hover effects */
+        .card, .btn, a {
             transition: none !important;
             transform: none !important;
         }
