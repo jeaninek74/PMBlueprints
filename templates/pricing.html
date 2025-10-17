@@ -11,19 +11,20 @@
 
     <div class="row justify-content-center g-4">
         <!-- Free Plan -->
-        <div class="col-lg-4">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow-sm">
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title">Free</h4>
                     <div class="display-4 fw-bold text-primary mb-3">$0</div>
                     <p class="text-muted mb-4">/month</p>
+                    <p class="text-muted small mb-4">Perfect for getting started</p>
                     
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>3 template downloads/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Email support</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>3 AI generations/month</li>
-                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>Platform integrations</li>
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Browse all templates</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>View template details</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Access AI features (view only)</li>
+                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>0 downloads</li>
+                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>0 AI generations</li>
                     </ul>
                     
                     <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary w-100">Get Started</a>
@@ -31,49 +32,97 @@
             </div>
         </div>
 
+        <!-- Individual Plan -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4 text-center">
+                    <h4 class="card-title">Individual</h4>
+                    <div class="display-4 fw-bold text-primary mb-3">$50</div>
+                    <p class="text-muted mb-4">one-time</p>
+                    <p class="text-muted small mb-4">Purchase individual templates</p>
+                    
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 template download per purchase</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Lifetime access to purchased template</li>
+                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>No AI features</li>
+                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>No platform integrations</li>
+                    </ul>
+                    
+                    <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary w-100">Browse Templates</a>
+                </div>
+            </div>
+        </div>
+
         <!-- Professional Plan -->
-        <div class="col-lg-4">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow border-primary">
                 <div class="card-header bg-primary text-white text-center">
                     <span class="badge bg-light text-primary">Most Popular</span>
                 </div>
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title">Professional</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$50</div>
+                    <div class="display-4 fw-bold text-primary mb-3">$49</div>
                     <p class="text-muted mb-4">/month</p>
+                    <p class="text-muted small mb-4">For professional project managers</p>
                     
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 template downloads/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>25 AI generations/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                        <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>No platform integrations</li>
                     </ul>
                     
-                    <button class="btn btn-primary w-100" onclick="startCheckout('professional')">Start Free Trial</button>
+                    <button class="btn btn-primary w-100" onclick="startCheckout('professional')">Subscribe Now</button>
                 </div>
             </div>
         </div>
 
         <!-- Enterprise Plan -->
-        <div class="col-lg-4">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow-sm">
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title">Enterprise</h4>
-                    <div class="display-4 fw-bold text-primary mb-3">$150</div>
+                    <div class="display-4 fw-bold text-primary mb-3">$100</div>
                     <p class="text-muted mb-4">/month</p>
+                    <p class="text-muted small mb-4">For organizations</p>
                     
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Professional</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited downloads</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>100 AI generations/month</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom templates</li>
-                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
                     </ul>
                     
-                    <button class="btn btn-outline-primary w-100" onclick="startCheckout('enterprise')">Contact Sales</button>
+                    <button class="btn btn-outline-primary w-100" onclick="startCheckout('enterprise')">Subscribe Now</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Platform Integrations Note -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <p class="text-muted small">
+                <strong>Platform Integrations (Enterprise only):</strong> Monday.com, Smartsheet, Google Sheets, Microsoft 365
+            </p>
+        </div>
+    </div>
+
+    <!-- Payment Options -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <p class="text-muted mb-3">Secure payment processing with multiple options:</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <i class="fab fa-cc-visa fa-2x text-muted"></i>
+                <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
+                <i class="fab fa-cc-amex fa-2x text-muted"></i>
+                <i class="fab fa-cc-discover fa-2x text-muted"></i>
+                <i class="fab fa-cc-paypal fa-2x text-muted"></i>
+            </div>
+            <p class="text-muted small mt-3">
+                All plans include 30-day money-back guarantee • Cancel anytime • No hidden fees
+            </p>
         </div>
     </div>
 
@@ -99,12 +148,12 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Is there a free trial?
+                            What payment methods do you accept?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
                         <div class="accordion-body">
-                            Yes, all paid plans come with a 14-day free trial. No credit card required.
+                            We accept all major credit cards (Visa, MasterCard, American Express, Discover) and PayPal.
                         </div>
                     </div>
                 </div>
@@ -112,12 +161,25 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            What payment methods do you accept?
+                            Is there a free trial?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
                         <div class="accordion-body">
-                            We accept all major credit cards, PayPal, and bank transfers for enterprise customers.
+                            Yes! The Free plan allows you to browse all templates and view AI features. You can upgrade anytime to access downloads and full AI capabilities.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            What are platform integrations?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                        <div class="accordion-body">
+                            Platform integrations (available in Enterprise plan) allow you to export templates directly to Monday.com, Smartsheet, Google Sheets, and Microsoft 365.
                         </div>
                     </div>
                 </div>
@@ -128,8 +190,11 @@
 
 <script>
 function startCheckout(plan) {
-    // Redirect to payment processing with correct URL format
-    window.location.href = '/payment/checkout/' + plan;
+    {% if current_user.is_authenticated %}
+        window.location.href = '/subscribe?plan=' + plan;
+    {% else %}
+        window.location.href = '{{ url_for("auth.login") }}?next=/subscribe?plan=' + plan;
+    {% endif %}
 }
 </script>
 {% endblock %}

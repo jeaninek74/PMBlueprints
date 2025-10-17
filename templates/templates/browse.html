@@ -99,8 +99,11 @@
                 
                 <div class="card-footer bg-transparent border-0">
                     <div class="d-grid gap-2">
-                        <button class="btn btn-outline-primary btn-sm" onclick="previewTemplate({{ template.id }}, '{{ template.name }}', '{{ template.description }}', '{{ template.category }}', '{{ template.industry }}', '{{ template.file_format }}')">
+                        <button class="btn btn-outline-primary btn-sm" onclick="previewTemplate({{ template.id }}, '{{ template.name }}', '{{ template.description }}', '{{ template.category }}', '{{ template.industry }}', '{{ template.file_format }}', '{{ template.thumbnail if template.thumbnail else '' }}')">
                             <i class="fas fa-eye me-1"></i>Preview
+                        </button>
+                        <button class="btn btn-success btn-sm" onclick="purchaseTemplate({{ template.id }}, '{{ template.name }}')">
+                            <i class="fas fa-shopping-cart me-1"></i>Purchase ($50)
                         </button>
                         <a href="{{ url_for('templates.download', template_id=template.id) }}" 
                            class="btn btn-primary btn-sm">
@@ -155,6 +158,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <!-- Template Thumbnail -->
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <img id="previewThumbnail" src="" alt="Template Preview" class="img-fluid rounded shadow-sm" style="max-height: 400px; width: auto;">
+                    </div>
+                </div>
+                
+                <!-- Template Details -->
                 <div class="row">
                     <div class="col-md-6">
                         <h6 class="text-muted">Template Name</h6>
@@ -197,7 +208,7 @@
 </div>
 
 <script>
-function previewTemplate(id, name, description, category, industry, fileType) {
+function previewTemplate(id, name, description, category, industry, fileType, thumbnail) {
     document.getElementById('previewName').textContent = name;
     document.getElementById('previewCategory').textContent = category;
     document.getElementById('previewIndustry').textContent = industry;
@@ -205,8 +216,27 @@ function previewTemplate(id, name, description, category, industry, fileType) {
     document.getElementById('previewDescription').textContent = description;
     document.getElementById('previewDownloadBtn').href = '/templates/download/' + id;
     
+    // Set thumbnail image
+    const thumbnailImg = document.getElementById('previewThumbnail');
+    if (thumbnail && thumbnail !== '') {
+        thumbnailImg.src = thumbnail;
+        thumbnailImg.style.display = 'block';
+    } else {
+        thumbnailImg.style.display = 'none';
+    }
+    
     var modal = new bootstrap.Modal(document.getElementById('previewModal'));
     modal.show();
+}
+
+function purchaseTemplate(templateId, templateName) {
+    {% if current_user.is_authenticated %}
+        // Redirect to purchase page with template ID
+        window.location.href = '/purchase/template/' + templateId;
+    {% else %}
+        // Redirect to login with return URL
+        window.location.href = '{{ url_for("auth.login") }}?next=/purchase/template/' + templateId;
+    {% endif %}
 }
 </script>
 {% endblock %}
