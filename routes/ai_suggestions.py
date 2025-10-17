@@ -12,7 +12,7 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-ai_suggestions_bp = Blueprint('ai_suggestions', __name__, url_prefix='/ai/suggestions')
+ai_suggestions_bp = Blueprint('ai_suggestions', __name__)
 
 # Initialize OpenAI
 openai.api_key = os.getenv('OPENAI_API_KEY')
