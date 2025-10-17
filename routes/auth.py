@@ -31,11 +31,24 @@ def register():
         from models import User
         from database import db
         
-        email = request.form.get('email', '').strip().lower()
-        password = request.form.get('password', '')
-        first_name = request.form.get('first_name', '').strip()
-        last_name = request.form.get('last_name', '').strip()
-        company = request.form.get('company', '').strip()
+        logger.info("Registration POST request received")
+        
+        # Handle both form data and JSON submissions
+        if request.is_json:
+            data = request.get_json()
+            email = data.get('email', '').strip().lower()
+            password = data.get('password', '')
+            first_name = data.get('first_name', '').strip()
+            last_name = data.get('last_name', '').strip()
+            company = data.get('company', '').strip()
+        else:
+            email = request.form.get('email', '').strip().lower()
+            password = request.form.get('password', '')
+            first_name = request.form.get('first_name', '').strip()
+            last_name = request.form.get('last_name', '').strip()
+            company = request.form.get('company', '').strip()
+        
+        logger.info(f"Registration attempt for email: {email}")
         
         # Validation
         if not email or not password:
