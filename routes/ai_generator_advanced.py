@@ -372,14 +372,19 @@ def preview_document():
 
 def _generate_excel_structure(doc_info, adaptation, context):
     """Generate Excel spreadsheet structure"""
+    # Handle structure as list or dict
+    structure = doc_info.get('structure', [])
+    if isinstance(structure, list):
+        columns = structure if structure else ['ID', 'Description', 'Owner', 'Status', 'Priority', 'Notes']
+    else:
+        columns = structure.get('columns', ['ID', 'Description', 'Owner', 'Status', 'Priority', 'Notes'])
+    
     return {
         'type': 'excel',
         'sheets': [
             {
-                'name': doc_info['category'],
-                'columns': doc_info['structure'].get('columns', [
-                    'ID', 'Description', 'Owner', 'Status', 'Priority', 'Notes'
-                ]),
+                'name': doc_info['category'].title(),
+                'columns': columns,
                 'formatting': {
                     'header_style': 'bold',
                     'freeze_panes': 'A2',
@@ -387,26 +392,23 @@ def _generate_excel_structure(doc_info, adaptation, context):
                 }
             }
         ],
-        'formulas': doc_info['structure'].get('formulas', []),
-        'data_validation': doc_info['structure'].get('validation', [])
+        'formulas': [],
+        'data_validation': []
     }
 
 
 def _generate_word_structure(doc_info, adaptation, context):
     """Generate Word document structure"""
+    # Handle structure as list or dict
+    structure = doc_info.get('structure', [])
+    if isinstance(structure, list):
+        sections = structure if structure else ['Executive Summary', 'Introduction', 'Objectives', 'Scope', 'Deliverables', 'Timeline', 'Resources', 'Risks', 'Conclusion']
+    else:
+        sections = structure.get('sections', ['Executive Summary', 'Introduction', 'Objectives', 'Scope', 'Deliverables', 'Timeline', 'Resources', 'Risks', 'Conclusion'])
+    
     return {
         'type': 'word',
-        'sections': doc_info['structure'].get('sections', [
-            'Executive Summary',
-            'Introduction',
-            'Objectives',
-            'Scope',
-            'Deliverables',
-            'Timeline',
-            'Resources',
-            'Risks',
-            'Conclusion'
-        ]),
+        'sections': sections,
         'formatting': {
             'heading_1': 'Title',
             'heading_2': 'Section',
