@@ -194,3 +194,42 @@ body * {
     animation-play-state: paused !important;
 }
 
+
+
+/* Disable ALL icon animations and hover effects */
+.fa, .fas, .far, .fal, .fab,
+i, svg, .icon, [class*="icon-"],
+.fa:hover, .fas:hover, .far:hover, .fal:hover, .fab:hover,
+i:hover, svg:hover, .icon:hover, [class*="icon-"]:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -webkit-transition: none !important;
+    -webkit-transform: none !important;
+}
+
+/* Disable icon circle/container animations */
+.icon-circle, [class*="icon-circle"],
+.icon-circle:hover, [class*="icon-circle"]:hover,
+div[style*="border-radius: 50%"],
+div[style*="border-radius: 50%"]:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Disable platform integration icon animations */
+.platform-icon, .integration-icon,
+.platform-icon:hover, .integration-icon:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Override any CSS that might add animations to icons */
+i[class*="fa-"], svg[class*="fa-"] {
+    animation: none !important;
+    transition: none !important;
+}
+
