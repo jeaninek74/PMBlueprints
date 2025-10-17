@@ -38,7 +38,7 @@
                     </form>
                     
                     <div class="text-center">
-                        <a href="{{ url_for('auth.reset_password') }}" class="text-decoration-none">
+                        <a href="{{ url_for('auth.forgot_password') }}" class="text-decoration-none">
                             Forgot your password?
                         </a>
                     </div>
@@ -58,34 +58,5 @@
 </div>
 {% endblock %}
 
-{% block extra_scripts %}
-<script>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    fetch('/auth/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            window.location.href = data.redirect;
-        } else {
-            alert(data.error || 'Login failed');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Login failed. Please try again.');
-    });
-});
-</script>
-{% endblock %}
+
 
