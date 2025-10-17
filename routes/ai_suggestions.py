@@ -25,7 +25,7 @@ def index():
     
     usage_stats = get_usage_stats(current_user) if current_user.is_authenticated else None
     
-    return render_template('ai/suggestions.html', usage_stats=usage_stats)
+    return render_template('ai_suggestions.html', usage_stats=usage_stats)
 
 @ai_suggestions_bp.route('/get', methods=['POST'])
 @login_required
