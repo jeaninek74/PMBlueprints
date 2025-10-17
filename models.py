@@ -76,6 +76,20 @@ class Template(db.Model):
     downloads = db.relationship('DownloadHistory', backref='template', lazy='dynamic')
     purchases = db.relationship('TemplatePurchase', backref='template', lazy='dynamic')
     
+    @property
+    def thumbnail(self):
+        """Generate thumbnail URL based on template name"""
+        if self.thumbnail_path:
+            # Use stored thumbnail path
+            return f'/static/thumbnails/{self.thumbnail_path}'
+        else:
+            # Generate thumbnail filename from template name
+            # Remove special characters and replace spaces with underscores
+            safe_name = self.name.replace(' ', '_').replace('/', '_').replace('\\', '_')
+            # Remove any remaining special characters except underscores and hyphens
+            safe_name = ''.join(c for c in safe_name if c.isalnum() or c in ('_', '-'))
+            return f'/static/thumbnails/{safe_name}.png'
+    
     def __repr__(self):
         return f'<Template {self.name}>'
 

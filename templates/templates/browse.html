@@ -80,9 +80,8 @@
                 <img src="{{ template.thumbnail }}" class="card-img-top" alt="{{ template.name }} preview" style="height: 200px; object-fit: cover;">
                 {% endif %}
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge bg-primary">{{ template.category }}</span>
-                        <span class="badge bg-secondary">{{ template.industry }}</span>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">{{ template.industry }}</span>
                     </div>
                     
                     <h5 class="card-title">{{ template.name }}</h5>
@@ -107,7 +106,22 @@
                            class="btn btn-primary btn-sm">
                             <i class="fas fa-download me-1"></i>Download
                         </a>
-
+                        
+                        <!-- Platform Integration Buttons -->
+                        <div class="btn-group w-100 mt-2" role="group">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="integrateTemplate({{ template.id }}, 'monday')" title="Send to Monday.com">
+                                <i class="fas fa-calendar-check"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="integrateTemplate({{ template.id }}, 'smartsheet')" title="Send to Smartsheet">
+                                <i class="fas fa-table"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="integrateTemplate({{ template.id }}, 'google')" title="Send to Google Sheets">
+                                <i class="fab fa-google"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="integrateTemplate({{ template.id }}, 'microsoft')" title="Send to Microsoft 365">
+                                <i class="fab fa-microsoft"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,12 +190,24 @@
                     <i class="fas fa-info-circle me-2"></i>
                     <strong>What's included:</strong> This template includes professional formatting, built-in formulas, and industry-specific content ready for immediate use.
                 </div>
+                {% if not current_user.is_authenticated %}
+                <div class="alert alert-warning">
+                    <i class="fas fa-lock me-2"></i>
+                    <strong>Login required:</strong> Please login or create an account to download templates.
+                </div>
+                {% endif %}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                {% if current_user.is_authenticated %}
                 <a href="#" id="previewDownloadBtn" class="btn btn-primary">
                     <i class="fas fa-download me-1"></i>Download Template
                 </a>
+                {% else %}
+                <a href="{{ url_for('auth.login') }}" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt me-1"></i>Login to Download
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -216,6 +242,22 @@ function purchaseTemplate(templateId, templateName) {
     {% else %}
         // Redirect to login with return URL
         window.location.href = '{{ url_for("auth.login") }}?next=/purchase/template/' + templateId;
+    {% endif %}
+}
+
+function integrateTemplate(templateId, platform) {
+    {% if current_user.is_authenticated %}
+        // Check if user has Enterprise subscription
+        {% if current_user.subscription_tier == 'enterprise' %}
+            // Redirect to integration page
+            window.location.href = '/integrations/' + platform + '/send/' + templateId;
+        {% else %}
+            alert('Platform integrations are available for Enterprise subscribers only. Please upgrade your subscription.');
+            window.location.href = '{{ url_for("main.pricing") }}';
+        {% endif %}
+    {% else %}
+        // Redirect to login
+        window.location.href = '{{ url_for("auth.login") }}?next=/integrations/' + platform + '/send/' + templateId;
     {% endif %}
 }
 </script>
