@@ -40,7 +40,7 @@ def browse():
             )
         
         # Get all matching templates
-        templates = query.order_by(Template.industry, Template.name).limit(100).all()
+        templates = query.order_by(Template.industry, Template.name).all()
         
         # Get unique industries and categories for filters
         all_templates = Template.query.all()
