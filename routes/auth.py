@@ -96,9 +96,16 @@ def login():
         from models import User
         from flask import session as flask_session
         
-        # Clear any stale session data before login
-        logger.info("Clearing session before login attempt")
+        # For Redis-backed sessions, we need to regenerate the session ID
+        # Store the old session ID for logging
+        old_session_id = flask_session.get('_id', 'none')
+        logger.info(f"Old session ID: {old_session_id}")
+        
+        # Clear all session data
         flask_session.clear()
+        
+        # Force session modification to trigger Redis update
+        flask_session.modified = True
         
         email = request.form.get('email', '').strip().lower()
         password = request.form.get('password', '')
