@@ -11,42 +11,53 @@ from datetime import datetime, timedelta
 # Subscription tier limits
 TIER_LIMITS = {
     'free': {
-        'downloads_per_month': 3,
-        'ai_generations_per_month': 3,
-        'ai_suggestions_per_month': 3,
+        'downloads_per_month': 1,
+        'ai_generations_per_month': 1,
+        'ai_suggestions_per_month': 1,
+        'ai_suggestions_access': True,
+        'platform_integrations': False,
+        'custom_templates': False,
+        'advanced_analytics': False,
+        'priority_support': False,
+        'can_download_ai_generated': False,  # View only, no download
+        'template_access': 'all'
+    },
+    'individual': {
+        'downloads_per_month': 1,  # 1 download per $50 purchase
+        'ai_generations_per_month': 0,
+        'ai_suggestions_per_month': 0,
+        'ai_suggestions_access': False,
+        'platform_integrations': False,
+        'custom_templates': False,
+        'advanced_analytics': False,
+        'priority_support': False,
+        'can_download_ai_generated': False,
+        'is_one_time_purchase': True,
+        'template_access': 'all'
+    },
+    'professional': {
+        'downloads_per_month': 2,
+        'ai_generations_per_month': 6,
+        'ai_suggestions_per_month': 4,
         'ai_suggestions_access': True,
         'platform_integrations': False,
         'custom_templates': False,
         'advanced_analytics': False,
         'priority_support': False,
         'can_download_ai_generated': True,
-        'template_access': 'basic'  # Basic templates only
+        'template_access': 'all'
     },
-    'professional': {
-        'downloads_per_month': 10,
-        'ai_generations_per_month': 25,
-        'ai_suggestions_per_month': 25,
+    'enterprise': {
+        'downloads_per_month': 2,
+        'ai_generations_per_month': 6,
+        'ai_suggestions_per_month': 4,
         'ai_suggestions_access': True,
         'platform_integrations': True,
         'custom_templates': False,
         'advanced_analytics': False,
-        'advanced_features': True,
-        'priority_support': False,
-        'can_download_ai_generated': True,
-        'template_access': 'all'  # All 960+ templates
-    },
-    'enterprise': {
-        'downloads_per_month': float('inf'),  # Unlimited
-        'ai_generations_per_month': 100,
-        'ai_suggestions_per_month': 100,
-        'ai_suggestions_access': True,
-        'platform_integrations': True,
-        'custom_templates': True,
-        'advanced_analytics': True,
-        'advanced_features': True,
         'priority_support': True,
         'can_download_ai_generated': True,
-        'template_access': 'all'  # All 960+ templates
+        'template_access': 'all'
     }
 }
 

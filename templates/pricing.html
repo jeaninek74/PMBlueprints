@@ -11,7 +11,7 @@
 
     <div class="row justify-content-center g-4">
         <!-- Free Plan -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow-sm">
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title mb-4">Free</h4>
@@ -20,61 +20,83 @@
                     <p class="text-muted mb-4">Perfect for getting started</p>
                     
                     <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>3 template downloads/month</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Basic templates</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>3 AI generations/month</li>
-                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>Platform integrations</li>
-                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>Advanced analytics</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 template download</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Browse all templates</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI suggestion (view only)</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI generation (view only)</li>
+                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>No AI downloads</li>
                     </ul>
                     
-                    <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary w-100 py-2">Get Started Free</a>
+                    <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary w-100 py-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Individual Plan -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4 text-center">
+                    <h4 class="card-title mb-4">Individual</h4>
+                    <div class="display-3 fw-bold text-dark mb-2">$50</div>
+                    <p class="text-muted mb-4">one-time</p>
+                    <p class="text-muted mb-4">Purchase individual templates</p>
+                    
+                    <ul class="list-unstyled mb-4 text-start">
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 template download per purchase</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Lifetime access to purchased template</li>
+                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>No AI features</li>
+                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>No platform integrations</li>
+                    </ul>
+                    
+                    <p class="text-muted small">Browse templates and click "Purchase" on any template card</p>
                 </div>
             </div>
         </div>
 
         <!-- Professional Plan -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow border-primary" style="border-width: 2px;">
                 <div class="card-header bg-primary text-white text-center py-2">
                     <span class="badge bg-white text-primary">MOST POPULAR</span>
                 </div>
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title mb-4">Professional</h4>
-                    <div class="display-3 fw-bold text-dark mb-2">$50</div>
+                    <div class="display-3 fw-bold text-dark mb-2">$75</div>
                     <p class="text-muted mb-4">/month</p>
                     <p class="text-muted mb-4">For professional project managers</p>
                     
                     <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>10 template downloads/month</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>25 AI generations/month</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Advanced features</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Download AI-generated docs</li>
+                        <li class="mb-3"><i class="fas fa-times text-muted me-2"></i>No platform integrations</li>
                     </ul>
                     
-                    <button class="btn btn-primary w-100 py-2" onclick="startCheckout('professional')">Start Professional</button>
+                    <button class="btn btn-primary w-100 py-2" onclick="startCheckout('professional')">Subscribe Now</button>
                 </div>
             </div>
         </div>
 
         <!-- Enterprise Plan -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="card h-100 shadow-sm">
                 <div class="card-body p-4 text-center">
                     <h4 class="card-title mb-4">Enterprise</h4>
-                    <div class="display-3 fw-bold text-dark mb-2">$150</div>
+                    <div class="display-3 fw-bold text-dark mb-2">$100</div>
                     <p class="text-muted mb-4">/month</p>
-                    <p class="text-muted mb-4">For teams and organizations</p>
+                    <p class="text-muted mb-4">For organizations</p>
                     
                     <ul class="list-unstyled mb-4 text-start">
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Unlimited downloads</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>All 960+ templates</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>100 AI generations/month</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Custom templates</li>
-                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Download AI-generated docs</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Platform integrations</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Priority support</li>
                     </ul>
                     
-                    <button class="btn btn-outline-primary w-100 py-2" onclick="startCheckout('enterprise')">Start Enterprise</button>
+                    <button class="btn btn-outline-primary w-100 py-2" onclick="startCheckout('enterprise')">Subscribe Now</button>
                 </div>
             </div>
         </div>
@@ -84,7 +106,7 @@
     <div class="row mt-5">
         <div class="col-12 text-center">
             <p class="text-muted">
-                <strong>Platform Integrations:</strong> Monday.com, Smartsheet, Google Sheets, Microsoft 365, Workday
+                <strong>Platform Integrations (Enterprise only):</strong> Monday.com, Smartsheet, Google Sheets, Microsoft 365
             </p>
         </div>
     </div>
@@ -110,10 +132,8 @@
 <script>
 function startCheckout(plan) {
     {% if current_user.is_authenticated %}
-        // Redirect to Stripe checkout for the selected plan
         window.location.href = '/payment/subscribe/' + plan;
     {% else %}
-        // Redirect to login first
         window.location.href = '{{ url_for("auth.login") }}?next=' + encodeURIComponent('/pricing');
     {% endif %}
 }
