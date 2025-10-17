@@ -113,14 +113,16 @@ def login():
         flask_session.clear()
         flask_session.modified = True
         
-        # Debug: Log raw request data
-        logger.info(f"Request content type: {request.content_type}")
-        logger.info(f"Request form data: {dict(request.form)}")
-        logger.info(f"Request data: {request.data}")
-        
-        email = request.form.get('email', '').strip().lower()
-        password = request.form.get('password', '')
-        remember = request.form.get('remember', False)
+        # Handle both form data and JSON submissions
+        if request.is_json:
+            data = request.get_json()
+            email = data.get('email', '').strip().lower()
+            password = data.get('password', '')
+            remember = data.get('remember', False)
+        else:
+            email = request.form.get('email', '').strip().lower()
+            password = request.form.get('password', '')
+            remember = request.form.get('remember', False)
         
         logger.info(f"Login attempt for email: {email}")
         
