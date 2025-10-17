@@ -123,7 +123,7 @@ def download(template_id):
             db.session.commit()
             
             # Serve the file
-            file_path = os.path.join('templates_files', template.file_path)
+            file_path = os.path.join('public/templates', template.file_path)
             if os.path.exists(file_path):
                 return send_file(file_path,
                                as_attachment=True,
@@ -160,7 +160,7 @@ def download(template_id):
         db.session.commit()
         
         # Serve the file
-        file_path = os.path.join('templates_files', template.file_path)
+        file_path = os.path.join('public/templates', template.file_path)
         if os.path.exists(file_path):
             return send_file(file_path,
                            as_attachment=True,
