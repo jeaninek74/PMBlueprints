@@ -54,6 +54,7 @@ def register():
         
         try:
             # Create new user
+            logger.info(f"Creating new user: {email}")
             user = User(
                 email=email,
                 first_name=first_name,
@@ -68,15 +69,17 @@ def register():
             
             db.session.add(user)
             db.session.commit()
+            logger.info(f"User created successfully: {email}")
             
             # Log user in
             login_user(user)
+            logger.info(f"User logged in after registration: {email}")
             
             flash('Account created successfully!', 'success')
             return redirect(url_for('account.dashboard'))
             
         except Exception as e:
-            logger.error(f"Registration error: {str(e)}")
+            logger.error(f"Registration error for {email}: {str(e)}")
             db.session.rollback()
             flash('An error occurred during registration', 'error')
             return render_template('auth/register.html')
@@ -96,14 +99,23 @@ def login():
         password = request.form.get('password', '')
         remember = request.form.get('remember', False)
         
+        logger.info(f"Login attempt for email: {email}")
+        
         if not email or not password:
+            logger.warning(f"Missing credentials: email={bool(email)}, password={bool(password)}")
             flash('Email and password are required', 'error')
             return render_template('auth/login.html')
         
         # Find user
         user = User.query.filter_by(email=email).first()
         
-        if not user or not user.check_password(password):
+        if not user:
+            logger.warning(f"User not found: {email}")
+            flash('Invalid email or password', 'error')
+            return render_template('auth/login.html')
+        
+        if not user.check_password(password):
+            logger.warning(f"Invalid password for user: {email}")
             flash('Invalid email or password', 'error')
             return render_template('auth/login.html')
         
