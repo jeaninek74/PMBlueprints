@@ -16,6 +16,7 @@ import json
 from pmbok_2025_knowledge import pmbok_knowledge
 from methodology_knowledge import methodology_knowledge
 from pm_document_intelligence import pm_intelligence as pm_doc_intelligence
+from utils.subscription_security import check_ai_generation_limit
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
