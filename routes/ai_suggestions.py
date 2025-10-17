@@ -18,12 +18,12 @@ ai_suggestions_bp = Blueprint('ai_suggestions', __name__, url_prefix='/ai/sugges
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 @ai_suggestions_bp.route('/')
-@login_required
 def index():
-    """AI Suggestions page"""
+    """AI Suggestions page - public view, suggestions require login"""
+    from flask_login import current_user
     from utils.subscription_security import get_usage_stats
     
-    usage_stats = get_usage_stats(current_user)
+    usage_stats = get_usage_stats(current_user) if current_user.is_authenticated else None
     
     return render_template('ai/suggestions.html', usage_stats=usage_stats)
 

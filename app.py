@@ -371,9 +371,8 @@ def contact():
     return render_template('contact.html')
 
 @app.route('/ai-generator')
-@login_required
 def ai_generator_page():
-    """AI Generator page"""
+    """AI Generator page - public view, generation requires login"""
     return render_template('ai_generator_page.html')
 
 @app.route('/health')
