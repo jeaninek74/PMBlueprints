@@ -12,7 +12,22 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <!-- No Animations CSS -->
-    <link href="{{ url_for('static', filename='css/no-animations.css') }}?v=2" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/no-animations.css') }}?v=3" rel="stylesheet">
+    <style>
+        /* Critical animation disable - inline for highest priority */
+        *, *::before, *::after, *:hover, *:focus, *:active {
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+        }
+        /* Force disable all icon animations */
+        i, svg, .fa, .fas, .far, .fab, .fal,
+        i:hover, svg:hover, .fa:hover, .fas:hover, .far:hover, .fab:hover, .fal:hover {
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+        }
+    </style>
     
     {% block extra_head %}{% endblock %}
 </head>
