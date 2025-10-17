@@ -89,7 +89,7 @@ def register():
             logger.info(f"User logged in after registration: {email}")
             
             flash('Account created successfully!', 'success')
-            return redirect(url_for('account.dashboard'))
+            return redirect(url_for('templates.browse'))
             
         except Exception as e:
             logger.error(f"Registration error for {email}: {str(e)}")
