@@ -12,22 +12,25 @@ from datetime import datetime, timedelta
 TIER_LIMITS = {
     'free': {
         'downloads_per_month': 0,  # Free users cannot download
-        'ai_generations_per_month': 0,  # Free users cannot use AI
-        'ai_suggestions_access': False,
+        'ai_generations_per_month': 1,  # 1 AI generation (view only, no download)
+        'ai_suggestions_per_month': 1,  # 1 AI suggestion (view only, no download)
+        'ai_suggestions_access': True,  # Can access AI Suggestor
         'platform_integrations': False,
         'custom_templates': False,
         'advanced_analytics': False,
-        'priority_support': False
+        'priority_support': False,
+        'can_download_ai_generated': False  # Cannot download AI-generated docs
     },
     'individual': {
-        'downloads_per_month': 1,  # One-time: 1 template download OR 1 AI generation
-        'ai_generations_per_month': 1,  # Can use AI Generator for 1 template
+        'downloads_per_month': 1,  # One-time: 1 template download per purchase
+        'ai_generations_per_month': 0,  # No AI features for individual tier
         'ai_suggestions_access': False,  # No AI Suggestions
         'platform_integrations': False,
         'custom_templates': False,
         'advanced_analytics': False,
         'priority_support': False,
-        'is_one_time_purchase': True  # Not a subscription
+        'is_one_time_purchase': True,  # Not a subscription
+        'can_download_ai_generated': False  # No AI features
     },
     'professional': {
         'downloads_per_month': 2,
@@ -37,7 +40,8 @@ TIER_LIMITS = {
         'platform_integrations': False,
         'custom_templates': False,
         'advanced_analytics': False,
-        'priority_support': False
+        'priority_support': False,
+        'can_download_ai_generated': True  # Can download AI-generated docs
     },
     'enterprise': {
         'downloads_per_month': 2,
@@ -47,7 +51,8 @@ TIER_LIMITS = {
         'platform_integrations': True,
         'custom_templates': False,
         'advanced_analytics': False,
-        'priority_support': False
+        'priority_support': True,
+        'can_download_ai_generated': True  # Can download AI-generated docs
     }
 }
 
