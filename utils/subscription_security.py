@@ -72,7 +72,8 @@ def get_user_tier_limits(user):
 
 def check_download_limit(user):
     """Check if user has exceeded download limit for current month"""
-    from app import db, TemplateDownload
+    from database import db
+    from models import TemplateDownload
     
     limits = get_user_tier_limits(user)
     max_downloads = limits['downloads_per_month']
@@ -96,7 +97,8 @@ def check_download_limit(user):
 
 def check_ai_generation_limit(user):
     """Check if user has exceeded AI generation limit for current month"""
-    from app import db, AIGeneratorHistory, AISuggestionHistory
+    from database import db
+    from models import AIGeneratorHistory, AISuggestionHistory
     
     limits = get_user_tier_limits(user)
     max_generations = limits['ai_generations_per_month']
@@ -136,7 +138,8 @@ def check_usage_limit(user, usage_type):
     Returns:
         tuple: (can_use: bool, remaining: int, limit: int)
     """
-    from app import db, TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from database import db
+    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
     
     limits = get_user_tier_limits(user)
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
@@ -179,7 +182,8 @@ def track_usage(user, usage_type, **kwargs):
         usage_type: 'download', 'ai_generation', 'ai_suggestion'
         **kwargs: Additional data to store
     """
-    from app import db, TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from database import db
+    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
     
     try:
         if usage_type == 'download':
@@ -324,7 +328,8 @@ def require_feature(feature_name):
 
 def get_usage_stats(user):
     """Get current usage statistics for user"""
-    from app import db, TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from database import db
+    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
     
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     
