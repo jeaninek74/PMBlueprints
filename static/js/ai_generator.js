@@ -143,7 +143,7 @@ async function generateContent(documentName, projectContext, structure) {
         body: JSON.stringify({
             document_name: documentName,
             project_context: projectContext,
-            structure: structure
+            structure: structure.structure || structure
         })
     });
     
