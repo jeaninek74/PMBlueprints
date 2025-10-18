@@ -64,6 +64,8 @@ TIER_LIMITS = {
 
 def get_user_tier_limits(user):
     """Get limits for user's subscription tier"""
+    if user is None:
+        return TIER_LIMITS['free']
     tier = user.subscription_tier or 'free'
     return TIER_LIMITS.get(tier, TIER_LIMITS['free'])
 
@@ -99,6 +101,10 @@ def check_ai_generation_limit(user):
     limits = get_user_tier_limits(user)
     max_generations = limits['ai_generations_per_month']
     
+    # If no user (not logged in), use free tier limits
+    if user is None:
+        return {'allowed': max_generations > 0, 'remaining': max_generations, 'limit': max_generations, 'error': 'Please log in to use AI Generator' if max_generations == 0 else None}
+    
     # Count AI generations this month
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     
@@ -114,8 +120,9 @@ def check_ai_generation_limit(user):
     
     total_generations = generator_count + suggestion_count
     remaining = max_generations - total_generations
+    allowed = total_generations < max_generations
     
-    return total_generations < max_generations, remaining
+    return {'allowed': allowed, 'remaining': remaining, 'limit': max_generations, 'error': 'Monthly limit reached' if not allowed else None}
 
 
 def check_usage_limit(user, usage_type):
