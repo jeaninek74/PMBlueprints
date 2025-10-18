@@ -465,3 +465,4 @@ def initialize_database():
         return jsonify({"success": True, "templates": Template.query.count()})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+# Force rebuild Sat Oct 18 03:51:20 UTC 2025
