@@ -141,15 +141,13 @@ class AISuggestionHistory(db.Model):
         return f'<AISuggestion {self.id}>'
 
 class TemplatePurchase(db.Model):
-    """Individual template purchase model"""
+    """Individual template purchase model - minimal schema matching production DB"""
     __tablename__ = 'template_purchase'
     
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     template_id = db.Column(db.Integer, db.ForeignKey('templates.id'), nullable=False)
     purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
-    amount_paid = db.Column(db.Integer, nullable=True)  # Amount in cents
-    payment_id = db.Column(db.Integer, db.ForeignKey('payments.id'), nullable=True)
     
     def __repr__(self):
         return f'<Purchase {self.user_id}:{self.template_id}>'
