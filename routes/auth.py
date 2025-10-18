@@ -330,3 +330,9 @@ def reset_password(token):
     flash('Password reset functionality coming soon', 'info')
     return redirect(url_for('auth.login'))
 
+
+@auth_bp.route('/profile')
+@login_required
+def profile():
+    """User profile page"""
+    return render_template('auth/profile.html')

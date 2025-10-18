@@ -432,3 +432,11 @@ def customer_portal():
         flash('An error occurred. Please try again.', 'error')
         return redirect(url_for('account.dashboard'))
 
+
+@payment_bp.route('/billing-history')
+@login_required
+def billing_history():
+    """Billing history page"""
+    from models import Payment
+    payments = Payment.query.filter_by(user_id=current_user.id).order_by(Payment.created_at.desc()).all()
+    return render_template('payment/billing_history.html', payments=payments)
