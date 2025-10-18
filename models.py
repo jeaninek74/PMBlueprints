@@ -73,9 +73,9 @@ class Template(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
-    # Relationships
-    downloads = db.relationship('DownloadHistory', backref='template', lazy='dynamic')
-    purchases = db.relationship('TemplatePurchase', backref='template', lazy='dynamic')
+    # Relationships - COMMENTED OUT to avoid schema mismatch issues
+    # downloads = db.relationship('DownloadHistory', backref='template', lazy='dynamic')
+    # purchases = db.relationship('TemplatePurchase', backref='template', lazy='dynamic')
     
     @property
     def thumbnail(self):
@@ -185,8 +185,8 @@ class IntegrationSettings(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
-    # Relationship
-    user = db.relationship('User', backref=db.backref('integration_settings', uselist=False))
+    # Relationship - COMMENTED OUT to avoid schema mismatch issues
+    # user = db.relationship('User', backref=db.backref('integration_settings', uselist=False))
     
     def __repr__(self):
         return f'<IntegrationSettings {self.user_id}>'
