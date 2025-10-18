@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoading();
 
         try {
-            const response = await fetch('/ai_suggestions/api/suggest/quick', {
+            const response = await fetch('/ai_suggestions/get', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showLoading();
 
         try {
-            const response = await fetch('/ai_suggestions/api/suggest', {
+            const response = await fetch('/ai_suggestions/get', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
