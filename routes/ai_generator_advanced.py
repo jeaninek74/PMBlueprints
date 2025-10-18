@@ -250,10 +250,10 @@ def generate_document_content():
         project_context = data.get('project_context', '')
         structure = data.get('structure', {})
         
-        if not document_name or not project_context:
+        if not document_name:
             return jsonify({
                 'success': False,
-                'error': 'Document name and project context are required'
+                'error': 'Document name is required'
             }), 400
         
         # Get PM intelligence
