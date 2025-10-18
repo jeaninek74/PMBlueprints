@@ -158,6 +158,9 @@ async function generateContent(documentName, projectContext, structure) {
  * Step 4: Create document
  */
 async function createDocument(documentName, projectContext, structure, content, format) {
+    // Extract actual content string from response object
+    const actualContent = content.content || content;
+    
     const response = await fetch('/api/ai-generator/preview', {
         method: 'POST',
         headers: {
@@ -167,7 +170,7 @@ async function createDocument(documentName, projectContext, structure, content, 
             document_name: documentName,
             project_context: projectContext,
             structure: structure,
-            content: content,
+            content: actualContent,
             format: format
         })
     });
