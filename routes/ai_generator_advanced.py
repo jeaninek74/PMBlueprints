@@ -311,7 +311,7 @@ Generate complete, professional content that project managers can use directly."
                 'document_name': document_name,
                 'format': format_type,
                 'methodology': methodology,
-                'pmbok_knowledge_area': pmbok_info['knowledge_area'],
+                'pmbok_knowledge_area': pmbok_info if isinstance(pmbok_info, str) else pmbok_info.get('knowledge_area', 'Unknown'),
                 'generated_at': datetime.utcnow().isoformat(),
                 'tokens_used': response.usage.total_tokens
             }
