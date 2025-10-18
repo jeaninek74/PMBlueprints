@@ -334,13 +334,8 @@ def dashboard():
         print(f"Error loading AI generations: {e}")
         ai_generations = []
     
-    # Get AI Q&A history
-    try:
-        ai_questions = AIQuestionHistory.query.filter_by(user_id=current_user.id)\
-            .order_by(AIQuestionHistory.created_at.desc()).all()
-    except Exception as e:
-        print(f"Error loading AI questions: {e}")
-        ai_questions = []
+    # AI Q&A history not implemented yet
+    ai_questions = []
     
     # Add version parameter to force cache bypass
     dashboard_version = '4.0.0'  # Updated for new dashboard
@@ -349,7 +344,7 @@ def dashboard():
                          purchased_templates=purchased_templates,
                          ai_suggestions=ai_suggestions,
                          ai_generations=ai_generations,
-                         ai_questions=ai_questions,
+                         ai_questions=[],
                          version=dashboard_version))
     
     # Add cache-control headers to prevent caching of dashboard
