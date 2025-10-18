@@ -152,7 +152,7 @@
                         <h5 class="mb-0 fw-bold">
                             <i class="fas fa-lightbulb me-2 text-warning"></i>AI Suggestions History
                         </h5>
-                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-sm btn-outline-warning">
+                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-sm btn-outline-warning">
                             <i class="fas fa-plus me-1"></i>Get New Suggestions
                         </a>
                     </div>
@@ -181,7 +181,7 @@
                     </div>
                     {% if ai_suggestions|length > 5 %}
                     <div class="text-center mt-3">
-                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-sm btn-link">
+                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-sm btn-link">
                             View All {{ ai_suggestions|length }} Suggestions
                         </a>
                     </div>
@@ -190,7 +190,7 @@
                     <div class="text-center py-4">
                         <i class="fas fa-lightbulb fa-3x text-muted mb-3"></i>
                         <p class="text-muted">No AI suggestions yet.</p>
-                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-warning">
+                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-warning">
                             <i class="fas fa-magic me-1"></i>Get AI Suggestions
                         </a>
                     </div>
@@ -305,7 +305,7 @@
                         <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary">
                             <i class="fas fa-search me-2"></i>Browse Templates
                         </a>
-                        <a href="{{ url_for('ai_suggestions.suggestions_page') }}" class="btn btn-outline-warning">
+                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-outline-warning">
                             <i class="fas fa-lightbulb me-2"></i>Get AI Suggestions
                         </a>
                         <a href="{{ url_for('ai_generator_page') }}" class="btn btn-outline-success">
@@ -435,7 +435,7 @@ function formatGeneration(data) {
 
 function viewAllQuestions() {
     // Redirect to AI Q&A page or show all in modal
-    window.location.href = "{{ url_for('ai_suggestions.suggestions_page') }}";
+    window.location.href = "{{ url_for('ai_suggestions.index') }}";
 }
 </script>
 {% endblock %}
