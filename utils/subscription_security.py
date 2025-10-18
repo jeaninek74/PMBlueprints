@@ -73,7 +73,7 @@ def get_user_tier_limits(user):
 def check_download_limit(user):
     """Check if user has exceeded download limit for current month"""
     from database import db
-    from models import TemplateDownload
+    from models import DownloadHistory
     
     limits = get_user_tier_limits(user)
     max_downloads = limits['downloads_per_month']
@@ -85,9 +85,9 @@ def check_download_limit(user):
     # Count downloads this month
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     
-    downloads_this_month = TemplateDownload.query.filter(
-        TemplateDownload.user_id == user.id,
-        TemplateDownload.download_date >= first_day_of_month
+    downloads_this_month = DownloadHistory.query.filter(
+        DownloadHistory.user_id == user.id,
+        DownloadHistory.download_date >= first_day_of_month
     ).count()
     
     remaining = max_downloads - downloads_this_month
@@ -139,16 +139,16 @@ def check_usage_limit(user, usage_type):
         tuple: (can_use: bool, remaining: int, limit: int)
     """
     from database import db
-    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from models import DownloadHistory, AIGeneratorHistory, AISuggestionHistory
     
     limits = get_user_tier_limits(user)
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     
     if usage_type == 'downloads':
         limit = limits['downloads_per_month']
-        used = TemplateDownload.query.filter(
-            TemplateDownload.user_id == user.id,
-            TemplateDownload.download_date >= first_day_of_month
+        used = DownloadHistory.query.filter(
+            DownloadHistory.user_id == user.id,
+            DownloadHistory.download_date >= first_day_of_month
         ).count()
         
     elif usage_type == 'ai_generations':
@@ -183,11 +183,11 @@ def track_usage(user, usage_type, **kwargs):
         **kwargs: Additional data to store
     """
     from database import db
-    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from models import DownloadHistory, AIGeneratorHistory, AISuggestionHistory
     
     try:
         if usage_type == 'download':
-            record = TemplateDownload(
+            record = DownloadHistory(
                 user_id=user.id,
                 template_id=kwargs.get('template_id'),
                 download_date=datetime.utcnow()
@@ -329,14 +329,14 @@ def require_feature(feature_name):
 def get_usage_stats(user):
     """Get current usage statistics for user"""
     from database import db
-    from models import TemplateDownload, AIGeneratorHistory, AISuggestionHistory
+    from models import DownloadHistory, AIGeneratorHistory, AISuggestionHistory
     
     first_day_of_month = datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     
     # Downloads
-    downloads_this_month = TemplateDownload.query.filter(
-        TemplateDownload.user_id == user.id,
-        TemplateDownload.download_date >= first_day_of_month
+    downloads_this_month = DownloadHistory.query.filter(
+        DownloadHistory.user_id == user.id,
+        DownloadHistory.download_date >= first_day_of_month
     ).count()
     
     # AI Generations
