@@ -285,9 +285,9 @@ def check_ai_quota(f):
         if not current_user.is_authenticated:
             return jsonify({'error': 'Please log in to use AI features'}), 401
         
-        can_generate, remaining = check_ai_generation_limit(current_user)
+        limit_result = check_ai_generation_limit(current_user)
         
-        if not can_generate:
+        if not limit_result['allowed']:
             return jsonify({
                 'error': 'AI generation limit exceeded for this month',
                 'remaining': 0,
