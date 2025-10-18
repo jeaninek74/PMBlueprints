@@ -40,14 +40,13 @@ def browse():
             (Template.description.ilike(f'%{search}%'))
         )
     
-    # Get all matching templates (limit to 100 for performance)
+    # Get all matching templates
     # Order by industry first (chronological), then by name within each industry
     templates = query.order_by(Template.industry, Template.name).all()
     
-    # Get unique industries and categories for filters
-    all_templates = Template.query.all()
-    industries = sorted(list(set(t.industry for t in all_templates if t.industry)))
-    categories = sorted(list(set(t.category for t in all_templates if t.category)))
+    # Get unique industries and categories for filters (optimized - use distinct query)
+    industries = sorted([i[0] for i in Template.query.with_entities(Template.industry).distinct().all() if i[0]])
+    categories = sorted([c[0] for c in Template.query.with_entities(Template.category).distinct().all() if c[0]])
     
     return render_template('templates/browse.html',
                          templates=templates,
