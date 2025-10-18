@@ -253,7 +253,7 @@ function integrateTemplate(templateId, platform) {
             window.location.href = '/integrations/' + platform + '/send/' + templateId;
         {% else %}
             alert('Platform integrations are available for Enterprise subscribers only. Please upgrade your subscription.');
-            window.location.href = '{{ url_for("main.pricing") }}';
+            window.location.href = '{{ url_for("payment.pricing") }}';
         {% endif %}
     {% else %}
         // Redirect to login
