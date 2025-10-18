@@ -490,7 +490,7 @@ def diagnostic():
     # Test 2: Database connection
     try:
         from database import db
-        db.session.execute('SELECT 1')
+        from sqlalchemy import text; db.session.execute(text('SELECT 1'))
         results.append("✅ Database connection works")
     except Exception as e:
         results.append(f"❌ Database connection failed: {str(e)}")
