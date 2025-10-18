@@ -358,7 +358,12 @@ def preview_document():
         return jsonify({
             'success': True,
             'preview_html': preview_html,
-            'editable': True
+            'editable': True,
+            'content': content,
+            'document_name': document_name,
+            'format': format_type,
+            'structure': data.get('structure', {}),
+            'metadata': data.get('metadata', {})
         })
     
     except Exception as e:
