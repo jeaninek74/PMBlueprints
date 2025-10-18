@@ -368,7 +368,7 @@ def dashboard():
         import traceback
         logger.error(f"Traceback: {traceback.format_exc()}")
         # Return a simple error page instead of crashing
-        return render_template('error.html', error="Dashboard temporarily unavailable"), 500
+        return render_template('errors/500.html', error="Dashboard temporarily unavailable"), 500
 
 @app.route('/pricing')
 def pricing():
