@@ -40,12 +40,13 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     last_login = db.Column(db.DateTime)
     
-    # Relationships
-    downloads = db.relationship('DownloadHistory', backref='user', lazy='dynamic')
-    ai_generations = db.relationship('AIGeneratorHistory', backref='user', lazy='dynamic')
-    ai_suggestions = db.relationship('AISuggestionHistory', backref='user', lazy='dynamic')
-    purchases = db.relationship('TemplatePurchase', backref='user', lazy='dynamic')
-    payments = db.relationship('Payment', backref='user', lazy='dynamic')
+    # Relationships - COMMENTED OUT to avoid schema mismatch issues
+    # These aren't used directly since queries are done explicitly
+    # downloads = db.relationship('DownloadHistory', backref='user', lazy='dynamic')
+    # ai_generations = db.relationship('AIGeneratorHistory', backref='user', lazy='dynamic')
+    # ai_suggestions = db.relationship('AISuggestionHistory', backref='user', lazy='dynamic')
+    # purchases = db.relationship('TemplatePurchase', backref='user', lazy='dynamic')
+    # payments = db.relationship('Payment', backref='user', lazy='dynamic')
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
