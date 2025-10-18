@@ -148,7 +148,6 @@ class TemplatePurchase(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     template_id = db.Column(db.Integer, db.ForeignKey('templates.id'), nullable=False)
     purchased_at = db.Column(db.DateTime, default=datetime.utcnow)
-    purchase_type = db.Column(db.String(20), default='alacarte', nullable=True)
     amount_paid = db.Column(db.Integer, nullable=True)  # Amount in cents
     payment_id = db.Column(db.Integer, db.ForeignKey('payments.id'), nullable=True)
     
