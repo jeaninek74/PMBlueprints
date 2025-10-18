@@ -344,6 +344,11 @@ def preview_document():
         
         content = data.get('content', '')
         format_type = data.get('format', 'word')
+        
+        # Convert 'auto' to specific format based on document type
+        if format_type == 'auto' or not format_type:
+            format_type = 'word'  # Default to Word for most PM documents
+        
         document_name = data.get('document_name', 'document')
         
         if not content:
