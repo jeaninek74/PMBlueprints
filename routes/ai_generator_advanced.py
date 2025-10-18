@@ -533,6 +533,8 @@ def download_document():
         from document_generator import document_generator
         
         data = request.get_json()
+        logger.info(f"Download request data keys: {list(data.keys()) if data else 'None'}")
+        logger.info(f"Download request data: {str(data)[:200]}...") # Log first 200 chars
         
         content = data.get('content', '')
         document_name = data.get('document_name', 'PM_Document')
@@ -540,7 +542,11 @@ def download_document():
         structure = data.get('structure', {})
         metadata = data.get('metadata', {})
         
+        logger.info(f"Content length: {len(content) if content else 0}")
+        logger.info(f"Document name: {document_name}, Format: {format_type}")
+        
         if not content:
+            logger.error(f"Content is empty! Data received: {data}")
             return jsonify({'success': False, 'error': 'Content is required'}), 400
         
         # Add user info
