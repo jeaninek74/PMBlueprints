@@ -469,7 +469,7 @@ def _build_generation_prompt(document_name, format_type, methodology, project_co
 - PMI 2025 PMBOK Process Group: {pmbok_info.get('process_group', 'Unknown') if isinstance(pmbok_info, dict) else 'Initiating'}
 
 **Document Purpose:**
-{doc_info['purpose']}
+{doc_info.get('content_guidance', {}).get('purpose', 'Professional project management document')}
 
 **Methodology Characteristics:**
 - Formality Level: {method_info['document_characteristics']['formality'] if method_info else 'High'}
