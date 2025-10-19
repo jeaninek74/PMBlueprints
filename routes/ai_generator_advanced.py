@@ -540,10 +540,23 @@ def download_document():
         if not current_user.is_authenticated:
             return jsonify({
                 'success': False,
-                'error': 'Please log in to download AI-generated templates',
+                'error': 'Please log in to access AI Generator',
                 'requires_auth': True,
-                'message': 'Create a free account to download templates'
+                'message': 'Create a free account to try AI Generator'
             }), 401
+        
+        # Check if user's tier allows AI template downloads
+        from utils.subscription_security import get_user_tier_limits
+        tier_limits = get_user_tier_limits(current_user)
+        
+        if not tier_limits.get('can_download_ai_generated', False):
+            return jsonify({
+                'success': False,
+                'error': 'AI template downloads require Professional subscription',
+                'requires_upgrade': True,
+                'current_tier': current_user.subscription_tier or 'free',
+                'message': 'Upgrade to Professional ($29/month) to download AI-generated templates'
+            }), 403
         
         from document_generator import document_generator
         

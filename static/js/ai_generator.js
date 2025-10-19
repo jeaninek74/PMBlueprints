@@ -238,8 +238,19 @@ async function handleDownloadTemplate() {
                 const errorData = await response.json();
                 if (errorData.requires_auth) {
                     // Redirect to login with return URL
-                    if (confirm('Please log in to download templates. Create a free account to get started. Redirect to login?')) {
+                    if (confirm('Please log in to access AI Generator. Create a free account to try it out. Redirect to login?')) {
                         window.location.href = '/auth/login?next=' + encodeURIComponent(window.location.pathname);
+                    }
+                    return;
+                }
+            }
+            // Check if upgrade is required
+            if (response.status === 403) {
+                const errorData = await response.json();
+                if (errorData.requires_upgrade) {
+                    // Redirect to pricing page
+                    if (confirm(errorData.message + ' View pricing plans?')) {
+                        window.location.href = '/pricing';
                     }
                     return;
                 }
