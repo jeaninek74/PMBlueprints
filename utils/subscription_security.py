@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 # Subscription tier limits
 TIER_LIMITS = {
     'free': {
-        'downloads_per_month': 1,
+        'downloads_per_month': 0,
         'ai_generations_per_month': 1,
         'ai_suggestions_per_month': 1,
         'ai_suggestions_access': True,

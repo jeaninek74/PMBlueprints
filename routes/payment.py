@@ -474,3 +474,123 @@ def subscribe(tier):
     # Redirect to the actual checkout route
     return redirect(url_for('payment.checkout', tier=tier))
 
+
+
+
+@payment_bp.route('/purchase/template/<int:template_id>')
+@login_required
+def purchase_template(template_id):
+    """Purchase a single template (Individual tier - $50)"""
+    from models import Template, TemplatePurchase
+    from database import db
+    import os
+    
+    template = Template.query.get_or_404(template_id)
+    
+    # Check if user has already purchased this template
+    existing_purchase = TemplatePurchase.query.filter_by(
+        user_id=current_user.id,
+        template_id=template_id
+    ).first()
+    
+    if existing_purchase:
+        flash('You have already purchased this template. You can download it from your dashboard.', 'info')
+        return redirect(url_for('templates.detail', template_id=template_id))
+    
+    try:
+        # Create Stripe checkout session for single template purchase
+        checkout_session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': 5000,  # $50.00
+                    'product_data': {
+                        'name': f'Template: {template.name}',
+                        'description': f'One-time purchase of {template.name} template',
+                    },
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
+            success_url=url_for('payment.purchase_success', template_id=template_id, _external=True) + '?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url=url_for('templates.detail', template_id=template_id, _external=True),
+            customer_email=current_user.email,
+            metadata={
+                'user_id': current_user.id,
+                'template_id': template_id,
+                'purchase_type': 'individual_template'
+            }
+        )
+        
+        return redirect(checkout_session.url, code=303)
+        
+    except Exception as e:
+        logger.error(f"Error creating checkout session for template {template_id}: {str(e)}")
+        flash('An error occurred while processing your purchase. Please try again.', 'error')
+        return redirect(url_for('templates.detail', template_id=template_id))
+
+
+@payment_bp.route('/purchase/success/<int:template_id>')
+@login_required
+def purchase_success(template_id):
+    """Handle successful template purchase"""
+    from models import Template, TemplatePurchase, Payment
+    from database import db
+    
+    session_id = request.args.get('session_id')
+    
+    if not session_id:
+        flash('Invalid purchase session', 'error')
+        return redirect(url_for('templates.browse'))
+    
+    try:
+        # Verify the checkout session with Stripe
+        session = stripe.checkout.Session.retrieve(session_id)
+        
+        if session.payment_status == 'paid':
+            # Check if purchase record already exists (prevent duplicates)
+            existing_purchase = TemplatePurchase.query.filter_by(
+                user_id=current_user.id,
+                template_id=template_id
+            ).first()
+            
+            if not existing_purchase:
+                # Create purchase record
+                purchase = TemplatePurchase(
+                    user_id=current_user.id,
+                    template_id=template_id,
+                    purchase_date=datetime.utcnow(),
+                    amount_paid=50.00,
+                    stripe_payment_id=session.payment_intent
+                )
+                db.session.add(purchase)
+                
+                # Create payment record
+                payment = Payment(
+                    user_id=current_user.id,
+                    amount=50.00,
+                    currency='usd',
+                    status='completed',
+                    stripe_payment_id=session.payment_intent,
+                    description=f'Template purchase: {Template.query.get(template_id).name}',
+                    template_id=template_id
+                )
+                db.session.add(payment)
+                
+                db.session.commit()
+                
+                flash(f'Purchase successful! You can now download your template.', 'success')
+            else:
+                flash('This template has already been added to your account.', 'info')
+            
+            return redirect(url_for('templates.detail', template_id=template_id))
+        else:
+            flash('Payment was not completed. Please try again.', 'warning')
+            return redirect(url_for('templates.detail', template_id=template_id))
+            
+    except Exception as e:
+        logger.error(f"Error processing purchase success for template {template_id}: {str(e)}")
+        flash('An error occurred while confirming your purchase. Please contact support if you were charged.', 'error')
+        return redirect(url_for('templates.browse'))
+
