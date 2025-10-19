@@ -271,6 +271,42 @@ def export_to_microsoft365():
         logger.error(f"Microsoft 365 export error: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
+@integrations_bp.route('/monday/send/<int:template_id>')
+@login_required
+@requires_platform_integrations
+def send_to_monday(template_id):
+    """Send template to Monday.com"""
+    from models import Template
+    template = Template.query.get_or_404(template_id)
+    return render_template('integrations/send_monday.html', template=template)
+
+@integrations_bp.route('/smartsheet/send/<int:template_id>')
+@login_required
+@requires_platform_integrations
+def send_to_smartsheet(template_id):
+    """Send template to Smartsheet"""
+    from models import Template
+    template = Template.query.get_or_404(template_id)
+    return render_template('integrations/send_smartsheet.html', template=template)
+
+@integrations_bp.route('/google/send/<int:template_id>')
+@login_required
+@requires_platform_integrations
+def send_to_google(template_id):
+    """Send template to Google Sheets"""
+    from models import Template
+    template = Template.query.get_or_404(template_id)
+    return render_template('integrations/send_google.html', template=template)
+
+@integrations_bp.route('/microsoft/send/<int:template_id>')
+@login_required
+@requires_platform_integrations
+def send_to_microsoft(template_id):
+    """Send template to Microsoft 365"""
+    from models import Template
+    template = Template.query.get_or_404(template_id)
+    return render_template('integrations/send_microsoft.html', template=template)
+
 @integrations_bp.route('/test/<platform>')
 @login_required
 @requires_platform_integrations
