@@ -436,9 +436,17 @@ def customer_portal():
 @payment_bp.route('/billing-history')
 @login_required
 def billing_history():
-    """Billing history page"""
-    from models import Payment
-    payments = Payment.query.filter_by(user_id=current_user.id).order_by(Payment.created_at.desc()).all()
+    """Billing history page with error handling"""
+    try:
+        from models import Payment
+        payments = Payment.query.filter_by(user_id=current_user.id).order_by(Payment.created_at.desc()).all()
+        logger.info(f"Found {len(payments)} payments for user {current_user.id}")
+    except Exception as e:
+        logger.error(f"Error fetching payments for user {current_user.id}: {str(e)}")
+        # If Payment table doesn't exist or there's an error, show empty list
+        payments = []
+        flash('Payment history is currently unavailable.', 'info')
+    
     return render_template('payment/billing_history.html', payments=payments)
 
 
