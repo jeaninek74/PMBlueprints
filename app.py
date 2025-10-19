@@ -36,6 +36,9 @@ app.wsgi_app.add_files('static/thumbnails/', prefix='static/thumbnails/')
 # Production Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', secrets.token_hex(32))
 
+# Force HTTPS for OAuth redirects in production
+app.config['PREFERRED_URL_SCHEME'] = 'https'
+
 # Disable template caching in production to ensure updates are visible
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
