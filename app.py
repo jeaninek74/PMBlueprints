@@ -248,6 +248,10 @@ try:
     app.register_blueprint(setup_bp)  # Setup and database initialization routes
     app.register_blueprint(ai_download_bp)  # AI template download routes
     app.register_blueprint(ai_generator_bp)
+    
+    # Admin migration endpoint (temporary - delete after use)
+    from routes.admin_migration import admin_migration_bp
+    app.register_blueprint(admin_migration_bp)
     app.register_blueprint(update_industries_bp)  # Update industries route
     app.register_blueprint(admin_update_bp)  # Admin update routes
     app.register_blueprint(admin_fix_bp)  # Admin fix templates
