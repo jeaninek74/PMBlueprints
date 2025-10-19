@@ -533,8 +533,18 @@ def register_ai_generator_routes(app):
 def download_document():
     """
     Generate and download final document file
+    Requires authentication - Free tier or higher
     """
     try:
+        # Check if user is authenticated
+        if not current_user.is_authenticated:
+            return jsonify({
+                'success': False,
+                'error': 'Please log in to download AI-generated templates',
+                'requires_auth': True,
+                'message': 'Create a free account to download templates'
+            }), 401
+        
         from document_generator import document_generator
         
         data = request.get_json()

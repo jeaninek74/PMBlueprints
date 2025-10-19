@@ -233,6 +233,17 @@ async function handleDownloadTemplate() {
         });
         
         if (!response.ok) {
+            // Check if authentication is required
+            if (response.status === 401) {
+                const errorData = await response.json();
+                if (errorData.requires_auth) {
+                    // Redirect to login with return URL
+                    if (confirm('Please log in to download templates. Create a free account to get started. Redirect to login?')) {
+                        window.location.href = '/auth/login?next=' + encodeURIComponent(window.location.pathname);
+                    }
+                    return;
+                }
+            }
             throw new Error('Failed to download template');
         }
         
