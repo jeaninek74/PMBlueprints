@@ -94,51 +94,6 @@
         </div>
     </div>
 
-    <!-- Quick Actions -->
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="card border-0 shadow-sm">
-                <div class="card-header bg-white border-0 py-3">
-                    <h5 class="mb-0 fw-bold">
-                        <i class="fas fa-bolt me-2 text-primary"></i>Quick Actions
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        <div class="col-lg-3 col-md-6">
-                            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary w-100 py-4 text-decoration-none">
-                                <i class="fas fa-search fa-3x mb-3 d-block"></i>
-                                <h6 class="mb-1">Browse Templates</h6>
-                                <small class="text-muted">Explore 955+ templates</small>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a href="/ai-generator" class="btn btn-outline-success w-100 py-4 text-decoration-none">
-                                <i class="fas fa-magic fa-3x mb-3 d-block"></i>
-                                <h6 class="mb-1">AI Generator</h6>
-                                <small class="text-muted">Create custom documents</small>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-outline-info w-100 py-4 text-decoration-none">
-                                <i class="fas fa-lightbulb fa-3x mb-3 d-block"></i>
-                                <h6 class="mb-1">AI Suggestor</h6>
-                                <small class="text-muted">Get template suggestions</small>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a href="{{ url_for('pricing') }}" class="btn btn-outline-warning w-100 py-4 text-decoration-none">
-                                <i class="fas fa-crown fa-3x mb-3 d-block"></i>
-                                <h6 class="mb-1">Upgrade Plan</h6>
-                                <small class="text-muted">Unlock more features</small>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="row">
         <!-- Recent Activity -->
         <div class="col-lg-8 mb-4">
@@ -171,10 +126,7 @@
                     {% else %}
                     <div class="text-center py-5">
                         <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
-                        <p class="text-muted">No downloads yet. Start by browsing our template library!</p>
-                        <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
-                            <i class="fas fa-search me-2"></i>Browse Templates
-                        </a>
+                        <p class="text-muted">No downloads yet.</p>
                     </div>
                     {% endif %}
                 </div>
