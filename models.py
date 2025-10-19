@@ -52,6 +52,17 @@ class User(UserMixin, db.Model):
     # purchases = db.relationship('TemplatePurchase', backref='user', lazy='dynamic')
     # payments = db.relationship('Payment', backref='user', lazy='dynamic')
     
+    @property
+    def name(self):
+        """Return full name or None"""
+        if self.first_name and self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        elif self.first_name:
+            return self.first_name
+        elif self.last_name:
+            return self.last_name
+        return None
+    
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
     
