@@ -14,7 +14,7 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-integrations_bp = Blueprint('integrations', __name__, url_prefix='/integrations')
+integrations_bp = Blueprint('integrations', __name__)
 
 # Platform API configurations
 MONDAY_API_URL = "https://api.monday.com/v2"
