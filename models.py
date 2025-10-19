@@ -163,6 +163,9 @@ class Payment(db.Model):
     currency = db.Column(db.String(3), default='usd')
     status = db.Column(db.String(20))  # completed, pending, failed
     stripe_payment_id = db.Column(db.String(255))
+    stripe_invoice_id = db.Column(db.String(255))  # For invoice links
+    subscription_tier = db.Column(db.String(20))  # Tier if subscription payment
+    template_id = db.Column(db.Integer, db.ForeignKey('templates.id'))  # Template if individual purchase
     description = db.Column(db.String(500))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
