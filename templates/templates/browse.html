@@ -238,10 +238,10 @@ function previewTemplate(id, name, description, category, industry, fileType, th
 function purchaseTemplate(templateId, templateName) {
     {% if current_user.is_authenticated %}
         // Redirect to purchase page with template ID
-        window.location.href = '/purchase/template/' + templateId;
+        window.location.href = '/payment/purchase/template/' + templateId;
     {% else %}
         // Redirect to login with return URL
-        window.location.href = '{{ url_for("auth.login") }}?next=/purchase/template/' + templateId;
+        window.location.href = '{{ url_for("auth.login") }}?next=/payment/purchase/template/' + templateId;
     {% endif %}
 }
 
