@@ -386,3 +386,106 @@ def reset_password(token):
 def profile():
     """User profile page"""
     return render_template('auth/profile.html')
+
+
+
+@auth_bp.route('/profile/update', methods=['POST'])
+@login_required
+def update_profile():
+    """Update user profile information"""
+    try:
+        from flask import request, flash, redirect, url_for
+        from database import db
+        
+        # Get form data
+        first_name = request.form.get('name', '').split()[0] if request.form.get('name') else None
+        last_name = ' '.join(request.form.get('name', '').split()[1:]) if request.form.get('name') and len(request.form.get('name').split()) > 1 else None
+        company = request.form.get('company')
+        
+        # Update user
+        current_user.first_name = first_name
+        current_user.last_name = last_name
+        current_user.company = company
+        
+        db.session.commit()
+        
+        flash('Profile updated successfully!', 'success')
+        return redirect(url_for('auth.profile'))
+        
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error updating profile: {str(e)}', 'error')
+        return redirect(url_for('auth.profile'))
+
+
+@auth_bp.route('/profile/change-password', methods=['POST'])
+@login_required
+def change_password():
+    """Change user password"""
+    try:
+        from flask import request, flash, redirect, url_for
+        from database import db
+        
+        current_password = request.form.get('current_password')
+        new_password = request.form.get('new_password')
+        confirm_password = request.form.get('confirm_password')
+        
+        # Validate current password
+        if not current_user.check_password(current_password):
+            flash('Current password is incorrect', 'error')
+            return redirect(url_for('auth.profile'))
+        
+        # Validate new password
+        if new_password != confirm_password:
+            flash('New passwords do not match', 'error')
+            return redirect(url_for('auth.profile'))
+        
+        if len(new_password) < 8:
+            flash('Password must be at least 8 characters long', 'error')
+            return redirect(url_for('auth.profile'))
+        
+        # Update password
+        current_user.set_password(new_password)
+        db.session.commit()
+        
+        flash('Password changed successfully!', 'success')
+        return redirect(url_for('auth.profile'))
+        
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error changing password: {str(e)}', 'error')
+        return redirect(url_for('auth.profile'))
+
+
+@auth_bp.route('/profile/delete-account', methods=['POST'])
+@login_required
+def delete_account():
+    """Delete user account"""
+    try:
+        from flask import request, flash, redirect, url_for
+        from flask_login import logout_user
+        from database import db
+        
+        confirm_email = request.form.get('confirm_email')
+        
+        # Validate email confirmation
+        if confirm_email != current_user.email:
+            flash('Email confirmation does not match', 'error')
+            return redirect(url_for('auth.profile'))
+        
+        # Delete user account
+        user_email = current_user.email
+        db.session.delete(current_user)
+        db.session.commit()
+        
+        # Logout user
+        logout_user()
+        
+        flash(f'Account {user_email} has been permanently deleted', 'success')
+        return redirect(url_for('main.index'))
+        
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error deleting account: {str(e)}', 'error')
+        return redirect(url_for('auth.profile'))
+
