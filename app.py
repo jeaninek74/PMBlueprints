@@ -230,7 +230,7 @@ try:
     app.register_blueprint(ai_bp, url_prefix='/api/ai')
     app.register_blueprint(ai_suggestions_bp, url_prefix='/ai_suggestions')  # AI suggestions page and API
     app.register_blueprint(serve_thumbnails_bp)  # Serve thumbnail files
-    app.register_blueprint(integrations_bp, url_prefix='/api/integrations')
+    app.register_blueprint(integrations_bp, url_prefix='/integrations')
     app.register_blueprint(integrations_page_bp)  # Integrations settings page
     app.register_blueprint(monitoring_routes_bp, url_prefix='/monitoring')
     app.register_blueprint(favorites_bp)  # No prefix, routes have /api/ in them
