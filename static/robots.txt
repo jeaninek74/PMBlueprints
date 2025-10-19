@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /templates/
+Allow: /pricing
+Allow: /static/
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/logout
+
+Sitemap: https://www.pmblueprints.net/sitemap.xml
