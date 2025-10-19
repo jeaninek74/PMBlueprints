@@ -186,8 +186,10 @@ def thumbnail(template_id):
     template = Template.query.get_or_404(template_id)
     
     # Only serve real thumbnails that exist
-    if template.thumbnail_path and os.path.exists(template.thumbnail_path):
-        return send_file(template.thumbnail_path, mimetype='image/png')
+    if template.thumbnail_path:
+        full_thumb_path = os.path.join('static', 'thumbnails', template.thumbnail_path)
+        if os.path.exists(full_thumb_path):
+            return send_file(full_thumb_path, mimetype='image/png')
     else:
         # If thumbnail doesn't exist, generate it on-the-fly from actual template file
         from utils.thumbnail_generator import ThumbnailGenerator
