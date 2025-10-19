@@ -28,7 +28,6 @@
                             <div class="plan-features mb-4">
                                 {% for feature in plan_info.features %}
                                 <div class="d-flex align-items-center mb-2">
-                                    <i class="fas fa-check text-success me-2"></i>
                                     <span>{{ feature }}</span>
                                 </div>
                                 {% endfor %}
@@ -52,7 +51,6 @@
 
                             <div class="mt-4 p-3 bg-light rounded">
                                 <small class="text-muted">
-                                    <i class="fas fa-info-circle me-1"></i>
                                     Your subscription will automatically renew monthly. You can cancel anytime from your dashboard.
                                 </small>
                             </div>
@@ -144,7 +142,6 @@
                 <!-- Security Notice -->
                                 <div class="mb-4 p-3 bg-light rounded">
                                     <div class="d-flex align-items-center">
-                                        <i class="fas fa-shield-alt text-success me-2"></i>
                                         <small class="text-muted">
                                             Your payment information is secure and encrypted. We use Stripe for payment processing.
                                         </small>
@@ -154,7 +151,6 @@
                                 <!-- Submit Button -->
                                 <button type="submit" id="submit-button" class="btn btn-primary btn-lg w-100">
                                     <span id="button-text">
-                                        <i class="fas fa-lock me-2"></i>
                                         <span id="button-text-content">Subscribe for ${{ "%.2f"|format(plan_info.price / 100) }}/month</span>
                                     </span>
                                     <div id="spinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status">
@@ -176,7 +172,6 @@
                     <!-- Money Back Guarantee -->
                     <div class="text-center mt-4">
                         <div class="d-inline-flex align-items-center p-3 bg-success bg-opacity-10 rounded">
-                            <i class="fas fa-medal text-success me-2"></i>
                             <span class="text-success fw-bold">30-Day Money Back Guarantee</span>
                         </div>
                     </div>

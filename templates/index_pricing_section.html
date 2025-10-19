@@ -17,9 +17,9 @@
                             <p class="text-muted">Perfect for getting started</p>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Browse all templates (view only)</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI suggestion (view only)</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 AI generation (view only)</li>
+                            <li class="mb-3">Browse all templates (view only)</li>
+                            <li class="mb-3">1 AI suggestion (view only)</li>
+                            <li class="mb-3">1 AI generation (view only)</li>
                         </ul>
                         <div class="d-grid">
                             <a href="{{ url_for('auth.register') }}" class="btn btn-outline-primary btn-lg">Get Started</a>
@@ -38,7 +38,7 @@
                             <p class="text-muted">Purchase individual templates</p>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>1 template download per purchase</li>
+                            <li class="mb-3">1 template download per purchase</li>
                         </ul>
                         <div class="d-grid">
                             <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary btn-lg">Browse Templates</a>
@@ -61,9 +61,9 @@
                             <p class="text-muted">For professional project managers</p>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
+                            <li class="mb-3">2 template downloads/month</li>
+                            <li class="mb-3">4 AI suggestions/month</li>
+                            <li class="mb-3">6 AI generations/month</li>
                         </ul>
                         <div class="d-grid">
                             <a href="{{ url_for('payment.checkout', tier='professional') }}" class="btn btn-primary btn-lg">Subscribe Now</a>
@@ -82,10 +82,10 @@
                             <p class="text-muted">For organizations</p>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 template downloads/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4 AI suggestions/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i>6 AI generations/month</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i><strong>Platform integrations</strong></li>
+                            <li class="mb-3">2 template downloads/month</li>
+                            <li class="mb-3">4 AI suggestions/month</li>
+                            <li class="mb-3">6 AI generations/month</li>
+                            <li class="mb-3"><strong>Platform integrations</strong></li>
                         </ul>
                         <div class="d-grid">
                             <a href="{{ url_for('payment.checkout', tier='enterprise') }}" class="btn btn-outline-primary btn-lg">Subscribe Now</a>
@@ -107,13 +107,7 @@
             <div class="col-12 text-center">
                 <p class="text-muted mb-3">Secure payment processing with multiple options</p>
                 <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
-                    <i class="fab fa-cc-visa fa-2x text-muted"></i>
-                    <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
-                    <i class="fab fa-cc-amex fa-2x text-muted"></i>
-                    <i class="fab fa-cc-apple-pay fa-2x text-muted"></i>
-                    <i class="fab fa-google-pay fa-2x text-muted"></i>
-                    <i class="fab fa-cc-paypal fa-2x text-muted"></i>
-                </div>
+                    </div>
                 <p class="text-muted mt-3 small">All plans include 30-day money-back guarantee • Cancel anytime • No hidden fees</p>
             </div>
         </div>

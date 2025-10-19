@@ -13,8 +13,7 @@
             <div class="mt-4 bg-yellow-50 border-l-4 border-yellow-400 p-4">
                 <div class="flex">
                     <div class="flex-shrink-0">
-                        <i class="fas fa-exclamation-triangle text-yellow-400"></i>
-                    </div>
+                        </div>
                     <div class="ml-3">
                         <p class="text-sm text-yellow-700">
                             Platform integrations are available for <strong>Enterprise tier</strong> subscribers only.
@@ -51,7 +50,7 @@
                     {% if settings and settings.monday_connected %}
                         <div class="space-y-2">
                             <button onclick="uploadToMonday()" class="w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white py-2 px-4 rounded-lg font-semibold">
-                                <i class="fas fa-upload mr-2"></i>Upload Template
+                                Upload Template
                             </button>
                             <a href="{{ url_for('platform_oauth.monday_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
                                 Disconnect
@@ -59,12 +58,12 @@
                         </div>
                     {% else %}
                         <a href="{{ url_for('platform_oauth.monday_connect') }}" class="block w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white text-center py-2 px-4 rounded-lg font-semibold">
-                            <i class="fas fa-link mr-2"></i>Connect Monday.com
+                            Connect Monday.com
                         </a>
                     {% endif %}
                 {% else %}
                     <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
-                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                        Enterprise Only
                     </button>
                 {% endif %}
             </div>
@@ -92,7 +91,7 @@
                     {% if settings and settings.smartsheet_connected %}
                         <div class="space-y-2">
                             <button onclick="uploadToSmartsheet()" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold">
-                                <i class="fas fa-upload mr-2"></i>Upload Template
+                                Upload Template
                             </button>
                             <a href="{{ url_for('platform_oauth.smartsheet_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
                                 Disconnect
@@ -100,12 +99,12 @@
                         </div>
                     {% else %}
                         <a href="{{ url_for('platform_oauth.smartsheet_connect') }}" class="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-semibold">
-                            <i class="fas fa-link mr-2"></i>Connect Smartsheet
+                            Connect Smartsheet
                         </a>
                     {% endif %}
                 {% else %}
                     <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
-                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                        Enterprise Only
                     </button>
                 {% endif %}
             </div>
@@ -133,7 +132,7 @@
                     {% if settings and settings.google_connected %}
                         <div class="space-y-2">
                             <button onclick="uploadToGoogle()" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold">
-                                <i class="fas fa-upload mr-2"></i>Upload Template
+                                Upload Template
                             </button>
                             <a href="{{ url_for('platform_oauth.google_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
                                 Disconnect
@@ -141,12 +140,12 @@
                         </div>
                     {% else %}
                         <a href="{{ url_for('platform_oauth.google_connect') }}" class="block w-full bg-green-600 text-white text-center py-2 px-4 rounded-lg font-semibold">
-                            <i class="fab fa-google mr-2"></i>Connect Google Sheets
+                            Connect Google Sheets
                         </a>
                     {% endif %}
                 {% else %}
                     <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
-                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                        Enterprise Only
                     </button>
                 {% endif %}
             </div>
@@ -174,7 +173,7 @@
                     {% if settings and settings.microsoft_connected %}
                         <div class="space-y-2">
                             <button onclick="uploadToMicrosoft()" class="w-full bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold">
-                                <i class="fas fa-upload mr-2"></i>Upload Template
+                                Upload Template
                             </button>
                             <a href="{{ url_for('platform_oauth.microsoft_disconnect') }}" class="block w-full bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-semibold">
                                 Disconnect
@@ -182,12 +181,12 @@
                         </div>
                     {% else %}
                         <a href="{{ url_for('platform_oauth.microsoft_connect') }}" class="block w-full bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold">
-                            <i class="fab fa-microsoft mr-2"></i>Connect Microsoft 365
+                            Connect Microsoft 365
                         </a>
                     {% endif %}
                 {% else %}
                     <button disabled class="w-full bg-gray-300 text-gray-500 py-2 px-4 rounded-lg font-semibold cursor-not-allowed">
-                        <i class="fas fa-lock mr-2"></i>Enterprise Only
+                        Enterprise Only
                     </button>
                 {% endif %}
             </div>

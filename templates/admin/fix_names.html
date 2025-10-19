@@ -13,11 +13,11 @@
             <div class="col-md-8">
                 <div class="card shadow">
                     <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0"><i class="fas fa-tools me-2"></i>Fix Template & Industry Names</h3>
+                        <h3 class="mb-0">Fix Template & Industry Names</h3>
                     </div>
                     <div class="card-body">
                         <div class="alert alert-info">
-                            <h5><i class="fas fa-info-circle me-2"></i>What This Does:</h5>
+                            <h5>What This Does:</h5>
                             <p class="mb-2">This tool will fix incomplete industry names in your database:</p>
                             <ul class="mb-0">
                                 <li>"Business" → "Business Process Improvement"</li>
@@ -40,7 +40,7 @@
 
                         <div class="d-grid gap-2">
                             <button id="fixBtn" class="btn btn-primary btn-lg" onclick="fixNames()">
-                                <i class="fas fa-magic me-2"></i>Fix Industry Names Now
+                                Fix Industry Names Now
                             </button>
                         </div>
 
@@ -82,7 +82,7 @@
                 if (data.status === 'success') {
                     result.className = 'alert alert-success';
                     result.innerHTML = `
-                        <h5><i class="fas fa-check-circle me-2"></i>Success!</h5>
+                        <h5>Success!</h5>
                         <p><strong>${data.results.industries_updated}</strong> templates updated</p>
                         <h6>Changes Made:</h6>
                         <ul>
@@ -96,7 +96,7 @@
                 } else {
                     result.className = 'alert alert-danger';
                     result.innerHTML = `
-                        <h5><i class="fas fa-exclamation-circle me-2"></i>Error</h5>
+                        <h5>Error</h5>
                         <p>${data.message}</p>
                     `;
                 }
@@ -105,7 +105,7 @@
                 result.classList.remove('d-none');
                 result.className = 'alert alert-danger';
                 result.innerHTML = `
-                    <h5><i class="fas fa-exclamation-circle me-2"></i>Error</h5>
+                    <h5>Error</h5>
                     <p>${error.message}</p>
                 `;
             }

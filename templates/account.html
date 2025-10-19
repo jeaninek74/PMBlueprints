@@ -13,22 +13,22 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#subscription" data-bs-toggle="tab">
-                                <i class="fas fa-credit-card me-2"></i>Subscription
+                                Subscription
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#templates" data-bs-toggle="tab">
-                                <i class="fas fa-file-alt me-2"></i>My Templates
+                                My Templates
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#billing" data-bs-toggle="tab">
-                                <i class="fas fa-receipt me-2"></i>Billing History
+                                Billing History
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#profile" data-bs-toggle="tab">
-                                <i class="fas fa-user me-2"></i>Profile
+                                Profile
                             </a>
                         </li>
                     </ul>
@@ -43,7 +43,7 @@
                 <div class="tab-pane fade show active" id="subscription">
                     <div class="card mb-4">
                         <div class="card-header bg-primary text-white">
-                            <h4 class="mb-0"><i class="fas fa-crown me-2"></i>Current Plan</h4>
+                            <h4 class="mb-0">Current Plan</h4>
                         </div>
                         <div class="card-body">
                             <div class="row align-items-center">
@@ -60,7 +60,6 @@
                                     </p>
                                     {% if current_user.subscription_end_date %}
                                     <p class="text-muted small">
-                                        <i class="fas fa-calendar me-1"></i>
                                         {% if current_user.subscription_tier != 'free' %}
                                             Next billing date: {{ current_user.subscription_end_date.strftime('%B %d, %Y') }}
                                         {% endif %}
@@ -70,14 +69,14 @@
                                 <div class="col-md-4 text-end">
                                     {% if current_user.subscription_tier == 'free' %}
                                         <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-lg">
-                                            <i class="fas fa-arrow-up me-2"></i>Upgrade Plan
+                                            Upgrade Plan
                                         </a>
                                     {% else %}
                                         <a href="{{ url_for('pricing') }}" class="btn btn-outline-primary">
-                                            <i class="fas fa-exchange-alt me-2"></i>Change Plan
+                                            Change Plan
                                         </a>
                                         <button class="btn btn-outline-danger mt-2" onclick="cancelSubscription()">
-                                            <i class="fas fa-times me-2"></i>Cancel Plan
+                                            Cancel Plan
                                         </button>
                                     {% endif %}
                                 </div>
@@ -88,7 +87,7 @@
                     <!-- Usage Stats -->
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>This Month's Usage</h5>
+                            <h5 class="mb-0">This Month's Usage</h5>
                         </div>
                         <div class="card-body">
                             <div class="row text-center">
@@ -119,7 +118,7 @@
                 <div class="tab-pane fade" id="templates">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="mb-0"><i class="fas fa-file-alt me-2"></i>My Purchased Templates</h4>
+                            <h4 class="mb-0">My Purchased Templates</h4>
                         </div>
                         <div class="card-body">
                             {% if purchased_templates %}
@@ -143,7 +142,7 @@
                                                 <td>${{ purchase.price }}</td>
                                                 <td>
                                                     <a href="{{ url_for('templates.download_template', template_id=purchase.template_id) }}" class="btn btn-sm btn-primary">
-                                                        <i class="fas fa-download me-1"></i>Download
+                                                        Download
                                                     </a>
                                                 </td>
                                             </tr>
@@ -153,10 +152,9 @@
                                 </div>
                             {% else %}
                                 <div class="text-center py-5">
-                                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
                                     <p class="text-muted">No purchased templates yet</p>
                                     <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart me-2"></i>Browse Templates
+                                        Browse Templates
                                     </a>
                                 </div>
                             {% endif %}
@@ -168,7 +166,7 @@
                 <div class="tab-pane fade" id="billing">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="mb-0"><i class="fas fa-receipt me-2"></i>Billing History</h4>
+                            <h4 class="mb-0">Billing History</h4>
                         </div>
                         <div class="card-body">
                             {% if payment_history %}
@@ -194,7 +192,7 @@
                                                 </td>
                                                 <td>
                                                     <a href="#" class="btn btn-sm btn-outline-primary">
-                                                        <i class="fas fa-file-pdf me-1"></i>Download
+                                                        Download
                                                     </a>
                                                 </td>
                                             </tr>
@@ -204,7 +202,6 @@
                                 </div>
                             {% else %}
                                 <div class="text-center py-5">
-                                    <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
                                     <p class="text-muted">No billing history yet</p>
                                 </div>
                             {% endif %}
@@ -216,7 +213,7 @@
                 <div class="tab-pane fade" id="profile">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="mb-0"><i class="fas fa-user me-2"></i>Profile Information</h4>
+                            <h4 class="mb-0">Profile Information</h4>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ url_for('update_profile') }}">
@@ -233,7 +230,7 @@
                                     <input type="text" class="form-control" name="company" value="{{ current_user.company or '' }}" placeholder="Company Name">
                                 </div>
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save me-2"></i>Save Changes
+                                    Save Changes
                                 </button>
                             </form>
                         </div>

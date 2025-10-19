@@ -9,12 +9,12 @@
             <div class="card shadow">
                 <div class="card-header bg-secondary text-white">
                     <h4 class="mb-0">
-                        <i class="fab fa-microsoft"></i> Export to Microsoft 365
+                        Export to Microsoft 365
                     </h4>
                 </div>
                 <div class="card-body">
                     <div class="alert alert-info">
-                        <i class="fas fa-info-circle"></i> You're about to export <strong>{{ template.name }}</strong> to Microsoft 365.
+                        You're about to export <strong>{{ template.name }}</strong> to Microsoft 365.
                     </div>
 
                     <div class="template-info mb-4">
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="alert alert-warning">
-                        <i class="fas fa-exclamation-triangle"></i> <strong>Setup Required:</strong> 
+                        <strong>Setup Required:</strong> 
                         <p class="mb-0">To export templates to Microsoft 365, you need to configure your Google API credentials first.</p>
                     </div>
 
@@ -39,14 +39,14 @@
 
                     <div class="d-flex justify-content-between">
                         <a href="{{ url_for('templates.browse') }}" class="btn btn-secondary">
-                            <i class="fas fa-arrow-left"></i> Back to Templates
+                            Back to Templates
                         </a>
                         <div>
                             <a href="{{ url_for('integrations.settings') }}" class="btn btn-outline-primary">
-                                <i class="fas fa-cog"></i> Configure Settings
+                                Configure Settings
                             </a>
                             <button class="btn btn-success" onclick="exportToGoogleSheets()">
-                                <i class="fas fa-upload"></i> Export Now
+                                Export Now
                             </button>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ function exportToGoogleSheets() {
     const sheetName = document.getElementById('sheetName').value;
     const statusDiv = document.getElementById('exportStatus');
     
-    statusDiv.innerHTML = '<div class="alert alert-info"><i class="fas fa-spinner fa-spin"></i> Exporting template...</div>';
+    statusDiv.innerHTML = '<div class="alert alert-info">Exporting template...</div>';
     
     fetch('/integrations/export/microsoft-sheets', {
         method: 'POST',
@@ -78,13 +78,13 @@ function exportToGoogleSheets() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            statusDiv.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle"></i> ' + data.message + '</div>';
+            statusDiv.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
         } else {
-            statusDiv.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> Error: ' + data.error + '</div>';
+            statusDiv.innerHTML = '<div class="alert alert-danger">Error: ' + data.error + '</div>';
         }
     })
     .catch(error => {
-        statusDiv.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> Error: ' + error.message + '</div>';
+        statusDiv.innerHTML = '<div class="alert alert-danger">Error: ' + error.message + '</div>';
     });
 }
 </script>

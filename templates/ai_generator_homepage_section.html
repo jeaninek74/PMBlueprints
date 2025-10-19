@@ -4,7 +4,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold">
-                <i class="fas fa-magic text-primary me-2"></i>AI Template Generator
+                AI Template Generator
             </h2>
             <p class="lead text-muted">Create custom project management templates for any industry or methodology</p>
         </div>
@@ -18,25 +18,25 @@
                         
                         <div class="mb-4">
                             <h6 class="fw-bold text-primary">
-                                <i class="fas fa-check-circle me-2"></i>What You Can Generate:
+                                What You Can Generate:
                             </h6>
                             <ul class="list-unstyled ms-4">
-                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Project charters and initiation documents</li>
-                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Risk registers and management plans</li>
-                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Stakeholder analysis and communication plans</li>
-                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Budget trackers and financial reports</li>
-                                <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Custom templates for any PM methodology</li>
+                                <li class="mb-2">Project charters and initiation documents</li>
+                                <li class="mb-2">Risk registers and management plans</li>
+                                <li class="mb-2">Stakeholder analysis and communication plans</li>
+                                <li class="mb-2">Budget trackers and financial reports</li>
+                                <li class="mb-2">Custom templates for any PM methodology</li>
                             </ul>
                         </div>
                         
                         <div class="d-grid">
                             {% if current_user.is_authenticated %}
                             <a href="{{ url_for('dashboard.index') }}#ai-generator" class="btn btn-primary btn-lg">
-                                <i class="fas fa-magic me-2"></i>Try AI Generator
+                                Try AI Generator
                             </a>
                             {% else %}
                             <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">
-                                <i class="fas fa-magic me-2"></i>Get Started Free
+                                Get Started Free
                             </a>
                             {% endif %}
                         </div>
@@ -48,7 +48,7 @@
                 <div class="card border-primary shadow">
                     <div class="card-header bg-primary text-white">
                         <h5 class="mb-0">
-                            <i class="fas fa-cogs me-2"></i>How It Works
+                            How It Works
                         </h5>
                     </div>
                     <div class="card-body">
@@ -103,7 +103,6 @@
                 </div>
                 
                 <div class="alert alert-info mt-3">
-                    <i class="fas fa-lightbulb me-2"></i>
                     <strong>Pro Tip:</strong> The more context you provide, the better your generated template will be!
                 </div>
             </div>

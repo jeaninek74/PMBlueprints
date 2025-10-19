@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
                 <h5 class="modal-title" id="aiSuggestionsModalLabel">
-                    <i class="fas fa-magic me-2"></i>AI Suggestions
+                    AI Suggestions
                     <span class="badge bg-light text-success ms-2">FREE</span>
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -13,7 +13,7 @@
                 <!-- Quick Suggestions Section -->
                 <div class="mb-4">
                     <h6 class="fw-bold mb-3">
-                        <i class="fas fa-bolt me-2 text-primary"></i>Quick Suggestions
+                        Quick Suggestions
                     </h6>
                     <p class="text-muted small mb-3">Get instant suggestions for common template sections</p>
                     
@@ -49,7 +49,7 @@
                     </div>
                     
                     <button type="button" class="btn btn-primary btn-sm w-100" id="modalGenerateQuickBtn">
-                        <i class="fas fa-magic me-2"></i>Generate Suggestions
+                        Generate Suggestions
                     </button>
                 </div>
 
@@ -58,7 +58,7 @@
                 <!-- Custom Question Section -->
                 <div class="mb-4">
                     <h6 class="fw-bold mb-3">
-                        <i class="fas fa-question-circle me-2 text-info"></i>Custom Question
+                        Custom Question
                     </h6>
                     <p class="text-muted small mb-3">Ask any question about your template or project</p>
                     
@@ -69,7 +69,7 @@
                     </div>
                     
                     <button type="button" class="btn btn-info btn-sm w-100 text-white" id="modalAskCustomBtn">
-                        <i class="fas fa-paper-plane me-2"></i>Ask AI
+                        Ask AI
                     </button>
                 </div>
 
@@ -78,7 +78,7 @@
                 <!-- AI Response Section -->
                 <div id="modalAiResponseSection" style="display: none;">
                     <h6 class="fw-bold mb-3">
-                        <i class="fas fa-lightbulb me-2 text-warning"></i>AI Response
+                        AI Response
                     </h6>
                     
                     <!-- Loading Spinner -->
@@ -93,7 +93,7 @@
                     <div id="modalResponseContent" class="bg-light p-3 rounded" style="display: none;">
                         <div id="modalResponseText" class="mb-3"></div>
                         <button type="button" class="btn btn-sm btn-outline-primary" id="modalCopyBtn">
-                            <i class="fas fa-copy me-2"></i>Copy to Clipboard
+                            Copy to Clipboard
                         </button>
                     </div>
                     
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = responseText.innerText;
             navigator.clipboard.writeText(text).then(function() {
                 const originalText = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<i class="fas fa-check me-2"></i>Copied!';
+                copyBtn.innerHTML = 'Copied!';
                 setTimeout(function() {
                     copyBtn.innerHTML = originalText;
                 }, 2000);

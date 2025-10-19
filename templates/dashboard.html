@@ -27,8 +27,7 @@
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
                             <div class="bg-primary bg-opacity-10 rounded p-3">
-                                <i class="fas fa-download fa-2x text-primary"></i>
-                            </div>
+                                </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <h3 class="fw-bold mb-0">{{ stats.total_downloads }}</h3>
@@ -45,8 +44,7 @@
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
                             <div class="bg-success bg-opacity-10 rounded p-3">
-                                <i class="fas fa-chart-line fa-2x text-success"></i>
-                            </div>
+                                </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <h3 class="fw-bold mb-0">{{ stats.downloads_remaining }}</h3>
@@ -63,8 +61,7 @@
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
                             <div class="bg-info bg-opacity-10 rounded p-3">
-                                <i class="fas fa-robot fa-2x text-info"></i>
-                            </div>
+                                </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <h3 class="fw-bold mb-0">{{ stats.ai_generations_remaining }}</h3>
@@ -81,8 +78,7 @@
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
                             <div class="bg-warning bg-opacity-10 rounded p-3">
-                                <i class="fas fa-calendar fa-2x text-warning"></i>
-                            </div>
+                                </div>
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <h3 class="fw-bold mb-0">{{ stats.member_since }}</h3>
@@ -100,7 +96,7 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-bold">
-                        <i class="fas fa-history me-2 text-primary"></i>Recent Downloads
+                        Recent Downloads
                     </h5>
                 </div>
                 <div class="card-body">
@@ -112,12 +108,12 @@
                                 <div>
                                     <h6 class="mb-1">{{ download.template_name }}</h6>
                                     <small class="text-muted">
-                                        <i class="fas fa-calendar-alt me-1"></i>{{ download.download_date.strftime('%B %d, %Y') }}
+                                        {{ download.download_date.strftime('%B %d, %Y') }}
                                     </small>
                                 </div>
                                 <a href="{{ url_for('templates.download', template_id=download.template_id) }}" 
                                    class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-download me-1"></i>Download Again
+                                    Download Again
                                 </a>
                             </div>
                         </div>
@@ -125,7 +121,6 @@
                     </div>
                     {% else %}
                     <div class="text-center py-5">
-                        <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
                         <p class="text-muted">No downloads yet.</p>
                     </div>
                     {% endif %}
@@ -138,7 +133,7 @@
             <div class="card border-0 shadow-sm mb-3">
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-bold">
-                        <i class="fas fa-user me-2 text-primary"></i>Account Summary
+                        Account Summary
                     </h5>
                 </div>
                 <div class="card-body">
@@ -167,10 +162,10 @@
                     <hr>
                     <div class="d-grid gap-2">
                         <a href="{{ url_for('auth.profile') }}" class="btn btn-outline-primary btn-sm">
-                            <i class="fas fa-user-edit me-2"></i>Edit Profile
+                            Edit Profile
                         </a>
                         <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-sm">
-                            <i class="fas fa-arrow-up me-2"></i>Upgrade Plan
+                            Upgrade Plan
                         </a>
                     </div>
                 </div>
@@ -181,22 +176,22 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-bold">
-                        <i class="fas fa-plug me-2 text-primary"></i>Platform Integrations
+                        Platform Integrations
                     </h5>
                 </div>
                 <div class="card-body">
                     <div class="d-grid gap-2">
                         <a href="https://sheets.google.com" target="_blank" class="btn btn-outline-secondary btn-sm">
-                            <i class="fab fa-google me-2"></i>Google Sheets
+                            Google Sheets
                         </a>
                         <a href="https://www.office.com/launch/excel" target="_blank" class="btn btn-outline-secondary btn-sm">
-                            <i class="fab fa-microsoft me-2"></i>Microsoft 365
+                            Microsoft 365
                         </a>
                         <a href="https://monday.com" target="_blank" class="btn btn-outline-secondary btn-sm">
-                            <i class="fas fa-calendar-week me-2"></i>Monday.com
+                            Monday.com
                         </a>
                         <a href="https://app.smartsheet.com" target="_blank" class="btn btn-outline-secondary btn-sm">
-                            <i class="fas fa-table me-2"></i>Smartsheet
+                            Smartsheet
                         </a>
                     </div>
                 </div>

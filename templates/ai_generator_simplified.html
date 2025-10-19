@@ -2,13 +2,12 @@
 <div class="card border-0 shadow-sm mb-4" id="ai-generator" style="display: none;">
     <div class="card-header bg-white">
         <h5 class="card-title mb-0">
-            <i class="fas fa-magic me-2"></i>AI Template Generator
+            AI Template Generator
         </h5>
         <p class="text-muted small mb-0 mt-2">Create custom project management templates for any industry or methodology not available in our catalog</p>
     </div>
     <div class="card-body">
         <div class="alert alert-info mb-4">
-            <i class="fas fa-info-circle me-2"></i>
             <strong>How it works:</strong> Describe the template you need, and our AI will generate a professional, editable document based on PMI PMBOK standards and industry best practices.
         </div>
         
@@ -53,7 +52,7 @@ Examples:
             
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary btn-lg">
-                    <i class="fas fa-magic me-2"></i>Generate Template
+                    Generate Template
                 </button>
             </div>
         </form>
@@ -63,7 +62,6 @@ Examples:
             <div class="card border-primary">
                 <div class="card-body">
                     <h6 class="mb-3">
-                        <i class="fas fa-spinner fa-spin me-2"></i>
                         <span id="progressStatus">Analyzing your request...</span>
                     </h6>
                     <div class="progress mb-2" style="height: 25px;">
@@ -80,7 +78,7 @@ Examples:
             <div class="card border-success">
                 <div class="card-header bg-success text-white">
                     <h6 class="mb-0">
-                        <i class="fas fa-eye me-2"></i>Template Preview
+                        Template Preview
                     </h6>
                 </div>
                 <div class="card-body">
@@ -106,16 +104,15 @@ Examples:
                     </div>
                     
                     <div class="alert alert-warning">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
                         <strong>Note:</strong> The generated template is editable. You can customize it after download to fit your specific needs.
                     </div>
                     
                     <div class="d-grid gap-2">
                         <button type="button" class="btn btn-success btn-lg" id="downloadGeneratedBtn">
-                            <i class="fas fa-download me-2"></i>Download Template
+                            Download Template
                         </button>
                         <button type="button" class="btn btn-outline-secondary" id="generateNewBtn">
-                            <i class="fas fa-redo me-2"></i>Generate New Template
+                            Generate New Template
                         </button>
                     </div>
                 </div>
@@ -126,12 +123,12 @@ Examples:
         <div id="aiError" class="mt-4" style="display: none;">
             <div class="alert alert-danger">
                 <h6 class="alert-heading">
-                    <i class="fas fa-exclamation-circle me-2"></i>Generation Failed
+                    Generation Failed
                 </h6>
                 <p id="errorMessage" class="mb-0"></p>
             </div>
             <button type="button" class="btn btn-outline-primary" id="retryBtn">
-                <i class="fas fa-redo me-2"></i>Try Again
+                Try Again
             </button>
         </div>
     </div>
