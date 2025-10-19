@@ -194,8 +194,8 @@ def google_login():
     google_provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
     authorization_endpoint = google_provider_cfg["authorization_endpoint"]
     
-    # Construct redirect URI
-    redirect_uri = url_for('auth.google_callback', _external=True)
+    # Construct redirect URI (force HTTPS for production)
+    redirect_uri = url_for('auth.google_callback', _external=True, _scheme='https')
     
     # Build authorization URL
     params = {
@@ -233,7 +233,7 @@ def google_callback():
             'code': code,
             'client_id': GOOGLE_CLIENT_ID,
             'client_secret': GOOGLE_CLIENT_SECRET,
-            'redirect_uri': url_for('auth.google_callback', _external=True),
+            'redirect_uri': url_for('auth.google_callback', _external=True, _scheme='https'),
             'grant_type': 'authorization_code'
         }
         
