@@ -310,14 +310,30 @@ def forgot_password():
             return render_template('auth/forgot_password.html')
         
         from models import User
+        from database import db
+        import secrets
+        from datetime import datetime, timedelta
+        
         user = User.query.filter_by(email=email).first()
         
         # Always show success message for security
         flash('If an account exists with that email, a password reset link has been sent.', 'success')
         
         if user:
-            # TODO: Send password reset email
+            # Generate reset token
+            reset_token = secrets.token_urlsafe(32)
+            user.reset_token = reset_token
+            user.reset_token_expires = datetime.utcnow() + timedelta(hours=1)
+            db.session.commit()
+            
+            # Generate reset link
+            reset_link = url_for('auth.reset_password', token=reset_token, _external=True)
+            
             logger.info(f"Password reset requested for {email}")
+            logger.info(f"Reset link: {reset_link}")
+            
+            # TODO: Send email with reset_link
+            # For now, just log the link
         
         return redirect(url_for('auth.login'))
     
@@ -326,9 +342,43 @@ def forgot_password():
 @auth_bp.route('/reset-password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
     """Reset password with token"""
-    # TODO: Implement token verification and password reset
-    flash('Password reset functionality coming soon', 'info')
-    return redirect(url_for('auth.login'))
+    from models import User
+    from database import db
+    from datetime import datetime
+    
+    # Find user with valid token
+    user = User.query.filter_by(reset_token=token).first()
+    
+    if not user or not user.reset_token_expires or user.reset_token_expires < datetime.utcnow():
+        flash('Invalid or expired reset link', 'error')
+        return redirect(url_for('auth.forgot_password'))
+    
+    if request.method == 'POST':
+        password = request.form.get('password', '')
+        confirm_password = request.form.get('confirm_password', '')
+        
+        if not password or not confirm_password:
+            flash('Both password fields are required', 'error')
+            return render_template('auth/reset_password.html')
+        
+        if len(password) < 8:
+            flash('Password must be at least 8 characters', 'error')
+            return render_template('auth/reset_password.html')
+        
+        if password != confirm_password:
+            flash('Passwords do not match', 'error')
+            return render_template('auth/reset_password.html')
+        
+        # Update password
+        user.set_password(password)
+        user.reset_token = None
+        user.reset_token_expires = None
+        db.session.commit()
+        
+        flash('Your password has been reset successfully. Please log in.', 'success')
+        return redirect(url_for('auth.login'))
+    
+    return render_template('auth/reset_password.html')
 
 
 @auth_bp.route('/profile')

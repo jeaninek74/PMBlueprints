@@ -36,6 +36,10 @@ class User(UserMixin, db.Model):
     oauth_id = db.Column(db.String(255))
     email_verified = db.Column(db.Boolean, default=False)
     
+    # Password reset fields
+    reset_token = db.Column(db.String(100))
+    reset_token_expires = db.Column(db.DateTime)
+    
     # Timestamps
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     last_login = db.Column(db.DateTime)
