@@ -36,40 +36,58 @@ def get_suggestions():
     from models import AISuggestionHistory, Template
     
     try:
-        # Check usage quota
-        can_suggest, remaining, limit = check_usage_limit(current_user, 'ai_suggestions')
-        
-        if not can_suggest:
-            return jsonify({
-                'error': f'You have reached your AI suggestions limit ({limit} per month). Please upgrade your subscription.',
-                'upgrade_required': True,
-                'remaining': 0,
-                'limit': limit
-            }), 403
-        
         # Get request data
         data = request.get_json()
         if not data:
             return jsonify({'error': 'No data provided'}), 400
         
+        # Check if this is a quick suggestion or custom question
+        template_type = data.get('template_type', '')
+        section = data.get('section', '')
+        question = data.get('question', '')
+        context = data.get('context', '')
+        
+        # For backward compatibility
         project_description = data.get('project_description', '')
         industry = data.get('industry', '')
         project_phase = data.get('project_phase', '')
         team_size = data.get('team_size', '')
         
-        if not project_description:
-            return jsonify({'error': 'Project description is required'}), 400
-        
-        # Get available templates from database
-        templates_query = Template.query
-        if industry:
-            templates_query = templates_query.filter_by(industry=industry)
-        
-        available_templates = templates_query.limit(50).all()
-        template_list = "\n".join([f"- {t.name} ({t.category})" for t in available_templates])
-        
-        # Generate suggestions using OpenAI
-        prompt = f"""
+        # Generate prompt based on request type
+        if section:
+            # Quick suggestion
+            prompt = f"""
+You are an expert project management consultant. Provide a comprehensive list of {section} for a {template_type} project.
+
+Provide 8-12 specific, actionable items that are relevant for this type of project.
+Format as a numbered list with brief explanations.
+
+Example format:
+1. Item name - Brief explanation of why it's important
+2. Item name - Brief explanation
+...
+"""
+        elif question:
+            # Custom question
+            prompt = f"""
+You are an expert project management consultant. Answer the following question:
+
+Template Type: {template_type}
+Question: {question}
+Context: {context or 'None provided'}
+
+Provide a detailed, professional answer with specific recommendations and best practices.
+"""
+        else:
+            # Legacy format for backward compatibility
+            templates_query = Template.query
+            if industry:
+                templates_query = templates_query.filter_by(industry=industry)
+            
+            available_templates = templates_query.limit(50).all()
+            template_list = "\n".join([f"- {t.name} ({t.category})" for t in available_templates])
+            
+            prompt = f"""
 You are an expert project management consultant. Based on the following project details, 
 recommend the most relevant templates and provide actionable suggestions.
 
@@ -87,82 +105,39 @@ Please provide:
 2. Why each template is relevant
 3. Best practices for using these templates
 4. Additional suggestions for project success
-
-Format your response as JSON with this structure:
-{{
-    "recommended_templates": [
-        {{"name": "Template Name", "reason": "Why it's relevant", "priority": "High/Medium/Low"}}
-    ],
-    "best_practices": ["Practice 1", "Practice 2", ...],
-    "additional_suggestions": ["Suggestion 1", "Suggestion 2", ...]
-}}
 """
         
         # Call OpenAI API
         response = openai.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are an expert project management consultant. Always respond with valid JSON."},
+                {"role": "system", "content": "You are an expert project management consultant with deep knowledge of PMBOK 7th Edition and modern project management practices."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.7,
-            max_tokens=2000
+            max_tokens=1500
         )
         
         suggestions_text = response.choices[0].message.content
         
-        # Try to parse as JSON, fallback to text if it fails
-        import json
-        try:
-            suggestions_data = json.loads(suggestions_text)
-        except:
-            # Fallback: create structured response from text
-            suggestions_data = {
-                "recommended_templates": [],
-                "best_practices": [],
-                "additional_suggestions": [suggestions_text]
-            }
-        
-        # Track usage
-        current_user.ai_suggestions_this_month += 1
-        
         # Save suggestion history
         history = AISuggestionHistory(
             user_id=current_user.id,
-            project_description=project_description,
-            industry=industry,
-            project_phase=project_phase,
-            team_size=team_size,
+            project_description=question or f"{template_type} - {section}" or project_description,
+            industry=industry or template_type,
+            project_phase=project_phase or '',
+            team_size=team_size or context,
             suggestions=suggestions_text,
             created_at=datetime.utcnow()
         )
         db.session.add(history)
         db.session.commit()
         
-        # Find actual template IDs for recommendations
-        recommended_with_ids = []
-        for rec in suggestions_data.get('recommended_templates', []):
-            template_name = rec.get('name', '')
-            # Try to find matching template
-            template = Template.query.filter(
-                Template.name.ilike(f'%{template_name}%')
-            ).first()
-            
-            if template:
-                rec['template_id'] = template.id
-                rec['template_url'] = f"/templates/{template.id}"
-            
-            recommended_with_ids.append(rec)
-        
-        suggestions_data['recommended_templates'] = recommended_with_ids
-        
         # Return success
         return jsonify({
             'success': True,
-            'suggestions': suggestions_data,
-            'history_id': history.id,
-            'remaining': remaining - 1,
-            'limit': limit
+            'suggestion': suggestions_text,
+            'history_id': history.id
         })
         
     except openai.error.RateLimitError:
