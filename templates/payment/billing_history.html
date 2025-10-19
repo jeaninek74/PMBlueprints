@@ -23,10 +23,10 @@
                     <p class="text-sm text-gray-600">Status</p>
                     <p class="text-lg font-semibold text-gray-900 capitalize">{{ current_user.subscription_status or 'Active' }}</p>
                 </div>
-                {% if current_user.subscription_end_date %}
+                {% if current_user.subscription_start_date %}
                 <div>
-                    <p class="text-sm text-gray-600">Renewal Date</p>
-                    <p class="text-lg font-semibold text-gray-900">{{ current_user.subscription_end_date.strftime('%B %d, %Y') }}</p>
+                    <p class="text-sm text-gray-600">Member Since</p>
+                    <p class="text-lg font-semibold text-gray-900">{{ current_user.subscription_start_date.strftime('%B %d, %Y') }}</p>
                 </div>
                 {% endif %}
             </div>
@@ -36,8 +36,8 @@
                 <a href="{{ url_for('pricing') }}" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mr-4">
                     Upgrade Plan
                 </a>
-                <a href="{{ url_for('account.account_page') }}" class="inline-block px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors">
-                    Manage Subscription
+                <a href="{{ url_for('dashboard') }}" class="inline-block px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors">
+                    Back to Dashboard
                 </a>
             </div>
             {% else %}
@@ -55,7 +55,7 @@
                 <h2 class="text-xl font-semibold text-gray-900">Payment History</h2>
             </div>
 
-            {% if payments %}
+            {% if payments and payments|length > 0 %}
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
@@ -73,7 +73,7 @@
                                 Status
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Invoice
+                                Payment ID
                             </th>
                         </tr>
                     </thead>
@@ -84,21 +84,13 @@
                                 {{ payment.created_at.strftime('%b %d, %Y') }}
                             </td>
                             <td class="px-6 py-4 text-sm text-gray-900">
-                                {% if payment.subscription_tier %}
-                                    {{ payment.subscription_tier|capitalize }} Plan
-                                {% elif payment.template_id %}
-                                    Individual Template Purchase
-                                {% elif payment.description %}
-                                    {{ payment.description }}
-                                {% else %}
-                                    Payment
-                                {% endif %}
+                                {{ payment.description or 'Payment' }}
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                 ${{ "%.2f"|format(payment.amount / 100) }}
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {% if payment.status == 'succeeded' or payment.status == 'paid' %}
+                                {% if payment.status == 'succeeded' or payment.status == 'completed' or payment.status == 'paid' %}
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                     Paid
                                 </span>
@@ -112,21 +104,15 @@
                                 </span>
                                 {% else %}
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
-                                    {{ payment.status|capitalize }}
+                                    {{ payment.status|capitalize if payment.status else 'Unknown' }}
                                 </span>
                                 {% endif %}
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                {% if payment.stripe_invoice_id is defined and payment.stripe_invoice_id %}
-                                <a href="https://dashboard.stripe.com/invoices/{{ payment.stripe_invoice_id }}" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    View Invoice
-                                </a>
-                                {% elif payment.stripe_payment_id %}
-                                <a href="https://dashboard.stripe.com/payments/{{ payment.stripe_payment_id }}" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                    View Payment
-                                </a>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">
+                                {% if payment.stripe_payment_id %}
+                                    {{ payment.stripe_payment_id[:20] }}...
                                 {% else %}
-                                <span class="text-gray-400">N/A</span>
+                                    <span class="text-gray-400">N/A</span>
                                 {% endif %}
                             </td>
                         </tr>
@@ -152,7 +138,7 @@
 
         <!-- Back to Dashboard -->
         <div class="mt-8">
-            <a href="{{ url_for('account.dashboard') }}" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+            <a href="{{ url_for('dashboard') }}" class="inline-flex items-center text-blue-600 hover:text-blue-800">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                 </svg>
