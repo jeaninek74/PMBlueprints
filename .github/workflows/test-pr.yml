@@ -85,7 +85,7 @@ jobs:
     
     steps:
     - name: PR Status Comment
-      uses: actions/github-script@v7
+      uses: actions/github-script@v8
       with:
         script: |
           const status = '${{ needs.test.result }}' === 'success' ? '✅ Tests Passed' : '❌ Tests Failed';
