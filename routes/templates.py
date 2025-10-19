@@ -161,6 +161,10 @@ def download(template_id):
         # Serve the file
         file_path = os.path.join('public/templates', template.file_path)
         if os.path.exists(file_path):
+            # Check if file is not empty
+            if os.path.getsize(file_path) == 0:
+                flash('Template file is corrupted. Please contact support.', 'error')
+                return redirect(url_for('templates.detail', template_id=template_id))
             return send_file(file_path,
                            as_attachment=True,
                            download_name=f"{template.name}.{template.file_format}")
