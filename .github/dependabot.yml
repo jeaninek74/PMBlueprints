@@ -1,0 +1,64 @@
+# Dependabot Configuration for PMBlueprints
+# Automatically monitors and updates dependencies
+
+version: 2
+updates:
+  # Monitor Python dependencies (pip)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"  # Check for updates every Monday
+      day: "monday"
+      time: "09:00"
+      timezone: "America/New_York"
+    
+    # Grouping strategy - combine minor updates into one PR
+    groups:
+      # Group all non-breaking updates together
+      minor-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    
+    # Keep pull requests organized
+    open-pull-requests-limit: 5
+    
+    # Add labels to PRs for easy filtering
+    labels:
+      - "dependencies"
+      - "python"
+      - "automated"
+    
+    # Commit message prefix
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    
+    # Reviewers (optional - add your GitHub username)
+    # reviewers:
+    #   - "jeaninek74"
+    
+    # Auto-merge settings (disabled by default for safety)
+    # Enable this after you're comfortable with the workflow
+    # pull-request-branch-name:
+    #   separator: "/"
+    
+  # Monitor GitHub Actions (if you add CI/CD workflows later)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+
+# Priority packages to monitor closely
+# Dependabot will create separate PRs for these
+# - openai (AI functionality)
+# - flask (web framework)
+# - stripe (payment processing)
+# - psycopg2-binary (database)
+# - gunicorn (production server)
+
