@@ -8,7 +8,7 @@ Version: 1.0.1 - Login and Preview fixes
 import os
 import logging
 from datetime import datetime, timedelta
-from flask import Flask, render_template, jsonify, request, send_file, redirect, url_for, flash, session
+from flask import Flask, render_template, jsonify, request, send_file, send_from_directory, redirect, url_for, flash, session
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
