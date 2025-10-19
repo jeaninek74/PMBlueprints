@@ -259,6 +259,17 @@ try:
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
 
+# SEO routes
+@app.route('/robots.txt')
+def robots():
+    """Serve robots.txt"""
+    return send_from_directory(app.static_folder, 'robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    """Serve sitemap.xml"""
+    return send_from_directory(app.static_folder, 'sitemap.xml', mimetype='application/xml')
+
 # Main routes
 @app.route('/')
 def index():
