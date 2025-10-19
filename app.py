@@ -263,12 +263,12 @@ except ImportError as e:
 @app.route('/robots.txt')
 def robots():
     """Serve robots.txt"""
-    return send_from_directory(app.static_folder, 'robots.txt')
+    return send_from_directory('static', 'robots.txt')
 
 @app.route('/sitemap.xml')
 def sitemap():
     """Serve sitemap.xml"""
-    return send_from_directory(app.static_folder, 'sitemap.xml', mimetype='application/xml')
+    return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
 
 # Main routes
 @app.route('/')
