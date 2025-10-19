@@ -89,14 +89,9 @@
             <!-- Purchased Templates -->
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-header bg-white border-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0 fw-bold">
-                            <i class="fas fa-folder-open me-2 text-primary"></i>My Purchased Templates
-                        </h5>
-                        <a href="{{ url_for('templates.browse') }}" class="btn btn-sm btn-outline-primary">
-                            <i class="fas fa-plus me-1"></i>Browse More
-                        </a>
-                    </div>
+                    <h5 class="mb-0 fw-bold">
+                        <i class="fas fa-folder-open me-2 text-primary"></i>My Purchased Templates
+                    </h5>
                 </div>
                 <div class="card-body">
                     {% if purchased_templates %}
@@ -137,9 +132,6 @@
                     <div class="text-center py-5">
                         <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
                         <p class="text-muted">You haven't purchased any templates yet.</p>
-                        <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
-                            <i class="fas fa-search me-1"></i>Browse Templates
-                        </a>
                     </div>
                     {% endif %}
                 </div>
@@ -148,14 +140,9 @@
             <!-- AI Suggestions History -->
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-header bg-white border-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0 fw-bold">
-                            <i class="fas fa-lightbulb me-2 text-warning"></i>AI Suggestions History
-                        </h5>
-                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-sm btn-outline-warning">
-                            <i class="fas fa-plus me-1"></i>Get New Suggestions
-                        </a>
-                    </div>
+                    <h5 class="mb-0 fw-bold">
+                        <i class="fas fa-lightbulb me-2 text-warning"></i>AI Suggestions History
+                    </h5>
                 </div>
                 <div class="card-body">
                     {% if ai_suggestions %}
@@ -190,9 +177,6 @@
                     <div class="text-center py-4">
                         <i class="fas fa-lightbulb fa-3x text-muted mb-3"></i>
                         <p class="text-muted">No AI suggestions yet.</p>
-                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-warning">
-                            <i class="fas fa-magic me-1"></i>Get AI Suggestions
-                        </a>
                     </div>
                     {% endif %}
                 </div>
@@ -201,14 +185,9 @@
             <!-- AI Generator History -->
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-header bg-white border-bottom">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0 fw-bold">
-                            <i class="fas fa-magic me-2 text-success"></i>AI Generator History
-                        </h5>
-                        <a href="{{ url_for('ai_generator_page') }}" class="btn btn-sm btn-outline-success">
-                            <i class="fas fa-plus me-1"></i>Generate New Template
-                        </a>
-                    </div>
+                    <h5 class="mb-0 fw-bold">
+                        <i class="fas fa-magic me-2 text-success"></i>AI Generator History
+                    </h5>
                 </div>
                 <div class="card-body">
                     {% if ai_generations %}
@@ -246,9 +225,6 @@
                     <div class="text-center py-4">
                         <i class="fas fa-magic fa-3x text-muted mb-3"></i>
                         <p class="text-muted">No AI generations yet.</p>
-                        <a href="{{ url_for('ai_generator_page') }}" class="btn btn-success">
-                            <i class="fas fa-wand-magic me-1"></i>Generate Template
-                        </a>
                     </div>
                     {% endif %}
                 </div>
@@ -293,31 +269,6 @@
                 </div>
             </div>
 
-            <!-- Quick Actions -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-header bg-white border-bottom">
-                    <h5 class="mb-0 fw-bold">
-                        <i class="fas fa-bolt me-2"></i>Quick Actions
-                    </h5>
-                </div>
-                <div class="card-body">
-                    <div class="d-grid gap-2">
-                        <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary">
-                            <i class="fas fa-search me-2"></i>Browse Templates
-                        </a>
-                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-outline-warning">
-                            <i class="fas fa-lightbulb me-2"></i>Get AI Suggestions
-                        </a>
-                        <a href="{{ url_for('ai_generator_page') }}" class="btn btn-outline-success">
-                            <i class="fas fa-magic me-2"></i>Generate Template
-                        </a>
-                        <a href="{{ url_for('auth.profile') }}" class="btn btn-outline-secondary">
-                            <i class="fas fa-user me-2"></i>Edit Profile
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Account Info -->
             <div class="card border-0 shadow-sm">
                 <div class="card-header bg-white border-bottom">
@@ -339,6 +290,9 @@
                         <strong>{{ current_user.created_at.strftime('%B %Y') if current_user.created_at else 'N/A' }}</strong>
                     </div>
                     <div class="d-grid gap-2">
+                        <a href="{{ url_for('auth.profile') }}" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-user-edit me-1"></i>Edit Profile
+                        </a>
                         <a href="{{ url_for('pricing') }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-crown me-1"></i>Upgrade Plan
                         </a>
