@@ -313,7 +313,7 @@ def index():
             'industries_count': industries_count,
             'categories_count': categories_count,
             'time_savings': "70%",
-            'compliance': "100% PMI 2025"
+            'compliance': "100% PMI Compliant"
         }
         
         return render_template('index.html', 
@@ -329,7 +329,7 @@ def index():
             'industries_count': 30,
             'categories_count': 45,
             'time_savings': "70%",
-            'compliance': "100% PMI 2025"
+            'compliance': "100% PMI Compliant"
         }
         return render_template('index.html', stats=stats)
 

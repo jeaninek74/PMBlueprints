@@ -1,6 +1,6 @@
 """
 Advanced AI Generator for PMBlueprints
-Integrates PMI 2025 PMBOK and comprehensive methodology knowledge
+Integrates PMI PMBOK and comprehensive methodology knowledge
 Generates professional PM documents with preview/edit capability
 """
 
@@ -279,12 +279,12 @@ def generate_document_content():
             messages=[
                 {
                     "role": "system",
-                    "content": """You are an expert Project Management consultant with deep knowledge of PMI 2025 PMBOK standards and all major PM methodologies. 
+                    "content": """You are an expert Project Management consultant with deep knowledge of PMI PMBOK standards and all major PM methodologies. 
                     
 You generate professional, comprehensive, and methodology-appropriate project management documents. 
 
 Your documents:
-- Follow PMI 2025 PMBOK standards
+- Follow PMI PMBOK standards
 - Adapt to the specified methodology (Scrum, Waterfall, SAFe, etc.)
 - Use methodology-appropriate terminology
 - Include realistic, contextual content
@@ -475,8 +475,8 @@ def _build_generation_prompt(document_name, format_type, methodology, project_co
 **Document Requirements:**
 - Format: {format_type.upper()}
 - Methodology: {methodology} ({method_info['type'] if method_info else 'Traditional'})
-- PMI 2025 PMBOK Knowledge Area: {pmbok_info if isinstance(pmbok_info, str) else pmbok_info.get('knowledge_area', 'Unknown')}
-- PMI 2025 PMBOK Process Group: {pmbok_info.get('process_group', 'Unknown') if isinstance(pmbok_info, dict) else 'Initiating'}
+- PMI PMBOK Knowledge Area: {pmbok_info if isinstance(pmbok_info, str) else pmbok_info.get('knowledge_area', 'Unknown')}
+- PMI PMBOK Process Group: {pmbok_info.get('process_group', 'Unknown') if isinstance(pmbok_info, dict) else 'Initiating'}
 
 **Document Purpose:**
 {doc_info.get('content_guidance', {}).get('purpose', 'Professional project management document')}
@@ -491,7 +491,7 @@ def _build_generation_prompt(document_name, format_type, methodology, project_co
 
 **Instructions:**
 1. Use {methodology}-appropriate terminology and language
-2. Follow PMI 2025 PMBOK standards for {pmbok_info if isinstance(pmbok_info, str) else pmbok_info.get('knowledge_area', 'Unknown')}
+2. Follow PMI PMBOK standards for {pmbok_info if isinstance(pmbok_info, str) else pmbok_info.get('knowledge_area', 'Unknown')}
 3. Include realistic, contextual content based on the project description
 4. Make the document immediately usable by a project manager
 5. Follow professional formatting standards for {format_type}

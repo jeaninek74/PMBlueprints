@@ -1,18 +1,18 @@
 """
-PMI 2025 PMBOK Knowledge Base
-Complete implementation of PMI 2025 PMBOK standards for AI document generation
+PMI PMBOK Knowledge Base
+Complete implementation of PMI PMBOK standards for AI document generation
 """
 
 from typing import Dict, List
 
 class PMBOK2025Knowledge:
     """
-    Comprehensive PMI 2025 PMBOK knowledge base
+    Comprehensive PMI PMBOK knowledge base
     Includes all process groups, knowledge areas, processes, inputs, tools & techniques, and outputs
     """
     
     def __init__(self):
-        # PMI 2025 Process Groups
+        # PMI Process Groups
         self.process_groups = {
             'initiating': {
                 'name': 'Initiating',
@@ -41,7 +41,7 @@ class PMBOK2025Knowledge:
             }
         }
         
-        # PMI 2025 Knowledge Areas
+        # PMI Knowledge Areas
         self.knowledge_areas = {
             'integration': {
                 'name': 'Project Integration Management',
@@ -164,7 +164,7 @@ class PMBOK2025Knowledge:
             }
         }
         
-        # PMI 2025 Standard Terminology
+        # PMI Standard Terminology
         self.terminology = {
             'project': 'A temporary endeavor undertaken to create a unique product, service, or result',
             'project_management': 'The application of knowledge, skills, tools, and techniques to project activities',

@@ -367,7 +367,7 @@ class AIGuardrails:
         Provide fallback content when AI generation fails or doesn't meet standards
         """
         fallback_templates = {
-            'project_charter': "Professional project charter template with PMI 2025 standards...",
+            'project_charter': "Professional project charter template with PMI standards...",
             'risk_register': "Comprehensive risk register following industry best practices...",
             'default': "Professional project management template..."
         }

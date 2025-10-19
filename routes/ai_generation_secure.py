@@ -370,7 +370,7 @@ def _generate_with_openai(template_type: str, project_description: str, industry
 Project Description: {project_description}
 
 Requirements:
-- Follow PMI 2025 standards
+- Follow PMI standards
 - Use professional language
 - Include all standard sections for a {template_type}
 - Be specific and actionable
@@ -384,7 +384,7 @@ Generate a comprehensive {template_type} that meets these requirements."""
         messages=[
             {
                 "role": "system",
-                "content": "You are a professional project management expert specializing in creating PMI 2025-compliant templates. Generate high-quality, professional, and unbiased content."
+                "content": "You are a professional project management expert specializing in creating PMI-compliant templates. Generate high-quality, professional, and unbiased content."
             },
             {
                 "role": "user",

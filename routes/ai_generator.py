@@ -76,7 +76,7 @@ Project Details:
 - Methodology: {methodology}
 - Additional Details: {additional_details}
 
-Please create a comprehensive {document_type} following PMI 2025 PMBOK standards.
+Please create a comprehensive {document_type} following PMI PMBOK standards.
 Include all relevant sections, proper formatting, and industry-specific considerations.
 Make it professional and ready to use.
 """
