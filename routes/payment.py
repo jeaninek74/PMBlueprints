@@ -110,7 +110,7 @@ def checkout(tier):
         # Free tier doesn't need checkout
         if tier == 'free':
             flash('You are already on the Free tier', 'info')
-            return redirect(url_for('account.dashboard'))
+            return redirect(url_for('dashboard'))
         
         # Create Stripe customer if not exists
         if not current_user.stripe_customer_id:
@@ -418,11 +418,11 @@ def customer_portal():
     try:
         if not current_user.stripe_customer_id:
             flash('No billing information found', 'error')
-            return redirect(url_for('account.dashboard'))
+            return redirect(url_for('dashboard'))
         
         portal_session = stripe.billing_portal.Session.create(
             customer=current_user.stripe_customer_id,
-            return_url=url_for('account.dashboard', _external=True)
+            return_url=url_for('dashboard', _external=True)
         )
         
         return redirect(portal_session.url, code=303)
@@ -430,7 +430,7 @@ def customer_portal():
     except Exception as e:
         logger.error(f"Error creating portal session: {str(e)}")
         flash('An error occurred. Please try again.', 'error')
-        return redirect(url_for('account.dashboard'))
+        return redirect(url_for('dashboard'))
 
 
 @payment_bp.route('/billing-history')
@@ -440,3 +440,29 @@ def billing_history():
     from models import Payment
     payments = Payment.query.filter_by(user_id=current_user.id).order_by(Payment.created_at.desc()).all()
     return render_template('payment/billing_history.html', payments=payments)
+
+
+
+@payment_bp.route('/subscribe/<tier>')
+@login_required
+def subscribe(tier):
+    """
+    Subscribe route that redirects to checkout
+    This fixes the URL mismatch where pricing page buttons point to /subscribe/
+    but the actual checkout route is /checkout/
+    """
+    logger.info(f"Subscribe route called for tier: {tier}")
+    
+    # Validate tier
+    if tier not in ['professional', 'enterprise', 'individual', 'free']:
+        flash('Invalid subscription tier', 'error')
+        return redirect(url_for('pricing'))
+    
+    # Free tier doesn't need checkout
+    if tier == 'free':
+        flash('You are already on the Free tier', 'info')
+        return redirect(url_for('dashboard'))
+    
+    # Redirect to the actual checkout route
+    return redirect(url_for('payment.checkout', tier=tier))
+

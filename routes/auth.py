@@ -25,7 +25,7 @@ GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configura
 def register():
     """User registration"""
     if current_user.is_authenticated:
-        return redirect(url_for('account.dashboard'))
+        return redirect(url_for('dashboard'))
     
     if request.method == 'POST':
         from models import User
@@ -107,7 +107,7 @@ def register():
 def login():
     """User login"""
     if current_user.is_authenticated:
-        return redirect(url_for('account.dashboard'))
+        return redirect(url_for('dashboard'))
     
     if request.method == 'POST':
         from models import User
@@ -174,7 +174,7 @@ def login():
         next_page = request.args.get('next')
         if next_page:
             return redirect(next_page)
-        return redirect(url_for('account.dashboard'))
+        return redirect(url_for('dashboard'))
     
     return render_template('auth/login.html')
 
@@ -286,7 +286,7 @@ def google_callback():
         login_user(user)
         
         flash('Successfully logged in with Google!', 'success')
-        return redirect(url_for('account.dashboard'))
+        return redirect(url_for('dashboard'))
         
     except requests.RequestException as e:
         logger.error(f"Google OAuth error: {str(e)}")
