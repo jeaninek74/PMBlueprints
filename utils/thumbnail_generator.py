@@ -281,20 +281,21 @@ class ThumbnailGenerator:
         fail_count = 0
         
         for template in templates:
-            if not template.file_path or not os.path.exists(template.file_path):
-                logger.warning(f"Template file not found: {template.file_path}")
+            full_path = os.path.join("static", "templates", template.file_path)
+            if not template.file_path or not os.path.exists(full_path):
+                logger.warning(f"Template file not found: {full_path}")
                 fail_count += 1
                 continue
             
             thumbnail_path = self.generate_thumbnail(
-                template.file_path,
+                full_path,
                 template.id,
                 template.file_format
             )
             
             if thumbnail_path:
                 # Update template with thumbnail path
-                template.thumbnail_path = thumbnail_path
+                template.thumbnail_path = os.path.basename(thumbnail_path)
                 success_count += 1
             else:
                 fail_count += 1

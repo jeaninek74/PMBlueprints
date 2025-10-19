@@ -101,7 +101,8 @@ class Template(db.Model):
         else:
             # Generate thumbnail filename from template name
             # Remove special characters and replace spaces with underscores
-            safe_name = self.name.replace(' ', '_').replace('/', '_').replace('\\', '_')
+            safe_name_part = self.name.replace(' ', '_').replace('/', '_').replace('\\', '_')
+            safe_name = f"{self.industry.replace(' ', '_')}_{safe_name_part}"
             # Remove any remaining special characters except underscores and hyphens
             safe_name = ''.join(c for c in safe_name if c.isalnum() or c in ('_', '-'))
             return f'/static/thumbnails/{safe_name}.png'
