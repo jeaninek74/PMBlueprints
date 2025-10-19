@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block title %}My Profile - PMBlueprints{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Profile Header -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 80px; height: 80px; border-radius: 50%; font-size: 2rem; font-weight: bold;">
+                            {{ current_user.name[0].upper() if current_user.name else current_user.email[0].upper() }}
+                        </div>
+                        <div>
+                            <h2 class="h4 mb-1">{{ current_user.name or 'User' }}</h2>
+                            <p class="text-muted mb-0">{{ current_user.email }}</p>
+                            <span class="badge bg-primary mt-2">{{ current_user.subscription_tier or 'Free' }} Plan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Information -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0"><i class="fas fa-user me-2"></i>Account Information</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form method="POST" action="{{ url_for('auth.update_profile') }}">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ current_user.name or '' }}">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ current_user.email }}" readonly>
+                            <small class="text-muted">Email cannot be changed. Contact support if needed.</small>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company (Optional)</label>
+                            <input type="text" class="form-control" id="company" name="company" value="{{ current_user.company or '' }}">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Save Changes
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Subscription Details -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0"><i class="fas fa-credit-card me-2"></i>Subscription Details</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <p class="text-muted mb-1">Current Plan</p>
+                            <h6 class="mb-0">{{ current_user.subscription_tier or 'Free' }}</h6>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <p class="text-muted mb-1">Member Since</p>
+                            <h6 class="mb-0">{{ current_user.created_at.strftime('%B %d, %Y') if current_user.created_at else 'N/A' }}</h6>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-3">
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-1">Want more features?</p>
+                            <small class="text-muted">Upgrade to Professional or Enterprise</small>
+                        </div>
+                        <a href="{{ url_for('payment.pricing') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-up me-2"></i>Upgrade Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usage Statistics -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Usage This Month</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3">
+                                <i class="fas fa-download fa-2x text-primary mb-2"></i>
+                                <h4 class="mb-0">0</h4>
+                                <p class="text-muted mb-0">Downloads</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3">
+                                <i class="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+                                <h4 class="mb-0">0</h4>
+                                <p class="text-muted mb-0">AI Suggestions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3">
+                                <i class="fas fa-magic fa-2x text-success mb-2"></i>
+                                <h4 class="mb-0">0</h4>
+                                <p class="text-muted mb-0">AI Generations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0"><i class="fas fa-lock me-2"></i>Security Settings</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h6 class="mb-1">Change Password</h6>
+                            <small class="text-muted">Update your password to keep your account secure</small>
+                        </div>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                            <i class="fas fa-key me-2"></i>Change
+                        </button>
+                    </div>
+                    
+                    <hr class="my-3">
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="mb-1">Delete Account</h6>
+                            <small class="text-muted">Permanently delete your account and all data</small>
+                        </div>
+                        <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                            <i class="fas fa-trash me-2"></i>Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ url_for('auth.change_password') }}">
+                    <div class="mb-3">
+                        <label for="current_password" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="current_password" name="current_password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Update Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Account Modal -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Delete Account</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Warning:</strong> This action cannot be undone. All your data will be permanently deleted.
+                </div>
+                <p>Are you sure you want to delete your account?</p>
+                <form method="POST" action="{{ url_for('auth.delete_account') }}">
+                    <div class="mb-3">
+                        <label for="confirm_email" class="form-label">Type your email to confirm</label>
+                        <input type="email" class="form-control" id="confirm_email" name="confirm_email" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Yes, Delete My Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
