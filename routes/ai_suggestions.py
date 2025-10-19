@@ -140,18 +140,21 @@ Please provide:
             'history_id': history.id
         })
         
-    except openai.error.RateLimitError:
-        logger.error("OpenAI rate limit exceeded")
-        return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
-    
-    except openai.error.AuthenticationError:
-        logger.error("OpenAI authentication error")
-        return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
-    
     except Exception as e:
         logger.error(f"AI suggestions error: {str(e)}")
+        logger.error(f"Error type: {type(e).__name__}")
+        import traceback
+        logger.error(f"Traceback: {traceback.format_exc()}")
         db.session.rollback()
-        return jsonify({'error': f'An error occurred: {str(e)}'}), 500
+        
+        # Check for specific OpenAI errors
+        error_message = str(e)
+        if 'rate_limit' in error_message.lower() or 'quota' in error_message.lower():
+            return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
+        elif 'authentication' in error_message.lower() or 'api_key' in error_message.lower():
+            return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
+        else:
+            return jsonify({'error': f'An error occurred: {str(e)}'}), 500
 
 @ai_suggestions_bp.route('/history')
 @login_required
