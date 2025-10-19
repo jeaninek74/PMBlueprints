@@ -56,7 +56,7 @@ PRICING_PLANS = {
     },
     'professional': {
         'name': 'Professional',
-        'price': 4900,  # $49.00 in cents
+        'price': 7500,  # $75.00 in cents
         'currency': 'usd',
         'interval': 'month',
         'stripe_price_id': None,  # Will be created inline
