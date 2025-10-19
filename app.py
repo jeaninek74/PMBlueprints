@@ -166,13 +166,19 @@ def manage_session():
 
 @app.after_request
 def save_session(response):
-    """Ensure session is saved and cookie is set"""
+    """Ensure session is saved and add security headers"""
     logger.info(f"Response: {response.status_code}")
     cookie_header = response.headers.get('Set-Cookie')
     if cookie_header:
         logger.info(f"Set-Cookie: {cookie_header[:100]}...")  # Log first 100 chars
     else:
         logger.warning("No Set-Cookie header in response")
+    
+    # Add security headers
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    
     return response
 
 # Import blueprints (with error handling)
@@ -269,6 +275,11 @@ def robots():
 def sitemap():
     """Serve sitemap.xml"""
     return send_from_directory('static', 'sitemap.xml', mimetype='application/xml')
+
+@app.route('/sitemap-templates.xml')
+def sitemap_templates():
+    """Serve templates sitemap"""
+    return send_from_directory('static', 'sitemap-templates.xml', mimetype='application/xml')
 
 # Main routes
 @app.route('/')

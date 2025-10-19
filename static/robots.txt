@@ -10,3 +10,4 @@ Disallow: /api/
 Disallow: /auth/logout
 
 Sitemap: https://www.pmblueprints.net/sitemap.xml
+Sitemap: https://www.pmblueprints.net/sitemap-templates.xml

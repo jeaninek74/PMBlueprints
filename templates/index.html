@@ -3,6 +3,33 @@
 {% block title %}PMBlueprints - AI-Powered PM Templates{% endblock %}
 
 {% block extra_head %}
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PMBlueprints",
+  "url": "https://www.pmblueprints.net",
+  "logo": "https://www.pmblueprints.net/static/images/logo.png",
+  "description": "955 professional project management templates for all industries. PMI 2025 PMBOK compliant. Save 40+ hours per project.",
+  "sameAs": [
+    "https://www.linkedin.com/company/pmblueprints"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PMBlueprints",
+  "url": "https://www.pmblueprints.net",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.pmblueprints.net/templates/browse?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <style>
 /* Remove any hover animations */
 .card {
