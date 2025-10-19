@@ -18,7 +18,7 @@ openpyxl>=3.1.0
 
 # Session Management
 Flask-Session==0.5.0
-redis==5.0.1
+redis==6.4.0
 
 # PostgreSQL Database
 psycopg2-binary==2.9.9
