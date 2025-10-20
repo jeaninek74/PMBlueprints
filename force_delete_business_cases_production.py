@@ -63,14 +63,14 @@ def verify_production_template_count():
     print("VERIFYING PRODUCTION TEMPLATE COUNT")
     print("=" * 80)
     
-    health_endpoint = f"{PRODUCTION_URL}/api/health"
+    health_endpoint = f"{PRODUCTION_URL}/api/health-check"
     
     try:
         response = requests.get(health_endpoint, timeout=10)
         
         if response.status_code == 200:
             data = response.json()
-            template_count = data.get('template_count', 0)
+            template_count = data.get('checks', {}).get('database', {}).get('template_count', 0)
             
             print(f"\n📊 Production Template Count: {template_count}")
             
