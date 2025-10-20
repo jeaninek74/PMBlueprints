@@ -527,8 +527,10 @@ def init_db():
         except Exception as e:
             logger.warning(f"Migration error: {e}")
 
+# Initialize database when module is loaded (works with Gunicorn)
+init_db()
+
 if __name__ == '__main__':
-    init_db()
     logger.info("Starting PMBlueprints Production Platform")
     app.run(host='0.0.0.0', port=5002, debug=False)
 
