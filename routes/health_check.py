@@ -68,9 +68,10 @@ def health_check():
         results['checks']['test_users'] = user_check
         
         # Check 3: Subscription tier permissions
+        from utils.subscription_security import TIER_LIMITS
         tier_permissions = {}
         for tier in ['free', 'individual', 'professional', 'enterprise']:
-            limits = get_user_tier_limits(tier)
+            limits = TIER_LIMITS.get(tier, {})
             tier_permissions[tier] = {
                 'platform_integrations': limits.get('platform_integrations', False),
                 'ai_generator': limits.get('ai_generator', False),
