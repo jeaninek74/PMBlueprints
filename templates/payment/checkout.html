@@ -105,7 +105,7 @@
                                         <img src="https://img.shields.io/badge/Visa-1A1F71?style=flat&logo=visa&logoColor=white" alt="Visa" height="20">
                                         <img src="https://img.shields.io/badge/Mastercard-EB001B?style=flat&logo=mastercard&logoColor=white" alt="Mastercard" height="20">
                                         <img src="https://img.shields.io/badge/Amex-006FCF?style=flat&logo=americanexpress&logoColor=white" alt="Amex" height="20">
-                                        <img src="https://img.shields.io/badge/Apple_Pay-000000?style=flat&logo=applepay&logoColor=white" alt="Apple Pay" height="20">
+
                                         <img src="https://img.shields.io/badge/Google_Pay-4285F4?style=flat&logo=googlepay&logoColor=white" alt="Google Pay" height="20">
                                         <img src="https://img.shields.io/badge/PayPal-00457C?style=flat&logo=paypal&logoColor=white" alt="PayPal" height="20">
                                     </div>
@@ -190,10 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const stripe = Stripe('{{ config.STRIPE_PUBLISHABLE_KEY }}');
     const elements = stripe.elements();
 
-    // Create Payment Element (supports cards, Apple Pay, Google Pay, etc.)
+    // Create Payment Element (supports cards, Google Pay, PayPal)
     const paymentElement = elements.create('payment', {
         layout: 'tabs',
-        paymentMethodOrder: ['card', 'apple_pay', 'google_pay', 'paypal'],
+        paymentMethodOrder: ['card', 'google_pay', 'paypal'],
     });
 
     paymentElement.mount('#payment-element');

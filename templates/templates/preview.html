@@ -7,10 +7,9 @@
     <div class="row">
         <div class="col-12">
             <!-- Back Button -->
-            <a href="{{ url_for('templates.browse') }}" class="btn btn-outline-primary mb-4">
+            <a href="{{ url_for('templates.browse', industry=referrer_industry, category=referrer_category, search=referrer_search) }}" class="btn btn-outline-primary mb-4">
                 <i class="bi bi-arrow-left"></i> Back to Templates
-            </a>
-            
+            </a>           
             <!-- Template Header -->
             <div class="card shadow-sm mb-4">
                 <div class="card-body">

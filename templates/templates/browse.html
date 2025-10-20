@@ -94,7 +94,15 @@
                 
                 <div class="card-footer bg-transparent border-0">
                     <div class="d-grid gap-2">
-                        <a href="{{ url_for('templates.preview', template_id=template.id) }}" class="btn btn-outline-primary btn-sm">
+                        {% set preview_url = url_for('templates.preview', template_id=template.id) %}
+                        {% if current_industry or current_category or current_search %}
+                            {% set params = [] %}
+                            {% if current_industry %}{% set _ = params.append('industry=' + current_industry) %}{% endif %}
+                            {% if current_category %}{% set _ = params.append('category=' + current_category) %}{% endif %}
+                            {% if current_search %}{% set _ = params.append('search=' + current_search) %}{% endif %}
+                            {% set preview_url = preview_url + '?' + params|join('&') %}
+                        {% endif %}
+                        <a href="{{ preview_url }}" class="btn btn-outline-primary btn-sm">
                             Preview
                         </a>
                         <button class="btn btn-success btn-sm" onclick="purchaseTemplate({{ template.id }}, '{{ template.name }}')">

@@ -19,30 +19,39 @@ templates_bp = Blueprint('templates', __name__, url_prefix='/templates')
 def browse():
     """Browse all templates with filtering"""
     from models import Template
+    import logging
+    logger = logging.getLogger(__name__)
     
     # Get filter parameters
-    industry = request.args.get('industry', '')
-    category = request.args.get('category', '')
-    search = request.args.get('search', '')
+    industry = request.args.get('industry', '').strip()
+    category = request.args.get('category', '').strip()
+    search = request.args.get('search', '').strip()
+    
+    # Log filter parameters for debugging
+    logger.info(f"Browse filters - industry: '{industry}', category: '{category}', search: '{search}'")
     
     # Build query
     query = Template.query
     
     if industry:
         query = query.filter(Template.industry == industry)
+        logger.info(f"Applied industry filter: {industry}")
     
     if category:
         query = query.filter(Template.category == category)
+        logger.info(f"Applied category filter: {category}")
     
     if search:
         query = query.filter(
             (Template.name.ilike(f'%{search}%')) |
             (Template.description.ilike(f'%{search}%'))
         )
+        logger.info(f"Applied search filter: {search}")
     
     # Get all matching templates
     # Order by industry first (chronological), then by name within each industry
     templates = query.order_by(Template.industry, Template.name).all()
+    logger.info(f"Found {len(templates)} templates matching filters")
     
     # Get unique industries and categories for filters (optimized - use distinct query)
     industries = sorted([i[0] for i in Template.query.with_entities(Template.industry).distinct().all() if i[0]])
@@ -78,10 +87,18 @@ def preview(template_id):
     basename = os.path.basename(template.file_path)
     screenshot_filename = basename.rsplit('.', 1)[0] + '.png'
     
+    # Capture referrer filter parameters to preserve browse state
+    referrer_industry = request.args.get('industry', '')
+    referrer_category = request.args.get('category', '')
+    referrer_search = request.args.get('search', '')
+    
     return render_template('templates/preview.html',
                          template=template,
                          has_purchased=has_purchased,
-                         screenshot_filename=screenshot_filename)
+                         screenshot_filename=screenshot_filename,
+                         referrer_industry=referrer_industry,
+                         referrer_category=referrer_category,
+                         referrer_search=referrer_search)
 
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):
