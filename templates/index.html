@@ -661,13 +661,13 @@ function browseWithFilters() {
     window.location.href = '{{ url_for("templates.browse") }}';
 }
 
-// Initialize dropdown event listeners when DOM is ready
+// Attach event listeners when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     const industrySelect = document.getElementById('industrySelect');
     const templateTypeSelect = document.getElementById('templateTypeSelect');
     
     if (industrySelect && templateTypeSelect) {
-        console.log('Initializing homepage dropdown event listeners');
+        console.log('Attaching dropdown event listeners');
         
         industrySelect.addEventListener('change', function() {
             console.log('Industry dropdown changed to:', this.value);
