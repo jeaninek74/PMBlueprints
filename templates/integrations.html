@@ -148,41 +148,7 @@
             </div>
         </div>
 
-        <!-- Workday Integration -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                        <div>
-                            <h5 class="card-title mb-0">Workday</h5>
-                            <small class="text-muted">Enterprise HCM</small>
-                        </div>
-                    </div>
-                    <p class="card-text">
-                        Enterprise integration with Workday HCM for resource planning, time tracking, and project staffing.
-                    </p>
-                    <div class="mt-3">
-                        <span class="badge bg-info mb-2">
-                            Enterprise Only
-                        </span>
-                        {% if current_user.is_platform_connected('workday') %}
-                        <span class="badge bg-success mb-2">
-                            Connected
-                        </span>
-                        <form method="POST" action="{{ url_for('oauth.disconnect_platform', platform='workday') }}" class="d-inline">
-                            <button type="submit" class="btn btn-sm btn-outline-danger">
-                                Disconnect
-                            </button>
-                        </form>
-                        {% else %}
-                        <a href="{{ url_for('oauth.connect_platform', platform='workday') }}" class="btn btn-primary">
-                            Connect Workday
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <!-- Integration Benefits -->
@@ -227,7 +193,7 @@
                 </h6>
                 <p class="mb-0 small">
                     <strong>Note:</strong> You must have an active account with each platform to use integrations. 
-                    Some platforms require paid subscriptions for API access (Monday.com: Standard plan, Smartsheet: Business plan, Workday: Enterprise contract).
+                    Some platforms require paid subscriptions for API access (Monday.com: Standard plan, Smartsheet: Business plan).
                 </p>
             </div>
         </div>

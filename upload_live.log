@@ -2810,3 +2810,162 @@ Log will be saved to: /home/ubuntu/pmb_repo/upload_NEW_log.txt
 [906/955] Uploading: Telecommunications_Project_Charter.png
   ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
   ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[907/955] Uploading: Telecommunications_Project_Closure.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[908/955] Uploading: Telecommunications_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[909/955] Uploading: Telecommunications_Project_Proposal_2025_PMI.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[910/955] Uploading: Telecommunications_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 910/955 (0 success, 910 failed, 0 skipped) ---
+[911/955] Uploading: Telecommunications_RAID_Log.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[912/955] Uploading: Telecommunications_Requirements_List.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[913/955] Uploading: Telecommunications_Requirements_Matrix.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[914/955] Uploading: Telecommunications_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[915/955] Uploading: Telecommunications_Resource_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[916/955] Uploading: Telecommunications_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[917/955] Uploading: Telecommunications_Stakeholder_Analysis.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[918/955] Uploading: Telecommunications_Stakeholder_Engagement.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[919/955] Uploading: Telecommunications_Stakeholder_Register.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[920/955] Uploading: Telecommunications_Status_Report.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 920/955 (0 success, 920 failed, 0 skipped) ---
+[921/955] Uploading: Telecommunications_Training_Budget.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[922/955] Uploading: Telecommunications_Training_Needs_Assessment.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[923/955] Uploading: Telecommunications_Training_Schedule.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[924/955] Uploading: Telecommunications_WBS.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[925/955] Uploading: Transportation_Action_Item_Log.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[926/955] Uploading: Transportation_Business_Case.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[927/955] Uploading: Transportation_Change_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[928/955] Uploading: Transportation_Change_Request_Form.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[929/955] Uploading: Transportation_Communication_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[930/955] Uploading: Transportation_Communications_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 930/955 (0 success, 930 failed, 0 skipped) ---
+[931/955] Uploading: Transportation_Comprehensive_Budget.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[932/955] Uploading: Transportation_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[933/955] Uploading: Transportation_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[934/955] Uploading: Transportation_KPI_Dashboard.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[935/955] Uploading: Transportation_Lessons_Learned.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[936/955] Uploading: Transportation_Procurement_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[937/955] Uploading: Transportation_Procurement_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[938/955] Uploading: Transportation_Project_Charter.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[939/955] Uploading: Transportation_Project_Closure_Report.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[940/955] Uploading: Transportation_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 940/955 (0 success, 940 failed, 0 skipped) ---
+[941/955] Uploading: Transportation_Project_Proposal.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[942/955] Uploading: Transportation_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[943/955] Uploading: Transportation_RAID_Log.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[944/955] Uploading: Transportation_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[945/955] Uploading: Transportation_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[946/955] Uploading: Transportation_Resource_Plan_Staffing_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[947/955] Uploading: Transportation_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[948/955] Uploading: Transportation_Stakeholder_Engagement_Plan.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[949/955] Uploading: Transportation_Stakeholder_Register.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[950/955] Uploading: Transportation_Stakeholder_Register_Analysis.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 950/955 (0 success, 950 failed, 0 skipped) ---
+[951/955] Uploading: Transportation_Status_Report.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[952/955] Uploading: Transportation_Training_Budget_Estimates.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[953/955] Uploading: Transportation_Training_Needs_Assessment.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[954/955] Uploading: Transportation_Training_Schedule.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[955/955] Uploading: Transportation_WBS.png
+  ✗ Failed (attempt 1/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/2): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+================================================================================
+Upload complete!
+  Success: 0
+  Failed: 955
+  Skipped: 0
+  Total: 955
+\nURLs saved to: /home/ubuntu/pmb_repo/imgbb_urls_NEW.json
