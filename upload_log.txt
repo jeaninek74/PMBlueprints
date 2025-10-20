@@ -1,0 +1,2115 @@
+================================================================================
+UPLOADING SCREENSHOTS TO IMGBB CDN
+================================================================================
+Screenshots directory: /home/ubuntu/pmb_repo/static/final_screenshots
+Output file: /home/ubuntu/pmb_repo/imgbb_urls.json
+
+Found 955 screenshot files
+
+[1/955] Uploading: AI_ML_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[2/955] Uploading: AI_ML_Change_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[3/955] Uploading: AI_ML_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[4/955] Uploading: AI_ML_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[5/955] Uploading: AI_ML_Communications_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[6/955] Uploading: AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[7/955] Uploading: AI_ML_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[8/955] Uploading: AI_ML_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[9/955] Uploading: AI_ML_KPI_Dashboard_with_Instructions_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[10/955] Uploading: AI_ML_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[11/955] Uploading: AI_ML_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[12/955] Uploading: AI_ML_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[13/955] Uploading: AI_ML_Procurement_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[14/955] Uploading: AI_ML_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[15/955] Uploading: AI_ML_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[16/955] Uploading: AI_ML_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[17/955] Uploading: AI_ML_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[18/955] Uploading: AI_ML_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[19/955] Uploading: AI_ML_Quality_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[20/955] Uploading: AI_ML_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[21/955] Uploading: AI_ML_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[22/955] Uploading: AI_ML_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[23/955] Uploading: AI_ML_Resource_Plan_Staffing_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[24/955] Uploading: AI_ML_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[25/955] Uploading: AI_ML_Stakeholder_Engagement_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[26/955] Uploading: AI_ML_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[27/955] Uploading: AI_ML_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[28/955] Uploading: AI_ML_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[29/955] Uploading: AI_ML_Training_Budget_Estimates_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[30/955] Uploading: AI_ML_Training_Needs_Assessment_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[31/955] Uploading: AI_ML_Training_Schedule_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[32/955] Uploading: AI_ML_WBS_ProjectPlan_Exact_Template_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[33/955] Uploading: Business_Process_Improvement_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[34/955] Uploading: Business_Process_Improvement_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[35/955] Uploading: Business_Process_Improvement_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[36/955] Uploading: Business_Process_Improvement_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[37/955] Uploading: Business_Process_Improvement_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[38/955] Uploading: Business_Process_Improvement_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[39/955] Uploading: Business_Process_Improvement_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[40/955] Uploading: Business_Process_Improvement_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[41/955] Uploading: Business_Process_Improvement_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[42/955] Uploading: Business_Process_Improvement_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[43/955] Uploading: Business_Process_Improvement_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[44/955] Uploading: Business_Process_Improvement_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[45/955] Uploading: Business_Process_Improvement_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[46/955] Uploading: Business_Process_Improvement_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[47/955] Uploading: Business_Process_Improvement_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[48/955] Uploading: Business_Process_Improvement_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[49/955] Uploading: Business_Process_Improvement_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[50/955] Uploading: Business_Process_Improvement_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 50/955 (0 success, 50 failed)
+
+[51/955] Uploading: Business_Process_Improvement_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[52/955] Uploading: Business_Process_Improvement_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[53/955] Uploading: Business_Process_Improvement_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[54/955] Uploading: Business_Process_Improvement_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[55/955] Uploading: Business_Process_Improvement_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[56/955] Uploading: Business_Process_Improvement_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[57/955] Uploading: Business_Process_Improvement_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[58/955] Uploading: Business_Process_Improvement_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[59/955] Uploading: Business_Process_Improvement_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[60/955] Uploading: Business_Process_Improvement_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[61/955] Uploading: Business_Process_Improvement_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[62/955] Uploading: Business_Process_Improvement_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[63/955] Uploading: Business_Process_Improvement_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[64/955] Uploading: Cloud_Migration_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[65/955] Uploading: Cloud_Migration_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[66/955] Uploading: Cloud_Migration_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[67/955] Uploading: Cloud_Migration_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[68/955] Uploading: Cloud_Migration_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[69/955] Uploading: Cloud_Migration_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[70/955] Uploading: Cloud_Migration_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[71/955] Uploading: Cloud_Migration_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[72/955] Uploading: Cloud_Migration_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[73/955] Uploading: Cloud_Migration_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[74/955] Uploading: Cloud_Migration_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[75/955] Uploading: Cloud_Migration_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[76/955] Uploading: Cloud_Migration_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[77/955] Uploading: Cloud_Migration_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[78/955] Uploading: Cloud_Migration_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[79/955] Uploading: Cloud_Migration_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[80/955] Uploading: Cloud_Migration_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[81/955] Uploading: Cloud_Migration_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[82/955] Uploading: Cloud_Migration_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[83/955] Uploading: Cloud_Migration_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[84/955] Uploading: Cloud_Migration_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[85/955] Uploading: Cloud_Migration_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[86/955] Uploading: Cloud_Migration_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[87/955] Uploading: Cloud_Migration_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[88/955] Uploading: Cloud_Migration_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[89/955] Uploading: Cloud_Migration_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[90/955] Uploading: Cloud_Migration_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[91/955] Uploading: Cloud_Migration_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[92/955] Uploading: Cloud_Migration_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[93/955] Uploading: Cloud_Migration_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[94/955] Uploading: Cloud_Migration_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[95/955] Uploading: Construction_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[96/955] Uploading: Construction_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[97/955] Uploading: Construction_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[98/955] Uploading: Construction_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[99/955] Uploading: Construction_Communications_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[100/955] Uploading: Construction_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 100/955 (0 success, 100 failed)
+
+[101/955] Uploading: Construction_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[102/955] Uploading: Construction_Executive_RAID_Log_Complete_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[103/955] Uploading: Construction_High_Level_Requirements_List_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[104/955] Uploading: Construction_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[105/955] Uploading: Construction_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[106/955] Uploading: Construction_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[107/955] Uploading: Construction_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[108/955] Uploading: Construction_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[109/955] Uploading: Construction_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[110/955] Uploading: Construction_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[111/955] Uploading: Construction_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[112/955] Uploading: Construction_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[113/955] Uploading: Construction_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[114/955] Uploading: Construction_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[115/955] Uploading: Construction_Requirements_Traceability_Matrix_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[116/955] Uploading: Construction_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[117/955] Uploading: Construction_Resource_Plan_Staffing_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[118/955] Uploading: Construction_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[119/955] Uploading: Construction_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[120/955] Uploading: Construction_Stakeholder_Register_Analysis_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[121/955] Uploading: Construction_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[122/955] Uploading: Construction_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[123/955] Uploading: Construction_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[124/955] Uploading: Construction_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[125/955] Uploading: Construction_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[126/955] Uploading: Consulting_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[127/955] Uploading: Consulting_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[128/955] Uploading: Consulting_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[129/955] Uploading: Consulting_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[130/955] Uploading: Consulting_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[131/955] Uploading: Consulting_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[132/955] Uploading: Consulting_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[133/955] Uploading: Consulting_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[134/955] Uploading: Consulting_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[135/955] Uploading: Consulting_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[136/955] Uploading: Consulting_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[137/955] Uploading: Consulting_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[138/955] Uploading: Consulting_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[139/955] Uploading: Consulting_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[140/955] Uploading: Consulting_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[141/955] Uploading: Consulting_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[142/955] Uploading: Consulting_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[143/955] Uploading: Consulting_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[144/955] Uploading: Consulting_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[145/955] Uploading: Consulting_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[146/955] Uploading: Consulting_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[147/955] Uploading: Consulting_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[148/955] Uploading: Consulting_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[149/955] Uploading: Consulting_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[150/955] Uploading: Consulting_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 150/955 (0 success, 150 failed)
+
+[151/955] Uploading: Consulting_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[152/955] Uploading: Consulting_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[153/955] Uploading: Consulting_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[154/955] Uploading: Consulting_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[155/955] Uploading: Consulting_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[156/955] Uploading: Consulting_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[157/955] Uploading: Customer_Experience_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[158/955] Uploading: Customer_Experience_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[159/955] Uploading: Customer_Experience_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[160/955] Uploading: Customer_Experience_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[161/955] Uploading: Customer_Experience_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[162/955] Uploading: Customer_Experience_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[163/955] Uploading: Customer_Experience_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[164/955] Uploading: Customer_Experience_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[165/955] Uploading: Customer_Experience_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[166/955] Uploading: Customer_Experience_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[167/955] Uploading: Customer_Experience_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[168/955] Uploading: Customer_Experience_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[169/955] Uploading: Customer_Experience_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[170/955] Uploading: Customer_Experience_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[171/955] Uploading: Customer_Experience_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[172/955] Uploading: Customer_Experience_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[173/955] Uploading: Customer_Experience_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[174/955] Uploading: Customer_Experience_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[175/955] Uploading: Customer_Experience_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[176/955] Uploading: Customer_Experience_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[177/955] Uploading: Customer_Experience_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[178/955] Uploading: Customer_Experience_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[179/955] Uploading: Customer_Experience_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[180/955] Uploading: Customer_Experience_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[181/955] Uploading: Customer_Experience_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[182/955] Uploading: Customer_Experience_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[183/955] Uploading: Customer_Experience_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[184/955] Uploading: Customer_Experience_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[185/955] Uploading: Customer_Experience_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[186/955] Uploading: Customer_Experience_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[187/955] Uploading: Customer_Experience_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[188/955] Uploading: Cybersecurity_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[189/955] Uploading: Cybersecurity_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[190/955] Uploading: Cybersecurity_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[191/955] Uploading: Cybersecurity_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[192/955] Uploading: Cybersecurity_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[193/955] Uploading: Cybersecurity_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[194/955] Uploading: Cybersecurity_Data_Readiness_Assessment_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[195/955] Uploading: Cybersecurity_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[196/955] Uploading: Cybersecurity_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[197/955] Uploading: Cybersecurity_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[198/955] Uploading: Cybersecurity_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[199/955] Uploading: Cybersecurity_Model_Feasibility_Evaluation_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[200/955] Uploading: Cybersecurity_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 200/955 (0 success, 200 failed)
+
+[201/955] Uploading: Cybersecurity_Procurement_Management_Plan_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[202/955] Uploading: Cybersecurity_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[203/955] Uploading: Cybersecurity_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[204/955] Uploading: Cybersecurity_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[205/955] Uploading: Cybersecurity_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[206/955] Uploading: Cybersecurity_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[207/955] Uploading: Cybersecurity_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[208/955] Uploading: Cybersecurity_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[209/955] Uploading: Cybersecurity_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[210/955] Uploading: Cybersecurity_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[211/955] Uploading: Cybersecurity_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[212/955] Uploading: Cybersecurity_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[213/955] Uploading: Cybersecurity_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[214/955] Uploading: Cybersecurity_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[215/955] Uploading: Cybersecurity_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[216/955] Uploading: Cybersecurity_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[217/955] Uploading: Cybersecurity_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[218/955] Uploading: Cybersecurity_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[219/955] Uploading: Cybersecurity_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[220/955] Uploading: Cybersecurity_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[221/955] Uploading: Data_Analytics_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[222/955] Uploading: Data_Analytics_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[223/955] Uploading: Data_Analytics_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[224/955] Uploading: Data_Analytics_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[225/955] Uploading: Data_Analytics_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[226/955] Uploading: Data_Analytics_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[227/955] Uploading: Data_Analytics_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[228/955] Uploading: Data_Analytics_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[229/955] Uploading: Data_Analytics_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[230/955] Uploading: Data_Analytics_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[231/955] Uploading: Data_Analytics_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[232/955] Uploading: Data_Analytics_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[233/955] Uploading: Data_Analytics_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[234/955] Uploading: Data_Analytics_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[235/955] Uploading: Data_Analytics_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[236/955] Uploading: Data_Analytics_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[237/955] Uploading: Data_Analytics_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[238/955] Uploading: Data_Analytics_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[239/955] Uploading: Data_Analytics_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[240/955] Uploading: Data_Analytics_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[241/955] Uploading: Data_Analytics_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[242/955] Uploading: Data_Analytics_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[243/955] Uploading: Data_Analytics_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[244/955] Uploading: Data_Analytics_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[245/955] Uploading: Data_Analytics_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[246/955] Uploading: Data_Analytics_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[247/955] Uploading: Data_Analytics_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[248/955] Uploading: Data_Analytics_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[249/955] Uploading: Data_Analytics_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[250/955] Uploading: Data_Analytics_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 250/955 (0 success, 250 failed)
+
+[251/955] Uploading: Data_Analytics_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[252/955] Uploading: Digital_Transformation_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[253/955] Uploading: Digital_Transformation_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[254/955] Uploading: Digital_Transformation_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[255/955] Uploading: Digital_Transformation_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[256/955] Uploading: Digital_Transformation_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[257/955] Uploading: Digital_Transformation_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[258/955] Uploading: Digital_Transformation_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[259/955] Uploading: Digital_Transformation_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[260/955] Uploading: Digital_Transformation_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[261/955] Uploading: Digital_Transformation_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[262/955] Uploading: Digital_Transformation_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[263/955] Uploading: Digital_Transformation_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[264/955] Uploading: Digital_Transformation_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[265/955] Uploading: Digital_Transformation_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[266/955] Uploading: Digital_Transformation_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[267/955] Uploading: Digital_Transformation_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[268/955] Uploading: Digital_Transformation_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[269/955] Uploading: Digital_Transformation_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[270/955] Uploading: Digital_Transformation_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[271/955] Uploading: Digital_Transformation_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[272/955] Uploading: Digital_Transformation_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[273/955] Uploading: Digital_Transformation_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[274/955] Uploading: Digital_Transformation_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[275/955] Uploading: Digital_Transformation_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[276/955] Uploading: Digital_Transformation_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[277/955] Uploading: Digital_Transformation_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[278/955] Uploading: Digital_Transformation_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[279/955] Uploading: Digital_Transformation_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[280/955] Uploading: Digital_Transformation_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[281/955] Uploading: Digital_Transformation_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[282/955] Uploading: Digital_Transformation_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[283/955] Uploading: ERP_Implementation_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[284/955] Uploading: ERP_Implementation_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[285/955] Uploading: ERP_Implementation_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[286/955] Uploading: ERP_Implementation_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[287/955] Uploading: ERP_Implementations_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[288/955] Uploading: ERP_Implementations_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[289/955] Uploading: ERP_Implementations_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[290/955] Uploading: ERP_Implementations_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[291/955] Uploading: ERP_Implementations_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[292/955] Uploading: ERP_Implementations_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[293/955] Uploading: ERP_Implementations_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[294/955] Uploading: ERP_Implementations_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[295/955] Uploading: ERP_Implementations_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[296/955] Uploading: ERP_Implementations_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[297/955] Uploading: ERP_Implementations_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[298/955] Uploading: ERP_Implementations_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[299/955] Uploading: ERP_Implementations_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[300/955] Uploading: ERP_Implementations_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 300/955 (0 success, 300 failed)
+
+[301/955] Uploading: ERP_Implementations_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[302/955] Uploading: ERP_Implementations_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[303/955] Uploading: ERP_Implementations_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[304/955] Uploading: ERP_Implementations_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[305/955] Uploading: ERP_Implementations_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[306/955] Uploading: ERP_Implementations_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[307/955] Uploading: ERP_Implementations_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[308/955] Uploading: ERP_Implementations_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[309/955] Uploading: ERP_Implementations_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[310/955] Uploading: ERP_Implementations_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[311/955] Uploading: ERP_Implementations_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[312/955] Uploading: ERP_Implementations_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[313/955] Uploading: ERP_Implementations_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[314/955] Uploading: ERP_Implementations_Training_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[315/955] Uploading: ERP_Implementations_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[316/955] Uploading: ERP_Implementations_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[317/955] Uploading: ERP_Implementations_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[318/955] Uploading: Education_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[319/955] Uploading: Education_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[320/955] Uploading: Education_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[321/955] Uploading: Education_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[322/955] Uploading: Education_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[323/955] Uploading: Education_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[324/955] Uploading: Education_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[325/955] Uploading: Education_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[326/955] Uploading: Education_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[327/955] Uploading: Education_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[328/955] Uploading: Education_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[329/955] Uploading: Education_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[330/955] Uploading: Education_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[331/955] Uploading: Education_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[332/955] Uploading: Education_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[333/955] Uploading: Education_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[334/955] Uploading: Education_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[335/955] Uploading: Education_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[336/955] Uploading: Education_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[337/955] Uploading: Education_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[338/955] Uploading: Education_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[339/955] Uploading: Education_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[340/955] Uploading: Education_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[341/955] Uploading: Education_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[342/955] Uploading: Education_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[343/955] Uploading: Education_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[344/955] Uploading: Education_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[345/955] Uploading: Education_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[346/955] Uploading: Education_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[347/955] Uploading: Education_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[348/955] Uploading: Education_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[349/955] Uploading: Energy_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[350/955] Uploading: Energy_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 350/955 (0 success, 350 failed)
+
+[351/955] Uploading: Energy_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[352/955] Uploading: Energy_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[353/955] Uploading: Energy_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[354/955] Uploading: Energy_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[355/955] Uploading: Energy_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[356/955] Uploading: Energy_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[357/955] Uploading: Energy_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[358/955] Uploading: Energy_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[359/955] Uploading: Energy_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[360/955] Uploading: Energy_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[361/955] Uploading: Energy_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[362/955] Uploading: Energy_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[363/955] Uploading: Energy_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[364/955] Uploading: Energy_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[365/955] Uploading: Energy_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[366/955] Uploading: Energy_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[367/955] Uploading: Energy_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[368/955] Uploading: Energy_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[369/955] Uploading: Energy_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[370/955] Uploading: Energy_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[371/955] Uploading: Energy_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[372/955] Uploading: Energy_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[373/955] Uploading: Energy_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[374/955] Uploading: Energy_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[375/955] Uploading: Energy_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[376/955] Uploading: Energy_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[377/955] Uploading: Energy_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[378/955] Uploading: Energy_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[379/955] Uploading: Energy_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[380/955] Uploading: Finance_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[381/955] Uploading: Finance_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[382/955] Uploading: Finance_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[383/955] Uploading: Finance_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[384/955] Uploading: Finance_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[385/955] Uploading: Finance_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[386/955] Uploading: Finance_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[387/955] Uploading: Finance_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[388/955] Uploading: Finance_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[389/955] Uploading: Finance_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[390/955] Uploading: Finance_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[391/955] Uploading: Finance_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[392/955] Uploading: Finance_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[393/955] Uploading: Finance_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[394/955] Uploading: Finance_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[395/955] Uploading: Finance_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[396/955] Uploading: Finance_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[397/955] Uploading: Finance_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[398/955] Uploading: Finance_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[399/955] Uploading: Finance_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[400/955] Uploading: Finance_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 400/955 (0 success, 400 failed)
+
+[401/955] Uploading: Finance_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[402/955] Uploading: Finance_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[403/955] Uploading: Finance_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[404/955] Uploading: Finance_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[405/955] Uploading: Finance_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[406/955] Uploading: Finance_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[407/955] Uploading: Finance_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[408/955] Uploading: Finance_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[409/955] Uploading: Finance_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[410/955] Uploading: Finance_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[411/955] Uploading: Government_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[412/955] Uploading: Government_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[413/955] Uploading: Government_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[414/955] Uploading: Government_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[415/955] Uploading: Government_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[416/955] Uploading: Government_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[417/955] Uploading: Government_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[418/955] Uploading: Government_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[419/955] Uploading: Government_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[420/955] Uploading: Government_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[421/955] Uploading: Government_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[422/955] Uploading: Government_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[423/955] Uploading: Government_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[424/955] Uploading: Government_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[425/955] Uploading: Government_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[426/955] Uploading: Government_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[427/955] Uploading: Government_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[428/955] Uploading: Government_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[429/955] Uploading: Government_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[430/955] Uploading: Government_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[431/955] Uploading: Government_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[432/955] Uploading: Government_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[433/955] Uploading: Government_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[434/955] Uploading: Government_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[435/955] Uploading: Government_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[436/955] Uploading: Government_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[437/955] Uploading: Government_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[438/955] Uploading: Government_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[439/955] Uploading: Government_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[440/955] Uploading: Government_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[441/955] Uploading: Government_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[442/955] Uploading: Hardware_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[443/955] Uploading: Hardware_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[444/955] Uploading: Hardware_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[445/955] Uploading: Hardware_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[446/955] Uploading: Hardware_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[447/955] Uploading: Hardware_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[448/955] Uploading: Hardware_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[449/955] Uploading: Hardware_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[450/955] Uploading: Hardware_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 450/955 (0 success, 450 failed)
+
+[451/955] Uploading: Hardware_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[452/955] Uploading: Hardware_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[453/955] Uploading: Hardware_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[454/955] Uploading: Hardware_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[455/955] Uploading: Hardware_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[456/955] Uploading: Hardware_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[457/955] Uploading: Hardware_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[458/955] Uploading: Hardware_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[459/955] Uploading: Hardware_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[460/955] Uploading: Hardware_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[461/955] Uploading: Hardware_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[462/955] Uploading: Hardware_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[463/955] Uploading: Hardware_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[464/955] Uploading: Hardware_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[465/955] Uploading: Hardware_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[466/955] Uploading: Hardware_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[467/955] Uploading: Hardware_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[468/955] Uploading: Hardware_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[469/955] Uploading: Hardware_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[470/955] Uploading: Hardware_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[471/955] Uploading: Hardware_Training_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[472/955] Uploading: Hardware_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[473/955] Uploading: Hardware_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[474/955] Uploading: Hardware_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[475/955] Uploading: Healthcare_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[476/955] Uploading: Healthcare_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[477/955] Uploading: Healthcare_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[478/955] Uploading: Healthcare_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[479/955] Uploading: Healthcare_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[480/955] Uploading: Healthcare_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[481/955] Uploading: Healthcare_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[482/955] Uploading: Healthcare_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[483/955] Uploading: Healthcare_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[484/955] Uploading: Healthcare_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[485/955] Uploading: Healthcare_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[486/955] Uploading: Healthcare_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[487/955] Uploading: Healthcare_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[488/955] Uploading: Healthcare_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[489/955] Uploading: Healthcare_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[490/955] Uploading: Healthcare_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[491/955] Uploading: Healthcare_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[492/955] Uploading: Healthcare_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[493/955] Uploading: Healthcare_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[494/955] Uploading: Healthcare_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[495/955] Uploading: Healthcare_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[496/955] Uploading: Healthcare_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[497/955] Uploading: Healthcare_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[498/955] Uploading: Healthcare_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[499/955] Uploading: Healthcare_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[500/955] Uploading: Healthcare_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 500/955 (0 success, 500 failed)
+
+[501/955] Uploading: Healthcare_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[502/955] Uploading: Healthcare_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[503/955] Uploading: Healthcare_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[504/955] Uploading: Healthcare_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[505/955] Uploading: Healthcare_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[506/955] Uploading: IT_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[507/955] Uploading: IT_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[508/955] Uploading: IT_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[509/955] Uploading: IT_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[510/955] Uploading: IT_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[511/955] Uploading: IT_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[512/955] Uploading: IT_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[513/955] Uploading: IT_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[514/955] Uploading: IT_Implementation_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[515/955] Uploading: IT_Implementation_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[516/955] Uploading: IT_Implementation_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[517/955] Uploading: IT_Implementation_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[518/955] Uploading: IT_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[519/955] Uploading: IT_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[520/955] Uploading: IT_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[521/955] Uploading: IT_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[522/955] Uploading: IT_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[523/955] Uploading: IT_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[524/955] Uploading: IT_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[525/955] Uploading: IT_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[526/955] Uploading: IT_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[527/955] Uploading: IT_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[528/955] Uploading: IT_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[529/955] Uploading: IT_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[530/955] Uploading: IT_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[531/955] Uploading: IT_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[532/955] Uploading: IT_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[533/955] Uploading: IT_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[534/955] Uploading: IT_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[535/955] Uploading: IT_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[536/955] Uploading: IT_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[537/955] Uploading: IT_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[538/955] Uploading: Media_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[539/955] Uploading: Media_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[540/955] Uploading: Media_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[541/955] Uploading: Media_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[542/955] Uploading: Media_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[543/955] Uploading: Media_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[544/955] Uploading: Media_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[545/955] Uploading: Media_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[546/955] Uploading: Media_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[547/955] Uploading: Media_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[548/955] Uploading: Media_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[549/955] Uploading: Media_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[550/955] Uploading: Media_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 550/955 (0 success, 550 failed)
+
+[551/955] Uploading: Media_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[552/955] Uploading: Media_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[553/955] Uploading: Media_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[554/955] Uploading: Media_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[555/955] Uploading: Media_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[556/955] Uploading: Media_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[557/955] Uploading: Media_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[558/955] Uploading: Media_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[559/955] Uploading: Media_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[560/955] Uploading: Media_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[561/955] Uploading: Media_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[562/955] Uploading: Media_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[563/955] Uploading: Media_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[564/955] Uploading: Media_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[565/955] Uploading: Media_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[566/955] Uploading: Media_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[567/955] Uploading: Media_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[568/955] Uploading: Media_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[569/955] Uploading: Merger_and_Acquisition_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[570/955] Uploading: Merger_and_Acquisition_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[571/955] Uploading: Merger_and_Acquisition_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[572/955] Uploading: Merger_and_Acquisition_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[573/955] Uploading: Merger_and_Acquisition_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[574/955] Uploading: Merger_and_Acquisition_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[575/955] Uploading: Merger_and_Acquisition_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[576/955] Uploading: Merger_and_Acquisition_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[577/955] Uploading: Merger_and_Acquisition_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[578/955] Uploading: Merger_and_Acquisition_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[579/955] Uploading: Merger_and_Acquisition_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[580/955] Uploading: Merger_and_Acquisition_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[581/955] Uploading: Merger_and_Acquisition_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[582/955] Uploading: Merger_and_Acquisition_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[583/955] Uploading: Merger_and_Acquisition_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[584/955] Uploading: Merger_and_Acquisition_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[585/955] Uploading: Merger_and_Acquisition_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[586/955] Uploading: Merger_and_Acquisition_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[587/955] Uploading: Merger_and_Acquisition_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[588/955] Uploading: Merger_and_Acquisition_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[589/955] Uploading: Merger_and_Acquisition_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[590/955] Uploading: Merger_and_Acquisition_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[591/955] Uploading: Merger_and_Acquisition_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[592/955] Uploading: Merger_and_Acquisition_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[593/955] Uploading: Merger_and_Acquisition_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[594/955] Uploading: Merger_and_Acquisition_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[595/955] Uploading: Merger_and_Acquisition_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[596/955] Uploading: Merger_and_Acquisition_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[597/955] Uploading: Merger_and_Acquisition_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[598/955] Uploading: Merger_and_Acquisition_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[599/955] Uploading: Merger_and_Acquisition_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[600/955] Uploading: Network_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 600/955 (0 success, 600 failed)
+
+[601/955] Uploading: Network_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[602/955] Uploading: Network_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[603/955] Uploading: Network_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[604/955] Uploading: Network_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[605/955] Uploading: Network_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[606/955] Uploading: Network_Comprehensive_Project_Proposal_Essay_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[607/955] Uploading: Network_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[608/955] Uploading: Network_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[609/955] Uploading: Network_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[610/955] Uploading: Network_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[611/955] Uploading: Network_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[612/955] Uploading: Network_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[613/955] Uploading: Network_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[614/955] Uploading: Network_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[615/955] Uploading: Network_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[616/955] Uploading: Network_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[617/955] Uploading: Network_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[618/955] Uploading: Network_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[619/955] Uploading: Network_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[620/955] Uploading: Network_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[621/955] Uploading: Network_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[622/955] Uploading: Network_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[623/955] Uploading: Network_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[624/955] Uploading: Network_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[625/955] Uploading: Network_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[626/955] Uploading: Network_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[627/955] Uploading: Network_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[628/955] Uploading: Network_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[629/955] Uploading: Network_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[630/955] Uploading: Network_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[631/955] Uploading: Network_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[632/955] Uploading: Network_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[633/955] Uploading: Non-Profit_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[634/955] Uploading: Non-Profit_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[635/955] Uploading: Non-Profit_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[636/955] Uploading: Non-Profit_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[637/955] Uploading: Non-Profit_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[638/955] Uploading: Non-Profit_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[639/955] Uploading: Non-Profit_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[640/955] Uploading: Non-Profit_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[641/955] Uploading: Non-Profit_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[642/955] Uploading: Non-Profit_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[643/955] Uploading: Non-Profit_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[644/955] Uploading: Non-Profit_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[645/955] Uploading: Non-Profit_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[646/955] Uploading: Non-Profit_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[647/955] Uploading: Non-Profit_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[648/955] Uploading: Non-Profit_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[649/955] Uploading: Non-Profit_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[650/955] Uploading: Non-Profit_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 650/955 (0 success, 650 failed)
+
+[651/955] Uploading: Non-Profit_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[652/955] Uploading: Non-Profit_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[653/955] Uploading: Non-Profit_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[654/955] Uploading: Non-Profit_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[655/955] Uploading: Non-Profit_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[656/955] Uploading: Non-Profit_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[657/955] Uploading: Non-Profit_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[658/955] Uploading: Non-Profit_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[659/955] Uploading: Non-Profit_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[660/955] Uploading: Non-Profit_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[661/955] Uploading: Non-Profit_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[662/955] Uploading: Non-Profit_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[663/955] Uploading: Non-Profit_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[664/955] Uploading: Operational_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[665/955] Uploading: Operational_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[666/955] Uploading: Operational_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[667/955] Uploading: Operational_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[668/955] Uploading: Operational_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[669/955] Uploading: Operational_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[670/955] Uploading: Operational_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[671/955] Uploading: Operational_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[672/955] Uploading: Operational_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[673/955] Uploading: Operational_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[674/955] Uploading: Operational_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[675/955] Uploading: Operational_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[676/955] Uploading: Operational_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[677/955] Uploading: Operational_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[678/955] Uploading: Operational_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[679/955] Uploading: Operational_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[680/955] Uploading: Operational_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[681/955] Uploading: Operational_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[682/955] Uploading: Operational_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[683/955] Uploading: Operational_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[684/955] Uploading: Operational_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[685/955] Uploading: Operational_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[686/955] Uploading: Operational_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[687/955] Uploading: Operational_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[688/955] Uploading: Operational_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[689/955] Uploading: Operational_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Invalid API v1 key.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[690/955] Uploading: Operational_Status_Report.png

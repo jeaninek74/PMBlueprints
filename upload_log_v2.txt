@@ -1,0 +1,2407 @@
+================================================================================
+UPLOADING SCREENSHOTS TO IMGBB CDN
+================================================================================
+Screenshots directory: /home/ubuntu/pmb_repo/static/final_screenshots
+Output file: /home/ubuntu/pmb_repo/imgbb_urls.json
+
+Found 955 screenshot files
+
+[1/955] Uploading: AI_ML_Business_Case.png
+  ✓ Success: https://i.ibb.co/8gJ43shw/AI-ML-Business-Case-png.png
+[2/955] Uploading: AI_ML_Change_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[3/955] Uploading: AI_ML_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[4/955] Uploading: AI_ML_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[5/955] Uploading: AI_ML_Communications_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[6/955] Uploading: AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[7/955] Uploading: AI_ML_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[8/955] Uploading: AI_ML_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[9/955] Uploading: AI_ML_KPI_Dashboard_with_Instructions_2025_PMI.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[10/955] Uploading: AI_ML_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/jk1dWC7f/AI-ML-KPI-Report-Dashboard-2025-PMI-png.png
+[11/955] Uploading: AI_ML_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/jkm7ntjZ/AI-ML-Lessons-Learned-2025-PMI-png.png
+[12/955] Uploading: AI_ML_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/PGN4Wj6n/AI-ML-Open-Action-Item-Log-2025-PMI-png.png
+[13/955] Uploading: AI_ML_Procurement_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[14/955] Uploading: AI_ML_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[15/955] Uploading: AI_ML_Project_Charter.png
+  ✓ Success: https://i.ibb.co/rGryCYBQ/AI-ML-Project-Charter-png.png
+[16/955] Uploading: AI_ML_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[17/955] Uploading: AI_ML_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[18/955] Uploading: AI_ML_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/0R3bhMLy/AI-ML-Project-Proposal-2025-PMI-png.png
+[19/955] Uploading: AI_ML_Quality_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/C3K7hHzF/AI-ML-Quality-Management-Plan-2025-PMI-png.png
+[20/955] Uploading: AI_ML_RAID_Log.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[21/955] Uploading: AI_ML_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[22/955] Uploading: AI_ML_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[23/955] Uploading: AI_ML_Resource_Plan_Staffing_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[24/955] Uploading: AI_ML_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[25/955] Uploading: AI_ML_Stakeholder_Engagement_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[26/955] Uploading: AI_ML_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[27/955] Uploading: AI_ML_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[28/955] Uploading: AI_ML_Status_Report.png
+  ✓ Success: https://i.ibb.co/tTd8QRpr/AI-ML-High-Level-Requirements-List-png.png
+[29/955] Uploading: AI_ML_Training_Budget_Estimates_2025_PMI.png
+  ✓ Success: https://i.ibb.co/wN9pvp7L/AI-ML-Training-Budget-Estimates-2025-PMI-png.png
+[30/955] Uploading: AI_ML_Training_Needs_Assessment_2025_PMI.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[31/955] Uploading: AI_ML_Training_Schedule_2025_PMI.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[32/955] Uploading: AI_ML_WBS_ProjectPlan_Exact_Template_2025_PMI.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[33/955] Uploading: Business_Process_Improvement_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[34/955] Uploading: Business_Process_Improvement_Business_Case.png
+  ✓ Success: https://i.ibb.co/5hwT2Zj0/Business-Process-Improvement-Business-Case-png.png
+[35/955] Uploading: Business_Process_Improvement_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[36/955] Uploading: Business_Process_Improvement_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[37/955] Uploading: Business_Process_Improvement_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[38/955] Uploading: Business_Process_Improvement_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[39/955] Uploading: Business_Process_Improvement_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[40/955] Uploading: Business_Process_Improvement_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[41/955] Uploading: Business_Process_Improvement_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[42/955] Uploading: Business_Process_Improvement_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[43/955] Uploading: Business_Process_Improvement_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/Cs68YYCS/Business-Process-Improvement-Lessons-Learned-png.png
+[44/955] Uploading: Business_Process_Improvement_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[45/955] Uploading: Business_Process_Improvement_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[46/955] Uploading: Business_Process_Improvement_Project_Charter.png
+  ✓ Success: https://i.ibb.co/5xMhwxz6/Business-Process-Improvement-Project-Charter-png.png
+[47/955] Uploading: Business_Process_Improvement_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[48/955] Uploading: Business_Process_Improvement_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[49/955] Uploading: Business_Process_Improvement_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/tMwLrR1s/Business-Process-Improvement-Project-Proposal-png.png
+[50/955] Uploading: Business_Process_Improvement_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+
+Progress: 50/955 (50 success, 0 failed)
+
+[51/955] Uploading: Business_Process_Improvement_RAID_Log.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[52/955] Uploading: Business_Process_Improvement_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[53/955] Uploading: Business_Process_Improvement_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[54/955] Uploading: Business_Process_Improvement_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[55/955] Uploading: Business_Process_Improvement_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[56/955] Uploading: Business_Process_Improvement_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[57/955] Uploading: Business_Process_Improvement_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[58/955] Uploading: Business_Process_Improvement_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[59/955] Uploading: Business_Process_Improvement_Status_Report.png
+  ✓ Success: https://i.ibb.co/PsZP7d6M/Business-Process-Improvement-Action-Item-Log-png.png
+[60/955] Uploading: Business_Process_Improvement_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[61/955] Uploading: Business_Process_Improvement_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[62/955] Uploading: Business_Process_Improvement_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[63/955] Uploading: Business_Process_Improvement_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[64/955] Uploading: Cloud_Migration_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[65/955] Uploading: Cloud_Migration_Business_Case.png
+  ✓ Success: https://i.ibb.co/4nR57n8c/Cloud-Migration-Business-Case-png.png
+[66/955] Uploading: Cloud_Migration_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[67/955] Uploading: Cloud_Migration_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[68/955] Uploading: Cloud_Migration_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[69/955] Uploading: Cloud_Migration_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[70/955] Uploading: Cloud_Migration_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[71/955] Uploading: Cloud_Migration_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[72/955] Uploading: Cloud_Migration_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[73/955] Uploading: Cloud_Migration_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[74/955] Uploading: Cloud_Migration_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/zVJZQ95c/Cloud-Migration-Lessons-Learned-png.png
+[75/955] Uploading: Cloud_Migration_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[76/955] Uploading: Cloud_Migration_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[77/955] Uploading: Cloud_Migration_Project_Charter.png
+  ✓ Success: https://i.ibb.co/bMyQZXMg/Cloud-Migration-Project-Charter-png.png
+[78/955] Uploading: Cloud_Migration_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[79/955] Uploading: Cloud_Migration_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[80/955] Uploading: Cloud_Migration_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/jBXwvGq/Cloud-Migration-Project-Proposal-png.png
+[81/955] Uploading: Cloud_Migration_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[82/955] Uploading: Cloud_Migration_RAID_Log.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[83/955] Uploading: Cloud_Migration_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[84/955] Uploading: Cloud_Migration_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[85/955] Uploading: Cloud_Migration_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[86/955] Uploading: Cloud_Migration_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[87/955] Uploading: Cloud_Migration_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[88/955] Uploading: Cloud_Migration_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[89/955] Uploading: Cloud_Migration_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[90/955] Uploading: Cloud_Migration_Status_Report.png
+  ✓ Success: https://i.ibb.co/dw1jnNz8/Cloud-Migration-Action-Item-Log-png.png
+[91/955] Uploading: Cloud_Migration_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[92/955] Uploading: Cloud_Migration_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[93/955] Uploading: Cloud_Migration_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[94/955] Uploading: Cloud_Migration_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[95/955] Uploading: Construction_Business_Case.png
+  ✓ Success: https://i.ibb.co/wN3r11fh/Construction-Business-Case-png.png
+[96/955] Uploading: Construction_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[97/955] Uploading: Construction_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[98/955] Uploading: Construction_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[99/955] Uploading: Construction_Communications_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/35C4ZjXV/Construction-Communications-Management-Plan-2025-PMI-png.png
+[100/955] Uploading: Construction_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+
+Progress: 100/955 (100 success, 0 failed)
+
+[101/955] Uploading: Construction_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[102/955] Uploading: Construction_Executive_RAID_Log_Complete_2025_PMI.png
+  ✓ Success: https://i.ibb.co/pvDmT4bG/Construction-Executive-RAID-Log-Complete-2025-PMI-png.png
+[103/955] Uploading: Construction_High_Level_Requirements_List_2025_PMI.png
+  ✓ Success: https://i.ibb.co/GvByqgmc/Construction-High-Level-Requirements-List-2025-PMI-png.png
+[104/955] Uploading: Construction_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[105/955] Uploading: Construction_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/BVNDMLws/Construction-KPI-Report-Dashboard-2025-PMI-png.png
+[106/955] Uploading: Construction_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/7d9Ydkx5/Construction-Lessons-Learned-2025-PMI-png.png
+[107/955] Uploading: Construction_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/zyS4hhD/Construction-Open-Action-Item-Log-2025-PMI-png.png
+[108/955] Uploading: Construction_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[109/955] Uploading: Construction_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[110/955] Uploading: Construction_Project_Charter.png
+  ✓ Success: https://i.ibb.co/0jdKb0Ww/Construction-Project-Charter-png.png
+[111/955] Uploading: Construction_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/j9tqmRcx/Construction-Project-Closure-Report-png.png
+[112/955] Uploading: Construction_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/j9tqmRcx/Construction-Project-Closure-Report-png.png
+[113/955] Uploading: Construction_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/QFckDHFw/Construction-Project-Proposal-2025-PMI-png.png
+[114/955] Uploading: Construction_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[115/955] Uploading: Construction_Requirements_Traceability_Matrix_2025_PMI.png
+  ✓ Success: https://i.ibb.co/Pvy10vm2/Construction-Requirements-Traceability-Matrix-2025-PMI-png.png
+[116/955] Uploading: Construction_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[117/955] Uploading: Construction_Resource_Plan_Staffing_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/whHjMHwH/Construction-Resource-Plan-Staffing-Plan-2025-PMI-png.png
+[118/955] Uploading: Construction_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[119/955] Uploading: Construction_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[120/955] Uploading: Construction_Stakeholder_Register_Analysis_2025_PMI.png
+  ✓ Success: https://i.ibb.co/VpWr5NhK/Construction-Stakeholder-Register-Analysis-2025-PMI-png.png
+[121/955] Uploading: Construction_Status_Report.png
+  ✓ Success: https://i.ibb.co/j9tqmRcx/Construction-Project-Closure-Report-png.png
+[122/955] Uploading: Construction_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[123/955] Uploading: Construction_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[124/955] Uploading: Construction_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[125/955] Uploading: Construction_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[126/955] Uploading: Consulting_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[127/955] Uploading: Consulting_Business_Case.png
+  ✓ Success: https://i.ibb.co/Hp43jg1f/Consulting-Business-Case-png.png
+[128/955] Uploading: Consulting_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[129/955] Uploading: Consulting_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[130/955] Uploading: Consulting_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[131/955] Uploading: Consulting_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[132/955] Uploading: Consulting_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[133/955] Uploading: Consulting_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[134/955] Uploading: Consulting_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[135/955] Uploading: Consulting_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[136/955] Uploading: Consulting_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/H67HHbW/Consulting-Lessons-Learned-png.png
+[137/955] Uploading: Consulting_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[138/955] Uploading: Consulting_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[139/955] Uploading: Consulting_Project_Charter.png
+  ✓ Success: https://i.ibb.co/rfsnfgMt/Consulting-Project-Charter-png.png
+[140/955] Uploading: Consulting_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[141/955] Uploading: Consulting_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[142/955] Uploading: Consulting_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/v4Dd9VYW/Consulting-Project-Proposal-png.png
+[143/955] Uploading: Consulting_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[144/955] Uploading: Consulting_RAID_Log.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[145/955] Uploading: Consulting_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[146/955] Uploading: Consulting_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[147/955] Uploading: Consulting_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[148/955] Uploading: Consulting_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[149/955] Uploading: Consulting_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[150/955] Uploading: Consulting_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+
+Progress: 150/955 (150 success, 0 failed)
+
+[151/955] Uploading: Consulting_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[152/955] Uploading: Consulting_Status_Report.png
+  ✓ Success: https://i.ibb.co/N6wvnQHh/Consulting-Action-Item-Log-png.png
+[153/955] Uploading: Consulting_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[154/955] Uploading: Consulting_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[155/955] Uploading: Consulting_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[156/955] Uploading: Consulting_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[157/955] Uploading: Customer_Experience_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[158/955] Uploading: Customer_Experience_Business_Case.png
+  ✓ Success: https://i.ibb.co/XPGR5xC/Customer-Experience-Business-Case-png.png
+[159/955] Uploading: Customer_Experience_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[160/955] Uploading: Customer_Experience_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[161/955] Uploading: Customer_Experience_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[162/955] Uploading: Customer_Experience_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[163/955] Uploading: Customer_Experience_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[164/955] Uploading: Customer_Experience_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[165/955] Uploading: Customer_Experience_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[166/955] Uploading: Customer_Experience_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[167/955] Uploading: Customer_Experience_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/7xKvmFxd/Customer-Experience-Lessons-Learned-png.png
+[168/955] Uploading: Customer_Experience_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[169/955] Uploading: Customer_Experience_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[170/955] Uploading: Customer_Experience_Project_Charter.png
+  ✓ Success: https://i.ibb.co/NdpZgNN8/Customer-Experience-Project-Charter-png.png
+[171/955] Uploading: Customer_Experience_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[172/955] Uploading: Customer_Experience_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[173/955] Uploading: Customer_Experience_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/dJmRD87S/Customer-Experience-Project-Proposal-png.png
+[174/955] Uploading: Customer_Experience_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[175/955] Uploading: Customer_Experience_RAID_Log.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[176/955] Uploading: Customer_Experience_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[177/955] Uploading: Customer_Experience_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[178/955] Uploading: Customer_Experience_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[179/955] Uploading: Customer_Experience_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[180/955] Uploading: Customer_Experience_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[181/955] Uploading: Customer_Experience_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[182/955] Uploading: Customer_Experience_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[183/955] Uploading: Customer_Experience_Status_Report.png
+  ✓ Success: https://i.ibb.co/WvgKpvwy/Customer-Experience-Action-Item-Log-png.png
+[184/955] Uploading: Customer_Experience_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[185/955] Uploading: Customer_Experience_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[186/955] Uploading: Customer_Experience_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[187/955] Uploading: Customer_Experience_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[188/955] Uploading: Cybersecurity_Business_Case.png
+  ✓ Success: https://i.ibb.co/4wnN9sQb/Cybersecurity-Business-Case-png.png
+[189/955] Uploading: Cybersecurity_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[190/955] Uploading: Cybersecurity_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[191/955] Uploading: Cybersecurity_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[192/955] Uploading: Cybersecurity_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[193/955] Uploading: Cybersecurity_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[194/955] Uploading: Cybersecurity_Data_Readiness_Assessment_2025_PMI.png
+  ✓ Success: https://i.ibb.co/PvgN4Rf9/Cybersecurity-Data-Readiness-Assessment-2025-PMI-png.png
+[195/955] Uploading: Cybersecurity_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[196/955] Uploading: Cybersecurity_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[197/955] Uploading: Cybersecurity_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/d0LwMLds/Cybersecurity-KPI-Report-Dashboard-2025-PMI-png.png
+[198/955] Uploading: Cybersecurity_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/Qvc1X98S/Cybersecurity-Lessons-Learned-2025-PMI-png.png
+[199/955] Uploading: Cybersecurity_Model_Feasibility_Evaluation_2025_PMI.png
+  ✓ Success: https://i.ibb.co/ycc1HHvC/Cybersecurity-Model-Feasibility-Evaluation-2025-PMI-png.png
+[200/955] Uploading: Cybersecurity_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/DD5ckdL6/Cybersecurity-Open-Action-Item-Log-2025-PMI-png.png
+
+Progress: 200/955 (200 success, 0 failed)
+
+[201/955] Uploading: Cybersecurity_Procurement_Management_Plan_2025_PMI.png
+  ✓ Success: https://i.ibb.co/Myxxy2K8/Cybersecurity-Procurement-Management-Plan-2025-PMI-png.png
+[202/955] Uploading: Cybersecurity_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[203/955] Uploading: Cybersecurity_Project_Charter.png
+  ✓ Success: https://i.ibb.co/zhNbgf7b/Cybersecurity-Project-Charter-png.png
+[204/955] Uploading: Cybersecurity_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[205/955] Uploading: Cybersecurity_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[206/955] Uploading: Cybersecurity_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/ymz1ghNR/Cybersecurity-Project-Proposal-2025-PMI-png.png
+[207/955] Uploading: Cybersecurity_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[208/955] Uploading: Cybersecurity_RAID_Log.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[209/955] Uploading: Cybersecurity_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[210/955] Uploading: Cybersecurity_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[211/955] Uploading: Cybersecurity_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[212/955] Uploading: Cybersecurity_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[213/955] Uploading: Cybersecurity_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[214/955] Uploading: Cybersecurity_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[215/955] Uploading: Cybersecurity_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[216/955] Uploading: Cybersecurity_Status_Report.png
+  ✓ Success: https://i.ibb.co/g03chCG/Cybersecurity-High-Level-Requirements-List-png.png
+[217/955] Uploading: Cybersecurity_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[218/955] Uploading: Cybersecurity_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[219/955] Uploading: Cybersecurity_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[220/955] Uploading: Cybersecurity_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[221/955] Uploading: Data_Analytics_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[222/955] Uploading: Data_Analytics_Business_Case.png
+  ✓ Success: https://i.ibb.co/gZzv9fjM/Data-Analytics-Business-Case-png.png
+[223/955] Uploading: Data_Analytics_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[224/955] Uploading: Data_Analytics_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[225/955] Uploading: Data_Analytics_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[226/955] Uploading: Data_Analytics_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[227/955] Uploading: Data_Analytics_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[228/955] Uploading: Data_Analytics_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[229/955] Uploading: Data_Analytics_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[230/955] Uploading: Data_Analytics_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[231/955] Uploading: Data_Analytics_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/MDtqrHFX/Data-Analytics-Lessons-Learned-png.png
+[232/955] Uploading: Data_Analytics_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[233/955] Uploading: Data_Analytics_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[234/955] Uploading: Data_Analytics_Project_Charter.png
+  ✓ Success: https://i.ibb.co/bj7tj4q3/Data-Analytics-Project-Charter-png.png
+[235/955] Uploading: Data_Analytics_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[236/955] Uploading: Data_Analytics_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[237/955] Uploading: Data_Analytics_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/spdjTZ14/Data-Analytics-Project-Proposal-png.png
+[238/955] Uploading: Data_Analytics_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[239/955] Uploading: Data_Analytics_RAID_Log.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[240/955] Uploading: Data_Analytics_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[241/955] Uploading: Data_Analytics_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[242/955] Uploading: Data_Analytics_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[243/955] Uploading: Data_Analytics_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[244/955] Uploading: Data_Analytics_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[245/955] Uploading: Data_Analytics_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[246/955] Uploading: Data_Analytics_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[247/955] Uploading: Data_Analytics_Status_Report.png
+  ✓ Success: https://i.ibb.co/zhyLTVvz/Data-Analytics-Action-Item-Log-png.png
+[248/955] Uploading: Data_Analytics_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[249/955] Uploading: Data_Analytics_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[250/955] Uploading: Data_Analytics_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+
+Progress: 250/955 (250 success, 0 failed)
+
+[251/955] Uploading: Data_Analytics_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[252/955] Uploading: Digital_Transformation_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[253/955] Uploading: Digital_Transformation_Business_Case.png
+  ✓ Success: https://i.ibb.co/5WW7J72t/Digital-Transformation-Business-Case-png.png
+[254/955] Uploading: Digital_Transformation_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[255/955] Uploading: Digital_Transformation_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[256/955] Uploading: Digital_Transformation_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[257/955] Uploading: Digital_Transformation_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[258/955] Uploading: Digital_Transformation_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[259/955] Uploading: Digital_Transformation_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[260/955] Uploading: Digital_Transformation_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[261/955] Uploading: Digital_Transformation_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[262/955] Uploading: Digital_Transformation_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/Z1dHcpfp/Digital-Transformation-Lessons-Learned-png.png
+[263/955] Uploading: Digital_Transformation_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[264/955] Uploading: Digital_Transformation_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[265/955] Uploading: Digital_Transformation_Project_Charter.png
+  ✓ Success: https://i.ibb.co/8469SjmN/Digital-Transformation-Project-Charter-png.png
+[266/955] Uploading: Digital_Transformation_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[267/955] Uploading: Digital_Transformation_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[268/955] Uploading: Digital_Transformation_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/G39yq5zs/Digital-Transformation-Project-Proposal-png.png
+[269/955] Uploading: Digital_Transformation_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[270/955] Uploading: Digital_Transformation_RAID_Log.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[271/955] Uploading: Digital_Transformation_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[272/955] Uploading: Digital_Transformation_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[273/955] Uploading: Digital_Transformation_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[274/955] Uploading: Digital_Transformation_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[275/955] Uploading: Digital_Transformation_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[276/955] Uploading: Digital_Transformation_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[277/955] Uploading: Digital_Transformation_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[278/955] Uploading: Digital_Transformation_Status_Report.png
+  ✓ Success: https://i.ibb.co/LdX3m3SB/Digital-Transformation-Action-Item-Log-png.png
+[279/955] Uploading: Digital_Transformation_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[280/955] Uploading: Digital_Transformation_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[281/955] Uploading: Digital_Transformation_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[282/955] Uploading: Digital_Transformation_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[283/955] Uploading: ERP_Implementation_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/3mLqTD4c/ERP-Implementation-KPI-Report-Dashboard-2025-PMI-png.png
+[284/955] Uploading: ERP_Implementation_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/sd86f9cm/ERP-Implementation-Lessons-Learned-2025-PMI-png.png
+[285/955] Uploading: ERP_Implementation_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/q3nZ60Mz/ERP-Implementation-Open-Action-Item-Log-2025-PMI-png.png
+[286/955] Uploading: ERP_Implementation_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/0RgxF98C/ERP-Implementation-Project-Proposal-2025-PMI-png.png
+[287/955] Uploading: ERP_Implementations_Action_Items.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[288/955] Uploading: ERP_Implementations_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[289/955] Uploading: ERP_Implementations_Business_Case.png
+  ✓ Success: https://i.ibb.co/fz5Cpdgv/ERP-Implementations-Business-Case-png.png
+[290/955] Uploading: ERP_Implementations_Change_Management.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[291/955] Uploading: ERP_Implementations_Change_Request.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[292/955] Uploading: ERP_Implementations_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[293/955] Uploading: ERP_Implementations_Communications_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[294/955] Uploading: ERP_Implementations_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[295/955] Uploading: ERP_Implementations_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[296/955] Uploading: ERP_Implementations_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/cc6NHMFT/ERP-Implementations-Lessons-Learned-png.png
+[297/955] Uploading: ERP_Implementations_Procurement_Management.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[298/955] Uploading: ERP_Implementations_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[299/955] Uploading: ERP_Implementations_Project_Charter.png
+  ✓ Success: https://i.ibb.co/tphN9wJR/ERP-Implementations-Project-Charter-png.png
+[300/955] Uploading: ERP_Implementations_Project_Closure.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+
+Progress: 300/955 (300 success, 0 failed)
+
+[301/955] Uploading: ERP_Implementations_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[302/955] Uploading: ERP_Implementations_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/B2YPw9Pm/ERP-Implementations-Project-Proposal-png.png
+[303/955] Uploading: ERP_Implementations_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[304/955] Uploading: ERP_Implementations_RAID_Log.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[305/955] Uploading: ERP_Implementations_Requirements_List.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[306/955] Uploading: ERP_Implementations_Requirements_Matrix.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[307/955] Uploading: ERP_Implementations_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[308/955] Uploading: ERP_Implementations_Resource_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[309/955] Uploading: ERP_Implementations_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[310/955] Uploading: ERP_Implementations_Stakeholder_Analysis.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[311/955] Uploading: ERP_Implementations_Stakeholder_Engagement.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[312/955] Uploading: ERP_Implementations_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[313/955] Uploading: ERP_Implementations_Status_Report.png
+  ✓ Success: https://i.ibb.co/nND5rLxh/ERP-Implementations-Action-Items-png.png
+[314/955] Uploading: ERP_Implementations_Training_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[315/955] Uploading: ERP_Implementations_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[316/955] Uploading: ERP_Implementations_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[317/955] Uploading: ERP_Implementations_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[318/955] Uploading: Education_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[319/955] Uploading: Education_Business_Case.png
+  ✓ Success: https://i.ibb.co/Q3tfh3ns/Education-Business-Case-png.png
+[320/955] Uploading: Education_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[321/955] Uploading: Education_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[322/955] Uploading: Education_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[323/955] Uploading: Education_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[324/955] Uploading: Education_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[325/955] Uploading: Education_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[326/955] Uploading: Education_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[327/955] Uploading: Education_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[328/955] Uploading: Education_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/BVQF2SjB/Education-Lessons-Learned-png.png
+[329/955] Uploading: Education_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[330/955] Uploading: Education_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[331/955] Uploading: Education_Project_Charter.png
+  ✓ Success: https://i.ibb.co/svmhwNhT/Education-Project-Charter-png.png
+[332/955] Uploading: Education_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[333/955] Uploading: Education_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[334/955] Uploading: Education_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/RTsDc4rt/Education-Project-Proposal-png.png
+[335/955] Uploading: Education_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[336/955] Uploading: Education_RAID_Log.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[337/955] Uploading: Education_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[338/955] Uploading: Education_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[339/955] Uploading: Education_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[340/955] Uploading: Education_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[341/955] Uploading: Education_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[342/955] Uploading: Education_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[343/955] Uploading: Education_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[344/955] Uploading: Education_Status_Report.png
+  ✓ Success: https://i.ibb.co/ymthhJnd/Education-Action-Item-Log-png.png
+[345/955] Uploading: Education_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[346/955] Uploading: Education_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[347/955] Uploading: Education_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[348/955] Uploading: Education_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[349/955] Uploading: Energy_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[350/955] Uploading: Energy_Business_Case.png
+  ✓ Success: https://i.ibb.co/VnyNz0p/Energy-Business-Case-png.png
+
+Progress: 350/955 (350 success, 0 failed)
+
+[351/955] Uploading: Energy_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[352/955] Uploading: Energy_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[353/955] Uploading: Energy_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[354/955] Uploading: Energy_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[355/955] Uploading: Energy_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[356/955] Uploading: Energy_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[357/955] Uploading: Energy_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[358/955] Uploading: Energy_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[359/955] Uploading: Energy_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/7NtHg8Bw/Energy-Lessons-Learned-png.png
+[360/955] Uploading: Energy_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[361/955] Uploading: Energy_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[362/955] Uploading: Energy_Project_Charter.png
+  ✓ Success: https://i.ibb.co/JWby1Ghd/Energy-Project-Charter-png.png
+[363/955] Uploading: Energy_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[364/955] Uploading: Energy_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[365/955] Uploading: Energy_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/X97QYN3/Energy-Project-Proposal-png.png
+[366/955] Uploading: Energy_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[367/955] Uploading: Energy_RAID_Log.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[368/955] Uploading: Energy_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[369/955] Uploading: Energy_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[370/955] Uploading: Energy_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[371/955] Uploading: Energy_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[372/955] Uploading: Energy_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[373/955] Uploading: Energy_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[374/955] Uploading: Energy_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[375/955] Uploading: Energy_Status_Report.png
+  ✓ Success: https://i.ibb.co/23PT1ygq/Energy-Action-Item-Log-png.png
+[376/955] Uploading: Energy_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[377/955] Uploading: Energy_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[378/955] Uploading: Energy_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[379/955] Uploading: Energy_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[380/955] Uploading: Finance_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[381/955] Uploading: Finance_Business_Case.png
+  ✓ Success: https://i.ibb.co/tTCf04Gz/Finance-Business-Case-png.png
+[382/955] Uploading: Finance_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[383/955] Uploading: Finance_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[384/955] Uploading: Finance_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[385/955] Uploading: Finance_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[386/955] Uploading: Finance_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[387/955] Uploading: Finance_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[388/955] Uploading: Finance_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[389/955] Uploading: Finance_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[390/955] Uploading: Finance_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/fg4CFJ8/Finance-Lessons-Learned-png.png
+[391/955] Uploading: Finance_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[392/955] Uploading: Finance_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[393/955] Uploading: Finance_Project_Charter.png
+  ✓ Success: https://i.ibb.co/8g9wqhkx/Finance-Project-Charter-png.png
+[394/955] Uploading: Finance_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[395/955] Uploading: Finance_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[396/955] Uploading: Finance_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/6cg58jHK/Finance-Project-Proposal-png.png
+[397/955] Uploading: Finance_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[398/955] Uploading: Finance_RAID_Log.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[399/955] Uploading: Finance_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[400/955] Uploading: Finance_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+
+Progress: 400/955 (400 success, 0 failed)
+
+[401/955] Uploading: Finance_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[402/955] Uploading: Finance_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[403/955] Uploading: Finance_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[404/955] Uploading: Finance_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[405/955] Uploading: Finance_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[406/955] Uploading: Finance_Status_Report.png
+  ✓ Success: https://i.ibb.co/mCyH0Sg4/Finance-Action-Item-Log-png.png
+[407/955] Uploading: Finance_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[408/955] Uploading: Finance_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[409/955] Uploading: Finance_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[410/955] Uploading: Finance_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[411/955] Uploading: Government_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[412/955] Uploading: Government_Business_Case.png
+  ✓ Success: https://i.ibb.co/8gMGY6f3/Government-Business-Case-png.png
+[413/955] Uploading: Government_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[414/955] Uploading: Government_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[415/955] Uploading: Government_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[416/955] Uploading: Government_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[417/955] Uploading: Government_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[418/955] Uploading: Government_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[419/955] Uploading: Government_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[420/955] Uploading: Government_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[421/955] Uploading: Government_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/chc3hhCq/Government-Lessons-Learned-png.png
+[422/955] Uploading: Government_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[423/955] Uploading: Government_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[424/955] Uploading: Government_Project_Charter.png
+  ✓ Success: https://i.ibb.co/fzg1vZD6/Government-Project-Charter-png.png
+[425/955] Uploading: Government_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[426/955] Uploading: Government_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[427/955] Uploading: Government_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/99nVPCLG/Government-Project-Proposal-png.png
+[428/955] Uploading: Government_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[429/955] Uploading: Government_RAID_Log.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[430/955] Uploading: Government_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[431/955] Uploading: Government_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[432/955] Uploading: Government_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[433/955] Uploading: Government_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[434/955] Uploading: Government_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[435/955] Uploading: Government_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[436/955] Uploading: Government_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[437/955] Uploading: Government_Status_Report.png
+  ✓ Success: https://i.ibb.co/KpmBpNQy/Government-Action-Item-Log-png.png
+[438/955] Uploading: Government_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[439/955] Uploading: Government_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[440/955] Uploading: Government_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[441/955] Uploading: Government_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[442/955] Uploading: Hardware_Action_Items.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[443/955] Uploading: Hardware_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[444/955] Uploading: Hardware_Business_Case.png
+  ✓ Success: https://i.ibb.co/k2CXmS65/Hardware-Business-Case-png.png
+[445/955] Uploading: Hardware_Change_Management.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[446/955] Uploading: Hardware_Change_Request.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[447/955] Uploading: Hardware_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[448/955] Uploading: Hardware_Communications_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[449/955] Uploading: Hardware_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[450/955] Uploading: Hardware_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+
+Progress: 450/955 (450 success, 0 failed)
+
+[451/955] Uploading: Hardware_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/GfVbmJwj/Hardware-KPI-Report-Dashboard-2025-PMI-png.png
+[452/955] Uploading: Hardware_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/vvKKdFfF/Hardware-Lessons-Learned-2025-PMI-png.png
+[453/955] Uploading: Hardware_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/RT60nKKH/Hardware-Open-Action-Item-Log-2025-PMI-png.png
+[454/955] Uploading: Hardware_Procurement_Management.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[455/955] Uploading: Hardware_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[456/955] Uploading: Hardware_Project_Charter.png
+  ✓ Success: https://i.ibb.co/cSSnkNXL/Hardware-Project-Charter-png.png
+[457/955] Uploading: Hardware_Project_Closure.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[458/955] Uploading: Hardware_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[459/955] Uploading: Hardware_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/JjnX3Lky/Hardware-Project-Proposal-2025-PMI-png.png
+[460/955] Uploading: Hardware_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[461/955] Uploading: Hardware_RAID_Log.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[462/955] Uploading: Hardware_Requirements_List.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[463/955] Uploading: Hardware_Requirements_Matrix.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[464/955] Uploading: Hardware_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[465/955] Uploading: Hardware_Resource_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[466/955] Uploading: Hardware_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[467/955] Uploading: Hardware_Stakeholder_Analysis.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[468/955] Uploading: Hardware_Stakeholder_Engagement.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[469/955] Uploading: Hardware_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[470/955] Uploading: Hardware_Status_Report.png
+  ✓ Success: https://i.ibb.co/0y7rB74p/Hardware-Action-Items-png.png
+[471/955] Uploading: Hardware_Training_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[472/955] Uploading: Hardware_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[473/955] Uploading: Hardware_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[474/955] Uploading: Hardware_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[475/955] Uploading: Healthcare_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[476/955] Uploading: Healthcare_Business_Case.png
+  ✓ Success: https://i.ibb.co/1fHVhjFr/Healthcare-Business-Case-png.png
+[477/955] Uploading: Healthcare_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[478/955] Uploading: Healthcare_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[479/955] Uploading: Healthcare_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[480/955] Uploading: Healthcare_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[481/955] Uploading: Healthcare_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[482/955] Uploading: Healthcare_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[483/955] Uploading: Healthcare_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[484/955] Uploading: Healthcare_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[485/955] Uploading: Healthcare_Lessons_Learned.png
+  ✓ Success: https://i.ibb.co/CsYG6z4q/Healthcare-Lessons-Learned-png.png
+[486/955] Uploading: Healthcare_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[487/955] Uploading: Healthcare_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[488/955] Uploading: Healthcare_Project_Charter.png
+  ✓ Success: https://i.ibb.co/CK3F5Kgz/Healthcare-Project-Charter-png.png
+[489/955] Uploading: Healthcare_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[490/955] Uploading: Healthcare_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[491/955] Uploading: Healthcare_Project_Proposal.png
+  ✓ Success: https://i.ibb.co/LzZrzPLt/Healthcare-Project-Proposal-png.png
+[492/955] Uploading: Healthcare_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[493/955] Uploading: Healthcare_RAID_Log.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[494/955] Uploading: Healthcare_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[495/955] Uploading: Healthcare_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[496/955] Uploading: Healthcare_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[497/955] Uploading: Healthcare_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[498/955] Uploading: Healthcare_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[499/955] Uploading: Healthcare_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[500/955] Uploading: Healthcare_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+
+Progress: 500/955 (500 success, 0 failed)
+
+[501/955] Uploading: Healthcare_Status_Report.png
+  ✓ Success: https://i.ibb.co/27tvHnvy/Healthcare-Action-Item-Log-png.png
+[502/955] Uploading: Healthcare_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[503/955] Uploading: Healthcare_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[504/955] Uploading: Healthcare_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[505/955] Uploading: Healthcare_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[506/955] Uploading: IT_Business_Case.png
+  ✓ Success: https://i.ibb.co/xKPjp7Pj/IT-Business-Case-png.png
+[507/955] Uploading: IT_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[508/955] Uploading: IT_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[509/955] Uploading: IT_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[510/955] Uploading: IT_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[511/955] Uploading: IT_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[512/955] Uploading: IT_Data_Readiness_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[513/955] Uploading: IT_High_Level_Requirements_List.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[514/955] Uploading: IT_Implementation_KPI_Report_Dashboard_2025_PMI.png
+  ✓ Success: https://i.ibb.co/YTWv2hJz/IT-Implementation-KPI-Report-Dashboard-2025-PMI-png.png
+[515/955] Uploading: IT_Implementation_Lessons_Learned_2025_PMI.png
+  ✓ Success: https://i.ibb.co/Rkfp7RHm/IT-Implementation-Lessons-Learned-2025-PMI-png.png
+[516/955] Uploading: IT_Implementation_Open_Action_Item_Log_2025_PMI.png
+  ✓ Success: https://i.ibb.co/jvvYfs13/IT-Implementation-Open-Action-Item-Log-2025-PMI-png.png
+[517/955] Uploading: IT_Implementation_Project_Proposal_2025_PMI.png
+  ✓ Success: https://i.ibb.co/3mt5Qsr5/IT-Implementation-Project-Proposal-2025-PMI-png.png
+[518/955] Uploading: IT_KPI_Dashboard.png
+  ✓ Success: https://i.ibb.co/gLrLtWnS/8bbb02115d57.png
+[519/955] Uploading: IT_Procurement_Management_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[520/955] Uploading: IT_Procurement_Plan.png
+  ✓ Success: https://i.ibb.co/3mzxCnQ5/AI-ML-Procurement-Management-Plan-2025-PMI-png.png
+[521/955] Uploading: IT_Project_Charter.png
+  ✓ Success: https://i.ibb.co/GvFk4d10/IT-Project-Charter-png.png
+[522/955] Uploading: IT_Project_Closure_Report.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[523/955] Uploading: IT_Project_Kickoff_Presentation.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[524/955] Uploading: IT_Quality_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[525/955] Uploading: IT_RAID_Log.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[526/955] Uploading: IT_Requirements_Traceability_Matrix.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[527/955] Uploading: IT_Resource_Management_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[528/955] Uploading: IT_Resource_Plan_Staffing_Plan.png
+  ✓ Success: https://i.ibb.co/995Sb3fF/AI-ML-Resource-Management-Plan-png.png
+[529/955] Uploading: IT_Risk_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[530/955] Uploading: IT_Stakeholder_Engagement_Plan.png
+  ✓ Success: https://i.ibb.co/nsrQ34vW/AI-ML-Stakeholder-Engagement-Plan-2025-PMI-png.png
+[531/955] Uploading: IT_Stakeholder_Register.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[532/955] Uploading: IT_Stakeholder_Register_Analysis.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[533/955] Uploading: IT_Status_Report.png
+  ✓ Success: https://i.ibb.co/YTpJNL28/IT-High-Level-Requirements-List-png.png
+[534/955] Uploading: IT_Training_Budget_Estimates.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[535/955] Uploading: IT_Training_Needs_Assessment.png
+  ✓ Success: https://i.ibb.co/kC3zn8g/AI-ML-Data-Readiness-Assessment-png.png
+[536/955] Uploading: IT_Training_Schedule.png
+  ✓ Success: https://i.ibb.co/xtdkjFXN/AI-ML-Training-Schedule-2025-PMI-png.png
+[537/955] Uploading: IT_WBS.png
+  ✓ Success: https://i.ibb.co/hJbVRKys/AI-ML-WBS-Project-Plan-Exact-Template-2025-PMI-png.png
+[538/955] Uploading: Media_Action_Item_Log.png
+  ✓ Success: https://i.ibb.co/GQhQvc5y/Media-Action-Item-Log-png.png
+[539/955] Uploading: Media_Business_Case.png
+  ✓ Success: https://i.ibb.co/1tPsrrDF/Media-Business-Case-png.png
+[540/955] Uploading: Media_Change_Management_Plan.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[541/955] Uploading: Media_Change_Request_Form.png
+  ✓ Success: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+[542/955] Uploading: Media_Communication_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[543/955] Uploading: Media_Communications_Management_Plan.png
+  ✓ Success: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+[544/955] Uploading: Media_Comprehensive_Budget.png
+  ✓ Success: https://i.ibb.co/8D2Mr7WY/AI-ML-Comprehensive-Budget-with-Instructions-2025-PMI-png.png
+[545/955] Uploading: Media_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[546/955] Uploading: Media_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[547/955] Uploading: Media_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[548/955] Uploading: Media_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[549/955] Uploading: Media_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[550/955] Uploading: Media_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 550/955 (544 success, 6 failed)
+
+[551/955] Uploading: Media_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[552/955] Uploading: Media_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[553/955] Uploading: Media_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[554/955] Uploading: Media_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[555/955] Uploading: Media_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[556/955] Uploading: Media_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[557/955] Uploading: Media_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[558/955] Uploading: Media_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[559/955] Uploading: Media_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[560/955] Uploading: Media_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[561/955] Uploading: Media_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[562/955] Uploading: Media_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[563/955] Uploading: Media_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[564/955] Uploading: Media_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[565/955] Uploading: Media_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[566/955] Uploading: Media_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[567/955] Uploading: Media_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[568/955] Uploading: Media_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[569/955] Uploading: Merger_and_Acquisition_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[570/955] Uploading: Merger_and_Acquisition_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[571/955] Uploading: Merger_and_Acquisition_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[572/955] Uploading: Merger_and_Acquisition_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[573/955] Uploading: Merger_and_Acquisition_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[574/955] Uploading: Merger_and_Acquisition_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[575/955] Uploading: Merger_and_Acquisition_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[576/955] Uploading: Merger_and_Acquisition_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[577/955] Uploading: Merger_and_Acquisition_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[578/955] Uploading: Merger_and_Acquisition_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[579/955] Uploading: Merger_and_Acquisition_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[580/955] Uploading: Merger_and_Acquisition_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[581/955] Uploading: Merger_and_Acquisition_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[582/955] Uploading: Merger_and_Acquisition_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[583/955] Uploading: Merger_and_Acquisition_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[584/955] Uploading: Merger_and_Acquisition_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[585/955] Uploading: Merger_and_Acquisition_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[586/955] Uploading: Merger_and_Acquisition_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[587/955] Uploading: Merger_and_Acquisition_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[588/955] Uploading: Merger_and_Acquisition_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[589/955] Uploading: Merger_and_Acquisition_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[590/955] Uploading: Merger_and_Acquisition_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[591/955] Uploading: Merger_and_Acquisition_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[592/955] Uploading: Merger_and_Acquisition_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[593/955] Uploading: Merger_and_Acquisition_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[594/955] Uploading: Merger_and_Acquisition_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[595/955] Uploading: Merger_and_Acquisition_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[596/955] Uploading: Merger_and_Acquisition_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[597/955] Uploading: Merger_and_Acquisition_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[598/955] Uploading: Merger_and_Acquisition_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[599/955] Uploading: Merger_and_Acquisition_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[600/955] Uploading: Network_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 600/955 (544 success, 56 failed)
+
+[601/955] Uploading: Network_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[602/955] Uploading: Network_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[603/955] Uploading: Network_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[604/955] Uploading: Network_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[605/955] Uploading: Network_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[606/955] Uploading: Network_Comprehensive_Project_Proposal_Essay_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[607/955] Uploading: Network_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[608/955] Uploading: Network_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[609/955] Uploading: Network_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[610/955] Uploading: Network_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[611/955] Uploading: Network_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[612/955] Uploading: Network_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[613/955] Uploading: Network_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[614/955] Uploading: Network_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[615/955] Uploading: Network_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[616/955] Uploading: Network_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[617/955] Uploading: Network_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[618/955] Uploading: Network_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[619/955] Uploading: Network_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[620/955] Uploading: Network_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[621/955] Uploading: Network_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[622/955] Uploading: Network_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[623/955] Uploading: Network_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[624/955] Uploading: Network_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[625/955] Uploading: Network_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[626/955] Uploading: Network_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[627/955] Uploading: Network_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[628/955] Uploading: Network_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[629/955] Uploading: Network_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[630/955] Uploading: Network_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[631/955] Uploading: Network_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[632/955] Uploading: Network_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[633/955] Uploading: Non-Profit_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[634/955] Uploading: Non-Profit_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[635/955] Uploading: Non-Profit_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[636/955] Uploading: Non-Profit_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[637/955] Uploading: Non-Profit_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[638/955] Uploading: Non-Profit_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[639/955] Uploading: Non-Profit_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[640/955] Uploading: Non-Profit_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[641/955] Uploading: Non-Profit_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[642/955] Uploading: Non-Profit_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[643/955] Uploading: Non-Profit_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[644/955] Uploading: Non-Profit_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[645/955] Uploading: Non-Profit_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[646/955] Uploading: Non-Profit_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[647/955] Uploading: Non-Profit_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[648/955] Uploading: Non-Profit_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[649/955] Uploading: Non-Profit_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[650/955] Uploading: Non-Profit_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 650/955 (544 success, 106 failed)
+
+[651/955] Uploading: Non-Profit_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[652/955] Uploading: Non-Profit_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[653/955] Uploading: Non-Profit_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[654/955] Uploading: Non-Profit_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[655/955] Uploading: Non-Profit_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[656/955] Uploading: Non-Profit_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[657/955] Uploading: Non-Profit_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[658/955] Uploading: Non-Profit_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[659/955] Uploading: Non-Profit_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[660/955] Uploading: Non-Profit_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[661/955] Uploading: Non-Profit_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[662/955] Uploading: Non-Profit_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[663/955] Uploading: Non-Profit_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[664/955] Uploading: Operational_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[665/955] Uploading: Operational_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[666/955] Uploading: Operational_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[667/955] Uploading: Operational_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[668/955] Uploading: Operational_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[669/955] Uploading: Operational_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[670/955] Uploading: Operational_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[671/955] Uploading: Operational_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[672/955] Uploading: Operational_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[673/955] Uploading: Operational_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[674/955] Uploading: Operational_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[675/955] Uploading: Operational_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[676/955] Uploading: Operational_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[677/955] Uploading: Operational_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[678/955] Uploading: Operational_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[679/955] Uploading: Operational_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[680/955] Uploading: Operational_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[681/955] Uploading: Operational_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[682/955] Uploading: Operational_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[683/955] Uploading: Operational_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[684/955] Uploading: Operational_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[685/955] Uploading: Operational_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[686/955] Uploading: Operational_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[687/955] Uploading: Operational_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[688/955] Uploading: Operational_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[689/955] Uploading: Operational_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[690/955] Uploading: Operational_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[691/955] Uploading: Operational_Training_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[692/955] Uploading: Operational_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[693/955] Uploading: Operational_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[694/955] Uploading: Operational_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[695/955] Uploading: Operations_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[696/955] Uploading: Operations_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[697/955] Uploading: Operations_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[698/955] Uploading: Operations_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[699/955] Uploading: Product_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[700/955] Uploading: Product_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 700/955 (544 success, 156 failed)
+
+[701/955] Uploading: Product_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[702/955] Uploading: Product_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[703/955] Uploading: Product_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[704/955] Uploading: Product_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[705/955] Uploading: Product_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[706/955] Uploading: Product_Development_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[707/955] Uploading: Product_Development_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[708/955] Uploading: Product_Development_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[709/955] Uploading: Product_Development_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[710/955] Uploading: Product_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[711/955] Uploading: Product_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[712/955] Uploading: Product_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[713/955] Uploading: Product_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[714/955] Uploading: Product_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[715/955] Uploading: Product_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[716/955] Uploading: Product_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[717/955] Uploading: Product_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[718/955] Uploading: Product_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[719/955] Uploading: Product_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[720/955] Uploading: Product_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[721/955] Uploading: Product_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[722/955] Uploading: Product_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[723/955] Uploading: Product_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[724/955] Uploading: Product_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[725/955] Uploading: Product_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[726/955] Uploading: Product_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[727/955] Uploading: Product_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[728/955] Uploading: Product_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[729/955] Uploading: Product_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[730/955] Uploading: Product_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[731/955] Uploading: R&D_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[732/955] Uploading: R&D_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[733/955] Uploading: R&D_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[734/955] Uploading: R&D_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[735/955] Uploading: R&D_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[736/955] Uploading: R&D_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[737/955] Uploading: R&D_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[738/955] Uploading: R&D_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[739/955] Uploading: R&D_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[740/955] Uploading: R&D_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[741/955] Uploading: R&D_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[742/955] Uploading: R&D_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[743/955] Uploading: R&D_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[744/955] Uploading: R&D_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[745/955] Uploading: R&D_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[746/955] Uploading: R&D_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[747/955] Uploading: R&D_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[748/955] Uploading: R&D_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[749/955] Uploading: R&D_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[750/955] Uploading: R&D_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 750/955 (544 success, 206 failed)
+
+[751/955] Uploading: R&D_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[752/955] Uploading: R&D_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[753/955] Uploading: R&D_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[754/955] Uploading: R&D_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[755/955] Uploading: R&D_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[756/955] Uploading: R&D_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[757/955] Uploading: R&D_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[758/955] Uploading: R&D_Training_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[759/955] Uploading: R&D_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[760/955] Uploading: R&D_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[761/955] Uploading: R&D_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[762/955] Uploading: Regulatory_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[763/955] Uploading: Regulatory_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[764/955] Uploading: Regulatory_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[765/955] Uploading: Regulatory_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[766/955] Uploading: Regulatory_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[767/955] Uploading: Regulatory_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[768/955] Uploading: Regulatory_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[769/955] Uploading: Regulatory_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[770/955] Uploading: Regulatory_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[771/955] Uploading: Regulatory_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[772/955] Uploading: Regulatory_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[773/955] Uploading: Regulatory_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[774/955] Uploading: Regulatory_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[775/955] Uploading: Regulatory_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[776/955] Uploading: Regulatory_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[777/955] Uploading: Regulatory_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[778/955] Uploading: Regulatory_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[779/955] Uploading: Regulatory_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[780/955] Uploading: Regulatory_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[781/955] Uploading: Regulatory_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[782/955] Uploading: Regulatory_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[783/955] Uploading: Regulatory_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[784/955] Uploading: Regulatory_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[785/955] Uploading: Regulatory_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[786/955] Uploading: Regulatory_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[787/955] Uploading: Regulatory_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[788/955] Uploading: Regulatory_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[789/955] Uploading: Regulatory_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[790/955] Uploading: Regulatory_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[791/955] Uploading: Regulatory_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[792/955] Uploading: Regulatory_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[793/955] Uploading: Regulatory_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[794/955] Uploading: Research_Development_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[795/955] Uploading: Research_Development_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[796/955] Uploading: Research_Development_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[797/955] Uploading: Research_Development_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[798/955] Uploading: Retail_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[799/955] Uploading: Retail_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[800/955] Uploading: Retail_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 800/955 (544 success, 256 failed)
+
+[801/955] Uploading: Retail_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[802/955] Uploading: Retail_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[803/955] Uploading: Retail_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[804/955] Uploading: Retail_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[805/955] Uploading: Retail_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[806/955] Uploading: Retail_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[807/955] Uploading: Retail_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[808/955] Uploading: Retail_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[809/955] Uploading: Retail_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[810/955] Uploading: Retail_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[811/955] Uploading: Retail_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[812/955] Uploading: Retail_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[813/955] Uploading: Retail_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[814/955] Uploading: Retail_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[815/955] Uploading: Retail_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[816/955] Uploading: Retail_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[817/955] Uploading: Retail_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[818/955] Uploading: Retail_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[819/955] Uploading: Retail_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[820/955] Uploading: Retail_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[821/955] Uploading: Retail_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[822/955] Uploading: Retail_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[823/955] Uploading: Retail_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[824/955] Uploading: Retail_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[825/955] Uploading: Retail_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[826/955] Uploading: Retail_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[827/955] Uploading: Retail_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[828/955] Uploading: Retail_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[829/955] Uploading: Software_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[830/955] Uploading: Software_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[831/955] Uploading: Software_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[832/955] Uploading: Software_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[833/955] Uploading: Software_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[834/955] Uploading: Software_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[835/955] Uploading: Software_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[836/955] Uploading: Software_Development_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[837/955] Uploading: Software_Development_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[838/955] Uploading: Software_Development_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[839/955] Uploading: Software_Development_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[840/955] Uploading: Software_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[841/955] Uploading: Software_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[842/955] Uploading: Software_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[843/955] Uploading: Software_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[844/955] Uploading: Software_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[845/955] Uploading: Software_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[846/955] Uploading: Software_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[847/955] Uploading: Software_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[848/955] Uploading: Software_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[849/955] Uploading: Software_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[850/955] Uploading: Software_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 850/955 (544 success, 306 failed)
+
+[851/955] Uploading: Software_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[852/955] Uploading: Software_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[853/955] Uploading: Software_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[854/955] Uploading: Software_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[855/955] Uploading: Software_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[856/955] Uploading: Software_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[857/955] Uploading: Software_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[858/955] Uploading: Software_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[859/955] Uploading: Software_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[860/955] Uploading: Software_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[861/955] Uploading: Supply_Chain_Optimization_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[862/955] Uploading: Supply_Chain_Optimization_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[863/955] Uploading: Supply_Chain_Optimization_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[864/955] Uploading: Supply_Chain_Optimization_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[865/955] Uploading: Supply_Chain_Optimization_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[866/955] Uploading: Supply_Chain_Optimization_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[867/955] Uploading: Supply_Chain_Optimization_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[868/955] Uploading: Supply_Chain_Optimization_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[869/955] Uploading: Supply_Chain_Optimization_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[870/955] Uploading: Supply_Chain_Optimization_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[871/955] Uploading: Supply_Chain_Optimization_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[872/955] Uploading: Supply_Chain_Optimization_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[873/955] Uploading: Supply_Chain_Optimization_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[874/955] Uploading: Supply_Chain_Optimization_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[875/955] Uploading: Supply_Chain_Optimization_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[876/955] Uploading: Supply_Chain_Optimization_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[877/955] Uploading: Supply_Chain_Optimization_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[878/955] Uploading: Supply_Chain_Optimization_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[879/955] Uploading: Supply_Chain_Optimization_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[880/955] Uploading: Supply_Chain_Optimization_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[881/955] Uploading: Supply_Chain_Optimization_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[882/955] Uploading: Supply_Chain_Optimization_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[883/955] Uploading: Supply_Chain_Optimization_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[884/955] Uploading: Supply_Chain_Optimization_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[885/955] Uploading: Supply_Chain_Optimization_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[886/955] Uploading: Supply_Chain_Optimization_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[887/955] Uploading: Supply_Chain_Optimization_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[888/955] Uploading: Supply_Chain_Optimization_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[889/955] Uploading: Supply_Chain_Optimization_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[890/955] Uploading: Supply_Chain_Optimization_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[891/955] Uploading: Supply_Chain_Optimization_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[892/955] Uploading: Telecommunications_Action_Items.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[893/955] Uploading: Telecommunications_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[894/955] Uploading: Telecommunications_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[895/955] Uploading: Telecommunications_Change_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[896/955] Uploading: Telecommunications_Change_Request.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[897/955] Uploading: Telecommunications_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[898/955] Uploading: Telecommunications_Communications_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[899/955] Uploading: Telecommunications_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[900/955] Uploading: Telecommunications_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 900/955 (544 success, 356 failed)
+
+[901/955] Uploading: Telecommunications_KPI_Report_Dashboard_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[902/955] Uploading: Telecommunications_Lessons_Learned_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[903/955] Uploading: Telecommunications_Open_Action_Item_Log_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[904/955] Uploading: Telecommunications_Procurement_Management.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[905/955] Uploading: Telecommunications_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[906/955] Uploading: Telecommunications_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[907/955] Uploading: Telecommunications_Project_Closure.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[908/955] Uploading: Telecommunications_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[909/955] Uploading: Telecommunications_Project_Proposal_2025_PMI.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[910/955] Uploading: Telecommunications_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[911/955] Uploading: Telecommunications_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[912/955] Uploading: Telecommunications_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[913/955] Uploading: Telecommunications_Requirements_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[914/955] Uploading: Telecommunications_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[915/955] Uploading: Telecommunications_Resource_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[916/955] Uploading: Telecommunications_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[917/955] Uploading: Telecommunications_Stakeholder_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[918/955] Uploading: Telecommunications_Stakeholder_Engagement.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[919/955] Uploading: Telecommunications_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[920/955] Uploading: Telecommunications_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[921/955] Uploading: Telecommunications_Training_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[922/955] Uploading: Telecommunications_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[923/955] Uploading: Telecommunications_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[924/955] Uploading: Telecommunications_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[925/955] Uploading: Transportation_Action_Item_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[926/955] Uploading: Transportation_Business_Case.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[927/955] Uploading: Transportation_Change_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[928/955] Uploading: Transportation_Change_Request_Form.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[929/955] Uploading: Transportation_Communication_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[930/955] Uploading: Transportation_Communications_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[931/955] Uploading: Transportation_Comprehensive_Budget.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[932/955] Uploading: Transportation_Data_Readiness_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[933/955] Uploading: Transportation_High_Level_Requirements_List.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[934/955] Uploading: Transportation_KPI_Dashboard.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[935/955] Uploading: Transportation_Lessons_Learned.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[936/955] Uploading: Transportation_Procurement_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[937/955] Uploading: Transportation_Procurement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[938/955] Uploading: Transportation_Project_Charter.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[939/955] Uploading: Transportation_Project_Closure_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[940/955] Uploading: Transportation_Project_Kickoff_Presentation.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[941/955] Uploading: Transportation_Project_Proposal.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[942/955] Uploading: Transportation_Quality_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[943/955] Uploading: Transportation_RAID_Log.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[944/955] Uploading: Transportation_Requirements_Traceability_Matrix.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[945/955] Uploading: Transportation_Resource_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[946/955] Uploading: Transportation_Resource_Plan_Staffing_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[947/955] Uploading: Transportation_Risk_Management_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[948/955] Uploading: Transportation_Stakeholder_Engagement_Plan.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[949/955] Uploading: Transportation_Stakeholder_Register.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[950/955] Uploading: Transportation_Stakeholder_Register_Analysis.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+Progress: 950/955 (544 success, 406 failed)
+
+[951/955] Uploading: Transportation_Status_Report.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[952/955] Uploading: Transportation_Training_Budget_Estimates.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[953/955] Uploading: Transportation_Training_Needs_Assessment.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[954/955] Uploading: Transportation_Training_Schedule.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+[955/955] Uploading: Transportation_WBS.png
+  Error: 400 - {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed
+
+================================================================================
+UPLOAD COMPLETE
+================================================================================
+Total files: 955
+Successful uploads: 544
+Failed uploads: 411
+URLs saved to: /home/ubuntu/pmb_repo/imgbb_urls.json
+
+First 5 uploaded images:
+  1. AI_ML_Business_Case.png
+     URL: https://i.ibb.co/8gJ43shw/AI-ML-Business-Case-png.png
+  2. AI_ML_Change_Management_Plan_2025_PMI.png
+     URL: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+  3. AI_ML_Change_Request_Form.png
+     URL: https://i.ibb.co/5hQxrTxJ/AI-ML-Change-Management-Plan-2025-PMI-png.png
+  4. AI_ML_Communication_Plan.png
+     URL: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+  5. AI_ML_Communications_Management_Plan_2025_PMI.png
+     URL: https://i.ibb.co/4x8qTSN/AI-ML-Communication-Plan-png.png
+
