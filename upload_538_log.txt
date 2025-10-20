@@ -1,0 +1,19 @@
+[1/538] Uploading: AI_ML_Business_Case.png
+  ✗ Failed
+[2/538] Uploading: AI_ML_Change_Management_Plan_2025_PMI.png
+  ✗ Failed
+[3/538] Uploading: AI_ML_Change_Request_Form.png
+  ✗ Failed
+[4/538] Uploading: AI_ML_Communication_Plan.png
+  ✗ Failed
+[5/538] Uploading: AI_ML_Communications_Management_Plan_2025_PMI.png
+  ✗ Failed
+[6/538] Uploading: AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.png
+  ✗ Failed
+
+⚠️  Hit rate limit early, stopping...
+
+✅ UPLOAD COMPLETE!
+Success: 0
+Failed: 6
+Total URLs: 0

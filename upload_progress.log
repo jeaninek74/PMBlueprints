@@ -1,3 +1,6 @@
+nohup: ignoring input
+Found 955 screenshots to upload
+
 [1/955] Uploading: AI_ML_Business_Case.png
   ✗ Failed
 [2/955] Uploading: AI_ML_Change_Management_Plan_2025_PMI.png
@@ -100,6 +103,7 @@
   ✗ Failed
 
 --- Progress: 50/955 (0 success, 50 failed, 0 skipped) ---
+
 [51/955] Uploading: Business_Process_Improvement_RAID_Log.png
   ✗ Failed
 [52/955] Uploading: Business_Process_Improvement_Requirements_Traceability_Matrix.png
@@ -202,6 +206,7 @@
   ✗ Failed
 
 --- Progress: 100/955 (0 success, 100 failed, 0 skipped) ---
+
 [101/955] Uploading: Construction_Data_Readiness_Assessment.png
   ✗ Failed
 [102/955] Uploading: Construction_Executive_RAID_Log_Complete_2025_PMI.png
@@ -304,6 +309,7 @@
   ✗ Failed
 
 --- Progress: 150/955 (0 success, 150 failed, 0 skipped) ---
+
 [151/955] Uploading: Consulting_Stakeholder_Register_Analysis.png
   ✗ Failed
 [152/955] Uploading: Consulting_Status_Report.png
@@ -406,6 +412,7 @@
   ✗ Failed
 
 --- Progress: 200/955 (0 success, 200 failed, 0 skipped) ---
+
 [201/955] Uploading: Cybersecurity_Procurement_Management_Plan_2025_PMI.png
   ✗ Failed
 [202/955] Uploading: Cybersecurity_Procurement_Plan.png
@@ -426,30 +433,3 @@
   ✗ Failed
 [210/955] Uploading: Cybersecurity_Resource_Management_Plan.png
   ✗ Failed
-[211/955] Uploading: Cybersecurity_Resource_Plan_Staffing_Plan.png
-  ✗ Failed
-[212/955] Uploading: Cybersecurity_Risk_Management_Plan.png
-  ✗ Failed
-[213/955] Uploading: Cybersecurity_Stakeholder_Engagement_Plan.png
-  ✗ Failed
-[214/955] Uploading: Cybersecurity_Stakeholder_Register.png
-  ✗ Failed
-[215/955] Uploading: Cybersecurity_Stakeholder_Register_Analysis.png
-  ✗ Failed
-[216/955] Uploading: Cybersecurity_Status_Report.png
-  ✗ Failed
-[217/955] Uploading: Cybersecurity_Training_Budget_Estimates.png
-  ✗ Failed
-[218/955] Uploading: Cybersecurity_Training_Needs_Assessment.png
-  ✗ Failed
-[219/955] Uploading: Cybersecurity_Training_Schedule.png
-  ✗ Failed
-[220/955] Uploading: Cybersecurity_WBS.png
-  ✗ Failed
-[221/955] Uploading: Data_Analytics_Action_Item_Log.png
-  ✗ Failed
-[222/955] Uploading: Data_Analytics_Business_Case.png
-  ✗ Failed
-[223/955] Uploading: Data_Analytics_Change_Management_Plan.png
-  ✗ Failed
-[224/955] Uploading: Data_Analytics_Change_Request_Form.png
