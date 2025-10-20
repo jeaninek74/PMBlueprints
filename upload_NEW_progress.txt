@@ -1550,3 +1550,228 @@ Log will be saved to: /home/ubuntu/pmb_repo/upload_NEW_log.txt
   ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
 [378/955] Uploading: Energy_Training_Schedule.png
   ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[379/955] Uploading: Energy_WBS.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[380/955] Uploading: Finance_Action_Item_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 380/955 (0 success, 380 failed, 0 skipped) ---
+[381/955] Uploading: Finance_Business_Case.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[382/955] Uploading: Finance_Change_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[383/955] Uploading: Finance_Change_Request_Form.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[384/955] Uploading: Finance_Communication_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[385/955] Uploading: Finance_Communications_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[386/955] Uploading: Finance_Comprehensive_Budget.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[387/955] Uploading: Finance_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[388/955] Uploading: Finance_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[389/955] Uploading: Finance_KPI_Dashboard.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[390/955] Uploading: Finance_Lessons_Learned.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 390/955 (0 success, 390 failed, 0 skipped) ---
+[391/955] Uploading: Finance_Procurement_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[392/955] Uploading: Finance_Procurement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[393/955] Uploading: Finance_Project_Charter.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[394/955] Uploading: Finance_Project_Closure_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[395/955] Uploading: Finance_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[396/955] Uploading: Finance_Project_Proposal.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[397/955] Uploading: Finance_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[398/955] Uploading: Finance_RAID_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[399/955] Uploading: Finance_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[400/955] Uploading: Finance_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 400/955 (0 success, 400 failed, 0 skipped) ---
+[401/955] Uploading: Finance_Resource_Plan_Staffing_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[402/955] Uploading: Finance_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[403/955] Uploading: Finance_Stakeholder_Engagement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[404/955] Uploading: Finance_Stakeholder_Register.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[405/955] Uploading: Finance_Stakeholder_Register_Analysis.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[406/955] Uploading: Finance_Status_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[407/955] Uploading: Finance_Training_Budget_Estimates.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[408/955] Uploading: Finance_Training_Needs_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[409/955] Uploading: Finance_Training_Schedule.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[410/955] Uploading: Finance_WBS.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 410/955 (0 success, 410 failed, 0 skipped) ---
+[411/955] Uploading: Government_Action_Item_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[412/955] Uploading: Government_Business_Case.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[413/955] Uploading: Government_Change_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[414/955] Uploading: Government_Change_Request_Form.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[415/955] Uploading: Government_Communication_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[416/955] Uploading: Government_Communications_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[417/955] Uploading: Government_Comprehensive_Budget.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[418/955] Uploading: Government_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[419/955] Uploading: Government_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[420/955] Uploading: Government_KPI_Dashboard.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 420/955 (0 success, 420 failed, 0 skipped) ---
+[421/955] Uploading: Government_Lessons_Learned.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[422/955] Uploading: Government_Procurement_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[423/955] Uploading: Government_Procurement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[424/955] Uploading: Government_Project_Charter.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[425/955] Uploading: Government_Project_Closure_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[426/955] Uploading: Government_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[427/955] Uploading: Government_Project_Proposal.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[428/955] Uploading: Government_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[429/955] Uploading: Government_RAID_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[430/955] Uploading: Government_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 430/955 (0 success, 430 failed, 0 skipped) ---
+[431/955] Uploading: Government_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[432/955] Uploading: Government_Resource_Plan_Staffing_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[433/955] Uploading: Government_Risk_Management_Plan.png

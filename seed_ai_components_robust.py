@@ -67,7 +67,7 @@ METHODOLOGIES = [
 DOCUMENT_FORMATS = [
     "WORD",
     "EXCEL",
-    "PDF"
+    "POWERPOINT"
 ]
 
 def verify_openai_config():
