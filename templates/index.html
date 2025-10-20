@@ -184,6 +184,100 @@
     </div>
 </section>
 
+<!-- AI Features Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">AI-Powered Features</h2>
+            <p class="lead text-muted">Intelligent tools to accelerate your project management workflow</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- AI Generator -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div>
+                                <h3 class="h4 fw-bold mb-0">AI Generator</h3>
+                                <p class="text-muted mb-0">Create custom PM documents</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">
+                            Generate any project management document you need, even if it's not in our template library. 
+                            Simply describe what you need, and the AI creates a professional, PMI PMBOK-compliant document.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>All Methodologies:</strong> Waterfall, Agile, Scrum, PRINCE2, Hybrid, and more
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>Multiple Formats:</strong> Word, Excel, and PowerPoint
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>PMI Compliant:</strong> Follows latest PMBOK standards
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="/ai-generator" class="btn btn-primary w-100">
+                            Try AI Generator
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Suggestor -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div>
+                                <h3 class="h4 fw-bold mb-0">AI Suggestor</h3>
+                                <p class="text-muted mb-0">Get intelligent content suggestions</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">
+                            Get AI-powered suggestions to help fill out any template. Describe your project context, 
+                            and the AI provides relevant, professional content tailored to your specific needs.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>Context-Aware:</strong> Suggestions based on your project details
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>Industry-Specific:</strong> Tailored content for your sector
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div>
+                                    <strong>Best Practices:</strong> Recommendations aligned with PMI standards
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-success w-100">
+                            Try AI Suggestor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Platform Compatible Section -->
 <section class="py-4">
     <div class="container">
@@ -520,99 +614,6 @@
     </div>
 </section>
 
-<!-- AI Features Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">AI-Powered Features</h2>
-            <p class="lead text-muted">Intelligent tools to accelerate your project management workflow</p>
-        </div>
-        
-        <div class="row g-4">
-            <!-- AI Generator -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div>
-                                <h3 class="h4 fw-bold mb-0">AI Generator</h3>
-                                <p class="text-muted mb-0">Create custom PM documents</p>
-                            </div>
-                        </div>
-                        
-                        <p class="mb-4">
-                            Generate any project management document you need, even if it's not in our template library. 
-                            Simply describe what you need, and the AI creates a professional, PMI PMBOK-compliant document.
-                        </p>
-                        
-                        <div class="mb-4">
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>All Methodologies:</strong> Waterfall, Agile, Scrum, PRINCE2, Hybrid, and 20+ more
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>Multiple Formats:</strong> Word, Excel, PowerPoint, and Visio
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>PMI Compliant:</strong> Follows latest PMBOK standards
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="/ai-generator" class="btn btn-primary w-100">
-                            Try AI Generator
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- AI Suggestor -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div>
-                                <h3 class="h4 fw-bold mb-0">AI Suggestor</h3>
-                                <p class="text-muted mb-0">Get intelligent content suggestions</p>
-                            </div>
-                        </div>
-                        
-                        <p class="mb-4">
-                            Get AI-powered suggestions to help fill out any template. Describe your project context, 
-                            and the AI provides relevant, professional content tailored to your specific needs.
-                        </p>
-                        
-                        <div class="mb-4">
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>Context-Aware:</strong> Suggestions based on your project details
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>Industry-Specific:</strong> Tailored content for your sector
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-3">
-                                <div>
-                                    <strong>Best Practices:</strong> Recommendations aligned with PMI standards
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="{{ url_for('ai_suggestions.index') }}" class="btn btn-success w-100">
-                            Try AI Suggestor
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- CTA Section -->
 <section class="py-5">
