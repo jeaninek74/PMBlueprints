@@ -516,6 +516,11 @@ def init_db():
 
 if __name__ == '__main__':
     init_db()
+    
+    # One-time category standardization (remove after first run)
+    from run_category_fix_once import run_if_enabled
+    run_if_enabled()
+    
     logger.info("Starting PMBlueprints Production Platform")
     app.run(host='0.0.0.0', port=5002, debug=False)
 
