@@ -76,9 +76,7 @@
         {% for template in templates %}
         <div class="col-md-6 col-lg-4">
             <div class="card h-100 border-0 shadow-sm template-card">
-                {% if template.thumbnail %}
-                <img src="{{ template.thumbnail }}" class="card-img-top" alt="{{ template.name }} preview" style="height: 200px; object-fit: cover;">
-                {% endif %}
+
                 <div class="card-body">
                     <div class="mb-3">
                         <span class="badge bg-primary">{{ template.industry }}</span>
