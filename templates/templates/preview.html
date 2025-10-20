@@ -61,14 +61,11 @@
             <div class="card shadow-sm">
                 <div class="card-body text-center p-4">
                     <h4 class="mb-4">Template Preview</h4>
-                    {% if template.thumbnail %}
-                    <img src="{{ template.thumbnail }}" 
+                    <img src="{{ url_for('static', filename='screenshots_FULL/' + screenshot_filename) }}" 
                          alt="{{ template.name }} preview" 
                          class="img-fluid rounded shadow"
-                         style="max-width: 100%; height: auto;">
-                    {% else %}
-                    <p class="text-muted">Preview image coming soon...</p>
-                    {% endif %}
+                         style="max-width: 100%; height: auto;"
+                         onerror="this.parentElement.innerHTML='<p class=\"text-muted\">Preview image not available</p>'">
                 </div>
             </div>
             
