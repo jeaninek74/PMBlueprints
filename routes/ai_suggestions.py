@@ -1,21 +1,21 @@
 """
 AI Suggestions Routes
-Handles AI-powered template suggestions with tier-based access control
+Handles AI-powered template suggestions - optimized for fast ChatGPT-like responses
 """
 
 from flask import Blueprint, render_template, request, jsonify
 from flask_login import login_required, current_user
 import logging
 import os
-import openai
+from openai import OpenAI
 from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
 ai_suggestions_bp = Blueprint('ai_suggestions', __name__)
 
-# Initialize OpenAI
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Initialize OpenAI client
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 @ai_suggestions_bp.route('/')
 def index():
@@ -30,10 +30,9 @@ def index():
 @ai_suggestions_bp.route('/get', methods=['POST'])
 @login_required
 def get_suggestions():
-    """Get AI-powered template suggestions"""
-    from utils.subscription_security import check_usage_limit
+    """Get AI-powered template suggestions - fast response optimized"""
     from database import db
-    from models import AISuggestionHistory, Template
+    from models import AISuggestionHistory
     
     try:
         # Get request data
@@ -41,120 +40,87 @@ def get_suggestions():
         if not data:
             return jsonify({'error': 'No data provided'}), 400
         
-        # Check if this is a quick suggestion or custom question
-        template_type = data.get('template_type', '')
-        section = data.get('section', '')
-        question = data.get('question', '')
-        context = data.get('context', '')
+        # Extract user inputs
+        template_type = data.get('template_type', '').strip()
+        section = data.get('section', '').strip()
+        question = data.get('question', '').strip()
+        context = data.get('context', '').strip()
         
-        # For backward compatibility
-        project_description = data.get('project_description', '')
-        industry = data.get('industry', '')
-        project_phase = data.get('project_phase', '')
-        team_size = data.get('team_size', '')
+        # Validate inputs
+        if not template_type:
+            return jsonify({'error': 'Template type is required'}), 400
         
-        # Generate prompt based on request type
+        # Build prompt based on request type
         if section:
-            # Quick suggestion
-            prompt = f"""
-You are an expert project management consultant. Provide a comprehensive list of {section} for a {template_type} project.
-
-Provide 8-12 specific, actionable items that are relevant for this type of project.
-Format as a numbered list with brief explanations.
-
-Example format:
-1. Item name - Brief explanation of why it's important
-2. Item name - Brief explanation
-...
-"""
+            # Quick suggestion format
+            user_prompt = f"For a {template_type} project, provide specific suggestions for: {section}"
+            if context:
+                user_prompt += f"\n\nAdditional context: {context}"
         elif question:
-            # Custom question
-            prompt = f"""
-You are an expert project management consultant. Answer the following question:
-
-Template Type: {template_type}
-Question: {question}
-Context: {context or 'None provided'}
-
-Provide a detailed, professional answer with specific recommendations and best practices.
-"""
+            # Custom question format
+            user_prompt = f"Template Type: {template_type}\n\nQuestion: {question}"
+            if context:
+                user_prompt += f"\n\nContext: {context}"
         else:
-            # Legacy format for backward compatibility
-            templates_query = Template.query
-            if industry:
-                templates_query = templates_query.filter_by(industry=industry)
-            
-            available_templates = templates_query.limit(50).all()
-            template_list = "\n".join([f"- {t.name} ({t.category})" for t in available_templates])
-            
-            prompt = f"""
-You are an expert project management consultant. Based on the following project details, 
-recommend the most relevant templates and provide actionable suggestions.
-
-Project Details:
-- Description: {project_description}
-- Industry: {industry or 'Not specified'}
-- Project Phase: {project_phase or 'Not specified'}
-- Team Size: {team_size or 'Not specified'}
-
-Available Templates:
-{template_list}
-
-Please provide:
-1. Top 5 recommended templates from the list above
-2. Why each template is relevant
-3. Best practices for using these templates
-4. Additional suggestions for project success
-"""
+            return jsonify({'error': 'Either section or question is required'}), 400
         
-        # Call OpenAI API
-        response = openai.chat.completions.create(
-            model="gpt-4o-mini",
+        # Call OpenAI API with optimized settings for speed
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",  # Fast, efficient model
             messages=[
-                {"role": "system", "content": "You are an expert project management consultant with deep knowledge of PMBOK 7th Edition and modern project management practices."},
-                {"role": "user", "content": prompt}
+                {
+                    "role": "system", 
+                    "content": "You are an expert project management consultant. Provide concise, actionable advice based on PMBOK standards and industry best practices. Be direct and specific."
+                },
+                {
+                    "role": "user", 
+                    "content": user_prompt
+                }
             ],
             temperature=0.7,
-            max_tokens=1500
+            max_tokens=800,  # Reduced for faster response
+            stream=False  # No streaming for simpler implementation
         )
         
         suggestions_text = response.choices[0].message.content
         
-        # Save suggestion history
-        history = AISuggestionHistory(
-            user_id=current_user.id,
-            project_description=question or f"{template_type} - {section}" or project_description,
-            industry=industry or template_type,
-            project_phase=project_phase or '',
-            team_size=team_size or context,
-            suggestions=suggestions_text,
-            created_at=datetime.utcnow()
-        )
-        db.session.add(history)
-        db.session.commit()
+        # Save suggestion history (async-friendly, minimal blocking)
+        try:
+            history = AISuggestionHistory(
+                user_id=current_user.id,
+                project_description=question or f"{template_type} - {section}",
+                industry=template_type,
+                project_phase='',
+                team_size=context or '',
+                suggestions=suggestions_text,
+                created_at=datetime.utcnow()
+            )
+            db.session.add(history)
+            db.session.commit()
+            history_id = history.id
+        except Exception as db_error:
+            logger.error(f"Database error saving history: {str(db_error)}")
+            # Don't fail the request if history save fails
+            history_id = None
         
-        # Return success
+        # Return success immediately
         return jsonify({
             'success': True,
             'suggestion': suggestions_text,
-            'history_id': history.id
+            'history_id': history_id
         })
         
     except Exception as e:
         logger.error(f"AI suggestions error: {str(e)}")
-        logger.error(f"Error type: {type(e).__name__}")
-        import traceback
-        logger.error(f"Traceback: {traceback.format_exc()}")
-        db.session.rollback()
         
-        # Check for specific OpenAI errors
+        # Handle specific errors
         error_message = str(e)
         if 'rate_limit' in error_message.lower() or 'quota' in error_message.lower():
             return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
         elif 'authentication' in error_message.lower() or 'api_key' in error_message.lower():
             return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
         else:
-            return jsonify({'error': f'An error occurred: {str(e)}'}), 500
+            return jsonify({'error': 'An error occurred while generating suggestions. Please try again.'}), 500
 
 @ai_suggestions_bp.route('/history')
 @login_required
@@ -178,7 +144,7 @@ def history():
 @ai_suggestions_bp.route('/export/<int:history_id>')
 @login_required
 def export(history_id):
-    """Export suggestions as PDF or document"""
+    """Export suggestions as Word document"""
     from models import AISuggestionHistory
     from docx import Document
     import io
@@ -198,29 +164,27 @@ def export(history_id):
         doc.add_heading('Project Details', level=1)
         doc.add_paragraph(f"Description: {history.project_description}")
         doc.add_paragraph(f"Industry: {history.industry or 'Not specified'}")
-        doc.add_paragraph(f"Project Phase: {history.project_phase or 'Not specified'}")
-        doc.add_paragraph(f"Team Size: {history.team_size or 'Not specified'}")
+        doc.add_paragraph(f"Team Size/Context: {history.team_size or 'Not specified'}")
+        doc.add_paragraph(f"Generated: {history.created_at.strftime('%Y-%m-%d %H:%M')}")
         
         doc.add_heading('AI Suggestions', level=1)
         doc.add_paragraph(history.suggestions)
         
-        doc.add_paragraph(f"\nGenerated on: {history.created_at.strftime('%Y-%m-%d %H:%M:%S')}")
-        
         # Save to BytesIO
-        file_data = io.BytesIO()
-        doc.save(file_data)
-        file_data.seek(0)
+        file_stream = io.BytesIO()
+        doc.save(file_stream)
+        file_stream.seek(0)
         
-        filename = f"AI_Suggestions_{history.id}.docx"
+        filename = f"ai_suggestions_{history.id}.docx"
         
         return send_file(
-            file_data,
+            file_stream,
+            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             as_attachment=True,
-            download_name=filename,
-            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            download_name=filename
         )
         
     except Exception as e:
         logger.error(f"Export error: {str(e)}")
-        return jsonify({'error': 'Error exporting suggestions'}), 500
+        return jsonify({'error': 'Failed to export suggestions'}), 500
 
