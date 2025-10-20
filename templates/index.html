@@ -68,7 +68,7 @@
                 
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
-                        <select class="form-select" id="industrySelect" onchange="checkAndNavigate()" autocomplete="off">
+                        <select class="form-select" id="industrySelect" autocomplete="off">
                             <option value="">Select Industry</option>
                             {% if industries %}
                                 {% for industry in industries %}
@@ -85,7 +85,7 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <select class="form-select" id="templateTypeSelect" onchange="checkAndNavigate()" autocomplete="off">
+                        <select class="form-select" id="templateTypeSelect" autocomplete="off">
                             <option value="">Select Template Type</option>
                             {% if categories %}
                                 {% for category in categories %}
@@ -660,6 +660,26 @@ function checkAndNavigate() {
 function browseWithFilters() {
     window.location.href = '{{ url_for("templates.browse") }}';
 }
+
+// Initialize dropdown event listeners when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    const industrySelect = document.getElementById('industrySelect');
+    const templateTypeSelect = document.getElementById('templateTypeSelect');
+    
+    if (industrySelect && templateTypeSelect) {
+        console.log('Initializing homepage dropdown event listeners');
+        
+        industrySelect.addEventListener('change', function() {
+            console.log('Industry dropdown changed to:', this.value);
+            checkAndNavigate();
+        });
+        
+        templateTypeSelect.addEventListener('change', function() {
+            console.log('Template Type dropdown changed to:', this.value);
+            checkAndNavigate();
+        });
+    }
+});
 </script>
 
 <!-- Demo Banner JavaScript -->
