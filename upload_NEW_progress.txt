@@ -1,0 +1,370 @@
+nohup: ignoring input
+Found 955 screenshots to upload
+Output will be saved to: /home/ubuntu/pmb_repo/imgbb_urls_NEW.json
+Log will be saved to: /home/ubuntu/pmb_repo/upload_NEW_log.txt
+================================================================================
+[1/955] Uploading: AI_ML_Business_Case.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[2/955] Uploading: AI_ML_Change_Management_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[3/955] Uploading: AI_ML_Change_Request_Form.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[4/955] Uploading: AI_ML_Communication_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[5/955] Uploading: AI_ML_Communications_Management_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[6/955] Uploading: AI_ML_Comprehensive_Budget_with_Instructions_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[7/955] Uploading: AI_ML_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[8/955] Uploading: AI_ML_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[9/955] Uploading: AI_ML_KPI_Dashboard_with_Instructions_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[10/955] Uploading: AI_ML_KPI_Report_Dashboard_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 10/955 (0 success, 10 failed, 0 skipped) ---
+[11/955] Uploading: AI_ML_Lessons_Learned_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[12/955] Uploading: AI_ML_Open_Action_Item_Log_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[13/955] Uploading: AI_ML_Procurement_Management_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[14/955] Uploading: AI_ML_Procurement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[15/955] Uploading: AI_ML_Project_Charter.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[16/955] Uploading: AI_ML_Project_Closure_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[17/955] Uploading: AI_ML_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[18/955] Uploading: AI_ML_Project_Proposal_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[19/955] Uploading: AI_ML_Quality_Management_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[20/955] Uploading: AI_ML_RAID_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 20/955 (0 success, 20 failed, 0 skipped) ---
+[21/955] Uploading: AI_ML_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[22/955] Uploading: AI_ML_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[23/955] Uploading: AI_ML_Resource_Plan_Staffing_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[24/955] Uploading: AI_ML_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[25/955] Uploading: AI_ML_Stakeholder_Engagement_Plan_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[26/955] Uploading: AI_ML_Stakeholder_Register.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[27/955] Uploading: AI_ML_Stakeholder_Register_Analysis.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[28/955] Uploading: AI_ML_Status_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[29/955] Uploading: AI_ML_Training_Budget_Estimates_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[30/955] Uploading: AI_ML_Training_Needs_Assessment_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 30/955 (0 success, 30 failed, 0 skipped) ---
+[31/955] Uploading: AI_ML_Training_Schedule_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[32/955] Uploading: AI_ML_WBS_ProjectPlan_Exact_Template_2025_PMI.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[33/955] Uploading: Business_Process_Improvement_Action_Item_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[34/955] Uploading: Business_Process_Improvement_Business_Case.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[35/955] Uploading: Business_Process_Improvement_Change_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[36/955] Uploading: Business_Process_Improvement_Change_Request_Form.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[37/955] Uploading: Business_Process_Improvement_Communication_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[38/955] Uploading: Business_Process_Improvement_Communications_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[39/955] Uploading: Business_Process_Improvement_Comprehensive_Budget.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[40/955] Uploading: Business_Process_Improvement_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 40/955 (0 success, 40 failed, 0 skipped) ---
+[41/955] Uploading: Business_Process_Improvement_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[42/955] Uploading: Business_Process_Improvement_KPI_Dashboard.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[43/955] Uploading: Business_Process_Improvement_Lessons_Learned.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[44/955] Uploading: Business_Process_Improvement_Procurement_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[45/955] Uploading: Business_Process_Improvement_Procurement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[46/955] Uploading: Business_Process_Improvement_Project_Charter.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[47/955] Uploading: Business_Process_Improvement_Project_Closure_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[48/955] Uploading: Business_Process_Improvement_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[49/955] Uploading: Business_Process_Improvement_Project_Proposal.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[50/955] Uploading: Business_Process_Improvement_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 50/955 (0 success, 50 failed, 0 skipped) ---
+[51/955] Uploading: Business_Process_Improvement_RAID_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[52/955] Uploading: Business_Process_Improvement_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[53/955] Uploading: Business_Process_Improvement_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[54/955] Uploading: Business_Process_Improvement_Resource_Plan_Staffing_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[55/955] Uploading: Business_Process_Improvement_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[56/955] Uploading: Business_Process_Improvement_Stakeholder_Engagement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[57/955] Uploading: Business_Process_Improvement_Stakeholder_Register.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[58/955] Uploading: Business_Process_Improvement_Stakeholder_Register_Analysis.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[59/955] Uploading: Business_Process_Improvement_Status_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[60/955] Uploading: Business_Process_Improvement_Training_Budget_Estimates.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 60/955 (0 success, 60 failed, 0 skipped) ---
+[61/955] Uploading: Business_Process_Improvement_Training_Needs_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[62/955] Uploading: Business_Process_Improvement_Training_Schedule.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[63/955] Uploading: Business_Process_Improvement_WBS.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[64/955] Uploading: Cloud_Migration_Action_Item_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[65/955] Uploading: Cloud_Migration_Business_Case.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[66/955] Uploading: Cloud_Migration_Change_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[67/955] Uploading: Cloud_Migration_Change_Request_Form.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[68/955] Uploading: Cloud_Migration_Communication_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[69/955] Uploading: Cloud_Migration_Communications_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[70/955] Uploading: Cloud_Migration_Comprehensive_Budget.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 70/955 (0 success, 70 failed, 0 skipped) ---
+[71/955] Uploading: Cloud_Migration_Data_Readiness_Assessment.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[72/955] Uploading: Cloud_Migration_High_Level_Requirements_List.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[73/955] Uploading: Cloud_Migration_KPI_Dashboard.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[74/955] Uploading: Cloud_Migration_Lessons_Learned.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[75/955] Uploading: Cloud_Migration_Procurement_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[76/955] Uploading: Cloud_Migration_Procurement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[77/955] Uploading: Cloud_Migration_Project_Charter.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[78/955] Uploading: Cloud_Migration_Project_Closure_Report.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[79/955] Uploading: Cloud_Migration_Project_Kickoff_Presentation.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[80/955] Uploading: Cloud_Migration_Project_Proposal.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+--- Progress: 80/955 (0 success, 80 failed, 0 skipped) ---
+[81/955] Uploading: Cloud_Migration_Quality_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[82/955] Uploading: Cloud_Migration_RAID_Log.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[83/955] Uploading: Cloud_Migration_Requirements_Traceability_Matrix.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[84/955] Uploading: Cloud_Migration_Resource_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[85/955] Uploading: Cloud_Migration_Resource_Plan_Staffing_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[86/955] Uploading: Cloud_Migration_Risk_Management_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[87/955] Uploading: Cloud_Migration_Stakeholder_Engagement_Plan.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[88/955] Uploading: Cloud_Migration_Stakeholder_Register.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[89/955] Uploading: Cloud_Migration_Stakeholder_Register_Analysis.png
+  ✗ Failed (attempt 1/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 2/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+  ✗ Failed (attempt 3/3): {"status_code":400,"error":{"message":"Rate limit reached.","code":100},"status_txt":"Bad Request"}
+[90/955] Uploading: Cloud_Migration_Status_Report.png
