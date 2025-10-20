@@ -322,3 +322,72 @@ Update the "Why Project Managers Choose PMBlueprints" section on the homepage wi
 ### Status
 **COMPLETE** - Changes successfully deployed to production and verified on live site.
 
+
+
+
+---
+
+## Homepage Updates Complete - October 20, 2025
+
+### Update 1: Left Side Content Replacement
+**Status:** ✅ COMPLETE
+
+**Changes Made:**
+- Replaced left side content with new verbiage
+- Increased font size to 1.35rem for better readability
+- Maintained white text color
+- Changed alignment from center to start (top-aligned with right side box)
+
+**New Content:**
+> "This platform offers AI-Generated Project Management document templates either prebuilt or created instantly for you. Examples include project plans, KPI dashboards, and budget plans tailored to your specific industry. You can also use the AI document generator, which works like a chat assistant but is purpose-built for project management. It supports all PM methodologies and follows PMI-compliant standards.
+>
+> Templates can be integrated directly into tools such as Monday.com, Smartsheet, Google Sheets, and Microsoft 365. By using this system, you can reduce the time spent creating project documentation by up to 70%, freeing project managers to focus on what matters most: successful project execution and delivery."
+
+**Commits:**
+- 303576c - "Update homepage: new left side content + white font + top alignment"
+- 74a64c7 - "Increase font size for left side content to 1.35rem"
+
+---
+
+### Update 2: Workday Removal from Platform Integrations
+**Status:** ✅ COMPLETE
+
+**Files Modified:**
+1. `templates/index.html` (3 instances removed)
+   - Line 124: Software Integration bullet point
+   - Line 176: Platform Integrations card description
+   - Line 288-290: Business Value section (changed "5 Platforms" to "4 Platforms")
+
+2. `templates/about.html` (1 instance removed)
+   - Line 67: Platform Compatible description
+
+3. `templates/integrations.html` (2 instances removed)
+   - Lines 151-185: Entire Workday integration card removed
+   - Line 196: Account requirements note
+
+4. `templates/templates/detail.html` (1 instance removed)
+   - Lines 205-210: Workday button removed
+
+5. `templates/components/demo_banner.html` (1 instance removed)
+   - Lines 169-171: Workday platform option removed
+
+**Total Workday References Removed:** 8 instances across 5 template files
+
+**Platform Count Updated:**
+- Changed from "5 Platforms" to "4 Platforms" in Business Value section
+- Updated all integration lists to show only: Monday.com, Smartsheet, Google Sheets, Microsoft 365
+
+**Commit:**
+- 9a7dbc2 - "Remove Workday from all platform integrations"
+
+---
+
+### Verification Results
+✅ **Left Side Content** - Successfully updated with new verbiage, larger white font (1.35rem), top-aligned  
+✅ **Workday Removal** - All references removed from homepage and throughout site  
+✅ **Platform Count** - Updated from 5 to 4 platforms  
+✅ **Orange Section** - "Why Project Managers Choose PMBlueprints" displays correctly in orange  
+
+**Live Site:** https://www.pmblueprints.net  
+**Deployment:** All changes successfully deployed via Railway
+
