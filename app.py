@@ -410,25 +410,25 @@ def pricing():
     return render_template('pricing.html', 
                          stripe_key=app.config['STRIPE_PUBLISHABLE_KEY'])
 
-@app.route('/debug/user')
+@app.route('/api/check-tier')
 @login_required
-def debug_user():
-    """Debug route to check current_user details"""
+def check_tier():
+    """Simple API endpoint to check user's subscription tier and platform access"""
     from flask import jsonify
-    from utils.subscription_security import check_feature_access, get_user_tier_limits
+    from utils.subscription_security import check_feature_access, get_user_tier_limits, TIER_LIMITS
     
-    user_data = {
-        'email': current_user.email,
-        'id': current_user.id,
+    tier_limits = get_user_tier_limits(current_user)
+    has_platform_access = check_feature_access(current_user, 'platform_integrations')
+    
+    return jsonify({
+        'user_email': current_user.email,
         'subscription_tier': current_user.subscription_tier,
-        'subscription_tier_type': str(type(current_user.subscription_tier)),
         'subscription_status': current_user.subscription_status,
-        'is_authenticated': current_user.is_authenticated,
-        'platform_integrations_access': check_feature_access(current_user, 'platform_integrations'),
-        'tier_limits': get_user_tier_limits(current_user)
-    }
-    
-    return jsonify(user_data)
+        'platform_integrations_from_limits': tier_limits.get('platform_integrations'),
+        'platform_integrations_from_check': has_platform_access,
+        'would_be_blocked': not has_platform_access,
+        'tier_config': TIER_LIMITS.get(current_user.subscription_tier or 'free', {})
+    })
 
 @app.route('/about')
 def about():
