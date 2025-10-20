@@ -383,15 +383,26 @@ def requires_platform_integrations(f):
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        # Debug: Print to stdout (will appear in Railway logs)
+        print(f"[INTEGRATION DEBUG] User authenticated: {current_user.is_authenticated}")
+        
         if not current_user.is_authenticated:
+            print("[INTEGRATION DEBUG] User not authenticated, redirecting to login")
             flash('Please log in to access this feature', 'warning')
             return redirect(url_for('auth.login'))
         
+        print(f"[INTEGRATION DEBUG] User email: {current_user.email}")
+        print(f"[INTEGRATION DEBUG] User subscription_tier: '{current_user.subscription_tier}'")
+        print(f"[INTEGRATION DEBUG] Type: {type(current_user.subscription_tier)}")
+        print(f"[INTEGRATION DEBUG] Tier == 'enterprise': {current_user.subscription_tier == 'enterprise'}")
+        
         # Check if user has Enterprise tier (only tier with platform integrations)
         if current_user.subscription_tier != 'enterprise':
+            print(f"[INTEGRATION DEBUG] Access DENIED - tier is not enterprise")
             flash('Platform integrations require an Enterprise subscription.', 'warning')
             return redirect(url_for('pricing'))
         
+        print(f"[INTEGRATION DEBUG] Access GRANTED - proceeding to integration page")
         return f(*args, **kwargs)
     return decorated_function
 
