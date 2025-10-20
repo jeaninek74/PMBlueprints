@@ -31,28 +31,55 @@ def browse():
     # Log filter parameters for debugging
     logger.info(f"Browse filters - industry: '{industry}', category: '{category}', search: '{search}'")
     
-    # Build query
-    query = Template.query
+    # Smart filtering: If both industry and category selected, try AND first, fall back to industry only
+    templates = []
     
-    if industry:
-        query = query.filter(Template.industry == industry)
-        logger.info(f"Applied industry filter: {industry}")
-    
-    if category:
-        query = query.filter(Template.category == category)
-        logger.info(f"Applied category filter: {category}")
-    
-    if search:
-        query = query.filter(
-            (Template.name.ilike(f'%{search}%')) |
-            (Template.description.ilike(f'%{search}%'))
+    if industry and category:
+        # Try AND first (both filters)
+        query_and = Template.query.filter(
+            (Template.industry == industry) & (Template.category == category)
         )
-        logger.info(f"Applied search filter: {search}")
-    
-    # Get all matching templates
-    # Order by industry first (chronological), then by name within each industry
-    templates = query.order_by(Template.industry, Template.name).all()
-    logger.info(f"Found {len(templates)} templates matching filters")
+        if search:
+            query_and = query_and.filter(
+                (Template.name.ilike(f'%{search}%')) |
+                (Template.description.ilike(f'%{search}%'))
+            )
+        templates = query_and.order_by(Template.industry, Template.name).all()
+        
+        # If no results with AND, fall back to industry only
+        if len(templates) == 0:
+            logger.info(f"No templates with both filters, showing industry only")
+            query_industry = Template.query.filter(Template.industry == industry)
+            if search:
+                query_industry = query_industry.filter(
+                    (Template.name.ilike(f'%{search}%')) |
+                    (Template.description.ilike(f'%{search}%'))
+                )
+            templates = query_industry.order_by(Template.industry, Template.name).all()
+            logger.info(f"Found {len(templates)} templates in {industry} industry")
+        else:
+            logger.info(f"Found {len(templates)} templates with both filters")
+    else:
+        # Single filter or no filters - standard logic
+        query = Template.query
+        
+        if industry:
+            query = query.filter(Template.industry == industry)
+            logger.info(f"Applied industry filter: {industry}")
+        
+        if category:
+            query = query.filter(Template.category == category)
+            logger.info(f"Applied category filter: {category}")
+        
+        if search:
+            query = query.filter(
+                (Template.name.ilike(f'%{search}%')) |
+                (Template.description.ilike(f'%{search}%'))
+            )
+            logger.info(f"Applied search filter: {search}")
+        
+        templates = query.order_by(Template.industry, Template.name).all()
+        logger.info(f"Found {len(templates)} templates")
     
     # Get unique industries and categories for filters (optimized - use distinct query)
     industries = sorted([i[0] for i in Template.query.with_entities(Template.industry).distinct().all() if i[0]])
