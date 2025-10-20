@@ -379,6 +379,7 @@ def requires_platform_integrations(f):
     """
     Decorator to require platform integrations feature access
     Only Enterprise tier has access to platform integrations
+    Updated: 2025-10-20 - Simplified to direct tier check
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
