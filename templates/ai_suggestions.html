@@ -28,14 +28,21 @@
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
                             <label class="form-label">Template Type</label>
-                            <select class="form-select" id="quickTemplateType">
-                                <option value="Software Development">Software Development</option>
-                                <option value="Construction">Construction</option>
-                                <option value="Marketing Campaign">Marketing Campaign</option>
-                                <option value="Product Launch">Product Launch</option>
-                                <option value="IT Infrastructure">IT Infrastructure</option>
-                                <option value="Business Process">Business Process</option>
-                            </select>
+                            <input type="text" class="form-control" id="quickTemplateType" 
+                                   placeholder="e.g., Software Development, Risk Register, etc."
+                                   list="templateTypeSuggestions">
+                            <datalist id="templateTypeSuggestions">
+                                <option value="Software Development">
+                                <option value="Construction">
+                                <option value="Marketing Campaign">
+                                <option value="Product Launch">
+                                <option value="IT Infrastructure">
+                                <option value="Business Process">
+                                <option value="Risk Register">
+                                <option value="Project Charter">
+                                <option value="Communication Plan">
+                                <option value="Stakeholder Management">
+                            </datalist>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Section</label>
