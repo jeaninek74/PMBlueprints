@@ -67,7 +67,8 @@
                 </p>
                 
                 <div class="row g-3 mb-4">
-                    <div class="col-md-6">                        <select class="form-select" id="industrySelect" onchange="checkAndNavigate()" autocomplete="off"> autocomplete="off">
+                    <div class="col-md-6">
+                        <select class="form-select" id="industrySelect" onchange="checkAndNavigate()" autocomplete="off">
                             <option value="">Select Industry</option>
                             {% if industries %}
                                 {% for industry in industries %}
@@ -84,7 +85,7 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <select class="form-select" id="templateTypeSelect" onchange="checkAndNavigate()" autocomplete="off">autocomplete="off">
+                        <select class="form-select" id="templateTypeSelect" onchange="checkAndNavigate()" autocomplete="off">
                             <option value="">Select Template Type</option>
                             {% if categories %}
                                 {% for category in categories %}
