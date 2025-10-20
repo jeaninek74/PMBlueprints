@@ -631,24 +631,24 @@
 </section>
 
 <script>
-// Browse templates button - requires BOTH dropdowns to be selected
-function browseWithFilters() {
+// Dropdown auto-navigation - requires BOTH selections
+function checkAndNavigate() {
     const industry = document.getElementById('industrySelect').value;
     const templateType = document.getElementById('templateTypeSelect').value;
     
-    if (!industry || !templateType) {
-        alert('Please select both Industry and Template Type to browse templates.');
-        return;
+    // Only navigate if BOTH dropdowns have values
+    if (industry && templateType) {
+        let url = '{{ url_for("templates.browse") }}?';
+        url += 'industry=' + encodeURIComponent(industry);
+        url += '&category=' + encodeURIComponent(templateType);
+        window.location.href = url;
     }
-    
-    let url = '{{ url_for("templates.browse") }}?';
-    url += 'industry=' + encodeURIComponent(industry);
-    url += '&category=' + encodeURIComponent(templateType);
-    window.location.href = url;
 }
 
-// Note: Auto-navigation removed - users must explicitly click a browse button or press Enter
-// This prevents accidental navigation when selecting from dropdowns
+// Browse templates button - goes to all templates
+function browseWithFilters() {
+    window.location.href = '{{ url_for("templates.browse") }}';
+}
 </script>
 
 <!-- Demo Banner JavaScript -->
