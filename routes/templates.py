@@ -73,9 +73,13 @@ def preview(template_id):
         ).first()
         has_purchased = purchase is not None
     
+    # Generate screenshot filename from template filename
+    screenshot_filename = template.filename.rsplit('.', 1)[0] + '.png'
+    
     return render_template('templates/preview.html',
                          template=template,
-                         has_purchased=has_purchased)
+                         has_purchased=has_purchased,
+                         screenshot_filename=screenshot_filename)
 
 @templates_bp.route('/<int:template_id>')
 def detail(template_id):

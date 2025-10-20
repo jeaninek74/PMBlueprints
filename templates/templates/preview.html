@@ -61,10 +61,10 @@
             <div class="card shadow-sm">
                 <div class="card-body text-center p-4">
                     <h4 class="mb-4">Template Preview</h4>
-                    <img src="{{ template.thumbnail }}" 
+                    <img src="{{ url_for('static', filename='screenshots_FULL/' + screenshot_filename) }}" 
                          alt="{{ template.name }} preview" 
                          class="img-fluid rounded shadow"
-                         style="max-width: 100%; height: auto; max-height: 800px;">
+                         style="max-width: 100%; height: auto;">
                 </div>
             </div>
             

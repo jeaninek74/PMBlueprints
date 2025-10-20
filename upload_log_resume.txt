@@ -1,0 +1,844 @@
+Resume Upload Started
+Already uploaded: 538
+Remaining: 417
+================================================================================
+
+✗ Failed: Media_Business_Case.png
+
+✗ Failed: Media_Change_Management_Plan.png
+
+✗ Failed: Media_Change_Request_Form.png
+
+✗ Failed: Media_Communication_Plan.png
+
+✗ Failed: Media_Communications_Management_Plan.png
+
+✗ Failed: Media_Comprehensive_Budget.png
+
+✗ Failed: Media_Data_Readiness_Assessment.png
+
+✗ Failed: Media_High_Level_Requirements_List.png
+
+✗ Failed: Media_KPI_Dashboard.png
+
+✗ Failed: Media_Lessons_Learned.png
+
+✗ Failed: Media_Procurement_Management_Plan.png
+
+✗ Failed: Media_Procurement_Plan.png
+
+✗ Failed: Media_Project_Charter.png
+
+✗ Failed: Media_Project_Closure_Report.png
+
+✗ Failed: Media_Project_Kickoff_Presentation.png
+
+✗ Failed: Media_Project_Proposal.png
+
+✗ Failed: Media_Quality_Management_Plan.png
+
+✗ Failed: Media_RAID_Log.png
+
+✗ Failed: Media_Requirements_Traceability_Matrix.png
+
+✗ Failed: Media_Resource_Management_Plan.png
+
+✗ Failed: Media_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Media_Risk_Management_Plan.png
+
+✗ Failed: Media_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Media_Stakeholder_Register.png
+
+✗ Failed: Media_Stakeholder_Register_Analysis.png
+
+✗ Failed: Media_Status_Report.png
+
+✗ Failed: Media_Training_Budget_Estimates.png
+
+✗ Failed: Media_Training_Needs_Assessment.png
+
+✗ Failed: Media_Training_Schedule.png
+
+✗ Failed: Media_WBS.png
+
+✗ Failed: Merger_and_Acquisition_Action_Item_Log.png
+
+✗ Failed: Merger_and_Acquisition_Business_Case.png
+
+✗ Failed: Merger_and_Acquisition_Change_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Change_Request_Form.png
+
+✗ Failed: Merger_and_Acquisition_Communication_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Communications_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Comprehensive_Budget.png
+
+✗ Failed: Merger_and_Acquisition_Data_Readiness_Assessment.png
+
+✗ Failed: Merger_and_Acquisition_High_Level_Requirements_List.png
+
+✗ Failed: Merger_and_Acquisition_KPI_Dashboard.png
+
+✗ Failed: Merger_and_Acquisition_Lessons_Learned.png
+
+✗ Failed: Merger_and_Acquisition_Procurement_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Procurement_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Project_Charter.png
+
+✗ Failed: Merger_and_Acquisition_Project_Closure_Report.png
+
+✗ Failed: Merger_and_Acquisition_Project_Kickoff_Presentation.png
+
+✗ Failed: Merger_and_Acquisition_Project_Proposal.png
+
+✗ Failed: Merger_and_Acquisition_Quality_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_RAID_Log.png
+
+✗ Failed: Merger_and_Acquisition_Requirements_Traceability_Matrix.png
+
+✗ Failed: Merger_and_Acquisition_Resource_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Risk_Management_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Merger_and_Acquisition_Stakeholder_Register.png
+
+✗ Failed: Merger_and_Acquisition_Stakeholder_Register_Analysis.png
+
+✗ Failed: Merger_and_Acquisition_Status_Report.png
+
+✗ Failed: Merger_and_Acquisition_Training_Budget_Estimates.png
+
+✗ Failed: Merger_and_Acquisition_Training_Needs_Assessment.png
+
+✗ Failed: Merger_and_Acquisition_Training_Schedule.png
+
+✗ Failed: Merger_and_Acquisition_WBS.png
+
+✗ Failed: Network_Business_Case.png
+
+✗ Failed: Network_Change_Management_Plan.png
+
+✗ Failed: Network_Change_Request_Form.png
+
+✗ Failed: Network_Communication_Plan.png
+
+✗ Failed: Network_Communications_Management_Plan.png
+
+✗ Failed: Network_Comprehensive_Budget.png
+
+✗ Failed: Network_Comprehensive_Project_Proposal_Essay_2025_PMI.png
+
+✗ Failed: Network_Data_Readiness_Assessment.png
+
+✗ Failed: Network_High_Level_Requirements_List.png
+
+✗ Failed: Network_KPI_Dashboard.png
+
+✗ Failed: Network_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Network_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Network_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Network_Procurement_Management_Plan.png
+
+✗ Failed: Network_Procurement_Plan.png
+
+✗ Failed: Network_Project_Charter.png
+
+✗ Failed: Network_Project_Closure_Report.png
+
+✗ Failed: Network_Project_Kickoff_Presentation.png
+
+✗ Failed: Network_Project_Proposal_2025_PMI.png
+
+✗ Failed: Network_Quality_Management_Plan.png
+
+✗ Failed: Network_RAID_Log.png
+
+✗ Failed: Network_Requirements_Traceability_Matrix.png
+
+✗ Failed: Network_Resource_Management_Plan.png
+
+✗ Failed: Network_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Network_Risk_Management_Plan.png
+
+✗ Failed: Network_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Network_Stakeholder_Register.png
+
+✗ Failed: Network_Stakeholder_Register_Analysis.png
+
+✗ Failed: Network_Status_Report.png
+
+✗ Failed: Network_Training_Budget_Estimates.png
+
+✗ Failed: Network_Training_Needs_Assessment.png
+
+✗ Failed: Network_Training_Schedule.png
+
+✗ Failed: Network_WBS.png
+
+✗ Failed: Non-Profit_Action_Item_Log.png
+
+✗ Failed: Non-Profit_Business_Case.png
+
+✗ Failed: Non-Profit_Change_Management_Plan.png
+
+✗ Failed: Non-Profit_Change_Request_Form.png
+
+✗ Failed: Non-Profit_Communication_Plan.png
+
+✗ Failed: Non-Profit_Communications_Management_Plan.png
+
+✗ Failed: Non-Profit_Comprehensive_Budget.png
+
+✗ Failed: Non-Profit_Data_Readiness_Assessment.png
+
+✗ Failed: Non-Profit_High_Level_Requirements_List.png
+
+✗ Failed: Non-Profit_KPI_Dashboard.png
+
+✗ Failed: Non-Profit_Lessons_Learned.png
+
+✗ Failed: Non-Profit_Procurement_Management_Plan.png
+
+✗ Failed: Non-Profit_Procurement_Plan.png
+
+✗ Failed: Non-Profit_Project_Charter.png
+
+✗ Failed: Non-Profit_Project_Closure_Report.png
+
+✗ Failed: Non-Profit_Project_Kickoff_Presentation.png
+
+✗ Failed: Non-Profit_Project_Proposal.png
+
+✗ Failed: Non-Profit_Quality_Management_Plan.png
+
+✗ Failed: Non-Profit_RAID_Log.png
+
+✗ Failed: Non-Profit_Requirements_Traceability_Matrix.png
+
+✗ Failed: Non-Profit_Resource_Management_Plan.png
+
+✗ Failed: Non-Profit_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Non-Profit_Risk_Management_Plan.png
+
+✗ Failed: Non-Profit_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Non-Profit_Stakeholder_Register.png
+
+✗ Failed: Non-Profit_Stakeholder_Register_Analysis.png
+
+✗ Failed: Non-Profit_Status_Report.png
+
+✗ Failed: Non-Profit_Training_Budget_Estimates.png
+
+✗ Failed: Non-Profit_Training_Needs_Assessment.png
+
+✗ Failed: Non-Profit_Training_Schedule.png
+
+✗ Failed: Non-Profit_WBS.png
+
+✗ Failed: Operational_Action_Items.png
+
+✗ Failed: Operational_Budget.png
+
+✗ Failed: Operational_Business_Case.png
+
+✗ Failed: Operational_Change_Management.png
+
+✗ Failed: Operational_Change_Request.png
+
+✗ Failed: Operational_Communication_Plan.png
+
+✗ Failed: Operational_Communications_Plan.png
+
+✗ Failed: Operational_Data_Readiness_Assessment.png
+
+✗ Failed: Operational_KPI_Dashboard.png
+
+✗ Failed: Operational_Lessons_Learned.png
+
+✗ Failed: Operational_Procurement_Management.png
+
+✗ Failed: Operational_Procurement_Plan.png
+
+✗ Failed: Operational_Project_Charter.png
+
+✗ Failed: Operational_Project_Closure.png
+
+✗ Failed: Operational_Project_Kickoff_Presentation.png
+
+✗ Failed: Operational_Project_Proposal.png
+
+✗ Failed: Operational_Quality_Management_Plan.png
+
+✗ Failed: Operational_RAID_Log.png
+
+✗ Failed: Operational_Requirements_List.png
+
+✗ Failed: Operational_Requirements_Matrix.png
+
+✗ Failed: Operational_Resource_Management_Plan.png
+
+✗ Failed: Operational_Resource_Plan.png
+
+✗ Failed: Operational_Risk_Management_Plan.png
+
+✗ Failed: Operational_Stakeholder_Analysis.png
+
+✗ Failed: Operational_Stakeholder_Engagement.png
+
+✗ Failed: Operational_Stakeholder_Register.png
+
+✗ Failed: Operational_Status_Report.png
+
+✗ Failed: Operational_Training_Budget.png
+
+✗ Failed: Operational_Training_Needs_Assessment.png
+
+✗ Failed: Operational_Training_Schedule.png
+
+✗ Failed: Operational_WBS.png
+
+✗ Failed: Operations_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Operations_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Operations_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Operations_Project_Proposal_2025_PMI.png
+
+✗ Failed: Product_Business_Case.png
+
+✗ Failed: Product_Change_Management_Plan.png
+
+✗ Failed: Product_Change_Request_Form.png
+
+✗ Failed: Product_Communication_Plan.png
+
+✗ Failed: Product_Communications_Management_Plan.png
+
+✗ Failed: Product_Comprehensive_Budget.png
+
+✗ Failed: Product_Data_Readiness_Assessment.png
+
+✗ Failed: Product_Development_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Product_Development_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Product_Development_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Product_Development_Project_Proposal_2025_PMI.png
+
+✗ Failed: Product_High_Level_Requirements_List.png
+
+✗ Failed: Product_KPI_Dashboard.png
+
+✗ Failed: Product_Procurement_Management_Plan.png
+
+✗ Failed: Product_Procurement_Plan.png
+
+✗ Failed: Product_Project_Charter.png
+
+✗ Failed: Product_Project_Closure_Report.png
+
+✗ Failed: Product_Project_Kickoff_Presentation.png
+
+✗ Failed: Product_Quality_Management_Plan.png
+
+✗ Failed: Product_RAID_Log.png
+
+✗ Failed: Product_Requirements_Traceability_Matrix.png
+
+✗ Failed: Product_Resource_Management_Plan.png
+
+✗ Failed: Product_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Product_Risk_Management_Plan.png
+
+✗ Failed: Product_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Product_Stakeholder_Register.png
+
+✗ Failed: Product_Stakeholder_Register_Analysis.png
+
+✗ Failed: Product_Status_Report.png
+
+✗ Failed: Product_Training_Budget_Estimates.png
+
+✗ Failed: Product_Training_Needs_Assessment.png
+
+✗ Failed: Product_Training_Schedule.png
+
+✗ Failed: Product_WBS.png
+
+✗ Failed: R&D_Action_Items.png
+
+✗ Failed: R&D_Budget.png
+
+✗ Failed: R&D_Business_Case.png
+
+✗ Failed: R&D_Change_Management.png
+
+✗ Failed: R&D_Change_Request.png
+
+✗ Failed: R&D_Communication_Plan.png
+
+✗ Failed: R&D_Communications_Plan.png
+
+✗ Failed: R&D_Data_Readiness_Assessment.png
+
+✗ Failed: R&D_KPI_Dashboard.png
+
+✗ Failed: R&D_Lessons_Learned.png
+
+✗ Failed: R&D_Procurement_Management.png
+
+✗ Failed: R&D_Procurement_Plan.png
+
+✗ Failed: R&D_Project_Charter.png
+
+✗ Failed: R&D_Project_Closure.png
+
+✗ Failed: R&D_Project_Kickoff_Presentation.png
+
+✗ Failed: R&D_Project_Proposal.png
+
+✗ Failed: R&D_Quality_Management_Plan.png
+
+✗ Failed: R&D_RAID_Log.png
+
+✗ Failed: R&D_Requirements_List.png
+
+✗ Failed: R&D_Requirements_Matrix.png
+
+✗ Failed: R&D_Resource_Management_Plan.png
+
+✗ Failed: R&D_Resource_Plan.png
+
+✗ Failed: R&D_Risk_Management_Plan.png
+
+✗ Failed: R&D_Stakeholder_Analysis.png
+
+✗ Failed: R&D_Stakeholder_Engagement.png
+
+✗ Failed: R&D_Stakeholder_Register.png
+
+✗ Failed: R&D_Status_Report.png
+
+✗ Failed: R&D_Training_Budget.png
+
+✗ Failed: R&D_Training_Needs_Assessment.png
+
+✗ Failed: R&D_Training_Schedule.png
+
+✗ Failed: R&D_WBS.png
+
+✗ Failed: Regulatory_Business_Case.png
+
+✗ Failed: Regulatory_Change_Management_Plan.png
+
+✗ Failed: Regulatory_Change_Request_Form.png
+
+✗ Failed: Regulatory_Communication_Plan.png
+
+✗ Failed: Regulatory_Communications_Management_Plan.png
+
+✗ Failed: Regulatory_Comprehensive_Budget.png
+
+✗ Failed: Regulatory_Data_Readiness_Assessment.png
+
+✗ Failed: Regulatory_High_Level_Requirements_List.png
+
+✗ Failed: Regulatory_KPI_Dashboard.png
+
+✗ Failed: Regulatory_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Regulatory_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Regulatory_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Regulatory_Procurement_Management_Plan.png
+
+✗ Failed: Regulatory_Procurement_Plan.png
+
+✗ Failed: Regulatory_Project_Charter.png
+
+✗ Failed: Regulatory_Project_Closure_Report.png
+
+✗ Failed: Regulatory_Project_Kickoff_Presentation.png
+
+✗ Failed: Regulatory_Project_Proposal_2025_PMI.png
+
+✗ Failed: Regulatory_Quality_Management_Plan.png
+
+✗ Failed: Regulatory_RAID_Log.png
+
+✗ Failed: Regulatory_Requirements_Traceability_Matrix.png
+
+✗ Failed: Regulatory_Resource_Management_Plan.png
+
+✗ Failed: Regulatory_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Regulatory_Risk_Management_Plan.png
+
+✗ Failed: Regulatory_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Regulatory_Stakeholder_Register.png
+
+✗ Failed: Regulatory_Stakeholder_Register_Analysis.png
+
+✗ Failed: Regulatory_Status_Report.png
+
+✗ Failed: Regulatory_Training_Budget_Estimates.png
+
+✗ Failed: Regulatory_Training_Needs_Assessment.png
+
+✗ Failed: Regulatory_Training_Schedule.png
+
+✗ Failed: Regulatory_WBS.png
+
+✗ Failed: Research_Development_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Research_Development_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Research_Development_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Research_Development_Project_Proposal_2025_PMI.png
+
+✗ Failed: Retail_Action_Item_Log.png
+
+✗ Failed: Retail_Business_Case.png
+
+✗ Failed: Retail_Change_Management_Plan.png
+
+✗ Failed: Retail_Change_Request_Form.png
+
+✗ Failed: Retail_Communication_Plan.png
+
+✗ Failed: Retail_Communications_Management_Plan.png
+
+✗ Failed: Retail_Comprehensive_Budget.png
+
+✗ Failed: Retail_Data_Readiness_Assessment.png
+
+✗ Failed: Retail_High_Level_Requirements_List.png
+
+✗ Failed: Retail_KPI_Dashboard.png
+
+✗ Failed: Retail_Lessons_Learned.png
+
+✗ Failed: Retail_Procurement_Management_Plan.png
+
+✗ Failed: Retail_Procurement_Plan.png
+
+✗ Failed: Retail_Project_Charter.png
+
+✗ Failed: Retail_Project_Closure_Report.png
+
+✗ Failed: Retail_Project_Kickoff_Presentation.png
+
+✗ Failed: Retail_Project_Proposal.png
+
+✗ Failed: Retail_Quality_Management_Plan.png
+
+✗ Failed: Retail_RAID_Log.png
+
+✗ Failed: Retail_Requirements_Traceability_Matrix.png
+
+✗ Failed: Retail_Resource_Management_Plan.png
+
+✗ Failed: Retail_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Retail_Risk_Management_Plan.png
+
+✗ Failed: Retail_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Retail_Stakeholder_Register.png
+
+✗ Failed: Retail_Stakeholder_Register_Analysis.png
+
+✗ Failed: Retail_Status_Report.png
+
+✗ Failed: Retail_Training_Budget_Estimates.png
+
+✗ Failed: Retail_Training_Needs_Assessment.png
+
+✗ Failed: Retail_Training_Schedule.png
+
+✗ Failed: Retail_WBS.png
+
+✗ Failed: Software_Business_Case.png
+
+✗ Failed: Software_Change_Management_Plan.png
+
+✗ Failed: Software_Change_Request_Form.png
+
+✗ Failed: Software_Communication_Plan.png
+
+✗ Failed: Software_Communications_Management_Plan.png
+
+✗ Failed: Software_Comprehensive_Budget.png
+
+✗ Failed: Software_Data_Readiness_Assessment.png
+
+✗ Failed: Software_Development_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Software_Development_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Software_Development_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Software_Development_Project_Proposal_2025_PMI.png
+
+✗ Failed: Software_High_Level_Requirements_List.png
+
+✗ Failed: Software_KPI_Dashboard.png
+
+✗ Failed: Software_Procurement_Management_Plan.png
+
+✗ Failed: Software_Procurement_Plan.png
+
+✗ Failed: Software_Project_Charter.png
+
+✗ Failed: Software_Project_Closure_Report.png
+
+✗ Failed: Software_Project_Kickoff_Presentation.png
+
+✗ Failed: Software_Quality_Management_Plan.png
+
+✗ Failed: Software_RAID_Log.png
+
+✗ Failed: Software_Requirements_Traceability_Matrix.png
+
+✗ Failed: Software_Resource_Management_Plan.png
+
+✗ Failed: Software_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Software_Risk_Management_Plan.png
+
+✗ Failed: Software_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Software_Stakeholder_Register.png
+
+✗ Failed: Software_Stakeholder_Register_Analysis.png
+
+✗ Failed: Software_Status_Report.png
+
+✗ Failed: Software_Training_Budget_Estimates.png
+
+✗ Failed: Software_Training_Needs_Assessment.png
+
+✗ Failed: Software_Training_Schedule.png
+
+✗ Failed: Software_WBS.png
+
+✗ Failed: Supply_Chain_Optimization_Action_Item_Log.png
+
+✗ Failed: Supply_Chain_Optimization_Business_Case.png
+
+✗ Failed: Supply_Chain_Optimization_Change_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Change_Request_Form.png
+
+✗ Failed: Supply_Chain_Optimization_Communication_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Communications_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Comprehensive_Budget.png
+
+✗ Failed: Supply_Chain_Optimization_Data_Readiness_Assessment.png
+
+✗ Failed: Supply_Chain_Optimization_High_Level_Requirements_List.png
+
+✗ Failed: Supply_Chain_Optimization_KPI_Dashboard.png
+
+✗ Failed: Supply_Chain_Optimization_Lessons_Learned.png
+
+✗ Failed: Supply_Chain_Optimization_Procurement_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Procurement_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Project_Charter.png
+
+✗ Failed: Supply_Chain_Optimization_Project_Closure_Report.png
+
+✗ Failed: Supply_Chain_Optimization_Project_Kickoff_Presentation.png
+
+✗ Failed: Supply_Chain_Optimization_Project_Proposal.png
+
+✗ Failed: Supply_Chain_Optimization_Quality_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_RAID_Log.png
+
+✗ Failed: Supply_Chain_Optimization_Requirements_Traceability_Matrix.png
+
+✗ Failed: Supply_Chain_Optimization_Resource_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Risk_Management_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Supply_Chain_Optimization_Stakeholder_Register.png
+
+✗ Failed: Supply_Chain_Optimization_Stakeholder_Register_Analysis.png
+
+✗ Failed: Supply_Chain_Optimization_Status_Report.png
+
+✗ Failed: Supply_Chain_Optimization_Training_Budget_Estimates.png
+
+✗ Failed: Supply_Chain_Optimization_Training_Needs_Assessment.png
+
+✗ Failed: Supply_Chain_Optimization_Training_Schedule.png
+
+✗ Failed: Supply_Chain_Optimization_WBS.png
+
+✗ Failed: Telecommunications_Action_Items.png
+
+✗ Failed: Telecommunications_Budget.png
+
+✗ Failed: Telecommunications_Business_Case.png
+
+✗ Failed: Telecommunications_Change_Management.png
+
+✗ Failed: Telecommunications_Change_Request.png
+
+✗ Failed: Telecommunications_Communication_Plan.png
+
+✗ Failed: Telecommunications_Communications_Plan.png
+
+✗ Failed: Telecommunications_Data_Readiness_Assessment.png
+
+✗ Failed: Telecommunications_KPI_Dashboard.png
+
+✗ Failed: Telecommunications_KPI_Report_Dashboard_2025_PMI.png
+
+✗ Failed: Telecommunications_Lessons_Learned_2025_PMI.png
+
+✗ Failed: Telecommunications_Open_Action_Item_Log_2025_PMI.png
+
+✗ Failed: Telecommunications_Procurement_Management.png
+
+✗ Failed: Telecommunications_Procurement_Plan.png
+
+✗ Failed: Telecommunications_Project_Charter.png
+
+✗ Failed: Telecommunications_Project_Closure.png
+
+✗ Failed: Telecommunications_Project_Kickoff_Presentation.png
+
+✗ Failed: Telecommunications_Project_Proposal_2025_PMI.png
+
+✗ Failed: Telecommunications_Quality_Management_Plan.png
+
+✗ Failed: Telecommunications_RAID_Log.png
+
+✗ Failed: Telecommunications_Requirements_List.png
+
+✗ Failed: Telecommunications_Requirements_Matrix.png
+
+✗ Failed: Telecommunications_Resource_Management_Plan.png
+
+✗ Failed: Telecommunications_Resource_Plan.png
+
+✗ Failed: Telecommunications_Risk_Management_Plan.png
+
+✗ Failed: Telecommunications_Stakeholder_Analysis.png
+
+✗ Failed: Telecommunications_Stakeholder_Engagement.png
+
+✗ Failed: Telecommunications_Stakeholder_Register.png
+
+✗ Failed: Telecommunications_Status_Report.png
+
+✗ Failed: Telecommunications_Training_Budget.png
+
+✗ Failed: Telecommunications_Training_Needs_Assessment.png
+
+✗ Failed: Telecommunications_Training_Schedule.png
+
+✗ Failed: Telecommunications_WBS.png
+
+✗ Failed: Transportation_Action_Item_Log.png
+
+✗ Failed: Transportation_Business_Case.png
+
+✗ Failed: Transportation_Change_Management_Plan.png
+
+✗ Failed: Transportation_Change_Request_Form.png
+
+✗ Failed: Transportation_Communication_Plan.png
+
+✗ Failed: Transportation_Communications_Management_Plan.png
+
+✗ Failed: Transportation_Comprehensive_Budget.png
+
+✗ Failed: Transportation_Data_Readiness_Assessment.png
+
+✗ Failed: Transportation_High_Level_Requirements_List.png
+
+✗ Failed: Transportation_KPI_Dashboard.png
+
+✗ Failed: Transportation_Lessons_Learned.png
+
+✗ Failed: Transportation_Procurement_Management_Plan.png
+
+✗ Failed: Transportation_Procurement_Plan.png
+
+✗ Failed: Transportation_Project_Charter.png
+
+✗ Failed: Transportation_Project_Closure_Report.png
+
+✗ Failed: Transportation_Project_Kickoff_Presentation.png
+
+✗ Failed: Transportation_Project_Proposal.png
+
+✗ Failed: Transportation_Quality_Management_Plan.png
+
+✗ Failed: Transportation_RAID_Log.png
+
+✗ Failed: Transportation_Requirements_Traceability_Matrix.png
+
+✗ Failed: Transportation_Resource_Management_Plan.png
+
+✗ Failed: Transportation_Resource_Plan_Staffing_Plan.png
+
+✗ Failed: Transportation_Risk_Management_Plan.png
+
+✗ Failed: Transportation_Stakeholder_Engagement_Plan.png
+
+✗ Failed: Transportation_Stakeholder_Register.png
+
+✗ Failed: Transportation_Stakeholder_Register_Analysis.png
+
+✗ Failed: Transportation_Status_Report.png
+
+✗ Failed: Transportation_Training_Budget_Estimates.png
+
+✗ Failed: Transportation_Training_Needs_Assessment.png
+
+✗ Failed: Transportation_Training_Schedule.png
+
+✗ Failed: Transportation_WBS.png
+
+
+================================================================================
+UPLOAD COMPLETE
+Total uploaded: 538/955
+This session: 0 success, 417 failed
