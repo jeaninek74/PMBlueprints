@@ -1,13 +1,13 @@
 """
 AI Generator Routes
-Handles AI-powered document generation with tier-based access control
+Handles AI-powered document generation - optimized for speed and cost efficiency
 """
 
 from flask import Blueprint, render_template, request, jsonify, send_file, flash, redirect, url_for
 from flask_login import login_required, current_user
 import logging
 import os
-import openai
+from openai import OpenAI
 from datetime import datetime
 from docx import Document
 from openpyxl import Workbook
@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 
 ai_generator_bp = Blueprint('ai_generator', __name__, url_prefix='/ai/generator')
 
-# Initialize OpenAI
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Initialize OpenAI client
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 @ai_generator_bp.route('/')
 @login_required
@@ -33,7 +33,7 @@ def index():
 @ai_generator_bp.route('/generate', methods=['POST'])
 @login_required
 def generate():
-    """Generate AI document"""
+    """Generate AI document - optimized for speed and cost"""
     from utils.subscription_security import check_usage_limit
     from database import db
     from models import AIGeneratorHistory
@@ -55,41 +55,54 @@ def generate():
         if not data:
             return jsonify({'error': 'No data provided'}), 400
         
-        project_name = data.get('project_name', '')
-        project_type = data.get('project_type', '')
-        industry = data.get('industry', '')
-        methodology = data.get('methodology', 'Agile')
-        document_type = data.get('document_type', 'Project Charter')
-        additional_details = data.get('additional_details', '')
+        project_name = data.get('project_name', '').strip()
+        project_type = data.get('project_type', '').strip()
+        industry = data.get('industry', '').strip()
+        methodology = data.get('methodology', 'Agile').strip()
+        document_type = data.get('document_type', 'Project Charter').strip()
+        additional_details = data.get('additional_details', '').strip()
         
+        # Validate required fields
         if not project_name or not project_type or not industry:
-            return jsonify({'error': 'Missing required fields'}), 400
+            return jsonify({'error': 'Missing required fields: project name, type, and industry are required'}), 400
         
-        # Generate document using OpenAI
-        prompt = f"""
-Generate a professional {document_type} for a {methodology} project.
+        # Build optimized prompt
+        prompt = f"""Create a professional {document_type} for this {methodology} project:
 
-Project Details:
-- Project Name: {project_name}
-- Project Type: {project_type}
-- Industry: {industry}
-- Methodology: {methodology}
-- Additional Details: {additional_details}
-
-Please create a comprehensive {document_type} following PMI PMBOK standards.
-Include all relevant sections, proper formatting, and industry-specific considerations.
-Make it professional and ready to use.
-"""
+Project Name: {project_name}
+Type: {project_type}
+Industry: {industry}
+Methodology: {methodology}"""
         
-        # Call OpenAI API
-        response = openai.chat.completions.create(
-            model="gpt-4",
+        if additional_details:
+            prompt += f"\nAdditional Details: {additional_details}"
+        
+        prompt += f"""
+
+Generate a comprehensive, PMI PMBOK-compliant {document_type} with:
+- All standard sections for this document type
+- Industry-specific considerations
+- Professional formatting
+- Actionable content ready for immediate use
+
+Be thorough but concise."""
+        
+        # Call OpenAI API with optimized settings
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",  # Fast, cost-effective model
             messages=[
-                {"role": "system", "content": "You are an expert project management consultant specializing in creating professional PM documents following PMI standards."},
-                {"role": "user", "content": prompt}
+                {
+                    "role": "system", 
+                    "content": "You are an expert project management consultant. Create professional PM documents following PMI PMBOK standards. Be comprehensive yet concise."
+                },
+                {
+                    "role": "user", 
+                    "content": prompt
+                }
             ],
             temperature=0.7,
-            max_tokens=3000
+            max_tokens=2000,  # Reduced from 3000 for speed, still sufficient for documents
+            stream=False
         )
         
         generated_content = response.choices[0].message.content
@@ -133,18 +146,18 @@ Make it professional and ready to use.
             'preview': generated_content[:500] + '...'
         })
         
-    except openai.error.RateLimitError:
-        logger.error("OpenAI rate limit exceeded")
-        return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
-    
-    except openai.error.AuthenticationError:
-        logger.error("OpenAI authentication error")
-        return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
-    
     except Exception as e:
         logger.error(f"AI generation error: {str(e)}")
         db.session.rollback()
-        return jsonify({'error': f'An error occurred: {str(e)}'}), 500
+        
+        # Handle specific errors
+        error_message = str(e)
+        if 'rate_limit' in error_message.lower() or 'quota' in error_message.lower():
+            return jsonify({'error': 'AI service is currently busy. Please try again in a moment.'}), 429
+        elif 'authentication' in error_message.lower() or 'api_key' in error_message.lower():
+            return jsonify({'error': 'AI service configuration error. Please contact support.'}), 500
+        else:
+            return jsonify({'error': 'An error occurred while generating the document. Please try again.'}), 500
 
 @ai_generator_bp.route('/download/<int:history_id>')
 @login_required
