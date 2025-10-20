@@ -519,9 +519,13 @@ def init_db():
 if __name__ == '__main__':
     init_db()
     
-    # One-time category standardization (remove after first run)
-    from run_category_fix_once import run_if_enabled
-    run_if_enabled()
+    # One-time category standardization migration
+    try:
+        from migrations.standardize_categories import run_migration
+        logger.info("Running category standardization migration...")
+        run_migration()
+    except Exception as e:
+        logger.warning(f"Migration skipped or failed: {e}")
     
     logger.info("Starting PMBlueprints Production Platform")
     app.run(host='0.0.0.0', port=5002, debug=False)
