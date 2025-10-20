@@ -1,0 +1,165 @@
+{
+  "template_types": [
+    "Project Charter",
+    "Project Plan",
+    "Risk Management",
+    "Quality Management",
+    "Resource Management",
+    "Communication Plan",
+    "Stakeholder Management",
+    "Budget Management",
+    "Schedule Management",
+    "Scope Management",
+    "Procurement Management",
+    "Change Management",
+    "Issue Management",
+    "Lessons Learned",
+    "Status Report",
+    "Project Closure"
+  ],
+  "sections": {
+    "Project Charter": [
+      "Objectives",
+      "Scope",
+      "Stakeholders",
+      "Success Criteria",
+      "Assumptions",
+      "Constraints"
+    ],
+    "Project Plan": [
+      "Phases",
+      "Milestones",
+      "Deliverables",
+      "Dependencies",
+      "Resources",
+      "Timeline"
+    ],
+    "Risk Management": [
+      "Risks",
+      "Mitigation Strategies",
+      "Contingency Plans",
+      "Risk Owners",
+      "Probability Assessment",
+      "Impact Analysis"
+    ],
+    "Quality Management": [
+      "Quality Standards",
+      "Quality Metrics",
+      "Quality Control",
+      "Quality Assurance",
+      "Testing Procedures",
+      "Acceptance Criteria"
+    ],
+    "Resource Management": [
+      "Team Roles",
+      "Resource Allocation",
+      "Skill Requirements",
+      "Training Needs",
+      "Resource Constraints",
+      "Capacity Planning"
+    ],
+    "Communication Plan": [
+      "Stakeholder Communication",
+      "Meeting Schedule",
+      "Reporting Structure",
+      "Communication Channels",
+      "Escalation Procedures",
+      "Documentation"
+    ],
+    "Stakeholder Management": [
+      "Stakeholder Identification",
+      "Stakeholder Analysis",
+      "Engagement Strategy",
+      "Communication Needs",
+      "Influence Assessment",
+      "Stakeholder Register"
+    ],
+    "Budget Management": [
+      "Cost Estimates",
+      "Budget Allocation",
+      "Cost Control",
+      "Financial Tracking",
+      "Variance Analysis",
+      "Funding Sources"
+    ],
+    "Schedule Management": [
+      "Timeline",
+      "Critical Path",
+      "Dependencies",
+      "Milestones",
+      "Resource Leveling",
+      "Schedule Baseline"
+    ],
+    "Scope Management": [
+      "Scope Statement",
+      "Deliverables",
+      "Exclusions",
+      "Acceptance Criteria",
+      "Change Control",
+      "Scope Verification"
+    ],
+    "Procurement Management": [
+      "Vendor Selection",
+      "Contract Management",
+      "Procurement Strategy",
+      "Supplier Evaluation",
+      "Purchase Orders",
+      "Vendor Performance"
+    ],
+    "Change Management": [
+      "Change Requests",
+      "Impact Assessment",
+      "Approval Process",
+      "Change Log",
+      "Stakeholder Communication",
+      "Implementation Plan"
+    ],
+    "Issue Management": [
+      "Issue Log",
+      "Issue Resolution",
+      "Escalation Procedures",
+      "Issue Tracking",
+      "Root Cause Analysis",
+      "Preventive Actions"
+    ],
+    "Lessons Learned": [
+      "Successes",
+      "Challenges",
+      "Best Practices",
+      "Recommendations",
+      "Process Improvements",
+      "Knowledge Transfer"
+    ],
+    "Status Report": [
+      "Progress Summary",
+      "Accomplishments",
+      "Upcoming Activities",
+      "Issues and Risks",
+      "Budget Status",
+      "Schedule Status"
+    ],
+    "Project Closure": [
+      "Final Deliverables",
+      "Acceptance Sign-off",
+      "Resource Release",
+      "Documentation Archive",
+      "Post-Project Review",
+      "Closure Report"
+    ]
+  },
+  "methodologies": [
+    "Agile",
+    "Scrum",
+    "Kanban",
+    "Waterfall",
+    "PRINCE2",
+    "Lean",
+    "Six Sigma",
+    "Hybrid"
+  ],
+  "document_formats": [
+    "WORD",
+    "EXCEL",
+    "PDF"
+  ]
+}
