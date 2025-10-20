@@ -254,10 +254,12 @@ try:
     from routes.emergency_fix import emergency_bp
     from routes.health_check import health_check_bp
     from routes.fix_user_tiers import fix_tiers_bp
+    from routes.remove_business_cases import remove_bc_bp
     app.register_blueprint(admin_migration_bp)
     app.register_blueprint(emergency_bp)
     app.register_blueprint(health_check_bp)
     app.register_blueprint(fix_tiers_bp)
+    app.register_blueprint(remove_bc_bp)
     app.register_blueprint(update_industries_bp)  # Update industries route
     app.register_blueprint(admin_update_bp)  # Admin update routes
     app.register_blueprint(admin_fix_bp)  # Admin fix templates
