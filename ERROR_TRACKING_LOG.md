@@ -665,3 +665,41 @@ except Exception as e:
 
 **Live Site:** https://www.pmblueprints.net
 
+
+
+
+---
+
+## 2025-10-20 22:00 - Homepage Dropdown Navigation Fix
+
+**Issue:** Homepage dropdowns were auto-navigating with only ONE selection instead of requiring BOTH
+
+**Changes Made:**
+
+1. **Dropdown Auto-Navigation Logic:**
+   - Added `onchange="checkAndNavigate()"` to both Industry and Template Type dropdowns
+   - Created `checkAndNavigate()` function that only navigates when BOTH dropdowns have values
+   - Prevents premature navigation when only one dropdown is selected
+
+2. **Browse Templates Button:**
+   - Changed from `browseWithFilters()` to `browseAllTemplates()`
+   - Now navigates to `/templates` showing ALL templates (ignores dropdown selections)
+   - Provides alternative way to browse without filtering
+
+3. **Removed Instruction Text:**
+   - Deleted "Select both Industry and Template Type to browse templates" text
+   - Cleaner UI, behavior is self-explanatory
+
+**Files Modified:**
+- `templates/index.html` (lines 71, 88, 107, 633-648)
+
+**Expected Behavior:**
+- Select Industry only → Nothing happens
+- Select Template Type only → Nothing happens  
+- Select BOTH → Auto-navigate to filtered templates page
+- Click "Browse Templates" button → Go to all templates page
+
+**Git Commit:** 92aaa77 - Fix homepage dropdowns: require BOTH selections to auto-navigate, Browse Templates shows all
+
+**Status:** ✅ Deployed to production
+
