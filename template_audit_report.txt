@@ -1,0 +1,135 @@
+TEMPLATE AUDIT REPORT
+================================================================================
+
+Total templates: 955
+OK: 924
+MISMATCH: 31
+MISSING: 0
+
+MISMATCHED TEMPLATES:
+================================================================================
+
+ID 1: Business Case
+  File: AI_ML_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 34: Business Case
+  File: Business_Process_Improvement_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 65: Business Case
+  File: Cloud_Migration_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 95: Business Case
+  File: Construction_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 102: Executive RAID Log Complete
+  File: Construction_Executive_RAID_Log_Complete_2025_PMI.xlsx
+  Content: BUILDING AND INFRASTRUCTURE CONSTRUCTION - RISK SCORING METHODOLOGY | PROBABILITY SCALE (1-5): | 1 - Very Low (0-10%): Highly unlikely to occur
+
+ID 127: Business Case
+  File: Consulting_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 158: Business Case
+  File: Customer_Experience_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 188: Business Case
+  File: Cybersecurity_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 222: Business Case
+  File: Data_Analytics_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 253: Business Case
+  File: Digital_Transformation_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 289: Business Case
+  File: ERP_Implementations_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 319: Business Case
+  File: Education_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 350: Business Case
+  File: Energy_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 381: Business Case
+  File: Finance_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 412: Business Case
+  File: Government_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 444: Business Case
+  File: Hardware_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 476: Business Case
+  File: Healthcare_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 506: Business Case
+  File: IT_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 539: Business Case
+  File: Media_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 570: Business Case
+  File: Merger_and_Acquisition_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 600: Business Case
+  File: Network_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 634: Business Case
+  File: Non-Profit_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 666: Business Case
+  File: Operational_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 699: Business Case
+  File: Product_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 733: Business Case
+  File: R&D_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 762: Business Case
+  File: Regulatory_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 799: Business Case
+  File: Retail_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 829: Business Case
+  File: Software_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 862: Business Case
+  File: Supply_Chain_Optimization_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 894: Business Case
+  File: Telecommunications_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+
+ID 926: Business Case
+  File: Transportation_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital transformation through intelligent automation and predictive analytics Document Type: Project Proposal In
+

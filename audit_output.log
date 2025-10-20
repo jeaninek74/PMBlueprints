@@ -1,0 +1,187 @@
+2025-10-20 05:29:25,710 - app - WARNING - REDIS_URL not set, using filesystem sessions (not recommended for production)
+2025-10-20 05:29:25,746 - app - INFO - Database tables created/verified
+2025-10-20 05:29:25,758 - app - WARNING - Flask-Session using filesystem backend
+2025-10-20 05:29:26,239 - routes.ai_generation - INFO - OpenAI client initialized successfully
+2025-10-20 05:29:26,290 - routes.ai_generator_advanced - INFO - OpenAI client initialized for AI Generator
+2025-10-20 05:29:26,337 - routes.ai_generation_secure - INFO - OpenAI client initialized successfully
+2025-10-20 05:29:26,389 - app - INFO - OAuth credentials not set, skipping OAuth initialization
+2025-10-20 05:29:26,427 - app - INFO - All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, secure payment/AI routes, and migrations)
+================================================================================
+TEMPLATE AUDIT - Checking all 955 templates
+================================================================================
+
+[1/955] ⚠️  MISMATCH: ID 1 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[34/955] ⚠️  MISMATCH: ID 34 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[50/955] ✅ Checked 50 templates...
+[65/955] ⚠️  MISMATCH: ID 65 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[95/955] ⚠️  MISMATCH: ID 95 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[100/955] ✅ Checked 100 templates...
+[102/955] ⚠️  MISMATCH: ID 102 - Executive RAID Log Complete
+           File title: BUILDING AND INFRASTRUCTURE CONSTRUCTION - RISK SCORING METHODOLOGY | PROBABILIT
+[127/955] ⚠️  MISMATCH: ID 127 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[150/955] ✅ Checked 150 templates...
+[158/955] ⚠️  MISMATCH: ID 158 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[188/955] ⚠️  MISMATCH: ID 188 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[200/955] ✅ Checked 200 templates...
+[222/955] ⚠️  MISMATCH: ID 222 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[250/955] ✅ Checked 250 templates...
+[253/955] ⚠️  MISMATCH: ID 253 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[289/955] ⚠️  MISMATCH: ID 289 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[300/955] ✅ Checked 300 templates...
+[319/955] ⚠️  MISMATCH: ID 319 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[350/955] ⚠️  MISMATCH: ID 350 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[381/955] ⚠️  MISMATCH: ID 381 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[400/955] ✅ Checked 400 templates...
+[412/955] ⚠️  MISMATCH: ID 412 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[444/955] ⚠️  MISMATCH: ID 444 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[450/955] ✅ Checked 450 templates...
+[476/955] ⚠️  MISMATCH: ID 476 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[500/955] ✅ Checked 500 templates...
+[506/955] ⚠️  MISMATCH: ID 506 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[539/955] ⚠️  MISMATCH: ID 539 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[550/955] ✅ Checked 550 templates...
+[570/955] ⚠️  MISMATCH: ID 570 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[600/955] ⚠️  MISMATCH: ID 600 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[634/955] ⚠️  MISMATCH: ID 634 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[650/955] ✅ Checked 650 templates...
+[666/955] ⚠️  MISMATCH: ID 666 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[699/955] ⚠️  MISMATCH: ID 699 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[700/955] ✅ Checked 700 templates...
+[733/955] ⚠️  MISMATCH: ID 733 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[750/955] ✅ Checked 750 templates...
+[762/955] ⚠️  MISMATCH: ID 762 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[799/955] ⚠️  MISMATCH: ID 799 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[800/955] ✅ Checked 800 templates...
+[829/955] ⚠️  MISMATCH: ID 829 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[850/955] ✅ Checked 850 templates...
+[862/955] ⚠️  MISMATCH: ID 862 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[894/955] ⚠️  MISMATCH: ID 894 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[900/955] ✅ Checked 900 templates...
+[926/955] ⚠️  MISMATCH: ID 926 - Business Case
+           File title: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiati
+[950/955] ✅ Checked 950 templates...
+
+================================================================================
+AUDIT SUMMARY
+================================================================================
+Total templates: 955
+✅ OK: 924
+⚠️  MISMATCH: 31
+❌ MISSING: 0
+
+================================================================================
+DETAILED MISMATCH REPORT
+================================================================================
+
+ID 1: Business Case
+  File: AI_ML_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 34: Business Case
+  File: Business_Process_Improvement_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 65: Business Case
+  File: Cloud_Migration_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 95: Business Case
+  File: Construction_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 102: Executive RAID Log Complete
+  File: Construction_Executive_RAID_Log_Complete_2025_PMI.xlsx
+  Content: BUILDING AND INFRASTRUCTURE CONSTRUCTION - RISK SCORING METHODOLOGY | PROBABILITY SCALE (1-5): | 1 -
+
+ID 127: Business Case
+  File: Consulting_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 158: Business Case
+  File: Customer_Experience_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 188: Business Case
+  File: Cybersecurity_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 222: Business Case
+  File: Data_Analytics_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 253: Business Case
+  File: Digital_Transformation_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 289: Business Case
+  File: ERP_Implementations_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 319: Business Case
+  File: Education_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 350: Business Case
+  File: Energy_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 381: Business Case
+  File: Finance_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 412: Business Case
+  File: Government_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 444: Business Case
+  File: Hardware_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 476: Business Case
+  File: Healthcare_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 506: Business Case
+  File: IT_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 539: Business Case
+  File: Media_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+ID 570: Business Case
+  File: Merger_and_Acquisition_Business_Case.docx
+  Content: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING PROJECT PROPOSAL Strategic Initiative for Digital trans
+
+... and 11 more mismatches
+
+Full report saved to: /home/ubuntu/pmb_repo/template_audit_report.txt
