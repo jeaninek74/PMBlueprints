@@ -138,29 +138,16 @@
                 <i class="fas fa-search fa-3x text-muted mb-3"></i>
                 <h4>No templates found</h4>
                 <p class="text-muted mb-3">
-                    {% if current_industry and current_category %}
-                        No templates match both <strong>{{ current_industry }}</strong> industry and <strong>{{ current_category }}</strong> category.<br>
-                        Try selecting just one filter, or choose a different combination.
-                    {% elif current_search %}
+                    {% if current_search %}
                         No templates match your search "<strong>{{ current_search }}</strong>".<br>
-                        Try different keywords or clear your search.
+                        Try different keywords or browse all templates.
                     {% else %}
-                        Try adjusting your filters or search terms.
+                        No templates available.
                     {% endif %}
                 </p>
-                <div class="d-flex gap-2 justify-content-center">
-                    {% if current_industry and current_category %}
-                        <a href="{{ url_for('templates.browse', industry=current_industry) }}" class="btn btn-outline-primary">
-                            <i class="fas fa-industry me-2"></i>Show {{ current_industry }} Only
-                        </a>
-                        <a href="{{ url_for('templates.browse', category=current_category) }}" class="btn btn-outline-primary">
-                            <i class="fas fa-folder me-2"></i>Show {{ current_category }} Only
-                        </a>
-                    {% endif %}
-                    <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
-                        <i class="fas fa-times me-2"></i>Clear All Filters
-                    </a>
-                </div>
+                <a href="{{ url_for('templates.browse') }}" class="btn btn-primary">
+                    <i class="fas fa-th me-2"></i>Browse All Templates
+                </a>
             </div>
         </div>
         {% endfor %}

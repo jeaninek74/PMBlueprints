@@ -15,6 +15,7 @@ logger = logging.getLogger(__name__)
 templates_bp = Blueprint('templates', __name__, url_prefix='/templates')
 
 @templates_bp.route('/')
+
 @templates_bp.route('/browse')
 def browse():
     """Browse all templates with filtering"""
