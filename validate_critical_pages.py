@@ -188,6 +188,83 @@ def validate_dashboard_page():
         print(f"   ❌ Dashboard page validation failed: {e}")
         return False
 
+def validate_ai_suggestor_page():
+    """Validate AI Suggestor page has all required elements"""
+    print("\n🤖 Validating AI Suggestor Page...")
+    
+    try:
+        with app.test_client() as client:
+            response = client.get('/ai_suggestions', follow_redirects=True)
+            
+            if response.status_code != 200:
+                print(f"   ❌ AI Suggestor page returned status {response.status_code}")
+                return False
+            
+            html = response.data.decode('utf-8')
+            
+            # Check for required elements
+            required_elements = [
+                'AI Suggestor',
+                'Template Type'
+            ]
+            
+            missing = []
+            for element in required_elements:
+                if element not in html:
+                    missing.append(element)
+            
+            if missing:
+                print(f"   ❌ Missing elements: {', '.join(missing)}")
+                return False
+            
+            print("   ✅ AI Suggestor page validated")
+            print(f"      - Status: 200 OK")
+            print(f"      - All required elements present")
+            return True
+            
+    except Exception as e:
+        print(f"   ❌ AI Suggestor page validation failed: {e}")
+        return False
+
+def validate_ai_generator_page():
+    """Validate AI Generator page has all required elements"""
+    print("\n🎨 Validating AI Generator Page...")
+    
+    try:
+        with app.test_client() as client:
+            response = client.get('/ai-generator')
+            
+            if response.status_code != 200:
+                print(f"   ❌ AI Generator page returned status {response.status_code}")
+                return False
+            
+            html = response.data.decode('utf-8')
+            
+            # Check for required elements
+            required_elements = [
+                'AI Generator',
+                'Methodology',
+                'Generate'
+            ]
+            
+            missing = []
+            for element in required_elements:
+                if element not in html:
+                    missing.append(element)
+            
+            if missing:
+                print(f"   ❌ Missing elements: {', '.join(missing)}")
+                return False
+            
+            print("   ✅ AI Generator page validated")
+            print(f"      - Status: 200 OK")
+            print(f"      - All required elements present")
+            return True
+            
+    except Exception as e:
+        print(f"   ❌ AI Generator page validation failed: {e}")
+        return False
+
 def validate_template_count():
     """Validate template count is correct"""
     print("\n📚 Validating Template Count...")
@@ -218,6 +295,8 @@ def main():
         'Login Page': validate_login_page(),
         'Signup Page': validate_signup_page(),
         'Dashboard Page': validate_dashboard_page(),
+        'AI Suggestor Page': validate_ai_suggestor_page(),
+        'AI Generator Page': validate_ai_generator_page(),
         'Template Count': validate_template_count()
     }
     
