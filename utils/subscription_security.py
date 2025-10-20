@@ -381,14 +381,27 @@ def requires_platform_integrations(f):
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        import logging
+        logger = logging.getLogger(__name__)
+        
         if not current_user.is_authenticated:
+            logger.warning("User not authenticated")
             return redirect(url_for('login'))
         
+        # Debug logging
+        logger.info(f"Checking platform integrations for user: {current_user.email}")
+        logger.info(f"User subscription tier: {current_user.subscription_tier}")
+        
         # Check if user has platform integrations access
-        if not check_feature_access(current_user, 'platform_integrations'):
+        has_access = check_feature_access(current_user, 'platform_integrations')
+        logger.info(f"Platform integrations access: {has_access}")
+        
+        if not has_access:
+            logger.warning(f"Access denied for user {current_user.email} with tier {current_user.subscription_tier}")
             flash('Platform integrations require a Professional or Enterprise subscription.', 'warning')
             return redirect(url_for('pricing'))
         
+        logger.info(f"Access granted for user {current_user.email}")
         return f(*args, **kwargs)
     return decorated_function
 
