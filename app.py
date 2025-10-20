@@ -515,18 +515,20 @@ def init_db():
                 logger.error(f"Error populating database: {e}")
         else:
             logger.info(f"Database already contains {Template.query.count()} templates")
+        
+        # One-time category standardization migration
+        try:
+            from migrations.standardize_categories import run_migration
+            logger.info("🔄 Running category standardization migration...")
+            if run_migration():
+                logger.info("✅ Category standardization migration completed successfully")
+            else:
+                logger.warning("⚠️ Category standardization migration failed or skipped")
+        except Exception as e:
+            logger.warning(f"Migration error: {e}")
 
 if __name__ == '__main__':
     init_db()
-    
-    # One-time category standardization migration
-    try:
-        from migrations.standardize_categories import run_migration
-        logger.info("Running category standardization migration...")
-        run_migration()
-    except Exception as e:
-        logger.warning(f"Migration skipped or failed: {e}")
-    
     logger.info("Starting PMBlueprints Production Platform")
     app.run(host='0.0.0.0', port=5002, debug=False)
 
