@@ -67,8 +67,7 @@
                 </p>
                 
                 <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <select class="form-select" id="industrySelect" onchange="checkAndNavigate()">
+                    <div class="col-md-6">                        <select class="form-select" id="industrySelect" onchange="checkAndNavigate()" autocomplete="off"> autocomplete="off">
                             <option value="">Select Industry</option>
                             {% if industries %}
                                 {% for industry in industries %}
@@ -85,7 +84,7 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <select class="form-select" id="templateTypeSelect" onchange="checkAndNavigate()">
+                        <select class="form-select" id="templateTypeSelect" onchange="checkAndNavigate()" autocomplete="off">autocomplete="off">
                             <option value="">Select Template Type</option>
                             {% if categories %}
                                 {% for category in categories %}
@@ -636,17 +635,23 @@ function checkAndNavigate() {
     const industry = document.getElementById('industrySelect').value;
     const templateType = document.getElementById('templateTypeSelect').value;
     
-    console.log('checkAndNavigate called - Industry:', industry, 'Template Type:', templateType);
+    console.log('checkAndNavigate called');
+    console.log('  Industry value: "' + industry + '" (length: ' + industry.length + ')');
+    console.log('  Template Type value: "' + templateType + '" (length: ' + templateType.length + ')');
     
-    // Only navigate if BOTH dropdowns have values
-    if (industry && templateType) {
-        console.log('Both values present, navigating...');
+    // Only navigate if BOTH dropdowns have NON-EMPTY values
+    // Explicit checks for empty string to prevent browser autofill issues
+    if (industry && industry !== '' && industry.trim() !== '' && 
+        templateType && templateType !== '' && templateType.trim() !== '') {
+        console.log('Both values present, navigating to filtered results...');
         let url = '{{ url_for("templates.browse") }}';
         url += '?industry=' + encodeURIComponent(industry);
         url += '&category=' + encodeURIComponent(templateType);
         window.location.href = url;
     } else {
-        console.log('Missing value, NOT navigating');
+        console.log('NOT navigating - need BOTH selections');
+        console.log('  Industry valid: ' + (industry && industry !== '' && industry.trim() !== ''));
+        console.log('  Template Type valid: ' + (templateType && templateType !== '' && templateType.trim() !== ''));
     }
 }
 
