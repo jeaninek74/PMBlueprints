@@ -15,34 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
  * Initialize dropdown functionality
+ * NOTE: Dropdown navigation is handled by inline onchange handlers in index.html
+ * This function is kept for compatibility but does NOT add event listeners
+ * to avoid conflicts with the checkAndNavigate() function
  */
 function initializeDropdowns() {
-    const industrySelect = document.getElementById('industrySelect');
-    const templateTypeSelect = document.getElementById('templateTypeSelect');
-    
-    if (industrySelect) {
-        industrySelect.addEventListener('change', function() {
-            const selectedIndustry = this.value;
-            console.log('Industry selected:', selectedIndustry);
-            
-            if (selectedIndustry) {
-                // Filter templates by industry
-                filterTemplatesByIndustry(selectedIndustry);
-            }
-        });
-    }
-    
-    if (templateTypeSelect) {
-        templateTypeSelect.addEventListener('change', function() {
-            const selectedType = this.value;
-            console.log('Template type selected:', selectedType);
-            
-            if (selectedType) {
-                // Filter templates by type
-                filterTemplatesByType(selectedType);
-            }
-        });
-    }
+    // Dropdown event listeners removed to prevent conflicts
+    // Navigation is handled by checkAndNavigate() in index.html
+    console.log('Dropdown initialization skipped - using inline handlers');
 }
 
 /**
