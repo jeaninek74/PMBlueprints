@@ -84,7 +84,6 @@ class Template(db.Model):
     file_format = db.Column(db.String(20))  # xlsx, docx, pptx
     file_path = db.Column(db.String(500))
     thumbnail_path = db.Column(db.String(500))
-    imgbb_url = db.Column(db.String(500))  # ImgBB CDN URL for screenshot
     downloads_count = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
