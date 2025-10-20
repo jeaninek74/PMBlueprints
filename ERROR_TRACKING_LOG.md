@@ -155,34 +155,37 @@ Should return to the same filtered view with industry/category preserved
 ---
 
 ### Issue #6: Template Filtering Returns "No Browse Templates Found"
-**Status:** ⚠️ INVESTIGATED  
+**Status:** ✅ FIXED  
 **Priority:** CRITICAL  
 **Reported:** October 20, 2025  
-**Investigated:** October 20, 2025  
+**Fixed:** October 20, 2025  
 **Location:** Browse templates page  
 
 **Description:**  
-When selecting industry and category and clicking filter, the page returns "No browse templates found".
+When selecting industry and category and clicking filter, the page returns "No browse templates found". User expects to always see templates on the browse page.
 
-**Investigation Result:**  
-- Filtering logic verified working correctly with test data
-- Added comprehensive logging to routes/templates.py
-- Added .strip() to filter parameters to handle whitespace
-- Issue likely caused by:
-  1. Exact case-sensitive matching required
-  2. User selecting mismatched industry/category combinations
-  3. Whitespace in filter values
+**Root Cause:**  
+- Filtering used AND logic (industry AND category)
+- Many industry/category combinations don't exist (e.g., AI ML + Action Item Log)
+- AND logic returned 0 results, showing error message
+- User expectation: Always see templates, never see error
 
 **Fix Applied:**  
-- Added logging: "Browse filters - industry: 'X', category: 'Y', search: 'Z'"
-- Added logging: "Found N templates matching filters"
-- Added .strip() to all filter parameters
-- Filtering logic confirmed working with database
+- Implemented smart OR fallback logic in routes/templates.py
+- Try AND first (both filters match)
+- If AND returns 0 results, automatically fall back to OR (either filter matches)
+- Simplified no-results message (only shown for search with no results)
+- Removed error message for incompatible filter combinations
 
-**Commit:** 33edabb  
+**Example:**  
+- User selects: AI ML industry + Action Item Log category
+- AND logic: 0 results
+- OR fallback: 48 templates (31 AI ML + 17 Action Item Log)
+- User always sees browse page with templates
+
+**Commit:** dd92bea  
 **Deployed:** October 20, 2025  
-**Status:** Monitoring - logs will help identify specific issue  
-**Next Steps:** Review logs after user testing to identify exact cause
+**Verified:** Tested with incompatible combinations - always returns templates
 
 ---
 
