@@ -9,8 +9,11 @@ def run_migration():
     try:
         import sys
         import os
+        import logging
         sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         from app import db, Template, app
+        
+        logger = logging.getLogger('app')
         
         with app.app_context():
             # Define category name mappings
@@ -54,15 +57,15 @@ def run_migration():
                 if count > 0:
                     for template in templates:
                         template.category = new_name
-                    print(f"✅ Updated {count} templates: '{old_name}' → '{new_name}'")
+                    logger.info(f"✅ MIGRATION: Updated {count} templates: '{old_name}' → '{new_name}'")
                     total_updated += count
             
             db.session.commit()
-            print(f"\n✅ Migration complete! Total templates updated: {total_updated}")
+            logger.info(f"✅ MIGRATION COMPLETE! Total templates updated: {total_updated}")
             return True
             
     except Exception as e:
-        print(f"❌ Migration failed: {e}")
+        logger.error(f"❌ MIGRATION FAILED: {e}")
         try:
             db.session.rollback()
         except:
