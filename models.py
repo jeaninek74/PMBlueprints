@@ -84,6 +84,7 @@ class Template(db.Model):
     file_format = db.Column(db.String(20))  # xlsx, docx, pptx
     file_path = db.Column(db.String(500))
     thumbnail_path = db.Column(db.String(500))
+    cloudflare_url = db.Column(db.String(500))  # CDN URL for screenshot (ImgBB/Cloudflare)
     downloads_count = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
@@ -95,11 +96,14 @@ class Template(db.Model):
     @property
     def thumbnail(self):
         """Generate thumbnail URL based on template name"""
-        if self.thumbnail_path:
-            # Use stored thumbnail path
+        # Priority 1: Use Cloudflare CDN URL if available
+        if self.cloudflare_url:
+            return self.cloudflare_url
+        # Priority 2: Use stored thumbnail path
+        elif self.thumbnail_path:
             return f'/static/thumbnails/{self.thumbnail_path}'
+        # Priority 3: Generate thumbnail filename from template name
         else:
-            # Generate thumbnail filename from template name
             # Remove special characters and replace spaces with underscores
             safe_name_part = self.name.replace(' ', '_').replace('/', '_').replace('\\', '_')
             safe_name = f"{self.industry.replace(' ', '_')}_{safe_name_part}"
