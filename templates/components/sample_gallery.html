@@ -1,0 +1,219 @@
+<!-- Sample Templates Showcase - Horizontal Scrolling Gallery -->
+<section class="sample-showcase py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="display-5 fw-bold">Sample Templates</h2>
+            <p class="lead text-muted">See the quality and detail of our professional PM templates</p>
+        </div>
+        
+        <div class="sample-gallery-wrapper">
+            <div class="sample-gallery">
+                <!-- Sample 1: Resource & Staffing Plan -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_resource_staffing_plan.png" 
+                         alt="Resource & Staffing Plan Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Resource & Staffing Plan</h5>
+                        <p class="text-muted small">Comprehensive resource management with budget tracking</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 2: Detailed Staffing Plan -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_detailed_staffing_plan.png" 
+                         alt="Detailed Staffing Plan Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Detailed Staffing Plan</h5>
+                        <p class="text-muted small">Individual resource allocation and skill matrix</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 3: Training Schedule -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_training_schedule.png" 
+                         alt="Training Schedule Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Training Schedule</h5>
+                        <p class="text-muted small">Complete training program with statistics and tracking</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 4: Detailed Training Schedule -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_detailed_training_schedule.png" 
+                         alt="Detailed Training Schedule Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Detailed Training Schedule</h5>
+                        <p class="text-muted small">Session-by-session training management</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 5: Procurement Register -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_procurement_register.png" 
+                         alt="Procurement Register Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Procurement Register</h5>
+                        <p class="text-muted small">Track contracts, vendors, and procurement status</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 6: Vendor Management -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_vendor_management.png" 
+                         alt="Vendor Management Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>Vendor Management Matrix</h5>
+                        <p class="text-muted small">Comprehensive vendor performance tracking</p>
+                    </div>
+                </div>
+                
+                <!-- Sample 7: WBS & Project Schedule -->
+                <div class="sample-card">
+                    <img src="https://pub-88e6ef53d3dc4cc7b2a8cd66b325604c.r2.dev/samples/sample_wbs_project_schedule.png" 
+                         alt="WBS & Project Schedule Sample" 
+                         class="sample-image"
+                         loading="lazy">
+                    <div class="sample-caption">
+                        <h5>WBS & Project Schedule</h5>
+                        <p class="text-muted small">Detailed work breakdown structure with dependencies</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicators -->
+            <div class="scroll-hint text-center mt-3">
+                <small class="text-muted">
+                    <i class="bi bi-arrow-left-right"></i> Scroll to see more samples
+                </small>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ url_for('templates.browse') }}" class="btn btn-primary btn-lg">
+                Browse All Templates <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+.sample-gallery-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.sample-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar but keep functionality */
+.sample-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sample-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.sample-gallery::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.sample-gallery::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.sample-card {
+    flex: 0 0 auto;
+    width: 600px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sample-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.sample-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.sample-caption {
+    padding: 15px;
+    background: white;
+}
+
+.sample-caption h5 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.sample-caption p {
+    margin: 0;
+}
+
+.scroll-hint {
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .sample-card {
+        width: 85vw;
+    }
+}
+</style>
+
+<script>
+// Optional: Click to view full-size in modal
+document.querySelectorAll('.sample-image').forEach(img => {
+    img.addEventListener('click', function() {
+        // Create modal to show full-size image
+        const modal = document.createElement('div');
+        modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+        
+        const fullImg = document.createElement('img');
+        fullImg.src = this.src;
+        fullImg.style.cssText = 'max-width:90%;max-height:90%;object-fit:contain;';
+        
+        modal.appendChild(fullImg);
+        document.body.appendChild(modal);
+        
+        modal.addEventListener('click', () => modal.remove());
+    });
+});
+</script>
+
