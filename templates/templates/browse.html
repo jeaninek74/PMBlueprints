@@ -102,6 +102,9 @@
                             {% if current_search %}{% set _ = params.append('search=' + current_search) %}{% endif %}
                             {% set preview_url = preview_url + '?' + params|join('&') %}
                         {% endif %}
+                        <a href="{{ preview_url }}" class="btn btn-outline-primary btn-sm">
+                            Preview
+                        </a>
                         <button class="btn btn-success btn-sm" onclick="purchaseTemplate({{ template.id }}, '{{ template.name }}')">
                             Purchase ($50)
                         </button>
