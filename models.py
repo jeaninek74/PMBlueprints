@@ -100,7 +100,7 @@ class Template(db.Model):
         # if self.cloudflare_url:
         #     return self.cloudflare_url
         # Priority 2: Use stored thumbnail path
-        elif self.thumbnail_path:
+        if self.thumbnail_path:
             return f'/static/thumbnails/{self.thumbnail_path}'
         # Priority 3: Generate thumbnail filename from template name
         else:
