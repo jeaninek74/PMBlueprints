@@ -302,3 +302,59 @@
 }
 </style>
 
+
+
+<script>
+// Error handling for gallery images to prevent crashes
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.sample-image');
+    
+    galleryImages.forEach(function(img) {
+        // Add error handler for failed image loads
+        img.addEventListener('error', function() {
+            console.warn('Failed to load gallery image:', this.src);
+            
+            // Hide failed image to prevent broken image icons
+            this.style.display = 'none';
+            
+            // Optionally hide the entire card if image fails
+            const card = this.closest('.sample-card');
+            if (card) {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Add load handler for successful loads
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+        
+        // Add inline onerror as fallback
+        if (!this.hasAttribute('onerror')) {
+            this.setAttribute('onerror', "this.style.display='none';");
+        }
+    });
+    
+    // Ensure gallery container exists
+    const galleryScroll = document.querySelector('.sample-gallery-scroll');
+    if (!galleryScroll) {
+        console.error('Gallery container not found');
+        return;
+    }
+    
+    // Verify at least some images loaded
+    setTimeout(function() {
+        const visibleImages = Array.from(galleryImages).filter(img => 
+            img.complete && img.naturalHeight !== 0 && img.style.display !== 'none'
+        );
+        
+        if (visibleImages.length === 0) {
+            console.warn('No gallery images loaded successfully');
+            // Could add fallback UI here
+        } else {
+            console.log('Gallery loaded with', visibleImages.length, 'images');
+        }
+    }, 2000);
+});
+</script>
+
