@@ -444,13 +444,20 @@ def billing_history():
         payments = Payment.query.filter_by(user_id=current_user.id)\
             .order_by(Payment.created_at.desc()).all()
         
+        logger.info(f"Found {len(payments)} payments for user {current_user.id}")
+        
         return render_template('payment/billing_history.html',
                              payments=payments,
                              user=current_user)
         
     except Exception as e:
-        logger.error(f"Billing history error: {e}")
-        return render_template('errors/500.html'), 500
+        logger.error(f"Billing history error: {e}", exc_info=True)
+        # If Payment table doesn't exist or there's an error, show empty list
+        payments = []
+        flash('Payment history is currently unavailable.', 'info')
+        return render_template('payment/billing_history.html',
+                             payments=payments,
+                             user=current_user)
 
 @payment_secure_bp.route('/webhook', methods=['POST'])
 def stripe_webhook():
