@@ -439,7 +439,7 @@ def cancel_subscription():
 def billing_history():
     """View billing history"""
     try:
-        from app import Payment
+        from models import Payment
         
         payments = Payment.query.filter_by(user_id=current_user.id)\
             .order_by(Payment.created_at.desc()).all()
