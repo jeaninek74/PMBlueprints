@@ -635,3 +635,4 @@ def diagnostic():
         results.append(f"❌ AISuggestionHistory table query failed: {str(e)}")
     
     return "<br>".join(results), 200
+# Force restart Fri Oct 24 00:14:20 EDT 2025
