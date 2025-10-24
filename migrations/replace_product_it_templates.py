@@ -51,8 +51,7 @@ def run_migration(app, db, Template):
                 category=entry['category'],
                 industry=entry['industry'],
                 file_path=entry['filename'],
-                file_format=entry.get('file_format', 'xlsx').upper(),
-                is_free=entry.get('is_free', False)
+                file_format=entry.get('file_format', 'xlsx').upper()
             )
             db.session.add(template)
             product_added += 1
@@ -66,8 +65,7 @@ def run_migration(app, db, Template):
                 category=entry['category'],
                 industry=entry['industry'],
                 file_path=entry['filename'],
-                file_format=entry.get('file_format', 'xlsx').upper(),
-                is_free=entry.get('is_free', False)
+                file_format=entry.get('file_format', 'xlsx').upper()
             )
             db.session.add(template)
             it_added += 1
