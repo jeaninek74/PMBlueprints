@@ -63,6 +63,58 @@ def fix_user_tier():
         return jsonify({"error": str(e)}), 500
 
 
+@emergency_bp.route('/emergency/fix-null-formats', methods=['GET'])
+def fix_null_formats():
+    """
+    Emergency endpoint to fix NULL file_format values causing 500 errors
+    GET /emergency/fix-null-formats
+    Error: jinja2.exceptions.UndefinedError: 'None' has no attribute 'upper'
+    Location: /app/templates/templates/browse.html line 90
+    """
+    try:
+        from models import Template
+        
+        # Count templates with NULL file_format
+        null_count = Template.query.filter(Template.file_format == None).count()
+        
+        if null_count == 0:
+            return jsonify({
+                'success': True,
+                'message': 'No templates with NULL file_format found',
+                'updated': 0
+            })
+        
+        # Get examples before fixing
+        examples = Template.query.filter(Template.file_format == None).limit(5).all()
+        example_ids = [t.id for t in examples]
+        
+        # Update all NULL file_format to 'xlsx'
+        updated = Template.query.filter(Template.file_format == None).update(
+            {'file_format': 'xlsx'},
+            synchronize_session=False
+        )
+        
+        db.session.commit()
+        
+        logger.info(f"Emergency fix: Updated {updated} templates with NULL file_format")
+        
+        return jsonify({
+            'success': True,
+            'message': f'Successfully fixed {updated} templates',
+            'updated': updated,
+            'example_ids': example_ids,
+            'fix_applied': 'Set file_format to xlsx for all NULL values'
+        })
+        
+    except Exception as e:
+        db.session.rollback()
+        logger.error(f"Emergency fix failed: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 @emergency_bp.route('/emergency/list-users', methods=['POST'])
 def list_users():
     """
