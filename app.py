@@ -534,11 +534,23 @@ def init_db():
             logger.warning(f"Migration error: {e}")
         
         # Replace Product and IT templates with catalog versions
+        # DISABLED - This migration is no longer needed
+        # try:
+        #     from migrations.replace_product_it_templates import run_migration as replace_migration
+        #     replace_migration(app, db, Template)
+        # except Exception as e:
+        #     logger.warning(f"Product/IT replacement migration error: {e}")
+        
+        # Delete templates with wrong content (keep only correct Product, IT, Finance)
         try:
-            from migrations.replace_product_it_templates import run_migration as replace_migration
-            replace_migration(app, db, Template)
+            from migrations.delete_wrong_content_templates import run_migration as delete_wrong_migration
+            logger.info("🔄 Running migration: delete_wrong_content_templates")
+            if delete_wrong_migration():
+                logger.info("✅ Migration 'delete_wrong_content_templates' completed successfully")
+            else:
+                logger.warning("⚠️ Migration 'delete_wrong_content_templates' failed or skipped")
         except Exception as e:
-            logger.warning(f"Product/IT replacement migration error: {e}")
+            logger.error(f"❌ Migration 'delete_wrong_content_templates' failed: {e}")
 
 # Initialize database when module is loaded (works with Gunicorn)
 init_db()
