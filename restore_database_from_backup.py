@@ -1,6 +1,7 @@
 """
-Restore database from templates_catalog_backup.json
+Restore database from templates_catalog_final.json
 This will replace all corrupted AI ML templates with correct industry-specific templates
+Excludes Business Case templates to match the 925 template count
 """
 import json
 import os
@@ -8,19 +9,23 @@ from app import app, db
 from models import Template
 
 def restore_database():
-    """Restore database from backup catalog"""
+    """Restore database from correct catalog"""
     
     with app.app_context():
         print("🔄 Starting database restoration...")
         
-        # Load backup catalog
-        catalog_path = 'templates_catalog_backup.json'
-        print(f"📁 Loading backup catalog from {catalog_path}...")
+        # Load correct catalog
+        catalog_path = 'templates_catalog_final.json'
+        print(f"📁 Loading catalog from {catalog_path}...")
         
         with open(catalog_path, 'r') as f:
-            templates = json.load(f)
+            all_templates = json.load(f)
         
-        print(f"✅ Loaded {len(templates)} templates from backup")
+        print(f"✅ Loaded {len(all_templates)} templates from catalog")
+        
+        # Filter out Business Case templates (30 templates to remove)
+        templates = [t for t in all_templates if t['category'] != 'Business Case']
+        print(f"✅ Filtered to {len(templates)} templates (excluded {len(all_templates) - len(templates)} Business Case templates)")
         
         # Delete all existing templates
         print("🗑️  Deleting all existing corrupted templates...")
@@ -28,8 +33,8 @@ def restore_database():
         db.session.commit()
         print(f"✅ Deleted {deleted_count} corrupted templates")
         
-        # Add templates from backup
-        print("📥 Adding templates from backup...")
+        # Add templates from catalog
+        print("📥 Adding templates from catalog...")
         added_count = 0
         errors = []
         
@@ -82,6 +87,13 @@ def restore_database():
                 print(f"  {industry}: {count} templates")
                 print(f"    Example: {sample.name[:50]}...")
                 print(f"    Description: {sample.description[:60]}...")
+                
+        # Verify no AI ML descriptions
+        ai_ml_count = Template.query.filter(Template.description.like('%AI ML%')).count()
+        if ai_ml_count > 0:
+            print(f"\n⚠️  WARNING: Found {ai_ml_count} templates with 'AI ML' in description!")
+        else:
+            print(f"\n✅ SUCCESS: No AI ML descriptions found - all templates have correct industry content!")
 
 if __name__ == '__main__':
     restore_database()
