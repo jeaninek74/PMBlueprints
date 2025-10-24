@@ -1,7 +1,7 @@
 """
 Restore database from templates_catalog_final.json
 This will replace all corrupted AI ML templates with correct industry-specific templates
-Updates existing templates instead of deleting to avoid foreign key constraint issues
+Updates existing templates ONLY - does not add new templates
 """
 import json
 import os
@@ -27,21 +27,21 @@ def restore_database():
         templates = [t for t in all_templates if t['category'] != 'Business Case']
         print(f"✅ Filtered to {len(templates)} templates (excluded {len(all_templates) - len(templates)} Business Case templates)")
         
-        # Get all existing templates
-        existing_templates = {t.id: t for t in Template.query.all()}
-        print(f"📊 Found {len(existing_templates)} existing templates in database")
-        
-        # Update existing templates and add new ones
-        print("🔄 Updating templates...")
-        updated_count = 0
-        added_count = 0
-        errors = []
-        
         # Create a mapping of filename to catalog entry
         catalog_by_filename = {entry['filename']: entry for entry in templates}
+        print(f"📊 Catalog has {len(catalog_by_filename)} unique templates by filename")
+        
+        # Get all existing templates
+        existing_templates = Template.query.all()
+        print(f"📊 Found {len(existing_templates)} existing templates in database")
         
         # Update existing templates
-        for template_id, template in existing_templates.items():
+        print("🔄 Updating templates...")
+        updated_count = 0
+        skipped_count = 0
+        errors = []
+        
+        for template in existing_templates:
             try:
                 # Find matching catalog entry by filename
                 catalog_entry = catalog_by_filename.get(template.file_path)
@@ -54,36 +54,17 @@ def restore_database():
                     template.industry = catalog_entry['industry']
                     template.file_format = catalog_entry.get('file_format', catalog_entry.get('file_type', 'xlsx')).upper()
                     updated_count += 1
-                    
-                    # Remove from catalog so we don't add it again
-                    del catalog_by_filename[template.file_path]
+                else:
+                    # Template exists in database but not in catalog - skip it
+                    skipped_count += 1
+                    if skipped_count <= 10:  # Show first 10 skipped
+                        print(f"  ⚠️  Skipped template not in catalog: {template.file_path}")
                     
                 if updated_count % 100 == 0 and updated_count > 0:
                     print(f"  Progress: {updated_count} templates updated...")
                     
             except Exception as e:
-                errors.append(f"Error updating template {template_id}: {e}")
-        
-        # Add remaining templates from catalog that don't exist in database
-        print(f"📥 Adding {len(catalog_by_filename)} new templates...")
-        for filename, entry in catalog_by_filename.items():
-            try:
-                template = Template(
-                    name=entry['name'],
-                    description=entry['description'],
-                    category=entry['category'],
-                    industry=entry['industry'],
-                    file_path=entry['filename'],
-                    file_format=entry.get('file_format', entry.get('file_type', 'xlsx')).upper()
-                )
-                db.session.add(template)
-                added_count += 1
-                
-                if added_count % 100 == 0:
-                    print(f"  Progress: {added_count} templates added...")
-                    
-            except Exception as e:
-                errors.append(f"Error adding {entry.get('name', 'unknown')}: {e}")
+                errors.append(f"Error updating template {template.id} ({template.file_path}): {e}")
         
         # Commit all changes
         print("💾 Committing changes to database...")
@@ -91,7 +72,7 @@ def restore_database():
         
         print(f"\n✅ Database restoration complete!")
         print(f"📊 Updated {updated_count} existing templates")
-        print(f"📊 Added {added_count} new templates")
+        print(f"📊 Skipped {skipped_count} templates not in catalog")
         
         if errors:
             print(f"\n⚠️  {len(errors)} errors occurred:")
