@@ -19192,5 +19192,23 @@
     "created_date": "2024-01-01",
     "file_size": 29468,
     "thumbnail": "/thumbnails/Transportation_WBS.png"
+  },
+  {
+    "id": 956,
+    "name": "Business Case",
+    "description": "Professional business case template for Product projects.",
+    "industry": "Product",
+    "category": "Business Case",
+    "file_type": "docx",
+    "filename": "Product_Business_Case.docx"
+  },
+  {
+    "id": 957,
+    "name": "Business Case",
+    "description": "Professional business case template for IT projects.",
+    "industry": "IT",
+    "category": "Business Case",
+    "file_type": "docx",
+    "filename": "IT_Business_Case.docx"
   }
 ]
