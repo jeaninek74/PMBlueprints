@@ -219,6 +219,7 @@ try:
     from routes.migrate import migrate_bp
     from routes.admin import admin_bp
     from routes.fix_database import fix_database_bp
+    from routes.manage_product_templates import manage_product_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -282,6 +283,7 @@ try:
     app.register_blueprint(migrate_bp, url_prefix='/admin')  # Database migration routes
     app.register_blueprint(admin_bp)
     app.register_blueprint(fix_database_bp)  # Database cleanup route
+    app.register_blueprint(manage_product_bp)  # Product template management
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, secure payment/AI routes, and migrations)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
