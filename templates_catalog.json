@@ -1,26 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Business Case",
-    "filename": "AI_ML_Business_Case.docx",
-    "industry": "AI ML",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for AI ML projects.",
-    "tags": [
-      "ai ml",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39720,
-    "thumbnail": "/thumbnails/AI_ML_Business_Case.png"
-  },
-  {
     "id": 2,
     "name": "Change Management Plan",
     "filename": "AI_ML_Change_Management_Plan_2025_PMI.xlsx",
@@ -693,27 +672,6 @@
     "thumbnail": "/thumbnails/Business_Process_Improvement_Action_Item_Log.png"
   },
   {
-    "id": 34,
-    "name": "Business Case",
-    "filename": "Business_Process_Improvement_Business_Case.docx",
-    "industry": "Business Process Improvement",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Business Process Improvement projects.",
-    "tags": [
-      "business process improvement",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39726,
-    "thumbnail": "/thumbnails/Business_Process_Improvement_Business_Case.png"
-  },
-  {
     "id": 35,
     "name": "Change Management Plan",
     "filename": "Business_Process_Improvement_Change_Management_Plan.xlsx",
@@ -1344,27 +1302,6 @@
     "thumbnail": "/thumbnails/Cloud_Migration_Action_Item_Log.png"
   },
   {
-    "id": 65,
-    "name": "Business Case",
-    "filename": "Cloud_Migration_Business_Case.docx",
-    "industry": "Cloud Migration",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Cloud Migration projects.",
-    "tags": [
-      "cloud migration",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39723,
-    "thumbnail": "/thumbnails/Cloud_Migration_Business_Case.png"
-  },
-  {
     "id": 66,
     "name": "Change Management Plan",
     "filename": "Cloud_Migration_Change_Management_Plan.xlsx",
@@ -1972,27 +1909,6 @@
     "created_date": "2024-01-01",
     "file_size": 29473,
     "thumbnail": "/thumbnails/Cloud_Migration_WBS.png"
-  },
-  {
-    "id": 95,
-    "name": "Business Case",
-    "filename": "Construction_Business_Case.docx",
-    "industry": "Construction",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Construction projects.",
-    "tags": [
-      "construction",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39722,
-    "thumbnail": "/thumbnails/Construction_Business_Case.png"
   },
   {
     "id": 96,
@@ -2646,27 +2562,6 @@
     "thumbnail": "/thumbnails/Consulting_Action_Item_Log.png"
   },
   {
-    "id": 127,
-    "name": "Business Case",
-    "filename": "Consulting_Business_Case.docx",
-    "industry": "Consulting",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Consulting projects.",
-    "tags": [
-      "consulting",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39716,
-    "thumbnail": "/thumbnails/Consulting_Business_Case.png"
-  },
-  {
     "id": 128,
     "name": "Change Management Plan",
     "filename": "Consulting_Change_Management_Plan.xlsx",
@@ -3297,27 +3192,6 @@
     "thumbnail": "/thumbnails/Customer_Experience_Action_Item_Log.png"
   },
   {
-    "id": 158,
-    "name": "Business Case",
-    "filename": "Customer_Experience_Business_Case.docx",
-    "industry": "Customer Experience",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Customer Experience projects.",
-    "tags": [
-      "customer experience",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39725,
-    "thumbnail": "/thumbnails/Customer_Experience_Business_Case.png"
-  },
-  {
     "id": 159,
     "name": "Change Management Plan",
     "filename": "Customer_Experience_Change_Management_Plan.xlsx",
@@ -3925,27 +3799,6 @@
     "created_date": "2024-01-01",
     "file_size": 29483,
     "thumbnail": "/thumbnails/Customer_Experience_WBS.png"
-  },
-  {
-    "id": 188,
-    "name": "Business Case",
-    "filename": "Cybersecurity_Business_Case.docx",
-    "industry": "Cybersecurity",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Cybersecurity projects.",
-    "tags": [
-      "cybersecurity",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39724,
-    "thumbnail": "/thumbnails/Cybersecurity_Business_Case.png"
   },
   {
     "id": 189,
@@ -4641,27 +4494,6 @@
     "thumbnail": "/thumbnails/Data_Analytics_Action_Item_Log.png"
   },
   {
-    "id": 222,
-    "name": "Business Case",
-    "filename": "Data_Analytics_Business_Case.docx",
-    "industry": "Data Analytics",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Data Analytics projects.",
-    "tags": [
-      "data analytics",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39720,
-    "thumbnail": "/thumbnails/Data_Analytics_Business_Case.png"
-  },
-  {
     "id": 223,
     "name": "Change Management Plan",
     "filename": "Data_Analytics_Change_Management_Plan.xlsx",
@@ -5290,27 +5122,6 @@
     "created_date": "2024-01-01",
     "file_size": 6384,
     "thumbnail": "/thumbnails/Digital_Transformation_Action_Item_Log.png"
-  },
-  {
-    "id": 253,
-    "name": "Business Case",
-    "filename": "Digital_Transformation_Business_Case.docx",
-    "industry": "Digital Transformation",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Digital Transformation projects.",
-    "tags": [
-      "digital transformation",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39722,
-    "thumbnail": "/thumbnails/Digital_Transformation_Business_Case.png"
   },
   {
     "id": 254,
@@ -6048,27 +5859,6 @@
     "thumbnail": "/thumbnails/ERP_Implementations_Budget.png"
   },
   {
-    "id": 289,
-    "name": "Business Case",
-    "filename": "ERP_Implementations_Business_Case.docx",
-    "industry": "ERP Implementation",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for ERP Implementations projects.",
-    "tags": [
-      "erp implementations",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39723,
-    "thumbnail": "/thumbnails/ERP_Implementations_Business_Case.png"
-  },
-  {
     "id": 290,
     "name": "Change Management",
     "filename": "ERP_Implementations_Change_Management.xlsx",
@@ -6676,27 +6466,6 @@
     "created_date": "2024-01-01",
     "file_size": 6372,
     "thumbnail": "/thumbnails/Education_Action_Item_Log.png"
-  },
-  {
-    "id": 319,
-    "name": "Business Case",
-    "filename": "Education_Business_Case.docx",
-    "industry": "Education",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Education projects.",
-    "tags": [
-      "education",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39718,
-    "thumbnail": "/thumbnails/Education_Business_Case.png"
   },
   {
     "id": 320,
@@ -7327,27 +7096,6 @@
     "created_date": "2024-01-01",
     "file_size": 6373,
     "thumbnail": "/thumbnails/Energy_Action_Item_Log.png"
-  },
-  {
-    "id": 350,
-    "name": "Business Case",
-    "filename": "Energy_Business_Case.docx",
-    "industry": "Energy",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Energy projects.",
-    "tags": [
-      "energy",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39719,
-    "thumbnail": "/thumbnails/Energy_Business_Case.png"
   },
   {
     "id": 351,
@@ -8022,27 +7770,6 @@
     "thumbnail": "/thumbnails/Finance_Change_Management_Plan.png"
   },
   {
-    "id": 383,
-    "name": "Change Request Form",
-    "filename": "Finance_Change_Request_Form.xlsx",
-    "industry": "Finance",
-    "category": "Change Request Form",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional change request form template for Finance projects.",
-    "tags": [
-      "finance",
-      "change request form",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 10803,
-    "thumbnail": "/thumbnails/Finance_Change_Request_Form.png"
-  },
-  {
     "id": 384,
     "name": "Communication Plan",
     "filename": "Finance_Communication_Plan.xlsx",
@@ -8064,27 +7791,6 @@
     "thumbnail": "/thumbnails/Finance_Communication_Plan.png"
   },
   {
-    "id": 385,
-    "name": "Communications Management Plan",
-    "filename": "Finance_Communications_Management_Plan.xlsx",
-    "industry": "Finance",
-    "category": "Communications Management Plan",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional communications management plan template for Finance projects.",
-    "tags": [
-      "finance",
-      "communications management plan",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 15097,
-    "thumbnail": "/thumbnails/Finance_Communications_Management_Plan.png"
-  },
-  {
     "id": 386,
     "name": "Comprehensive Budget",
     "filename": "Finance_Comprehensive_Budget.xlsx",
@@ -8104,48 +7810,6 @@
     "created_date": "2024-01-01",
     "file_size": 15206,
     "thumbnail": "/thumbnails/Finance_Comprehensive_Budget.png"
-  },
-  {
-    "id": 387,
-    "name": "Data Readiness Assessment",
-    "filename": "Finance_Data_Readiness_Assessment.xlsx",
-    "industry": "Finance",
-    "category": "Data Readiness Assessment",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional data readiness assessment template for Finance projects.",
-    "tags": [
-      "finance",
-      "data readiness assessment",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 16769,
-    "thumbnail": "/thumbnails/Finance_Data_Readiness_Assessment.png"
-  },
-  {
-    "id": 388,
-    "name": "High Level Requirements List",
-    "filename": "Finance_High_Level_Requirements_List.xlsx",
-    "industry": "Finance",
-    "category": "High Level Requirements List",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional high level requirements list template for Finance projects.",
-    "tags": [
-      "finance",
-      "high level requirements list",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 6383,
-    "thumbnail": "/thumbnails/Finance_High_Level_Requirements_List.png"
   },
   {
     "id": 389,
@@ -8190,27 +7854,6 @@
     "thumbnail": "/thumbnails/Finance_Lessons_Learned.png"
   },
   {
-    "id": 391,
-    "name": "Procurement Management Plan",
-    "filename": "Finance_Procurement_Management_Plan.xlsx",
-    "industry": "Finance",
-    "category": "Procurement Management Plan",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional procurement management plan template for Finance projects.",
-    "tags": [
-      "finance",
-      "procurement management plan",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 11033,
-    "thumbnail": "/thumbnails/Finance_Procurement_Management_Plan.png"
-  },
-  {
     "id": 392,
     "name": "Procurement Plan",
     "filename": "Finance_Procurement_Plan.xlsx",
@@ -8253,48 +7896,6 @@
     "thumbnail": "/thumbnails/Finance_Project_Charter.png"
   },
   {
-    "id": 394,
-    "name": "Project Closure Report",
-    "filename": "Finance_Project_Closure_Report.xlsx",
-    "industry": "Finance",
-    "category": "Project Closure Report",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional project closure report template for Finance projects.",
-    "tags": [
-      "finance",
-      "project closure report",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 6376,
-    "thumbnail": "/thumbnails/Finance_Project_Closure_Report.png"
-  },
-  {
-    "id": 395,
-    "name": "Project Kickoff Presentation",
-    "filename": "Finance_Project_Kickoff_Presentation.xlsx",
-    "industry": "Finance",
-    "category": "Project Kickoff Presentation",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional project kickoff presentation template for Finance projects.",
-    "tags": [
-      "finance",
-      "project kickoff presentation",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 6381,
-    "thumbnail": "/thumbnails/Finance_Project_Kickoff_Presentation.png"
-  },
-  {
     "id": 396,
     "name": "Project Proposal",
     "filename": "Finance_Project_Proposal.docx",
@@ -8314,27 +7915,6 @@
     "created_date": "2024-01-01",
     "file_size": 39719,
     "thumbnail": "/thumbnails/Finance_Project_Proposal.png"
-  },
-  {
-    "id": 397,
-    "name": "Quality Management Plan",
-    "filename": "Finance_Quality_Management_Plan.xlsx",
-    "industry": "Finance",
-    "category": "Quality Management Plan",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional quality management plan template for Finance projects.",
-    "tags": [
-      "finance",
-      "quality management plan",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 10803,
-    "thumbnail": "/thumbnails/Finance_Quality_Management_Plan.png"
   },
   {
     "id": 398,
@@ -8484,48 +8064,6 @@
     "thumbnail": "/thumbnails/Finance_Stakeholder_Register.png"
   },
   {
-    "id": 405,
-    "name": "Stakeholder Register Analysis",
-    "filename": "Finance_Stakeholder_Register_Analysis.xlsx",
-    "industry": "Finance",
-    "category": "Stakeholder Register Analysis",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional stakeholder register analysis template for Finance projects.",
-    "tags": [
-      "finance",
-      "stakeholder register analysis",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 15107,
-    "thumbnail": "/thumbnails/Finance_Stakeholder_Register_Analysis.png"
-  },
-  {
-    "id": 406,
-    "name": "Status Report",
-    "filename": "Finance_Status_Report.xlsx",
-    "industry": "Finance",
-    "category": "Status Report",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional status report template for Finance projects.",
-    "tags": [
-      "finance",
-      "status report",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 6369,
-    "thumbnail": "/thumbnails/Finance_Status_Report.png"
-  },
-  {
     "id": 407,
     "name": "Training Budget Estimates",
     "filename": "Finance_Training_Budget_Estimates.xlsx",
@@ -8545,27 +8083,6 @@
     "created_date": "2024-01-01",
     "file_size": 15206,
     "thumbnail": "/thumbnails/Finance_Training_Budget_Estimates.png"
-  },
-  {
-    "id": 408,
-    "name": "Training Needs Assessment",
-    "filename": "Finance_Training_Needs_Assessment.xlsx",
-    "industry": "Finance",
-    "category": "Training Needs Assessment",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional training needs assessment template for Finance projects.",
-    "tags": [
-      "finance",
-      "training needs assessment",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 16774,
-    "thumbnail": "/thumbnails/Finance_Training_Needs_Assessment.png"
   },
   {
     "id": 409,
@@ -8589,27 +8106,6 @@
     "thumbnail": "/thumbnails/Finance_Training_Schedule.png"
   },
   {
-    "id": 410,
-    "name": "Project Plan",
-    "filename": "Finance_WBS.xlsx",
-    "industry": "Finance",
-    "category": "Project Plan",
-    "file_type": "xlsx",
-    "has_formulas": true,
-    "has_fields": true,
-    "description": "Professional project plan template for Finance projects.",
-    "tags": [
-      "finance",
-      "project plan",
-      "xlsx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 29462,
-    "thumbnail": "/thumbnails/Finance_WBS.png"
-  },
-  {
     "id": 411,
     "name": "Action Item Log",
     "filename": "Government_Action_Item_Log.xlsx",
@@ -8629,27 +8125,6 @@
     "created_date": "2024-01-01",
     "file_size": 6377,
     "thumbnail": "/thumbnails/Government_Action_Item_Log.png"
-  },
-  {
-    "id": 412,
-    "name": "Business Case",
-    "filename": "Government_Business_Case.docx",
-    "industry": "Government",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Government projects.",
-    "tags": [
-      "government",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39720,
-    "thumbnail": "/thumbnails/Government_Business_Case.png"
   },
   {
     "id": 413,
@@ -9303,27 +8778,6 @@
     "thumbnail": "/thumbnails/Hardware_Budget.png"
   },
   {
-    "id": 444,
-    "name": "Business Case",
-    "filename": "Hardware_Business_Case.docx",
-    "industry": "Hardware Implementation",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Hardware projects.",
-    "tags": [
-      "hardware",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39722,
-    "thumbnail": "/thumbnails/Hardware_Business_Case.png"
-  },
-  {
     "id": 445,
     "name": "Change Management",
     "filename": "Hardware_Change_Management.xlsx",
@@ -9975,27 +9429,6 @@
     "thumbnail": "/thumbnails/Healthcare_Action_Item_Log.png"
   },
   {
-    "id": 476,
-    "name": "Business Case",
-    "filename": "Healthcare_Business_Case.docx",
-    "industry": "Healthcare",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Healthcare projects.",
-    "tags": [
-      "healthcare",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39723,
-    "thumbnail": "/thumbnails/Healthcare_Business_Case.png"
-  },
-  {
     "id": 477,
     "name": "Change Management Plan",
     "filename": "Healthcare_Change_Management_Plan.xlsx",
@@ -10603,27 +10036,6 @@
     "created_date": "2024-01-01",
     "file_size": 29471,
     "thumbnail": "/thumbnails/Healthcare_WBS.png"
-  },
-  {
-    "id": 506,
-    "name": "Business Case",
-    "filename": "IT_Business_Case.docx",
-    "industry": "IT",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for IT projects.",
-    "tags": [
-      "it",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39714,
-    "thumbnail": "/thumbnails/IT_Business_Case.png"
   },
   {
     "id": 507,
@@ -11298,27 +10710,6 @@
     "thumbnail": "/thumbnails/Media_Action_Item_Log.png"
   },
   {
-    "id": 539,
-    "name": "Business Case",
-    "filename": "Media_Business_Case.docx",
-    "industry": "Media & Entertainment",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Media projects.",
-    "tags": [
-      "media",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39717,
-    "thumbnail": "/thumbnails/Media_Business_Case.png"
-  },
-  {
     "id": 540,
     "name": "Change Management Plan",
     "filename": "Media_Change_Management_Plan.xlsx",
@@ -11949,27 +11340,6 @@
     "thumbnail": "/thumbnails/Merger_and_Acquisition_Action_Item_Log.png"
   },
   {
-    "id": 570,
-    "name": "Business Case",
-    "filename": "Merger_and_Acquisition_Business_Case.docx",
-    "industry": "Merger & Acquisition",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Merger and Acquisition projects.",
-    "tags": [
-      "merger and acquisition",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39727,
-    "thumbnail": "/thumbnails/Merger_and_Acquisition_Business_Case.png"
-  },
-  {
     "id": 571,
     "name": "Change Management Plan",
     "filename": "Merger_and_Acquisition_Change_Management_Plan.xlsx",
@@ -12577,27 +11947,6 @@
     "created_date": "2024-01-01",
     "file_size": 29483,
     "thumbnail": "/thumbnails/Merger_and_Acquisition_WBS.png"
-  },
-  {
-    "id": 600,
-    "name": "Business Case",
-    "filename": "Network_Business_Case.docx",
-    "industry": "Network",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Network projects.",
-    "tags": [
-      "network",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39720,
-    "thumbnail": "/thumbnails/Network_Business_Case.png"
   },
   {
     "id": 601,
@@ -13293,27 +12642,6 @@
     "thumbnail": "/thumbnails/Non-Profit_Action_Item_Log.png"
   },
   {
-    "id": 634,
-    "name": "Business Case",
-    "filename": "Non-Profit_Business_Case.docx",
-    "industry": "Non-Profit",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Non-Profit projects.",
-    "tags": [
-      "non-profit",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39722,
-    "thumbnail": "/thumbnails/Non-Profit_Business_Case.png"
-  },
-  {
     "id": 635,
     "name": "Change Management Plan",
     "filename": "Non-Profit_Change_Management_Plan.xlsx",
@@ -13963,27 +13291,6 @@
     "created_date": "2024-01-01",
     "file_size": 15206,
     "thumbnail": "/thumbnails/Operational_Budget.png"
-  },
-  {
-    "id": 666,
-    "name": "Business Case",
-    "filename": "Operational_Business_Case.docx",
-    "industry": "Operational Improvement",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Operational projects.",
-    "tags": [
-      "operational",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39717,
-    "thumbnail": "/thumbnails/Operational_Business_Case.png"
   },
   {
     "id": 667,
@@ -14656,27 +13963,6 @@
     "created_date": "2024-01-01",
     "file_size": 39619,
     "thumbnail": "/thumbnails/Operations_Project_Proposal_2025_PMI.png"
-  },
-  {
-    "id": 699,
-    "name": "Business Case",
-    "filename": "Product_Business_Case.docx",
-    "industry": "Product",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Product projects.",
-    "tags": [
-      "product",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39718,
-    "thumbnail": "/thumbnails/Product_Business_Case.png"
   },
   {
     "id": 700,
@@ -15372,27 +14658,6 @@
     "thumbnail": "/thumbnails/R&D_Budget.png"
   },
   {
-    "id": 733,
-    "name": "Business Case",
-    "filename": "R&D_Business_Case.docx",
-    "industry": "Research & Development",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for R&D projects.",
-    "tags": [
-      "r&d",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39721,
-    "thumbnail": "/thumbnails/R&D_Business_Case.png"
-  },
-  {
     "id": 734,
     "name": "Change Management",
     "filename": "R&D_Change_Management.xlsx",
@@ -15979,27 +15244,6 @@
     "created_date": "2024-01-01",
     "file_size": 29463,
     "thumbnail": "/thumbnails/R&D_WBS.png"
-  },
-  {
-    "id": 762,
-    "name": "Business Case",
-    "filename": "Regulatory_Business_Case.docx",
-    "industry": "Regulatory",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Regulatory projects.",
-    "tags": [
-      "regulatory",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39719,
-    "thumbnail": "/thumbnails/Regulatory_Business_Case.png"
   },
   {
     "id": 763,
@@ -16758,27 +16002,6 @@
     "thumbnail": "/thumbnails/Retail_Action_Item_Log.png"
   },
   {
-    "id": 799,
-    "name": "Business Case",
-    "filename": "Retail_Business_Case.docx",
-    "industry": "Retail",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Retail projects.",
-    "tags": [
-      "retail",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39720,
-    "thumbnail": "/thumbnails/Retail_Business_Case.png"
-  },
-  {
     "id": 800,
     "name": "Change Management Plan",
     "filename": "Retail_Change_Management_Plan.xlsx",
@@ -17386,27 +16609,6 @@
     "created_date": "2024-01-01",
     "file_size": 29461,
     "thumbnail": "/thumbnails/Retail_WBS.png"
-  },
-  {
-    "id": 829,
-    "name": "Business Case",
-    "filename": "Software_Business_Case.docx",
-    "industry": "Software",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Software projects.",
-    "tags": [
-      "software",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39721,
-    "thumbnail": "/thumbnails/Software_Business_Case.png"
   },
   {
     "id": 830,
@@ -18081,27 +17283,6 @@
     "thumbnail": "/thumbnails/Supply_Chain_Optimization_Action_Item_Log.png"
   },
   {
-    "id": 862,
-    "name": "Business Case",
-    "filename": "Supply_Chain_Optimization_Business_Case.docx",
-    "industry": "Supply Chain Optimization",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Supply Chain Optimization projects.",
-    "tags": [
-      "supply chain optimization",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39729,
-    "thumbnail": "/thumbnails/Supply_Chain_Optimization_Business_Case.png"
-  },
-  {
     "id": 863,
     "name": "Change Management Plan",
     "filename": "Supply_Chain_Optimization_Change_Management_Plan.xlsx",
@@ -18753,27 +17934,6 @@
     "thumbnail": "/thumbnails/Telecommunications_Budget.png"
   },
   {
-    "id": 894,
-    "name": "Business Case",
-    "filename": "Telecommunications_Business_Case.docx",
-    "industry": "Telecommunications",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Telecommunications projects.",
-    "tags": [
-      "telecommunications",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39729,
-    "thumbnail": "/thumbnails/Telecommunications_Business_Case.png"
-  },
-  {
     "id": 895,
     "name": "Change Management",
     "filename": "Telecommunications_Change_Management.xlsx",
@@ -19423,27 +18583,6 @@
     "created_date": "2024-01-01",
     "file_size": 6377,
     "thumbnail": "/thumbnails/Transportation_Action_Item_Log.png"
-  },
-  {
-    "id": 926,
-    "name": "Business Case",
-    "filename": "Transportation_Business_Case.docx",
-    "industry": "Transportation",
-    "category": "Business Case",
-    "file_type": "docx",
-    "has_formulas": false,
-    "has_fields": true,
-    "description": "Professional business case template for Transportation projects.",
-    "tags": [
-      "transportation",
-      "business case",
-      "docx"
-    ],
-    "downloads": 0,
-    "rating": 4.5,
-    "created_date": "2024-01-01",
-    "file_size": 39723,
-    "thumbnail": "/thumbnails/Transportation_Business_Case.png"
   },
   {
     "id": 927,
