@@ -87,7 +87,7 @@
                     
                     <div class="template-meta mb-3">
                         <small class="text-muted">
-                            {{ template.file_format.upper() }}
+                            {{ template.file_format.upper() if template.file_format else 'XLSX' }}
                         </small>
                     </div>
                 </div>

@@ -23,7 +23,7 @@
                             <li><strong>Name:</strong> {{ template.name }}</li>
                             <li><strong>Industry:</strong> {{ template.industry }}</li>
                             <li><strong>Category:</strong> {{ template.category }}</li>
-                            <li><strong>Format:</strong> {{ template.file_format }}</li>
+                            <li><strong>Format:</strong> {{ template.file_format if template.file_format else 'xlsx' }}</li>
                         </ul>
                     </div>
 

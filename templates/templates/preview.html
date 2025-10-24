@@ -20,7 +20,7 @@
                             <p class="text-muted mb-3">{{ template.description }}</p>
                             <p class="mb-0">
                                 <i class="bi bi-file-earmark"></i> 
-                                <strong>Format:</strong> {{ template.file_format.upper() }}
+                                <strong>Format:</strong> {{ template.file_format.upper() if template.file_format else 'XLSX' }}
                             </p>
                         </div>
                         <div class="text-end">
@@ -73,7 +73,7 @@
                 <div class="card-body">
                     <h5 class="mb-3">What's Included</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Professional {{ template.file_format.upper() }} template</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Professional {{ template.file_format.upper() if template.file_format else 'XLSX' }} template</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> PMI PMBOK compliant</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Customizable for your project</li>
                         <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instant download after purchase</li>
