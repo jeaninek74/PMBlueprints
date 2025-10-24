@@ -101,7 +101,7 @@ def parse_filename(filename):
                 'industry': industry,
                 'name': category,
                 'category': category,
-                'format': format_type,
+                'file_format': format_type,
                 'file_path': filename.name
             }
     except Exception as e:
@@ -180,7 +180,7 @@ def seed_templates(mode='sync'):
                         template.industry = metadata['industry']
                         template.name = metadata['name']
                         template.category = metadata['category']
-                        template.format = metadata['format']
+                        template.file_format = metadata['file_format']
                         updated += 1
                     else:
                         # Add new template
@@ -188,10 +188,9 @@ def seed_templates(mode='sync'):
                             industry=metadata['industry'],
                             name=metadata['name'],
                             category=metadata['category'],
-                            format=metadata['format'],
+                            file_format=metadata['file_format'],
                             file_path=file_path,
-                            description=f"{metadata['name']} for {metadata['industry']} projects",
-                            price=50.00
+                            description=f"{metadata['name']} for {metadata['industry']} projects"
                         )
                         db.session.add(template)
                         added += 1
