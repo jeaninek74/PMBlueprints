@@ -218,6 +218,7 @@ try:
     from routes.alacarte_payment import alacarte_bp
     from routes.migrate import migrate_bp
     from routes.admin import admin_bp
+    from routes.fix_database import fix_database_bp
     
     # Initialize OAuth (optional - only if credentials are set)
     try:
@@ -278,8 +279,9 @@ try:
     # app.register_blueprint(update_thumbnails_bp)  # Update thumbnail URLs
     app.register_blueprint(admin_thumbnails_bp)  # Admin thumbnail update route
     app.register_blueprint(alacarte_bp)  # À la carte template purchases
-    app.register_blueprint(migrate_bp)
-    app.register_blueprint(admin_bp, url_prefix='/admin')  # Database migration routes
+    app.register_blueprint(migrate_bp, url_prefix='/admin')  # Database migration routes
+    app.register_blueprint(admin_bp)
+    app.register_blueprint(fix_database_bp)  # Database cleanup route
     logger.info("All blueprints registered successfully (including OAuth, AI download, update industries, favorites, ratings, health, setup, secure payment/AI routes, and migrations)")
 except ImportError as e:
     logger.warning(f"Blueprint import error: {e}. Using inline routes.")
