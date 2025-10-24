@@ -86,6 +86,7 @@ class Template(db.Model):
     thumbnail_path = db.Column(db.String(500))
     # cloudflare_url = db.Column(db.String(500))  # CDN URL for screenshot (ImgBB/Cloudflare) - TEMPORARILY DISABLED
     downloads_count = db.Column(db.Integer, default=0)
+    is_free = db.Column(db.Boolean, default=True)  # For tier plan feature
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
