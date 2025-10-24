@@ -660,3 +660,17 @@ def diagnostic():
         results.append(f"❌ AISuggestionHistory table query failed: {str(e)}")
     
     return "<br>".join(results), 200
+
+
+
+# ============================================================================
+# COMPREHENSIVE ERROR PROTECTION
+# Register global error handlers to prevent platform crashes
+# ============================================================================
+try:
+    from utils.error_protection import register_error_handlers
+    register_error_handlers(app)
+    logger.info("✅ Comprehensive error protection enabled")
+except Exception as e:
+    logger.warning(f"⚠️ Error protection registration failed: {e}")
+
