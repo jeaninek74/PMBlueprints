@@ -532,6 +532,13 @@ def init_db():
                 logger.warning("⚠️ Category standardization migration failed or skipped")
         except Exception as e:
             logger.warning(f"Migration error: {e}")
+        
+        # Replace Product and IT templates with catalog versions
+        try:
+            from migrations.replace_product_it_templates import run_migration as replace_migration
+            replace_migration(app, db, Template)
+        except Exception as e:
+            logger.warning(f"Product/IT replacement migration error: {e}")
 
 # Initialize database when module is loaded (works with Gunicorn)
 init_db()
